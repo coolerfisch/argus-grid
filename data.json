@@ -1,28 +1,28 @@
 {
   "defcon_status": {
-    "level": 4,
-    "label": "Erhöhte militärische Bereitschaft",
-    "nuclear_risk_percent": 22,
-    "primary_driver": "Zunehmende Spannungen zwischen den Weltmächten und Bedrohung durch Iran und Nordkorea"
+    "level": 3,
+    "label": "Erhöhte Alarmstufe",
+    "nuclear_risk_percent": 20,
+    "primary_driver": "Nukleardoktrin-Anpassungen, Rhetorik und geostrategische Spannungen"
   },
   "domestic_politics": [
     {
-      "country_region": "USA",
-      "topic": "Innere Unruhen und politische Polarisierung",
-      "status": "Erhöhte Spannungen zwischen Republikanern und Demokraten",
-      "impact": "Einfluss auf die Außenpolitik und die Wirtschaft"
+      "country_region": "USA / Washington",
+      "topic": "US-Kongress & Budget-Rivalitäten",
+      "status": "Haushaltsstreit & Parteienpolarisation",
+      "impact": "Blockaden bei Auslandshilfen und Druck auf Außenpolitik"
     },
     {
-      "country_region": "Deutschland/EU",
-      "topic": "Wirtschaftliche Herausforderungen und Migration",
-      "status": "Erhöhte Unsicherheit in der EU",
-      "impact": "Einfluss auf die europäische Wirtschaft und Sicherheit"
+      "country_region": "Deutschland / EU",
+      "topic": "Regierungskrisen & Polarisierung",
+      "status": "Hohe Deindustrialisierung & Haushaltsprobleme",
+      "impact": "Eingeschränkte Handlungsfähigkeit Brüssels und Streit um Sondervermögen"
     },
     {
-      "country_region": "China/BRICS",
-      "topic": "Wirtschaftswachstum und geopolitische Ambitionen",
-      "status": "Erhöhte wirtschaftliche und militärische Präsenz",
-      "impact": "Einfluss auf die globale Wirtschaft und Sicherheit"
+      "country_region": "China / BRICS",
+      "topic": "Immobilienkrise & Stimulus-Debatte",
+      "status": "Interne Wirtschaftsflaute in Peking",
+      "impact": "Erhöhter Druck auf Exportmärkte und Rohstoffnachfrage"
     }
   ],
   "stock_picks": {
@@ -31,31 +31,31 @@
         "ticker": "RHM.DE",
         "name": "Rheinmetall",
         "sector": "Rüstung & Verteidigung",
-        "reason": "Erhöhte Nachfrage nach Verteidigungsgütern"
+        "reason": "Europäisches Aufrüstungsprogramm und NATO-Bestellungen"
       },
       {
         "ticker": "CCJ",
         "name": "Cameco",
         "sector": "Uran & Kernenergie",
-        "reason": "Erhöhte Nachfrage nach sauberen Energien"
+        "reason": "Globale Renaissance der Atomkraft und Energiekrise"
       },
       {
         "ticker": "GOLD",
         "name": "Barrick Gold",
         "sector": "Rohstoffe / Gold",
-        "reason": "Sichere Anlage in Zeiten der Unsicherheit"
+        "reason": "Flucht in sichere Häfen und BRICS-Käufe"
       },
       {
         "ticker": "LMT",
         "name": "Lockheed Martin",
         "sector": "US-Verteidigung",
-        "reason": "Erhöhte Nachfrage nach Verteidigungsgütern"
+        "reason": "Globale Nachfrage nach Verteidigungstechnologie"
       },
       {
         "ticker": "NVDA",
         "name": "Nvidia",
         "sector": "KI & Tech-Souveränität",
-        "reason": "Erhöhte Nachfrage nach KI-Technologien"
+        "reason": "Ungebrochener KI- und Halbleiter-Boom"
       }
     ],
     "flop_5_sells": [
@@ -63,13 +63,13 @@
         "ticker": "VNA.DE",
         "name": "Vonovia",
         "sector": "Gewerbe & Wohnimmobilien",
-        "reason": "Erhöhte Zinsen und Refinanzierungsrisiken"
+        "reason": "Hohe Zinslast und Refinanzierungsrisiken"
       },
       {
         "ticker": "NKE",
         "name": "Nike",
         "sector": "Konsumgüter",
-        "reason": "Schwächelnder Binnenmarkt in China"
+        "reason": "Schwächelnder Binnenmarkt in China und Kaufkraftverlust"
       },
       {
         "ticker": "BA",
@@ -152,5 +152,111 @@
       "impact": "Versorgungsrisiken High-Tech"
     }
   ],
-  "timestamp": "22.07.2026 - 23:09 UTC"
+  "timestamp": "22.07.2026 - 23:13 UTC",
+  "global_risk_score": 82,
+  "market_regime": "Multipolare Stagflation & Zins-Unsicherheit",
+  "top_overweight": "Gold, Energie, Rohstoffe & Verteidigung",
+  "top_risk": "Versorgungsschock / Geopolitische Blockbildung",
+  "daily_executive_summary": "Die geopolitische Lage ist angespannt, mit Krisenherden im Nahen Osten, der Ukraine und der Taiwan-Straße. Rohstoffe und Verteidigung sind gefragt. Die globale Wirtschaft steckt in einer Stagflation.",
+  "assets": [
+    {
+      "name": "Gold & Silber",
+      "signal": "GREEN",
+      "signal_text": "",
+      "trend": "Stark Steigend",
+      "driver": "BRICS-Käufe & Sichere Häfen"
+    },
+    {
+      "name": "KI & Halbleiter",
+      "signal": "GREEN",
+      "signal_text": "",
+      "trend": "Steigend",
+      "driver": "Hardware-Boom"
+    },
+    {
+      "name": "Uran & Energie",
+      "signal": "GREEN",
+      "signal_text": "",
+      "trend": "Stark Steigend",
+      "driver": "Angebotsdefizit"
+    },
+    {
+      "name": "S&P 500 / Nasdaq",
+      "signal": "AMBER",
+      "signal_text": "",
+      "trend": "Volatil",
+      "driver": "Zinsaussichten"
+    },
+    {
+      "name": "Bitcoin & Krypto",
+      "signal": "AMBER",
+      "signal_text": "",
+      "trend": "Volatil",
+      "driver": "Liquiditätsumfeld"
+    },
+    {
+      "name": "High-Yield Bonds",
+      "signal": "RED",
+      "signal_text": "",
+      "trend": "Fallend",
+      "driver": "Refinanzierungsdruck"
+    },
+    {
+      "name": "Gewerbeimmobilien",
+      "signal": "RED",
+      "signal_text": "",
+      "trend": "Stark Fallend",
+      "driver": "Zinsniveau"
+    }
+  ],
+  "regions": [
+    {
+      "name": "USA",
+      "signal": "GREEN",
+      "signal_text": "",
+      "summary": "Starke Wirtschaft, aber politische Unsicherheit"
+    },
+    {
+      "name": "BRICS & Globaler Süden",
+      "signal": "GREEN",
+      "signal_text": "",
+      "summary": "Wachsende Wirtschaftsmacht und Rohstoffnachfrage"
+    },
+    {
+      "name": "Japan & Indien / ASEAN",
+      "signal": "GREEN",
+      "signal_text": "",
+      "summary": "Stabile Wirtschaft und Integration"
+    },
+    {
+      "name": "Kern-Europa (DE/FR/CH)",
+      "signal": "RED",
+      "signal_text": "",
+      "summary": "Wirtschaftliche und politische Herausforderungen"
+    },
+    {
+      "name": "China (Binnenmarkt)",
+      "signal": "RED",
+      "signal_text": "",
+      "summary": "Wirtschaftliche Abschwächung und politische Kontrolle"
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Ausweitung Nahost-Konflikt (Ölschock >100$)",
+      "prob": 45
+    },
+    {
+      "title": "Zweite Inflationswelle / Stagflation",
+      "prob": 35
+    },
+    {
+      "title": "Direkte NATO-Eskalation",
+      "prob": 10
+    },
+    {
+      "title": "BRICS-Dedollarisierung",
+      "prob": 10
+    }
+  ]
 }
