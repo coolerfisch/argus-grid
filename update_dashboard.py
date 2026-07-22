@@ -45,9 +45,9 @@ def get_live_market_data():
 
 live_market_context = get_live_market_data()
 
-# B. ERWEITERTER QUELLENSPIEGEL (Inkl. neuer unabhängiger & investigativer Medien)
+# B. ERWEITERTER QUELLENSPIEGEL (Inkl. BRICS-Primärquellen)
 rss_urls = {
-    # 🌍 1. BRICS & GLOBALER SÜDEN
+    # 🌍 1. BRICS & GLOBALER SÜDEN MEDIEN
     "Economic Times (Indien)": "https://economictimes.indiatimes.com/rssfeedstopstories.cms",
     "CGTN World (China Staatl.)": "https://news.cgtn.com/rss/World.xml",
     "Xinhua World (China)": "http://www.xinhuanet.com/english/rss/worldrss.xml",
@@ -58,7 +58,8 @@ rss_urls = {
     "South China Morning Post": "https://www.scmp.com/rss/91/feed",
     "Asia Times": "https://asiatimes.com/feed/",
 
-    # 🏛️ 2. PRIMÄRQUELLEN & DIPLOMATIE / INNENPOLITIK
+    # 🏛️ 2. PRIMÄRQUELLEN & DIPLOMATIE / INNENPOLITIK (WESTEN & BRICS)
+    # --- Westliche & Internationale Primärquellen ---
     "White House Briefing": "https://www.whitehouse.gov/briefing-room/feed/",
     "US Department of State": "https://www.state.gov/rss-feed/press-releases/feed/",
     "Federal Reserve": "https://www.federalreserve.gov/feeds/press_all.xml",
@@ -67,6 +68,15 @@ rss_urls = {
     "World Economic Forum": "https://www.weforum.org/agenda/feed/",
     "Schweizer Bundesrat": "https://www.admin.ch/gov/de/start/dokumentation/medienmitteilungen.rss.html",
     "Münchner Sicherheitskonferenz": "https://securityconference.org/news/rss/",
+    
+    # --- BRICS Diplomatische & Offizielle Primärquellen ---
+    "Kremlin News (Russland)": "http://en.kremlin.ru/rss/news",
+    "Kremlin Transkripte (Russland)": "http://en.kremlin.ru/rss/transcripts",
+    "Russisches Außenministerium (MID)": "https://mid.ru/en/rss.php",
+    "TV BRICS Official": "https://tvbrics.com/en/rss/",
+    "BRICS Info Sharing Platform": "https://www.brics-info.org/feed/",
+    "Chinesisches Außenministerium (MFA)": "https://www.fmprc.gov.cn/eng/zxmz/rss.xml",
+    "Indisches Außenministerium (MEA)": "https://www.mea.gov.in/rss.xml",
 
     # 📈 3. MAINSTREAM FINANZEN & POLITIK
     "CNBC Finance": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
@@ -79,7 +89,7 @@ rss_urls = {
     "Tagesschau": "https://www.tagesschau.de/ausland/index.xml",
     "BBC World": "http://feeds.bbci.co.uk/news/world/rss.xml",
 
-    # 🔓 4. UNABHÄNGIGE, INVESTIGATIVE & ALTERNATIVE ANALYSTEN (ERWEITERT)
+    # 🔓 4. UNABHÄNGIGE, INVESTIGATIVE & ALTERNATIVE ANALYSTEN
     "Multipolar Magazin": "https://multipolar-magazin.de/feed",
     "Manova / Rubikon": "https://www.manova.news/feed",
     "Berliner Tageszeitung": "https://www.berlinertageszeitung.de/rss.xml",
@@ -133,11 +143,11 @@ Du bist der Chef-Strategist des GeoPuls Dashboards.
 ECHTE LIVE-FINANZDATEN:
 {live_market_context}
 
-MEDIEN- & REGIERUNGS-FEEDS:
+MEDIEN- & REGIERUNGS-FEEDS (MAINSTREAM, BRICS DIPLOMATIE & ALTERNATIV):
 {feed_context}
 
 DEIN AUFTRAG (NUR VALIDES JSON ZURÜCKGEBEN):
-Analysiere die Gesamtlage und erstelle das Lagebild.
+Analysiere die Gesamtlage und erstelle das Lagebild. Berücksichtige dabei explizit die Mitteilungen der BRICS-Regierungsstellen und Diplomatiekanäle.
 
 STRIKTE PFLICHT: 'narrative_divergence' MUSS EINE LISTE VON EXACT 3 UNTERSCHIEDLICHEN REGIONALEN THEMEN SEIN:
 1. Thema 1: Ukraine / NATO / Europa
@@ -303,7 +313,7 @@ Exaktes Schema:
 print("Rufe Groq API auf...")
 chat_completion = client.chat.completions.create(
     messages=[
-        {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Du lieferst starr 3 unterschiedliche Schauplätze in der Narrativ-Matrix."},
+        {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Du wertest westliche sowie BRICS-Primärquellen aus und lieferst 3 unterschiedliche Schauplätze in der Narrativ-Matrix."},
         {"role": "user", "content": prompt}
     ],
     model="llama-3.3-70b-versatile",
@@ -388,4 +398,4 @@ if not history_data or history_data[-1].get("date") != today_str:
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls Dashboard erfolgreich mit erweiterten Feeds aktualisiert!")
+print("GeoPuls Dashboard mit BRICS-Primärquellen erfolgreich aktualisiert!")
