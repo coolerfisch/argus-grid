@@ -5,15 +5,31 @@ from datetime import datetime
 from groq import Groq
 import feedparser
 
-# HTML-Tags aus RSS-Texten entfernen für sauberen Prompt
+# HTML-Tags entfernen für sauberen KI-Prompt
 def clean_html(raw_html):
     if not raw_html:
         return ""
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return clean_text.strip()
 
-# 1. Erweiterte RSS-Feeds (inkl. Anti-Spiegel)
+# 1. Quellenspiegel: Alternative + Mainstream + Finanz- & Marktmedien
 rss_urls = {
+    # --- Finanz-, Makro- & Börsenmedien ---
+    "Handelsblatt (Finanzen)": "https://www.handelsblatt.com/contentexport/feed/finanzen",
+    "Finanzmarktwelt (FMW)": "https://finanzmarktwelt.de/feed/",
+    "stock3 (Godmode)": "https://stock3.com/news/feed/",
+    "Manager Magazin": "https://www.manager-magazin.de/rss",
+    "Wallstreet-Online": "https://www.wallstreet-online.de/rss/nachrichten.xml",
+    "ZeroHedge (Int. Finance & Macro)": "http://feeds.feedburner.com/zerohedge/feed",
+
+    # --- Geopolitik & Mainstream ---
+    "NZZ (International)": "https://www.nzz.ch/international.rss",
+    "FAZ (Ausland)": "https://www.faz.net/rss/aktuell/politik/ausland/",
+    "Tagesschau (Ausland)": "https://www.tagesschau.de/ausland/index.xml",
+    "BBC World News": "http://feeds.bbci.co.uk/news/world/rss.xml",
+    "Foreign Affairs": "https://www.foreignaffairs.com/rss.xml",
+
+    # --- Unabhängige & Alternative Medien ---
     "NachDenkSeiten": "https://www.nachdenkseiten.de/?feed=rss2",
     "Apolut": "https://apolut.net/feed/",
     "Achgut": "https://www.achgut.com/rss",
@@ -21,30 +37,24 @@ rss_urls = {
     "Anti-Spiegel": "https://anti-spiegel.ru/feed/",
     "Telepolis": "https://www.telepolis.de/index.rss",
     "Tichys Einblick": "https://www.tichyseinblick.de/feed/",
-    "Overton Magazin": "https://overton-magazin.de/feed/",
-    "ZeroHedge (Int. Geopolitik)": "http://feeds.feedburner.com/zerohedge/feed"
+    "Overton Magazin": "https://overton-magazin.de/feed/"
 }
 
-# Browser-Header vortäuschen, damit Server die Anfrage nicht blockieren
 browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-
 feed_context = ""
 
-print("Hole tagesaktuelle News aus erweiterten RSS-Feeds...")
+print("Hole tagesaktuelle News aus 18 Quellen (Finanzen, Geopolitik, Alternative)...")
 for source_name, url in rss_urls.items():
     try:
         feed = feedparser.parse(url, agent=browser_agent)
-        count = len(feed.entries)
-        print(f"-> {source_name}: {count} Artikel gefunden.")
-        
         feed_context += f"\n--- Aktuelle Meldungen von {source_name} ---\n"
-        for entry in feed.entries[:6]:
+        for entry in feed.entries[:3]:  # Top 3 Fokus-Artikel pro Quelle
             title = entry.get('title', '')
             raw_summary = entry.get('summary', '') or entry.get('description', '')
             summary = clean_html(raw_summary)
-            feed_context += f"- Titel: {title}\n  Zusammenfassung: {summary[:300]}...\n"
+            feed_context += f"- Titel: {title}\n  Zusammenfassung: {summary[:250]}...\n"
     except Exception as e:
-        print(f"Fehler beim Laden von {source_name}: {e}")
+        print(f"Fehler bei {source_name}: {e}")
 
 # 2. Groq Client initialisieren
 api_key = os.environ.get("GROQ_API_KEY")
@@ -53,76 +63,73 @@ if not api_key:
 
 client = Groq(api_key=api_key)
 
-# 3. Prompt mit striktem Hotspot-Mandat und Multi-Quellen-Fokus
+# 3. Synthese-Prompt für Makro, Märkte & Geopolitik
 prompt = f"""
 Du bist der Chef-Analyst des GeoPuls Dashboards.
-Erstelle eine tagesaktuelle, institutionelle Synthese der weltweiten Finanz-, Geopolitik- und Sicherheitslage.
+Erstelle eine tagesaktuelle, objektive Synthese aus Finanzmärkten, Makroökonomie (Zinsen, Inflation, Rohstoffe) und globaler Geopolitik.
 
-Analysiere tagesaktuell alle zentralen kriegerischen und geopolitischen Brandherde, Eskalationsrisiken, militärische Dynamiken und Machtverschiebungen.
-
-Nutze dazu die folgenden aktuellen Meldungen aus unabhängigen, alternativen und internationalen Medien (u. a. Anti-Spiegel, NachDenkSeiten, Apolut, ZeroHedge) sowie dein umfassendes weltweites Lagebild:
+Verarbeite dazu die Live-Meldungen aus Markt- und Finanzmedien (Handelsblatt, Finanzmarktwelt, stock3, ZeroHedge), etablierten Geopolitik-Analysen (NZZ, FAZ, Foreign Affairs) und alternativen Medien (NachDenkSeiten, Apolut, Anti-Spiegel, etc.):
 
 {feed_context}
 
-WICHTIGSTE REGEL FÜR 'conflict_hotspots':
-Das Feld "conflict_hotspots" DARF UNTER KEINEN UMSTÄNDEN LEER SEIN.
-Erstelle IMMER mindestens 4 bis 5 konkrete, detaillierte Einträge für die wichtigsten globalen Krisenherde (z. B. Ukraine/NATO/Russland, Naher Osten/Iran/Israel, Taiwan-Straße/China/USA, Rotes Meer/Bab al-Mandab/Houthi, Sahel/Afrika).
+WICHTIG FÜR 'conflict_hotspots':
+Das Feld "conflict_hotspots" MUSS mindestens 4 konkrete, detaillierte Einträge zu den wichtigsten weltweiten Krisenherden enthalten (Ukraine/NATO/Russland, Naher Osten/Iran/Israel, Taiwan-Straße/China/USA, Rotes Meer/Bab al-Mandab).
 
 Gib das Ergebnis AUSSCHLIESSLICH als korrektes JSON zurück.
 
 Exaktes Schema:
 {{
-  "timestamp": "",
-  "global_risk_score": 78,
-  "market_regime": "Geopolitische Stagflation & Multipolarer Konflikt",
-  "top_overweight": "Gold, Rohstoffe, Energie & Verteidigung",
-  "top_risk": "Eskalation der Regionalkonflikte / Versorgungsschock",
-  "daily_executive_summary": "Ausführliche Synthese der wichtigsten weltweiten Finanz- und Geopolitik-Entwicklungen der letzten 24h.",
   "conflict_hotspots": [
     {{
       "region": "Naher Osten / Iran & Israel",
       "actors": "USA / Israel vs. Iran / Achse des Widerstands",
       "escalation_level": "KRITISCH",
-      "catalyst": "Beschreibung der aktuellen Vorfälle, Provokationen und militärischen Aktionen",
-      "impact": "Auswirkungen auf Ölpreis (Brent), Straße von Hormus, Schifffahrt und globale Märkte"
+      "catalyst": "Aktuelle militärische Ereignisse oder Eskalationsschritte",
+      "impact": "Konkrete Folgen für Brent-Öl, Seewege und geopolitische Risikoaufschläge"
     }},
     {{
       "region": "Ukraine / NATO-Ostflanke",
       "actors": "Russland vs. Ukraine / NATO-Unterstützer",
       "escalation_level": "HOCH",
-      "catalyst": "Frontverlauf, Waffenlieferungen, Eskalationsschritte und strategische Zündeleien",
-      "impact": "Auswirkungen auf europäische Energiepreise, Rüstungssektor und Agrarrohstoffe"
+      "catalyst": "Militärische Lage, Rüstungsfragen und strategische Zündeleien",
+      "impact": "Folgen für europäische Strom-/Gaspreise, Rüstungssektor und Agrarrohstoffe"
     }},
     {{
       "region": "Rotes Meer / Bab al-Mandab",
-      "actors": "Houthi-Ansarallah vs. Westliche Marine-Allianz",
+      "actors": "Houthi-Milizen vs. Westliche Marine-Allianz",
       "escalation_level": "HOCH",
-      "catalyst": "Angriffe auf Handelsschiffe, Umleitung um das Kap der Guten Hoffnung",
-      "impact": "Lieferketten-Verzögerungen, Frachtraten-Anstieg (SCFI), Containerschifffahrt"
+      "catalyst": "Schiffsangriffe und Sicherung der Handelsrouten",
+      "impact": "Lieferketten, Frachtraten und Container-Transport"
     }},
     {{
       "region": "Taiwan-Straße / Indopazifik",
       "actors": "China vs. Taiwan / USA & Japan",
       "escalation_level": "MITTEL-HOCH",
-      "catalyst": "Militärmanöver, Handelsrestriktionen und diplomatisches Zündeln",
-      "impact": "Risiken für globale Halbleiter-Supply-Chains (TSMC) und Tech-Werte"
+      "catalyst": "Militärmanöver und technologische Sanktionen",
+      "impact": "Risiken für Halbleiter-Lieferketten (TSMC) und Tech-Sektor"
     }}
   ],
+  "timestamp": "",
+  "global_risk_score": 78,
+  "market_regime": "Geopolitische Stagflation & Zins-Unsicherheit",
+  "top_overweight": "Gold, Energie, Rohstoffe & Verteidigung",
+  "top_risk": "Versorgungsschock / Zins- und Refinanzierungsdruck",
+  "daily_executive_summary": "Ausführliche Synthese aus Makro-Finanzmärkten und Geopolitik der letzten 24h.",
   "assets": [
-    {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Sehr Attraktiv", "trend": "Stark Steigend", "driver": "Geopolitische Krise & Sichere Häfen" }},
-    {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Steigend", "driver": "Technologie-Rüstung & Hardware-Boom" }},
-    {{ "name": "Uran & Energie", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Stark Steigend", "driver": "Versorgungsängste & Infrastruktur-Schutz" }},
-    {{ "name": "S&P 500 / Nasdaq", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Volatil", "driver": "Hohe Bewertung vs. Kriegs-Risikoaufschlag" }},
-    {{ "name": "Bitcoin & Krypto", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Volatil", "driver": "Globales Liquiditätsumfeld" }},
+    {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Sehr Attraktiv", "trend": "Stark Steigend", "driver": "Geopolitik, Zentralbankkäufe & Sichere Häfen" }},
+    {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Steigend", "driver": "Technologie-Rüstung & Monetarisierung" }},
+    {{ "name": "Uran & Energie", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Stark Steigend", "driver": "Angebotsdefizit & Versorgungsängste" }},
+    {{ "name": "S&P 500 / Nasdaq", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Volatil", "driver": "Hohe KGV-Bewertung vs. Zinsaussichten" }},
+    {{ "name": "Bitcoin & Krypto", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Volatil", "driver": "M2-Geldmenge & Liquiditätsumfeld" }},
     {{ "name": "High-Yield Bonds", "signal": "RED", "signal_text": "🔴 Unattraktiv", "trend": "Fallend", "driver": "Ausfallrisiken & Refinanzierungsdruck" }},
-    {{ "name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "Stark Fallend", "driver": "Hohes Zinsniveau & Kreditklemme" }}
+    {{ "name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "Stark Fallend", "driver": "Hohes Zinsniveau & Leerstände" }}
   ],
   "regions": [
-    {{ "name": "USA", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Militärische Machtprojektion, aber Rekordverschuldung." }},
+    {{ "name": "USA", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Tech- & Kapitalmarkt-Dominanz, aber Rekordverschuldung." }},
     {{ "name": "Japan & Indien", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Gewinner der globalen Lieferketten-Neuordnung." }},
-    {{ "name": "ASEAN", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Kapitalzuflüsse durch verlagerte Produktion." }},
-    {{ "name": "Kern-Europa (DE/FR)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Hohe Energiekosten, Deindustrialisierung & Standortschwäche." }},
-    {{ "name": "China (Binnenmarkt)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Immobilienkrise, Kapitalabflüsse & Sanktionen." }}
+    {{ "name": "ASEAN", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Starker Kapitalzufluss durch Friendshoring." }},
+    {{ "name": "Kern-Europa (DE/FR)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Deindustrialisierung, hohe Energiekosten & Standortschwäche." }},
+    {{ "name": "China (Binnenmarkt)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Immobilienkrise, Kapitalabflüsse & Deflationsdruck." }}
   ],
   "scenarios": [
     {{ "title": "Ausweitung Nahost-Konflikt (Ölschock >100$)", "prob": 40 }},
@@ -133,10 +140,10 @@ Exaktes Schema:
 }}
 """
 
-print("Rufe Groq API mit Llama 3.3 70B auf...")
+print("Rufe Groq API auf...")
 chat_completion = client.chat.completions.create(
     messages=[
-        {"role": "system", "content": "Du bist ein präzises Makro- und Geopolitik-Analysesystem, das ausschließlich valides JSON generiert."},
+        {"role": "system", "content": "Du bist ein präzises Makro-, Finanz- und Geopolitik-Analysesystem, das ausschließlich valides JSON generiert."},
         {"role": "user", "content": prompt}
     ],
     model="llama-3.3-70b-versatile",
@@ -144,9 +151,44 @@ chat_completion = client.chat.completions.create(
 )
 
 data = json.loads(chat_completion.choices[0].message.content)
+
+# Fallback-Sicherung
+if "conflict_hotspots" not in data or not data["conflict_hotspots"]:
+    print("Warnung: KI hat keine Hotspots geliefert. Nutze Fallback.")
+    data["conflict_hotspots"] = [
+        {
+            "region": "Naher Osten / Iran & Israel",
+            "actors": "USA / Israel vs. Iran / Achse des Widerstands",
+            "escalation_level": "KRITISCH",
+            "catalyst": "Aktivitäten im Persischen Golf und Drohungen an wichtigen Seewegen.",
+            "impact": "Risikoaufschläge bei Rohöl und erhöhte Marktvolatilität."
+        },
+        {
+            "region": "Ukraine / NATO-Ostflanke",
+            "actors": "Russland vs. Ukraine / NATO-Unterstützer",
+            "escalation_level": "HOCH",
+            "catalyst": "Frontverlauf, strategische Schläge und Waffenlieferungen.",
+            "impact": "Volatilität bei europäischen Agrar- und Energiepreisen."
+        },
+        {
+            "region": "Rotes Meer / Bab al-Mandab",
+            "actors": "Houthi-Milizen vs. Westliche Marine-Allianz",
+            "escalation_level": "HOCH",
+            "catalyst": "Angriffe auf Frachtschiffe und Ausweichrouten um Afrika.",
+            "impact": "Steigende Transportkosten und Lieferzeitverzögerungen."
+        },
+        {
+            "region": "Taiwan-Straße / Indopazifik",
+            "actors": "China vs. Taiwan / USA",
+            "escalation_level": "MITTEL-HOCH",
+            "catalyst": "Militärmanöver und technologische Handelsbarrieren.",
+            "impact": "Potenzielle Risiken für die globale Chip-Infrastruktur."
+        }
+    ]
+
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls data.json erfolgreich erstellt!")
+print("GeoPuls data.json mit 18 Quellen (inkl. Finanz-Medien) erfolgreich aktualisiert!")
