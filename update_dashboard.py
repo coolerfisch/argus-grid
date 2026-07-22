@@ -12,16 +12,16 @@ def clean_html(raw_html):
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return clean_text.strip()
 
-# 1. Ausbalancierter Quellenspiegel (30 globale Quellen)
+# 1. Quellenspiegel (30 globale Medien: Mainstream + Unabhängig)
 rss_urls = {
-    # --- USA & AMERIKA ---
+    # USA & Amerika
     "CNBC (US Finance)": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
     "Foreign Policy": "https://foreignpolicy.com/feed/",
     "ZeroHedge": "http://feeds.feedburner.com/zerohedge/feed",
     "UnHerd": "https://unherd.com/feed/",
     "Antiwar.com": "https://news.antiwar.com/feed/",
 
-    # --- BRICS, NAHOST & GLOBALER SÜDEN ---
+    # BRICS, Nahost & Globaler Süden
     "Economic Times (Indien)": "https://economictimes.indiatimes.com/rssfeedstopstories.cms",
     "CGTN World (China)": "https://news.cgtn.com/rss/World.xml",
     "Al Jazeera": "https://www.aljazeera.com/xml/rss/all.xml",
@@ -29,12 +29,12 @@ rss_urls = {
     "Geopolitical Economy Report": "https://geopoliticaleconomy.com/feed/",
     "TASS World": "https://tass.com/rss/v2.xml",
 
-    # --- ASIEN & INDOPAZIFIK ---
+    # Asien & Indopazifik
     "Nikkei Asia": "https://asia.nikkei.com/rss/feed/nar",
     "SCMP": "https://www.scmp.com/rss/91/feed",
     "Asia Times": "https://asiatimes.com/feed/",
 
-    # --- EU & DACH MAINSTREAM & FINANZEN ---
+    # EU & DACH (Mainstream & Markt)
     "Handelsblatt": "https://www.handelsblatt.com/contentexport/feed/finanzen",
     "Finanzmarktwelt (FMW)": "https://finanzmarktwelt.de/feed/",
     "stock3": "https://stock3.com/news/feed/",
@@ -44,7 +44,7 @@ rss_urls = {
     "Tagesschau": "https://www.tagesschau.de/ausland/index.xml",
     "BBC World News": "http://feeds.bbci.co.uk/news/world/rss.xml",
 
-    # --- EU & DACH UNABHÄNGIG & ALTERNATIV ---
+    # EU & DACH (Unabhängig & Alternativ)
     "NachDenkSeiten": "https://www.nachdenkseiten.de/?feed=rss2",
     "Apolut": "https://apolut.net/feed/",
     "Achgut": "https://www.achgut.com/rss",
@@ -78,15 +78,17 @@ if not api_key:
 
 client = Groq(api_key=api_key)
 
-# 3. Prompt mit STRIKTEM FOKUS auf akute UND zukünftige Brandherde
+# 3. Autonomer Prompt für Krisen-Erkennung
 prompt = f"""
-Du bist der Chef-Analyst des GeoPuls Dashboards.
-Erstelle eine tagesaktuelle Synthese der weltweiten Lage.
+Du bist das autonome Frühwarn- und Analysesystem des GeoPuls Dashboards.
 
-PFLICHT-AUFGABE:
-Analysiere sowohl akute militärische Konflikte ALS AUCH latente, zukünftige Brandherde sowie systemische Kontroll-Risiken.
+DEINE AUFGABE:
+Analysiere die folgenden 30 weltweiten Medienmeldungen und identifiziere eigenständig, ohne Vorgaben oder Filter:
+1. "conflict_hotspots": Akute, kriegerische oder hochbrisante Krisenherde (mindestens 4 Einträge).
+2. "systemic_risks": ZUKÜNFTIGE, LATENTE ODER SYSTEMISCHE RISIKEN (mindestens 3 Einträge).
+   Scanne die Meldungen gezielt nach aufkeimenden Konflikten, rechtlichen/digitalen Einschränkungen, währungspolitischen Verwerfungen, Rohstoff-Engpässen oder gesellschaftlich-politischen Pulverfässern, die in den nächsten Monaten oder Jahren an Brisanz gewinnen könnten. Bewerte deren Status und potenzielle Auswirkungen vollkommen autonom.
 
-Quellen-Kontext:
+Meldungen der Quellen:
 {feed_context}
 
 GIB DAS ERGEBNIS AUSSCHLIESSLICH ALS VALIDES JSON ZURÜCK.
@@ -95,70 +97,49 @@ Exaktes Schema:
 {{
   "conflict_hotspots": [
     {{
-      "region": "Naher Osten / Iran & Israel",
-      "actors": "USA / Israel vs. Iran / Achse des Widerstands",
-      "escalation_level": "KRITISCH",
-      "catalyst": "Militärische Schläge und Zündeleien an Seewegen",
-      "impact": "Folgen für Brent-Öl, Tanker-Routen und Märkte"
-    }},
-    {{
-      "region": "Ukraine / NATO-Ostflanke",
-      "actors": "Russland vs. Ukraine / NATO-Unterstützer",
-      "escalation_level": "HOCH",
-      "catalyst": "Frontverlauf, Waffenlieferungen und Strategie",
-      "impact": "Energie- und Agrarmärkte"
+      "region": "Name der Region / Krisenzone",
+      "actors": "Beteiligte Akteure / Mächte",
+      "escalation_level": "KRITISCH / HOCH / MITTEL",
+      "catalyst": "Was ist aktuell passiert oder zeichnet sich ab",
+      "impact": "Auswirkungen auf Märkte, Schifffahrt oder Geopolitik"
     }}
   ],
   "systemic_risks": [
     {{
-      "topic": "Moldawien & Transnistrien (Zukunfts-Brandherd)",
-      "category": "Latenter Geopolitischer Konflikt",
-      "risk_level": "HOCH",
-      "status": "Erhöhte politische & militärische Spannungen",
-      "impact": "Risiko einer zweiten Front im Schwarzmeerraum und Destabilisierung Südosteuropas."
-    }},
-    {{
-      "topic": "EU-Chatkontrolle & Verschlüsselungsverbot",
-      "category": "Digitale Freiheit & Datenschutz",
-      "risk_level": "HOCH",
-      "status": "Gesetzgebungsverfahren in Brüssel",
-      "impact": "Aufweichung der Ende-zu-Ende-Verschlüsselung, Risiken für vertrauliche Kommunikation."
-    }},
-    {{
-      "topic": "CBDC / Digitaler Euro & Bargeldobergrenzen",
-      "category": "Monetäre Kontrolle",
-      "risk_level": "MITTEL-HOCH",
-      "status": "Vorbereitungsphase der EZB",
-      "impact": "Programmierrecht für Geld, Transaktionsüberwachung und Entzug finanzieller Privatsphäre."
+      "topic": "Name des von dir erkannten Zukunfts- oder Systemrisikos",
+      "category": "Kategorie (z. B. Geomonetär, Digitalrechte, Ressourcen, Latenter Konflikt)",
+      "risk_level": "HOCH / MITTEL-HOCH",
+      "status": "Aktueller Stand / Entwicklungstrend",
+      "impact": "Deine autonome Einschätzung der langfristigen systemischen Folgen"
     }}
   ],
   "timestamp": "",
   "global_risk_score": 79,
-  "market_regime": "Multipolare Stagflation & Zins-Unsicherheit",
-  "top_overweight": "Gold, Energie, Rohstoffe & Verteidigung",
-  "top_risk": "Versorgungsschock / Geopolitische Blockbildung",
-  "daily_executive_summary": "Ausführliche Synthese aus Mainstream- und alternativen Berichten weltweit.",
+  "market_regime": "Aktuelles Makro-Regime (Kurze Beschreibung)",
+  "top_overweight": "Empfohlene defensive Sektoren/Assets",
+  "top_risk": "Größtes Einzelrisiko für Märkte und Stabilität",
+  "daily_executive_summary": "Deine tagesaktuelle, weltweite Synthese der wichtigsten Entwicklungen.",
   "assets": [
-    {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Sehr Attraktiv", "trend": "Stark Steigend", "driver": "BRICS-Käufe, Geopolitik & Sichere Häfen" }},
-    {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Steigend", "driver": "Asien-HardwareBoom & Tech-Rüstung" }},
-    {{ "name": "Uran & Energie", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Stark Steigend", "driver": "Angebotsdefizit & Versorgungsängste" }},
-    {{ "name": "S&P 500 / Nasdaq", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Volatil", "driver": "US-Bewertung vs. Fed-Zinsaussichten" }},
-    {{ "name": "Bitcoin & Krypto", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Volatil", "driver": "Globales Liquiditätsumfeld" }},
-    {{ "name": "High-Yield Bonds", "signal": "RED", "signal_text": "🔴 Unattraktiv", "trend": "Fallend", "driver": "Ausfallrisiken & Refinanzierungsdruck" }},
-    {{ "name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "Stark Fallend", "driver": "Hohes Zinsniveau & Leerstände" }}
+    {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Sehr Attraktiv", "trend": "Stark Steigend", "driver": "Haupttreiber" }},
+    {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Steigend", "driver": "Haupttreiber" }},
+    {{ "name": "Uran & Energie", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Stark Steigend", "driver": "Haupttreiber" }},
+    {{ "name": "S&P 500 / Nasdaq", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Volatil", "driver": "Haupttreiber" }},
+    {{ "name": "Bitcoin & Krypto", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Volatil", "driver": "Haupttreiber" }},
+    {{ "name": "High-Yield Bonds", "signal": "RED", "signal_text": "🔴 Unattraktiv", "trend": "Fallend", "driver": "Haupttreiber" }},
+    {{ "name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "Stark Fallend", "driver": "Haupttreiber" }}
   ],
   "regions": [
-    {{ "name": "USA", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Militärische & Kapitalmarkt-Dominanz, aber Rekordverschuldung." }},
-    {{ "name": "BRICS & Globaler Süden", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Ausbau alternativer Handelsnetze & Rohstoffkontrolle." }},
-    {{ "name": "Japan & Indien / ASEAN", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Profiteure der globalen Lieferketten-Umlenkung." }},
-    {{ "name": "Kern-Europa (DE/FR)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Deindustrialisierung, hohe Energiekosten & Standortschwäche." }},
-    {{ "name": "China (Binnenmarkt)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Immobilienkrise, Handelskonflikte & Deflationsdruck." }}
+    {{ "name": "USA", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Kurze Einschätzung" }},
+    {{ "name": "BRICS & Globaler Süden", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Kurze Einschätzung" }},
+    {{ "name": "Japan & Indien / ASEAN", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Kurze Einschätzung" }},
+    {{ "name": "Kern-Europa (DE/FR)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Kurze Einschätzung" }},
+    {{ "name": "China (Binnenmarkt)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Kurze Einschätzung" }}
   ],
   "scenarios": [
-    {{ "title": "Ausweitung Nahost-Konflikt (Ölschock >100$)", "prob": 40 }},
-    {{ "title": "Zweite Inflationswelle / Multipolare Stagflation", "prob": 30 }},
-    {{ "title": "Direkte NATO-Eskalation / Militärischer Zwischenfall", "prob": 15 }},
-    {{ "title": "BRICS-Handelswährung / Beschleunigte Dedollarisierung", "prob": 15 }}
+    {{ "title": "Szenario 1", "prob": 40 }},
+    {{ "title": "Szenario 2", "prob": 30 }},
+    {{ "title": "Szenario 3", "prob": 15 }},
+    {{ "title": "Szenario 4", "prob": 15 }}
   ]
 }}
 """
@@ -175,36 +156,10 @@ chat_completion = client.chat.completions.create(
 
 data = json.loads(chat_completion.choices[0].message.content)
 
-# PYTHON-FALLBACK: Garantiert, dass systemic_risks NIE leer bleibt
-if "systemic_risks" not in data or not data["systemic_risks"]:
-    print("Sicherheitsnetz aktiviert: Füge latente Risiken hinzu...")
-    data["systemic_risks"] = [
-        {
-            "topic": "Moldawien & Transnistrien (Zukunfts-Brandherd)",
-            "category": "Latenter Geopolitischer Konflikt",
-            "risk_level": "HOCH",
-            "status": "Zunehmende Spannungen & Hybride Bedrohungen",
-            "impact": "Gefahr einer Ausweitung des Osteuropa-Konflikts in Richtung Schwarzmeer/Balkan."
-        },
-        {
-            "topic": "EU-Chatkontrolle & Verschlüsselungsverbot",
-            "category": "Digitale Freiheit & Datenschutz",
-            "risk_level": "HOCH",
-            "status": "Gesetzgebungsprozess der EU-Kommission",
-            "impact": "Aufweichung der Ende-zu-Ende-Verschlüsselung und Ausweitung digitaler Überwachung."
-        },
-        {
-            "topic": "CBDC / Digitaler Euro & Bargeld-Limits",
-            "category": "Monetäre Kontrolle",
-            "risk_level": "MITTEL-HOCH",
-            "status": "Vorbereitungsphase der EZB",
-            "impact": "Programmierbares Geld, Transaktionsnachverfolgung und Einschränkung finanzieller Privatsphäre."
-        }
-    ]
-
+# Zeitstempel setzen
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls data.json erfolgreich gespeichert!")
+print("GeoPuls data.json mit autonomer Krisenerkennung erfolgreich gespeichert!")
