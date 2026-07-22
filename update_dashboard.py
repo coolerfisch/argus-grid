@@ -14,7 +14,7 @@ def clean_html(raw_html):
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return clean_text.strip()
 
-# A. ECHTE LIVE-MARKTDATEN HOLEN (yfinance)
+# A. ECHTE LIVE-MARKTDATEN HOLEN
 def get_live_market_data():
     market_summary = ""
     tickers = {
@@ -26,19 +26,22 @@ def get_live_market_data():
         "VIX (Angstindex)": "^VIX"
     }
     print("Hole echte Finanzmarktdaten via yfinance...")
-    for name, ticker in tickers.items():
-        try:
-            data = yf.Ticker(ticker).history(period="2d")
-            if len(data) >= 2:
-                close_curr = data['Close'].iloc[-1]
-                close_prev = data['Close'].iloc[-2]
-                change_pct = ((close_curr - close_prev) / close_prev) * 100
-                market_summary += f"- {name}: {close_curr:.2f} ({change_pct:+.2f}% heute)\n"
-            elif len(data) == 1:
-                market_summary += f"- {name}: {data['Close'].iloc[-1]:.2f}\n"
-        except Exception as e:
-            print(f"Fehler bei Ticker {ticker}: {e}")
-    return market_summary
+    try:
+        for name, ticker in tickers.items():
+            try:
+                data = yf.Ticker(ticker).history(period="5d")
+                if not data.empty and len(data) >= 2:
+                    close_curr = data['Close'].iloc[-1]
+                    close_prev = data['Close'].iloc[-2]
+                    change_pct = ((close_curr - close_prev) / close_prev) * 100
+                    market_summary += f"- {name}: {close_curr:.2f} ({change_pct:+.2f}% heute)\n"
+            except Exception as e_tick:
+                print(f"Hinweis: Ticker {ticker} fehlerhaft: {e_tick}")
+    except Exception as e_all:
+        print(f"yfinance Fehler: {e_all}")
+        market_summary = "- Finanzdaten aktuell eingeschränkt verfügbar.\n"
+    
+    return market_summary if market_summary else "- Finanzdaten im Wartestand.\n"
 
 live_market_context = get_live_market_data()
 
@@ -55,17 +58,17 @@ rss_urls = {
     "South China Morning Post": "https://www.scmp.com/rss/91/feed",
     "Asia Times": "https://asiatimes.com/feed/",
 
-    # 🏛️ PRIMÄRQUELLEN & DIPLOMATIE
-    "White House": "https://www.whitehouse.gov/briefing-room/feed/",
+    # 🏛️ PRIMÄRQUELLEN & DIPLOMATIE / INNENPOLITIK
+    "White House Briefing": "https://www.whitehouse.gov/briefing-room/feed/",
     "US Department of State": "https://www.state.gov/rss-feed/press-releases/feed/",
     "Federal Reserve": "https://www.federalreserve.gov/feeds/press_all.xml",
-    "EU-Kommission": "https://ec.europa.eu/commission/presscorner/api/rss",
+    "EU-Kommission Press": "https://ec.europa.eu/commission/presscorner/api/rss",
     "Europäischer Rat": "https://www.consilium.europa.eu/en/rss/",
     "World Economic Forum": "https://www.weforum.org/agenda/feed/",
     "Schweizer Bundesrat": "https://www.admin.ch/gov/de/start/dokumentation/medienmitteilungen.rss.html",
     "Münchner Sicherheitskonferenz": "https://securityconference.org/news/rss/",
 
-    # 📈 MAINSTREAM FINANZEN
+    # 📈 MAINSTREAM FINANZEN & POLITIK
     "CNBC Finance": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
     "Foreign Policy": "https://foreignpolicy.com/feed/",
     "Nikkei Asia": "https://asia.nikkei.com/rss/feed/nar",
@@ -76,7 +79,7 @@ rss_urls = {
     "Tagesschau": "https://www.tagesschau.de/ausland/index.xml",
     "BBC World": "http://feeds.bbci.co.uk/news/world/rss.xml",
 
-    # 🔓 UNABHÄNGIGE ANALYSTEN
+    # 🔓 UNABHÄNGIGE & INNENPOLITIK-ANALYSTEN
     "ZeroHedge": "http://feeds.feedburner.com/zerohedge/feed",
     "UnHerd": "https://unherd.com/feed/",
     "Antiwar.com": "https://news.antiwar.com/feed/",
@@ -111,21 +114,26 @@ if not api_key:
 
 client = Groq(api_key=api_key)
 
-# D. PROMPT FÜR KOMPLETTE SYNTHESE
+# D. PROMPT MIT AKTIEN-PICKS & INNENPOLITIK
 prompt = f"""
 Du bist der Chef-Strategist des GeoPuls Dashboards.
 
-ECHTE TAGESAKTUELLE FINANZDATEN (BERÜCKSICHTIGE DIESE BEI DEN ASSETS):
+ECHTE LIVE-FINANZDATEN:
 {live_market_context}
 
-FEEDS DER MEDIEN & PRIMÄRQUELLEN:
+MEDIEN- & REGIERUNGS-FEEDS:
 {feed_context}
 
 DEIN AUFTRAG (NUR VALIDES JSON ZURÜCKGEBEN):
-1. 'defcon_status': Bewerte das weltweite Atomkriegs-/Weltkriegsrisiko (Level 1-5, Label, nuclear_risk_percent, primary_driver).
-2. 'narrative_divergence': Vergleiche das am stärksten unterschiedlich berichtete Thema des Tages zwischen Mainstream, BRICS und Alternativmedien.
-3. 'conflict_hotspots': MINDESTENS 4 ECHTE BRANDHERDE mit exakten Koordinaten ("lat", "lng") für eine Weltkarte.
-4. 'systemic_risks': 3 Pflicht-Risiken (Territorial/Geopolitisch wie Moldawien, Digitale/Monetäre Kontrolle, Strategischer Rohstoff/Infrastruktur-Hebel).
+Analysiere die Gesamtlage inkl. der INNENPOLITIK der Schlüsselstaaten (US-Parteienkampf, EU-Koalitionsprobleme, soziale/wirtschaftliche Unruhen in BRICS) und erstelle konkrete Aktien-Empfehlungen.
+
+1. 'defcon_status': Atomkriegs-/Weltkriegsrisiko (Level 1-5, Label, nuclear_risk_percent, primary_driver).
+2. 'domestic_politics': Analysiere 3 wichtige INNENPOLITISCHE Schauplätze der Welt (z.B. USA, Deutschland/EU, China/BRICS), die außenpolitische Konsequenzen haben.
+3. 'stock_picks':
+   - 'top_5_buys': 5 konkrete Gewinner-Aktien (z.B. Rheinmetall, Cameco, Lockheed, Lockheed, Barrick Gold, Nvidia) mit Ticker, Name, Sektor und geopolitischem Gegenwind/Rückenwind (reason).
+   - 'flop_5_sells': 5 konkrete Verlierer-Aktien/Sektoren (z.B. verschuldete Immobilienwerte, stark von China-Lieferketten abhängige Konsumwerte) mit Ticker, Name, Sektor und Begründung (reason).
+4. 'conflict_hotspots': MINDESTENS 4 ECHTE BRANDHERDE mit exakten Koordinaten ("lat", "lng").
+5. 'systemic_risks': 3 Pflicht-Risiken (Geopolitische Region wie Moldawien, Digitale/Monetäre Kontrolle, Strategischer Hebel).
 
 Exaktes Schema:
 {{
@@ -133,12 +141,48 @@ Exaktes Schema:
     "level": 3,
     "label": "DEFCON 3 - Erhöhte Alarmstufe",
     "nuclear_risk_percent": 15,
-    "primary_driver": "Nukleardoktrin-Anpassungen & Militärmanöver der Supermächte"
+    "primary_driver": "Nukleardoktrin-Anpassungen & Rhetorik"
+  }},
+  "domestic_politics": [
+    {{
+      "country_region": "USA / Washington",
+      "topic": "US-Kongress & Budget-Rivalitäten",
+      "status": "Haushaltsstreit & Parteienpolarisation",
+      "impact": "Blockaden bei Auslandshilfen und Druck auf Außenpolitik"
+    }},
+    {{
+      "country_region": "Deutschland / EU",
+      "topic": "Regierungskrisen & Polarisierung",
+      "status": "Hohe Deindustrialisierung & Haushaltsprobleme",
+      "impact": "Eingeschränkte Handlungsfähigkeit Brüssels und Streit um Sondervermögen"
+    }},
+    {{
+      "country_region": "China / BRICS",
+      "topic": "Immobilienkrise & Stimulus-Debatte",
+      "status": "Interne Wirtschaftsflaute in Peking",
+      "impact": "Erhöhter Druck auf Exportmärkte und Rohstoffnachfrage"
+    }}
+  ],
+  "stock_picks": {{
+    "top_5_buys": [
+      {{ "ticker": "RHM.DE", "name": "Rheinmetall", "sector": "Rüstung & Verteidigung", "reason": "Massives Aufrüstungsprogramm in Europa & NATO" }},
+      {{ "ticker": "CCJ", "name": "Cameco", "sector": "Uran & Kernenergie", "reason": "Globale Energiekrise & Renaissance der Atomkraft" }},
+      {{ "ticker": "GOLD", "name": "Barrick Gold", "sector": "Rohstoffe / Gold", "reason": "BRICS-Zentralbankkäufe & Flucht in sichere Häfen" }},
+      {{ "ticker": "LMT", "name": "Lockheed Martin", "sector": "US-Verteidigung", "reason": "Globale Nachfrage nach Raketenabwehr & Jet-Hardware" }},
+      {{ "ticker": "NVDA", "name": "Nvidia", "sector": "KI & Tech-Souveränität", "reason": "Ungebrochener Rüstungs- & KI-Hardware-Boom" }}
+    ],
+    "flop_5_sells": [
+      {{ "ticker": "VNA.DE", "name": "Vonovia", "sector": "Gewerbe & Wohnimmobilien", "reason": "Hohe Zinslast & Refinanzierungsrisiken" }},
+      {{ "ticker": "NKE", "name": "Nike", "sector": "Konsumgüter", "reason": "Schwächelnder Binnenmarkt in China & Kaufkraftverlust" }},
+      {{ "ticker": "BA", "name": "Boeing", "sector": "Luftfahrt", "reason": "Qualitätsprobleme & Lieferketten-Engpässe" }},
+      {{ "ticker": "DBK.DE", "name": "Deutsche Bank", "sector": "Europäische Banken", "reason": "Kreditausfallrisiken bei Gewerbeimmobilien" }},
+      {{ "ticker": "INTC", "name": "Intel", "sector": "Halbleiter (Old Gen)", "reason": "Verlust von Marktanteilen im KI-Segment" }}
+    ]
   }},
   "narrative_divergence": {{
     "topic": "Das am stärksten gespaltene Thema des Tages",
-    "mainstream_view": "Einschätzung westlicher Leitmedien",
-    "brics_view": "Einschätzung von TASS, CGTN, Al Jazeera",
+    "mainstream_view": "Einschätzung westlicher Medien",
+    "brics_view": "Einschätzung von TASS/CGTN",
     "alternative_view": "Einschätzung unabhängiger Analysten"
   }},
   "conflict_hotspots": [
@@ -236,7 +280,7 @@ Exaktes Schema:
 print("Rufe Groq API auf...")
 chat_completion = client.chat.completions.create(
     messages=[
-        {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitik- und Risikomodell, das strikt valides JSON generiert."},
+        {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Du bewertest Innenpolitik und generierst konkrete Aktien-Buys/Sells."},
         {"role": "user", "content": prompt}
     ],
     model="llama-3.3-70b-versatile",
@@ -244,9 +288,33 @@ chat_completion = client.chat.completions.create(
 )
 
 data = json.loads(chat_completion.choices[0].message.content)
+
+# GEO-LOOKUP FALLBACK FÜR KOORDINATEN
+GEO_LOOKUP = {
+    "nah": (31.5, 34.75), "iran": (32.42, 53.68), "israel": (31.04, 34.85),
+    "ukraine": (48.37, 31.16), "taiwan": (23.69, 120.96), "rot": (12.58, 43.33),
+    "bab": (12.58, 43.33), "moldaw": (47.01, 28.86), "transnistrien": (46.84, 29.63),
+    "balkan": (43.85, 18.35), "kaukasus": (41.71, 44.78), "suwalki": (54.1, 22.9)
+}
+
+for h in data.get("conflict_hotspots", []):
+    try:
+        h["lat"] = float(h.get("lat"))
+        h["lng"] = float(h.get("lng"))
+    except (ValueError, TypeError):
+        reg_lower = h.get("region", "").lower()
+        found = False
+        for key, coords in GEO_LOOKUP.items():
+            if key in reg_lower:
+                h["lat"], h["lng"] = coords
+                found = True
+                break
+        if not found:
+            h["lat"], h["lng"] = 20.0, 0.0
+
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 
-# E. HISTORISCHEN RISIKO-TRACKER AKTUALISIEREN (history.json)
+# HISTORIE TRACKEN
 history_file = "history.json"
 history_data = []
 if os.path.exists(history_file):
@@ -257,18 +325,17 @@ if os.path.exists(history_file):
         history_data = []
 
 today_str = datetime.utcnow().strftime("%d.%m")
-# Nur einen Eintrag pro Tag
 if not history_data or history_data[-1].get("date") != today_str:
     history_data.append({
         "date": today_str,
         "score": data.get("global_risk_score", 75),
         "defcon": data.get("defcon_status", {}).get("level", 3)
     })
-    history_data = history_data[-30:] # Max. 30 Tage aufbewahren
+    history_data = history_data[-30:]
     with open(history_file, "w", encoding="utf-8") as f:
         json.dump(history_data, f, ensure_ascii=False, indent=2)
 
-# F. TELEGRAM PUSH-ALERT BEI HOHEM RISIKO (OPTIONAL)
+# TELEGRAM ALERT (OPTIONAL)
 tg_token = os.environ.get("TELEGRAM_BOT_TOKEN")
 tg_chat_id = os.environ.get("TELEGRAM_CHAT_ID")
 risk_score = data.get("global_risk_score", 0)
@@ -279,21 +346,17 @@ if tg_token and tg_chat_id and (risk_score >= 80 or defcon_lvl <= 2):
         alert_msg = (
             f"🚨 *GeoPuls WARNMELDUNG* 🚨\n\n"
             f"⚠️ *Global Risk Score:* {risk_score} / 100\n"
-            f"☢️ *DEFCON Status:* Level {defcon_lvl} ({data.get('defcon_status', {}).get('label')})\n\n"
+            f"☢️ *DEFCON Status:* Level {defcon_lvl}\n\n"
             f"📌 *Hauptrisiko:* {data.get('top_risk')}\n"
-            f"💡 *Treiber:* {data.get('defcon_status', {}).get('primary_driver')}\n\n"
-            f"🌐 [GeoPuls Dashboard öffnen](https://coolerfisch.github.io/histamin/)"
         )
         requests.post(
             f"https://api.telegram.org/bot{tg_token}/sendMessage",
             data={"chat_id": tg_chat_id, "text": alert_msg, "parse_mode": "Markdown"}
         )
-        print("Telegram Push-Alert erfolgreich gesendet!")
     except Exception as e:
-        print(f"Fehler beim Senden des Telegram-Alerts: {e}")
+        print(f"Telegram-Fehler: {e}")
 
-# G. SPEICHERN DER DASHBOARD-DATEN
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls Dashboard mit allen Modulen erfolgreich aktualisiert!")
+print("GeoPuls Dashboard erfolgreich mit Aktien-Picks & Innenpolitik gespeichert!")
