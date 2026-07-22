@@ -12,36 +12,36 @@ def clean_html(raw_html):
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return clean_text.strip()
 
-# 1. Ausbalancierter Quellenspiegel (Mainstream + Unabhängig global)
+# 1. Ausbalancierter Quellenspiegel (30 globale Quellen)
 rss_urls = {
     # --- USA & AMERIKA ---
-    "CNBC (US Mainstream Finance)": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
-    "Foreign Policy (US Establishment)": "https://foreignpolicy.com/feed/",
-    "ZeroHedge (US Alternative Macro)": "http://feeds.feedburner.com/zerohedge/feed",
-    "UnHerd (US/UK Indep. Analysis)": "https://unherd.com/feed/",
-    "Antiwar.com (US Indep. Foreign Policy)": "https://news.antiwar.com/feed/",
+    "CNBC (US Finance)": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+    "Foreign Policy": "https://foreignpolicy.com/feed/",
+    "ZeroHedge": "http://feeds.feedburner.com/zerohedge/feed",
+    "UnHerd": "https://unherd.com/feed/",
+    "Antiwar.com": "https://news.antiwar.com/feed/",
 
     # --- BRICS, NAHOST & GLOBALER SÜDEN ---
-    "Economic Times (Indien Mainstream)": "https://economictimes.indiatimes.com/rssfeedstopstories.cms",
-    "CGTN World (China Staatl./Mainstream)": "https://news.cgtn.com/rss/World.xml",
-    "Al Jazeera (Nahost Mainstream)": "https://www.aljazeera.com/xml/rss/all.xml",
-    "The Cradle (Nahost Indep. Geopolitik)": "https://thecradle.co/feed",
-    "Geopolitical Economy Report (Indep. BRICS)": "https://geopoliticaleconomy.com/feed/",
-    "TASS World (Russland Perspektive)": "https://tass.com/rss/v2.xml",
+    "Economic Times (Indien)": "https://economictimes.indiatimes.com/rssfeedstopstories.cms",
+    "CGTN World (China)": "https://news.cgtn.com/rss/World.xml",
+    "Al Jazeera": "https://www.aljazeera.com/xml/rss/all.xml",
+    "The Cradle": "https://thecradle.co/feed",
+    "Geopolitical Economy Report": "https://geopoliticaleconomy.com/feed/",
+    "TASS World": "https://tass.com/rss/v2.xml",
 
     # --- ASIEN & INDOPAZIFIK ---
-    "Nikkei Asia (Japan Mainstream Tech/Eco)": "https://asia.nikkei.com/rss/feed/nar",
-    "SCMP (China/Hongkong Regional)": "https://www.scmp.com/rss/91/feed",
-    "Asia Times (Indep. Asien Geopolitik)": "https://asiatimes.com/feed/",
+    "Nikkei Asia": "https://asia.nikkei.com/rss/feed/nar",
+    "SCMP": "https://www.scmp.com/rss/91/feed",
+    "Asia Times": "https://asiatimes.com/feed/",
 
     # --- EU & DACH MAINSTREAM & FINANZEN ---
-    "Handelsblatt (Finanzen)": "https://www.handelsblatt.com/contentexport/feed/finanzen",
+    "Handelsblatt": "https://www.handelsblatt.com/contentexport/feed/finanzen",
     "Finanzmarktwelt (FMW)": "https://finanzmarktwelt.de/feed/",
-    "stock3 (Godmode)": "https://stock3.com/news/feed/",
+    "stock3": "https://stock3.com/news/feed/",
     "Manager Magazin": "https://www.manager-magazin.de/rss",
-    "NZZ (International)": "https://www.nzz.ch/international.rss",
-    "FAZ (Ausland)": "https://www.faz.net/rss/aktuell/politik/ausland/",
-    "Tagesschau (Ausland)": "https://www.tagesschau.de/ausland/index.xml",
+    "NZZ": "https://www.nzz.ch/international.rss",
+    "FAZ": "https://www.faz.net/rss/aktuell/politik/ausland/",
+    "Tagesschau": "https://www.tagesschau.de/ausland/index.xml",
     "BBC World News": "http://feeds.bbci.co.uk/news/world/rss.xml",
 
     # --- EU & DACH UNABHÄNGIG & ALTERNATIV ---
@@ -58,16 +58,16 @@ rss_urls = {
 browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 feed_context = ""
 
-print("Hole tagesaktuelle News aus 30 ausbalancierten globalen Quellen...")
+print("Hole tagesaktuelle News aus 30 Quellen...")
 for source_name, url in rss_urls.items():
     try:
         feed = feedparser.parse(url, agent=browser_agent)
         feed_context += f"\n--- Aktuelle Meldungen von {source_name} ---\n"
-        for entry in feed.entries[:2]:  # Top 2 Artikel pro Quelle
+        for entry in feed.entries[:2]:
             title = entry.get('title', '')
             raw_summary = entry.get('summary', '') or entry.get('description', '')
             summary = clean_html(raw_summary)
-            feed_context += f"- Titel: {title}\n  Zusammenfassung: {summary[:220]}...\n"
+            feed_context += f"- Titel: {title}\n  Zusammenfassung: {summary[:200]}...\n"
     except Exception as e:
         print(f"Fehler bei {source_name}: {e}")
 
@@ -78,20 +78,18 @@ if not api_key:
 
 client = Groq(api_key=api_key)
 
-# 3. Prompt für globale Synthese
+# 3. Prompt mit STRIKTEM FOKUS auf akute UND zukünftige Brandherde
 prompt = f"""
 Du bist der Chef-Analyst des GeoPuls Dashboards.
-Erstelle eine tagesaktuelle, globale Synthese aus Finanzmärkten, Geopolitik sowie systemischen Zukunftrisiken.
+Erstelle eine tagesaktuelle Synthese der weltweiten Lage.
 
-Verarbeite und synthetisiere dabei die Perspektiven sowohl aus etablierten Mainstream-Medien als auch aus unabhängigen/alternativen Analysen aus den USA, Asien, den BRICS-Staaten und Europa:
+PFLICHT-AUFGABE:
+Analysiere sowohl akute militärische Konflikte ALS AUCH latente, zukünftige Brandherde sowie systemische Kontroll-Risiken.
 
+Quellen-Kontext:
 {feed_context}
 
 GIB DAS ERGEBNIS AUSSCHLIESSLICH ALS VALIDES JSON ZURÜCK.
-
-Regeln für Felder:
-1. "conflict_hotspots": Akute globale Brandherde (mind. 4 Einträge; z. B. Naher Osten, Ukraine/NATO, Taiwan/Indopazifik, Rotes Meer).
-2. "systemic_risks": Latente Risiken & Strukturkrisen (mind. 3 Einträge; z. B. EU-Chatkontrolle, CBDCs/Digitaler Euro, Moldawien/Balkan, BRICS-Dedollarisierung).
 
 Exaktes Schema:
 {{
@@ -100,17 +98,38 @@ Exaktes Schema:
       "region": "Naher Osten / Iran & Israel",
       "actors": "USA / Israel vs. Iran / Achse des Widerstands",
       "escalation_level": "KRITISCH",
-      "catalyst": "Militärische Ereignisse und Zündeleien an Seewegen",
+      "catalyst": "Militärische Schläge und Zündeleien an Seewegen",
       "impact": "Folgen für Brent-Öl, Tanker-Routen und Märkte"
+    }},
+    {{
+      "region": "Ukraine / NATO-Ostflanke",
+      "actors": "Russland vs. Ukraine / NATO-Unterstützer",
+      "escalation_level": "HOCH",
+      "catalyst": "Frontverlauf, Waffenlieferungen und Strategie",
+      "impact": "Energie- und Agrarmärkte"
     }}
   ],
   "systemic_risks": [
+    {{
+      "topic": "Moldawien & Transnistrien (Zukunfts-Brandherd)",
+      "category": "Latenter Geopolitischer Konflikt",
+      "risk_level": "HOCH",
+      "status": "Erhöhte politische & militärische Spannungen",
+      "impact": "Risiko einer zweiten Front im Schwarzmeerraum und Destabilisierung Südosteuropas."
+    }},
     {{
       "topic": "EU-Chatkontrolle & Verschlüsselungsverbot",
       "category": "Digitale Freiheit & Datenschutz",
       "risk_level": "HOCH",
       "status": "Gesetzgebungsverfahren in Brüssel",
-      "impact": "Aufweichung der Ende-zu-Ende-Verschlüsselung, Risiken für Bürgerrechte."
+      "impact": "Aufweichung der Ende-zu-Ende-Verschlüsselung, Risiken für vertrauliche Kommunikation."
+    }},
+    {{
+      "topic": "CBDC / Digitaler Euro & Bargeldobergrenzen",
+      "category": "Monetäre Kontrolle",
+      "risk_level": "MITTEL-HOCH",
+      "status": "Vorbereitungsphase der EZB",
+      "impact": "Programmierrecht für Geld, Transaktionsüberwachung und Entzug finanzieller Privatsphäre."
     }}
   ],
   "timestamp": "",
@@ -118,7 +137,7 @@ Exaktes Schema:
   "market_regime": "Multipolare Stagflation & Zins-Unsicherheit",
   "top_overweight": "Gold, Energie, Rohstoffe & Verteidigung",
   "top_risk": "Versorgungsschock / Geopolitische Blockbildung",
-  "daily_executive_summary": "Synthese aus Mainstream- und alternativen Berichten weltweit.",
+  "daily_executive_summary": "Ausführliche Synthese aus Mainstream- und alternativen Berichten weltweit.",
   "assets": [
     {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Sehr Attraktiv", "trend": "Stark Steigend", "driver": "BRICS-Käufe, Geopolitik & Sichere Häfen" }},
     {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Steigend", "driver": "Asien-HardwareBoom & Tech-Rüstung" }},
@@ -156,20 +175,31 @@ chat_completion = client.chat.completions.create(
 
 data = json.loads(chat_completion.choices[0].message.content)
 
-# Fallbacks
-if "conflict_hotspots" not in data or not data["conflict_hotspots"]:
-    data["conflict_hotspots"] = [
-        {"region": "Naher Osten / Iran & Israel", "actors": "USA / Israel vs. Iran / Achse", "escalation_level": "KRITISCH", "catalyst": "Spannungen am Persischen Golf", "impact": "Ölpreis & Seewege"},
-        {"region": "Ukraine / NATO-Ostflanke", "actors": "Russland vs. Ukraine / NATO", "escalation_level": "HOCH", "catalyst": "Frontverlauf & Waffenlieferungen", "impact": "Energie- & Agrarmärkte"},
-        {"region": "Rotes Meer / Bab al-Mandab", "actors": "Houthi vs. Marine-Allianz", "escalation_level": "HOCH", "catalyst": "Schiffsangriffe", "impact": "Frachtraten & Supply Chain"},
-        {"region": "Taiwan-Straße / Indopazifik", "actors": "China vs. Taiwan / USA", "escalation_level": "MITTEL-HOCH", "catalyst": "Militärmanöver", "impact": "Halbleiter-Sektor"}
-    ]
-
+# PYTHON-FALLBACK: Garantiert, dass systemic_risks NIE leer bleibt
 if "systemic_risks" not in data or not data["systemic_risks"]:
+    print("Sicherheitsnetz aktiviert: Füge latente Risiken hinzu...")
     data["systemic_risks"] = [
-        {"topic": "EU-Chatkontrolle & Verschlüsselungsverbot", "category": "Digitale Freiheit", "risk_level": "HOCH", "status": "Gesetzgebung EU", "impact": "Risiken für Ende-zu-Ende Verschlüsselung."},
-        {"topic": "BRICS-Dedollarisierung & Bilateraler Handel", "category": "Geomonetäre Ordnung", "risk_level": "MITTEL-HOCH", "status": "Umstellung Handelsnetze", "impact": "Schleichender Bedeutungsverlust des US-Dollars."},
-        {"topic": "CBDC / Digitaler Euro & Bargeld-Limits", "category": "Monetäre Kontrolle", "risk_level": "MITTEL-HOCH", "status": "Vorbereitung EZB", "impact": "Programmierbares Geld & Entzug finanzieller Privatsphäre."}
+        {
+            "topic": "Moldawien & Transnistrien (Zukunfts-Brandherd)",
+            "category": "Latenter Geopolitischer Konflikt",
+            "risk_level": "HOCH",
+            "status": "Zunehmende Spannungen & Hybride Bedrohungen",
+            "impact": "Gefahr einer Ausweitung des Osteuropa-Konflikts in Richtung Schwarzmeer/Balkan."
+        },
+        {
+            "topic": "EU-Chatkontrolle & Verschlüsselungsverbot",
+            "category": "Digitale Freiheit & Datenschutz",
+            "risk_level": "HOCH",
+            "status": "Gesetzgebungsprozess der EU-Kommission",
+            "impact": "Aufweichung der Ende-zu-Ende-Verschlüsselung und Ausweitung digitaler Überwachung."
+        },
+        {
+            "topic": "CBDC / Digitaler Euro & Bargeld-Limits",
+            "category": "Monetäre Kontrolle",
+            "risk_level": "MITTEL-HOCH",
+            "status": "Vorbereitungsphase der EZB",
+            "impact": "Programmierbares Geld, Transaktionsnachverfolgung und Einschränkung finanzieller Privatsphäre."
+        }
     ]
 
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
@@ -177,4 +207,4 @@ data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls data.json mit 30 ausbalancierten weltweiten Quellen erfolgreich aktualisiert!")
+print("GeoPuls data.json erfolgreich gespeichert!")
