@@ -133,164 +133,164 @@ if not api_key:
 
 client = Groq(api_key=api_key)
 
-# D. PROMPT MIT MEHREREN NARRATIV-THEMEN
+# D. DYNAMISCHER PROMPT MIT ABSTRAKTEN PLATZHALTERN
 prompt = f"""
 Du bist der Chef-Strategist des GeoPuls Dashboards.
 
-ECHTE LIVE-FINANZDATEN:
+ECHTE LIVE-FINANZDATEN VOM HEUTIGEN TAG:
 {live_market_context}
 
-MEDIEN- & REGIERUNGS-FEEDS:
+TAGESAKTUELLE MEDIEN- & REGIERUNGS-FEEDS:
 {feed_context}
 
-DEIN AUFTRAG (NUR VALIDES JSON ZURÜCKGEBEN):
-Erstelle eine ausführliche 'daily_executive_summary' und analysiere 3 verschiedene Themen in 'narrative_divergence'.
+DEIN AUFTRAG:
+Werte die obigen FEEDS und FINANZDATEN streng tagesaktuell aus. Generiere KEINE statischen Standardantworten, sondern leite alle Themen, Hotspots, Aktien-Picks und Risiken DIREKT aus den heutigen Meldungen ab.
 
-Exaktes Schema:
+Antworte AUSSCHLIESSLICH in folgendem JSON-Format (nutze die Daten aus den Feeds):
+
 {{
-  "daily_executive_summary": "Ausführliche Synthese der heutigen geopolitischen und makroökonomischen Lage...",
+  "daily_executive_summary": "Schreibe hier eine 3-4 Sätze lange Synthese der absolut wichtigsten geopolitischen Ereignisse aus den HEUTIGEN Feeds.",
+  "global_risk_score": 75,
+  "market_regime": "Name des aktuellen Marktregimes basierend auf den heutigen Marktdaten",
+  "top_overweight": "Asset-Klassen die heute am stärksten profitieren",
+  "top_risk": "Größtes makroökonomisches/geopolitisches Risiko heute",
   "defcon_status": {{
     "level": 3,
-    "label": "DEFCON 3 - Erhöhte Alarmstufe",
+    "label": "DEFCON X - Kurze Bezeichnung",
     "nuclear_risk_percent": 15,
-    "primary_driver": "Nukleardoktrin-Anpassungen & Rhetorik"
+    "primary_driver": "Konkreter Auslöser für das aktuelle Level aus den heutigen News"
   }},
   "narrative_divergence": [
     {{
-      "topic": "Ukraine & NATO-Ostflanke",
-      "mainstream_view": "Fokus auf NATO-Geschlossenheit, Sanktionen und westliche Hilfen",
-      "brics_view": "Fokus auf Sicherheitsinteressen Moskaus und Kritik an NATO-Osterweiterung",
-      "alternative_view": "Fokus auf geopolitische Abnutzung und verdeckte Diplomatie"
+      "topic": "Name von Brennpunkt / Schauplatz 1 aus den heutigen Feeds",
+      "mainstream_view": "Wie berichten westliche Medien (z.B. Tagesschau, BBC, FAZ) darüber?",
+      "brics_view": "Wie berichten BRICS/staatliche Stellen (z.B. TASS, CGTN, MID) darüber?",
+      "alternative_view": "Wie analysieren unabhängige Medien (z.B. Multipolar, Grayzone, ZeroHedge) das?"
     }},
     {{
-      "topic": "Naher Osten & Seewege (Rotes Meer)",
-      "mainstream_view": "Fokus auf Schutz der freien Schifffahrt und Abwehr von Milizen",
-      "brics_view": "Fokus auf Ursachen des Konflikts und Kritik am US-Einsatz",
-      "alternative_view": "Fokus auf globale Frachtkostensteigerung und Lieferkettenbrüche"
+      "topic": "Name von Brennpunkt / Schauplatz 2 aus den heutigen Feeds",
+      "mainstream_view": "Einschätzung westlicher Medien",
+      "brics_view": "Einschätzung der BRICS-Staaten",
+      "alternative_view": "Einschätzung unabhängiger Analysten"
     }},
     {{
-      "topic": "BRICS & Globale Dedollarisierung / Handelskonflikt",
-      "mainstream_view": "US-Dollar bleibt unangefochtene Reservewährung",
-      "brics_view": "Ausbau von Ausgleichssystemen in Lokalwährungen und Goldreserven",
-      "alternative_view": "Beschleunigte Fragmentierung des globalen Finanzsystems"
+      "topic": "Name von Brennpunkt / Schauplatz 3 aus den heutigen Feeds",
+      "mainstream_view": "Einschätzung westlicher Medien",
+      "brics_view": "Einschätzung der BRICS-Staaten",
+      "alternative_view": "Einschätzung unabhängiger Analysten"
     }}
   ],
   "domestic_politics": [
     {{
-      "country_region": "USA / Washington",
-      "topic": "US-Kongress & Budget-Rivalitäten",
-      "status": "Haushaltsstreit & Parteienpolarisation",
-      "impact": "Blockaden bei Auslandshilfen und Druck auf Außenpolitik"
+      "country_region": "Land / Region 1 (z.B. USA, DE, China)",
+      "topic": "Aktuelles innenpolitisches Hauptthema aus den Feeds",
+      "status": "Aktueller Stand",
+      "impact": "Geopolitische/Außenpolitische Folge"
     }},
     {{
-      "country_region": "Deutschland / EU",
-      "topic": "Regierungskrisen & Polarisierung",
-      "status": "Hohe Deindustrialisierung & Haushaltsprobleme",
-      "impact": "Eingeschränkte Handlungsfähigkeit Brüssels"
+      "country_region": "Land / Region 2",
+      "topic": "Innenpolitisches Thema",
+      "status": "Aktueller Stand",
+      "impact": "Geopolitische Folge"
     }},
     {{
-      "country_region": "China / BRICS",
-      "topic": "Immobilienkrise & Stimulus-Debatte",
-      "status": "Interne Wirtschaftsflaute in Peking",
-      "impact": "Erhöhter Druck auf Exportmärkte"
+      "country_region": "Land / Region 3",
+      "topic": "Innenpolitisches Thema",
+      "status": "Aktueller Stand",
+      "impact": "Geopolitische Folge"
     }}
   ],
   "stock_picks": {{
     "top_5_buys": [
-      {{ "ticker": "RHM.DE", "name": "Rheinmetall", "sector": "Verteidigung", "reason": "Massives Aufrüstungsprogramm in Europa & NATO" }},
-      {{ "ticker": "CCJ", "name": "Cameco", "sector": "Uran / Energie", "reason": "Globale Energiekrise & Kernenergie-Renaissance" }},
-      {{ "ticker": "GOLD", "name": "Barrick Gold", "sector": "Rohstoffe", "reason": "BRICS-Zentralbankkäufe & Flucht in Gold" }},
-      {{ "ticker": "LMT", "name": "Lockheed Martin", "sector": "US-Verteidigung", "reason": "Hohe globale Auftragsbestände für Raketen/Jets" }},
-      {{ "ticker": "NVDA", "name": "Nvidia", "sector": "KI & Tech", "reason": "Ungebrochener Rüstungs- & KI-Hardware-Boom" }}
+      {{ "ticker": "TICKER1", "name": "Aktienname 1", "sector": "Sektor", "reason": "Konkrete Begründung basierend auf heutigen News" }},
+      {{ "ticker": "TICKER2", "name": "Aktienname 2", "sector": "Sektor", "reason": "Konkrete Begründung basierend auf heutigen News" }},
+      {{ "ticker": "TICKER3", "name": "Aktienname 3", "sector": "Sektor", "reason": "Konkrete Begründung basierend auf heutigen News" }},
+      {{ "ticker": "TICKER4", "name": "Aktienname 4", "sector": "Sektor", "reason": "Konkrete Begründung basierend auf heutigen News" }},
+      {{ "ticker": "TICKER5", "name": "Aktienname 5", "sector": "Sektor", "reason": "Konkrete Begründung basierend auf heutigen News" }}
     ],
     "flop_5_sells": [
-      {{ "ticker": "VNA.DE", "name": "Vonovia", "sector": "Immobilien", "reason": "Hohe Zinslast & Refinanzierungsrisiken" }},
-      {{ "ticker": "NKE", "name": "Nike", "sector": "Konsumgüter", "reason": "Schwächelnder Binnenmarkt in China" }},
-      {{ "ticker": "BA", "name": "Boeing", "sector": "Luftfahrt", "reason": "Qualitätsprobleme & Lieferketten-Engpässe" }},
-      {{ "ticker": "DBK.DE", "name": "Deutsche Bank", "sector": "Banken", "reason": "Kreditausfallrisiken bei Gewerbeimmobilien" }},
-      {{ "ticker": "INTC", "name": "Intel", "sector": "Halbleiter (Old Gen)", "reason": "Verlust von Marktanteilen im KI-Segment" }}
+      {{ "ticker": "TICKER6", "name": "Verlierer-Aktie 1", "sector": "Sektor", "reason": "Konkreter Gegenwind laut heutigen News" }},
+      {{ "ticker": "TICKER7", "name": "Verlierer-Aktie 2", "sector": "Sektor", "reason": "Konkreter Gegenwind laut heutigen News" }},
+      {{ "ticker": "TICKER8", "name": "Verlierer-Aktie 3", "sector": "Sektor", "reason": "Konkreter Gegenwind laut heutigen News" }},
+      {{ "ticker": "TICKER9", "name": "Verlierer-Aktie 4", "sector": "Sektor", "reason": "Konkreter Gegenwind laut heutigen News" }},
+      {{ "ticker": "TICKER10", "name": "Verlierer-Aktie 5", "sector": "Sektor", "reason": "Konkreter Gegenwind laut heutigen News" }}
     ]
   }},
   "conflict_hotspots": [
     {{
-      "region": "Naher Osten / Iran & Israel",
-      "actors": "USA / Israel vs. Iran / Achse",
+      "region": "Aktiver Krisenherd 1",
+      "actors": "Akteure",
       "escalation_level": "KRITISCH",
-      "catalyst": "Militärische Schläge oder Angriffe auf Seewege",
-      "impact": "Brent-Öl und Frachtrouten",
-      "lat": 31.5,
-      "lng": 34.75
+      "catalyst": "Aktueller Auslöser aus den News",
+      "impact": "Betroffene Märkte",
+      "lat": 0.0,
+      "lng": 0.0
     }},
     {{
-      "region": "Ukraine / NATO-Ostflanke",
-      "actors": "Russland vs. Ukraine / NATO",
+      "region": "Aktiver Krisenherd 2",
+      "actors": "Akteure",
       "escalation_level": "HOCH",
-      "catalyst": "Frontverlauf und Rüstung",
-      "impact": "Europäische Energiemärkte",
-      "lat": 48.37,
-      "lng": 31.16
+      "catalyst": "Aktueller Auslöser aus den News",
+      "impact": "Betroffene Märkte",
+      "lat": 0.0,
+      "lng": 0.0
     }},
     {{
-      "region": "Taiwan-Straße & Indopazifik",
-      "actors": "China vs. Taiwan / USA",
+      "region": "Aktiver Krisenherd 3",
+      "actors": "Akteure",
+      "escalation_level": "HOCH",
+      "catalyst": "Aktueller Auslöser aus den News",
+      "impact": "Betroffene Märkte",
+      "lat": 0.0,
+      "lng": 0.0
+    }},
+    {{
+      "region": "Aktiver Krisenherd 4",
+      "actors": "Akteure",
       "escalation_level": "MITTEL-HOCH",
-      "catalyst": "Militärmanöver und Chip-Sanktionen",
-      "impact": "Halbleiter-Lieferketten (TSMC)",
-      "lat": 23.69,
-      "lng": 120.96
-    }},
-    {{
-      "region": "Rotes Meer / Bab al-Mandab",
-      "actors": "Houthi vs. Marine-Allianz",
-      "escalation_level": "HOCH",
-      "catalyst": "Schiffsangriffe",
-      "impact": "Frachtraten und Lieferketten",
-      "lat": 12.58,
-      "lng": 43.33
+      "catalyst": "Aktueller Auslöser aus den News",
+      "impact": "Betroffene Märkte",
+      "lat": 0.0,
+      "lng": 0.0
     }}
   ],
   "systemic_risks": [
     {{
-      "topic": "Moldawien & Transnistrien",
-      "category": "Geopolitische Region",
+      "topic": "Systemisches/Latentes Risiko 1",
+      "category": "Kategorie",
       "risk_level": "HOCH",
-      "status": "Diplomatische Spannungen",
-      "impact": "Gefahr einer zweiten Front im Schwarzmeerraum"
+      "status": "Status in den News",
+      "impact": "Langfristige Folge"
     }},
     {{
-      "topic": "EU-Chatkontrolle & Verschlüsselung",
-      "category": "Digitale Kontrolle",
+      "topic": "Systemisches/Latentes Risiko 2",
+      "category": "Kategorie",
       "risk_level": "HOCH",
-      "status": "Gesetzgebungsprozess EU",
-      "impact": "Risiken für Ende-zu-Ende-Verschlüsselung"
+      "status": "Status in den News",
+      "impact": "Langfristige Folge"
     }},
     {{
-      "topic": "Seltene Erden Monopol",
-      "category": "Strategischer Hebel",
-      "risk_level": "MITTEL-HOCH",
-      "status": "Exportkontrollen",
-      "impact": "Versorgungsrisiken High-Tech"
+      "topic": "Systemisches/Latentes Risiko 3",
+      "category": "Kategorie",
+      "risk_level": "MITTEL",
+      "status": "Status in den News",
+      "impact": "Langfristige Folge"
     }}
   ],
-  "timestamp": "",
-  "global_risk_score": 79,
-  "market_regime": "Multipolare Stagflation & Zins-Unsicherheit",
-  "top_overweight": "Gold, Energie, Rohstoffe & Verteidigung",
-  "top_risk": "Versorgungsschock / Geopolitische Blockbildung",
   "assets": [
-    {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Sehr Attraktiv", "trend": "Stark Steigend", "driver": "BRICS-Käufe & Sichere Häfen" }},
-    {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Steigend", "driver": "Hardware-Boom" }},
-    {{ "name": "Uran & Energie", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Stark Steigend", "driver": "Angebotsdefizit" }},
-    {{ "name": "S&P 500 / Nasdaq", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Volatil", "driver": "Zinsaussichten" }},
-    {{ "name": "Bitcoin & Krypto", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Volatil", "driver": "Liquiditätsumfeld" }},
-    {{ "name": "High-Yield Bonds", "signal": "RED", "signal_text": "🔴 Unattraktiv", "trend": "Fallend", "driver": "Refinanzierungsdruck" }},
-    {{ "name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "Stark Fallend", "driver": "Zinsniveau" }}
+    {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber laut News" }},
+    {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber laut News" }},
+    {{ "name": "Uran & Energie", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber laut News" }},
+    {{ "name": "S&P 500 / Nasdaq", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Trend", "driver": "Treiber laut News" }},
+    {{ "name": "Bitcoin & Krypto", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Trend", "driver": "Treiber laut News" }},
+    {{ "name": "High-Yield Bonds", "signal": "RED", "signal_text": "🔴 Unattraktiv", "trend": "Trend", "driver": "Treiber laut News" }},
+    {{ "name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "Trend", "driver": "Treiber laut News" }}
   ],
   "scenarios": [
-    {{ "title": "Ausweitung Nahost-Konflikt (Ölschock >100$)", "prob": 40 }},
-    {{ "title": "Zweite Inflationswelle / Stagflation", "prob": 30 }},
-    {{ "title": "Direkte NATO-Eskalation", "prob": 15 }},
-    {{ "title": "BRICS-Dedollarisierung", "prob": 15 }}
+    {{ "title": "Szenario 1 basierend auf aktuellen Trends", "prob": 40 }},
+    {{ "title": "Szenario 2 basierend auf aktuellen Trends", "prob": 30 }},
+    {{ "title": "Szenario 3 basierend auf aktuellen Trends", "prob": 15 }},
+    {{ "title": "Szenario 4 basierend auf aktuellen Trends", "prob": 15 }}
   ]
 }}
 """
@@ -298,7 +298,7 @@ Exaktes Schema:
 print("Rufe Groq API auf...")
 chat_completion = client.chat.completions.create(
     messages=[
-        {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Erstelle eine detaillierte Summary und genau 3 Narrativ-Schauplätze."},
+        {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Du analysierst die bereitgestellten Feeds dynamisch und füllst das JSON-Schema ohne Platzhalter mit echten Tagesdaten."},
         {"role": "user", "content": prompt}
     ],
     model="llama-3.3-70b-versatile",
@@ -311,7 +311,7 @@ data = json.loads(chat_completion.choices[0].message.content)
 
 # 1. Executive Summary absichern
 if not data.get("daily_executive_summary"):
-    data["daily_executive_summary"] = data.get("executive_summary") or data.get("summary") or "Die geopolitische Lage bleibt durch multidimensionale Krisen im Nahen Osten, in Osteuropa und Ostasien angespannt. Rohstoffe und Verteidigungsmärkte verzeichnen erhöhte Nachfrage."
+    data["daily_executive_summary"] = data.get("executive_summary") or data.get("summary") or "Die geopolitische Lage bleibt durch multidimensionale Krisen im Nahen Osten, in Osteuropa und Ostasien angespannt."
 
 # 2. Narrativ-Matrix absichern
 raw_nd = data.get("narrative_divergence", [])
@@ -328,24 +328,15 @@ for item in raw_nd:
             "alternative_view": item.get("alternative_view") or item.get("alternative") or "Fokus auf verdeckte Kaskadeneffekte und Makro-Risiken."
         })
 
-if len(normalized_nd) < 3:
-    fallback_nd = [
-        {"topic": "Ukraine & NATO-Ostflanke", "mainstream_view": "Fokus auf NATO-Geschlossenheit & Sanktionen", "brics_view": "Kritik an NATO-Erweiterung & Sicherheitsinteressen", "alternative_view": "Fokus auf Abnutzung & verdeckte Diplomatie"},
-        {"topic": "Naher Osten & Seewege", "mainstream_view": "Fokus auf Schutz der freien Schifffahrt", "brics_view": "Kritik an US-Militäreinsatz & Konfliktursachen", "alternative_view": "Fokus auf Frachtkosten & Lieferkettenbrüche"},
-        {"topic": "BRICS & Dedollarisierung", "mainstream_view": "US-Dollar bleibt unangefochten", "brics_view": "Ausbau von Lokalwährungen & Goldreserven", "alternative_view": "Beschleunigte Fragmentierung des Finanzsystems"}
-    ]
-    for fb in fallback_nd:
-        if len(normalized_nd) < 3:
-            normalized_nd.append(fb)
-
 data["narrative_divergence"] = normalized_nd
 
-# 3. Geo-Lookup Fallback
+# 3. Geo-Lookup Fallback für Koordinaten
 GEO_LOOKUP = {
     "nah": (31.5, 34.75), "iran": (32.42, 53.68), "israel": (31.04, 34.85),
     "ukraine": (48.37, 31.16), "taiwan": (23.69, 120.96), "rot": (12.58, 43.33),
     "bab": (12.58, 43.33), "moldaw": (47.01, 28.86), "transnistrien": (46.84, 29.63),
-    "balkan": (43.85, 18.35), "kaukasus": (41.71, 44.78), "suwalki": (54.1, 22.9)
+    "balkan": (43.85, 18.35), "kaukasus": (41.71, 44.78), "suwalki": (54.1, 22.9),
+    "china": (35.86, 104.19), "korea": (38.31, 127.23)
 }
 
 for h in data.get("conflict_hotspots", []):
@@ -360,8 +351,8 @@ for h in data.get("conflict_hotspots", []):
                 h["lat"], h["lng"] = coords
                 found = True
                 break
-        if not found:
-            h["lat"], h["lng"] = 20.0, 0.0
+        if not found or h["lat"] == 0.0:
+            h["lat"], h["lng"] = 25.0, 45.0 # Naher Osten / Zentraler Bereich
 
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 
@@ -389,4 +380,4 @@ if not history_data or history_data[-1].get("date") != today_str:
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls Dashboard erfolgreich aktualisiert!")
+print("GeoPuls Dashboard erfolgreich mit dynamischem Prompt aktualisiert!")
