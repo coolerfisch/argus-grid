@@ -13,6 +13,13 @@
       "escalation_level": "HOCH",
       "catalyst": "Frontverlauf, Waffenlieferungen und Strategie",
       "impact": "Energie- und Agrarmärkte"
+    },
+    {
+      "region": "Mali / Westafrika",
+      "actors": "Al-Qaeda-Affiliaten vs. Internationale Streitkräfte",
+      "escalation_level": "HOCH",
+      "catalyst": "Territoriale Kontrolle und Terroranschläge",
+      "impact": "Regionale Instabilität und globale Sicherheitsbedrohungen"
     }
   ],
   "systemic_risks": [
@@ -38,12 +45,12 @@
       "impact": "Programmierrecht für Geld, Transaktionsüberwachung und Entzug finanzieller Privatsphäre."
     }
   ],
-  "timestamp": "22.07.2026 - 22:17 UTC",
-  "global_risk_score": 82,
+  "timestamp": "22.07.2026 - 22:21 UTC",
+  "global_risk_score": 79,
   "market_regime": "Multipolare Stagflation & Zins-Unsicherheit",
   "top_overweight": "Gold, Energie, Rohstoffe & Verteidigung",
   "top_risk": "Versorgungsschock / Geopolitische Blockbildung",
-  "daily_executive_summary": "Ausführliche Synthese aus Mainstream- und alternativen Berichten weltweit.",
+  "daily_executive_summary": "Trotz temporärer Entspannungen an den Märkten bleibt die geopolitische Lage äußerst angespannt. Der Nahost-Konflikt und die Ukraine-Krise schlagen sich direkt auf die Energie- und Agrarmärkte nieder. Die multipolare Weltordnung führt zu einer Stagflation unter Zinsunsicherheit. Es ist ratsam, in Gold, Energie, Rohstoffe und Verteidigungswerte investiert zu sein.",
   "assets": [
     {
       "name": "Gold & Silber",
@@ -130,7 +137,7 @@
   "scenarios": [
     {
       "title": "Ausweitung Nahost-Konflikt (Ölschock >100$)",
-      "prob": 45
+      "prob": 40
     },
     {
       "title": "Zweite Inflationswelle / Multipolare Stagflation",
@@ -138,7 +145,7 @@
     },
     {
       "title": "Direkte NATO-Eskalation / Militärischer Zwischenfall",
-      "prob": 10
+      "prob": 15
     },
     {
       "title": "BRICS-Handelswährung / Beschleunigte Dedollarisierung",
