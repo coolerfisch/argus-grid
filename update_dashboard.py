@@ -12,12 +12,13 @@ def clean_html(raw_html):
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return clean_text.strip()
 
-# 1. Erweiterte RSS-Feeds (Geopolitik, Makro & Alternative Medien)
+# 1. Erweiterte RSS-Feeds (inkl. Anti-Spiegel)
 rss_urls = {
     "NachDenkSeiten": "https://www.nachdenkseiten.de/?feed=rss2",
     "Apolut": "https://apolut.net/feed/",
     "Achgut": "https://www.achgut.com/rss",
     "Apollo News": "https://apollo-news.net/feed/",
+    "Anti-Spiegel": "https://anti-spiegel.ru/feed/",
     "Telepolis": "https://www.telepolis.de/index.rss",
     "Tichys Einblick": "https://www.tichyseinblick.de/feed/",
     "Overton Magazin": "https://overton-magazin.de/feed/",
@@ -52,14 +53,14 @@ if not api_key:
 
 client = Groq(api_key=api_key)
 
-# 3. Prompt mit striktem Hotspot-Mandat
+# 3. Prompt mit striktem Hotspot-Mandat und Multi-Quellen-Fokus
 prompt = f"""
 Du bist der Chef-Analyst des GeoPuls Dashboards.
 Erstelle eine tagesaktuelle, institutionelle Synthese der weltweiten Finanz-, Geopolitik- und Sicherheitslage.
 
 Analysiere tagesaktuell alle zentralen kriegerischen und geopolitischen Brandherde, Eskalationsrisiken, militärische Dynamiken und Machtverschiebungen.
 
-Nutze dazu die folgenden aktuellen Meldungen aus unabhängigen und alternativen Medien sowie dein umfassendes weltweites Lagebild:
+Nutze dazu die folgenden aktuellen Meldungen aus unabhängigen, alternativen und internationalen Medien (u. a. Anti-Spiegel, NachDenkSeiten, Apolut, ZeroHedge) sowie dein umfassendes weltweites Lagebild:
 
 {feed_context}
 
@@ -148,4 +149,4 @@ data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls data.json erfolgreich mit Hotspots & erweiterten Quellen erstellt!")
+print("GeoPuls data.json erfolgreich erstellt!")
