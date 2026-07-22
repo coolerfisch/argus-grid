@@ -1,75 +1,81 @@
 {
   "defcon_status": {
-    "level": 3,
-    "label": "Erhöhte Alarmstufe",
+    "level": 4,
+    "label": "DEFCON 4 - Höchste Alarmbereitschaft",
     "nuclear_risk_percent": 20,
-    "primary_driver": "Nukleardoktrin-Anpassungen, Rhetorik und geostrategische Spannungen"
+    "primary_driver": "Iran-Konflikt und Nukleardoktrin-Anpassungen"
+  },
+  "narrative_divergence": {
+    "topic": "Nahost-Konflikt und globale Auswirkungen",
+    "mainstream_view": "Fokus auf Iran-Sanktionen und NATO-Unterstützung",
+    "brics_view": "Betonte Rolle von multipolaren Beziehungen und regionaler Stabilität",
+    "alternative_view": "Hinweis auf verdeckte Kaskadeneffekte und potenzielle Eskalation"
   },
   "domestic_politics": [
     {
       "country_region": "USA / Washington",
-      "topic": "US-Kongress & Budget-Rivalitäten",
-      "status": "Haushaltsstreit & Parteienpolarisation",
+      "topic": "US-Kongress und Parteienpolarisation",
+      "status": "Haushaltsstreit und außenpolitischer Druck",
       "impact": "Blockaden bei Auslandshilfen und Druck auf Außenpolitik"
     },
     {
       "country_region": "Deutschland / EU",
-      "topic": "Regierungskrisen & Polarisierung",
-      "status": "Hohe Deindustrialisierung & Haushaltsprobleme",
-      "impact": "Eingeschränkte Handlungsfähigkeit Brüssels und Streit um Sondervermögen"
+      "topic": "Regierungskrisen und Polarisierung",
+      "status": "Hohe Deindustrialisierung und Haushaltsprobleme",
+      "impact": "Eingeschränkte Handlungsfähigkeit Brüssels"
     },
     {
       "country_region": "China / BRICS",
-      "topic": "Immobilienkrise & Stimulus-Debatte",
-      "status": "Interne Wirtschaftsflaute in Peking",
-      "impact": "Erhöhter Druck auf Exportmärkte und Rohstoffnachfrage"
+      "topic": "Wirtschaftsflaute und Stimulus-Debatte",
+      "status": "Interne Wirtschaftsprobleme in Peking",
+      "impact": "Erhöhter Druck auf Exportmärkte"
     }
   ],
   "stock_picks": {
     "top_5_buys": [
       {
-        "ticker": "RHM.DE",
-        "name": "Rheinmetall",
-        "sector": "Rüstung & Verteidigung",
-        "reason": "Europäisches Aufrüstungsprogramm und NATO-Bestellungen"
+        "ticker": "RTX",
+        "name": "Raytheon Technologies",
+        "sector": "Verteidigung",
+        "reason": "Globale Rüstungsnachfrage und Technologievorsprung"
       },
       {
         "ticker": "CCJ",
         "name": "Cameco",
-        "sector": "Uran & Kernenergie",
-        "reason": "Globale Renaissance der Atomkraft und Energiekrise"
+        "sector": "Uran / Energie",
+        "reason": "Globale Energiekrise und Kernenergie-Renaissance"
       },
       {
         "ticker": "GOLD",
         "name": "Barrick Gold",
-        "sector": "Rohstoffe / Gold",
-        "reason": "Flucht in sichere Häfen und BRICS-Käufe"
+        "sector": "Rohstoffe",
+        "reason": "BRICS-Zentralbankkäufe und Flucht in Gold"
       },
       {
         "ticker": "LMT",
         "name": "Lockheed Martin",
         "sector": "US-Verteidigung",
-        "reason": "Globale Nachfrage nach Verteidigungstechnologie"
+        "reason": "Hohe globale Auftragsbestände für Raketen und Jets"
       },
       {
         "ticker": "NVDA",
         "name": "Nvidia",
-        "sector": "KI & Tech-Souveränität",
-        "reason": "Ungebrochener KI- und Halbleiter-Boom"
+        "sector": "KI & Tech",
+        "reason": "Ungebrochener Rüstungs- und KI-Hardware-Boom"
       }
     ],
     "flop_5_sells": [
       {
         "ticker": "VNA.DE",
         "name": "Vonovia",
-        "sector": "Gewerbe & Wohnimmobilien",
+        "sector": "Immobilien",
         "reason": "Hohe Zinslast und Refinanzierungsrisiken"
       },
       {
         "ticker": "NKE",
         "name": "Nike",
         "sector": "Konsumgüter",
-        "reason": "Schwächelnder Binnenmarkt in China und Kaufkraftverlust"
+        "reason": "Schwächelnder Binnenmarkt in China"
       },
       {
         "ticker": "BA",
@@ -80,7 +86,7 @@
       {
         "ticker": "DBK.DE",
         "name": "Deutsche Bank",
-        "sector": "Europäische Banken",
+        "sector": "Banken",
         "reason": "Kreditausfallrisiken bei Gewerbeimmobilien"
       },
       {
@@ -152,59 +158,59 @@
       "impact": "Versorgungsrisiken High-Tech"
     }
   ],
-  "timestamp": "22.07.2026 - 23:13 UTC",
+  "timestamp": "22.07.2026 - 23:19 UTC",
   "global_risk_score": 82,
   "market_regime": "Multipolare Stagflation & Zins-Unsicherheit",
   "top_overweight": "Gold, Energie, Rohstoffe & Verteidigung",
   "top_risk": "Versorgungsschock / Geopolitische Blockbildung",
-  "daily_executive_summary": "Die geopolitische Lage ist angespannt, mit Krisenherden im Nahen Osten, der Ukraine und der Taiwan-Straße. Rohstoffe und Verteidigung sind gefragt. Die globale Wirtschaft steckt in einer Stagflation.",
+  "daily_executive_summary": "Die globale Lage ist durch höhere Konfliktbereitschaft und multipolare Spannungen geprägt. Es besteht ein hohes Risiko für einen Ölschock und eine Eskalation im Nahen Osten. Die US-Regierung steht unter Druck, ihre Außenpolitik zu überdenken.",
   "assets": [
     {
       "name": "Gold & Silber",
       "signal": "GREEN",
-      "signal_text": "",
+      "signal_text": "⟡ Sehr Attraktiv",
       "trend": "Stark Steigend",
       "driver": "BRICS-Käufe & Sichere Häfen"
     },
     {
       "name": "KI & Halbleiter",
       "signal": "GREEN",
-      "signal_text": "",
+      "signal_text": "⟡ Attraktiv",
       "trend": "Steigend",
       "driver": "Hardware-Boom"
     },
     {
       "name": "Uran & Energie",
       "signal": "GREEN",
-      "signal_text": "",
+      "signal_text": "⟡ Attraktiv",
       "trend": "Stark Steigend",
       "driver": "Angebotsdefizit"
     },
     {
       "name": "S&P 500 / Nasdaq",
       "signal": "AMBER",
-      "signal_text": "",
+      "signal_text": "⟠ Neutral",
       "trend": "Volatil",
       "driver": "Zinsaussichten"
     },
     {
       "name": "Bitcoin & Krypto",
       "signal": "AMBER",
-      "signal_text": "",
+      "signal_text": "⟠ Neutral",
       "trend": "Volatil",
       "driver": "Liquiditätsumfeld"
     },
     {
       "name": "High-Yield Bonds",
       "signal": "RED",
-      "signal_text": "",
+      "signal_text": "❌ Unattraktiv",
       "trend": "Fallend",
       "driver": "Refinanzierungsdruck"
     },
     {
       "name": "Gewerbeimmobilien",
       "signal": "RED",
-      "signal_text": "",
+      "signal_text": "❌ Meiden",
       "trend": "Stark Fallend",
       "driver": "Zinsniveau"
     }
@@ -213,32 +219,32 @@
     {
       "name": "USA",
       "signal": "GREEN",
-      "signal_text": "",
-      "summary": "Starke Wirtschaft, aber politische Unsicherheit"
+      "signal_text": "⟡ Grün",
+      "summary": "Stabile Wirtschaft, aber außenpolitische Risiken"
     },
     {
       "name": "BRICS & Globaler Süden",
       "signal": "GREEN",
-      "signal_text": "",
-      "summary": "Wachsende Wirtschaftsmacht und Rohstoffnachfrage"
+      "signal_text": "⟡ Grün",
+      "summary": "Wachsende Wirtschaftsmacht und multipolare Kooperation"
     },
     {
       "name": "Japan & Indien / ASEAN",
       "signal": "GREEN",
-      "signal_text": "",
-      "summary": "Stabile Wirtschaft und Integration"
+      "signal_text": "⟡ Grün",
+      "summary": "Stabile Wirtschaft und strategische Partnerschaften"
     },
     {
       "name": "Kern-Europa (DE/FR/CH)",
       "signal": "RED",
-      "signal_text": "",
+      "signal_text": "❌ Rot",
       "summary": "Wirtschaftliche und politische Herausforderungen"
     },
     {
       "name": "China (Binnenmarkt)",
       "signal": "RED",
-      "signal_text": "",
-      "summary": "Wirtschaftliche Abschwächung und politische Kontrolle"
+      "signal_text": "❌ Rot",
+      "summary": "Wirtschaftliche Abkühlung und interne Unruhen"
     }
   ],
   "scenarios": [
@@ -248,11 +254,11 @@
     },
     {
       "title": "Zweite Inflationswelle / Stagflation",
-      "prob": 35
+      "prob": 30
     },
     {
       "title": "Direkte NATO-Eskalation",
-      "prob": 10
+      "prob": 15
     },
     {
       "title": "BRICS-Dedollarisierung",
