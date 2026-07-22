@@ -12,62 +12,58 @@ def clean_html(raw_html):
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return clean_text.strip()
 
-# 1. Quellenspiegel (30 globale Medien: Mainstream + Unabhängig)
+# 1. Erweiterter Quellenspiegel (Primärquellen + Schweiz + MSC + Medien)
 rss_urls = {
-    # USA & Amerika
+    # --- PRIMÄRQUELLEN & REGIERUNGSSEITEN ---
+    "White House (US-Präsident)": "https://www.whitehouse.gov/briefing-room/feed/",
+    "US Department of State": "https://www.state.gov/rss-feed/press-releases/feed/",
+    "Federal Reserve (US Fed)": "https://www.federalreserve.gov/feeds/press_all.xml",
+    "EU-Kommission (Press Corner)": "https://ec.europa.eu/commission/presscorner/api/rss",
+    "Europäischer Rat (Consilium)": "https://www.consilium.europa.eu/en/rss/",
+    "World Economic Forum (WEF)": "https://www.weforum.org/agenda/feed/",
+    "Kreml (Russland Offiziell)": "http://en.kremlin.ru/events/president/news/feed",
+    "Xinhua World (China Offiziell)": "http://www.xinhuanet.com/english/rss/worldrss.xml",
+
+    # --- SCHWEIZ, NEUTRALITÄT & STRATEGIE-DIPLOMATIE ---
+    "Schweizer Bundesrat (Admin.ch)": "https://www.admin.ch/gov/de/start/dokumentation/medienmitteilungen.rss.html",
+    "Münchner Sicherheitskonferenz (MSC)": "https://securityconference.org/news/rss/",
+    "Swissinfo (SWI Neutralität & Märkte)": "https://www.swissinfo.ch/ger/rss",
+
+    # --- MAINSTREAM FINANZ- & GEOPOLITIKMEDIEN ---
     "CNBC (US Finance)": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
     "Foreign Policy": "https://foreignpolicy.com/feed/",
-    "ZeroHedge": "http://feeds.feedburner.com/zerohedge/feed",
-    "UnHerd": "https://unherd.com/feed/",
-    "Antiwar.com": "https://news.antiwar.com/feed/",
-
-    # BRICS, Nahost & Globaler Süden
-    "Economic Times (Indien)": "https://economictimes.indiatimes.com/rssfeedstopstories.cms",
-    "CGTN World (China)": "https://news.cgtn.com/rss/World.xml",
-    "Al Jazeera": "https://www.aljazeera.com/xml/rss/all.xml",
-    "The Cradle": "https://thecradle.co/feed",
-    "Geopolitical Economy Report": "https://geopoliticaleconomy.com/feed/",
-    "TASS World": "https://tass.com/rss/v2.xml",
-
-    # Asien & Indopazifik
+    "Economic Times (Indien/BRICS)": "https://economictimes.indiatimes.com/rssfeedstopstories.cms",
     "Nikkei Asia": "https://asia.nikkei.com/rss/feed/nar",
-    "SCMP": "https://www.scmp.com/rss/91/feed",
-    "Asia Times": "https://asiatimes.com/feed/",
-
-    # EU & DACH (Mainstream & Markt)
     "Handelsblatt": "https://www.handelsblatt.com/contentexport/feed/finanzen",
     "Finanzmarktwelt (FMW)": "https://finanzmarktwelt.de/feed/",
-    "stock3": "https://stock3.com/news/feed/",
-    "Manager Magazin": "https://www.manager-magazin.de/rss",
-    "NZZ": "https://www.nzz.ch/international.rss",
-    "FAZ": "https://www.faz.net/rss/aktuell/politik/ausland/",
-    "Tagesschau": "https://www.tagesschau.de/ausland/index.xml",
-    "BBC World News": "http://feeds.bbci.co.uk/news/world/rss.xml",
+    "NZZ (International)": "https://www.nzz.ch/international.rss",
+    "FAZ (Ausland)": "https://www.faz.net/rss/aktuell/politik/ausland/",
 
-    # EU & DACH (Unabhängig & Alternativ)
+    # --- UNABHÄNGIGE & ALTERNATIVE ANALYSTEN ---
+    "ZeroHedge": "http://feeds.feedburner.com/zerohedge/feed",
+    "UnHerd": "https://unherd.com/feed/",
+    "The Cradle (Nahost)": "https://thecradle.co/feed",
+    "Geopolitical Economy Report": "https://geopoliticaleconomy.com/feed/",
     "NachDenkSeiten": "https://www.nachdenkseiten.de/?feed=rss2",
     "Apolut": "https://apolut.net/feed/",
-    "Achgut": "https://www.achgut.com/rss",
-    "Apollo News": "https://apollo-news.net/feed/",
     "Anti-Spiegel": "https://anti-spiegel.ru/feed/",
     "Telepolis": "https://www.telepolis.de/index.rss",
-    "Tichys Einblick": "https://www.tichyseinblick.de/feed/",
-    "Overton Magazin": "https://overton-magazin.de/feed/"
+    "Tichys Einblick": "https://www.tichyseinblick.de/feed/"
 }
 
 browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 feed_context = ""
 
-print("Hole tagesaktuelle News aus 30 Quellen...")
+print("Hole tagesaktuelle Primärdaten, Schweiz & Medien aus weltweiten Feeds...")
 for source_name, url in rss_urls.items():
     try:
         feed = feedparser.parse(url, agent=browser_agent)
-        feed_context += f"\n--- Aktuelle Meldungen von {source_name} ---\n"
+        feed_context += f"\n--- Aktuelle Publikationen von {source_name} ---\n"
         for entry in feed.entries[:2]:
             title = entry.get('title', '')
             raw_summary = entry.get('summary', '') or entry.get('description', '')
             summary = clean_html(raw_summary)
-            feed_context += f"- Titel: {title}\n  Zusammenfassung: {summary[:200]}...\n"
+            feed_context += f"- Titel: {title}\n  Inhalt: {summary[:220]}...\n"
     except Exception as e:
         print(f"Fehler bei {source_name}: {e}")
 
@@ -78,17 +74,24 @@ if not api_key:
 
 client = Groq(api_key=api_key)
 
-# 3. Autonomer Prompt für Krisen-Erkennung
+# 3. Prompt für Primärquellen-, Diplomatie- & Asymmetrie-Synthese
 prompt = f"""
-Du bist das autonome Frühwarn- und Analysesystem des GeoPuls Dashboards.
+Du bist der Chef-Strategist und OSINT-Analyst des GeoPuls Frühwarn-Dashboards.
 
-DEINE AUFGABE:
-Analysiere die folgenden 30 weltweiten Medienmeldungen und identifiziere eigenständig, ohne Vorgaben oder Filter:
-1. "conflict_hotspots": Akute, kriegerische oder hochbrisante Krisenherde (mindestens 4 Einträge).
-2. "systemic_risks": ZUKÜNFTIGE, LATENTE ODER SYSTEMISCHE RISIKEN (mindestens 3 Einträge).
-   Scanne die Meldungen gezielt nach aufkeimenden Konflikten, rechtlichen/digitalen Einschränkungen, währungspolitischen Verwerfungen, Rohstoff-Engpässen oder gesellschaftlich-politischen Pulverfässern, die in den nächsten Monaten oder Jahren an Brisanz gewinnen könnten. Bewerte deren Status und potenzielle Auswirkungen vollkommen autonom.
+DEIN AUFTRAG:
+Analysiere die folgenden direkten PRIMÄRQUELLEN (US White House, EU-Kommission, WEF, Fed, Kreml, Schweizer Bundesrat, Münchner Sicherheitskonferenz/MSC) sowie weltweite Medienmeldungen. Denke UM DIE ECKE.
+Identifiziere direkte Absichts-Erklärungen, schleichende Gesetzesinitiativen, bilaterale Spannungen, asymmetrische Risiken und geostrategische Pulverfässer.
 
-Meldungen der Quellen:
+STRIKTER NEGATIV-FILTER (STRENG VERBOTENE INHALTE):
+Generiere UNTER KEINEN UMSTÄNDEN generische Standard-Floskeln wie "Klimawandel", "allgemeine Cybersicherheit", "allgemeiner Währungskrieg" oder schwammige ESG-Themen. 
+
+FOKUS FÜR 'systemic_risks' (SCHAUE AUF OFFIZIELLE INITIATIVEN, DIPLOMATIE & UNTERSCHÄTZTE ZÜNDSCHNÜRE):
+Analysiere konkret:
+1. Latente Geopolitische Pulverfässer & Diplomatie (z. B. Moldawien/Transnistrien, Suwalki-Lücke, Westbalkan, Schweizer Neutralität/Bilaterale Verträge, MSC-Strategiepapiere, Seekabel-Sicherheit).
+2. Schleichende System- & Kontroll-Schocks aus Primärquellen (z. B. offizielle Vorstöße der EU zu Verschlüsselungsverboten/Chatkontrolle, CBDC/Digitaler Euro Testphasen der EZB/Fed, Bargeldgrenzen, Finanz-Debanking).
+3. Asymmetrische Wirtschafts- & Rohstoffhebel (z. B. Monopole bei Seltenen Erden, Schattenflotten, Zinsspanne im Schattenbankensektor, Derivate-Risiken).
+
+Meldungen und Primärquellen:
 {feed_context}
 
 GIB DAS ERGEBNIS AUSSCHLIESSLICH ALS VALIDES JSON ZURÜCK.
@@ -97,28 +100,28 @@ Exaktes Schema:
 {{
   "conflict_hotspots": [
     {{
-      "region": "Name der Region / Krisenzone",
-      "actors": "Beteiligte Akteure / Mächte",
+      "region": "Region / Akute Krisenzone",
+      "actors": "Beteiligte Mächte & Akteure",
       "escalation_level": "KRITISCH / HOCH / MITTEL",
-      "catalyst": "Was ist aktuell passiert oder zeichnet sich ab",
-      "impact": "Auswirkungen auf Märkte, Schifffahrt oder Geopolitik"
+      "catalyst": "Konkreter Auslöser oder Militäraktion der letzten Tage",
+      "impact": "Märkte, Rohstoffe, Seewege oder Schifffahrt"
     }}
   ],
   "systemic_risks": [
     {{
-      "topic": "Name des von dir erkannten Zukunfts- oder Systemrisikos",
-      "category": "Kategorie (z. B. Geomonetär, Digitalrechte, Ressourcen, Latenter Konflikt)",
+      "topic": "Konkretes Risikofeld aus Regierungs-/Diplomatiequellen oder Geostrategie",
+      "category": "Kategorie (z. B. Geostrategie, Digitalrechte, Finanzarchitektur, Bilaterale Verträge)",
       "risk_level": "HOCH / MITTEL-HOCH",
-      "status": "Aktueller Stand / Entwicklungstrend",
-      "impact": "Deine autonome Einschätzung der langfristigen systemischen Folgen"
+      "status": "Aktueller Stand / Offizielle Gesetzgebung / Diplomatische Verhandlung",
+      "impact": "Konkrete asymmetrische Folgen und Domino-Effekte"
     }}
   ],
   "timestamp": "",
   "global_risk_score": 79,
-  "market_regime": "Aktuelles Makro-Regime (Kurze Beschreibung)",
-  "top_overweight": "Empfohlene defensive Sektoren/Assets",
+  "market_regime": "Aktuelles Makro-Regime",
+  "top_overweight": "Empfohlene defensive Sektoren",
   "top_risk": "Größtes Einzelrisiko für Märkte und Stabilität",
-  "daily_executive_summary": "Deine tagesaktuelle, weltweite Synthese der wichtigsten Entwicklungen.",
+  "daily_executive_summary": "Tagesaktuelle, tiefgründige Synthese aus Primärquellen, Schweiz/MSC-Diplomatie und Medien.",
   "assets": [
     {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Sehr Attraktiv", "trend": "Stark Steigend", "driver": "Haupttreiber" }},
     {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Steigend", "driver": "Haupttreiber" }},
@@ -129,11 +132,11 @@ Exaktes Schema:
     {{ "name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "Stark Fallend", "driver": "Haupttreiber" }}
   ],
   "regions": [
-    {{ "name": "USA", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Kurze Einschätzung" }},
-    {{ "name": "BRICS & Globaler Süden", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Kurze Einschätzung" }},
-    {{ "name": "Japan & Indien / ASEAN", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Kurze Einschätzung" }},
-    {{ "name": "Kern-Europa (DE/FR)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Kurze Einschätzung" }},
-    {{ "name": "China (Binnenmarkt)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Kurze Einschätzung" }}
+    {{ "name": "USA", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Einschätzung" }},
+    {{ "name": "BRICS & Globaler Süden", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Einschätzung" }},
+    {{ "name": "Japan & Indien / ASEAN", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Einschätzung" }},
+    {{ "name": "Kern-Europa (DE/FR/CH)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Einschätzung" }},
+    {{ "name": "China (Binnenmarkt)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Einschätzung" }}
   ],
   "scenarios": [
     {{ "title": "Szenario 1", "prob": 40 }},
@@ -147,7 +150,7 @@ Exaktes Schema:
 print("Rufe Groq API auf...")
 chat_completion = client.chat.completions.create(
     messages=[
-        {"role": "system", "content": "Du bist ein präzises Makro-, Finanz- und Geopolitik-Analysesystem, das ausschließlich valides JSON generiert."},
+        {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitik- und Risikomodell. Du wertest Regierungs-, Schweizer Neutralitäts- und MSC-Quellen unvoreingenommen aus."},
         {"role": "user", "content": prompt}
     ],
     model="llama-3.3-70b-versatile",
@@ -155,11 +158,9 @@ chat_completion = client.chat.completions.create(
 )
 
 data = json.loads(chat_completion.choices[0].message.content)
-
-# Zeitstempel setzen
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls data.json mit autonomer Krisenerkennung erfolgreich gespeichert!")
+print("GeoPuls data.json mit Schweiz-, MSC- und Primärquellen erfolgreich aktualisiert!")
