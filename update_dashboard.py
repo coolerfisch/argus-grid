@@ -14,7 +14,7 @@ def clean_html(raw_html):
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return clean_text.strip()
 
-# A. ECHTE LIVE-MARKTDATEN HOLEN (Absolut ausfallsicher)
+# A. ECHTE LIVE-MARKTDATEN HOLEN
 def get_live_market_data():
     market_summary = ""
     tickers = {
@@ -45,7 +45,7 @@ def get_live_market_data():
 
 live_market_context = get_live_market_data()
 
-# B. ERWEITERTER QUELLENSPIEGEL (Inkl. BRICS-Primärquellen)
+# B. ERWEITERTER QUELLENSPIEGEL
 rss_urls = {
     # 🌍 1. BRICS & GLOBALER SÜDEN MEDIEN
     "Economic Times (Indien)": "https://economictimes.indiatimes.com/rssfeedstopstories.cms",
@@ -59,7 +59,6 @@ rss_urls = {
     "Asia Times": "https://asiatimes.com/feed/",
 
     # 🏛️ 2. PRIMÄRQUELLEN & DIPLOMATIE / INNENPOLITIK (WESTEN & BRICS)
-    # --- Westliche & Internationale Primärquellen ---
     "White House Briefing": "https://www.whitehouse.gov/briefing-room/feed/",
     "US Department of State": "https://www.state.gov/rss-feed/press-releases/feed/",
     "Federal Reserve": "https://www.federalreserve.gov/feeds/press_all.xml",
@@ -68,8 +67,6 @@ rss_urls = {
     "World Economic Forum": "https://www.weforum.org/agenda/feed/",
     "Schweizer Bundesrat": "https://www.admin.ch/gov/de/start/dokumentation/medienmitteilungen.rss.html",
     "Münchner Sicherheitskonferenz": "https://securityconference.org/news/rss/",
-    
-    # --- BRICS Diplomatische & Offizielle Primärquellen ---
     "Kremlin News (Russland)": "http://en.kremlin.ru/rss/news",
     "Kremlin Transkripte (Russland)": "http://en.kremlin.ru/rss/transcripts",
     "Russisches Außenministerium (MID)": "https://mid.ru/en/rss.php",
@@ -143,19 +140,15 @@ Du bist der Chef-Strategist des GeoPuls Dashboards.
 ECHTE LIVE-FINANZDATEN:
 {live_market_context}
 
-MEDIEN- & REGIERUNGS-FEEDS (MAINSTREAM, BRICS DIPLOMATIE & ALTERNATIV):
+MEDIEN- & REGIERUNGS-FEEDS:
 {feed_context}
 
 DEIN AUFTRAG (NUR VALIDES JSON ZURÜCKGEBEN):
-Analysiere die Gesamtlage und erstelle das Lagebild. Berücksichtige dabei explizit die Mitteilungen der BRICS-Regierungsstellen und Diplomatiekanäle.
-
-STRIKTE PFLICHT: 'narrative_divergence' MUSS EINE LISTE VON EXACT 3 UNTERSCHIEDLICHEN REGIONALEN THEMEN SEIN:
-1. Thema 1: Ukraine / NATO / Europa
-2. Thema 2: Naher Osten / Seewege
-3. Thema 3: US-China / BRICS / Handelskonflikt & Dedollarisierung
+Erstelle eine ausführliche 'daily_executive_summary' und analysiere 3 verschiedene Themen in 'narrative_divergence'.
 
 Exaktes Schema:
 {{
+  "daily_executive_summary": "Ausführliche Synthese der heutigen geopolitischen und makroökonomischen Lage...",
   "defcon_status": {{
     "level": 3,
     "label": "DEFCON 3 - Erhöhte Alarmstufe",
@@ -284,7 +277,6 @@ Exaktes Schema:
   "market_regime": "Multipolare Stagflation & Zins-Unsicherheit",
   "top_overweight": "Gold, Energie, Rohstoffe & Verteidigung",
   "top_risk": "Versorgungsschock / Geopolitische Blockbildung",
-  "daily_executive_summary": "Ausführliche Synthese...",
   "assets": [
     {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Sehr Attraktiv", "trend": "Stark Steigend", "driver": "BRICS-Käufe & Sichere Häfen" }},
     {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Steigend", "driver": "Hardware-Boom" }},
@@ -293,13 +285,6 @@ Exaktes Schema:
     {{ "name": "Bitcoin & Krypto", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Volatil", "driver": "Liquiditätsumfeld" }},
     {{ "name": "High-Yield Bonds", "signal": "RED", "signal_text": "🔴 Unattraktiv", "trend": "Fallend", "driver": "Refinanzierungsdruck" }},
     {{ "name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "Stark Fallend", "driver": "Zinsniveau" }}
-  ],
-  "regions": [
-    {{ "name": "USA", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Einschätzung" }},
-    {{ "name": "BRICS & Globaler Süden", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Einschätzung" }},
-    {{ "name": "Japan & Indien / ASEAN", "signal": "GREEN", "signal_text": "🟢 Grün", "summary": "Einschätzung" }},
-    {{ "name": "Kern-Europa (DE/FR/CH)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Einschätzung" }},
-    {{ "name": "China (Binnenmarkt)", "signal": "RED", "signal_text": "🔴 Rot", "summary": "Einschätzung" }}
   ],
   "scenarios": [
     {{ "title": "Ausweitung Nahost-Konflikt (Ölschock >100$)", "prob": 40 }},
@@ -313,7 +298,7 @@ Exaktes Schema:
 print("Rufe Groq API auf...")
 chat_completion = client.chat.completions.create(
     messages=[
-        {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Du wertest westliche sowie BRICS-Primärquellen aus und lieferst 3 unterschiedliche Schauplätze in der Narrativ-Matrix."},
+        {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Erstelle eine detaillierte Summary und genau 3 Narrativ-Schauplätze."},
         {"role": "user", "content": prompt}
     ],
     model="llama-3.3-70b-versatile",
@@ -322,7 +307,13 @@ chat_completion = client.chat.completions.create(
 
 data = json.loads(chat_completion.choices[0].message.content)
 
-# --- NORMALISIERUNG DER NARRATIV-MATRIX ALS ARRAY ---
+# --- NORMALISIERUNG ALLER FELDER ---
+
+# 1. Executive Summary absichern
+if not data.get("daily_executive_summary"):
+    data["daily_executive_summary"] = data.get("executive_summary") or data.get("summary") or "Die geopolitische Lage bleibt durch multidimensionale Krisen im Nahen Osten, in Osteuropa und Ostasien angespannt. Rohstoffe und Verteidigungsmärkte verzeichnen erhöhte Nachfrage."
+
+# 2. Narrativ-Matrix absichern
 raw_nd = data.get("narrative_divergence", [])
 if isinstance(raw_nd, dict):
     raw_nd = [raw_nd]
@@ -332,9 +323,9 @@ for item in raw_nd:
     if isinstance(item, dict):
         normalized_nd.append({
             "topic": item.get("topic") or "Geopolitischer Schauplatz",
-            "mainstream_view": item.get("mainstream_view") or item.get("mainstream") or "Fokus auf westliche Perspektive und Ordnung.",
+            "mainstream_view": item.get("mainstream_view") or item.get("mainstream") or "Fokus auf westliche Ordnung und Bündnisse.",
             "brics_view": item.get("brics_view") or item.get("brics") or "Fokus auf multipolare Perspektive und Souveränität.",
-            "alternative_view": item.get("alternative_view") or item.get("alternative") or "Fokus auf verdeckte Kaskadeneffekte."
+            "alternative_view": item.get("alternative_view") or item.get("alternative") or "Fokus auf verdeckte Kaskadeneffekte und Makro-Risiken."
         })
 
 if len(normalized_nd) < 3:
@@ -349,7 +340,7 @@ if len(normalized_nd) < 3:
 
 data["narrative_divergence"] = normalized_nd
 
-# GEO-LOOKUP FALLBACK FÜR KOORDINATEN
+# 3. Geo-Lookup Fallback
 GEO_LOOKUP = {
     "nah": (31.5, 34.75), "iran": (32.42, 53.68), "israel": (31.04, 34.85),
     "ukraine": (48.37, 31.16), "taiwan": (23.69, 120.96), "rot": (12.58, 43.33),
@@ -374,7 +365,7 @@ for h in data.get("conflict_hotspots", []):
 
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 
-# HISTORIE TRACKEN
+# 4. Historie tracken
 history_file = "history.json"
 history_data = []
 if os.path.exists(history_file):
@@ -398,4 +389,4 @@ if not history_data or history_data[-1].get("date") != today_str:
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls Dashboard mit BRICS-Primärquellen erfolgreich aktualisiert!")
+print("GeoPuls Dashboard erfolgreich aktualisiert!")
