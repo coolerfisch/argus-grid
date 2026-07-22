@@ -1,67 +1,81 @@
 {
   "defcon_status": {
-    "level": 4,
-    "label": "DEFCON 4 - Höchste Alarmbereitschaft",
-    "nuclear_risk_percent": 20,
-    "primary_driver": "Iran-Konflikt und Nukleardoktrin-Anpassungen"
+    "level": 3,
+    "label": "DEFCON 3 - Erhöhte Alarmstufe",
+    "nuclear_risk_percent": 15,
+    "primary_driver": "Nukleardoktrin-Anpassungen & Rhetorik"
   },
-  "narrative_divergence": {
-    "topic": "Nahost-Konflikt und globale Auswirkungen",
-    "mainstream_view": "Fokus auf Iran-Sanktionen und NATO-Unterstützung",
-    "brics_view": "Betonte Rolle von multipolaren Beziehungen und regionaler Stabilität",
-    "alternative_view": "Hinweis auf verdeckte Kaskadeneffekte und potenzielle Eskalation"
-  },
+  "narrative_divergence": [
+    {
+      "topic": "Ukraine & NATO-Ostflanke",
+      "mainstream_view": "Fokus auf NATO-Geschlossenheit, Sanktionen und westliche Hilfen",
+      "brics_view": "Fokus auf Sicherheitsinteressen Moskaus und Kritik an NATO-Osterweiterung",
+      "alternative_view": "Fokus auf geopolitische Abnutzung und verdeckte Diplomatie"
+    },
+    {
+      "topic": "Naher Osten & Seewege (Rotes Meer)",
+      "mainstream_view": "Fokus auf Schutz der freien Schifffahrt und Abwehr von Milizen",
+      "brics_view": "Fokus auf Ursachen des Konflikts und Kritik am US-Einsatz",
+      "alternative_view": "Fokus auf globale Frachtkostensteigerung und Lieferkettenbrüche"
+    },
+    {
+      "topic": "BRICS & Globale Dedollarisierung / Handelskonflikt",
+      "mainstream_view": "US-Dollar bleibt unangefochtene Reservewährung",
+      "brics_view": "Ausbau von Ausgleichssystemen in Lokalwährungen und Goldreserven",
+      "alternative_view": "Beschleunigte Fragmentierung des globalen Finanzsystems"
+    }
+  ],
   "domestic_politics": [
     {
       "country_region": "USA / Washington",
-      "topic": "US-Kongress und Parteienpolarisation",
-      "status": "Haushaltsstreit und außenpolitischer Druck",
+      "topic": "US-Kongress & Budget-Rivalitäten",
+      "status": "Haushaltsstreit & Parteienpolarisation",
       "impact": "Blockaden bei Auslandshilfen und Druck auf Außenpolitik"
     },
     {
       "country_region": "Deutschland / EU",
-      "topic": "Regierungskrisen und Polarisierung",
-      "status": "Hohe Deindustrialisierung und Haushaltsprobleme",
+      "topic": "Regierungskrisen & Polarisierung",
+      "status": "Hohe Deindustrialisierung & Haushaltsprobleme",
       "impact": "Eingeschränkte Handlungsfähigkeit Brüssels"
     },
     {
       "country_region": "China / BRICS",
-      "topic": "Wirtschaftsflaute und Stimulus-Debatte",
-      "status": "Interne Wirtschaftsprobleme in Peking",
+      "topic": "Immobilienkrise & Stimulus-Debatte",
+      "status": "Interne Wirtschaftsflaute in Peking",
       "impact": "Erhöhter Druck auf Exportmärkte"
     }
   ],
   "stock_picks": {
     "top_5_buys": [
       {
-        "ticker": "RTX",
-        "name": "Raytheon Technologies",
+        "ticker": "RHM.DE",
+        "name": "Rheinmetall",
         "sector": "Verteidigung",
-        "reason": "Globale Rüstungsnachfrage und Technologievorsprung"
+        "reason": "Massives Aufrüstungsprogramm in Europa & NATO"
       },
       {
         "ticker": "CCJ",
         "name": "Cameco",
         "sector": "Uran / Energie",
-        "reason": "Globale Energiekrise und Kernenergie-Renaissance"
+        "reason": "Globale Energiekrise & Kernenergie-Renaissance"
       },
       {
         "ticker": "GOLD",
         "name": "Barrick Gold",
         "sector": "Rohstoffe",
-        "reason": "BRICS-Zentralbankkäufe und Flucht in Gold"
+        "reason": "BRICS-Zentralbankkäufe & Flucht in Gold"
       },
       {
         "ticker": "LMT",
         "name": "Lockheed Martin",
         "sector": "US-Verteidigung",
-        "reason": "Hohe globale Auftragsbestände für Raketen und Jets"
+        "reason": "Hohe globale Auftragsbestände für Raketen/Jets"
       },
       {
         "ticker": "NVDA",
         "name": "Nvidia",
         "sector": "KI & Tech",
-        "reason": "Ungebrochener Rüstungs- und KI-Hardware-Boom"
+        "reason": "Ungebrochener Rüstungs- & KI-Hardware-Boom"
       }
     ],
     "flop_5_sells": [
@@ -69,7 +83,7 @@
         "ticker": "VNA.DE",
         "name": "Vonovia",
         "sector": "Immobilien",
-        "reason": "Hohe Zinslast und Refinanzierungsrisiken"
+        "reason": "Hohe Zinslast & Refinanzierungsrisiken"
       },
       {
         "ticker": "NKE",
@@ -81,7 +95,7 @@
         "ticker": "BA",
         "name": "Boeing",
         "sector": "Luftfahrt",
-        "reason": "Qualitätsprobleme und Lieferketten-Engpässe"
+        "reason": "Qualitätsprobleme & Lieferketten-Engpässe"
       },
       {
         "ticker": "DBK.DE",
@@ -158,59 +172,59 @@
       "impact": "Versorgungsrisiken High-Tech"
     }
   ],
-  "timestamp": "22.07.2026 - 23:19 UTC",
-  "global_risk_score": 82,
+  "timestamp": "22.07.2026 - 23:51 UTC",
+  "global_risk_score": 79,
   "market_regime": "Multipolare Stagflation & Zins-Unsicherheit",
   "top_overweight": "Gold, Energie, Rohstoffe & Verteidigung",
   "top_risk": "Versorgungsschock / Geopolitische Blockbildung",
-  "daily_executive_summary": "Die globale Lage ist durch höhere Konfliktbereitschaft und multipolare Spannungen geprägt. Es besteht ein hohes Risiko für einen Ölschock und eine Eskalation im Nahen Osten. Die US-Regierung steht unter Druck, ihre Außenpolitik zu überdenken.",
+  "daily_executive_summary": "Ausführliche Synthese...",
   "assets": [
     {
       "name": "Gold & Silber",
       "signal": "GREEN",
-      "signal_text": "⟡ Sehr Attraktiv",
+      "signal_text": "⧢ Sehr Attraktiv",
       "trend": "Stark Steigend",
       "driver": "BRICS-Käufe & Sichere Häfen"
     },
     {
       "name": "KI & Halbleiter",
       "signal": "GREEN",
-      "signal_text": "⟡ Attraktiv",
+      "signal_text": "⧢ Attraktiv",
       "trend": "Steigend",
       "driver": "Hardware-Boom"
     },
     {
       "name": "Uran & Energie",
       "signal": "GREEN",
-      "signal_text": "⟡ Attraktiv",
+      "signal_text": "⧢ Attraktiv",
       "trend": "Stark Steigend",
       "driver": "Angebotsdefizit"
     },
     {
       "name": "S&P 500 / Nasdaq",
       "signal": "AMBER",
-      "signal_text": "⟠ Neutral",
+      "signal_text": "⟡ Neutral",
       "trend": "Volatil",
       "driver": "Zinsaussichten"
     },
     {
       "name": "Bitcoin & Krypto",
       "signal": "AMBER",
-      "signal_text": "⟠ Neutral",
+      "signal_text": "⟡ Neutral",
       "trend": "Volatil",
       "driver": "Liquiditätsumfeld"
     },
     {
       "name": "High-Yield Bonds",
       "signal": "RED",
-      "signal_text": "❌ Unattraktiv",
+      "signal_text": "⬤ Unattraktiv",
       "trend": "Fallend",
       "driver": "Refinanzierungsdruck"
     },
     {
       "name": "Gewerbeimmobilien",
       "signal": "RED",
-      "signal_text": "❌ Meiden",
+      "signal_text": "⬤ Meiden",
       "trend": "Stark Fallend",
       "driver": "Zinsniveau"
     }
@@ -219,38 +233,38 @@
     {
       "name": "USA",
       "signal": "GREEN",
-      "signal_text": "⟡ Grün",
-      "summary": "Stabile Wirtschaft, aber außenpolitische Risiken"
+      "signal_text": "⧢ Grün",
+      "summary": "Einschätzung"
     },
     {
       "name": "BRICS & Globaler Süden",
       "signal": "GREEN",
-      "signal_text": "⟡ Grün",
-      "summary": "Wachsende Wirtschaftsmacht und multipolare Kooperation"
+      "signal_text": "⧢ Grün",
+      "summary": "Einschätzung"
     },
     {
       "name": "Japan & Indien / ASEAN",
       "signal": "GREEN",
-      "signal_text": "⟡ Grün",
-      "summary": "Stabile Wirtschaft und strategische Partnerschaften"
+      "signal_text": "⧢ Grün",
+      "summary": "Einschätzung"
     },
     {
       "name": "Kern-Europa (DE/FR/CH)",
       "signal": "RED",
-      "signal_text": "❌ Rot",
-      "summary": "Wirtschaftliche und politische Herausforderungen"
+      "signal_text": "⬤ Rot",
+      "summary": "Einschätzung"
     },
     {
       "name": "China (Binnenmarkt)",
       "signal": "RED",
-      "signal_text": "❌ Rot",
-      "summary": "Wirtschaftliche Abkühlung und interne Unruhen"
+      "signal_text": "⬤ Rot",
+      "summary": "Einschätzung"
     }
   ],
   "scenarios": [
     {
       "title": "Ausweitung Nahost-Konflikt (Ölschock >100$)",
-      "prob": 45
+      "prob": 40
     },
     {
       "title": "Zweite Inflationswelle / Stagflation",
@@ -262,7 +276,7 @@
     },
     {
       "title": "BRICS-Dedollarisierung",
-      "prob": 10
+      "prob": 15
     }
   ]
 }
