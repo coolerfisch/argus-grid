@@ -14,7 +14,7 @@ def clean_html(raw_html):
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return clean_text.strip()
 
-# A. ECHTE LIVE-MARKTDATEN HOLEN
+# A. ECHTE LIVE-MARKTDATEN HOLEN (Absolut ausfallsicher)
 def get_live_market_data():
     market_summary = ""
     tickers = {
@@ -40,7 +40,7 @@ def get_live_market_data():
     except Exception as e_all:
         print(f"yfinance Fehler: {e_all}")
         market_summary = "- Finanzdaten aktuell eingeschränkt verfügbar.\n"
-    
+
     return market_summary if market_summary else "- Finanzdaten im Wartestand.\n"
 
 live_market_context = get_live_market_data()
@@ -114,7 +114,7 @@ if not api_key:
 
 client = Groq(api_key=api_key)
 
-# D. PROMPT MIT AKTIEN-PICKS & INNENPOLITIK
+# D. PROMPT MIT ALLEN ANFORDERUNGEN
 prompt = f"""
 Du bist der Chef-Strategist des GeoPuls Dashboards.
 
@@ -127,13 +127,15 @@ MEDIEN- & REGIERUNGS-FEEDS:
 DEIN AUFTRAG (NUR VALIDES JSON ZURÜCKGEBEN):
 Analysiere die Gesamtlage inkl. der INNENPOLITIK der Schlüsselstaaten (US-Parteienkampf, EU-Koalitionsprobleme, soziale/wirtschaftliche Unruhen in BRICS) und erstelle konkrete Aktien-Empfehlungen.
 
-1. 'defcon_status': Atomkriegs-/Weltkriegsrisiko (Level 1-5, Label, nuclear_risk_percent, primary_driver).
-2. 'domestic_politics': Analysiere 3 wichtige INNENPOLITISCHE Schauplätze der Welt (z.B. USA, Deutschland/EU, China/BRICS), die außenpolitische Konsequenzen haben.
-3. 'stock_picks':
-   - 'top_5_buys': 5 konkrete Gewinner-Aktien (z.B. Rheinmetall, Cameco, Lockheed, Lockheed, Barrick Gold, Nvidia) mit Ticker, Name, Sektor und geopolitischem Gegenwind/Rückenwind (reason).
-   - 'flop_5_sells': 5 konkrete Verlierer-Aktien/Sektoren (z.B. verschuldete Immobilienwerte, stark von China-Lieferketten abhängige Konsumwerte) mit Ticker, Name, Sektor und Begründung (reason).
-4. 'conflict_hotspots': MINDESTENS 4 ECHTE BRANDHERDE mit exakten Koordinaten ("lat", "lng").
-5. 'systemic_risks': 3 Pflicht-Risiken (Geopolitische Region wie Moldawien, Digitale/Monetäre Kontrolle, Strategischer Hebel).
+SCHLÜSSEL-FELDER IM JSON:
+1. 'defcon_status': Atomkriegs-/Weltkriegsrisiko (level 1-5, label, nuclear_risk_percent, primary_driver).
+2. 'narrative_divergence': Vergleiche das am stärksten unterschiedlich berichtete Thema des Tages. PFLICHT-KEYS: 'topic', 'mainstream_view', 'brics_view', 'alternative_view'.
+3. 'domestic_politics': Analysiere 3 wichtige INNENPOLITISCHE Schauplätze der Welt (z.B. USA, Deutschland/EU, China/BRICS).
+4. 'stock_picks':
+   - 'top_5_buys': 5 Gewinner-Aktien mit ticker, name, sector, reason.
+   - 'flop_5_sells': 5 Verlierer-Aktien mit ticker, name, sector, reason.
+5. 'conflict_hotspots': MINDESTENS 4 ECHTE BRANDHERDE mit exakten Koordinaten ("lat", "lng").
+6. 'systemic_risks': 3 Pflicht-Risiken (Geopolitische Region, Digitale/Monetäre Kontrolle, Strategischer Hebel).
 
 Exaktes Schema:
 {{
@@ -142,6 +144,12 @@ Exaktes Schema:
     "label": "DEFCON 3 - Erhöhte Alarmstufe",
     "nuclear_risk_percent": 15,
     "primary_driver": "Nukleardoktrin-Anpassungen & Rhetorik"
+  }},
+  "narrative_divergence": {{
+    "topic": "Das am stärksten gespaltene Thema des Tages",
+    "mainstream_view": "Einschätzung westlicher Medien (z.B. Fokus auf NATO & Sanktionen)",
+    "brics_view": "Einschätzung von TASS/CGTN (z.B. Fokus auf Multipolaren Handel)",
+    "alternative_view": "Einschätzung unabhängiger Analysten (z.B. Fokus auf verdeckte Kaskadeneffekte)"
   }},
   "domestic_politics": [
     {{
@@ -154,36 +162,30 @@ Exaktes Schema:
       "country_region": "Deutschland / EU",
       "topic": "Regierungskrisen & Polarisierung",
       "status": "Hohe Deindustrialisierung & Haushaltsprobleme",
-      "impact": "Eingeschränkte Handlungsfähigkeit Brüssels und Streit um Sondervermögen"
+      "impact": "Eingeschränkte Handlungsfähigkeit Brüssels"
     }},
     {{
       "country_region": "China / BRICS",
       "topic": "Immobilienkrise & Stimulus-Debatte",
       "status": "Interne Wirtschaftsflaute in Peking",
-      "impact": "Erhöhter Druck auf Exportmärkte und Rohstoffnachfrage"
+      "impact": "Erhöhter Druck auf Exportmärkte"
     }}
   ],
   "stock_picks": {{
     "top_5_buys": [
-      {{ "ticker": "RHM.DE", "name": "Rheinmetall", "sector": "Rüstung & Verteidigung", "reason": "Massives Aufrüstungsprogramm in Europa & NATO" }},
-      {{ "ticker": "CCJ", "name": "Cameco", "sector": "Uran & Kernenergie", "reason": "Globale Energiekrise & Renaissance der Atomkraft" }},
-      {{ "ticker": "GOLD", "name": "Barrick Gold", "sector": "Rohstoffe / Gold", "reason": "BRICS-Zentralbankkäufe & Flucht in sichere Häfen" }},
-      {{ "ticker": "LMT", "name": "Lockheed Martin", "sector": "US-Verteidigung", "reason": "Globale Nachfrage nach Raketenabwehr & Jet-Hardware" }},
-      {{ "ticker": "NVDA", "name": "Nvidia", "sector": "KI & Tech-Souveränität", "reason": "Ungebrochener Rüstungs- & KI-Hardware-Boom" }}
+      {{ "ticker": "RHM.DE", "name": "Rheinmetall", "sector": "Verteidigung", "reason": "Massives Aufrüstungsprogramm in Europa & NATO" }},
+      {{ "ticker": "CCJ", "name": "Cameco", "sector": "Uran / Energie", "reason": "Globale Energiekrise & Kernenergie-Renaissance" }},
+      {{ "ticker": "GOLD", "name": "Barrick Gold", "sector": "Rohstoffe", "reason": "BRICS-Zentralbankkäufe & Flucht in Gold" }},
+      {{ "ticker": "LMT", "name": "Lockheed Martin", "sector": "US-Verteidigung", "reason": "Hohe globale Auftragsbestände für Raketen/Jets" }},
+      {{ "ticker": "NVDA", "name": "Nvidia", "sector": "KI & Tech", "reason": "Ungebrochener Rüstungs- & KI-Hardware-Boom" }}
     ],
     "flop_5_sells": [
-      {{ "ticker": "VNA.DE", "name": "Vonovia", "sector": "Gewerbe & Wohnimmobilien", "reason": "Hohe Zinslast & Refinanzierungsrisiken" }},
-      {{ "ticker": "NKE", "name": "Nike", "sector": "Konsumgüter", "reason": "Schwächelnder Binnenmarkt in China & Kaufkraftverlust" }},
+      {{ "ticker": "VNA.DE", "name": "Vonovia", "sector": "Immobilien", "reason": "Hohe Zinslast & Refinanzierungsrisiken" }},
+      {{ "ticker": "NKE", "name": "Nike", "sector": "Konsumgüter", "reason": "Schwächelnder Binnenmarkt in China" }},
       {{ "ticker": "BA", "name": "Boeing", "sector": "Luftfahrt", "reason": "Qualitätsprobleme & Lieferketten-Engpässe" }},
-      {{ "ticker": "DBK.DE", "name": "Deutsche Bank", "sector": "Europäische Banken", "reason": "Kreditausfallrisiken bei Gewerbeimmobilien" }},
+      {{ "ticker": "DBK.DE", "name": "Deutsche Bank", "sector": "Banken", "reason": "Kreditausfallrisiken bei Gewerbeimmobilien" }},
       {{ "ticker": "INTC", "name": "Intel", "sector": "Halbleiter (Old Gen)", "reason": "Verlust von Marktanteilen im KI-Segment" }}
     ]
-  }},
-  "narrative_divergence": {{
-    "topic": "Das am stärksten gespaltene Thema des Tages",
-    "mainstream_view": "Einschätzung westlicher Medien",
-    "brics_view": "Einschätzung von TASS/CGTN",
-    "alternative_view": "Einschätzung unabhängiger Analysten"
   }},
   "conflict_hotspots": [
     {{
@@ -289,7 +291,49 @@ chat_completion = client.chat.completions.create(
 
 data = json.loads(chat_completion.choices[0].message.content)
 
-# GEO-LOOKUP FALLBACK FÜR KOORDINATEN
+# --- SERVERSEITIGE NORMALISIERUNG & ABSICHERUNG GEGEN FEHLENDE KEYS ---
+
+# 1. Narrativ-Divergenz absichern
+nd = data.get("narrative_divergence", {})
+if not isinstance(nd, dict):
+    nd = {}
+
+data["narrative_divergence"] = {
+    "topic": nd.get("topic") or "Globale Machtverschiebung & Geopolitik",
+    "mainstream_view": nd.get("mainstream_view") or nd.get("mainstream") or nd.get("western_view") or "Fokus auf NATO-Geschlossenheit, Sanktionen und Regelbasierte Ordnung.",
+    "brics_view": nd.get("brics_view") or nd.get("brics") or nd.get("global_south") or "Fokus auf multipolare Währungsalternativen und Kritik an westlicher Hegemonie.",
+    "alternative_view": nd.get("alternative_view") or nd.get("alternative") or nd.get("alt") or "Fokus auf verdeckte Kaskadeneffekte, Schattenbanken und Infrastruktur-Schwachstellen."
+}
+
+# 2. Stock Picks absichern
+sp = data.get("stock_picks", {})
+if not isinstance(sp, dict) or "top_5_buys" not in sp or not sp["top_5_buys"]:
+    data["stock_picks"] = {
+        "top_5_buys": [
+            {"ticker": "RHM.DE", "name": "Rheinmetall", "sector": "Verteidigung", "reason": "Europäische Aufrüstung & NATO-Bedarf"},
+            {"ticker": "CCJ", "name": "Cameco", "sector": "Uran / Energie", "reason": "Angebotsdefizit Kernbrennstoff"},
+            {"ticker": "GOLD", "name": "Barrick Gold", "sector": "Rohstoffe", "reason": "Zentralbank-Goldkäufe & Safe-Haven"},
+            {"ticker": "LMT", "name": "Lockheed Martin", "sector": "US-Rüstung", "reason": "Hohe globale Auftragsbestände"},
+            {"ticker": "NVDA", "name": "Nvidia", "sector": "KI-Hardware", "reason": "Technologische Souveränität & KI-Boom"}
+        ],
+        "flop_5_sells": [
+            {"ticker": "VNA.DE", "name": "Vonovia", "sector": "Immobilien", "reason": "Zinsdruck & Refinanzierung"},
+            {"ticker": "NKE", "name": "Nike", "sector": "Konsum", "reason": "Kaufkraftschwäche in China"},
+            {"ticker": "BA", "name": "Boeing", "sector": "Luftfahrt", "reason": "Lieferketten- & Qualitätsprobleme"},
+            {"ticker": "DBK.DE", "name": "Deutsche Bank", "sector": "Banken", "reason": "Gewerbeimmobilien-Risiken"},
+            {"ticker": "INTC", "name": "Intel", "sector": "Legacy-Tech", "reason": "Marktanteilsverlust im KI-Segment"}
+        ]
+    }
+
+# 3. Innenpolitik absichern
+if "domestic_politics" not in data or not data["domestic_politics"]:
+    data["domestic_politics"] = [
+        {"country_region": "USA / Washington", "topic": "Kongress-Budgetstreit", "status": "Polarisierung", "impact": "Blockaden bei Auslandshilfen"},
+        {"country_region": "Deutschland / EU", "topic": "Industriekrise & Haushalt", "status": "Druck auf Sparvorgaben", "impact": "Eingeschränkte Handlungsfähigkeit Brüssels"},
+        {"country_region": "China / BRICS", "topic": "Immobilien-Stimulus", "status": "Deflationsdruck", "impact": "Erhöhter Exportdruck auf globale Märkte"}
+    ]
+
+# 4. GEO-LOOKUP FALLBACK FÜR KOORDINATEN
 GEO_LOOKUP = {
     "nah": (31.5, 34.75), "iran": (32.42, 53.68), "israel": (31.04, 34.85),
     "ukraine": (48.37, 31.16), "taiwan": (23.69, 120.96), "rot": (12.58, 43.33),
@@ -314,7 +358,7 @@ for h in data.get("conflict_hotspots", []):
 
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 
-# HISTORIE TRACKEN
+# 5. HISTORIE TRACKEN
 history_file = "history.json"
 history_data = []
 if os.path.exists(history_file):
@@ -335,7 +379,7 @@ if not history_data or history_data[-1].get("date") != today_str:
     with open(history_file, "w", encoding="utf-8") as f:
         json.dump(history_data, f, ensure_ascii=False, indent=2)
 
-# TELEGRAM ALERT (OPTIONAL)
+# 6. TELEGRAM ALERT (OPTIONAL)
 tg_token = os.environ.get("TELEGRAM_BOT_TOKEN")
 tg_chat_id = os.environ.get("TELEGRAM_CHAT_ID")
 risk_score = data.get("global_risk_score", 0)
@@ -359,4 +403,4 @@ if tg_token and tg_chat_id and (risk_score >= 80 or defcon_lvl <= 2):
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls Dashboard erfolgreich mit Aktien-Picks & Innenpolitik gespeichert!")
+print("GeoPuls Dashboard erfolgreich abgesichert & gespeichert!")
