@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoPuls - Makro & Geopolitik Dashboard</title>
+    <title>GeoPuls - Makro & Geopolitik Radar</title>
     <style>
         :root {
             --bg-color: #0f172a;
@@ -15,6 +15,7 @@
             --accent-amber: #f59e0b;
             --accent-red: #ef4444;
             --accent-blue: #3b82f6;
+            --accent-purple: #a855f7;
         }
 
         * {
@@ -90,7 +91,7 @@
             color: var(--text-primary);
         }
 
-        /* Executive Summary & Sections */
+        /* Section Headlines */
         .section-title {
             font-size: 1.3rem;
             margin: 30px 0 15px 0;
@@ -110,23 +111,22 @@
             margin-bottom: 25px;
         }
 
-        /* Hotspots Grid */
-        .hotspots-grid {
+        /* Responsive Grid for Cards */
+        .grid-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 15px;
             margin-bottom: 25px;
         }
 
-        .hotspot-card {
+        .card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 18px;
-            position: relative;
         }
 
-        .hotspot-header {
+        .card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -135,7 +135,7 @@
             padding-bottom: 8px;
         }
 
-        .hotspot-region {
+        .card-title {
             font-weight: bold;
             font-size: 1.1rem;
         }
@@ -148,17 +148,17 @@
             text-transform: uppercase;
         }
 
-        .badge-kritisch { background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid #ef4444; }
-        .badge-hoch { background: rgba(245, 158, 11, 0.2); color: #fde68a; border: 1px solid #f59e0b; }
-        .badge-mittel { background: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid #3b82f6; }
+        .badge-kritisch, .badge-hoch { background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid #ef4444; }
+        .badge-mittel { background: rgba(245, 158, 11, 0.2); color: #fde68a; border: 1px solid #f59e0b; }
+        .badge-systemic { background: rgba(168, 85, 247, 0.2); color: #d8b4fe; border: 1px solid #a855f7; }
 
-        .hotspot-detail {
+        .card-detail {
             font-size: 0.9rem;
             margin-bottom: 8px;
             color: var(--text-secondary);
         }
 
-        .hotspot-detail strong {
+        .card-detail strong {
             color: var(--text-primary);
         }
 
@@ -219,7 +219,7 @@
 <body>
 
     <header>
-        <h1>🌐 GeoPuls <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">Makro & Geopolitik Synthese</span></h1>
+        <h1>🌐 GeoPuls <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">Makro & Geopolitik Radar</span></h1>
         <div class="timestamp" id="timestamp">Lade Daten...</div>
     </header>
 
@@ -248,9 +248,15 @@
     <div class="summary-box" id="exec-summary">Lade KI-Synthese...</div>
 
     <!-- Conflict Hotspots Section -->
-    <h2 class="section-title">🔥 Geopolitische Brandherde & Konfliktzonen</h2>
-    <div class="hotspots-grid" id="hotspots-container">
-        <!-- Wird dynamisch befüllt -->
+    <h2 class="section-title">🔥 Akute Geopolitische Brandherde</h2>
+    <div class="grid-cards" id="hotspots-container">
+        <!-- Dynamisch befüllt -->
+    </div>
+
+    <!-- Systemic & Future Risks Section -->
+    <h2 class="section-title">🛡️ Systemische Risiken & Latente Zukunfts-Brandherde</h2>
+    <div class="grid-cards" id="systemic-container">
+        <!-- Dynamisch befüllt -->
     </div>
 
     <!-- Asset Allocation -->
@@ -265,7 +271,7 @@
             </tr>
         </thead>
         <tbody id="assets-table">
-            <!-- Wird dynamisch befüllt -->
+            <!-- Dynamisch befüllt -->
         </tbody>
     </table>
 
@@ -280,24 +286,24 @@
             </tr>
         </thead>
         <tbody id="regions-table">
-            <!-- Wird dynamisch befüllt -->
+            <!-- Dynamisch befüllt -->
         </tbody>
     </table>
 
     <!-- Scenarios -->
     <h2 class="section-title">🔮 Makro-Szenarien</h2>
     <div class="scenarios-grid" id="scenarios-container">
-        <!-- Wird dynamisch befüllt -->
+        <!-- Dynamisch befüllt -->
     </div>
 
     <footer>
-        GeoPuls Dashboard • Vollautomatisiert via GitHub Actions & Groq Llama 3.3 • Datenquellen: Unabhängige & Makro-Analysen
+        GeoPuls Dashboard • Vollautomatisiert via GitHub Actions & Groq Llama 3.3 • Multipolare Medien-Synthese
     </footer>
 
     <script>
         async function loadDashboardData() {
             try {
-                // Cache-Busting durch Zeitstempel erzwingen
+                // Cache-Busting erzwingen
                 const response = await fetch('./data.json?v=' + new Date().getTime());
                 if (!response.ok) throw new Error('data.json konnte nicht geladen werden.');
                 
@@ -311,29 +317,45 @@
                 document.getElementById('top-risk').innerText = data.top_risk || '-';
                 document.getElementById('exec-summary').innerText = data.daily_executive_summary || 'Keine Zusammenfassung verfügbar.';
 
-                // Hotspots / Brandherde
+                // Akute Brandherde (Hotspots)
                 const hotspotsContainer = document.getElementById('hotspots-container');
                 if (data.conflict_hotspots && data.conflict_hotspots.length > 0) {
                     hotspotsContainer.innerHTML = data.conflict_hotspots.map(h => {
                         let badgeClass = 'badge-mittel';
                         const lvl = (h.escalation_level || '').toUpperCase();
-                        if (lvl.includes('KRITISCH')) badgeClass = 'badge-kritisch';
-                        else if (lvl.includes('HOCH')) badgeClass = 'badge-hoch';
+                        if (lvl.includes('KRITISCH') || lvl.includes('HOCH')) badgeClass = 'badge-kritisch';
 
                         return `
-                            <div class="hotspot-card">
-                                <div class="hotspot-header">
-                                    <span class="hotspot-region">${h.region}</span>
-                                    <span class="badge ${badgeClass}">${h.escalation_level}</span>
+                            <div class="card">
+                                <div class="card-header">
+                                    <span class="card-title">${h.region}</span>
+                                    <span class="badge ${badgeClass}">${h.escalation_level || 'AKTIV'}</span>
                                 </div>
-                                <div class="hotspot-detail"><strong>Akteure:</strong> ${h.actors}</div>
-                                <div class="hotspot-detail"><strong>Zündel-Faktor / Auslöser:</strong> ${h.catalyst}</div>
-                                <div class="hotspot-detail" style="margin-top: 6px; color: #cbd5e1;"><strong>Märkte & Folgen:</strong> ${h.impact}</div>
+                                <div class="card-detail"><strong>Akteure:</strong> ${h.actors}</div>
+                                <div class="card-detail"><strong>Auslöser:</strong> ${h.catalyst}</div>
+                                <div class="card-detail" style="margin-top: 6px; color: #cbd5e1;"><strong>Märkte & Folgen:</strong> ${h.impact}</div>
                             </div>
                         `;
                     }).join('');
                 } else {
-                    hotspotsContainer.innerHTML = '<p style="color: var(--text-secondary);">Keine aktuellen Hotspots gemeldet.</p>';
+                    hotspotsContainer.innerHTML = '<p style="color: var(--text-secondary);">Keine aktuellen Hotspots geladen.</p>';
+                }
+
+                // Systemische Risiken & Zukunfts-Brandherde
+                const systemicContainer = document.getElementById('systemic-container');
+                if (data.systemic_risks && data.systemic_risks.length > 0) {
+                    systemicContainer.innerHTML = data.systemic_risks.map(s => `
+                        <div class="card" style="border-left: 4px solid var(--accent-purple);">
+                            <div class="card-header">
+                                <span class="card-title">${s.topic}</span>
+                                <span class="badge badge-systemic">${s.category || 'Systemisch'}</span>
+                            </div>
+                            <div class="card-detail"><strong>Status:</strong> ${s.status}</div>
+                            <div class="card-detail" style="margin-top: 6px; color: #cbd5e1;"><strong>Auswirkungen:</strong> ${s.impact}</div>
+                        </div>
+                    `).join('');
+                } else {
+                    systemicContainer.innerHTML = '<p style="color: var(--text-secondary);">Keine systemischen Risiken erfasst.</p>';
                 }
 
                 // Assets Table
@@ -374,11 +396,11 @@
 
             } catch (error) {
                 console.error("Fehler beim Laden des Dashboards:", error);
-                document.getElementById('exec-summary').innerText = "Fehler beim Laden der Live-Daten. Bitte Seite aktualisieren.";
+                document.getElementById('exec-summary').innerText = "Fehler beim Laden der Live-Daten. Bitte Seite neu laden.";
             }
         }
 
-        // Beim Laden ausführen
+        // Beim Laden der Seite ausführen
         loadDashboardData();
     </script>
 </body>
