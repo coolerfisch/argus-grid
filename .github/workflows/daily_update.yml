@@ -4,19 +4,23 @@ on:
   schedule:
     # Führt das Skript täglich um 04:00 UTC (06:00 Uhr deutsche Zeit) aus
     - cron: '0 4 * * *'
-  workflow_dispatch: # Erlaubt es, den Job im Browser auch manuell per Button zu starten
+  workflow_dispatch: # Erlaubt manuelle Ausführung im Browser
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
     steps:
       - name: Code auschecken
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Auf v4 aktualisiert (behebt Node.js Warnung)
 
       - name: Python einrichten
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5  # Auf v5 aktualisiert (behebt Node.js Warnung)
         with:
           python-version: '3.10'
+
+      - name: Benötigte Pakete installieren
+        run: |
+          pip install requests
 
       - name: Freies Skript ausführen
         run: |
