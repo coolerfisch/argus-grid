@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Argus Grid — OSINT Lagezentrum</title>
+    <title>Argus Grid — Multi-Domain OSINT Lagezentrum</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +20,8 @@
                         accentblue: '#3b82f6',
                         accentred: '#ef4444',
                         accentgreen: '#10b981',
-                        accentamber: '#f59e0b'
+                        accentamber: '#f59e0b',
+                        accentpurple: '#a855f7'
                     }
                 }
             }
@@ -81,9 +82,9 @@
                 </div>
                 <div>
                     <h1 class="text-xl font-bold tracking-wider text-white flex items-center gap-2">
-                        Argus Grid <span class="text-xs font-normal px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 border border-blue-700/50">OSINT Engine</span>
+                        Argus Grid <span class="text-xs font-normal px-2 py-0.5 rounded bg-purple-900/60 text-purple-300 border border-purple-700/50">Memory-Engine</span>
                     </h1>
-                    <p class="text-xs text-gray-400">Automatisierte Intelligence & Makro-Synthese</p>
+                    <p class="text-xs text-gray-400">Multi-Domain Intelligence & Pattern Recognition</p>
                 </div>
             </div>
 
@@ -95,7 +96,7 @@
                 </div>
                 <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300">
                     <i class="fa-solid fa-network-wired"></i>
-                    <span><strong>68+</strong> gewichtete Feeds</span>
+                    <span><strong>100+</strong> gewichtete Feeds</span>
                 </div>
                 <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-800 border border-gray-700 text-gray-300">
                     <i class="fa-regular fa-clock"></i>
@@ -119,7 +120,7 @@
                 </span>
             </div>
             <p id="executive-summary" class="text-gray-200 text-sm leading-relaxed">
-                Synthesisiere Live-Daten aus Militär-OSINT, Zentralbanken und Rohstoffmärkten...
+                Synthesisiere Live-Daten aus Militär-OSINT, Zentralbanken, Satelliten & Rohstoffmärkten...
             </p>
         </section>
 
@@ -191,6 +192,16 @@
                 </div>
             </div>
         </div>
+
+        <!-- HISTORISCHE MUSTERERKENNUNG (MEMORY ENGINE) -->
+        <section class="glass-card rounded-xl p-5 border-l-4 border-l-purple-500 shadow-lg">
+            <h2 class="text-base font-bold text-white flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-brain text-purple-400"></i> Pattern Recognition Engine — Historisches Langzeit-Gedächtnis
+            </h2>
+            <div id="pattern-container" class="space-y-3">
+                <!-- Dynamisch befüllt -->
+            </div>
+        </section>
 
         <!-- WORLD HOTSPOT MAP -->
         <section class="glass-card rounded-xl p-4">
@@ -371,6 +382,34 @@
 
                 document.getElementById('top-overweight-val').innerText = data.top_overweight || "Gold & Energie";
                 document.getElementById('top-risk-val').innerText = data.top_risk || "Lieferketten-Unterbrechung";
+
+                // PATTERN RECOGNITION (MEMORY ENGINE)
+                const patternContainer = document.getElementById('pattern-container');
+                patternContainer.innerHTML = '';
+                if (data.pattern_recognition && data.pattern_recognition.length > 0) {
+                    data.pattern_recognition.forEach(pat => {
+                        const pastEvents = (pat.matched_past_events || []).map(e => `<li>• ${e}</li>`).join('');
+                        patternContainer.innerHTML += `
+                            <div class="p-4 rounded-lg bg-gray-800/60 border border-purple-500/30 text-xs space-y-2">
+                                <div class="flex justify-between items-start">
+                                    <span class="font-bold text-purple-300 text-sm">${pat.trigger_event}</span>
+                                    <span class="px-2 py-0.5 rounded bg-purple-900/50 text-purple-200 border border-purple-700/50 font-mono text-[10px]">MUSTER ERKANNT</span>
+                                </div>
+                                <div class="text-gray-300 font-semibold">${pat.historical_pattern_detected}</div>
+                                <div class="text-gray-400 text-[11px] bg-gray-900/50 p-2 rounded">
+                                    <strong class="text-gray-300">Ähnliche historische Ereignisse:</strong>
+                                    <ul class="mt-1 space-y-0.5 text-gray-400">${pastEvents}</ul>
+                                </div>
+                                <div class="flex flex-wrap justify-between items-center text-[11px] pt-1 gap-2">
+                                    <span class="text-emerald-400 font-medium"><strong>Historische Folgen:</strong> ${pat.historical_consequences}</span>
+                                    <span class="text-accentcyan font-medium"><strong>Implikation:</strong> ${pat.actionable_insight}</span>
+                                </div>
+                            </div>
+                        `;
+                    });
+                } else {
+                    patternContainer.innerHTML = '<div class="text-xs text-gray-400 p-2">Keine kritischen historischen Musterabweichungen in den letzten 48 Stunden.</div>';
+                }
 
                 // Map Hotspots
                 if (data.conflict_hotspots) {
