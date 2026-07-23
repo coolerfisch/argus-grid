@@ -3,7 +3,7 @@ import json
 import re
 from datetime import datetime
 import anthropic
-from groq import Groq
+from groq import Groq, RateLimitError
 import feedparser
 import requests
 import yfinance as yf
@@ -51,7 +51,7 @@ def get_live_market_data():
 
 live_market_context = get_live_market_data()
 
-# B. GEWICHTETE OSINT-QUELLENMATRIX (INKL. REDDIT, ZENTRALBANKEN & LOGISTIK)
+# B. GEWICHTETE OSINT-QUELLENMATRIX
 SOURCES = [
     # 🏛️ 1. ZENTRALBANKEN & MAKRO-INSTITUTIONEN (Gewicht: 1.0)
     {"name": "Federal Reserve Press", "url": "https://www.federalreserve.gov/feeds/press_all.xml", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
@@ -67,7 +67,7 @@ SOURCES = [
     {"name": "AFP World", "url": "https://news.google.com/rss/search?q=when:24h+source:Agence+France-Presse&hl=en-US&gl=US&ceid=US:en", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Kyodo News (Japan)", "url": "https://english.kyodonews.net/rss/news.xml", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
 
-    # 🛡️ 3. OSINT, SATELLITEN & LOGISTIK (SCHIFFFAHRT/FLUGVERKEHR) (Gewicht: 0.85)
+    # 🛡️ 3. OSINT, SATELLITEN & LOGISTIK (Gewicht: 0.85)
     {"name": "ISW (Institute f. Study of War)", "url": "https://www.understandingwar.org/rss.xml", "cat": "OSINT / Militär", "weight": 0.85, "bias": "WESTERN"},
     {"name": "US Naval Institute News", "url": "https://news.usni.org/feed", "cat": "Marine / AIS OSINT", "weight": 0.85, "bias": "WESTERN"},
     {"name": "Naval News", "url": "https://www.navalnews.com/feed/", "cat": "Schifffahrt & Marine", "weight": 0.85, "bias": "WESTERN"},
@@ -98,14 +98,12 @@ SOURCES = [
     {"name": "Moon of Alabama", "url": "https://www.moonofalabama.org/atom.xml", "cat": "Blogger", "weight": 0.40, "bias": "ALTERNATIVE"}
 ]
 
-# Spezieller Browser-Agent für Reddit & geschützte RSS-Server
 browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 GeoPulsOSINTBot/1.0"
 feed_context = ""
 
 print("Hole und strukturiere News aus der gewichteten Quellenmatrix...")
 for src in SOURCES:
     try:
-        # Header setzen für Reddit & Co.
         feed = feedparser.parse(src["url"], agent=browser_agent)
         if feed.entries:
             feed_context += f"\n--- QUELLE: {src['name']} | Kat: {src['cat']} | Prio-Gewicht: {src['weight']} | Bias: {src['bias']} ---\n"
@@ -113,15 +111,13 @@ for src in SOURCES:
                 title = entry.get('title', '')
                 raw_summary = entry.get('summary', '') or entry.get('description', '')
                 summary = clean_html(raw_summary)
-                feed_context += f"- [{src['cat']}] {title}: {summary[:130]}...\n"
+                feed_context += f"- [{src['cat']}] {title}: {summary[:120]}...\n"
     except Exception as e:
         print(f"Hinweis bei Feed {src['name']}: {e}")
 
-# Kappe den Gesamtkontext zur Token-Optimierung
-if len(feed_context) > 14000:
-    feed_context = feed_context[:14000] + "\n... [Quellenkontext gekürzt]"
+if len(feed_context) > 13000:
+    feed_context = feed_context[:13000] + "\n... [Quellenkontext gekürzt]"
 
-# JSON-SCHEMA VORLAGE
 json_template_desc = """
 {
   "daily_executive_summary": "Detaillierte Synthese der geopolitischen Lage...",
@@ -176,59 +172,75 @@ json_template_desc = """
 raw_text = None
 generator_used = "Claude 3.5 Sonnet"
 
-# 1. SCHRITT: CLAUDE GENERIERT DEN ENTWURF
+# 1. SCHRITT: CLAUDE GENERIERT DEN ENTWURF (MIT DYNAMISCHEN MODEL-FALLBACKS)
 anth_key = os.environ.get("ANTHROPIC_API_KEY")
 if anth_key:
-    try:
-        print("Schritt 1: Claude 3.5 Sonnet verarbeitet gewichtete Quellenmatrix...")
-        client_anthropic = anthropic.Anthropic(api_key=anth_key)
-        
-        system_instruction = (
-            "Du bist ein hochpräzises OSINT-Geopolitikmodell. "
-            "STRIKTE GEWICHTUNGSRULE: Stütze deine Lagebeurteilung primär auf Quellen mit hohem Gewicht (0.85 bis 1.0, z.B. Zentralbanken, Agenturen, USNI Marine-OSINT, ISW). "
-            "Nutze Community- & Alternativ-Quellen (0.40 bis 0.60) für Stimmungsbilder und Gegen-Narrative in der 'alternative_view'. "
-            "Antworte AUSSCHLIESSLICH im rein validen JSON-Format basierend auf diesem Schema:\n" + json_template_desc
-        )
+    client_anthropic = anthropic.Anthropic(api_key=anth_key)
+    system_instruction = (
+        "Du bist ein hochpräzises OSINT-Geopolitikmodell. "
+        "STRIKTE GEWICHTUNGSRULE: Stütze deine Lagebeurteilung primär auf Quellen mit hohem Gewicht (0.85 bis 1.0, z.B. Zentralbanken, Agenturen, USNI Marine-OSINT, ISW). "
+        "Nutze Community- & Alternativ-Quellen (0.40 bis 0.60) für Stimmungsbilder und Gegen-Narrative in der 'alternative_view'. "
+        "Antworte AUSSCHLIESSLICH im rein validen JSON-Format basierend auf diesem Schema:\n" + json_template_desc
+    )
 
-        response = client_anthropic.messages.create(
-            model="claude-3-5-sonnet-20241022",
-            max_tokens=4000,
-            temperature=0.2,
-            system=system_instruction,
-            messages=[{"role": "user", "content": f"Live-Rohstoffe & Marktdaten:\n{live_market_context}\n\nGewichteter OSINT-Kontext:\n{feed_context}"}]
-        )
-        raw_text = response.content[0].text.strip()
-    except Exception as e:
-        print(f"Claude Fehler: {e}. Wechsle zu Llama...")
+    # Reihum testen wir die korrekten Anthropic-Modellnamen
+    claude_models = ["claude-3-5-sonnet-latest", "claude-3-5-haiku-latest"]
+    for model_name in claude_models:
+        try:
+            print(f"Schritt 1: Versuche Generierung mit Anthropic {model_name}...")
+            response = client_anthropic.messages.create(
+                model=model_name,
+                max_tokens=4000,
+                temperature=0.2,
+                system=system_instruction,
+                messages=[{"role": "user", "content": f"Live-Rohstoffe & Marktdaten:\n{live_market_context}\n\nGewichteter OSINT-Kontext:\n{feed_context}"}]
+            )
+            raw_text = response.content[0].text.strip()
+            generator_used = f"Anthropic ({model_name})"
+            break
+        except Exception as e:
+            print(f"Hinweis: {model_name} nicht erreichbar: {e}")
 
-# Fallback auf Llama
+# FALLBACK AUF GROQ, FALLS ANTHROPIC FEHLGESCHLAGEN IST
 if not raw_text:
     groq_key = os.environ.get("GROQ_API_KEY")
     if groq_key:
-        print("Claude nicht erreichbar. Llama 3.3 übernimmt als Generator...")
+        print("Claude nicht erreichbar. Wechsle zu Groq Llama...")
         client_groq = Groq(api_key=groq_key)
-        chat_completion = client_groq.chat.completions.create(
-            messages=[
-                {"role": "system", "content": "Du bist ein präzises OSINT-Modell. Beachte die Quellen-Gewichtung und antworte rein in JSON."},
-                {"role": "user", "content": f"Live-Finanzdaten:\n{live_market_context}\n\nFeeds:\n{feed_context}\n\nSchema:\n{json_template_desc}"}
-            ],
-            model="llama-3.3-70b-versatile",
-            response_format={"type": "json_object"}
-        )
-        raw_text = chat_completion.choices[0].message.content
-        generator_used = "Llama 3.3 (Fallback-Generator)"
+        
+        # Erst 70B testen, bei RateLimit auf 8B Instant ausweichen
+        for groq_model in ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]:
+            try:
+                chat_completion = client_groq.chat.completions.create(
+                    messages=[
+                        {"role": "system", "content": "Du bist ein präzises OSINT-Modell. Beachte die Quellen-Gewichtung und antworte rein in JSON."},
+                        {"role": "user", "content": f"Live-Finanzdaten:\n{live_market_context}\n\nFeeds:\n{feed_context}\n\nSchema:\n{json_template_desc}"}
+                    ],
+                    model=groq_model,
+                    response_format={"type": "json_object"}
+                )
+                raw_text = chat_completion.choices[0].message.content
+                generator_used = f"Groq ({groq_model} Fallback)"
+                break
+            except RateLimitError:
+                print(f"Rate Limit für Groq Modell {groq_model} erreicht. Versuche nächstes Modell...")
+            except Exception as e:
+                print(f"Groq Fehler mit {groq_model}: {e}")
 
-if raw_text and raw_text.startswith("```"):
+if not raw_text:
+    raise RuntimeError("Fehler: Weder Anthropic noch Groq lieferten eine Antwort. Bitte API-Keys prüfen.")
+
+if raw_text.startswith("```"):
     raw_text = re.sub(r"^```[a-zA-Z]*\n?", "", raw_text)
     raw_text = re.sub(r"\n?```$", "", raw_text)
 
 data = json.loads(raw_text)
 
-# 2. SCHRITT: LLAMA AUDIT & CROSS-VERIFICATION CHECK
+# 2. SCHRITT: GROQ / LLAMA AUDIT & CROSS-VERIFICATION CHECK
 groq_key = os.environ.get("GROQ_API_KEY")
 if groq_key:
     try:
-        print("Schritt 2: Llama 3.3 auditierte das Analyse-Ergebnis...")
+        print("Schritt 2: Groq Llama auditierte das Analyse-Ergebnis...")
         client_groq = Groq(api_key=groq_key)
         audit_prompt = f"""
 Du bist der leitende Chefredakteur und OSINT-Auditor. 
@@ -239,14 +251,29 @@ Prüfe den folgenden JSON-Entwurf:
 Entwurf:
 {json.dumps(data, ensure_ascii=False)}
 """
-        audit_completion = client_groq.chat.completions.create(
-            messages=[
-                {"role": "system", "content": "Du bist ein strenger OSINT-Auditor. Korrigiere das JSON falls nötig und gib es im exakten Format zurück."},
-                {"role": "user", "content": audit_prompt}
-            ],
-            model="llama-3.3-70b-versatile",
-            response_format={"type": "json_object"}
-        )
+        # Auch beim Audit ausfallsicher für Rate-Limits
+        audit_model = "llama-3.3-70b-versatile"
+        try:
+            audit_completion = client_groq.chat.completions.create(
+                messages=[
+                    {"role": "system", "content": "Du bist ein strenger OSINT-Auditor. Korrigiere das JSON falls nötig und gib es im exakten Format zurück."},
+                    {"role": "user", "content": audit_prompt}
+                ],
+                model=audit_model,
+                response_format={"type": "json_object"}
+            )
+        except RateLimitError:
+            print("Groq 70B Rate Limit beim Audit. Nutze 8B-Instant für Audit...")
+            audit_model = "llama-3.1-8b-instant"
+            audit_completion = client_groq.chat.completions.create(
+                messages=[
+                    {"role": "system", "content": "Du bist ein strenger OSINT-Auditor. Korrigiere das JSON falls nötig und gib es im exakten Format zurück."},
+                    {"role": "user", "content": audit_prompt}
+                ],
+                model=audit_model,
+                response_format={"type": "json_object"}
+            )
+
         audited_text = audit_completion.choices[0].message.content.strip()
         if audited_text.startswith("```"):
             audited_text = re.sub(r"^```[a-zA-Z]*\n?", "", audited_text)
@@ -326,4 +353,4 @@ if not history_data or history_data[-1].get("date") != today_str:
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls Dashboard erfolgreich mit erweiterter OSINT-, Zentralbank- & Rohstoffmatrix aktualisiert!")
+print(f"GeoPuls Dashboard erfolgreich aktualisiert! (Generator: {generator_used})")
