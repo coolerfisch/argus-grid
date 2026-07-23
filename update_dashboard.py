@@ -2,7 +2,7 @@ import os
 import json
 import re
 from datetime import datetime
-from groq import Groq
+from groq import Groq, RateLimitError
 import feedparser
 import requests
 import yfinance as yf
@@ -122,9 +122,14 @@ for source_name, url in rss_urls.items():
             title = entry.get('title', '')
             raw_summary = entry.get('summary', '') or entry.get('description', '')
             summary = clean_html(raw_summary)
-            feed_context += f"- Titel: {title}\n  Inhalt: {summary[:200]}...\n"
+            # Auf 120 Zeichen kappen pro Beitrag
+            feed_context += f"- {title}: {summary[:120]}...\n"
     except Exception as e:
         print(f"Fehler bei {source_name}: {e}")
+
+# Kappe den Gesamtkontext der Feeds auf max. 10.000 Zeichen (Tokens sparen!)
+if len(feed_context) > 10000:
+    feed_context = feed_context[:10000] + "\n... [Feeds gekürzt um API-Limits einzuhalten]"
 
 # C. GROQ CLIENT INITIALISIEREN
 api_key = os.environ.get("GROQ_API_KEY")
@@ -133,7 +138,7 @@ if not api_key:
 
 client = Groq(api_key=api_key)
 
-# D. DYNAMISCHER PROMPT MIT ABSTRAKTEN PLATZHALTERN
+# D. DYNAMISCHER PROMPT
 prompt = f"""
 Du bist der Chef-Strategist des GeoPuls Dashboards.
 
@@ -144,37 +149,35 @@ TAGESAKTUELLE MEDIEN- & REGIERUNGS-FEEDS:
 {feed_context}
 
 DEIN AUFTRAG:
-Werte die obigen FEEDS und FINANZDATEN streng tagesaktuell aus. Generiere KEINE statischen Standardantworten, sondern leite alle Themen, Hotspots, Aktien-Picks und Risiken DIREKT aus den heutigen Meldungen ab.
-
-Antworte AUSSCHLIESSLICH in folgendem JSON-Format (nutze die Daten aus den Feeds):
+Werte die obigen FEEDS und FINANZDATEN tagesaktuell aus. Antworte AUSSCHLIESSLICH in folgendem JSON-Format:
 
 {{
-  "daily_executive_summary": "Schreibe hier eine 3-4 Sätze lange Synthese der absolut wichtigsten geopolitischen Ereignisse aus den HEUTIGEN Feeds.",
+  "daily_executive_summary": "Synthese der geopolitischen und makroökonomischen Lage heute...",
   "global_risk_score": 75,
-  "market_regime": "Name des aktuellen Marktregimes basierend auf den heutigen Marktdaten",
-  "top_overweight": "Asset-Klassen die heute am stärksten profitieren",
-  "top_risk": "Größtes makroökonomisches/geopolitisches Risiko heute",
+  "market_regime": "Aktuelles Marktregime",
+  "top_overweight": "Gewinner-Assetklassen",
+  "top_risk": "Größtes Risiko heute",
   "defcon_status": {{
     "level": 3,
-    "label": "DEFCON X - Kurze Bezeichnung",
+    "label": "DEFCON Statusbezeichnung",
     "nuclear_risk_percent": 15,
-    "primary_driver": "Konkreter Auslöser für das aktuelle Level aus den heutigen News"
+    "primary_driver": "Haupttreiber laut News"
   }},
   "narrative_divergence": [
     {{
-      "topic": "Name von Brennpunkt / Schauplatz 1 aus den heutigen Feeds",
-      "mainstream_view": "Wie berichten westliche Medien (z.B. Tagesschau, BBC, FAZ) darüber?",
-      "brics_view": "Wie berichten BRICS/staatliche Stellen (z.B. TASS, CGTN, MID) darüber?",
-      "alternative_view": "Wie analysieren unabhängige Medien (z.B. Multipolar, Grayzone, ZeroHedge) das?"
-    }},
-    {{
-      "topic": "Name von Brennpunkt / Schauplatz 2 aus den heutigen Feeds",
+      "topic": "Brennpunkt / Schauplatz 1",
       "mainstream_view": "Einschätzung westlicher Medien",
       "brics_view": "Einschätzung der BRICS-Staaten",
       "alternative_view": "Einschätzung unabhängiger Analysten"
     }},
     {{
-      "topic": "Name von Brennpunkt / Schauplatz 3 aus den heutigen Feeds",
+      "topic": "Brennpunkt / Schauplatz 2",
+      "mainstream_view": "Einschätzung westlicher Medien",
+      "brics_view": "Einschätzung der BRICS-Staaten",
+      "alternative_view": "Einschätzung unabhängiger Analysten"
+    }},
+    {{
+      "topic": "Brennpunkt / Schauplatz 3",
       "mainstream_view": "Einschätzung westlicher Medien",
       "brics_view": "Einschätzung der BRICS-Staaten",
       "alternative_view": "Einschätzung unabhängiger Analysten"
@@ -182,10 +185,10 @@ Antworte AUSSCHLIESSLICH in folgendem JSON-Format (nutze die Daten aus den Feeds
   ],
   "domestic_politics": [
     {{
-      "country_region": "Land / Region 1 (z.B. USA, DE, China)",
-      "topic": "Aktuelles innenpolitisches Hauptthema aus den Feeds",
+      "country_region": "Land / Region 1",
+      "topic": "Innenpolitisches Thema",
       "status": "Aktueller Stand",
-      "impact": "Geopolitische/Außenpolitische Folge"
+      "impact": "Geopolitische Folge"
     }},
     {{
       "country_region": "Land / Region 2",
@@ -202,118 +205,143 @@ Antworte AUSSCHLIESSLICH in folgendem JSON-Format (nutze die Daten aus den Feeds
   ],
   "stock_picks": {{
     "top_5_buys": [
-      {{ "ticker": "TICKER1", "name": "Aktienname 1", "sector": "Sektor", "reason": "Konkrete Begründung basierend auf heutigen News" }},
-      {{ "ticker": "TICKER2", "name": "Aktienname 2", "sector": "Sektor", "reason": "Konkrete Begründung basierend auf heutigen News" }},
-      {{ "ticker": "TICKER3", "name": "Aktienname 3", "sector": "Sektor", "reason": "Konkrete Begründung basierend auf heutigen News" }},
-      {{ "ticker": "TICKER4", "name": "Aktienname 4", "sector": "Sektor", "reason": "Konkrete Begründung basierend auf heutigen News" }},
-      {{ "ticker": "TICKER5", "name": "Aktienname 5", "sector": "Sektor", "reason": "Konkrete Begründung basierend auf heutigen News" }}
+      {{ "ticker": "TICKER1", "name": "Aktienname 1", "sector": "Sektor", "reason": "Begründung laut News" }},
+      {{ "ticker": "TICKER2", "name": "Aktienname 2", "sector": "Sektor", "reason": "Begründung laut News" }},
+      {{ "ticker": "TICKER3", "name": "Aktienname 3", "sector": "Sektor", "reason": "Begründung laut News" }},
+      {{ "ticker": "TICKER4", "name": "Aktienname 4", "sector": "Sektor", "reason": "Begründung laut News" }},
+      {{ "ticker": "TICKER5", "name": "Aktienname 5", "sector": "Sektor", "reason": "Begründung laut News" }}
     ],
     "flop_5_sells": [
-      {{ "ticker": "TICKER6", "name": "Verlierer-Aktie 1", "sector": "Sektor", "reason": "Konkreter Gegenwind laut heutigen News" }},
-      {{ "ticker": "TICKER7", "name": "Verlierer-Aktie 2", "sector": "Sektor", "reason": "Konkreter Gegenwind laut heutigen News" }},
-      {{ "ticker": "TICKER8", "name": "Verlierer-Aktie 3", "sector": "Sektor", "reason": "Konkreter Gegenwind laut heutigen News" }},
-      {{ "ticker": "TICKER9", "name": "Verlierer-Aktie 4", "sector": "Sektor", "reason": "Konkreter Gegenwind laut heutigen News" }},
-      {{ "ticker": "TICKER10", "name": "Verlierer-Aktie 5", "sector": "Sektor", "reason": "Konkreter Gegenwind laut heutigen News" }}
+      {{ "ticker": "TICKER6", "name": "Verlierer-Aktie 1", "sector": "Sektor", "reason": "Gegenwind laut News" }},
+      {{ "ticker": "TICKER7", "name": "Verlierer-Aktie 2", "sector": "Sektor", "reason": "Gegenwind laut News" }},
+      {{ "ticker": "TICKER8", "name": "Verlierer-Aktie 3", "sector": "Sektor", "reason": "Gegenwind laut News" }},
+      {{ "ticker": "TICKER9", "name": "Verlierer-Aktie 4", "sector": "Sektor", "reason": "Gegenwind laut News" }},
+      {{ "ticker": "TICKER10", "name": "Verlierer-Aktie 5", "sector": "Sektor", "reason": "Gegenwind laut News" }}
     ]
   }},
   "conflict_hotspots": [
     {{
-      "region": "Aktiver Krisenherd 1",
+      "region": "Krisenherd 1",
       "actors": "Akteure",
       "escalation_level": "KRITISCH",
-      "catalyst": "Aktueller Auslöser aus den News",
-      "impact": "Betroffene Märkte",
+      "catalyst": "Auslöser laut News",
+      "impact": "Märkte",
       "lat": 0.0,
       "lng": 0.0
     }},
     {{
-      "region": "Aktiver Krisenherd 2",
+      "region": "Krisenherd 2",
       "actors": "Akteure",
       "escalation_level": "HOCH",
-      "catalyst": "Aktueller Auslöser aus den News",
-      "impact": "Betroffene Märkte",
+      "catalyst": "Auslöser laut News",
+      "impact": "Märkte",
       "lat": 0.0,
       "lng": 0.0
     }},
     {{
-      "region": "Aktiver Krisenherd 3",
+      "region": "Krisenherd 3",
       "actors": "Akteure",
       "escalation_level": "HOCH",
-      "catalyst": "Aktueller Auslöser aus den News",
-      "impact": "Betroffene Märkte",
+      "catalyst": "Auslöser laut News",
+      "impact": "Märkte",
       "lat": 0.0,
       "lng": 0.0
     }},
     {{
-      "region": "Aktiver Krisenherd 4",
+      "region": "Krisenherd 4",
       "actors": "Akteure",
       "escalation_level": "MITTEL-HOCH",
-      "catalyst": "Aktueller Auslöser aus den News",
-      "impact": "Betroffene Märkte",
+      "catalyst": "Auslöser laut News",
+      "impact": "Märkte",
       "lat": 0.0,
       "lng": 0.0
     }}
   ],
   "systemic_risks": [
     {{
-      "topic": "Systemisches/Latentes Risiko 1",
+      "topic": "Systemisches Risiko 1",
       "category": "Kategorie",
       "risk_level": "HOCH",
-      "status": "Status in den News",
-      "impact": "Langfristige Folge"
+      "status": "Status",
+      "impact": "Folge"
     }},
     {{
-      "topic": "Systemisches/Latentes Risiko 2",
+      "topic": "Systemisches Risiko 2",
       "category": "Kategorie",
       "risk_level": "HOCH",
-      "status": "Status in den News",
-      "impact": "Langfristige Folge"
+      "status": "Status",
+      "impact": "Folge"
     }},
     {{
-      "topic": "Systemisches/Latentes Risiko 3",
+      "topic": "Systemisches Risiko 3",
       "category": "Kategorie",
       "risk_level": "MITTEL",
-      "status": "Status in den News",
-      "impact": "Langfristige Folge"
+      "status": "Status",
+      "impact": "Folge"
     }}
   ],
   "assets": [
-    {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber laut News" }},
-    {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber laut News" }},
-    {{ "name": "Uran & Energie", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber laut News" }},
-    {{ "name": "S&P 500 / Nasdaq", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Trend", "driver": "Treiber laut News" }},
-    {{ "name": "Bitcoin & Krypto", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Trend", "driver": "Treiber laut News" }},
-    {{ "name": "High-Yield Bonds", "signal": "RED", "signal_text": "🔴 Unattraktiv", "trend": "Trend", "driver": "Treiber laut News" }},
-    {{ "name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "Trend", "driver": "Treiber laut News" }}
+    {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber" }},
+    {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber" }},
+    {{ "name": "Uran & Energie", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber" }},
+    {{ "name": "S&P 500 / Nasdaq", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Trend", "driver": "Treiber" }},
+    {{ "name": "Bitcoin & Krypto", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Trend", "driver": "Treiber" }},
+    {{ "name": "High-Yield Bonds", "signal": "RED", "signal_text": "🔴 Unattraktiv", "trend": "Trend", "driver": "Treiber" }},
+    {{ "name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "Trend", "driver": "Treiber" }}
   ],
   "scenarios": [
-    {{ "title": "Szenario 1 basierend auf aktuellen Trends", "prob": 40 }},
-    {{ "title": "Szenario 2 basierend auf aktuellen Trends", "prob": 30 }},
-    {{ "title": "Szenario 3 basierend auf aktuellen Trends", "prob": 15 }},
-    {{ "title": "Szenario 4 basierend auf aktuellen Trends", "prob": 15 }}
+    {{ "title": "Szenario 1", "prob": 40 }},
+    {{ "title": "Szenario 2", "prob": 30 }},
+    {{ "title": "Szenario 3", "prob": 15 }},
+    {{ "title": "Szenario 4", "prob": 15 }}
   ]
 }}
 """
 
 print("Rufe Groq API auf...")
-chat_completion = client.chat.completions.create(
-    messages=[
-        {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Du analysierst die bereitgestellten Feeds dynamisch und füllst das JSON-Schema ohne Platzhalter mit echten Tagesdaten."},
-        {"role": "user", "content": prompt}
-    ],
-    model="llama-3.3-70b-versatile",
-    response_format={"type": "json_object"}
-)
+
+# E. GROQ API AUFRUF MIT FALLBACK BEI RATE-LIMIT
+selected_model = "llama-3.3-70b-versatile"
+
+try:
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Analysiere die Feeds dynamisch und antworte rein in JSON."},
+            {"role": "user", "content": prompt}
+        ],
+        model=selected_model,
+        response_format={"type": "json_object"}
+    )
+except RateLimitError:
+    print(f"Rate Limit für {selected_model} erreicht! Wechsle auf Fallback-Modell llama-3.1-8b-instant...")
+    selected_model = "llama-3.1-8b-instant"
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Analysiere die Feeds dynamisch und antworte rein in JSON."},
+            {"role": "user", "content": prompt}
+        ],
+        model=selected_model,
+        response_format={"type": "json_object"}
+    )
+except Exception as e:
+    print(f"Allgemeiner Groq-Fehler mit {selected_model}: {e}. Versuche Fallback...")
+    selected_model = "llama-3.1-8b-instant"
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Analysiere die Feeds dynamisch und antworte rein in JSON."},
+            {"role": "user", "content": prompt}
+        ],
+        model=selected_model,
+        response_format={"type": "json_object"}
+    )
 
 data = json.loads(chat_completion.choices[0].message.content)
 
 # --- NORMALISIERUNG ALLER FELDER ---
 
-# 1. Executive Summary absichern
 if not data.get("daily_executive_summary"):
     data["daily_executive_summary"] = data.get("executive_summary") or data.get("summary") or "Die geopolitische Lage bleibt durch multidimensionale Krisen im Nahen Osten, in Osteuropa und Ostasien angespannt."
 
-# 2. Narrativ-Matrix absichern
 raw_nd = data.get("narrative_divergence", [])
 if isinstance(raw_nd, dict):
     raw_nd = [raw_nd]
@@ -325,12 +353,11 @@ for item in raw_nd:
             "topic": item.get("topic") or "Geopolitischer Schauplatz",
             "mainstream_view": item.get("mainstream_view") or item.get("mainstream") or "Fokus auf westliche Ordnung und Bündnisse.",
             "brics_view": item.get("brics_view") or item.get("brics") or "Fokus auf multipolare Perspektive und Souveränität.",
-            "alternative_view": item.get("alternative_view") or item.get("alternative") or "Fokus auf verdeckte Kaskadeneffekte und Makro-Risiken."
+            "alternative_view": item.get("alternative_view") or item.get("alternative") or "Fokus auf verdeckte Kaskadeneffekte."
         })
 
 data["narrative_divergence"] = normalized_nd
 
-# 3. Geo-Lookup Fallback für Koordinaten
 GEO_LOOKUP = {
     "nah": (31.5, 34.75), "iran": (32.42, 53.68), "israel": (31.04, 34.85),
     "ukraine": (48.37, 31.16), "taiwan": (23.69, 120.96), "rot": (12.58, 43.33),
@@ -352,11 +379,11 @@ for h in data.get("conflict_hotspots", []):
                 found = True
                 break
         if not found or h["lat"] == 0.0:
-            h["lat"], h["lng"] = 25.0, 45.0 # Naher Osten / Zentraler Bereich
+            h["lat"], h["lng"] = 25.0, 45.0
 
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 
-# 4. Historie tracken
+# Historie tracken
 history_file = "history.json"
 history_data = []
 if os.path.exists(history_file):
@@ -380,4 +407,4 @@ if not history_data or history_data[-1].get("date") != today_str:
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("GeoPuls Dashboard erfolgreich mit dynamischem Prompt aktualisiert!")
+print(f"GeoPuls Dashboard erfolgreich mit Modell '{selected_model}' aktualisiert!")
