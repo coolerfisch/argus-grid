@@ -111,12 +111,45 @@ def get_live_market_data():
 live_market_context = get_live_market_data()
 
 # ============================================================
-# B. VOLLSTÄNDIGER QUELLENPOOL (ALLE 99 RSS-FEEDS)
+# B. ERWEITERTER, BALANCIERTER QUELLENPOOL (140+ FEEDS)
 # ============================================================
 SOURCES = [
+    # 🇺🇸 USA: POLITISCHES SPEKTRUM (DEMOKRATEN, REPUBLIKANER, LIBERTÄR)
+    {"name": "CNN World", "url": "[http://rss.cnn.com/rss/edition.rss](http://rss.cnn.com/rss/edition.rss)", "cat": "US/Politik", "weight": 0.95, "bias": "US-LEFT-LIBERAL"},
+    {"name": "MSNBC / NBC News", "url": "[https://feeds.nbcnews.com/nbcnews/public/news](https://feeds.nbcnews.com/nbcnews/public/news)", "cat": "US/Politik", "weight": 0.90, "bias": "US-LEFT-LIBERAL"},
+    {"name": "New York Times World", "url": "[https://rss.nytimes.com/services/xml/rss/nyt/World.xml](https://rss.nytimes.com/services/xml/rss/nyt/World.xml)", "cat": "US/Presse", "weight": 0.95, "bias": "US-LEFT-LIBERAL"},
+    {"name": "Fox News Latest", "url": "[https://moxie.foxnews.com/google-publisher/latest.xml](https://moxie.foxnews.com/google-publisher/latest.xml)", "cat": "US/Politik", "weight": 0.95, "bias": "US-CONSERVATIVE"},
+    {"name": "National Review", "url": "[https://www.nationalreview.com/feed/](https://www.nationalreview.com/feed/)", "cat": "US/Politik", "weight": 0.85, "bias": "US-CONSERVATIVE"},
+    {"name": "The Washington Times", "url": "[https://www.washingtontimes.com/rss/headlines/news/](https://www.washingtontimes.com/rss/headlines/news/)", "cat": "US/Politik", "weight": 0.85, "bias": "US-CONSERVATIVE"},
+    {"name": "Wall Street Journal News", "url": "[https://news.google.com/rss/search?q=when:24h+site:wsj.com&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+site:wsj.com&hl=en-US&gl=US&ceid=US:en)", "cat": "US/Finanzen", "weight": 0.95, "bias": "US-CONSERVATIVE"},
+    {"name": "Reason Magazine", "url": "[https://reason.com/feed/](https://reason.com/feed/)", "cat": "US/Debatte", "weight": 0.85, "bias": "US-LIBERTARIAN"},
+    {"name": "Bloomberg Markets", "url": "[https://news.google.com/rss/search?q=when:24h+site:bloomberg.com&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+site:bloomberg.com&hl=en-US&gl=US&ceid=US:en)", "cat": "US/Finanzen", "weight": 0.95, "bias": "CENTER-LIBERAL"},
+
+    # 🇩🇪 DEUTSCHLAND / DACH: POLITISCHES SPEKTRUM
+    {"name": "taz die tageszeitung", "url": "[https://taz.de/rss.xml](https://taz.de/rss.xml)", "cat": "DE/Politik", "weight": 0.85, "bias": "DE-LEFT-PROGRESSIVE"},
+    {"name": "Der Spiegel Top", "url": "[https://www.spiegel.de/schlagzeilen/tops/index.rss](https://www.spiegel.de/schlagzeilen/tops/index.rss)", "cat": "DE/Medien", "weight": 0.90, "bias": "DE-LEFT-LIBERAL"},
+    {"name": "Süddeutsche Zeitung (SZ)", "url": "[https://news.google.com/rss/search?q=when:24h+site:sueddeutsche.de&hl=de&gl=DE&ceid=DE:de](https://news.google.com/rss/search?q=when:24h+site:sueddeutsche.de&hl=de&gl=DE&ceid=DE:de)", "cat": "DE/Presse", "weight": 0.90, "bias": "DE-LEFT-LIBERAL"},
+    {"name": "FAZ Politik", "url": "[https://www.faz.net/rss/aktuell/politik/](https://www.faz.net/rss/aktuell/politik/)", "cat": "DE/Presse", "weight": 0.90, "bias": "DE-CONSERVATIVE"},
+    {"name": "Die Welt News", "url": "[https://www.welt.de/feeds/topnews.rss](https://www.welt.de/feeds/topnews.rss)", "cat": "DE/Presse", "weight": 0.85, "bias": "DE-CONSERVATIVE"},
+    {"name": "NZZ International", "url": "[https://www.nzz.ch/international.rss](https://www.nzz.ch/international.rss)", "cat": "CH/Presse", "weight": 0.95, "bias": "DE-CONSERVATIVE-LIBERAL"},
+    {"name": "Die Zeit Online", "url": "[https://newsfeed.zeit.de/index](https://newsfeed.zeit.de/index)", "cat": "DE/Presse", "weight": 0.90, "bias": "DE-CENTER-LIBERAL"},
+    {"name": "Handelsblatt Top", "url": "[https://www.handelsblatt.com/contentexport/feed/top-themen](https://www.handelsblatt.com/contentexport/feed/top-themen)", "cat": "DE/Finanzen", "weight": 0.90, "bias": "DE-LIBERAL-BUSINESS"},
+
+    # 🇬🇧 GROSSBRITANNIEN (UK): POLITISCHES SPEKTRUM
+    {"name": "The Guardian World", "url": "[https://www.theguardian.com/world/rss](https://www.theguardian.com/world/rss)", "cat": "UK/Presse", "weight": 0.90, "bias": "UK-LEFT-LIBERAL"},
+    {"name": "The Telegraph News", "url": "[https://news.google.com/rss/search?q=when:24h+site:telegraph.co.uk&hl=en-GB&gl=GB&ceid=GB:en](https://news.google.com/rss/search?q=when:24h+site:telegraph.co.uk&hl=en-GB&gl=GB&ceid=GB:en)", "cat": "UK/Presse", "weight": 0.90, "bias": "UK-CONSERVATIVE"},
+    {"name": "The Spectator", "url": "[https://www.spectator.co.uk/feed/](https://www.spectator.co.uk/feed/)", "cat": "UK/Debatte", "weight": 0.85, "bias": "UK-CONSERVATIVE"},
+    {"name": "BBC World News", "url": "[http://feeds.bbci.co.uk/news/world/rss.xml](http://feeds.bbci.co.uk/news/world/rss.xml)", "cat": "UK/Medien", "weight": 0.95, "bias": "MAINSTREAM-CENTER"},
+    {"name": "Financial Times", "url": "[https://news.google.com/rss/search?q=when:24h+site:ft.com&hl=en-GB&gl=GB&ceid=GB:en](https://news.google.com/rss/search?q=when:24h+site:ft.com&hl=en-GB&gl=GB&ceid=GB:en)", "cat": "UK/Finanzen", "weight": 0.95, "bias": "CENTER-LIBERAL"},
+
     # 🏛️ ZENTRALBANKEN & MAKRO-INSTITUTIONEN
     {"name": "Federal Reserve Press", "url": "[https://www.federalreserve.gov/feeds/press_all.xml](https://www.federalreserve.gov/feeds/press_all.xml)", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
+    {"name": "Fed Speeches & Minutes", "url": "[https://www.federalreserve.gov/feeds/speeches.xml](https://www.federalreserve.gov/feeds/speeches.xml)", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "EZB (Europäische Zentralbank)", "url": "[https://www.ecb.europa.eu/rss/press.html](https://www.ecb.europa.eu/rss/press.html)", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
+    {"name": "Bank of England (BoE)", "url": "[https://www.bankofengland.co.uk/rss/news](https://www.bankofengland.co.uk/rss/news)", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
+    {"name": "People's Bank of China (PBOC)", "url": "[https://news.google.com/rss/search?q=when:7d+%22People%27s+Bank+of+China%22+OR+PBOC&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22People%27s+Bank+of+China%22+OR+PBOC&hl=en-US&gl=US&ceid=US:en)", "cat": "Zentralbank", "weight": 1.00, "bias": "BRICS"},
+    {"name": "Bank of Japan (BoJ)", "url": "[https://news.google.com/rss/search?q=when:7d+site:boj.or.jp+OR+%22Bank+of+Japan%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:boj.or.jp+OR+%22Bank+of+Japan%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
+    {"name": "Atlanta Fed GDPNow & NY Fed", "url": "[https://news.google.com/rss/search?q=when:7d+%22GDPNow%22+OR+%22New+York+Fed%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22GDPNow%22+OR+%22New+York+Fed%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Makro/Fed", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "BIS (Bank f. Intl. Zahlungsausgleich)", "url": "[https://www.bis.org/doclist/all.rss](https://www.bis.org/doclist/all.rss)", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "IMF News", "url": "[https://www.imf.org/en/News/rss](https://www.imf.org/en/News/rss)", "cat": "Intl. Org", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "Weltbank News", "url": "[https://www.worldbank.org/en/news/rss](https://www.worldbank.org/en/news/rss)", "cat": "Intl. Org", "weight": 0.95, "bias": "OFFIZIELL"},
@@ -137,12 +170,19 @@ SOURCES = [
     {"name": "EIA Petroleum Status Report", "url": "[https://news.google.com/rss/search?q=when:7d+site:eia.gov+%22Weekly+Petroleum+Status+Report%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:eia.gov+%22Weekly+Petroleum+Status+Report%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / EIA", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "IEA Oil Market Reports", "url": "[https://news.google.com/rss/search?q=when:7d+site:iea.org+%22Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:iea.org+%22Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / IEA", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "OPEC Monthly Market Reports", "url": "[https://news.google.com/rss/search?q=when:7d+OPEC+%22Monthly+Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+OPEC+%22Monthly+Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / OPEC", "weight": 1.00, "bias": "OFFIZIELL"},
+    {"name": "Baker Hughes Rig Count", "url": "[https://news.google.com/rss/search?q=when:7d+%22Baker+Hughes%22+%22Rig+Count%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22Baker+Hughes%22+%22Rig+Count%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / Öl", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "GIE European Gas Storage (AGSI+)", "url": "[https://news.google.com/rss/search?q=when:7d+%22Gas+Infrastructure+Europe%22+OR+%22gas+storage%22+EU&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22Gas+Infrastructure+Europe%22+OR+%22gas+storage%22+EU&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / Gas", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "Freightos Shipping Index", "url": "[https://news.google.com/rss/search?q=when:7d+%22Freightos%22+OR+%22container+freight+rate%22+OR+%22Baltic+Dry%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22Freightos%22+OR+%22container+freight+rate%22+OR+%22Baltic+Dry%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Logistik / Container", "weight": 0.90, "bias": "MAINSTREAM"},
+    {"name": "Baltic Dry Direct & Dry Bulk", "url": "[https://news.google.com/rss/search?q=when:7d+%22Baltic+Dry+Index%22+OR+%22capesize%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22Baltic+Dry+Index%22+OR+%22capesize%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Logistik", "weight": 0.90, "bias": "MAINSTREAM"},
     {"name": "FAO Food Price Index", "url": "[https://news.google.com/rss/search?q=when:7d+site:fao.org+%22Food+Price+Index%22+OR+%22Crop+Prospects%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:fao.org+%22Food+Price+Index%22+OR+%22Crop+Prospects%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Agrar / FAO", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "USDA Crop & WASDE Reports", "url": "[https://news.google.com/rss/search?q=when:7d+site:usda.gov+%22WASDE%22+OR+%22Crop+Production%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:usda.gov+%22WASDE%22+OR+%22Crop+Production%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Agrar / USDA", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "MOVE Index & Bond Market Stress Alerts", "url": "[https://news.google.com/rss/search?q=when:7d+%22MOVE+index%22+OR+%22high+yield+spreads%22+OR+%22Credit+Default+Swap%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22MOVE+index%22+OR+%22high+yield+spreads%22+OR+%22Credit+Default+Swap%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Bond Stress", "weight": 0.90, "bias": "MAINSTREAM"},
 
     # 🛡️ MILITÄR, OSINT, SATELLITEN, CYBER & SEESICHERHEIT
+    {"name": "Oryx Blog (Equipment Losses)", "url": "[https://www.oryxspioenkop.com/feeds/posts/default](https://www.oryxspioenkop.com/feeds/posts/default)", "cat": "OSINT / Militär", "weight": 0.90, "bias": "ALTERNATIVE"},
+    {"name": "Covert Cabal & Perun Defense OSINT", "url": "[https://news.google.com/rss/search?q=when:7d+%22Covert+Cabal%22+OR+%22Perun%22+defense&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22Covert+Cabal%22+OR+%22Perun%22+defense&hl=en-US&gl=US&ceid=US:en)", "cat": "OSINT / Analyse", "weight": 0.85, "bias": "ALTERNATIVE"},
+    {"name": "Lloyd's List Shipping Intelligence", "url": "[https://news.google.com/rss/search?q=when:7d+site:lloydslist.maritimeintelligence.informa.com+OR+%22Lloyd%27s+List%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:lloydslist.maritimeintelligence.informa.com+OR+%22Lloyd%27s+List%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Schifffahrt", "weight": 0.90, "bias": "MAINSTREAM"},
+    {"name": "MarineTraffic Blog & Alerts", "url": "[https://www.marinetraffic.com/blog/feed/](https://www.marinetraffic.com/blog/feed/)", "cat": "Marine OSINT", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "NASA FIRMS Fire & Hazards", "url": "[https://earthobservatory.nasa.gov/feeder/natural_hazards.rss](https://earthobservatory.nasa.gov/feeder/natural_hazards.rss)", "cat": "OSINT / Satellit", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "USGS Earthquakes (M5.5+)", "url": "[https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/5.5_day.atom](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/5.5_day.atom)", "cat": "Seismik / Warnsystem", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "GDACS Global Disaster Alerts", "url": "[https://www.gdacs.org/xml/rss.xml](https://www.gdacs.org/xml/rss.xml)", "cat": "Frühwarnung", "weight": 0.95, "bias": "OFFIZIELL"},
@@ -169,6 +209,8 @@ SOURCES = [
     {"name": "AP News World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Reuters World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Agence France-Presse (AFP)", "url": "[https://news.google.com/rss/search?q=when:24h+source:AFP&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:AFP&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
+    {"name": "Xinhua & Global Times (China)", "url": "[https://news.google.com/rss/search?q=when:24h+site:xinhuanet.com+OR+site:globaltimes.cn&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+site:xinhuanet.com+OR+site:globaltimes.cn&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur/BRICS", "weight": 0.90, "bias": "BRICS"},
+    {"name": "IRNA & Anadolu Agency (Nahost/BRICS)", "url": "[https://news.google.com/rss/search?q=when:24h+site:irna.ir+OR+site:aa.com.tr&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+site:irna.ir+OR+site:aa.com.tr&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur/BRICS", "weight": 0.85, "bias": "BRICS"},
     {"name": "Kyodo News (Japan)", "url": "[https://english.kyodonews.net/rss/news.xml](https://english.kyodonews.net/rss/news.xml)", "cat": "Agentur", "weight": 0.90, "bias": "MAINSTREAM"},
     {"name": "Kremlin News", "url": "[http://en.kremlin.ru/rss/news](http://en.kremlin.ru/rss/news)", "cat": "Regierung", "weight": 1.00, "bias": "BRICS"},
     {"name": "Russisches Außenministerium (MID)", "url": "[https://news.google.com/rss/search?q=when:7d+%22Russian+Foreign+Ministry%22+OR+MID&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22Russian+Foreign+Ministry%22+OR+MID&hl=en-US&gl=US&ceid=US:en)", "cat": "Diplomatie", "weight": 1.00, "bias": "BRICS"},
@@ -182,7 +224,11 @@ SOURCES = [
     {"name": "The Cradle", "url": "[https://thecradle.co/feed](https://thecradle.co/feed)", "cat": "Geopolitik", "weight": 0.80, "bias": "ALTERNATIVE"},
     {"name": "Asia Times", "url": "[https://asiatimes.com/feed/](https://asiatimes.com/feed/)", "cat": "Geopolitik", "weight": 0.85, "bias": "MAINSTREAM"},
 
-    # 💡 THINK TANKS & QUALITY PRESS
+    # 💡 THINK TANKS & QUALITÄTSPRESSE
+    {"name": "Quincy Institute (Responsible Statecraft)", "url": "[https://quincyinst.org/feed/](https://quincyinst.org/feed/)", "cat": "Think Tank", "weight": 0.90, "bias": "ALTERNATIVE"},
+    {"name": "Carnegie Endowment", "url": "[https://carnegieendowment.org/rss/solr.xml](https://carnegieendowment.org/rss/solr.xml)", "cat": "Think Tank", "weight": 0.90, "bias": "WESTERN"},
+    {"name": "Chatham House", "url": "[https://www.chathamhouse.org/rss.xml](https://www.chathamhouse.org/rss.xml)", "cat": "Think Tank", "weight": 0.90, "bias": "WESTERN"},
+    {"name": "Bruegel (EU Wirtschaft)", "url": "[https://www.bruegel.org/rss.xml](https://www.bruegel.org/rss.xml)", "cat": "Think Tank/EU", "weight": 0.90, "bias": "WESTERN"},
     {"name": "CSIS Org", "url": "[https://www.csis.org/nerve/rss](https://www.csis.org/nerve/rss)", "cat": "Think Tank", "weight": 0.90, "bias": "WESTERN"},
     {"name": "CFR (Council on Foreign Relations)", "url": "[https://www.cfr.org/rss/publication/feed](https://www.cfr.org/rss/publication/feed)", "cat": "Think Tank", "weight": 0.90, "bias": "WESTERN"},
     {"name": "ECFR Europe", "url": "[https://ecfr.eu/feed/](https://ecfr.eu/feed/)", "cat": "Think Tank", "weight": 0.90, "bias": "WESTERN"},
@@ -191,12 +237,8 @@ SOURCES = [
     {"name": "CNBC Finance", "url": "[https://www.cnbc.com/id/10000664/device/rss/rss.html](https://www.cnbc.com/id/10000664/device/rss/rss.html)", "cat": "Finanzen", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "Foreign Policy", "url": "[https://foreignpolicy.com/feed/](https://foreignpolicy.com/feed/)", "cat": "Magazin", "weight": 0.85, "bias": "WESTERN"},
     {"name": "Nikkei Asia", "url": "[https://asia.nikkei.com/rss/feed/nar](https://asia.nikkei.com/rss/feed/nar)", "cat": "Finanzen/Asien", "weight": 0.90, "bias": "MAINSTREAM"},
-    {"name": "Handelsblatt", "url": "[https://www.handelsblatt.com/contentexport/feed/top-themen](https://www.handelsblatt.com/contentexport/feed/top-themen)", "cat": "Finanzen DE", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "Finanzmarktwelt", "url": "[https://finanzmarktwelt.de/feed/](https://finanzmarktwelt.de/feed/)", "cat": "Finanzen DE", "weight": 0.80, "bias": "ALTERNATIVE"},
-    {"name": "NZZ (Neue Zürcher Zeitung)", "url": "[https://www.nzz.ch/international.rss](https://www.nzz.ch/international.rss)", "cat": "Qualitätspresse", "weight": 0.90, "bias": "WESTERN"},
-    {"name": "FAZ Politik", "url": "[https://www.faz.net/rss/aktuell/politik/](https://www.faz.net/rss/aktuell/politik/)", "cat": "Qualitätspresse", "weight": 0.85, "bias": "WESTERN"},
     {"name": "Tagesschau Ausland", "url": "[https://www.tagesschau.de/ausland/index.xml](https://www.tagesschau.de/ausland/index.xml)", "cat": "Medien DE", "weight": 0.90, "bias": "MAINSTREAM"},
-    {"name": "BBC World News", "url": "[http://feeds.bbci.co.uk/news/world/rss.xml](http://feeds.bbci.co.uk/news/world/rss.xml)", "cat": "Medien UK", "weight": 0.90, "bias": "MAINSTREAM"},
 
     # 💬 OSINT & COMMUNITY REDDIT FEEDS
     {"name": "Reddit r/geopolitics", "url": "[https://www.reddit.com/r/geopolitics/.rss](https://www.reddit.com/r/geopolitics/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
@@ -209,6 +251,12 @@ SOURCES = [
     {"name": "Reddit r/worldnews", "url": "[https://www.reddit.com/r/worldnews/.rss](https://www.reddit.com/r/worldnews/.rss)", "cat": "Community", "weight": 0.50, "bias": "MAINSTREAM"},
 
     # 🔍 ALTERNATIVE, INVESTIGATIVE & KONTRÄRE MEDIEN
+    {"name": "Scheerpost", "url": "[https://scheerpost.com/feed/](https://scheerpost.com/feed/)", "cat": "Investigativ", "weight": 0.75, "bias": "ALTERNATIVE"},
+    {"name": "Naked Capitalism", "url": "[https://www.nakedcapitalism.com/feed](https://www.nakedcapitalism.com/feed)", "cat": "Makro/Investigativ", "weight": 0.80, "bias": "ALTERNATIVE"},
+    {"name": "Consortium News", "url": "[https://consortiumnews.com/feed/](https://consortiumnews.com/feed/)", "cat": "Investigativ", "weight": 0.75, "bias": "ALTERNATIVE"},
+    {"name": "Glenn Greenwald Substack", "url": "[https://greenwald.substack.com/feed](https://greenwald.substack.com/feed)", "cat": "Journalismus", "weight": 0.80, "bias": "ALTERNATIVE"},
+    {"name": "Aaron Maté Substack", "url": "[https://mate.substack.com/feed](https://mate.substack.com/feed)", "cat": "Journalismus", "weight": 0.75, "bias": "ALTERNATIVE"},
+    {"name": "The Duran Geopolitics", "url": "[https://theduran.com/feed/](https://theduran.com/feed/)", "cat": "Geopolitik", "weight": 0.70, "bias": "BRICS"},
     {"name": "ZeroHedge", "url": "[http://feeds.feedburner.com/zerohedge/feed](http://feeds.feedburner.com/zerohedge/feed)", "cat": "Alternativ / Makro", "weight": 0.55, "bias": "ALTERNATIVE"},
     {"name": "The Intercept", "url": "[https://theintercept.com/feed/?lang=en](https://theintercept.com/feed/?lang=en)", "cat": "Investigativ", "weight": 0.75, "bias": "ALTERNATIVE"},
     {"name": "The Grayzone", "url": "[https://thegrayzone.com/feed/](https://thegrayzone.com/feed/)", "cat": "Investigativ", "weight": 0.50, "bias": "BRICS"},
@@ -251,14 +299,14 @@ def fetch_feed(src):
 
 print(f"Hole Feeds aus allen {len(SOURCES)} RSS-Quellen parallel...")
 raw_feed_text = ""
-with ThreadPoolExecutor(max_workers=35) as executor:
+with ThreadPoolExecutor(max_workers=45) as executor:
     futures = [executor.submit(fetch_feed, src) for src in SOURCES]
     for future in as_completed(futures):
         res_str = future.result()
         if res_str:
             raw_feed_text += res_str
 
-print(f"Insgesamt {len(raw_feed_text)} Zeichen Rohdaten aus Feeds geladen.")
+print(f"Insgesamt {len(raw_feed_text)} Zeichen Rohdaten aus allen Feeds geladen.")
 
 # ============================================================
 # STUFE 1: GROQ PRE-FILTERING (LLAMA 3.3 70B)
@@ -266,31 +314,33 @@ print(f"Insgesamt {len(raw_feed_text)} Zeichen Rohdaten aus Feeds geladen.")
 def filter_feeds(text):
     if not client_groq:
         print("Hinweis: Kein Groq Key. Überspringe Stufe-1 Pre-Filter.")
-        return text[:40000]
+        return text[:50000]
     print("Filtere alle Feeds via Groq (Llama 3.3 70B)...")
-    prompt = """Du bist ein weltweites OSINT-Filter-Modul. Deine Aufgabe: Filtere die Feeds unvoreingenommen und GLOBAL.
+    prompt = """Du bist ein weltweites OSINT-Filter-Modul. Deine Aufgabe: Filtere die Feeds unvoreingenommen, ausgewogen und GLOBAL.
+Vergleiche die Positionen von Links (Demokraten/Progressive), Rechts (Republikaner/Konservative) und Mitte/Liberalen bei Großmächten (USA, EU, UK, BRICS).
+
 LÖSCHE Triviales, Sport, PR, Lokalkriminalität.
 BEHALTE UNBEDINGT:
-1. ESKALATIONSSPIRALEN & SPIELTHEORIE: Truppen, NOTAMs, GPS-Jamming, Sanktionen, Manöver (USA, China, Russland, Nahost, Europa, Globaler Süden).
-2. INNENPOLITIK DER HAUPTAKTEURE: Wahlzyklen, Parteienkämpfe, Streiks, Regierungsinstabilitäten (USA, EU, BRICS, Nahost, Afrika).
+1. INNENPOLITISCHER DRUCK & PARTEIENKÄMPFE: Wahlzyklen, Parteikongresse, Gesetzgebungsblockaden, Regierungsinstabilitäten (USA, EU, BRICS, Nahost, Afrika).
+2. ESKALATIONSSPIRALEN & SPIELTHEORIE: Truppen, NOTAMs, GPS-Jamming, Sanktionen, Manöver.
 3. HYBRIDE/NEUE BRENNPUNKTE: Pufferstaaten (Moldawien, Kaukasus), Enklaven, Machtvakua, Cyber, maritime Nadelöhre.
 4. FLÜCHTLINGSSTRÖME & VERTREIBUNG: UNHCR/IOM DTM, Massenflucht als Frühwarnindikator.
 5. MONETÄRE & DIGITALE SOUVERÄNITÄT: CBDCs, EU-Chatkontrolle/Verschlüsselungsverbot, US-Verschuldung, BRICS Pay, SWIFT.
-6. MAKRO, ROHSTOFFE & INNENPOLITIK: Zinsen, Anleihestress, Exportverbote für kritische Mineralien/Tech.
-Gib das Ergebnis als strukturierte Stichpunkte zurück (max 2500 Wörter). Deutsch oder Englisch."""
+6. MAKRO, ROHSTOFFE & LOGISTIK: Zinsen, Anleihestress, Rig Count, Gas-Storage, Frachtraten.
+Gib das Ergebnis als strukturierte Stichpunkte zurück (max 3000 Wörter). Deutsch oder Englisch."""
     try:
         res = client_groq.chat.completions.create(
             model="llama-3.3-70b-versatile",
-            messages=[{"role": "system", "content": prompt}, {"role": "user", "content": text[:70000]}],
+            messages=[{"role": "system", "content": prompt}, {"role": "user", "content": text[:90000]}],
             temperature=0.1,
-            max_tokens=3000
+            max_tokens=4000
         )
         filtered = res.choices[0].message.content
         print(f"Groq Filter erfolgreich! Text komprimiert auf {len(filtered)} Zeichen.")
         return filtered
     except Exception as e:
         print(f"Groq-Filter Fehler: {e}. Nutze ungefilterte Feeds.")
-        return text[:40000]
+        return text[:50000]
 
 filtered_context = filter_feeds(raw_feed_text)
 
@@ -304,7 +354,7 @@ def run_deepseek_game_theory(context):
     print("Starte DeepSeek-R1 Spieltheorie-Analyse (Direkt-API deepseek-reasoner)...")
     gt_prompt = """Analysiere das akuteste globale Krisenereignis aus den Feeds streng spieltheoretisch.
 Setze folgende 6 Prinzipien um:
-1. AKTEUR-GRANULARITÄT: Zerlege Staaten in interne Fraktionen (Exekutive, Militär, Lobby).
+1. AKTEUR-GRANULARITÄT: Zerlege Staaten in interne Fraktionen (Exekutive, Militär, Parteiflügel, Lobby).
 2. ZEITHORIZONT: Analysiere separat 4-8 Wochen (Ein-Runden-Spiel) vs. Langfristig (Schatten der Zukunft).
 3. PAYOFF-QUANTIFIZIERUNG: Skala -3 (Existenzieller Verlust) bis +3 (Maximaler Gewinn).
 4. INFORMATIONSSTAND: Cheap Talk (Rhetorik) vs. Costly Signals (echte Kosten).
@@ -361,8 +411,8 @@ Synthetisiere die Berichte der Spezial-Analysten (DeepSeek Spieltheorie + Gemini
 DEINE AUFGABE:
 - Integriere die spieltheoretischen Payoffs (-3 bis +3) und das Gegenmodell.
 - ERFASSE KONFLIKTHERDE MIT KLARER STATUS-TRENNUNG (`status_type`): 'AKTIV' vs. 'POTENZIELL'.
-- NEU: ANALYSIERE DIE INNENPOLITIK DER WICHTIGSTEN AKTEURE (USA, EU, BRICS, NAHER OSTEN, AFRIKA):
-  Erfasse relevante Wahlzyklen, Parteienrufe, Regierungsinstabilitäten, Führungswechsel, Streiks oder innere Unruhen und deren Auswirkung auf die Außenpolitik.
+- ANALYSIERE DIE INNENPOLITIK UND DAS MEDIENSPEKTRUM (USA, EU, UK, BRICS, NAHER OSTEN, AFRIKA):
+  Balanciere Positionen von Demokraten/Progressiven, Republikanern/Konservativen und Liberalen bei Wahlzyklen, Parteiendynamiken und Gesetzen unvoreingenommen aus.
 - DYNAMISCHE AKTIEN-ROTIERUNG: Wähle NIEMALS starr dieselben Aktien! Nutze betroffene Branchen (Shipping: FRO, ZIM; Rüstung: RHM.DE, LMT; Rohstoffe: CCJ, MP, ALB; Tech/Cyber: PLTR, CRWD).
 
 ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT:
@@ -393,8 +443,8 @@ ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT:
 
   "domestic_politics_analysis": [
     {
-      "region_actor": "USA / EU / BRICS / Naher Osten / Afrika",
-      "key_event_trend": "Innenpolitisches Ereignis / Parteiendynamik / Protest",
+      "region_actor": "USA / EU / UK / BRICS / Naher Osten / Afrika",
+      "key_event_trend": "Innenpolitisches Ereignis / Parteiendynamik (Dem/GOP/Left/Right)",
       "regime_stability": "STABIL / FRAGIL / ESKALATIV",
       "geopolitical_impact": "Konkrete Auswirkung auf Außenpolitik & Märkte"
     }
