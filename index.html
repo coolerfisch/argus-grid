@@ -161,6 +161,21 @@
       color: var(--text-muted);
     }
 
+    .progress-bar-bg {
+      width: 100%;
+      height: 6px;
+      background: #0f172a;
+      border-radius: 3px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+
     /* DEFCON & GEOSCORE FARBEN */
     .status-defcon-1 { color: var(--accent-red); }
     .status-defcon-2 { color: #f97316; }
@@ -204,16 +219,45 @@
       letter-spacing: 0.5px;
     }
 
-    .payoff-badge {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 0.8rem;
+    /* BIPOLARES PAYOFF BALKENDIAGRAMM (-3 bis +3) */
+    .bipolar-chart-row {
+      margin-top: 10px;
+      font-size: 0.85rem;
     }
-    .payoff-pos { background: rgba(34, 197, 94, 0.2); color: var(--accent-green); }
-    .payoff-neg { background: rgba(239, 68, 68, 0.2); color: var(--accent-red); }
-    .payoff-zero { background: rgba(148, 163, 184, 0.2); color: var(--text-muted); }
+
+    .bipolar-chart-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3px;
+      color: var(--text-main);
+    }
+
+    .bipolar-track {
+      position: relative;
+      height: 14px;
+      background: #1e293b;
+      border-radius: 7px;
+      overflow: hidden;
+      border: 1px solid #334155;
+    }
+
+    .bipolar-center-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #64748b;
+      z-index: 2;
+    }
+
+    .bipolar-bar-fill {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      border-radius: 2px;
+      transition: all 0.4s ease;
+    }
 
     .highlight-box {
       background: rgba(234, 179, 8, 0.08);
@@ -223,7 +267,7 @@
       font-size: 0.9rem;
     }
 
-    /* MAP CONTAINER & HOTSPOT LIST */
+    /* MAP CONTAINER & LEGEND */
     #hotspot-map {
       height: 350px;
       width: 100%;
@@ -232,11 +276,43 @@
       margin-top: 10px;
     }
 
-    .hotspots-grid {
+    .map-legend {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* ZWEI-SPALTEN BRENNOFF-LISTE */
+    .hotspot-sections {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 12px;
+      gap: 15px;
       margin-top: 18px;
+    }
+
+    .hotspot-group-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .hotspot-item {
@@ -245,10 +321,15 @@
       border-left: 3px solid var(--accent-gold);
       padding: 12px;
       border-radius: 8px;
+      margin-bottom: 10px;
     }
 
-    .hotspot-item.hoch {
+    .hotspot-item.aktiv {
       border-left-color: var(--accent-red);
+    }
+
+    .hotspot-item.potenziell {
+      border-left-color: var(--accent-purple);
     }
 
     .hotspot-header {
@@ -258,7 +339,7 @@
       margin-bottom: 6px;
     }
 
-    /* TABELLEN STYLES (STOCKS & SOUVERÄNITÄT) */
+    /* TABELLEN STYLES */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -287,7 +368,6 @@
       color: var(--accent-cyan);
     }
 
-    /* RESPONSIVE DESIGN */
     @media (max-width: 1024px) {
       .card[style*="span 2"] {
         grid-column: span 1 !important;
@@ -302,7 +382,6 @@
 </head>
 <body class="simple-mode">
 
-  <!-- HEADER MIT BRANDING & MODUS-TOGGLE -->
   <header>
     <div>
       <div class="brand-title">🌐 ARGUS GRID <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400;">v2.5 Multi-LLM</span></div>
@@ -315,24 +394,28 @@
     </div>
   </header>
 
-  <!-- TOP EXECUTIVE SUMMARY CARD -->
   <div class="card" style="margin-bottom: 20px; border-left: 4px solid var(--accent-cyan);">
     <h2>📋 Lageüberblick (Executive Briefing)</h2>
     <p id="exec-summary" style="font-size: 1.05rem; line-height: 1.6; color: #e2e8f0;">Lade Lagebericht...</p>
   </div>
 
-  <!-- KPI STATUS GRID -->
   <div class="kpi-grid">
     <div class="kpi-card">
       <div class="kpi-label">Geopolitischer Score</div>
       <div id="kpi-geoscore" class="kpi-value">--</div>
       <div id="kpi-geoscore-sub" class="kpi-sub">Prior: --</div>
+      <div class="progress-bar-bg">
+        <div id="kpi-geoscore-bar" class="progress-bar-fill" style="width: 0%; background: var(--accent-cyan);"></div>
+      </div>
     </div>
 
     <div class="kpi-card">
       <div class="kpi-label">DEFCON Bereitschaft</div>
       <div id="kpi-defcon" class="kpi-value">--</div>
       <div id="kpi-defcon-sub" class="kpi-sub">Nukleares Risiko: --</div>
+      <div class="progress-bar-bg">
+        <div id="kpi-defcon-bar" class="progress-bar-fill" style="width: 0%; background: var(--accent-gold);"></div>
+      </div>
     </div>
 
     <div class="kpi-card">
@@ -348,10 +431,8 @@
     </div>
   </div>
 
-  <!-- MAIN DASHBOARD CONTENT GRID -->
   <div class="dashboard-grid">
 
-    <!-- 1. SPIELTHEORETISCHES GUTACHTEN (DEEPSEEK R1 ENGINE - NUR FÜR DETAILED) -->
     <div class="card detailed-section game-theory-card">
       <h2>♟️ Spieltheoretisches Gutachten (DeepSeek-R1 Engine)</h2>
       <div id="gt-focal-title" class="focal-title">Analyse wird geladen...</div>
@@ -368,7 +449,7 @@
         </div>
 
         <div class="gt-box">
-          <h4>3. Payoff-Matrix & Struktur</h4>
+          <h4>3. Payoff-Matrix & Balkendiagramm (-3 bis +3)</h4>
           <div id="gt-payoffs"></div>
         </div>
 
@@ -384,22 +465,24 @@
       </div>
     </div>
 
-    <!-- 2. STRESS-TESTING SZENARIEN (DETAILED) -->
     <div class="card detailed-section" style="grid-column: 1 / -1;">
       <h2>🧪 Systemische Stress-Test Szenarien</h2>
       <div id="stress-scenarios-container" class="dashboard-grid" style="margin-bottom: 0;"></div>
     </div>
 
-    <!-- 3. HOTSPOTS & MIGRATION CARD (MIT NUTZUNG DER FREIEN FLÄCHE DARUNTER) -->
+    <!-- MAP CARD WITH VISUAL STATUS DIFFERENTIATION -->
     <div class="card" style="grid-column: span 2;">
       <h2>🗺️ Konfliktherde & Migrationsbewegungen</h2>
       <div id="hotspot-map"></div>
       
-      <!-- NEU: Detaillierte Hotspot-Kacheln füllen den Freiraum -->
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background: var(--accent-red);"></div> Aktive Kriege & Fluchtherde</div>
+        <div class="legend-item"><div class="legend-dot" style="background: var(--accent-purple);"></div> Potenzielle / Emerging Konfliktfelder</div>
+      </div>
+
       <div id="hotspots-list-container"></div>
     </div>
 
-    <!-- 4. AKTIEN ALLOKATION (STOCK PICKS) -->
     <div class="card">
       <h2>📈 Dynamische Aktien-Rotation</h2>
       <h3 style="font-size: 0.85rem; color: var(--accent-green); margin: 10px 0 5px 0;">TOP 5 BUYS (ÜBERGEWICHTEN)</h3>
@@ -415,7 +498,6 @@
       </table>
     </div>
 
-    <!-- 5. DIGITALE & MONETÄRE SOUVERÄNITÄT (DETAILED) -->
     <div class="card detailed-section" style="grid-column: 1 / -1;">
       <h2>🔒 Digitale & Monetäre Souveränität</h2>
       <table>
@@ -434,14 +516,11 @@
 
   </div>
 
-  <!-- LEAFLET JS SCRIPT -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <!-- DASHBOARD CONTROLLER SCRIPT -->
   <script>
     let map = null;
 
-    // VIEW MODE SWITCHER (SCHNELL VS. DETAILED)
     function setMode(mode) {
       if (mode === 'simple') {
         document.body.classList.add('simple-mode');
@@ -455,39 +534,42 @@
       if (map) setTimeout(() => map.invalidateSize(), 200);
     }
 
-    // DATEN LADEN & DASHBOARD POPULIEREN
     async function loadDashboard() {
       try {
         const response = await fetch('./data.json?t=' + new Date().getTime());
         if (!response.ok) throw new Error("Konnte data.json nicht laden.");
         const data = await response.json();
 
-        // 1. Header & Timestamps
         document.getElementById('last-update').innerText = "Stand: " + (data.timestamp || "Unbekannt");
         document.getElementById('exec-summary').innerText = data.daily_executive_summary || "Kein Lagebericht verfügbar.";
 
-        // 2. KPIs
         if (data.geoscore) {
-          document.getElementById('kpi-geoscore').innerText = data.geoscore.current_score + " / 100";
+          const score = data.geoscore.current_score || 0;
+          document.getElementById('kpi-geoscore').innerText = score + " / 100";
           document.getElementById('kpi-geoscore-sub').innerText = "Prior 48h: " + data.geoscore.previous_48h;
+          document.getElementById('kpi-geoscore-bar').style.width = Math.min(100, Math.max(0, score)) + "%";
         }
 
         if (data.defcon_status) {
           const defEl = document.getElementById('kpi-defcon');
           defEl.innerText = data.defcon_status.label || ("DEFCON " + data.defcon_status.level);
           defEl.className = "kpi-value status-defcon-" + data.defcon_status.level;
-          document.getElementById('kpi-defcon-sub').innerText = "Nukleares Risiko: " + data.defcon_status.nuclear_risk_percent + "%";
+          
+          const riskPct = data.defcon_status.nuclear_risk_percent || 0;
+          document.getElementById('kpi-defcon-sub').innerText = "Nukleares Risiko: " + riskPct + "%";
+          
+          const defBar = document.getElementById('kpi-defcon-bar');
+          defBar.style.width = Math.min(100, Math.max(0, riskPct)) + "%";
+          defBar.style.background = riskPct > 30 ? 'var(--accent-red)' : 'var(--accent-gold)';
         }
 
         document.getElementById('kpi-regime').innerText = data.market_regime || "--";
         document.getElementById('kpi-risk').innerText = data.top_risk || "--";
 
-        // 3. Spieltheorie (DeepSeek Engine)
         if (data.game_theory_deep_dive) {
           const gt = data.game_theory_deep_dive;
           document.getElementById('gt-focal-title').innerText = gt.focal_situation || "Aktuelle Krisenlage";
 
-          // Akteure
           let actorsHTML = "";
           if (gt["1_fractionated_actors"]) {
             gt["1_fractionated_actors"].forEach(a => {
@@ -502,7 +584,6 @@
           }
           document.getElementById('gt-actors').innerHTML = actorsHTML || "Keine Akteursdaten.";
 
-          // Zeithorizont
           if (gt["2_time_horizon_conflict"]) {
             const th = gt["2_time_horizon_conflict"];
             document.getElementById('gt-time-horizon').innerHTML = `
@@ -512,23 +593,43 @@
             `;
           }
 
-          // Payoffs
           if (gt["3_game_structure_and_payoffs"]) {
             const po = gt["3_game_structure_and_payoffs"];
-            let poHTML = `<div style="margin-bottom: 6px;"><strong>Typ:</strong> ${po.type || 'N/A'}</div>`;
+            let poHTML = `<div style="margin-bottom: 8px;"><strong>Typ:</strong> ${po.type || 'N/A'}</div>`;
+            
             if (po.payoff_assessment_scale_minus_3_to_plus_3) {
               po.payoff_assessment_scale_minus_3_to_plus_3.forEach(p => {
-                const valA = p.payoff_actor_A;
-                const badgeClass = valA > 0 ? 'payoff-pos' : (valA < 0 ? 'payoff-neg' : 'payoff-zero');
-                poHTML += `<div style="font-size: 0.85rem; margin-top: 4px;">
-                  ${p.scenario_combination}: <span class="payoff-badge ${badgeClass}">${valA > 0 ? '+' + valA : valA}</span>
-                </div>`;
+                const valA = parseFloat(p.payoff_actor_A) || 0;
+                let barStyle = "";
+                if (valA > 0) {
+                  const width = (valA / 3) * 50;
+                  barStyle = `left: 50%; width: ${width}%; background: var(--accent-green);`;
+                } else if (valA < 0) {
+                  const width = (Math.abs(valA) / 3) * 50;
+                  barStyle = `left: ${50 - width}%; width: ${width}%; background: var(--accent-red);`;
+                } else {
+                  barStyle = `left: 49%; width: 2%; background: var(--text-muted);`;
+                }
+
+                poHTML += `
+                  <div class="bipolar-chart-row">
+                    <div class="bipolar-chart-label">
+                      <span>${p.scenario_combination}</span>
+                      <strong style="color: ${valA > 0 ? 'var(--accent-green)' : (valA < 0 ? 'var(--accent-red)' : 'var(--text-muted)')};">
+                        ${valA > 0 ? '+' + valA : valA}
+                      </strong>
+                    </div>
+                    <div class="bipolar-track">
+                      <div class="bipolar-center-line"></div>
+                      <div class="bipolar-bar-fill" style="${barStyle}"></div>
+                    </div>
+                  </div>
+                `;
               });
             }
             document.getElementById('gt-payoffs').innerHTML = poHTML;
           }
 
-          // Signale
           if (gt["4_signaling_and_information"]) {
             const sig = gt["4_signaling_and_information"];
             document.getElementById('gt-signaling').innerHTML = `
@@ -537,7 +638,6 @@
             `;
           }
 
-          // Falsifikation
           if (gt["6_falsification_counter_model"]) {
             const fal = gt["6_falsification_counter_model"];
             document.getElementById('gt-falsification').innerHTML = `
@@ -547,17 +647,20 @@
           }
         }
 
-        // 4. Stress-Test Szenarien
         if (data.stress_testing_scenarios) {
           let stressHTML = "";
           data.stress_testing_scenarios.forEach(s => {
+            const prob = s.probability_pct || 0;
             stressHTML += `
               <div class="card" style="background: #0f172a; border-left: 3px solid var(--accent-gold);">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
                   <h3 style="font-size: 1.0rem; color: var(--accent-cyan);">${s.scenario_name}</h3>
-                  <span class="ticker-badge" style="color: var(--accent-gold);">${s.probability_pct}% Wahrscheinlichkeit</span>
+                  <span class="ticker-badge" style="color: var(--accent-gold);">${prob}% Wahrscheinlichkeit</span>
                 </div>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 8px 0;">Zeithorizont: ${s.timeframe}</p>
+                <div class="progress-bar-bg" style="margin-bottom: 12px; height: 5px;">
+                  <div class="progress-bar-fill" style="width: ${prob}%; background: var(--accent-gold);"></div>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Zeithorizont: ${s.timeframe}</p>
                 <div style="font-size: 0.88rem; margin-bottom: 8px;"><strong>Kaskade:</strong> ${(s.cascade_chain || []).join(' ➔ ')}</div>
                 <div style="font-size: 0.85rem; color: var(--accent-green);"><strong>Gewinner:</strong> ${(s.winners_long || []).map(w => w.asset).join(', ')}</div>
                 <div style="font-size: 0.85rem; color: var(--accent-red);"><strong>Verlierer:</strong> ${(s.losers_short || []).map(l => l.asset).join(', ')}</div>
@@ -567,7 +670,6 @@
           document.getElementById('stress-scenarios-container').innerHTML = stressHTML;
         }
 
-        // 5. Stock Picks
         if (data.stock_picks) {
           let buysHTML = "";
           (data.stock_picks.top_5_buys || []).forEach(b => {
@@ -582,7 +684,6 @@
           document.getElementById('stocks-sells').innerHTML = sellsHTML;
         }
 
-        // 6. Digitale Souveränität
         if (data.digital_and_monetary_sovereignty) {
           let sovHTML = "";
           data.digital_and_monetary_sovereignty.forEach(item => {
@@ -597,7 +698,6 @@
           document.getElementById('sovereignty-table').innerHTML = sovHTML;
         }
 
-        // 7. Karte & Untere Hotspot-Liste initialisieren
         const hotspots = data.conflict_hotspots || [];
         initMap(hotspots);
         renderHotspotsList(hotspots);
@@ -608,7 +708,7 @@
       }
     }
 
-    // LEAFLET MAP INITIALISIERUNG
+    // MAP INITIALISIERUNG MIT DETEKTIERTEN STATUS-FARBEN
     function initMap(hotspots) {
       if (map) map.remove();
       
@@ -621,58 +721,78 @@
 
       hotspots.forEach(spot => {
         if (spot.lat && spot.lng) {
-          const color = spot.escalation_level === 'HOCH' ? '#ef4444' : '#eab308';
+          const isAktiv = (spot.status_type === 'AKTIV' || spot.escalation_level === 'HOCH');
+          const color = isAktiv ? '#ef4444' : '#a855f7'; // Rot für Aktiv, Violett für Potenzielle Felder
+          
           const marker = L.circleMarker([spot.lat, spot.lng], {
             radius: 8,
             fillColor: color,
             color: '#ffffff',
             weight: 1,
             opacity: 1,
-            fillOpacity: 0.8
+            fillOpacity: 0.85
           }).addTo(map);
 
           marker.bindPopup(`
             <div style="color: #000; font-family: sans-serif;">
-              <strong>${spot.region}</strong><br>
+              <strong>${spot.region}</strong> (${isAktiv ? '🔥 AKTIV' : '⚠️ POTENZIELL'})<br>
               <span style="font-size: 0.8rem; color: #555;">Akteure: ${spot.actors}</span><br>
-              <p style="font-size: 0.85rem; margin-top: 5px;">${spot.impact}</p>
+              <p style="font-size: 0.85rem; margin-top: 5px;">${spot.impact || spot.catalyst || ''}</p>
             </div>
           `);
         }
       });
     }
 
-    // HOTSPOT DETAILS UNTER DER KARTE RENDERN
+    // SAUBERE STRUKTURIERUNG: AKTIV VS. POTENZIELL
     function renderHotspotsList(hotspots) {
       if (!hotspots || hotspots.length === 0) return;
       
-      let hsHTML = '<div class="hotspots-grid">';
-      hotspots.forEach(spot => {
-        const isHigh = spot.escalation_level === 'HOCH';
-        const levelClass = isHigh ? 'hoch' : '';
-        const badgeColor = isHigh ? 'var(--accent-red)' : 'var(--accent-gold)';
-        
-        hsHTML += `
-          <div class="hotspot-item ${levelClass}">
-            <div class="hotspot-header">
-              <strong style="font-size: 0.95rem; color: var(--accent-cyan);">${spot.region}</strong>
-              <span style="color: ${badgeColor}; font-size: 0.75rem; font-weight: bold; border: 1px solid ${badgeColor}; padding: 1px 6px; border-radius: 4px;">${spot.escalation_level || 'AKTIV'}</span>
+      const aktiveList = hotspots.filter(s => s.status_type === 'AKTIV' || s.escalation_level === 'HOCH');
+      const potenzielleList = hotspots.filter(s => s.status_type === 'POTENZIELL' || (s.status_type !== 'AKTIV' && s.escalation_level !== 'HOCH'));
+
+      function buildCards(list, isAktiv) {
+        if (list.length === 0) return '<div style="font-size: 0.8rem; color: var(--text-muted);">Keine Akuten Eintragsdaten.</div>';
+        let html = '';
+        list.forEach(spot => {
+          const classType = isAktiv ? 'aktiv' : 'potenziell';
+          const badgeText = isAktiv ? '🔥 AKTIVE KRISE / FLUCHT' : '⚠️ POTENZIELLER BRENNPUNKT';
+          const badgeColor = isAktiv ? 'var(--accent-red)' : 'var(--accent-purple)';
+
+          html += `
+            <div class="hotspot-item ${classType}">
+              <div class="hotspot-header">
+                <strong style="font-size: 0.95rem; color: var(--accent-cyan);">${spot.region}</strong>
+                <span style="color: ${badgeColor}; font-size: 0.7rem; font-weight: bold; border: 1px solid ${badgeColor}; padding: 1px 6px; border-radius: 4px;">${badgeText}</span>
+              </div>
+              <div style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 4px;">
+                <strong>Akteure:</strong> ${spot.actors}
+              </div>
+              <div style="color: #cbd5e1; font-size: 0.85rem; line-height: 1.4;">
+                ${spot.impact || spot.catalyst || ''}
+              </div>
             </div>
-            <div style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 4px;">
-              <strong>Akteure:</strong> ${spot.actors}
-            </div>
-            <div style="color: #cbd5e1; font-size: 0.85rem; line-height: 1.4;">
-              ${spot.impact || spot.catalyst || ''}
-            </div>
+          `;
+        });
+        return html;
+      }
+
+      const hsHTML = `
+        <div class="hotspot-sections">
+          <div>
+            <div class="hotspot-group-title" style="color: var(--accent-red);">🔥 Aktive Kriege & Fluchtherde (Bestehend)</div>
+            ${buildCards(aktiveList, true)}
           </div>
-        `;
-      });
-      hsHTML += '</div>';
+          <div>
+            <div class="hotspot-group-title" style="color: var(--accent-purple);">⚠️ Potenzielle & Emerging Konfliktfelder (Frühwarnung)</div>
+            ${buildCards(potenzielleList, false)}
+          </div>
+        </div>
+      `;
       
       document.getElementById('hotspots-list-container').innerHTML = hsHTML;
     }
 
-    // STARTE DASHBOARD BEIM LADEN DER SEITE
     document.addEventListener("DOMContentLoaded", loadDashboard);
   </script>
 </body>
