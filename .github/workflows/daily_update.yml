@@ -8,10 +8,13 @@ on:
 jobs:
   update-dashboard:
     runs-on: ubuntu-latest
+    timeout-minutes: 5 # Verhindert unendliches Hängen
 
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Holt die komplette Historie für sauberes Rebasing
 
       - name: Python einrichten
         uses: actions/setup-python@v5
@@ -32,12 +35,17 @@ jobs:
           python update_dashboard.py
 
       - name: Änderungen committen und pushen
+        env:
+          GIT_TERMINAL_PROMPT: '0' # Verhindert interaktives Warten im Terminal
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data.json history.json || true
+          
+          git fetch origin main
+          git add data.json history.json knowledge_graph.json || true
+          
           if ! git diff --quiet || ! git diff --staged --quiet; then
-            git commit -m "Automatisches GeoPuls Update [Claude 3.5 Sonnet]"
-            git pull --rebase origin main
-            git push
+            git commit -m "Automatisches GeoPuls Update [Claude 3.5 Sonnet]" || true
+            git pull origin main --rebase -X theirs || true
+            git push origin main
           fi
