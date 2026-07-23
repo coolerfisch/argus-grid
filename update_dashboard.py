@@ -1,5 +1,5 @@
 import socket
-socket.setdefaulttimeout(5)  # Globaler Notfall-Timeout gegen hängende Server
+socket.setdefaulttimeout(8)
 
 import os
 import json
@@ -8,8 +8,33 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import anthropic
 import feedparser
-import requests  # Für harte Timeouts pro RSS-Server
+import requests
 import yfinance as yf
+from groq import Groq
+from openai import OpenAI
+
+# ============================================================
+# API CLIENTS INITIALISIERUNG
+# ============================================================
+groq_key = os.environ.get("GROQ_API_KEY", "").strip().strip('"').strip("'")
+anth_key = os.environ.get("ANTHROPIC_API_KEY", "").strip().strip('"').strip("'")
+gemini_key = os.environ.get("GEMINI_API_KEY", "").strip().strip('"').strip("'")
+deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "").strip().strip('"').strip("'")
+
+client_groq = Groq(api_key=groq_key) if groq_key else None
+client_anthropic = anthropic.Anthropic(api_key=anth_key) if anth_key else None
+
+# Gemini Client (Über Google AI Studio API via OpenAI-Schnittstelle)
+client_gemini = OpenAI(
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+    api_key=gemini_key
+) if gemini_key else None
+
+# DeepSeek Direkt-Client (api.deepseek.com)
+client_deepseek = OpenAI(
+    base_url="https://api.deepseek.com",
+    api_key=deepseek_key
+) if deepseek_key else None
 
 # ============================================================
 # HELPER-FUNKTIONEN
@@ -44,7 +69,7 @@ def repair_and_parse_json(text):
         return json.loads(repaired)
 
 # ============================================================
-# A. ECHTE LIVE-FINANZ-, MAKRO-, ENERGIE- & ROHSTOFFDATEN
+# A. LIVE FINANZ-, MAKRO- & ROHSTOFFDATEN
 # ============================================================
 def get_live_market_data():
     market_summary = ""
@@ -52,19 +77,20 @@ def get_live_market_data():
         "US Dollar Index (DXY)": "DX-Y.NYB",
         "EUR/USD": "EURUSD=X",
         "USD/JPY": "JPY=X",
+        "USD/CNY": "CNY=X",
         "US 10Y Anleihe": "^TNX",
-        "VIX (Aktien-Volatilität)": "^VIX",
-        "HYG (High Yield Spreads ETF)": "HYG",
+        "VIX (Volatilität)": "^VIX",
+        "HYG High Yield Spread": "HYG",
         "Gold (USD/oz)": "GC=F",
         "Silber (USD/oz)": "SI=F",
         "Brent Öl (USD/bbl)": "BZ=F",
         "WTI Öl (USD/bbl)": "CL=F",
-        "US Erdgas (USD/MMBtu)": "NG=F",
-        "Kupfer (USD/lb)": "HG=F",
-        "Weizen (USD/bu)": "ZW=F",
-        "BDI (Baltic Dry Index ETF)": "BDRY",
-        "S&P 500 Index": "^GSPC",
-        "Bitcoin (USD)": "BTC-USD"
+        "US Erdgas": "NG=F",
+        "Kupfer": "HG=F",
+        "Weizen": "ZW=F",
+        "BDI Baltic Dry Index": "BDRY",
+        "S&P 500": "^GSPC",
+        "Bitcoin": "BTC-USD"
     }
     print("Hole echte Finanz-, Makro- & Rohstoffmarktdaten via yfinance...")
     try:
@@ -76,55 +102,16 @@ def get_live_market_data():
                     close_prev = data['Close'].iloc[-2]
                     change_pct = ((close_curr - close_prev) / close_prev) * 100
                     market_summary += f"- {name}: {close_curr:.2f} ({change_pct:+.2f}% heute)\n"
-            except Exception as e_tick:
-                print(f"Hinweis: Ticker {ticker} fehlerhaft: {e_tick}")
-    except Exception as e_all:
-        print(f"yfinance Fehler: {e_all}")
-        market_summary = "- Finanzdaten aktuell eingeschränkt verfügbar.\n"
-
+            except Exception:
+                pass
+    except Exception as e:
+        print(f"yfinance Hinweis: {e}")
     return market_summary if market_summary else "- Finanzdaten im Wartestand.\n"
 
 live_market_context = get_live_market_data()
 
 # ============================================================
-# B. KNOWLEDGE GRAPH MEMORY (ENTITÄTEN & RELATIONEN)
-# ============================================================
-memory_file = "knowledge_graph.json"
-knowledge_graph = {
-    "entities": [],
-    "relations": [],
-    "causal_chains": [],
-    "historical_precedents": [
-        {
-            "trigger": "China Exportbeschränkung Seltene Erden",
-            "past_years": [2010, 2023, 2025],
-            "impact": "Seltene Erden +45%, Bergbauaktien +12%, Japan-Industrie -7%",
-            "affected_assets": ["MP", "LYC", "REMX"]
-        },
-        {
-            "trigger": "Drohung Sperrung Straße von Hormus / Bab al-Mandab",
-            "past_years": [2019, 2023, 2024],
-            "impact": "Brent Öl +18%, Tanker-Frachtraten +40%, Gold +6%",
-            "affected_assets": ["BZ=F", "CL=F", "FRO", "GC=F"]
-        }
-    ]
-}
-
-if os.path.exists(memory_file):
-    try:
-        with open(memory_file, "r", encoding="utf-8") as f:
-            loaded_kg = json.load(f)
-            if isinstance(loaded_kg, dict) and "entities" in loaded_kg:
-                knowledge_graph = loaded_kg
-        print(f"Knowledge Graph geladen: {len(knowledge_graph.get('entities', []))} Entitäten, {len(knowledge_graph.get('relations', []))} Relationen.")
-    except Exception as e:
-        print(f"Fehler beim Laden des Knowledge Graphs: {e}")
-
-kg_context_str = json.dumps(knowledge_graph, ensure_ascii=False, indent=2)
-if len(kg_context_str) > 10000:
-    kg_context_str = kg_context_str[:10000] + "\n... [Knowledge Graph Kontext gekürzt]"
-# ============================================================
-# C. VOLLSTÄNDIGER QUELLENPOOL (ALLE 96 RSS-FEEDS)
+# B. VOLLSTÄNDIGER QUELLENPOOL (ALLE 99 RSS-FEEDS)
 # ============================================================
 SOURCES = [
     # 🏛️ ZENTRALBANKEN & MAKRO-INSTITUTIONEN
@@ -139,6 +126,12 @@ SOURCES = [
     {"name": "White House Briefing", "url": "[https://www.whitehouse.gov/briefing-room/feed/](https://www.whitehouse.gov/briefing-room/feed/)", "cat": "Regierung", "weight": 1.00, "bias": "WESTERN"},
     {"name": "US Department of State", "url": "[https://www.state.gov/rss-feed/press-releases/feed/](https://www.state.gov/rss-feed/press-releases/feed/)", "cat": "Diplomatie", "weight": 1.00, "bias": "WESTERN"},
     {"name": "Schweizer Bundesrat", "url": "[https://www.admin.ch/gov/de/start/dokumentation/medienmitteilungen.rss.html](https://www.admin.ch/gov/de/start/dokumentation/medienmitteilungen.rss.html)", "cat": "Regierung", "weight": 1.00, "bias": "WESTERN"},
+
+    # 🚶 MIGRATION, VERTREIBUNG & HUMANITÄR (UNHCR / IOM / RELIEFWEB)
+    {"name": "UNHCR Press Releases", "url": "[https://news.google.com/rss/search?q=when:7d+site:unhcr.org+%22refugee%22+OR+%22displacement%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:unhcr.org+%22refugee%22+OR+%22displacement%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Migration / UNHCR", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "IOM Displacement Tracking Matrix (DTM)", "url": "[https://news.google.com/rss/search?q=when:7d+site:iom.int+OR+%22Displacement+Tracking+Matrix%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:iom.int+OR+%22Displacement+Tracking+Matrix%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Migration / IOM", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "ReliefWeb Global Crises & Displacement", "url": "[https://reliefweb.int/updates/rss.xml](https://reliefweb.int/updates/rss.xml)", "cat": "Humanitär / UN OCHA", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "Frontex & Border Migration Routes", "url": "[https://news.google.com/rss/search?q=when:7d+Frontex+OR+%22irregular+border+crossings%22+OR+%22migrant+route%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+Frontex+OR+%22irregular+border+crossings%22+OR+%22migrant+route%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Migration / Grenzen", "weight": 0.90, "bias": "MAINSTREAM"},
 
     # 📊 ENERGIE, ROHSTOFFE & LOGISTIK
     {"name": "EIA Petroleum Status Report", "url": "[https://news.google.com/rss/search?q=when:7d+site:eia.gov+%22Weekly+Petroleum+Status+Report%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:eia.gov+%22Weekly+Petroleum+Status+Report%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / EIA", "weight": 1.00, "bias": "OFFIZIELL"},
@@ -171,7 +164,8 @@ SOURCES = [
     {"name": "Flightradar24 Blog", "url": "[https://www.flightradar24.com/blog/feed/](https://www.flightradar24.com/blog/feed/)", "cat": "Luftfahrt OSINT", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "Aviation Safety Network (ASN)", "url": "[https://news.google.com/rss/search?q=when:7d+%22Aviation+Safety+Network%22+OR+NOTAM&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22Aviation+Safety+Network%22+OR+NOTAM&hl=en-US&gl=US&ceid=US:en)", "cat": "Luftfahrt", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "GPSJam & Electronic Warfare Alerts", "url": "[https://news.google.com/rss/search?q=when:24h+%22GPS+jamming%22+OR+%22ADS-B+spoofing%22+OR+%22NOTAM%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+%22GPS+jamming%22+OR+%22ADS-B+spoofing%22+OR+%22NOTAM%22&hl=en-US&gl=US&ceid=US:en)", "cat": "EW / Luftfahrt", "weight": 0.85, "bias": "ALTERNATIVE"},
-    # 🌍 WELT-NACHRICHTENAGENTUREN & DIPLOMATIE
+
+    # 🌍 WELT-NACHRICHTENAGENTUREN & DIPLOMATIE (GLOBAL COVERAGE)
     {"name": "AP News World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Reuters World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Agence France-Presse (AFP)", "url": "[https://news.google.com/rss/search?q=when:24h+source:AFP&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:AFP&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
@@ -235,278 +229,241 @@ SOURCES = [
     {"name": "Moon of Alabama", "url": "[https://www.moonofalabama.org/index.rdf](https://www.moonofalabama.org/index.rdf)", "cat": "Militär-Blog", "weight": 0.65, "bias": "BRICS"},
     {"name": "Caitlin Johnstone", "url": "[https://caitlinjohnstone.com.au/feed/](https://caitlinjohnstone.com.au/feed/)", "cat": "Kolumne", "weight": 0.55, "bias": "ALTERNATIVE"}
 ]
-browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 ArgusGridOSINTBot/1.0"
 
-def fetch_single_feed(src):
-    feed_str = ""
+browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) ArgusGridOSINTBot/2.0"
+
+def fetch_feed(src):
     try:
-        # requests.get erzwingt exakt max. 5 Sekunden Limit pro Server
         res = requests.get(src["url"], headers={"User-Agent": browser_agent}, timeout=5)
         if res.status_code == 200:
             feed = feedparser.parse(res.content)
             if feed.entries:
-                feed_str += f"\n--- QUELLE: {src['name']} | Kat: {src['cat']} | Bias: {src['bias']} ---\n"
+                out = f"\n--- QUELLE: {src['name']} | Kat: {src['cat']} | Bias: {src['bias']} ---\n"
                 for entry in feed.entries[:2]:
                     title = entry.get('title', '')
                     raw_summary = entry.get('summary', '') or entry.get('description', '')
                     summary = clean_html(raw_summary)
-                    feed_str += f"- {title}: {summary[:120]}...\n"
+                    out += f"- {title}: {summary[:120]}...\n"
+                return out
     except Exception:
-        # Hängende oder tote Server werden sofort lautlos übersprungen
         pass
-    return feed_str
+    return ""
 
-print(f"Hole und sortiere Feeds aus allen {len(SOURCES)} RSS-Quellen...")
-feed_context = ""
-
+print(f"Hole Feeds aus allen {len(SOURCES)} RSS-Quellen parallel...")
+raw_feed_text = ""
 with ThreadPoolExecutor(max_workers=35) as executor:
-    futures = [executor.submit(fetch_single_feed, src) for src in SOURCES]
+    futures = [executor.submit(fetch_feed, src) for src in SOURCES]
     for future in as_completed(futures):
         res_str = future.result()
         if res_str:
-            feed_context += res_str
-
-if len(feed_context) > 40000:
-    feed_context = feed_context[:40000] + "\n... [Quellenkontext gekürzt]"
-
-# API Key gründlich säubern
-raw_key = os.environ.get("ANTHROPIC_API_KEY", "")
-anth_key = raw_key.strip().strip('"').strip("'")
-
-if not anth_key:
-    raise ValueError("ANTHROPIC_API_KEY wurde nicht in den Umgebungsvariablen gefunden!")
-
-client_anthropic = anthropic.Anthropic(api_key=anth_key)
+            raw_feed_text += res_str
 
 # ============================================================
-# D. DYNAMISCHE MODELL-ERKENNUNG (MODEL DISCOVERY)
+# STUFE 1: GROQ PRE-FILTERING (LLAMA 3.3 70B)
 # ============================================================
-def get_working_models(client):
+def filter_feeds(text):
+    if not client_groq:
+        print("Hinweis: Kein Groq Key. Überspringe Stufe-1 Pre-Filter.")
+        return text[:40000]
+    print("Filtere alle Feeds via Groq (Llama 3.3 70B)...")
+    prompt = """Du bist ein weltweites OSINT-Filter-Modul. Deine Aufgabe: Filtere die Feeds unvoreingenommen und GLOBAL.
+LÖSCHE Triviales, Sport, PR, Lokalkriminalität.
+BEHALTE UNBEDINGT:
+1. ESKALATIONSSPIRALEN & SPIELTHEORIE: Truppen, NOTAMs, GPS-Jamming, Sanktionen, Manöver (USA, China, Russland, Nahost, Europa, Globaler Süden).
+2. HYBRIDE/NEUE BRENNPUNKTE: Pufferstaaten (Moldawien, Kaukasus), Enklaven, Machtvakua, Cyber, maritime Nadelöhre.
+3. FLÜCHTLINGSSTRÖME & VERTREIBUNG: UNHCR/IOM DTM, Massenflucht als Frühwarnindikator.
+4. MONETÄRE & DIGITALE SOUVERÄNITÄT: CBDCs, EU-Chatkontrolle/Verschlüsselungsverbot, US-Verschuldung, BRICS Pay, SWIFT.
+5. MAKRO, ROHSTOFFE & INNENPOLITIK: Zinsen, Anleihestress, Exportverbote für kritische Mineralien/Tech.
+Gib das Ergebnis als strukturierte Stichpunkte zurück (max 1800 Wörter). Deutsch oder Englisch."""
     try:
-        print("Abfrage der freigeschalteten Modelle via client.models.list()...")
-        models_resp = client.models.list()
-        avail = [m.id for m in models_resp.data]
-        print(f"Erkannte verfügbare Modelle: {avail}")
-        if avail:
-            return avail
+        res = client_groq.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "system", "content": prompt}, {"role": "user", "content": text[:60000]}],
+            temperature=0.1,
+            max_tokens=2048
+        )
+        filtered = res.choices[0].message.content
+        print(f"Groq Filter erfolgreich! Text komprimiert auf {len(filtered)} Zeichen.")
+        return filtered
     except Exception as e:
-        print(f"Hinweis beim Abrufen der Modellliste: {e}")
-    
-    return ["claude-3-5-sonnet-latest", "claude-3-5-haiku-latest", "claude-3-opus-latest"]
+        print(f"Groq-Filter Fehler: {e}. Nutze ungefilterte Feeds.")
+        return text[:40000]
 
-CLAUDE_MODELS = get_working_models(client_anthropic)
+filtered_context = filter_feeds(raw_feed_text)
 
-orchestrator_prompt = """Du bist die 'Argus Grid Intelligence Engine' (Chef-Analyst für Geopolitik, Makro, Rohstoffe & OSINT).
+# ============================================================
+# STUFE 2a: DEEPSEEK-R1 (SPIELTHEORIE & KALTE LOGIK)
+# ============================================================
+def run_deepseek_game_theory(context):
+    if not client_deepseek:
+        print("Hinweis: DeepSeek Key (DEEPSEEK_API_KEY) nicht konfiguriert.")
+        return "DeepSeek Spieltheorie-Analyse nicht verfügbar."
+    print("Starte DeepSeek-R1 Spieltheorie-Analyse (Direkt-API)...")
+    gt_prompt = """Analysiere das akuteste globale Krisenereignis aus den Feeds streng spieltheoretisch.
+Setze folgende 6 Prinzipien um:
+1. AKTEUR-GRANULARITÄT: Zerlege Staaten in interne Fraktionen (Exekutive, Militär, Lobby).
+2. ZEITHORIZONT: Analysiere separat 4-8 Wochen (Ein-Runden-Spiel) vs. Langfristig (Schatten der Zukunft).
+3. PAYOFF-QUANTIFIZIERUNG: Skala -3 (Existenzieller Verlust) bis +3 (Maximaler Gewinn).
+4. INFORMATIONSSTAND: Cheap Talk (Rhetorik) vs. Costly Signals (echte Kosten).
+5. GLEICHGEWICHT: Nash-Gleichgewicht & Commitment-Problem.
+6. GEGENMODELL: Konstruiere die stärkste Falsifikations-Gegenlesart.
+Formuliere als kompaktes, strukturiertes Gutachten."""
+    try:
+        res = client_deepseek.chat.completions.create(
+            model="deepseek-reasoner",
+            messages=[
+                {"role": "system", "content": gt_prompt},
+                {"role": "user", "content": context}
+            ]
+        )
+        return res.choices[0].message.content
+    except Exception as e:
+        print(f"DeepSeek R1 Fehler: {e}")
+        return "Spieltheorie-Analyse über Primärpfad generieren."
 
-Führe anhand der Eingabedaten eine tiefgehende Lageanalyse durch.
+deepseek_analysis = run_deepseek_game_theory(filtered_context)
 
-ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT BASIEREND AUF DIESEM SCHEMA:
+# ============================================================
+# STUFE 2b: GEMINI 2.0 FLASH (MAKRO, MIGRATION & ROHSTOFFE)
+# ============================================================
+def run_gemini_macro(context, markets):
+    if not client_gemini:
+        print("Hinweis: Gemini Key nicht konfiguriert.")
+        return "Gemini Makro-Analyse nicht verfügbar."
+    print("Starte Gemini 2.0 Flash Makro- & Migrations-Scan...")
+    macro_prompt = """Analysiere die Feeds und Live-Finanzdaten auf:
+1. Makroökonomische Schocks (Zinsen, Inflation, Rohstoff-Nadelöhre, Seewege).
+2. Fluchtbewegungen & Vertreibung (UNHCR/IOM) als Frühwarnindikatoren für verdeckte Eskalationen.
+3. Digitale Souveränität (CBDCs, Überwachungsgesetze, Kapitalverkehrskontrollen).
+Fasse die Erkenntnisse kurz und prägnant zusammen."""
+    try:
+        res = client_gemini.chat.completions.create(
+            model="gemini-2.0-flash",
+            messages=[{"role": "system", "content": macro_prompt}, {"role": "user", "content": f"MARKETS:\n{markets}\nFEEDS:\n{context}"}],
+            temperature=0.2
+        )
+        return res.choices[0].message.content
+    except Exception as e:
+        print(f"Gemini Fehler: {e}")
+        return "Makro-Analyse über Primärpfad generieren."
+
+gemini_analysis = run_gemini_macro(filtered_context, live_market_context)
+
+# ============================================================
+# STUFE 3: CLAUDE 3.5 SONNET (CHEF-SYNTHESIZER ➔ DATA.JSON)
+# ============================================================
+orchestrator_prompt = """Du bist die 'Argus Grid Systemic Intelligence Engine' (Chef-Analyst).
+Synthetisiere die Berichte der Spezial-Analysten (DeepSeek Spieltheorie + Gemini Makro/Migration) und die Live-Feeds zu einer unvoreingenommenen Gesamtlage.
+
+DEINE AUFGABE:
+- Integriere die spieltheoretischen Payoffs (-3 bis +3) und das Gegenmodell.
+- Erfasse autonome Konfliktherde (z.B. Moldawien/Transnistrien, Arktis, Pufferstaaten) & Migration.
+- DYNAMISCHE AKTIEN-ROTIERUNG: Wähle NIEMALS starr dieselben Aktien! Nutze betroffene Branchen (Shipping: FRO, ZIM; Rüstung: RHM.DE, LMT; Rohstoffe: CCJ, MP, ALB; Tech/Cyber: PLTR, CRWD).
+
+ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT:
 {
-  "daily_executive_summary": "Kurze prägnante Synthese der aktuellen Lage (max 3 Sätze).",
-  "market_regime": "Risiko-Avers / Inflationär / Geopolitische Anspannung",
-  "geoscore": {
-    "current_score": 76,
-    "status_label": "ERHÖHT",
-    "previous_48h": 72
-  },
-  "defcon_status": {
-    "level": 3,
-    "label": "DEFCON 3",
-    "nuclear_risk_percent": 18,
-    "primary_driver": "Primärer Treiber der Eskalation"
-  },
-  "top_overweight": "Gold & Energie",
-  "top_risk": "Lieferketten-Unterbrechung",
-  "pattern_recognition": [
-    {
-      "trigger_event": "China beschränkt Export kritischer Mineralien",
-      "matched_past_events": ["2010: Seltene Erden Stopp (+45% ETFs)", "2023: Gallium Beschränkung"],
-      "historical_consequences": "+12% Bergbauaktien, +8% Kupfer",
-      "actionable_insight": "Long-Bias auf westliche Förderer (MP, LYC)"
-    }
-  ],
-  "conflict_hotspots": [
-    {
-      "region": "Straße von Hormus",
-      "actors": "Iran vs. USA/Israel",
-      "escalation_level": "KRITISCH",
-      "catalyst": "Marine-Manöver",
-      "impact": "Öl & Frachtraten",
-      "lat": 26.56,
-      "lng": 56.25
-    }
-  ],
-  "systemic_risks": [
-    {
-      "title": "Sanktions-Spirale & Entkopplung",
-      "trend": "Steigend",
-      "risk_level": "HOCH",
-      "description": "Erweiterung der Handels- und Technologieblockaden."
-    }
-  ],
-  "domestic_politics": [
-    {
-      "country": "USA / EU",
-      "topic": "Geldpolitik & Budgetdebatte",
-      "stability_score": "ANGESPANN_T",
-      "details": "Wirtschaftlicher Druck durch hohe Zinsen und Staatsverschuldung."
-    }
-  ],
-  "scenarios": [
-    {
-      "title": "Eskalation im Nahen Osten",
-      "probability_pct": 65,
-      "trigger": "Sperrung von Seestraßen",
-      "market_consequence": "Brent Öl >90$, Gold steigt"
-    }
-  ],
-  "event_graph": [
-    {
-      "event_id": "EVT-2026-0714-034",
-      "title": "Militärische Drohgebärden an maritimen Nadelöhren",
-      "sources": ["Reuters", "AP", "UKMTO"],
-      "confidence": 92,
-      "affected_regions": ["Naher Osten"],
-      "affected_markets": ["Öl", "Gold", "Schifffahrt"]
-    }
-  ],
-  "impact_chains": [
-    {
-      "trigger": "Hormus / Bab al-Mandab Blockade",
-      "chain": ["Tanker-Passagen sinken", "Brent Öl steigt", "Inflation steigt", "Fed bleibt restriktiv", "Gold steigt"],
-      "beneficiaries": ["Brent Öl", "Gold", "Tanker-Reeder"],
-      "detractors": ["Airlines", "Chemie", "Konsumgüter"]
-    }
-  ],
-  "narrative_matrix": [
-    {
-      "topic": "Inflation & Zinspfad",
-      "mainstream": "Fed hält Zinsen stabil, Inflation rückläufig",
-      "brics": "Fokus auf Entdollarisierung und Rohstoffabsicherung",
-      "alternative": "Stagflationsrisiko durch anhaltende Frachtkosten"
-    }
-  ],
-  "assets": [
-    {
-      "name": "Gold & Silber",
-      "signal": "GREEN",
-      "signal_text": "🟢 Attraktiv",
-      "trend": "Steigend",
-      "driver": "Geopolitik & Währungsunsicherheit"
-    }
-  ],
-  "stock_picks": {
-    "top_5_buys": [
-      {"ticker": "MP", "name": "MP Materials", "sector": "Bergbau", "reason": "Unabhängigkeit von China bei Seltenen Erden"}
+  "daily_executive_summary": "3 prägnante Sätze zur Lage.",
+  "market_regime": "Stagflationär / Geopolitische Fragmentierung / Regulierungsdruck",
+  "geoscore": {"current_score": 78, "status_label": "ERHÖHT", "previous_48h": 74},
+  "defcon_status": {"level": 3, "label": "DEFCON 3", "nuclear_risk_percent": 15, "primary_driver": "Hauptursache"},
+  "top_overweight": "Gold, Rohstoffe & Defense",
+  "top_risk": "Systemisches Hauptrisiko",
+
+  "game_theory_deep_dive": {
+    "focal_situation": "Titel des analysierten Ereignisses",
+    "1_fractionated_actors": [
+      {"entity": "Akteur", "factions": [{"faction_name": "Fraktion", "divergent_interest": "Interessensabweichung", "payoff_matrix_short_term": {"action_escalate": -1, "action_cooperate": 2, "action_delay": 0}, "confidence": 85}]}
     ],
-    "flop_5_sells": [
-      {"ticker": "DAL", "name": "Delta Air Lines", "sector": "Luftfahrt", "reason": "Hohe Treibstoffkosten und Flugumleitungen"}
-    ]
+    "2_time_horizon_conflict": {"short_term_one_shot_4_to_8_weeks": "Kurzfristig", "long_term_repeated_game": "Langfristig", "horizon_contradiction": "Widerspruch"},
+    "3_game_structure_and_payoffs": {
+      "type": "Chicken Game / Gefangenendilemma",
+      "justification": "Begründung",
+      "payoff_assessment_scale_minus_3_to_plus_3": [{"scenario_combination": "Akteur A vs B", "payoff_actor_A": 2, "payoff_actor_B": -2, "confidence": 80}]
+    },
+    "4_signaling_and_information": {"information_asymmetry": "Unvollständig", "cheap_talk": ["Bluffs"], "costly_signals": ["Reale Kosten-Handlungen"]},
+    "5_equilibria_and_commitment": {"plausible_nash_equilibria": "Nash-Gleichgewicht", "commitment_problem": "Bindungsproblem", "confidence": 85},
+    "6_falsification_counter_model": {"alternative_interpretation": "Stärkste Gegenlesart", "necessary_conditions": "Bedingungen für Gegenlesart"},
+    "behavioral_framing_check": "Verhalten ist konsistent mit Nutzenfunktion"
   },
-  "knowledge_graph_updates": {
-    "new_entities": [{"id": "E1", "name": "Straße von Hormus", "type": "CHOKEPOINT"}],
-    "new_relations": [{"subject": "Iran", "predicate": "THREATENS_CLOSURE_OF", "object": "Straße von Hormus", "severity": 90}]
+
+  "stress_testing_scenarios": [
+    {
+      "scenario_name": "Szenario Name", "probability_pct": 40, "timeframe": "1-3 Monate",
+      "trigger_events": ["Auslöser 1"], "cascade_chain": ["Kaskade 1", "Kaskade 2"],
+      "winners_long": [{"asset": "Asset", "reason": "Grund"}],
+      "losers_short": [{"asset": "Asset", "reason": "Grund"}],
+      "hedging_strategy": "Absicherung"
+    }
+  ],
+
+  "conflict_hotspots": [
+    {"region": "Region", "actors": "Akteure", "escalation_level": "HOCH", "catalyst": "Auslöser", "impact": "Folge", "lat": 47.01, "lng": 28.86}
+  ],
+
+  "digital_and_monetary_sovereignty": [
+    {"topic": "CBDC / Chatkontrolle / Schulden", "actor": "Institution", "trend": "Beschleunigt", "systemic_impact": "Bürgerrechte/Geld", "market_implication": "Kapitalreaktion"}
+  ],
+
+  "stock_picks": {
+    "top_5_buys": [{"ticker": "TICKER", "name": "Name", "sector": "Sektor", "reason": "Tagesaktueller Grund"}],
+    "flop_5_sells": [{"ticker": "TICKER", "name": "Name", "sector": "Sektor", "reason": "Tagesaktueller Grund"}]
   }
 }
 """
 
 user_payload = f"""
---- HISTORISCHER KNOWLEDGE GRAPH ---
-{kg_context_str}
+--- EXPERTEN-INPUT 1: DEEPSEEK SPIELTHEORIE ---
+{deepseek_analysis}
 
---- LIVE FINANZ- & ROHSTOFFDATEN ---
+--- EXPERTEN-INPUT 2: GEMINI MAKRO & MIGRATION ---
+{gemini_analysis}
+
+--- LIVE FINANZDATEN ---
 {live_market_context}
 
---- AKTUELLE MULTI-DOMÄNEN FEEDS ---
-{feed_context}
+--- GEFILTERTE HARTE FEEDS ---
+{filtered_context}
 """
 
-print("Generiere Argus Grid Phase 2 Intelligence Lageanalyse...")
-raw_text = None
+print("Generiere finale Re-Synthese mit Claude 3.5 Sonnet...")
+final_json_text = None
 
-for model in CLAUDE_MODELS:
+if client_anthropic:
     try:
-        print(f"Versuche Aufruf mit Modell {model}...")
         res = client_anthropic.messages.create(
-            model=model,
+            model="claude-3-5-sonnet-latest",
             max_tokens=8192,
             system=orchestrator_prompt,
             messages=[{"role": "user", "content": user_payload}]
         )
-        raw_text = res.content[0].text.strip()
-        print(f"Erfolgreich generiert mit {model}!")
-        break
+        final_json_text = res.content[0].text.strip()
     except Exception as e:
-        print(f"Modell {model} fehlgeschlagen: {e}")
+        print(f"Claude primär fehlgeschlagen: {e}")
 
-if not raw_text:
-    raise RuntimeError("Fehler: Kein erreichbares Anthropic-Modell gefunden. Bitte API-Key prüfen.")
-
-data = repair_and_parse_json(raw_text)
-
-# Geodaten-Normalisierung für Karte
-GEO_LOOKUP = {
-    "nah": (31.5, 34.75), "iran": (32.42, 53.68), "israel": (31.04, 34.85),
-    "ukraine": (48.37, 31.16), "taiwan": (23.69, 120.96), "rot": (12.58, 43.33)
-}
-
-for h in data.get("conflict_hotspots", []):
+# Fallback auf DeepSeek V3, falls Claude ausfällt
+if not final_json_text and client_deepseek:
+    print("Nutze DeepSeek V3 Fallback für Finales JSON...")
     try:
-        h["lat"] = float(h.get("lat"))
-        h["lng"] = float(h.get("lng"))
-    except (ValueError, TypeError):
-        reg_lower = h.get("region", "").lower()
-        found = False
-        for key, coords in GEO_LOOKUP.items():
-            if key in reg_lower:
-                h["lat"], h["lng"] = coords
-                found = True
-                break
-        if not found or h["lat"] == 0.0:
-            h["lat"], h["lng"] = 25.0, 45.0
+        completion = client_deepseek.chat.completions.create(
+            model="deepseek-chat",
+            messages=[
+                {"role": "system", "content": orchestrator_prompt},
+                {"role": "user", "content": user_payload}
+            ],
+            temperature=0.2
+        )
+        final_json_text = completion.choices[0].message.content.strip()
+    except Exception as e:
+        print(f"DeepSeek Fallback Fehler: {e}")
 
+if not final_json_text:
+    raise RuntimeError("Kritischer Fehler: Keine API konnte das finale JSON erzeugen.")
+
+data = repair_and_parse_json(final_json_text)
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 
-# KNOWLEDGE GRAPH DYNAMISCH ERWEITERN
-kg_updates = data.get("knowledge_graph_updates", {})
-if isinstance(kg_updates, dict):
-    for new_ent in kg_updates.get("new_entities", []):
-        if not any(e.get("name") == new_ent.get("name") for e in knowledge_graph["entities"]):
-            knowledge_graph["entities"].append(new_ent)
-    
-    for new_rel in kg_updates.get("new_relations", []):
-        knowledge_graph["relations"].append(new_rel)
-
-knowledge_graph["relations"] = knowledge_graph["relations"][-500:]
-
-with open(memory_file, "w", encoding="utf-8") as f:
-    json.dump(knowledge_graph, f, ensure_ascii=False, indent=2)
-
-# SPEICHERN FÜR FRONTEND (data.json & history.json)
-history_file = "history.json"
-history_data = []
-if os.path.exists(history_file):
-    try:
-        with open(history_file, "r", encoding="utf-8") as f:
-            history_data = json.load(f)
-    except Exception:
-        history_data = []
-
-today_str = datetime.utcnow().strftime("%d.%m")
-geoscore_obj = data.get("geoscore", {})
-current_score = geoscore_obj.get("current_score") if isinstance(geoscore_obj, dict) else 75
-
-if not history_data or history_data[-1].get("date") != today_str:
-    history_data.append({
-        "date": today_str,
-        "score": current_score,
-        "defcon": data.get("defcon_status", {}).get("level", 3)
-    })
-    history_data = history_data[-30:]
-    with open(history_file, "w", encoding="utf-8") as f:
-        json.dump(history_data, f, ensure_ascii=False, indent=2)
-
+# JSON Speichern
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("Argus Grid Intelligence Engine erfolgreich aktualisiert!")
+print("✅ Argus Grid Multi-LLM Intelligence Engine erfolgreich gelaufen!")
