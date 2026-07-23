@@ -2,7 +2,8 @@ import os
 import json
 import re
 from datetime import datetime
-from groq import Groq, RateLimitError
+import anthropic
+from groq import Groq
 import feedparser
 import requests
 import yfinance as yf
@@ -45,7 +46,7 @@ def get_live_market_data():
 
 live_market_context = get_live_market_data()
 
-# B. ERWEITERTER QUELLENSPIEGEL
+# B. QUELLENSPIEGEL
 rss_urls = {
     # 🌍 1. BRICS & GLOBALER SÜDEN MEDIEN
     "Economic Times (Indien)": "https://economictimes.indiatimes.com/rssfeedstopstories.cms",
@@ -58,7 +59,7 @@ rss_urls = {
     "South China Morning Post": "https://www.scmp.com/rss/91/feed",
     "Asia Times": "https://asiatimes.com/feed/",
 
-    # 🏛️ 2. PRIMÄRQUELLEN & DIPLOMATIE / INNENPOLITIK (WESTEN & BRICS)
+    # 🏛️ 2. PRIMÄRQUELLEN & DIPLOMATIE
     "White House Briefing": "https://www.whitehouse.gov/briefing-room/feed/",
     "US Department of State": "https://www.state.gov/rss-feed/press-releases/feed/",
     "Federal Reserve": "https://www.federalreserve.gov/feeds/press_all.xml",
@@ -86,7 +87,7 @@ rss_urls = {
     "Tagesschau": "https://www.tagesschau.de/ausland/index.xml",
     "BBC World": "http://feeds.bbci.co.uk/news/world/rss.xml",
 
-    # 🔓 4. UNABHÄNGIGE, INVESTIGATIVE & ALTERNATIVE ANALYSTEN
+    # 🔓 4. UNABHÄNGIGE & ALTERNATIVE ANALYSTEN
     "Multipolar Magazin": "https://multipolar-magazin.de/feed",
     "Manova / Rubikon": "https://www.manova.news/feed",
     "Berliner Tageszeitung": "https://www.berlinertageszeitung.de/rss.xml",
@@ -122,225 +123,146 @@ for source_name, url in rss_urls.items():
             title = entry.get('title', '')
             raw_summary = entry.get('summary', '') or entry.get('description', '')
             summary = clean_html(raw_summary)
-            # Auf 120 Zeichen kappen pro Beitrag
-            feed_context += f"- {title}: {summary[:120]}...\n"
+            feed_context += f"- {title}: {summary[:150]}...\n"
     except Exception as e:
         print(f"Fehler bei {source_name}: {e}")
 
-# Kappe den Gesamtkontext der Feeds auf max. 10.000 Zeichen (Tokens sparen!)
-if len(feed_context) > 10000:
-    feed_context = feed_context[:10000] + "\n... [Feeds gekürzt um API-Limits einzuhalten]"
+if len(feed_context) > 12000:
+    feed_context = feed_context[:12000] + "\n... [Feeds gekürzt]"
 
-# C. GROQ CLIENT INITIALISIEREN
-api_key = os.environ.get("GROQ_API_KEY")
-if not api_key:
-    raise ValueError("GROQ_API_KEY nicht in den Umgebungsvariablen gefunden!")
-
-client = Groq(api_key=api_key)
-
-# D. DYNAMISCHER PROMPT
-prompt = f"""
-Du bist der Chef-Strategist des GeoPuls Dashboards.
-
-ECHTE LIVE-FINANZDATEN VOM HEUTIGEN TAG:
-{live_market_context}
-
-TAGESAKTUELLE MEDIEN- & REGIERUNGS-FEEDS:
-{feed_context}
-
-DEIN AUFTRAG:
-Werte die obigen FEEDS und FINANZDATEN tagesaktuell aus. Antworte AUSSCHLIESSLICH in folgendem JSON-Format:
-
-{{
-  "daily_executive_summary": "Synthese der geopolitischen und makroökonomischen Lage heute...",
+# SCHEMA-VORLAGE FÜR BEIDE KIS
+json_template_desc = """
+{
+  "daily_executive_summary": "Synthese...",
   "global_risk_score": 75,
-  "market_regime": "Aktuelles Marktregime",
-  "top_overweight": "Gewinner-Assetklassen",
-  "top_risk": "Größtes Risiko heute",
-  "defcon_status": {{
-    "level": 3,
-    "label": "DEFCON Statusbezeichnung",
-    "nuclear_risk_percent": 15,
-    "primary_driver": "Haupttreiber laut News"
-  }},
+  "market_regime": "Marktregime",
+  "top_overweight": "Gewinner",
+  "top_risk": "Risiko",
+  "defcon_status": {"level": 3, "label": "Label", "nuclear_risk_percent": 15, "primary_driver": "Treiber"},
   "narrative_divergence": [
-    {{
-      "topic": "Brennpunkt / Schauplatz 1",
-      "mainstream_view": "Einschätzung westlicher Medien",
-      "brics_view": "Einschätzung der BRICS-Staaten",
-      "alternative_view": "Einschätzung unabhängiger Analysten"
-    }},
-    {{
-      "topic": "Brennpunkt / Schauplatz 2",
-      "mainstream_view": "Einschätzung westlicher Medien",
-      "brics_view": "Einschätzung der BRICS-Staaten",
-      "alternative_view": "Einschätzung unabhängiger Analysten"
-    }},
-    {{
-      "topic": "Brennpunkt / Schauplatz 3",
-      "mainstream_view": "Einschätzung westlicher Medien",
-      "brics_view": "Einschätzung der BRICS-Staaten",
-      "alternative_view": "Einschätzung unabhängiger Analysten"
-    }}
+    {"topic": "Thema 1", "mainstream_view": "Westen", "brics_view": "BRICS", "alternative_view": "Alternativ"},
+    {"topic": "Thema 2", "mainstream_view": "Westen", "brics_view": "BRICS", "alternative_view": "Alternativ"},
+    {"topic": "Thema 3", "mainstream_view": "Westen", "brics_view": "BRICS", "alternative_view": "Alternativ"}
   ],
   "domestic_politics": [
-    {{
-      "country_region": "Land / Region 1",
-      "topic": "Innenpolitisches Thema",
-      "status": "Aktueller Stand",
-      "impact": "Geopolitische Folge"
-    }},
-    {{
-      "country_region": "Land / Region 2",
-      "topic": "Innenpolitisches Thema",
-      "status": "Aktueller Stand",
-      "impact": "Geopolitische Folge"
-    }},
-    {{
-      "country_region": "Land / Region 3",
-      "topic": "Innenpolitisches Thema",
-      "status": "Aktueller Stand",
-      "impact": "Geopolitische Folge"
-    }}
+    {"country_region": "Region 1", "topic": "Thema", "status": "Status", "impact": "Impact"},
+    {"country_region": "Region 2", "topic": "Thema", "status": "Status", "impact": "Impact"},
+    {"country_region": "Region 3", "topic": "Thema", "status": "Status", "impact": "Impact"}
   ],
-  "stock_picks": {{
-    "top_5_buys": [
-      {{ "ticker": "TICKER1", "name": "Aktienname 1", "sector": "Sektor", "reason": "Begründung laut News" }},
-      {{ "ticker": "TICKER2", "name": "Aktienname 2", "sector": "Sektor", "reason": "Begründung laut News" }},
-      {{ "ticker": "TICKER3", "name": "Aktienname 3", "sector": "Sektor", "reason": "Begründung laut News" }},
-      {{ "ticker": "TICKER4", "name": "Aktienname 4", "sector": "Sektor", "reason": "Begründung laut News" }},
-      {{ "ticker": "TICKER5", "name": "Aktienname 5", "sector": "Sektor", "reason": "Begründung laut News" }}
-    ],
-    "flop_5_sells": [
-      {{ "ticker": "TICKER6", "name": "Verlierer-Aktie 1", "sector": "Sektor", "reason": "Gegenwind laut News" }},
-      {{ "ticker": "TICKER7", "name": "Verlierer-Aktie 2", "sector": "Sektor", "reason": "Gegenwind laut News" }},
-      {{ "ticker": "TICKER8", "name": "Verlierer-Aktie 3", "sector": "Sektor", "reason": "Gegenwind laut News" }},
-      {{ "ticker": "TICKER9", "name": "Verlierer-Aktie 4", "sector": "Sektor", "reason": "Gegenwind laut News" }},
-      {{ "ticker": "TICKER10", "name": "Verlierer-Aktie 5", "sector": "Sektor", "reason": "Gegenwind laut News" }}
-    ]
-  }},
+  "stock_picks": {
+    "top_5_buys": [{"ticker": "T1", "name": "N1", "sector": "S1", "reason": "R1"}, {"ticker": "T2", "name": "N2", "sector": "S2", "reason": "R2"}, {"ticker": "T3", "name": "N3", "sector": "S3", "reason": "R3"}, {"ticker": "T4", "name": "N4", "sector": "S4", "reason": "R4"}, {"ticker": "T5", "name": "N5", "sector": "S5", "reason": "R5"}],
+    "flop_5_sells": [{"ticker": "S1", "name": "N1", "sector": "S1", "reason": "R1"}, {"ticker": "S2", "name": "N2", "sector": "S2", "reason": "R2"}, {"ticker": "S3", "name": "N3", "sector": "S3", "reason": "R3"}, {"ticker": "S4", "name": "N4", "sector": "S4", "reason": "R4"}, {"ticker": "S5", "name": "N5", "sector": "S5", "reason": "R5"}]
+  },
   "conflict_hotspots": [
-    {{
-      "region": "Krisenherd 1",
-      "actors": "Akteure",
-      "escalation_level": "KRITISCH",
-      "catalyst": "Auslöser laut News",
-      "impact": "Märkte",
-      "lat": 0.0,
-      "lng": 0.0
-    }},
-    {{
-      "region": "Krisenherd 2",
-      "actors": "Akteure",
-      "escalation_level": "HOCH",
-      "catalyst": "Auslöser laut News",
-      "impact": "Märkte",
-      "lat": 0.0,
-      "lng": 0.0
-    }},
-    {{
-      "region": "Krisenherd 3",
-      "actors": "Akteure",
-      "escalation_level": "HOCH",
-      "catalyst": "Auslöser laut News",
-      "impact": "Märkte",
-      "lat": 0.0,
-      "lng": 0.0
-    }},
-    {{
-      "region": "Krisenherd 4",
-      "actors": "Akteure",
-      "escalation_level": "MITTEL-HOCH",
-      "catalyst": "Auslöser laut News",
-      "impact": "Märkte",
-      "lat": 0.0,
-      "lng": 0.0
-    }}
+    {"region": "R1", "actors": "A1", "escalation_level": "KRITISCH", "catalyst": "C1", "impact": "I1", "lat": 31.5, "lng": 34.75},
+    {"region": "R2", "actors": "A2", "escalation_level": "HOCH", "catalyst": "C2", "impact": "I2", "lat": 48.37, "lng": 31.16},
+    {"region": "R3", "actors": "A3", "escalation_level": "HOCH", "catalyst": "C3", "impact": "I3", "lat": 23.69, "lng": 120.96},
+    {"region": "R4", "actors": "A4", "escalation_level": "MITTEL", "catalyst": "C4", "impact": "I4", "lat": 12.58, "lng": 43.33}
   ],
   "systemic_risks": [
-    {{
-      "topic": "Systemisches Risiko 1",
-      "category": "Kategorie",
-      "risk_level": "HOCH",
-      "status": "Status",
-      "impact": "Folge"
-    }},
-    {{
-      "topic": "Systemisches Risiko 2",
-      "category": "Kategorie",
-      "risk_level": "HOCH",
-      "status": "Status",
-      "impact": "Folge"
-    }},
-    {{
-      "topic": "Systemisches Risiko 3",
-      "category": "Kategorie",
-      "risk_level": "MITTEL",
-      "status": "Status",
-      "impact": "Folge"
-    }}
+    {"topic": "T1", "category": "C1", "risk_level": "HOCH", "status": "S1", "impact": "I1"},
+    {"topic": "T2", "category": "C2", "risk_level": "HOCH", "status": "S2", "impact": "I2"},
+    {"topic": "T3", "category": "C3", "risk_level": "MITTEL", "status": "S3", "impact": "I3"}
   ],
   "assets": [
-    {{ "name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber" }},
-    {{ "name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber" }},
-    {{ "name": "Uran & Energie", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "Trend", "driver": "Treiber" }},
-    {{ "name": "S&P 500 / Nasdaq", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Trend", "driver": "Treiber" }},
-    {{ "name": "Bitcoin & Krypto", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "Trend", "driver": "Treiber" }},
-    {{ "name": "High-Yield Bonds", "signal": "RED", "signal_text": "🔴 Unattraktiv", "trend": "Trend", "driver": "Treiber" }},
-    {{ "name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "Trend", "driver": "Treiber" }}
+    {"name": "Gold & Silber", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "T", "driver": "D"},
+    {"name": "KI & Halbleiter", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "T", "driver": "D"},
+    {"name": "Uran & Energie", "signal": "GREEN", "signal_text": "🟢 Attraktiv", "trend": "T", "driver": "D"},
+    {"name": "S&P 500 / Nasdaq", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "T", "driver": "D"},
+    {"name": "Bitcoin & Krypto", "signal": "AMBER", "signal_text": "🟡 Neutral", "trend": "T", "driver": "D"},
+    {"name": "High-Yield Bonds", "signal": "RED", "signal_text": "🔴 Unattraktiv", "trend": "T", "driver": "D"},
+    {"name": "Gewerbeimmobilien", "signal": "RED", "signal_text": "🔴 Meiden", "trend": "T", "driver": "D"}
   ],
   "scenarios": [
-    {{ "title": "Szenario 1", "prob": 40 }},
-    {{ "title": "Szenario 2", "prob": 30 }},
-    {{ "title": "Szenario 3", "prob": 15 }},
-    {{ "title": "Szenario 4", "prob": 15 }}
+    {"title": "S1", "prob": 40},
+    {"title": "S2", "prob": 30},
+    {"title": "S3", "prob": 15},
+    {"title": "S4", "prob": 15}
   ]
-}}
+}
 """
 
-print("Rufe Groq API auf...")
+raw_text = None
+generator_used = "Claude 3.5 Sonnet"
 
-# E. GROQ API AUFRUF MIT FALLBACK BEI RATE-LIMIT
-selected_model = "llama-3.3-70b-versatile"
+# 1. SCHRITT: CLAUDE GENERIERT DEN ENTWURF
+anth_key = os.environ.get("ANTHROPIC_API_KEY")
+if anth_key:
+    try:
+        print("Schritt 1: Claude 3.5 Sonnet generiert den Analyse-Entwurf...")
+        client_anthropic = anthropic.Anthropic(api_key=anth_key)
+        response = client_anthropic.messages.create(
+            model="claude-3-5-sonnet-20241022",
+            max_tokens=4000,
+            temperature=0.2,
+            system="Du bist ein präzises OSINT-Geopolitikmodell. Antworte AUSSCHLIESSLICH im validen JSON-Format basierend auf diesem Schema:\n" + json_template_desc,
+            messages=[{"role": "user", "content": f"Live-Finanzdaten:\n{live_market_context}\n\nFeeds:\n{feed_context}"}]
+        )
+        raw_text = response.content[0].text.strip()
+    except Exception as e:
+        print(f"Claude Fehler: {e}. Wechsle zu Llama als primärer Generator...")
 
-try:
-    chat_completion = client.chat.completions.create(
-        messages=[
-            {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Analysiere die Feeds dynamisch und antworte rein in JSON."},
-            {"role": "user", "content": prompt}
-        ],
-        model=selected_model,
-        response_format={"type": "json_object"}
-    )
-except RateLimitError:
-    print(f"Rate Limit für {selected_model} erreicht! Wechsle auf Fallback-Modell llama-3.1-8b-instant...")
-    selected_model = "llama-3.1-8b-instant"
-    chat_completion = client.chat.completions.create(
-        messages=[
-            {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Analysiere die Feeds dynamisch und antworte rein in JSON."},
-            {"role": "user", "content": prompt}
-        ],
-        model=selected_model,
-        response_format={"type": "json_object"}
-    )
-except Exception as e:
-    print(f"Allgemeiner Groq-Fehler mit {selected_model}: {e}. Versuche Fallback...")
-    selected_model = "llama-3.1-8b-instant"
-    chat_completion = client.chat.completions.create(
-        messages=[
-            {"role": "system", "content": "Du bist ein hochpräzises OSINT-Geopolitikmodell. Analysiere die Feeds dynamisch und antworte rein in JSON."},
-            {"role": "user", "content": prompt}
-        ],
-        model=selected_model,
-        response_format={"type": "json_object"}
-    )
+# Fallback auf Llama wenn Claude fehlgeschlagen ist
+if not raw_text:
+    groq_key = os.environ.get("GROQ_API_KEY")
+    if groq_key:
+        print("Claude nicht erreichbar. Llama 3.3 übernimmt als Generator...")
+        client_groq = Groq(api_key=groq_key)
+        chat_completion = client_groq.chat.completions.create(
+            messages=[
+                {"role": "system", "content": "Du bist ein präzises OSINT-Modell. Antworte rein in JSON."},
+                {"role": "user", "content": f"Live-Finanzdaten:\n{live_market_context}\n\nFeeds:\n{feed_context}\n\nSchema:\n{json_template_desc}"}
+            ],
+            model="llama-3.3-70b-versatile",
+            response_format={"type": "json_object"}
+        )
+        raw_text = chat_completion.choices[0].message.content
+        generator_used = "Llama 3.3 (Fallback-Generator)"
 
-data = json.loads(chat_completion.choices[0].message.content)
+# Säubern von Markdown Wrappern
+if raw_text and raw_text.startswith("```"):
+    raw_text = re.sub(r"^```[a-zA-Z]*\n?", "", raw_text)
+    raw_text = re.sub(r"\n?```$", "", raw_text)
+
+data = json.loads(raw_text)
+
+
+# 2. SCHRITT: LLAMA KLOPFT AUF DIE FINGER (AUDIT & QUALITÄTSKONTROLLE)
+groq_key = os.environ.get("GROQ_API_KEY")
+if groq_key:
+    try:
+        print("Schritt 2: Llama 3.3 (Groq) prüft Claude's Entwurf ('Fingerklopfen'-Audit)...")
+        client_groq = Groq(api_key=groq_key)
+        audit_prompt = f"""
+Du bist der leitende Chefredakteur und OSINT-Qualitätskontrolleur. 
+Prüfe den folgenden JSON-Entwurf eines Analysten auf Plausibilität, logische Fehler, korrekte Ticker und ob alle geforderten JSON-Keys vorhanden sind. Korrigiere Fehler, falls Claude geschlampt oder halluziniert hat.
+Gib AUSSCHLIESSLICH das korrigierte, valide JSON zurück.
+
+JSON-Entwurf zum Prüfen:
+{json.dumps(data, ensure_ascii=False)}
+"""
+        audit_completion = client_groq.chat.completions.create(
+            messages=[
+                {"role": "system", "content": "Du bist ein strenger OSINT-Auditor. Korrigiere das JSON falls nötig und gib es im exakten Format zurück."},
+                {"role": "user", "content": audit_prompt}
+            ],
+            model="llama-3.3-70b-versatile",
+            response_format={"type": "json_object"}
+        )
+        audited_text = audit_completion.choices[0].message.content.strip()
+        if audited_text.startswith("```"):
+            audited_text = re.sub(r"^```[a-zA-Z]*\n?", "", audited_text)
+            audited_text = re.sub(r"\n?```$", "", audited_text)
+        
+        data = json.loads(audited_text)
+        print("Audit durch Llama erfolgreich abgeschlossen. Daten wurden verifiziert.")
+    except Exception as e:
+        print(f"Hinweis: Llama-Audit übersprungen wegen Fehler: {e}")
+
 
 # --- NORMALISIERUNG ALLER FELDER ---
-
 if not data.get("daily_executive_summary"):
-    data["daily_executive_summary"] = data.get("executive_summary") or data.get("summary") or "Die geopolitische Lage bleibt durch multidimensionale Krisen im Nahen Osten, in Osteuropa und Ostasien angespannt."
+    data["daily_executive_summary"] = data.get("executive_summary") or data.get("summary") or "Die geopolitische Lage bleibt angespannt."
 
 raw_nd = data.get("narrative_divergence", [])
 if isinstance(raw_nd, dict):
@@ -351,9 +273,9 @@ for item in raw_nd:
     if isinstance(item, dict):
         normalized_nd.append({
             "topic": item.get("topic") or "Geopolitischer Schauplatz",
-            "mainstream_view": item.get("mainstream_view") or item.get("mainstream") or "Fokus auf westliche Ordnung und Bündnisse.",
-            "brics_view": item.get("brics_view") or item.get("brics") or "Fokus auf multipolare Perspektive und Souveränität.",
-            "alternative_view": item.get("alternative_view") or item.get("alternative") or "Fokus auf verdeckte Kaskadeneffekte."
+            "mainstream_view": item.get("mainstream_view") or item.get("mainstream") or "Fokus auf westliche Ordnung.",
+            "brics_view": item.get("brics_view") or item.get("brics") or "Fokus auf multipolare Perspektive.",
+            "alternative_view": item.get("alternative_view") or item.get("alternative") or "Fokus auf Kaskadeneffekte."
         })
 
 data["narrative_divergence"] = normalized_nd
@@ -407,4 +329,4 @@ if not history_data or history_data[-1].get("date") != today_str:
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print(f"GeoPuls Dashboard erfolgreich mit Modell '{selected_model}' aktualisiert!")
+print(f"GeoPuls Dashboard erfolgreich aktualisiert! (Generator: {generator_used} + Llama Auditor)")
