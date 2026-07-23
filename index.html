@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoPuls — Geopolitisches OSINT Lagezentrum</title>
+    <title>Argus Grid — OSINT Lagezentrum</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -52,15 +52,6 @@
         .leaflet-container {
             background-color: #0d1322 !important;
         }
-        .pulse-red {
-            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
-            animation: pulse-red-anim 2s infinite;
-        }
-        @keyframes pulse-red-anim {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-        }
         .glass-card {
             background: rgba(17, 24, 39, 0.85);
             backdrop-filter: blur(8px);
@@ -86,17 +77,17 @@
         <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
             <div class="flex items-center space-x-3">
                 <div class="p-2 bg-blue-600/20 rounded-lg border border-blue-500/30 text-accentcyan">
-                    <i class="fa-solid fa-earth-americas text-2xl"></i>
+                    <i class="fa-solid fa-eye text-2xl"></i>
                 </div>
                 <div>
                     <h1 class="text-xl font-bold tracking-wider text-white flex items-center gap-2">
-                        GeoPuls <span class="text-xs font-normal px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 border border-blue-700/50">OSINT Core</span>
+                        Argus Grid <span class="text-xs font-normal px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 border border-blue-700/50">OSINT Engine</span>
                     </h1>
-                    <p class="text-xs text-gray-400">Automatisierte Intelligence & Makro-Synthese Engine</p>
+                    <p class="text-xs text-gray-400">Automatisierte Intelligence & Makro-Synthese</p>
                 </div>
             </div>
 
-            <!-- CLAUDE & SOURCES BADGES -->
+            <!-- BADGES -->
             <div class="flex flex-wrap items-center gap-3 text-xs">
                 <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300">
                     <i class="fa-solid fa-brain text-amber-400"></i>
@@ -172,35 +163,31 @@
                 </div>
             </div>
 
-            <!-- TOP OVERWEIGHT / GEWINNER -->
+            <!-- TOP OVERWEIGHT -->
             <div class="glass-card rounded-xl p-5 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-center text-xs text-emerald-400 mb-1">
                         <span>TOP ASSET-FOKUS</span>
                         <i class="fa-solid fa-arrow-trend-up"></i>
                     </div>
-                    <div id="top-overweight-val" class="text-lg font-bold text-white my-2">
-                        --
-                    </div>
+                    <div id="top-overweight-val" class="text-lg font-bold text-white my-2">--</div>
                 </div>
                 <div class="text-xs text-gray-400 border-t border-gray-800 pt-2">
-                    Makro-Rückenwind durch Liquidität & Rohstoffnachfrage
+                    Makro-Rückenwind durch Liquidität & Rohstoffe
                 </div>
             </div>
 
-            <!-- TOP RISK / HAUPTRISIKO -->
+            <!-- TOP RISK -->
             <div class="glass-card rounded-xl p-5 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-center text-xs text-red-400 mb-1">
                         <span>HAUPTRISIKO-TREIBER</span>
                         <i class="fa-solid fa-triangle-exclamation"></i>
                     </div>
-                    <div id="top-risk-val" class="text-lg font-bold text-white my-2">
-                        --
-                    </div>
+                    <div id="top-risk-val" class="text-lg font-bold text-white my-2">--</div>
                 </div>
                 <div class="text-xs text-gray-400 border-t border-gray-800 pt-2">
-                    Höchster Kaskaden-Einfluss auf globale Lieferketten
+                    Höchster Kaskaden-Einfluss auf globale Ketten
                 </div>
             </div>
         </div>
@@ -220,10 +207,44 @@
             <div id="map"></div>
         </section>
 
-        <!-- EVENT GRAPH & KAUSALITÄTSKETTEN (2-COL) -->
+        <!-- WELTPOLITIK & INNENPOLITIK -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
-            <!-- EVENT GRAPH / DEDUPLIZIERTE EREIGNISSE -->
+            <!-- WELTPOLITIK & SYSTEMISCHE RISIKEN -->
+            <section class="glass-card rounded-xl p-5 space-y-4">
+                <h2 class="text-base font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+                    <i class="fa-solid fa-globe text-accentcyan"></i> Weltpolitik & Systemische Risiken
+                </h2>
+                <div id="systemic-risks-container" class="space-y-3">
+                    <!-- Dynamic List -->
+                </div>
+            </section>
+
+            <!-- INNENPOLITIK & REGIONALE STABILITÄT -->
+            <section class="glass-card rounded-xl p-5 space-y-4">
+                <h2 class="text-base font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+                    <i class="fa-solid fa-landmark text-blue-400"></i> Innenpolitik & Regionale Stabilität
+                </h2>
+                <div id="domestic-politics-container" class="space-y-3">
+                    <!-- Dynamic List -->
+                </div>
+            </section>
+        </div>
+
+        <!-- GEOPOLITISCHE SZENARIEN-MATRIX -->
+        <section class="glass-card rounded-xl p-5">
+            <h2 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-gray-800 pb-3">
+                <i class="fa-solid fa-chart-line text-accentamber"></i> Geopolitische Szenarien & Wahrscheinlichkeiten
+            </h2>
+            <div id="probability-container" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Dynamic Items -->
+            </div>
+        </section>
+
+        <!-- EVENT GRAPH & KAUSALITÄTSKETTEN -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <!-- EVENT GRAPH -->
             <section class="glass-card rounded-xl p-5 space-y-4">
                 <h2 class="text-base font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
                     <i class="fa-solid fa-diagram-project text-accentblue"></i> Deduplizierter Event-Graph
@@ -233,7 +254,7 @@
                 </div>
             </section>
 
-            <!-- KAUSALITÄTSKETTEN / IMPACT CHAINS -->
+            <!-- KAUSALITÄTSKETTEN -->
             <section class="glass-card rounded-xl p-5 space-y-4">
                 <h2 class="text-base font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
                     <i class="fa-solid fa-cubes-stacked text-accentamber"></i> Kausalitätsketten & Kaskadeneffekte
@@ -244,7 +265,7 @@
             </section>
         </div>
 
-        <!-- NARRATIV-MATRIX (MAINSTREAM VS BRICS VS ALTERNATIV) -->
+        <!-- NARRATIV-MATRIX -->
         <section class="glass-card rounded-xl p-5">
             <h2 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-gray-800 pb-3">
                 <i class="fa-solid fa-masks-theater text-purple-400"></i> Triangulierte Narrativ-Matrix
@@ -266,10 +287,10 @@
             </div>
         </section>
 
-        <!-- MARKTSIGNALE & AKTIEN-PICKS (2-COL) -->
+        <!-- MARKTSIGNALE & AKTIEN-PICKS -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
-            <!-- ASSET ALLOKATION -->
+            <!-- ASSETS -->
             <section class="glass-card rounded-xl p-5">
                 <h2 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-gray-800 pb-3">
                     <i class="fa-solid fa-chart-pie text-emerald-400"></i> Asset-Klassen & Signale
@@ -279,7 +300,7 @@
                 </div>
             </section>
 
-            <!-- STOCK PICKS / AKTIEN TOP 5 BUYS & SELLS -->
+            <!-- STOCK PICKS -->
             <section class="glass-card rounded-xl p-5">
                 <h2 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-gray-800 pb-3">
                     <i class="fa-solid fa-money-bill-trend-up text-accentcyan"></i> Geopolitische Aktien-Setups
@@ -299,55 +320,39 @@
 
     </main>
 
-    <!-- FOOTER WITH ANTHROPIC & QUELLEN ACKNOWLEDGEMENT -->
+    <!-- FOOTER -->
     <footer class="max-w-7xl mx-auto px-4 mt-12 border-t border-gray-800 pt-6 text-center text-xs text-gray-500 space-y-2">
         <p class="flex items-center justify-center gap-2">
-            <span>GeoPuls Intelligence Engine &copy; 2026</span> •
+            <span>Argus Grid &copy; 2026</span> •
             <span>Synthese via <strong class="text-amber-400">Anthropic Claude 3.5 Sonnet</strong></span> •
             <span>Hosted via GitHub Pages</span>
         </p>
-        <p class="text-gray-600 max-w-3xl mx-auto">
-            Datenbasis: 68 gewichtete Primärquellen (Federal Reserve, EZB, BIS, Reuters, AP, ISW, USNI Marine-OSINT, Kremlin, MFA China, CSIS, Reddit OSINT, ZeroHedge u.v.m.). Ersetzung durch automatischen 48h-Cronjob.
-        </p>
     </footer>
 
-    <!-- JAVASCRIPT FOR DATA FETCHING & UI RENDERING -->
+    <!-- JAVASCRIPT FOR RENDERING -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // 1. Leaflet Map Init
             const map = L.map('map').setView([25.0, 30.0], 2);
             L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
                 attribution: '&copy; OpenStreetMap &copy; CARTO',
-                subdomains: 'abcd',
                 maxZoom: 19
             }).addTo(map);
 
-            // 2. Fetch data.json
             fetch('data.json')
                 .then(res => res.json())
-                .then(data => {
-                    renderDashboard(data);
-                })
-                .catch(err => {
-                    console.error("Fehler beim Laden von data.json:", err);
-                    document.getElementById('executive-summary').innerText = "Fehler beim Laden der Lagedaten. Bitte stelle sicher, dass data.json existiert.";
-                });
+                .then(data => renderDashboard(data))
+                .catch(err => console.error("Fehler beim Laden von data.json:", err));
 
-            // 3. Fetch history.json for GeoScore Chart
             fetch('history.json')
                 .then(res => res.json())
-                .then(history => {
-                    renderHistoryChart(history);
-                })
+                .then(history => renderHistoryChart(history))
                 .catch(err => console.log("Keine history.json gefunden."));
 
             function renderDashboard(data) {
-                // Header & Summary
                 document.getElementById('timestamp-display').innerText = data.timestamp || "Aktuell";
                 document.getElementById('executive-summary').innerText = data.daily_executive_summary || "Keine Zusammenfassung verfügbar.";
                 document.getElementById('market-regime-tag').innerText = "Regime: " + (data.market_regime || "Stabil");
 
-                // GeoScore
                 const geoscore = data.geoscore || {};
                 const scoreVal = geoscore.current_score || data.global_risk_score || 75;
                 document.getElementById('geoscore-val').innerText = scoreVal;
@@ -357,17 +362,13 @@
                 const diff = (scoreVal - prevScore).toFixed(1);
                 const diffElem = document.getElementById('geoscore-diff');
                 diffElem.innerText = (diff >= 0 ? "+" : "") + diff + " vs. 48h";
-                if (diff > 0) diffElem.className = "text-xs px-2 py-0.5 rounded bg-red-900/50 text-red-300 border border-red-700/50";
-                else if (diff < 0) diffElem.className = "text-xs px-2 py-0.5 rounded bg-emerald-900/50 text-emerald-300 border border-emerald-700/50";
 
-                // DEFCON
                 const defcon = data.defcon_status || {};
                 document.getElementById('defcon-level').innerText = defcon.level || 3;
                 document.getElementById('defcon-label').innerText = defcon.label || "DEFCON 3";
                 document.getElementById('defcon-nuclear').innerText = "Nuklear-Risiko: " + (defcon.nuclear_risk_percent || 15) + "%";
                 document.getElementById('defcon-driver').innerText = "Treiber: " + (defcon.primary_driver || "Regionale Spannungen");
 
-                // Overweight / Risk
                 document.getElementById('top-overweight-val').innerText = data.top_overweight || "Gold & Energie";
                 document.getElementById('top-risk-val').innerText = data.top_risk || "Lieferketten-Unterbrechung";
 
@@ -378,115 +379,147 @@
                         if (spot.escalation_level === 'KRITISCH') color = '#ef4444';
                         else if (spot.escalation_level === 'HOCH') color = '#f59e0b';
 
-                        const marker = L.circleMarker([spot.lat, spot.lng], {
+                        L.circleMarker([spot.lat, spot.lng], {
                             radius: 8,
                             fillColor: color,
                             color: '#ffffff',
                             weight: 1.5,
-                            opacity: 1,
                             fillOpacity: 0.8
-                        }).addTo(map);
-
-                        marker.bindPopup(`
+                        }).addTo(map).bindPopup(`
                             <div class="text-xs text-gray-900 font-sans p-1">
                                 <strong class="text-sm font-bold block border-b pb-1 mb-1">${spot.region}</strong>
                                 <div><strong>Akteure:</strong> ${spot.actors}</div>
                                 <div><strong>Eskalation:</strong> <span style="color:${color}">${spot.escalation_level}</span></div>
                                 <div><strong>Katalysator:</strong> ${spot.catalyst}</div>
-                                <div><strong>Auswirkung:</strong> ${spot.impact}</div>
                             </div>
                         `);
                     });
                 }
 
+                // WELTPOLITIK & SYSTEMISCHE RISIKEN
+                const sysContainer = document.getElementById('systemic-risks-container');
+                sysContainer.innerHTML = '';
+                (data.systemic_risks || []).forEach(risk => {
+                    sysContainer.innerHTML += `
+                        <div class="p-3 rounded-lg bg-gray-800/40 border border-gray-700/50 flex justify-between items-start gap-2">
+                            <div>
+                                <div class="font-bold text-xs text-white">${risk.topic}</div>
+                                <div class="text-[11px] text-gray-400 mt-0.5">${risk.impact || risk.status}</div>
+                            </div>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded ${risk.risk_level === 'HOCH' || risk.risk_level === 'KRITISCH' ? 'bg-red-900/50 text-red-300 border border-red-700/50' : 'bg-amber-900/50 text-amber-300 border border-amber-700/50'}">
+                                ${risk.risk_level || 'MITTEL'}
+                            </span>
+                        </div>
+                    `;
+                });
+
+                // INNENPOLITIK
+                const domesticContainer = document.getElementById('domestic-politics-container');
+                domesticContainer.innerHTML = '';
+                (data.domestic_politics || []).forEach(item => {
+                    domesticContainer.innerHTML += `
+                        <div class="p-3 rounded-lg bg-gray-800/40 border border-gray-700/50">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-white text-xs">${item.country_region}</span>
+                                <span class="text-[10px] px-2 py-0.5 rounded bg-gray-700 text-gray-300">${item.status}</span>
+                            </div>
+                            <div class="text-xs font-semibold text-accentcyan mb-1">${item.topic}</div>
+                            <div class="text-[11px] text-gray-400">${item.impact}</div>
+                        </div>
+                    `;
+                });
+
+                // SZENARIEN & WAHRSCHEINLICHKEITEN
+                const probContainer = document.getElementById('probability-container');
+                probContainer.innerHTML = '';
+                (data.probability_matrix || data.scenarios || []).forEach(scen => {
+                    const prob = scen.probability_pct || scen.prob || 0;
+                    const title = scen.scenario || scen.title || 'Szenario';
+                    const trend = scen.trend || '';
+                    probContainer.innerHTML += `
+                        <div class="p-3 rounded-lg bg-gray-800/40 border border-gray-700/50">
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="font-medium text-white">${title}</span>
+                                <span class="font-bold text-accentcyan">${prob}% ${trend ? '(' + trend + ')' : ''}</span>
+                            </div>
+                            <div class="w-full bg-gray-700 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-accentcyan h-1.5 rounded-full" style="width: ${prob}%"></div>
+                            </div>
+                        </div>
+                    `;
+                });
+
                 // Event Graph
                 const eventContainer = document.getElementById('event-graph-container');
                 eventContainer.innerHTML = '';
                 (data.event_graph || []).forEach(evt => {
-                    const item = document.createElement('div');
-                    item.className = "p-3 rounded-lg bg-gray-800/50 border border-gray-700/60 hover:border-blue-500/50 transition";
-                    item.innerHTML = `
-                        <div class="flex justify-between items-start gap-2 mb-1">
-                            <span class="font-semibold text-white text-xs">${evt.headline}</span>
-                            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-900/50 text-blue-300 border border-blue-700/50">${evt.category}</span>
-                        </div>
-                        <div class="flex flex-wrap items-center gap-3 text-[11px] text-gray-400 mt-2">
-                            <span><i class="fa-solid fa-users text-gray-500"></i> ${evt.actors ? evt.actors.join(', ') : 'Global'}</span>
-                            <span><i class="fa-solid fa-shield text-gray-500"></i> Severity: ${evt.severity}/100</span>
-                            <span><i class="fa-solid fa-newspaper text-gray-500"></i> ${evt.sources_count || 1} Quellen</span>
+                    eventContainer.innerHTML += `
+                        <div class="p-3 rounded-lg bg-gray-800/50 border border-gray-700/60">
+                            <div class="flex justify-between items-start gap-2 mb-1">
+                                <span class="font-semibold text-white text-xs">${evt.headline}</span>
+                                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-900/50 text-blue-300 border border-blue-700/50">${evt.category}</span>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-3 text-[11px] text-gray-400 mt-2">
+                                <span>Severity: ${evt.severity}/100</span>
+                                <span>${evt.sources_count || 1} Quellen</span>
+                            </div>
                         </div>
                     `;
-                    eventContainer.appendChild(item);
                 });
 
                 // Impact Chains
                 const impactContainer = document.getElementById('impact-chains-container');
                 impactContainer.innerHTML = '';
                 (data.impact_chains || []).forEach(chain => {
-                    const item = document.createElement('div');
-                    item.className = "p-3 rounded-lg bg-gray-800/40 border border-gray-700/50";
                     const steps = (chain.steps || []).map((step, idx) => `
                         <div class="flex items-start gap-2 text-xs text-gray-300">
-                            <span class="text-accentcyan font-mono font-bold">${idx + 1}.</span>
+                            <span class="text-accentcyan font-bold">${idx + 1}.</span>
                             <span>${step}</span>
                         </div>
                     `).join('');
 
-                    item.innerHTML = `
-                        <div class="text-xs font-bold text-amber-300 mb-2 flex items-center gap-1.5">
-                            <i class="fa-solid fa-circle-play text-amber-400"></i> ${chain.trigger}
-                        </div>
-                        <div class="space-y-1.5 pl-2 border-l-2 border-gray-700 my-2">
-                            ${steps}
-                        </div>
-                        <div class="flex flex-wrap gap-2 text-[10px] mt-2 pt-2 border-t border-gray-800">
-                            <span class="text-emerald-400">Profiteure: ${(chain.primary_beneficiaries || []).join(', ')}</span>
-                            <span class="text-red-400">Verlierer: ${(chain.primary_detractors || []).join(', ')}</span>
+                    impactContainer.innerHTML += `
+                        <div class="p-3 rounded-lg bg-gray-800/40 border border-gray-700/50">
+                            <div class="text-xs font-bold text-amber-300 mb-2">${chain.trigger}</div>
+                            <div class="space-y-1.5 pl-2 border-l-2 border-gray-700 my-2">${steps}</div>
                         </div>
                     `;
-                    impactContainer.appendChild(item);
                 });
 
                 // Narrative Matrix
                 const narrativeTbody = document.getElementById('narrative-tbody');
                 narrativeTbody.innerHTML = '';
                 (data.narrative_divergence || []).forEach(row => {
-                    const tr = document.createElement('tr');
-                    tr.className = "hover:bg-gray-800/30 transition";
-                    tr.innerHTML = `
-                        <td class="p-3 font-semibold text-white border-r border-gray-800">${row.topic}</td>
-                        <td class="p-3 border-r border-gray-800 text-gray-300">${row.mainstream_view}</td>
-                        <td class="p-3 border-r border-gray-800 text-gray-300">${row.brics_view}</td>
-                        <td class="p-3 text-gray-300">${row.alternative_view}</td>
+                    narrativeTbody.innerHTML += `
+                        <tr class="hover:bg-gray-800/30 transition">
+                            <td class="p-3 font-semibold text-white border-r border-gray-800">${row.topic}</td>
+                            <td class="p-3 border-r border-gray-800 text-gray-300">${row.mainstream_view}</td>
+                            <td class="p-3 border-r border-gray-800 text-gray-300">${row.brics_view}</td>
+                            <td class="p-3 text-gray-300">${row.alternative_view}</td>
+                        </tr>
                     `;
-                    narrativeTbody.appendChild(tr);
                 });
 
-                // Assets Signal
+                // Assets & Stock Picks
                 const assetsContainer = document.getElementById('assets-container');
                 assetsContainer.innerHTML = '';
                 (data.assets || []).forEach(asset => {
-                    const item = document.createElement('div');
-                    item.className = "flex items-center justify-between p-2.5 rounded bg-gray-800/40 border border-gray-800 text-xs";
-                    item.innerHTML = `
-                        <span class="font-medium text-white">${asset.name}</span>
-                        <span class="px-2 py-0.5 rounded ${asset.signal === 'GREEN' ? 'bg-emerald-900/40 text-emerald-300 border border-emerald-700/50' : asset.signal === 'RED' ? 'bg-red-900/40 text-red-300 border border-red-700/50' : 'bg-amber-900/40 text-amber-300 border border-amber-700/50'}">
-                            ${asset.signal_text || asset.signal}
-                        </span>
+                    assetsContainer.innerHTML += `
+                        <div class="flex items-center justify-between p-2.5 rounded bg-gray-800/40 border border-gray-800 text-xs">
+                            <span class="font-medium text-white">${asset.name}</span>
+                            <span class="px-2 py-0.5 rounded ${asset.signal === 'GREEN' ? 'bg-emerald-900/40 text-emerald-300' : asset.signal === 'RED' ? 'bg-red-900/40 text-red-300' : 'bg-amber-900/40 text-amber-300'}">
+                                ${asset.signal_text || asset.signal}
+                            </span>
+                        </div>
                     `;
-                    assetsContainer.appendChild(item);
                 });
 
-                // Stock Picks
                 const stockBuys = document.getElementById('stock-buys');
                 const stockSells = document.getElementById('stock-sells');
                 stockBuys.innerHTML = '';
                 stockSells.innerHTML = '';
 
-                const buys = (data.stock_picks && data.stock_picks.top_5_buys) || [];
-                const sells = (data.stock_picks && data.stock_picks.flop_5_sells) || [];
-
-                buys.forEach(pick => {
+                ((data.stock_picks && data.stock_picks.top_5_buys) || []).forEach(pick => {
                     stockBuys.innerHTML += `
                         <div class="p-2 rounded bg-emerald-950/20 border border-emerald-800/40 text-xs">
                             <div class="font-bold text-emerald-300">${pick.ticker} — ${pick.name}</div>
@@ -495,7 +528,7 @@
                     `;
                 });
 
-                sells.forEach(pick => {
+                ((data.stock_picks && data.stock_picks.flop_5_sells) || []).forEach(pick => {
                     stockSells.innerHTML += `
                         <div class="p-2 rounded bg-red-950/20 border border-red-800/40 text-xs">
                             <div class="font-bold text-red-300">${pick.ticker} — ${pick.name}</div>
@@ -507,15 +540,12 @@
 
             function renderHistoryChart(historyData) {
                 const ctx = document.getElementById('geoscoreHistoryChart').getContext('2d');
-                const labels = historyData.map(h => h.date);
-                const scores = historyData.map(h => h.score);
-
                 new Chart(ctx, {
                     type: 'line',
                     data: {
-                        labels: labels,
+                        labels: historyData.map(h => h.date);
                         datasets: [{
-                            data: scores,
+                            data: historyData.map(h => h.score),
                             borderColor: '#00f2fe',
                             borderWidth: 2,
                             pointRadius: 0,
@@ -528,10 +558,7 @@
                         responsive: true,
                         maintainAspectRatio: false,
                         plugins: { legend: { display: false } },
-                        scales: {
-                            x: { display: false },
-                            y: { display: false }
-                        }
+                        scales: { x: { display: false }, y: { display: false } }
                     }
                 });
             }
