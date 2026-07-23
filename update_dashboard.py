@@ -3,7 +3,6 @@ import json
 import re
 from datetime import datetime
 import anthropic
-from groq import Groq, RateLimitError
 import feedparser
 import requests
 import yfinance as yf
@@ -51,7 +50,7 @@ def get_live_market_data():
 
 live_market_context = get_live_market_data()
 
-# B. GEWICHTETE OSINT-QUELLENMATRIX
+# B. VOLLSTÄNDIGER VOLL-QUELLENPOOL (ALLE ALTEN + NEUEN QUELLEN GEWICHTET)
 SOURCES = [
     # 🏛️ 1. ZENTRALBANKEN & MAKRO-INSTITUTIONEN (Gewicht: 1.0)
     {"name": "Federal Reserve Press", "url": "https://www.federalreserve.gov/feeds/press_all.xml", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
@@ -60,6 +59,11 @@ SOURCES = [
     {"name": "IMF News", "url": "https://www.imf.org/en/News/rss", "cat": "Intl. Org", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "Weltbank News", "url": "https://www.worldbank.org/en/news/rss", "cat": "Intl. Org", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "OECD Newsroom", "url": "https://www.oecd.org/newsroom/index.xml", "cat": "Intl. Org", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "EU-Kommission Press", "url": "https://ec.europa.eu/commission/presscorner/api/rss", "cat": "Regierung/EU", "weight": 1.00, "bias": "WESTERN"},
+    {"name": "Europäischer Rat", "url": "https://www.consilium.europa.eu/en/rss/", "cat": "Regierung/EU", "weight": 1.00, "bias": "WESTERN"},
+    {"name": "White House Briefing", "url": "https://www.whitehouse.gov/briefing-room/feed/", "cat": "Regierung", "weight": 1.00, "bias": "WESTERN"},
+    {"name": "US Department of State", "url": "https://www.state.gov/rss-feed/press-releases/feed/", "cat": "Diplomatie", "weight": 1.00, "bias": "WESTERN"},
+    {"name": "Schweizer Bundesrat", "url": "https://www.admin.ch/gov/de/start/dokumentation/medienmitteilungen.rss.html", "cat": "Regierung", "weight": 1.00, "bias": "WESTERN"},
 
     # 📰 2. NACHRICHTENAGENTUREN (Gewicht: 0.95)
     {"name": "AP News World", "url": "https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
@@ -67,41 +71,76 @@ SOURCES = [
     {"name": "AFP World", "url": "https://news.google.com/rss/search?q=when:24h+source:Agence+France-Presse&hl=en-US&gl=US&ceid=US:en", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Kyodo News (Japan)", "url": "https://english.kyodonews.net/rss/news.xml", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
 
-    # 🛡️ 3. OSINT, SATELLITEN & LOGISTIK (Gewicht: 0.85)
+    # 🛡️ 3. OSINT, VERTEIDIGUNG & SATELLITEN (Gewicht: 0.85)
     {"name": "ISW (Institute f. Study of War)", "url": "https://www.understandingwar.org/rss.xml", "cat": "OSINT / Militär", "weight": 0.85, "bias": "WESTERN"},
     {"name": "US Naval Institute News", "url": "https://news.usni.org/feed", "cat": "Marine / AIS OSINT", "weight": 0.85, "bias": "WESTERN"},
     {"name": "Naval News", "url": "https://www.navalnews.com/feed/", "cat": "Schifffahrt & Marine", "weight": 0.85, "bias": "WESTERN"},
     {"name": "War on the Rocks", "url": "https://warontherocks.com/feed/", "cat": "Militäranalyse", "weight": 0.85, "bias": "WESTERN"},
     {"name": "Bellingcat OSINT", "url": "https://www.bellingcat.com/feed/", "cat": "OSINT / Satellit", "weight": 0.85, "bias": "ALTERNATIVE"},
+    {"name": "Münchner Sicherheitskonferenz", "url": "https://securityconference.org/news/rss/", "cat": "Sicherheit", "weight": 0.85, "bias": "WESTERN"},
 
-    # 👥 4. REDDIT COMMUNITIES & ANALYSTEN-FEEDS (Gewicht: 0.60)
-    {"name": "Reddit r/geopolitics", "url": "https://www.reddit.com/r/geopolitics/hot.rss?limit=5", "cat": "Community OSINT", "weight": 0.60, "bias": "MIXED"},
-    {"name": "Reddit r/OSINT", "url": "https://www.reddit.com/r/OSINT/hot.rss?limit=5", "cat": "Community OSINT", "weight": 0.60, "bias": "MIXED"},
-    {"name": "Reddit r/Economics", "url": "https://www.reddit.com/r/Economics/hot.rss?limit=5", "cat": "Makro Community", "weight": 0.60, "bias": "MIXED"},
+    # 🌍 4. BRICS, DIPLOMATIE & GLOBALER SÜDEN (Gewicht: 0.85 - 1.00)
+    {"name": "Kremlin News", "url": "http://en.kremlin.ru/rss/news", "cat": "Regierung", "weight": 1.00, "bias": "BRICS"},
+    {"name": "Russisches Außenministerium", "url": "https://mid.ru/en/rss.php", "cat": "Diplomatie", "weight": 1.00, "bias": "BRICS"},
+    {"name": "Chinesisches Außenministerium", "url": "https://www.fmprc.gov.cn/eng/zxmz/rss.xml", "cat": "Diplomatie", "weight": 1.00, "bias": "BRICS"},
+    {"name": "Indisches Außenministerium", "url": "https://www.mea.gov.in/rss.xml", "cat": "Diplomatie", "weight": 1.00, "bias": "BRICS"},
+    {"name": "CGTN World", "url": "https://news.cgtn.com/rss/World.xml", "cat": "Staatsmedien", "weight": 0.85, "bias": "BRICS"},
+    {"name": "TASS World", "url": "https://tass.com/rss/v2.xml", "cat": "Staatsmedien", "weight": 0.85, "bias": "BRICS"},
+    {"name": "Economic Times (Indien)", "url": "https://economictimes.indiatimes.com/rssfeedstopstories.cms", "cat": "Medien", "weight": 0.85, "bias": "BRICS"},
+    {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml", "cat": "Medien", "weight": 0.85, "bias": "BRICS"},
+    {"name": "South China Morning Post", "url": "https://www.scmp.com/rss/91/feed", "cat": "Medien", "weight": 0.85, "bias": "BRICS"},
+    {"name": "The Cradle", "url": "https://thecradle.co/feed", "cat": "Fachmedien", "weight": 0.85, "bias": "BRICS"},
+    {"name": "Asia Times", "url": "https://asiatimes.com/feed/", "cat": "Fachmedien", "weight": 0.85, "bias": "BRICS"},
 
-    # 🏛️ 5. THINK TANKS (US, EU, ASIEN) (Gewicht: 0.75)
+    # 🏛️ 5. THINK TANKS & AKADEMIE (Gewicht: 0.75)
     {"name": "CSIS Org", "url": "https://www.csis.org/rss.xml", "cat": "Think Tank", "weight": 0.75, "bias": "WESTERN"},
     {"name": "CFR (Council Foreign Relations)", "url": "https://www.cfr.org/rss.xml", "cat": "Think Tank", "weight": 0.75, "bias": "WESTERN"},
     {"name": "ECFR Europe", "url": "https://ecfr.eu/feed/", "cat": "Think Tank", "weight": 0.75, "bias": "WESTERN"},
     {"name": "SWP Berlin", "url": "https://www.swp-berlin.org/rss.xml", "cat": "Think Tank", "weight": 0.75, "bias": "WESTERN"},
+    {"name": "World Economic Forum", "url": "https://www.weforum.org/agenda/feed/", "cat": "Think Tank", "weight": 0.75, "bias": "WESTERN"},
 
-    # 🌍 6. BRICS & DIPLOMATIE (Gewicht: 1.0)
-    {"name": "Kremlin News", "url": "http://en.kremlin.ru/rss/news", "cat": "Regierung", "weight": 1.00, "bias": "BRICS"},
-    {"name": "Russisches Außenministerium", "url": "https://mid.ru/en/rss.php", "cat": "Diplomatie", "weight": 1.00, "bias": "BRICS"},
-    {"name": "Chinesisches Außenministerium", "url": "https://www.fmprc.gov.cn/eng/zxmz/rss.xml", "cat": "Diplomatie", "weight": 1.00, "bias": "BRICS"},
-    {"name": "CGTN World", "url": "https://news.cgtn.com/rss/World.xml", "cat": "Staatsmedien", "weight": 0.85, "bias": "BRICS"},
+    # 📈 6. MAINSTREAM FINANZEN & POLITIK (Gewicht: 0.85)
+    {"name": "CNBC Finance", "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html", "cat": "Finanzen", "weight": 0.85, "bias": "MAINSTREAM"},
+    {"name": "Foreign Policy", "url": "https://foreignpolicy.com/feed/", "cat": "Politik", "weight": 0.85, "bias": "MAINSTREAM"},
+    {"name": "Nikkei Asia", "url": "https://asia.nikkei.com/rss/feed/nar", "cat": "Finanzen", "weight": 0.85, "bias": "MAINSTREAM"},
+    {"name": "Handelsblatt", "url": "https://www.handelsblatt.com/contentexport/feed/finanzen", "cat": "Finanzen", "weight": 0.85, "bias": "MAINSTREAM"},
+    {"name": "Finanzmarktwelt", "url": "https://finanzmarktwelt.de/feed/", "cat": "Finanzen", "weight": 0.85, "bias": "MAINSTREAM"},
+    {"name": "NZZ", "url": "https://www.nzz.ch/international.rss", "cat": "Medien", "weight": 0.85, "bias": "MAINSTREAM"},
+    {"name": "FAZ", "url": "https://www.faz.net/rss/aktuell/politik/ausland/", "cat": "Medien", "weight": 0.85, "bias": "MAINSTREAM"},
+    {"name": "Tagesschau", "url": "https://www.tagesschau.de/ausland/index.xml", "cat": "Medien", "weight": 0.85, "bias": "MAINSTREAM"},
+    {"name": "BBC World", "url": "http://feeds.bbci.co.uk/news/world/rss.xml", "cat": "Medien", "weight": 0.85, "bias": "MAINSTREAM"},
 
-    # 🔓 7. UNABHÄNGIGE & ALTERNATIVE ANALYSTEN (Gewicht: 0.55)
+    # 👥 7. REDDIT COMMUNITIES (Gewicht: 0.60)
+    {"name": "Reddit r/geopolitics", "url": "https://www.reddit.com/r/geopolitics/hot.rss?limit=5", "cat": "Community OSINT", "weight": 0.60, "bias": "MIXED"},
+    {"name": "Reddit r/OSINT", "url": "https://www.reddit.com/r/OSINT/hot.rss?limit=5", "cat": "Community OSINT", "weight": 0.60, "bias": "MIXED"},
+    {"name": "Reddit r/Economics", "url": "https://www.reddit.com/r/Economics/hot.rss?limit=5", "cat": "Makro Community", "weight": 0.60, "bias": "MIXED"},
+
+    # 🔓 8. INVESTIGATIV, BLOGS & ALTERNATIVE ANALYSTEN (Gewicht: 0.40 - 0.55)
     {"name": "Multipolar Magazin", "url": "https://multipolar-magazin.de/feed", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Manova / Rubikon", "url": "https://www.manova.news/feed", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Berliner Tageszeitung", "url": "https://www.berlinertageszeitung.de/rss.xml", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Hintergrund Magazin", "url": "https://www.hintergrund.de/feed/", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Republik (Schweiz)", "url": "https://www.republik.ch/feed", "cat": "Investigativ", "weight": 0.55, "bias": "ALTERNATIVE"},
     {"name": "The Grayzone", "url": "https://thegrayzone.com/feed/", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "The Intercept", "url": "https://theintercept.com/feed/?lang=en", "cat": "Investigativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "MintPress News", "url": "https://www.mintpressnews.com/feed/", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
     {"name": "ZeroHedge", "url": "http://feeds.feedburner.com/zerohedge/feed", "cat": "Alternativ / Makro", "weight": 0.55, "bias": "ALTERNATIVE"},
-    {"name": "Moon of Alabama", "url": "https://www.moonofalabama.org/atom.xml", "cat": "Blogger", "weight": 0.40, "bias": "ALTERNATIVE"}
+    {"name": "UnHerd", "url": "https://unherd.com/feed/", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Antiwar.com", "url": "https://news.antiwar.com/feed/", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "NachDenkSeiten", "url": "https://www.nachdenkseiten.de/?feed=rss2", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Apolut", "url": "https://apolut.net/feed/", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Anti-Spiegel", "url": "https://anti-spiegel.ru/feed/", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Telepolis", "url": "https://www.telepolis.de/index.rss", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Tichys Einblick", "url": "https://www.tichyseinblick.de/feed/", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Overton Magazin", "url": "https://overton-magazin.de/feed/", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Moon of Alabama", "url": "https://www.moonofalabama.org/atom.xml", "cat": "Blogger", "weight": 0.40, "bias": "ALTERNATIVE"},
+    {"name": "Caitlin Johnstone", "url": "https://caitlinjohnstone.com.au/feed/", "cat": "Blogger", "weight": 0.40, "bias": "ALTERNATIVE"}
 ]
 
 browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 GeoPulsOSINTBot/1.0"
 feed_context = ""
 
-print("Hole und strukturiere News aus der gewichteten Quellenmatrix...")
+print("Hole und strukturiere News aus dem gewichteten Voll-Quellenpool...")
 for src in SOURCES:
     try:
         feed = feedparser.parse(src["url"], agent=browser_agent)
@@ -115,8 +154,9 @@ for src in SOURCES:
     except Exception as e:
         print(f"Hinweis bei Feed {src['name']}: {e}")
 
-if len(feed_context) > 13000:
-    feed_context = feed_context[:13000] + "\n... [Quellenkontext gekürzt]"
+# Dank Claudes großem Fenster kappen wir erst bei 35.000 Zeichen (falls nötig)
+if len(feed_context) > 35000:
+    feed_context = feed_context[:35000] + "\n... [Quellenkontext zur Token-Schonung leicht gekürzt]"
 
 json_template_desc = """
 {
@@ -172,61 +212,39 @@ json_template_desc = """
 raw_text = None
 generator_used = "Claude 3.5 Sonnet"
 
-# 1. SCHRITT: CLAUDE GENERIERT DEN ENTWURF (MIT DYNAMISCHEN MODEL-FALLBACKS)
 anth_key = os.environ.get("ANTHROPIC_API_KEY")
-if anth_key:
-    client_anthropic = anthropic.Anthropic(api_key=anth_key)
-    system_instruction = (
-        "Du bist ein hochpräzises OSINT-Geopolitikmodell. "
-        "STRIKTE GEWICHTUNGSRULE: Stütze deine Lagebeurteilung primär auf Quellen mit hohem Gewicht (0.85 bis 1.0, z.B. Zentralbanken, Agenturen, USNI Marine-OSINT, ISW). "
-        "Nutze Community- & Alternativ-Quellen (0.40 bis 0.60) für Stimmungsbilder und Gegen-Narrative in der 'alternative_view'. "
-        "Antworte AUSSCHLIESSLICH im rein validen JSON-Format basierend auf diesem Schema:\n" + json_template_desc
-    )
+if not anth_key:
+    raise ValueError("ANTHROPIC_API_KEY wurde nicht in den GitHub-Umgebungsvariablen gefunden!")
 
-    claude_models = ["claude-3-5-sonnet-latest", "claude-3-5-haiku-latest"]
-    for model_name in claude_models:
-        try:
-            print(f"Schritt 1: Versuche Generierung mit Anthropic {model_name}...")
-            response = client_anthropic.messages.create(
-                model=model_name,
-                max_tokens=4000,
-                temperature=0.2,
-                system=system_instruction,
-                messages=[{"role": "user", "content": f"Live-Rohstoffe & Marktdaten:\n{live_market_context}\n\nGewichteter OSINT-Kontext:\n{feed_context}"}]
-            )
-            raw_text = response.content[0].text.strip()
-            generator_used = f"Anthropic ({model_name})"
-            break
-        except Exception as e:
-            print(f"Hinweis: {model_name} nicht erreichbar: {e}")
+client_anthropic = anthropic.Anthropic(api_key=anth_key)
 
-# FALLBACK AUF GROQ, FALLS ANTHROPIC FEHLGESCHLAGEN IST
-if not raw_text:
-    groq_key = os.environ.get("GROQ_API_KEY")
-    if groq_key:
-        print("Claude nicht erreichbar. Wechsle zu Groq Llama...")
-        client_groq = Groq(api_key=groq_key)
-        
-        for groq_model in ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]:
-            try:
-                chat_completion = client_groq.chat.completions.create(
-                    messages=[
-                        {"role": "system", "content": "Du bist ein präzises OSINT-Modell. Beachte die Quellen-Gewichtung und antworte rein in JSON."},
-                        {"role": "user", "content": f"Live-Finanzdaten:\n{live_market_context}\n\nFeeds:\n{feed_context}\n\nSchema:\n{json_template_desc}"}
-                    ],
-                    model=groq_model,
-                    response_format={"type": "json_object"}
-                )
-                raw_text = chat_completion.choices[0].message.content
-                generator_used = f"Groq ({groq_model} Fallback)"
-                break
-            except RateLimitError:
-                print(f"Rate Limit für Groq Modell {groq_model} erreicht. Versuche nächstes Modell...")
-            except Exception as e:
-                print(f"Groq Fehler mit {groq_model}: {e}")
+system_instruction = (
+    "Du bist der Chef-Strategist und OSINT-Spezialist eines geopolitischen Lagezentrums. "
+    "STRIKTE GEWICHTUNGSRULE: Stütze deine Faktenanalyse primär auf Quellen mit hohem Gewicht (0.85 bis 1.0, z.B. Zentralbanken, Regierungen, Agenturen, USNI Marine-OSINT, ISW). "
+    "Nutze Blogs & Community-Quellen (0.40 bis 0.60) ausschließlich für die 'alternative_view' in der Narrativ-Matrix und zur Erfassung von Gegen-Narrativen. "
+    "Antworte AUSSCHLIESSLICH im rein validen JSON-Format basierend auf diesem Schema:\n" + json_template_desc
+)
+
+# Teste Claude Sonnet, Fallback auf Haiku
+claude_models = ["claude-3-5-sonnet-latest", "claude-3-5-haiku-latest"]
+for model_name in claude_models:
+    try:
+        print(f"Generiere Lagebild mit Anthropic {model_name}...")
+        response = client_anthropic.messages.create(
+            model=model_name,
+            max_tokens=4000,
+            temperature=0.2,
+            system=system_instruction,
+            messages=[{"role": "user", "content": f"Live-Rohstoffe & Marktdaten:\n{live_market_context}\n\nGewichteter OSINT-Kontext:\n{feed_context}"}]
+        )
+        raw_text = response.content[0].text.strip()
+        generator_used = f"Anthropic ({model_name})"
+        break
+    except Exception as e:
+        print(f"Hinweis: {model_name} nicht erreichbar: {e}")
 
 if not raw_text:
-    raise RuntimeError("Fehler: Weder Anthropic noch Groq lieferten eine Antwort. Bitte API-Keys prüfen.")
+    raise RuntimeError("Fehler: Anthropic konnte keine Antwort generieren. Bitte Key prüfen.")
 
 if raw_text.startswith("```"):
     raw_text = re.sub(r"^```[a-zA-Z]*\n?", "", raw_text)
@@ -234,54 +252,7 @@ if raw_text.startswith("```"):
 
 data = json.loads(raw_text)
 
-# 2. SCHRITT: GROQ / LLAMA AUDIT & CROSS-VERIFICATION CHECK
-groq_key = os.environ.get("GROQ_API_KEY")
-if groq_key:
-    try:
-        print("Schritt 2: Groq Llama auditierte das Analyse-Ergebnis...")
-        client_groq = Groq(api_key=groq_key)
-        audit_prompt = f"""
-Du bist der leitende Chefredakteur und OSINT-Auditor. 
-Prüfe den folgenden JSON-Entwurf:
-1. Wurden unbestätigte Behauptungen aus Reddit/Blogs (Gewicht <0.60) fälschlicherweise als unumstößliche Fakten eingestuft?
-2. Stimmen Ticker, Koordinaten und alle geforderten JSON-Keys?
-
-Entwurf:
-{json.dumps(data, ensure_ascii=False)}
-"""
-        audit_model = "llama-3.3-70b-versatile"
-        try:
-            audit_completion = client_groq.chat.completions.create(
-                messages=[
-                    {"role": "system", "content": "Du bist ein strenger OSINT-Auditor. Korrigiere das JSON falls nötig und gib es im exakten Format zurück."},
-                    {"role": "user", "content": audit_prompt}
-                ],
-                model=audit_model,
-                response_format={"type": "json_object"}
-            )
-        except RateLimitError:
-            print("Groq 70B Rate Limit beim Audit. Nutze 8B-Instant für Audit...")
-            audit_model = "llama-3.1-8b-instant"
-            audit_completion = client_groq.chat.completions.create(
-                messages=[
-                    {"role": "system", "content": "Du bist ein strenger OSINT-Auditor. Korrigiere das JSON falls nötig und gib es im exakten Format zurück."},
-                    {"role": "user", "content": audit_prompt}
-                ],
-                model=audit_model,
-                response_format={"type": "json_object"}
-            )
-
-        audited_text = audit_completion.choices[0].message.content.strip()
-        if audited_text.startswith("```"):
-            audited_text = re.sub(r"^```[a-zA-Z]*\n?", "", audited_text)
-            audited_text = re.sub(r"\n?```$", "", audited_text)
-        
-        data = json.loads(audited_text)
-        print("Audit erfolgreich abgeschlossen.")
-    except Exception as e:
-        print(f"Hinweis: Llama-Audit übersprungen: {e}")
-
-# NORMALISIERUNG
+# NORMALISIERUNG ALLER FELDER
 if not data.get("daily_executive_summary"):
     data["daily_executive_summary"] = data.get("executive_summary") or data.get("summary") or "Die geopolitische Lage bleibt angespannt."
 
@@ -350,4 +321,4 @@ if not history_data or history_data[-1].get("date") != today_str:
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print(f"GeoPuls Dashboard erfolgreich aktualisiert! (Generator: {generator_used})")
+print(f"GeoPuls Dashboard erfolgreich mit Claude ({generator_used}) aktualisiert!")
