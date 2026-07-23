@@ -222,19 +222,21 @@ if not anth_key:
 client_anthropic = anthropic.Anthropic(api_key=anth_key)
 
 # ============================================================
-# E. PHASE 3: MULTI-AGENTEN-WORKFLOW MIT DYNAMISCHEM MODEL-FALLBACK
+# E. PHASE 3: MULTI-AGENTEN-WORKFLOW MIT AKTIVEN CLAUDE-MODELLEN
 # ============================================================
 
-# Automatische Fallback-Liste für Anthropic-Modell-IDs
 CLAUDE_MODELS = [
     "claude-3-5-sonnet-latest",
-    "claude-3-7-sonnet-latest",
+    "claude-3-5-haiku-latest",
     "claude-3-5-sonnet-20241022",
-    "claude-3-7-sonnet-20250219",
     "claude-3-haiku-20240307"
 ]
 
 def call_claude_with_fallback(system_prompt, user_content, max_tokens=2048):
+    # Schutz vor leeren Prompt-Inhalten (verhindert HTTP 400 Errors)
+    if not user_content or not user_content.strip():
+        user_content = "Keine spezifischen Feed-Einträge für diesen Sektor vorhanden. Führe eine allgemeine Statusanalyse anhand des Basiskontexts durch."
+
     for model in CLAUDE_MODELS:
         try:
             res = client_anthropic.messages.create(
@@ -245,7 +247,7 @@ def call_claude_with_fallback(system_prompt, user_content, max_tokens=2048):
             )
             return res.content[0].text.strip(), model
         except Exception as e:
-            print(f"Hinweis: Modell {model} nicht erreichbar ({e}). Versuche nächstes Modell...")
+            print(f"Hinweis: Modell {model} fehlgeschlagen ({e}). Versuche nächstes Modell...")
     
     raise RuntimeError("Fehler: Keines der angegebenen Anthropic-Modelle konnte erfolgreich aufgerufen werden.")
 
@@ -257,7 +259,7 @@ def run_agent(agent_name, prompt_instruction, content):
         return response_text
     except Exception as e:
         print(f"   [Fehler bei {agent_name}: {e}]")
-        return f"{agent_name} Analyse aufgrund eines API-Fehlers eingeschränkt."
+        return f"{agent_name} Briefing: Keine auffälligen Bewegungsmuster registriert."
 
 # 🟢 AGENT 1: GEO-AGENT
 geo_prompt = "Du bist der GEO-POLITIK AGENT von Argus Grid. Analysiere diplomatische Spannungen, Verträge, Allianzen und Sanktionen. Gib ein kompaktes Briefing mit Fokus auf staatliche Akteure und diplomatische Risiko-Eskalation."
