@@ -453,13 +453,13 @@ Formuliere als kompaktes, strukturiertes Gutachten."""
 deepseek_analysis = run_deepseek_game_theory(filtered_context)
 
 # ============================================================
-# STUFE 2b: GEMINI 2.0 FLASH (MAKRO, MIGRATION & ROHSTOFFE)
+# STUFE 2b: GEMINI (MAKRO, MIGRATION & ROHSTOFFE WITH FALLBACK)
 # ============================================================
 def run_gemini_macro(context, markets):
     if not client_gemini:
         print("Hinweis: Gemini Key nicht konfiguriert.")
         return "Gemini Makro-Analyse nicht verfügbar."
-    print("Starte Gemini 2.0 Flash Makro- & Migrations-Scan...")
+    print("Starte Gemini Makro- & Migrations-Scan...")
     macro_prompt = f"""DYNAMISCHER ZEITANKER:
 - HEUTIGES DATUM: {CURRENT_DATE_STR} (Jahr: {CURRENT_YEAR}).
 - Beziehe deine Analysen strikt auf die Gegenwart und nahe Zukunft.
@@ -469,16 +469,19 @@ Analysiere die Feeds und Live-Finanzdaten auf:
 2. Fluchtbewegungen & Vertreibung (UNHCR/IOM) als Frühwarnindikatoren für verdeckte Eskalationen.
 3. Digitale Souveränität (CBDCs, Überwachungsgesetze, Kapitalverkehrskontrollen).
 Fasse die Erkenntnisse kurz und prägnant zusammen."""
-    try:
-        res = client_gemini.chat.completions.create(
-            model="gemini-2.0-flash",
-            messages=[{"role": "system", "content": macro_prompt}, {"role": "user", "content": f"MARKETS:\n{markets}\nFEEDS:\n{context}"}],
-            temperature=0.2
-        )
-        return res.choices[0].message.content
-    except Exception as e:
-        print(f"Gemini Fehler: {e}")
-        return "Makro-Analyse über Primärpfad generieren."
+    
+    for model_name in ["gemini-2.0-flash", "gemini-1.5-flash"]:
+        try:
+            res = client_gemini.chat.completions.create(
+                model=model_name,
+                messages=[{"role": "system", "content": macro_prompt}, {"role": "user", "content": f"MARKETS:\n{markets}\nFEEDS:\n{context}"}],
+                temperature=0.2
+            )
+            return res.choices[0].message.content
+        except Exception as e:
+            print(f"Gemini {model_name} Hinweis/Fehler: {e}")
+            
+    return "Makro-Analyse über Primärpfad synthetisieren."
 
 gemini_analysis = run_gemini_macro(filtered_context, live_market_context)
 
@@ -512,13 +515,13 @@ ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT:
   "game_theory_deep_dive": {{
     "focal_situation": "Titel des analysierten Ereignisses",
     "1_fractionated_actors": [
-      {{"entity": "Akteur", "factions": [{"faction_name": "Fraktion", "divergent_interest": "Interessensabweichung", "payoff_matrix_short_term": {{"action_escalate": -1, "action_cooperate": 2, "action_delay": 0}}, "confidence": 85}]}}
+      {{"entity": "Akteur", "factions": [{{"faction_name": "Fraktion", "divergent_interest": "Interessensabweichung", "payoff_matrix_short_term": {{"action_escalate": -1, "action_cooperate": 2, "action_delay": 0}}, "confidence": 85}}]}}
     ],
     "2_time_horizon_conflict": {{"short_term_one_shot_4_to_8_weeks": "Kurzfristig", "long_term_repeated_game": "Langfristig", "horizon_contradiction": "Widerspruch"}},
     "3_game_structure_and_payoffs": {{
       "type": "Chicken Game / Gefangenendilemma",
       "justification": "Begründung",
-      "payoff_assessment_scale_minus_3_to_plus_3": [{"scenario_combination": "Akteur A vs B", "payoff_actor_A": 2, "payoff_actor_B": -2, "confidence": 80}]
+      "payoff_assessment_scale_minus_3_to_plus_3": [{{"scenario_combination": "Akteur A vs B", "payoff_actor_A": 2, "payoff_actor_B": -2, "confidence": 80}}]
     }},
     "4_signaling_and_information": {{"information_asymmetry": "Unvollständig", "cheap_talk": ["Bluffs"], "costly_signals": ["Reale Kosten-Handlungen"]}},
     "5_equilibria_and_commitment": {{"plausible_nash_equilibria": "Nash-Gleichgewicht", "commitment_problem": "Bindungsproblem", "confidence": 85}},
@@ -539,8 +542,8 @@ ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT:
     {{
       "scenario_name": "Szenario Name", "probability_pct": 40, "timeframe": "1-3 Monate",
       "trigger_events": ["Auslöser 1"], "cascade_chain": ["Kaskade 1", "Kaskade 2"],
-      "winners_long": [{"asset": "Asset", "reason": "Grund"}],
-      "losers_short": [{"asset": "Asset", "reason": "Grund"}],
+      "winners_long": [{{"asset": "Asset", "reason": "Grund"}}],
+      "losers_short": [{{"asset": "Asset", "reason": "Grund"}}],
       "hedging_strategy": "Absicherung"
     }}
   ],
@@ -563,8 +566,8 @@ ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT:
   ],
 
   "stock_picks": {{
-    "top_5_buys": [{"ticker": "TICKER", "name": "Name", "sector": "Sektor", "reason": "Tagesaktueller Grund"}],
-    "flop_5_sells": [{"ticker": "TICKER", "name": "Name", "sector": "Sektor", "reason": "Tagesaktueller Grund"}]
+    "top_5_buys": [{{"ticker": "TICKER", "name": "Name", "sector": "Sektor", "reason": "Tagesaktueller Grund"}}],
+    "flop_5_sells": [{{"ticker": "TICKER", "name": "Name", "sector": "Sektor", "reason": "Tagesaktueller Grund"}}]
   }}
 }}
 """
