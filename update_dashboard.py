@@ -1,6 +1,5 @@
-
 import socket
-socket.setdefaulttimeout(5)  # Bricht hängende Netzwerk-Sockets nach 5 Sekunden ab
+socket.setdefaulttimeout(5)  # Globaler Notfall-Timeout gegen hängende Server
 
 import os
 import json
@@ -9,7 +8,7 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import anthropic
 import feedparser
-import requests  # Zwingend nötig für das Timeout
+import requests  # Für harte Timeouts pro RSS-Server
 import yfinance as yf
 
 # ============================================================
@@ -20,7 +19,6 @@ def clean_html(raw_html):
         return ""
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return clean_text.strip()
-
 
 def repair_and_parse_json(text):
     text = text.strip()
@@ -125,7 +123,6 @@ if os.path.exists(memory_file):
 kg_context_str = json.dumps(knowledge_graph, ensure_ascii=False, indent=2)
 if len(kg_context_str) > 10000:
     kg_context_str = kg_context_str[:10000] + "\n... [Knowledge Graph Kontext gekürzt]"
-
 # ============================================================
 # C. VOLLSTÄNDIGER QUELLENPOOL (ALLE 96 RSS-FEEDS)
 # ============================================================
@@ -174,7 +171,6 @@ SOURCES = [
     {"name": "Flightradar24 Blog", "url": "[https://www.flightradar24.com/blog/feed/](https://www.flightradar24.com/blog/feed/)", "cat": "Luftfahrt OSINT", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "Aviation Safety Network (ASN)", "url": "[https://news.google.com/rss/search?q=when:7d+%22Aviation+Safety+Network%22+OR+NOTAM&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22Aviation+Safety+Network%22+OR+NOTAM&hl=en-US&gl=US&ceid=US:en)", "cat": "Luftfahrt", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "GPSJam & Electronic Warfare Alerts", "url": "[https://news.google.com/rss/search?q=when:24h+%22GPS+jamming%22+OR+%22ADS-B+spoofing%22+OR+%22NOTAM%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+%22GPS+jamming%22+OR+%22ADS-B+spoofing%22+OR+%22NOTAM%22&hl=en-US&gl=US&ceid=US:en)", "cat": "EW / Luftfahrt", "weight": 0.85, "bias": "ALTERNATIVE"},
-
     # 🌍 WELT-NACHRICHTENAGENTUREN & DIPLOMATIE
     {"name": "AP News World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Reuters World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
@@ -244,286 +240,19 @@ browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (K
 def fetch_single_feed(src):
     feed_str = ""
     try:
-        feed = feedparser.parse(src["url"], agent=browser_agent)
-        if feed.entries:
-            feed_str += f"\n--- QUELLE: {src['name']} | Kat: {src['cat']} | Bias: {src['bias']} ---\n"
-            for entry in feed.entries[:2]:
-                title = entry.get('title', '')
-                raw_summary = entry.get('summary', '') or entry.get('description', '')
-                summary = clean_html(raw_summary)
-                feed_str += f"- {title}: {summary[:120]}...\n"
+        # requests.get erzwingt exakt max. 5 Sekunden Limit pro Server
+        res = requests.get(src["url"], headers={"User-Agent": browser_agent}, timeout=5)
+        if res.status_code == 200:
+            feed = feedparser.parse(res.content)
+            if feed.entries:
+                feed_str += f"\n--- QUELLE: {src['name']} | Kat: {src['cat']} | Bias: {src['bias']} ---\n"
+                for entry in feed.entries[:2]:
+                    title = entry.get('title', '')
+                    raw_summary = entry.get('summary', '') or entry.get('description', '')
+                    summary = clean_html(raw_summary)
+                    feed_str += f"- {title}: {summary[:120]}...\n"
     except Exception:
-        pass
-    return feed_str
-
-print(f"Hole und sortiere Feeds aus allen {len(SOURCES)} RSS-Quellen...")
-feed_context = ""
-
-with ThreadPoolExecutor(max_workers=35) as executor:
-    futures = [executor.submit(fetch_single_feed, src) for src in SOURCES]
-    for future in as_completed(futures):
-        res_str = future.result()
-        if res_str:
-            feed_context += res_str
-
-if len(feed_context) > 40000:
-    feed_context = feed_context[:40000] + "\n... [Quellenkontext gekürzt]"
-
-# API Key gründlich säubern
-raw_key = os.environ.get("ANTHROPIC_API_KEY", "")
-anth_key = raw_key.strip().strip('"').strip("'")
-
-if not anth_key:
-    raise ValueError("ANTHROPIC_API_KEY wurde nicht in den Umgebungsvariablen gefunden!")
-
-client_anthropic = anthropic.Anthropic(api_key=anth_key)
-
-# ============================================================
-# D. DYNAMISCHE MODELL-ERKENNUNG (MODEL DISCOVERY)
-# ============================================================
-def get_working_models(client):
-    try:
-        print("Abfrage der freigeschalteten Modelle via client.models.list()...")
-        models_resp = client.models.list()
-        avail = [m.id for m in models_resp.data]
-        print(f"Erkannte verfügbare Modelle: {avail}")
-        if avail:
-            return avail
-    except Exception as e:
-        print(f"Hinweis beim Abrufen der Modellliste: {e}")
-    
-    return ["claude-3-5-sonnet-latest", "claude-3-5-haiku-latest", "claude-3-opus-latest"]
-
-CLAUDE_MODELS = get_working_models(client_anthropic)
-
-orchestrator_prompt = """Du bist die 'Argus Grid Intelligence Engine' (Chef-Analyst für Geopolitik, Makro, Rohstoffe & OSINT).
-
-Führe anhand der Eingabedaten eine tiefgehende Lageanalyse durch.
-
-ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT BASIEREND AUF DIESEM SCHEMA:
-{
-  "daily_executive_summary": "Kurze prägnante Synthese der aktuellen Lage (max 3 Sätze).",
-  "market_regime": "Risiko-Avers / Inflationär / Geopolitische Anspannung",
-  "geoscore": {
-    "current_score": 76,
-    "status_label": "ERHÖHT",
-    "previous_48h": 72
-  },
-  "defcon_status": {
-    "level": 3,
-    "label": "DEFCON 3",
-    "nuclear_risk_percent": 18,
-    "primary_driver": "Primärer Treiber der Eskalation"
-  },
-  "top_overweight": "Gold & Energie",
-  "top_risk": "Lieferketten-Unterbrechung",
-  "pattern_recognition": [
-    {
-      "trigger_event": "China beschränkt Export kritischer Mineralien",
-      "matched_past_events": ["2010: Seltene Erden Stopp (+45% ETFs)", "2023: Gallium Beschränkung"],
-      "historical_consequences": "+12% Bergbauaktien, +8% Kupfer",
-      "actionable_insight": "Long-Bias auf westliche Förderer (MP, LYC)"
-    }
-  ],
-  "conflict_hotspots": [
-    {
-      "region": "Straße von Hormus",
-      "actors": "Iran vs. USA/Israel",
-      "escalation_level": "KRITISCH",
-      "catalyst": "Marine-Manöver",
-      "impact": "Öl & Frachtraten",
-      "lat": 26.56,
-      "lng": 56.25
-    }
-  ],
-  "systemic_risks": [
-    {
-      "title": "Sanktions-Spirale & Entkopplung",
-      "trend": "Steigend",
-      "risk_level": "HOCH",
-      "description": "Erweiterung der Handels- und Technologieblockaden."
-    }
-  ],
-  "domestic_politics": [
-    {
-      "country": "USA / EU",
-      "topic": "Geldpolitik & Budgetdebatte",
-      "stability_score": "ANGESPANN_T",
-      "details": "Wirtschaftlicher Druck durch hohe Zinsen und Staatsverschuldung."
-    }
-  ],
-  "scenarios": [
-    {
-      "title": "Eskalation im Nahen Osten",
-      "probability_pct": 65,
-      "trigger": "Sperrung von Seestraßen",
-      "market_consequence": "Brent Öl >90$, Gold steigt"
-    }
-  ],
-  "event_graph": [
-    {
-      "event_id": "EVT-2026-0714-034",
-      "title": "Militärische Drohgebärden an maritimen Nadelöhren",
-      "sources": ["Reuters", "AP", "UKMTO"],
-      "confidence": 92,
-      "affected_regions": ["Naher Osten"],
-      "affected_markets": ["Öl", "Gold", "Schifffahrt"]
-    }
-  ],
-  "impact_chains": [
-    {
-      "trigger": "Hormus / Bab al-Mandab Blockade",
-      "chain": ["Tanker-Passagen sinken", "Brent Öl steigt", "Inflation steigt", "Fed bleibt restriktiv", "Gold steigt"],
-      "beneficiaries": ["Brent Öl", "Gold", "Tanker-Reeder"],
-      "detractors": ["Airlines", "Chemie", "Konsumgüter"]
-    }
-  ],
-  "narrative_matrix": [
-    {
-      "topic": "Inflation & Zinspfad",
-      "mainstream": "Fed hält Zinsen stabil, Inflation rückläufig",
-      "brics": "Fokus auf Entdollarisierung und Rohstoffabsicherung",
-      "alternative": "Stagflationsrisiko durch anhaltende Frachtkosten"
-    }
-  ],
-  "assets": [
-    {
-      "name": "Gold & Silber",
-      "signal": "GREEN",
-      "signal_text": "🟢 Attraktiv",
-      "trend": "Steigend",
-      "driver": "Geopolitik & Währungsunsicherheit"
-    }
-  ],
-  "stock_picks": {
-    "top_5_buys": [
-      {"ticker": "MP", "name": "MP Materials", "sector": "Bergbau", "reason": "Unabhängigkeit von China bei Seltenen Erden"}
-    ],
-    "flop_5_sells": [
-      {"ticker": "DAL", "name": "Delta Air Lines", "sector": "Luftfahrt", "reason": "Hohe Treibstoffkosten und Flugumleitungen"}
-    ]
-  },
-  "knowledge_graph_updates": {
-    "new_entities": [{"id": "E1", "name": "Straße von Hormus", "type": "CHOKEPOINT"}],
-    "new_relations": [{"subject": "Iran", "predicate": "THREATENS_CLOSURE_OF", "object": "Straße von Hormus", "severity": 90}]
-  }
-}
-"""
-
-user_payload = f"""
---- HISTORISCHER KNOWLEDGE GRAPH ---
-{kg_context_str}
-
---- LIVE FINANZ- & ROHSTOFFDATEN ---
-{live_market_context}
-
---- AKTUELLE MULTI-DOMÄNEN FEEDS ---
-{feed_context}
-"""
-
-print("Generiere Argus Grid Phase 2 Intelligence Lageanalyse...")
-raw_text = None
-
-for model in CLAUDE_MODELS:
-    try:
-        print(f"Versuche Aufruf mit Modell {model}...")
-        res = client_anthropic.messages.create(
-            model=model,
-            max_tokens=8192,
-            system=orchestrator_prompt,
-            messages=[{"role": "user", "content": user_payload}]
-        )
-        raw_text = res.content[0].text.strip()
-        print(f"Erfolgreich generiert mit {model}!")
-        break
-    except Exception as e:
-        print(f"Modell {model} fehlgeschlagen: {e}")
-
-if not raw_text:
-    raise RuntimeError("Fehler: Kein erreichbares Anthropic-Modell gefunden. Bitte API-Key prüfen.")
-
-data = repair_and_parse_json(raw_text)
-
-# Geodaten-Normalisierung für Karte
-GEO_LOOKUP = {
-    "nah": (31.5, 34.75), "iran": (32.42, 53.68), "israel": (31.04, 34.85),
-    "ukraine": (48.37, 31.16), "taiwan": (23.69, 120.96), "rot": (12.58, 43.33)
-}
-
-for h in data.get("conflict_hotspots", []):
-    try:
-        h["lat"] = float(h.get("lat"))
-        h["lng"] = float(h.get("lng"))
-    except (ValueError, TypeError):
-        reg_lower = h.get("region", "").lower()
-        found = False
-        for key, coords in GEO_LOOKUP.items():
-            if key in reg_lower:
-                h["lat"], h["lng"] = coords
-                found = True
-                break
-        if not found or h["lat"] == 0.0:
-            h["lat"], h["lng"] = 25.0, 45.0
-
-data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
-
-# KNOWLEDGE GRAPH DYNAMISCH ERWEITERN
-kg_updates = data.get("knowledge_graph_updates", {})
-if isinstance(kg_updates, dict):
-    for new_ent in kg_updates.get("new_entities", []):
-        if not any(e.get("name") == new_ent.get("name") for e in knowledge_graph["entities"]):
-            knowledge_graph["entities"].append(new_ent)
-    
-    for new_rel in kg_updates.get("new_relations", []):
-        knowledge_graph["relations"].append(new_rel)
-
-knowledge_graph["relations"] = knowledge_graph["relations"][-500:]
-
-with open(memory_file, "w", encoding="utf-8") as f:
-    json.dump(knowledge_graph, f, ensure_ascii=False, indent=2)
-
-# SPEICHERN FÜR FRONTEND (data.json & history.json)
-history_file = "history.json"
-history_data = []
-if os.path.exists(history_file):
-    try:
-        with open(history_file, "r", encoding="utf-8") as f:
-            history_data = json.load(f)
-    except Exception:
-        history_data = []
-
-today_str = datetime.utcnow().strftime("%d.%m")
-geoscore_obj = data.get("geoscore", {})
-current_score = geoscore_obj.get("current_score") if isinstance(geoscore_obj, dict) else 75
-
-if not history_data or history_data[-1].get("date") != today_str:
-    history_data.append({
-        "date": today_str,
-        "score": current_score,
-        "defcon": data.get("defcon_status", {}).get("level", 3)
-    })
-    history_data = history_data[-30:]
-    with open(history_file, "w", encoding="utf-8") as f:
-        json.dump(history_data, f, ensure_ascii=False, indent=2)
-
-with open("data.json", "w", encoding="utf-8") as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
-
-print("Argus Grid Intelligence Engine erfolgreich aktualisiert!")
-browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 ArgusGridOSINTBot/1.0"
-
-def fetch_single_feed(src):
-    feed_str = ""
-    try:
-        feed = feedparser.parse(src["url"], agent=browser_agent)
-        if feed.entries:
-            feed_str += f"\n--- QUELLE: {src['name']} | Kat: {src['cat']} | Bias: {src['bias']} ---\n"
-            for entry in feed.entries[:2]:
-                title = entry.get('title', '')
-                raw_summary = entry.get('summary', '') or entry.get('description', '')
-                summary = clean_html(raw_summary)
-                feed_str += f"- {title}: {summary[:120]}...\n"
-    except Exception:
+        # Hängende oder tote Server werden sofort lautlos übersprungen
         pass
     return feed_str
 
