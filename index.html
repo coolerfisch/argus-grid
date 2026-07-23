@@ -64,6 +64,13 @@
       margin-top: 4px;
     }
 
+    .header-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
     .view-toggle {
       display: flex;
       gap: 8px;
@@ -73,7 +80,7 @@
       border: 1px solid var(--border-color);
     }
 
-    .toggle-btn {
+    .toggle-btn, .action-btn {
       background: transparent;
       color: var(--text-muted);
       border: none;
@@ -89,6 +96,17 @@
       background: var(--accent-cyan);
       color: #000000;
       box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+    }
+
+    .action-btn {
+      background: #0f172a;
+      border: 1px solid var(--border-color);
+      color: var(--accent-cyan);
+    }
+
+    .action-btn:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--accent-cyan);
     }
 
     /* STEUERUNG SCHNELL- VS. TIEFENANALYSE */
@@ -110,7 +128,7 @@
       border-radius: 12px;
       padding: 20px;
       transition: border-color 0.2s ease;
-      min-width: 0; /* Verhindert das Ausbrechen von Tabellen im CSS Grid */
+      min-width: 0;
       overflow: hidden;
     }
 
@@ -179,7 +197,7 @@
       transition: width 0.5s ease;
     }
 
-    /* DEFCON & GEOSCORE FARBEN */
+    /* DEFCON FARBEN */
     .status-defcon-1 { color: var(--accent-red); }
     .status-defcon-2 { color: #f97316; }
     .status-defcon-3 { color: var(--accent-gold); }
@@ -223,7 +241,7 @@
       letter-spacing: 0.5px;
     }
 
-    /* BIPOLARES PAYOFF BALKENDIAGRAMM (-3 bis +3) */
+    /* BIPOLARES PAYOFF BALKENDIAGRAMM */
     .bipolar-chart-row {
       margin-top: 10px;
       font-size: 0.85rem;
@@ -271,7 +289,7 @@
       font-size: 0.9rem;
     }
 
-    /* MAP CONTAINER & ANIMATIONEN */
+    /* MAP CONTAINER */
     #hotspot-map {
       height: 400px;
       width: 100%;
@@ -302,7 +320,6 @@
       border-radius: 50%;
     }
 
-    /* ANIMATED PULSE MARKER */
     @keyframes pulse-ring {
       0% { transform: scale(0.33); opacity: 0.9; }
       80%, 100% { transform: scale(2.2); opacity: 0; }
@@ -337,7 +354,6 @@
       animation: pulse-ring 1.6s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
     }
 
-    /* FLIESSENDE FLÜCHTLINGSSTRÖME */
     @keyframes flow-line {
       from { stroke-dashoffset: 40; }
       to { stroke-dashoffset: 0; }
@@ -348,7 +364,6 @@
       animation: flow-line 1.2s linear infinite;
     }
 
-    /* FLUGZEUG MARKER */
     .plane-icon-div {
       font-size: 18px;
       filter: drop-shadow(0 0 6px #38bdf8);
@@ -356,7 +371,6 @@
       display: inline-block;
     }
 
-    /* ZWEI-SPALTEN BRENNPUNKT-LISTE */
     .hotspot-sections {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -399,12 +413,12 @@
       margin-bottom: 6px;
     }
 
-    /* OPTIMIERTE TABELLEN STYLES (FESTES LAYOUT & AUTOMATISCHER UMBRUCH) */
+    /* TABELLEN STYLES */
     table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.85rem;
-      table-layout: fixed; /* Erzwingt feste Spaltenbreiten */
+      table-layout: fixed;
     }
 
     th, td {
@@ -443,6 +457,86 @@
       display: inline-block;
     }
 
+    /* MODAL POPUP FOR SOURCES */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      max-width: 800px;
+      width: 100%;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h2 {
+      font-size: 1.2rem;
+      color: var(--accent-cyan);
+    }
+
+    .modal-close {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .modal-close:hover { color: #ffffff; }
+
+    .modal-body {
+      padding: 24px;
+      overflow-y: auto;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .sources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 15px;
+    }
+
+    .source-cat-card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .source-cat-card h4 {
+      color: var(--accent-gold);
+      font-size: 0.88rem;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
     @media (max-width: 1024px) {
       .card[style*="span 2"] {
         grid-column: span 1 !important;
@@ -463,9 +557,13 @@
       <div id="last-update" class="timestamp">Warte auf Daten-Sync...</div>
     </div>
     
-    <div class="view-toggle">
-      <button id="btn-simple" class="toggle-btn active" onclick="setMode('simple')">⚡ Schnellansicht</button>
-      <button id="btn-detailed" class="toggle-btn" onclick="setMode('detailed')">🔬 Tiefenanalyse</button>
+    <div class="header-actions">
+      <button class="action-btn" onclick="openSourcesModal()">📡 Quellen (140+ Feeds)</button>
+
+      <div class="view-toggle">
+        <button id="btn-simple" class="toggle-btn active" onclick="setMode('simple')">⚡ Schnellansicht</button>
+        <button id="btn-detailed" class="toggle-btn" onclick="setMode('detailed')">🔬 Tiefenanalyse</button>
+      </div>
     </div>
   </header>
 
@@ -574,7 +672,6 @@
       <div id="hotspots-list-container"></div>
     </div>
 
-    <!-- AKTIEN ROTATION CARD -->
     <div class="card">
       <h2>📈 Dynamische Aktien-Rotation</h2>
       
@@ -634,14 +731,73 @@
     
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.78rem; padding-bottom: 10px;">
       <div>🌐 <strong>ARGUS GRID</strong> Systemic Intelligence Engine &bull; Autonomous OSINT Pipeline</div>
-      <div>Version 3.0 &bull; Multi-LLM Operations</div>
+      <div><a href="javascript:void(0)" onclick="openSourcesModal()" style="color: var(--accent-cyan); text-decoration: none;">📋 Transparenz: 140+ Primärquellen anzeigen</a> &bull; Version 3.0</div>
     </div>
   </footer>
+
+  <!-- QUELLEN MODAL POPUP -->
+  <div id="sources-modal" class="modal-overlay" onclick="closeSourcesModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h2>📡 Transparenz & Quellenpool (140+ Feeds)</h2>
+        <button class="modal-close" onclick="closeSourcesModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 15px; color: var(--text-muted); font-size: 0.85rem;">
+          ARGUS GRID verwendet eine unvoreingenommene No-Bias-Policy. Die Pipeline kombiniert offizielle Regierungs- und Zentralbankdaten mit dem gesamten politischen Spektrum (Demokraten/Republikaner, Links/Rechts/Mitte), unabhängiger Presse sowie OSINT-Satelliten- und Militärmeldungen.
+        </p>
+        <div class="sources-grid">
+          <div class="source-cat-card">
+            <h4>🇺🇸 USA Polit-Spektrum</h4>
+            <span style="color: #cbd5e1; font-size: 0.82rem;">CNN, MSNBC, Fox News, Wall Street Journal, National Review, The Washington Times, Reason Magazine, Bloomberg</span>
+          </div>
+          <div class="source-cat-card">
+            <h4>🇪🇺 DACH & UK Presse</h4>
+            <span style="color: #cbd5e1; font-size: 0.82rem;">taz, Der Spiegel, Süddeutsche Zeitung, FAZ, Die Welt, NZZ, Die Zeit, Handelsblatt, Guardian, Telegraph, BBC</span>
+          </div>
+          <div class="source-cat-card">
+            <h4>🏛️ Zentralbanken & Institutionen</h4>
+            <span style="color: #cbd5e1; font-size: 0.82rem;">Federal Reserve, EZB, Bank of England, PBOC China, Bank of Japan, BIS, IWF, Weltbank, OECD, White House, EU-Kommission</span>
+          </div>
+          <div class="source-cat-card">
+            <h4>🚶 Migration & Vertreibung</h4>
+            <span style="color: #cbd5e1; font-size: 0.82rem;">UNHCR Press Releases, IOM Displacement Tracking Matrix (DTM), ReliefWeb UN OCHA, Frontex Border Routes</span>
+          </div>
+          <div class="source-cat-card">
+            <h4>📊 Energie, Rohstoffe & Logistik</h4>
+            <span style="color: #cbd5e1; font-size: 0.82rem;">EIA Petroleum Status, IEA Oil Reports, OPEC, Baker Hughes Rig Count, AGSI+ Gas Storage, Freightos Index, Baltic Dry Index, FAO Food Price</span>
+          </div>
+          <div class="source-cat-card">
+            <h4>🛡️ OSINT, Satellit & Cyber</h4>
+            <span style="color: #cbd5e1; font-size: 0.82rem;">ISW War Studies, Oryx losses, Bellingcat, NASA FIRMS Fire, USGS Earthquakes, CISA Cyber, CERT-EU, UKMTO Maritime Trade, OpenSky ADS-B</span>
+          </div>
+          <div class="source-cat-card">
+            <h4>🌍 BRICS & Nicht-NATO Medien</h4>
+            <span style="color: #cbd5e1; font-size: 0.82rem;">Xinhua, Global Times, TASS, Kremlin, IRNA, Anadolu, South China Morning Post, Al Jazeera, CGTN, Economic Times India</span>
+          </div>
+          <div class="source-cat-card">
+            <h4>🔍 Investigativ & Alternativ</h4>
+            <span style="color: #cbd5e1; font-size: 0.82rem;">The Intercept, Scheerpost, Naked Capitalism, UnHerd, Telepolis, ZeroHedge, Glenn Greenwald, Aaron Maté, Moon of Alabama</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script>
     let map = null;
+
+    function openSourcesModal() {
+      document.getElementById('sources-modal').classList.add('active');
+    }
+
+    function closeSourcesModal(event) {
+      if (!event || event.target === document.getElementById('sources-modal') || event.target.className === 'modal-close') {
+        document.getElementById('sources-modal').classList.remove('active');
+      }
+    }
 
     function setMode(mode) {
       if (mode === 'simple') {
@@ -902,7 +1058,6 @@
         maxZoom: 18
       }).addTo(map);
 
-      // 1. KRIEGSZONEN & HOTSPOTS RENDERN
       hotspots.forEach(spot => {
         if (spot && spot.lat != null && spot.lng != null) {
           const isAktiv = (spot.status_type === 'AKTIV' || spot.escalation_level === 'HOCH');
@@ -946,7 +1101,6 @@
         }
       });
 
-      // 2. ANIMIERTE FLÜCHTLINGSSTRÖME
       const refugeeRoutes = [
         { name: "Fluchtkorridor Ukraine -> EU", coords: [[50.45, 30.52], [52.22, 21.01], [52.52, 13.40]], color: "#ef4444" },
         { name: "Fluchtroute Ost-Mittelmeer", coords: [[31.50, 34.46], [33.89, 35.50], [35.12, 33.42], [37.98, 23.72]], color: "#f97316" },
@@ -964,7 +1118,6 @@
         polyline.bindPopup(`<strong>🌊 ${route.name}</strong><br><span style="font-size:0.8rem;">OSINT/UNHCR Migration Tracking</span>`);
       });
 
-      // 3. FLUGZEUG-MARKER (ADS-B)
       flights.forEach(f => {
         if (f && f.lat != null && f.lng != null) {
           const liveBadge = f.is_live ? '<span style="color: #22c55e; font-weight: bold;">📡 LIVE ADS-B</span>' : '<span style="color: #eab308;">🔄 OSINT PATROUILLE</span>';
