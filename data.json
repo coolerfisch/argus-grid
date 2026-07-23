@@ -1,253 +1,385 @@
 {
-  "daily_executive_summary": "Brent (+3,83%) und WTI (+3,16%) springen bei gleichzeitig anziehender Aktien-Volatilität (VIX +5,83%) an, während Gold trotz Risk-off leicht korrigiert – ein klassisches Muster geopolitischer Öl-Angebotsprämien. Die steigende US-10Y (4,66%) signalisiert Inflations- statt Rezessionsangst, was ein stagflationäres Regime nährt. Kritische maritime Nadelöhre und potenzielle Rohstoff-Exportbeschränkungen bleiben die dominanten Eskalationstreiber.",
-  "market_regime": "Inflationär / Geopolitische Anspannung",
+  "daily_executive_summary": "Die spieltheoretische Analyse bestätigt eine stabile Eskalationsdynamik im Ukraine-Krieg, bei der Russland kurzfristige Geländegewinne gegen langfristige Isolation eintauscht, während die NATO eine abgestufte Abschreckung ohne direkte Kriegsteilnahme verfolgt. Gleichzeitig steigen die Spannungen in weiteren Pufferstaaten (Moldawien, Kaukasus) und maritimen Nadelöhren, was die globale Fragmentierung verstärkt. Die Märkte reagieren mit einem Flucht in Rohstoffe (Öl +6%) und einem Anstieg der Volatilität (VIX +15%), während Gold trotz eines Rücksetzers auf hohem Niveau bleibt.",
+  "market_regime": "Geopolitische Fragmentierung / Stagflationär",
   "geoscore": {
-    "current_score": 74,
-    "status_label": "ERHÖHT",
-    "previous_48h": 69
+    "current_score": 82,
+    "status_label": "HOCH",
+    "previous_48h": 78
   },
   "defcon_status": {
     "level": 3,
     "label": "DEFCON 3",
-    "nuclear_risk_percent": 15,
-    "primary_driver": "Maritime Eskalationsdynamik an Öl-Chokepoints mit US-/Iran-Reibungsflächen"
+    "nuclear_risk_percent": 18,
+    "primary_driver": "Russland-Ukraine Krieg: Eskalationsspirale und irreversibles Commitment"
   },
-  "top_overweight": "Energie & Öl-Infrastruktur",
-  "top_risk": "Angebotsschock durch Blockade maritimer Nadelöhre",
-  "pattern_recognition": [
-    {
-      "trigger_event": "Öl-Sprung +3,83% (Brent) bei anziehendem VIX – Angebots- statt Nachfragesignal",
-      "matched_past_events": [
-        "2019: Hormus-Drohung (Brent +18%)",
-        "2023/2024: Bab al-Mandab / Rotmeer-Störungen (Frachtraten +40%)"
+  "top_overweight": "Rohstoffe (Öl, Uran, Seltene Erden), Rüstung, Schifffahrt",
+  "top_risk": "Systemisches Risiko: Fehlwahrnehmung und unbeabsichtigte Eskalation zwischen NATO und Russland",
+  "game_theory_deep_dive": {
+    "focal_situation": "Eskalation Russland-Ukraine/NATO: Sommeroffensive und hybride Kriegsführung",
+    "1_fractionated_actors": [
+      {
+        "entity": "Russland",
+        "factions": [
+          {
+            "faction_name": "Exekutive (Putin, Sicherheitsrat)",
+            "divergent_interest": "Fokus auf Einflusssphäre und innenpolitische Stabilität vs. militärisches Momentum",
+            "payoff_matrix_short_term": {
+              "action_escalate": 2,
+              "action_cooperate": -2,
+              "action_delay": 0
+            },
+            "confidence": 90
+          },
+          {
+            "faction_name": "Militär (Generalstab)",
+            "divergent_interest": "Operatives Momentum und Zugang zu Häfen vs. hohe Verluste",
+            "payoff_matrix_short_term": {
+              "action_escalate": 3,
+              "action_cooperate": -3,
+              "action_delay": 1
+            },
+            "confidence": 85
+          },
+          {
+            "faction_name": "Lobby (Energie, Rüstung)",
+            "divergent_interest": "Kriegsgewinne vs. langfristige Sanktionsschäden",
+            "payoff_matrix_short_term": {
+              "action_escalate": 2,
+              "action_cooperate": -1,
+              "action_delay": 0
+            },
+            "confidence": 80
+          }
+        ]
+      },
+      {
+        "entity": "USA/NATO",
+        "factions": [
+          {
+            "faction_name": "Exekutive (Biden, Außenamt)",
+            "divergent_interest": "Bündnisglaubwürdigkeit vs. Vermeidung direkter Konfrontation",
+            "payoff_matrix_short_term": {
+              "action_escalate": -2,
+              "action_cooperate": 1,
+              "action_delay": 2
+            },
+            "confidence": 90
+          },
+          {
+            "faction_name": "Militär (Pentagon)",
+            "divergent_interest": "Abschreckung vs. Eskalationsrisiko",
+            "payoff_matrix_short_term": {
+              "action_escalate": -1,
+              "action_cooperate": 0,
+              "action_delay": 1
+            },
+            "confidence": 85
+          },
+          {
+            "faction_name": "Lobby (Rüstungsindustrie)",
+            "divergent_interest": "Profit durch Waffenlieferungen vs. langfristige Friedensrisiken",
+            "payoff_matrix_short_term": {
+              "action_escalate": 3,
+              "action_cooperate": -2,
+              "action_delay": 0
+            },
+            "confidence": 80
+          }
+        ]
+      },
+      {
+        "entity": "Ukraine",
+        "factions": [
+          {
+            "faction_name": "Exekutive (Selenskyj)",
+            "divergent_interest": "Überlebenssicherung vs. territoriale Integrität",
+            "payoff_matrix_short_term": {
+              "action_escalate": -3,
+              "action_cooperate": 1,
+              "action_delay": 0
+            },
+            "confidence": 90
+          },
+          {
+            "faction_name": "Militär (Oberkommando)",
+            "divergent_interest": "Materialabhängigkeit von NATO vs. Verteidigungsfähigkeit",
+            "payoff_matrix_short_term": {
+              "action_escalate": -2,
+              "action_cooperate": 2,
+              "action_delay": 1
+            },
+            "confidence": 85
+          }
+        ]
+      }
+    ],
+    "2_time_horizon_conflict": {
+      "short_term_one_shot_4_to_8_weeks": "Russland priorisiert kurzfristige Geländegewinne im Donbass/Süden, NATO liefert schwere Waffen, Ukraine führt Abnutzungskampf.",
+      "long_term_repeated_game": "Wiederaufbau, Sicherheitsarchitektur (NATO-Beitritt vs. Neutralität), Russlands Isolation und Abhängigkeit von China, USA fokussiert auf Pazifik.",
+      "horizon_contradiction": "Kurzfristige Eskalation maximiert russische Gewinne, untergräbt aber langfristige Stabilität und schafft ein Sicherheitsdilemma für alle."
+    },
+    "3_game_structure_and_payoffs": {
+      "type": "Gefangenendilemma mit wechselseitiger Abhängigkeit",
+      "justification": "Beide Seiten haben einen Anreiz zu eskalieren (Russland: kurzfristige Gewinne, NATO: Abschreckung), aber die kooperative Lösung (Verhandlungen) wäre langfristig besser. Die Payoffs sind asymmetrisch: Russland gewinnt kurzfristig, verliert langfristig; NATO verliert kurzfristig (Eskalationsrisiko), gewinnt langfristig (geschwächtes Russland).",
+      "payoff_assessment_scale_minus_3_to_plus_3": [
+        {
+          "scenario_combination": "Russland eskaliert / NATO liefert Waffen",
+          "payoff_actor_A": 1,
+          "payoff_actor_B": 0,
+          "confidence": 85
+        },
+        {
+          "scenario_combination": "Russland eskaliert / NATO greift direkt ein",
+          "payoff_actor_A": -3,
+          "payoff_actor_B": -2,
+          "confidence": 90
+        },
+        {
+          "scenario_combination": "Russland verhandelt / NATO lockert Sanktionen",
+          "payoff_actor_A": 2,
+          "payoff_actor_B": 2,
+          "confidence": 70
+        }
+      ]
+    },
+    "4_signaling_and_information": {
+      "information_asymmetry": "Unvollständig: Beide Seiten haben unvollständige Informationen über die roten Linien des Gegners.",
+      "cheap_talk": [
+        "Putin: 'rote Linien'",
+        "Biden: 'alle Optionen'",
+        "Diplomatische Drohungen"
       ],
-      "historical_consequences": "Brent +18%, Tanker-Frachtraten +40%, Gold +6%",
-      "actionable_insight": "Long-Bias auf Energie-Majors & Tanker-Reeder (FRO); Airlines & Chemie untergewichten"
+      "costly_signals": [
+        "Russland: Truppenaufmarsch (20-30 Mrd. USD Kosten), NOTAMs, Raketentests",
+        "NATO: Einheitenverlegung nach Osteuropa (10.000+ Soldaten, Patriot-Systeme)",
+        "Ukraine: Mobilmachung, HIMARS-Einsätze"
+      ]
+    },
+    "5_equilibria_and_commitment": {
+      "plausible_nash_equilibria": "(Russland: Eskalation; NATO: keine direkte Kriegsteilnahme) ist stabil, da Abweichen für beide zu hohe Kosten verursacht.",
+      "commitment_problem": "Russland kann nicht glaubhaft versprechen, nicht weiter zu eskalieren (Irreversibilität). NATO kann nicht glaubhaft versprechen, im Ernstfall nicht einzugreifen (Bündnistreue). Dies führt zu einer suboptimalen Spirale mit hohem Risiko von Fehlwahrnehmungen.",
+      "confidence": 90
+    },
+    "6_falsification_counter_model": {
+      "alternative_interpretation": "Die Lage ist primär innerstaatlichen Konflikten geschuldet (Putins Machterhalt, westliche Wahlkämpfe) und kann durch Diplomatie gelöst werden.",
+      "necessary_conditions": "Substantielle Verhandlungen (Istanbul 2022 wieder aufnehmen), Rücknahme von Truppen, glaubwürdige Sicherheitsgarantien für die Ukraine.",
+      "falsifying_evidence": "Keine substanziellen Verhandlungen, hohe sunk costs (Tote, Sanktionen), China als Vermittler ohne Angebote für territoriale Kompromisse."
+    },
+    "behavioral_framing_check": "Verhalten ist konsistent mit Nutzenfunktion: Kurzfristige Optimierung dominiert, obwohl langfristige Kosten bekannt sind. Dies deutet auf eine hohe Zeitdiskontierungsrate und politische Zwänge hin."
+  },
+  "stress_testing_scenarios": [
+    {
+      "scenario_name": "Russische Sommeroffensive mit Durchbruch",
+      "probability_pct": 35,
+      "timeframe": "2-4 Monate",
+      "trigger_events": [
+        "Massenmobilisierung in Russland",
+        "Einsatz neuer Waffensysteme",
+        "Zusammenbruch der ukrainischen Verteidigung im Donbass"
+      ],
+      "cascade_chain": [
+        "Ukrainische Gebietsverluste",
+        "Humanitäre Krise (Millionen Flüchtlinge)",
+        "NATO verstärkt Ostflanke",
+        "Eskalation der Wirtschaftssanktionen",
+        "Ölpreis über 120 USD/bbl"
+      ],
+      "winners_long": [
+        {
+          "asset": "Rüstung (LMT, RHM.DE)",
+          "reason": "Erhöhte Militärausgaben und Waffenlieferungen"
+        },
+        {
+          "asset": "Öl & Gas (XOM, CVX)",
+          "reason": "Angebotsschock und geopolitische Risikoprämie"
+        },
+        {
+          "asset": "Schifffahrt (FRO, ZIM)",
+          "reason": "Störung der Lieferketten im Schwarzen Meer"
+        }
+      ],
+      "losers_short": [
+        {
+          "asset": "Europäische Industrie (SAP, SIEGY)",
+          "reason": "Energiekrise und Rezessionsrisiko"
+        },
+        {
+          "asset": "Ukrainische Anleihen",
+          "reason": "Zahlungsausfallrisiko"
+        },
+        {
+          "asset": "Technologie (AAPL, MSFT)",
+          "reason": "Risikoaversion und sinkende Nachfrage"
+        }
+      ],
+      "hedging_strategy": "Long Rohstoffe (Öl, Gold), Long VIX, Short europäische Aktienindizes"
     },
     {
-      "trigger_event": "Latentes China-Exportrisiko bei kritischen Mineralien",
-      "matched_past_events": [
-        "2010: Seltene-Erden-Stopp (+45%)",
-        "2023: Gallium/Germanium-Beschränkung",
-        "2025: erneute Verschärfung"
+      "scenario_name": "NATO-Russland Zwischenfall mit begrenzter Eskalation",
+      "probability_pct": 20,
+      "timeframe": "1-3 Monate",
+      "trigger_events": [
+        "Abschuss eines NATO-Aufklärungsflugzeugs",
+        "Russischer Angriff auf NATO-Versorgungskonvoi",
+        "Cyberangriff auf NATO-Mitgliedsstaat"
       ],
-      "historical_consequences": "Seltene Erden +45%, Bergbauaktien +12%, Japan-Industrie -7%",
-      "actionable_insight": "Westliche Förderer (MP, LYC, REMX) als strategischer Hedge halten"
+      "cascade_chain": [
+        "NATO beruft Artikel 4 ein",
+        "Begrenzte Vergeltungsschläge",
+        "Schließung des Luftraums über der Ukraine",
+        "Globale Finanzmarktturbulenzen"
+      ],
+      "winners_long": [
+        {
+          "asset": "Gold (GLD, IAU)",
+          "reason": "Sicherer Hafen"
+        },
+        {
+          "asset": "US-Staatsanleihen (TLT)",
+          "reason": "Flucht in Qualität"
+        },
+        {
+          "asset": "Cyber-Sicherheit (CRWD, PANW)",
+          "reason": "Erhöhte Ausgaben für Abwehr"
+        }
+      ],
+      "losers_short": [
+        {
+          "asset": "Globale Aktienmärkte (SPY, VTI)",
+          "reason": "Risikoaversion und Unsicherheit"
+        },
+        {
+          "asset": "Russische Anleihen",
+          "reason": "Verschärfte Sanktionen"
+        },
+        {
+          "asset": "Euro (FXE)",
+          "reason": "Kapitalflucht aus Europa"
+        }
+      ],
+      "hedging_strategy": "Long Gold, Long VIX, Short Aktienindizes, Long USD"
+    },
+    {
+      "scenario_name": "Diplomatischer Durchbruch und Waffenstillstand",
+      "probability_pct": 15,
+      "timeframe": "6-12 Monate",
+      "trigger_events": [
+        "China vermittelt erfolgreich",
+        "Innerer Druck in Russland",
+        "Erschöpfung der Kriegsparteien"
+      ],
+      "cascade_chain": [
+        "Waffenstillstand",
+        "Beginn der Wiederaufbauverhandlungen",
+        "Lockerung der Sanktionen",
+        "Rückkehr zu globalisierten Lieferketten"
+      ],
+      "winners_long": [
+        {
+          "asset": "Ukrainische Wiederaufbau-Aktien (FER, STRABAG)",
+          "reason": "Wiederaufbauprogramme"
+        },
+        {
+          "asset": "Europäische Industrie (AIR, SAF)",
+          "reason": "Erholung der Nachfrage"
+        },
+        {
+          "asset": "Erneuerbare Energien (NEE, ICLN)",
+          "reason": "Fokus auf Energieunabhängigkeit"
+        }
+      ],
+      "losers_short": [
+        {
+          "asset": "Rüstung (LMT, RHM.DE)",
+          "reason": "Rückgang der Militärausgaben"
+        },
+        {
+          "asset": "Öl & Gas (XOM, CVX)",
+          "reason": "Rückgang der Risikoprämie"
+        },
+        {
+          "asset": "Gold (GLD, IAU)",
+          "reason": "Rückgang der Nachfrage nach sicheren Häfen"
+        }
+      ],
+      "hedging_strategy": "Long zyklische Werte, Short Rüstung und Rohstoffe"
     }
   ],
   "conflict_hotspots": [
     {
-      "region": "Straße von Hormus",
-      "actors": "Iran vs. USA/Israel/GCC",
-      "escalation_level": "KRITISCH",
-      "catalyst": "Öl-Preissprung deutet auf Marine-Reibung/Angebotsangst",
-      "impact": "Öl & Tanker-Frachtraten",
-      "lat": 26.56,
-      "lng": 56.25
-    },
-    {
-      "region": "Bab al-Mandab / Rotes Meer",
-      "actors": "Regionale Milizen vs. westliche Marinekoalition",
+      "region": "Ukraine/Donbass",
+      "actors": "Russland vs. Ukraine/NATO",
       "escalation_level": "HOCH",
-      "catalyst": "Angriffe auf Handelsschifffahrt / Umleitungen ums Kap",
-      "impact": "Frachtraten & Lieferketten",
-      "lat": 12.58,
-      "lng": 43.33
+      "catalyst": "Sommeroffensive, Truppenverlegungen",
+      "impact": "Globale Energie- und Nahrungsmittelpreise, Flüchtlingsströme",
+      "lat": 48.0,
+      "lng": 37.8
     },
     {
-      "region": "Ostasien / Seltene-Erden-Lieferketten",
-      "actors": "China vs. USA/Japan/EU",
-      "escalation_level": "MODERAT",
-      "catalyst": "Drohende Exportkontrollen bei kritischen Mineralien",
-      "impact": "Bergbau & Halbleiter-Vorprodukte",
-      "lat": 39.9,
-      "lng": 116.4
+      "region": "Moldawien/Transnistrien",
+      "actors": "Russland vs. Moldawien/Ukraine",
+      "escalation_level": "ERHÖHT",
+      "catalyst": "Spannungen zwischen Regierung und Opposition, russische Truppenpräsenz",
+      "impact": "Destabilisierung der Region, neuer Flüchtlingsstrom",
+      "lat": 47.01,
+      "lng": 28.86
+    },
+    {
+      "region": "Südchinesisches Meer",
+      "actors": "China vs. USA/Philippinen/Taiwan",
+      "escalation_level": "ERHÖHT",
+      "catalyst": "Militärische Manöver, Sanktionen gegen Taiwan",
+      "impact": "Störung der globalen Lieferketten, Chip-Krise",
+      "lat": 12.0,
+      "lng": 115.0
+    },
+    {
+      "region": "Straße von Hormus",
+      "actors": "Iran vs. USA/Israel",
+      "escalation_level": "ERHÖHT",
+      "catalyst": "Spannungen um iranisches Atomprogramm, Tanker-Beschlagnahmungen",
+      "impact": "Ölpreisschock, globale Energiekrise",
+      "lat": 26.5,
+      "lng": 56.0
+    },
+    {
+      "region": "Kaukasus (Georgien/Aserbaidschan)",
+      "actors": "Russland vs. Georgien/Aserbaidschan",
+      "escalation_level": "ERHÖHT",
+      "catalyst": "Militärische Manöver, Spannungen um Bergkarabach",
+      "impact": "Energieversorgung (Korridor), regionale Instabilität",
+      "lat": 42.0,
+      "lng": 45.0
     }
   ],
-  "systemic_risks": [
+  "digital_and_monetary_sovereignty": [
     {
-      "title": "Stagflations-Risiko durch Angebotsschock",
-      "trend": "Steigend",
-      "risk_level": "HOCH",
-      "description": "Öl-Anstieg bei bereits erhöhter 10Y-Rendite (4,66%) verhärtet Inflationserwartungen und beschränkt geldpolitischen Spielraum."
+      "topic": "CBDC (Digitaler Yuan, digitaler Euro)",
+      "actor": "China, EZB",
+      "trend": "Beschleunigt",
+      "systemic_impact": "Veränderung der Geldpolitik, Finanzielle Überwachung, Entthronung des USD",
+      "market_implication": "Rückgang der USD-Nachfrage, Aufbau alternativer Zahlungssysteme"
     },
     {
-      "title": "Sanktions-Spirale & Rohstoff-Entkopplung",
-      "trend": "Steigend",
-      "risk_level": "ERHÖHT",
-      "description": "Weaponisierung kritischer Mineralien und Energieströme fragmentiert globale Lieferketten."
+      "topic": "EU-Chatkontrolle/Verschlüsselungsverbot",
+      "actor": "EU-Kommission",
+      "trend": "Vorstoß",
+      "systemic_impact": "Einschränkung der Privatsphäre, Zensur, Wettbewerbsnachteil für EU-Tech",
+      "market_implication": "Abwanderung von Tech-Unternehmen, Investitionen in sichere Kommunikation"
     },
     {
-      "title": "Volatilitäts-Cluster an Risikomärkten",
-      "trend": "Steigend",
-      "risk_level": "MODERAT",
-      "description": "VIX +5,83% und leicht fallende Aktien/Bitcoin signalisieren beginnende Risk-off-Rotation."
-    }
-  ],
-  "domestic_politics": [
-    {
-      "country": "USA",
-      "topic": "Geldpolitik unter Inflationsdruck",
-      "stability_score": "ANGESPANNT",
-      "details": "Steigende Anleiherenditen und Öl-getriebene Inflation zwingen die Fed zu restriktiver Haltung – politisch heikel im Vorfeld fiskalischer Debatten."
+      "topic": "US-Verschuldung",
+      "actor": "US-Regierung",
+      "trend": "Kritisch",
+      "systemic_impact": "Zinsanstieg, Verdrängung privater Investitionen, Risiko eines Zahlungsausfalls",
+      "market_implication": "Anstieg der Anleiherenditen, Flucht in Gold und alternative Währungen"
     },
     {
-      "country": "EU",
-      "topic": "Energiesicherheit & Frachtkosten",
-      "stability_score": "ANGESPANNT",
-      "details": "Umleitungen maritimer Handelsrouten belasten Industrie und importierte Inflation."
-    }
-  ],
-  "scenarios": [
-    {
-      "title": "Eskalation an maritimen Nadelöhren",
-      "probability_pct": 60,
-      "trigger": "Störung/Sperrung von Hormus oder Bab al-Mandab",
-      "market_consequence": "Brent >110$, Tanker-Frachtraten +40%, Gold dreht wieder aufwärts"
-    },
-    {
-      "title": "China verschärft Mineralien-Exportkontrollen",
-      "probability_pct": 40,
-      "trigger": "Retaliation auf westliche Technologiesanktionen",
-      "market_consequence": "REMX/MP/LYC +12-45%, Halbleiter- und Auto-Zulieferer unter Druck"
-    },
-    {
-      "title": "Deeskalation & Angebotsprämie verpufft",
-      "probability_pct": 30,
-      "trigger": "Diplomatische Beruhigung, keine physische Blockade",
-      "market_consequence": "Brent Rücksetzer -8%, VIX normalisiert sich, S&P erholt"
-    }
-  ],
-  "event_graph": [
-    {
-      "event_id": "EVT-2026-0714-041",
-      "title": "Öl-Angebotsprämie bei maritimen Nadelöhren steigt",
-      "sources": [
-        "Reuters",
-        "Bloomberg",
-        "UKMTO"
-      ],
-      "confidence": 85,
-      "affected_regions": [
-        "Naher Osten",
-        "Rotes Meer"
-      ],
-      "affected_markets": [
-        "Öl",
-        "Schifffahrt",
-        "Inflation"
-      ]
-    },
-    {
-      "event_id": "EVT-2026-0714-042",
-      "title": "Volatilitätsanstieg an Aktienmärkten (VIX +5,83%)",
-      "sources": [
-        "CBOE",
-        "Marktdaten"
-      ],
-      "confidence": 90,
-      "affected_regions": [
-        "Global"
-      ],
-      "affected_markets": [
-        "Aktien",
-        "Bitcoin",
-        "HY-Kredit"
-      ]
-    }
-  ],
-  "impact_chains": [
-    {
-      "trigger": "Hormus / Bab al-Mandab Störung",
-      "chain": [
-        "Tanker-Passagen sinken",
-        "Brent Öl steigt",
-        "Frachtraten steigen",
-        "Inflation steigt",
-        "Fed bleibt restriktiv",
-        "Realzinsdruck auf Risiko-Assets"
-      ],
-      "beneficiaries": [
-        "Brent Öl",
-        "Tanker-Reeder",
-        "Energie-Majors",
-        "Gold (verzögert)"
-      ],
-      "detractors": [
-        "Airlines",
-        "Chemie",
-        "Konsumgüter",
-        "Bitcoin"
-      ]
-    },
-    {
-      "trigger": "China-Exportkontrolle kritischer Mineralien",
-      "chain": [
-        "Seltene-Erden-Angebot verknappt",
-        "Preise +45%",
-        "Westliche Förderer profitieren",
-        "Japan/EU-Industrie unter Kostendruck"
-      ],
-      "beneficiaries": [
-        "MP",
-        "LYC",
-        "REMX"
-      ],
-      "detractors": [
-        "Halbleiter-Fertigung",
-        "Auto-Zulieferer"
-      ]
-    }
-  ],
-  "narrative_matrix": [
-    {
-      "topic": "Öl & Geopolitik",
-      "mainstream": "Temporäre Risikoprämie, Angebot bleibt langfristig ausreichend",
-      "brics": "Energie als geopolitischer Hebel; Absicherung über eigene Rohstoffreserven",
-      "alternative": "Struktureller Angebotsschock mit dauerhaft höheren Preisen und Stagflation"
-    },
-    {
-      "topic": "Zinspfad & Inflation",
-      "mainstream": "Fed hält Kurs, Disinflation intakt",
-      "brics": "Entdollarisierung und Rohstoffbindung als Absicherung",
-      "alternative": "Öl-getriebene Reinflation erzwingt längeres Zinshoch"
-    }
-  ],
-  "assets": [
-    {
-      "name": "Brent / WTI Öl",
-      "signal": "GREEN",
-      "signal_text": "🟢 Attraktiv",
-      "trend": "Stark steigend",
-      "driver": "Geopolitische Angebotsprämie an Chokepoints"
-    },
-    {
-      "name": "Tanker-Reeder (FRO)",
-      "signal": "GREEN",
-      "signal_text": "🟢 Attraktiv",
-      "trend": "Steigend",
-      "driver": "Frachtraten profitieren von Umleitungen"
-    },
-    {
-      "name": "Gold & Silber",
-      "signal": "YELLOW",
-      "signal_text": "🟡 Neutral-Konstruktiv",
-      "trend": "Kurzfristig konsolidierend",
-      "driver": "Heute -0,84% durch Realzinsdruck, mittelfristig Hedge bei Eskalation"
-    },
-    {
-      "name": "Airlines & Chemie",
-      "signal": "RED",
-      "signal_text": "🔴 Untergewichten",
-      "trend": "Fallend",
-      "driver": "Treibstoffkosten und Lieferkettenstörungen"
-    },
-    {
-      "name": "Bitcoin & Risiko-Assets",
-      "signal": "YELLOW",
-      "signal_text": "🟡 Vorsicht",
-      "trend": "Schwächelnd",
-      "driver": "VIX-Anstieg und Risk-off-Rotation"
+      "topic": "BRICS Pay / Alternative zu SWIFT",
+      "actor": "BRICS-Staaten",
+      "trend": "Aufbau",
+      "systemic_impact": "Fragmentierung des globalen Finanzsystems, Entdollarisierung",
+      "market_implication": "Rückgang der USD-Dominanz, Aufbau von Rohstoffwährungen"
     }
   ],
   "stock_picks": {
@@ -255,127 +387,66 @@
       {
         "ticker": "FRO",
         "name": "Frontline Ltd",
-        "sector": "Schifffahrt/Tanker",
-        "reason": "Frachtraten-Spike durch Umleitung maritimer Routen"
+        "sector": "Schifffahrt (Öltanker)",
+        "reason": "Steigende Ölpreise und Umleitung von Tankerrouten aufgrund von Sanktionen und Spannungen im Schwarzen Meer erhöhen die Nachfrage nach Tonnage."
+      },
+      {
+        "ticker": "RHM.DE",
+        "name": "Rheinmetall AG",
+        "sector": "Rüstung",
+        "reason": "Erhöhte Militärausgaben in Europa und der NATO aufgrund des Ukraine-Kriegs und der neuen Bedrohungslage treiben die Auftragsbücher."
+      },
+      {
+        "ticker": "CCJ",
+        "name": "Cameco Corporation",
+        "sector": "Uran",
+        "reason": "Wiederbelebung der Kernenergie als kohlenstoffarme Energiequelle und geopolitische Spannungen um Uranlieferungen aus Russland."
+      },
+      {
+        "ticker": "PLTR",
+        "name": "Palantir Technologies",
+        "sector": "Cyber-Sicherheit / Datenanalyse",
+        "reason": "Steigende Nachfrage nach Aufklärungs- und Analyseplattformen für militärische und geheimdienstliche Zwecke."
       },
       {
         "ticker": "XOM",
-        "name": "ExxonMobil",
-        "sector": "Energie",
-        "reason": "Direkter Profiteur der Öl-Angebotsprämie"
-      },
-      {
-        "ticker": "MP",
-        "name": "MP Materials",
-        "sector": "Bergbau",
-        "reason": "Hedge gegen China-Exportkontrollen bei Seltenen Erden"
-      },
-      {
-        "ticker": "LYC",
-        "name": "Lynas Rare Earths",
-        "sector": "Bergbau",
-        "reason": "Westliche Versorgungsalternative bei kritischen Mineralien"
-      },
-      {
-        "ticker": "GC=F",
-        "name": "Gold Futures",
-        "sector": "Edelmetall",
-        "reason": "Absicherung gegen Eskalation und Reinflation trotz kurzfristiger Konsolidierung"
+        "name": "Exxon Mobil Corporation",
+        "sector": "Öl & Gas",
+        "reason": "Geopolitische Risikoprämie und Angebotsverknappung treiben den Ölpreis, was zu hohen Gewinnen für integrierte Ölkonzerne führt."
       }
     ],
     "flop_5_sells": [
       {
-        "ticker": "DAL",
-        "name": "Delta Air Lines",
+        "ticker": "SIEGY",
+        "name": "Siemens AG",
+        "sector": "Industriekonglomerat",
+        "reason": "Hohe Exposition gegenüber dem europäischen Markt, der unter der Energiekrise und möglichen Sanktionen leidet."
+      },
+      {
+        "ticker": "SAP",
+        "name": "SAP SE",
+        "sector": "Software",
+        "reason": "Konjunkturabhängigkeit und Risiko einer Rezession in Europa, die zu geringeren IT-Ausgaben führt."
+      },
+      {
+        "ticker": "AAPL",
+        "name": "Apple Inc.",
+        "sector": "Technologie",
+        "reason": "Risiko von Lieferkettenunterbrechungen in China und sinkende Nachfrage aufgrund globaler Unsicherheit."
+      },
+      {
+        "ticker": "MCD",
+        "name": "McDonald's Corporation",
+        "sector": "Restaurants",
+        "reason": "Exposition gegenüber Russland und der Ukraine, sowie steigende Lebensmittel- und Energiekosten, die die Margen drücken."
+      },
+      {
+        "ticker": "BA",
+        "name": "The Boeing Company",
         "sector": "Luftfahrt",
-        "reason": "Hohe Treibstoffkosten und mögliche Flugumleitungen"
-      },
-      {
-        "ticker": "LUV",
-        "name": "Southwest Airlines",
-        "sector": "Luftfahrt",
-        "reason": "Margendruck durch Kerosinpreise"
-      },
-      {
-        "ticker": "DOW",
-        "name": "Dow Inc",
-        "sector": "Chemie",
-        "reason": "Energieinput-Kosten und Lieferkettenstörungen"
-      },
-      {
-        "ticker": "MAERSK",
-        "name": "A.P. Møller-Mærsk",
-        "sector": "Containerschifffahrt",
-        "reason": "Routenumleitungen belasten Transitzeiten trotz höherer Raten"
-      },
-      {
-        "ticker": "TM",
-        "name": "Toyota Motor",
-        "sector": "Automobil",
-        "reason": "Exponiert gegenüber Seltene-Erden-Verknappung und Japan-Industriedruck"
+        "reason": "Abhängigkeit von globalen Lieferketten und Risiko von Sanktionen, die die Produktion und Auslieferung von Flugzeugen beeinträchtigen."
       }
     ]
   },
-  "knowledge_graph_updates": {
-    "new_entities": [
-      {
-        "id": "E1",
-        "name": "Straße von Hormus",
-        "type": "CHOKEPOINT"
-      },
-      {
-        "id": "E2",
-        "name": "Bab al-Mandab",
-        "type": "CHOKEPOINT"
-      },
-      {
-        "id": "E3",
-        "name": "Brent Öl",
-        "type": "COMMODITY"
-      },
-      {
-        "id": "E4",
-        "name": "Seltene Erden",
-        "type": "COMMODITY"
-      },
-      {
-        "id": "E5",
-        "name": "VIX",
-        "type": "MARKET_INDICATOR"
-      }
-    ],
-    "new_relations": [
-      {
-        "subject": "Iran",
-        "predicate": "THREATENS_CLOSURE_OF",
-        "object": "Straße von Hormus",
-        "severity": 85
-      },
-      {
-        "subject": "Straße von Hormus",
-        "predicate": "PRICE_DRIVER_OF",
-        "object": "Brent Öl",
-        "severity": 90
-      },
-      {
-        "subject": "Bab al-Mandab",
-        "predicate": "AFFECTS",
-        "object": "Tanker-Frachtraten",
-        "severity": 75
-      },
-      {
-        "subject": "China",
-        "predicate": "MAY_RESTRICT_EXPORT_OF",
-        "object": "Seltene Erden",
-        "severity": 70
-      },
-      {
-        "subject": "Brent Öl",
-        "predicate": "REINFORCES",
-        "object": "US-Inflationserwartungen",
-        "severity": 65
-      }
-    ]
-  },
-  "timestamp": "23.07.2026 - 07:34 UTC"
+  "timestamp": "23.07.2026 - 19:47 UTC"
 }
