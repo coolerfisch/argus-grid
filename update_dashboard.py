@@ -119,10 +119,17 @@ def get_live_military_flights():
     mil_prefixes = ("FORTE", "NATO", "HOMER", "JAKE", "LAGR", "NCHO", "DUKE", "RCH", "BRK", "CMB", "REDYE", "MAGE", "VALK", "DRAGON", "SENTRY")
     flights = []
     
+    # OpenSky Login aus Umgebungsvariablen (Secrets) einlesen
+    opensky_user = os.environ.get("OPENSKY_USER", "").strip()
+    opensky_pass = os.environ.get("OPENSKY_PASSWORD", "").strip()
+    auth_data = (opensky_user, opensky_pass) if opensky_user and opensky_pass else None
+
     try:
         # Bounding Box: Europa, Schwarzes Meer, Ost-Mittelmeer, Nahost (Lat 20-70, Lng -10-50)
         params = {"lamin": 20.0, "lomin": -10.0, "lamax": 70.0, "lomax": 50.0}
-        res = requests.get(url, params=params, headers={"User-Agent": "Mozilla/5.0"}, timeout=6)
+        
+        # Abfrage mit Authentifizierung für höhere Rate Limits
+        res = requests.get(url, params=params, auth=auth_data, headers={"User-Agent": "Mozilla/5.0"}, timeout=6)
         
         if res.status_code == 200:
             states = res.json().get("states", [])
@@ -139,7 +146,6 @@ def get_live_military_flights():
                     heading = s[10]  # True Track Grad
 
                     if lat is not None and lng is not None and not on_ground:
-                        # Prpfen, ob Callsign einem Aufklärungs- oder Militärmuster entspricht
                         if any(callsign.startswith(prefix) for prefix in mil_prefixes):
                             flights.append({
                                 "callsign": callsign,
@@ -155,7 +161,7 @@ def get_live_military_flights():
     except Exception as e:
         print(f"OpenSky Live ADS-B Hinweis: {e}")
 
-    # Fallback-Daten, falls Transponder stummgeschaltet sind oder Rate-Limit greift
+    # Fallback-Daten, falls Transponder stummgeschaltet sind oder API-Limit greift
     if not flights:
         print("Hinweis: Transponder passiv oder API-Limit. Nutze simulierte OSINT-Patrouillen.")
         flights = [
