@@ -1,3 +1,7 @@
+
+import socket
+socket.setdefaulttimeout(5)  # Bricht hängende Netzwerk-Sockets nach 5 Sekunden ab
+
 import os
 import json
 import re
@@ -5,6 +9,7 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import anthropic
 import feedparser
+import requests  # Zwingend nötig für das Timeout
 import yfinance as yf
 
 # ============================================================
@@ -15,6 +20,7 @@ def clean_html(raw_html):
         return ""
     clean_text = re.sub(r'<[^>]+>', '', raw_html)
     return clean_text.strip()
+
 
 def repair_and_parse_json(text):
     text = text.strip()
