@@ -183,7 +183,6 @@ if anth_key:
         "Antworte AUSSCHLIESSLICH im rein validen JSON-Format basierend auf diesem Schema:\n" + json_template_desc
     )
 
-    # Reihum testen wir die korrekten Anthropic-Modellnamen
     claude_models = ["claude-3-5-sonnet-latest", "claude-3-5-haiku-latest"]
     for model_name in claude_models:
         try:
@@ -208,7 +207,6 @@ if not raw_text:
         print("Claude nicht erreichbar. Wechsle zu Groq Llama...")
         client_groq = Groq(api_key=groq_key)
         
-        # Erst 70B testen, bei RateLimit auf 8B Instant ausweichen
         for groq_model in ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]:
             try:
                 chat_completion = client_groq.chat.completions.create(
@@ -251,7 +249,6 @@ Prüfe den folgenden JSON-Entwurf:
 Entwurf:
 {json.dumps(data, ensure_ascii=False)}
 """
-        # Auch beim Audit ausfallsicher für Rate-Limits
         audit_model = "llama-3.3-70b-versatile"
         try:
             audit_completion = client_groq.chat.completions.create(
