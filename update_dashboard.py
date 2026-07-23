@@ -24,7 +24,7 @@ deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "").strip().strip('"').strip("
 client_groq = Groq(api_key=groq_key) if groq_key else None
 client_anthropic = anthropic.Anthropic(api_key=anth_key) if anth_key else None
 
-# Gemini Client (Über Google AI Studio API via OpenAI-Schnittstelle)
+# Gemini Client (Google AI Studio API via OpenAI-Schnittstelle)
 client_gemini = OpenAI(
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
     api_key=gemini_key
@@ -111,7 +111,65 @@ def get_live_market_data():
 live_market_context = get_live_market_data()
 
 # ============================================================
-# B. ERWEITERTER, BALANCIERTER QUELLENPOOL (140+ FEEDS)
+# B. LIVE MILITÄR- & RECON-FLUGDATEN (OPENSKY NETWORK ADS-B)
+# ============================================================
+def get_live_military_flights():
+    print("Hole live ADS-B Militär- & Aufklärungsflüge via OpenSky Network...")
+    url = "[https://opensky-network.org/api/states/all](https://opensky-network.org/api/states/all)"
+    mil_prefixes = ("FORTE", "NATO", "HOMER", "JAKE", "LAGR", "NCHO", "DUKE", "RCH", "BRK", "CMB", "REDYE", "MAGE", "VALK", "DRAGON", "SENTRY")
+    flights = []
+    
+    try:
+        # Bounding Box: Europa, Schwarzes Meer, Ost-Mittelmeer, Nahost (Lat 20-70, Lng -10-50)
+        params = {"lamin": 20.0, "lomin": -10.0, "lamax": 70.0, "lomax": 50.0}
+        res = requests.get(url, params=params, headers={"User-Agent": "Mozilla/5.0"}, timeout=6)
+        
+        if res.status_code == 200:
+            states = res.json().get("states", [])
+            if states:
+                for s in states:
+                    callsign = (s[1] or "").strip()
+                    icao24 = s[0] or "unknown"
+                    country = s[2] or "Unknown"
+                    lng = s[5]
+                    lat = s[6]
+                    alt = s[7]       # in Metern
+                    on_ground = s[8]
+                    velocity = s[9]  # in m/s
+                    heading = s[10]  # True Track Grad
+
+                    if lat is not None and lng is not None and not on_ground:
+                        # Prpfen, ob Callsign einem Aufklärungs- oder Militärmuster entspricht
+                        if any(callsign.startswith(prefix) for prefix in mil_prefixes):
+                            flights.append({
+                                "callsign": callsign,
+                                "icao24": icao24,
+                                "country": country,
+                                "lat": round(lat, 4),
+                                "lng": round(lng, 4),
+                                "altitude_m": round(alt) if alt else 0,
+                                "speed_kmh": round(velocity * 3.6) if velocity else 0,
+                                "heading": round(heading) if heading else 0,
+                                "is_live": True
+                            })
+    except Exception as e:
+        print(f"OpenSky Live ADS-B Hinweis: {e}")
+
+    # Fallback-Daten, falls Transponder stummgeschaltet sind oder Rate-Limit greift
+    if not flights:
+        print("Hinweis: Transponder passiv oder API-Limit. Nutze simulierte OSINT-Patrouillen.")
+        flights = [
+            {"callsign": "FORTE12 (US Global Hawk)", "icao24": "ae5420", "country": "United States", "lat": 43.8, "lng": 29.8, "altitude_m": 16000, "speed_kmh": 620, "heading": 85, "is_live": False},
+            {"callsign": "NATO AWACS 01", "icao24": "4d03c2", "country": "NATO", "lat": 54.2, "lng": 20.1, "altitude_m": 10500, "speed_kmh": 780, "heading": 120, "is_live": False},
+            {"callsign": "USAF C-17 Airlift", "icao24": "ae1176", "country": "United States", "lat": 50.1, "lng": 19.8, "altitude_m": 9200, "speed_kmh": 830, "heading": 270, "is_live": False}
+        ]
+
+    return flights[:8]
+
+live_recon_flights = get_live_military_flights()
+
+# ============================================================
+# C. ERWEITERTER, BALANCIERTER QUELLENPOOL (140+ FEEDS)
 # ============================================================
 SOURCES = [
     # 🇺🇸 USA: POLITISCHES SPEKTRUM (DEMOKRATEN, REPUBLIKANER, LIBERTÄR)
@@ -238,7 +296,6 @@ SOURCES = [
     {"name": "Foreign Policy", "url": "[https://foreignpolicy.com/feed/](https://foreignpolicy.com/feed/)", "cat": "Magazin", "weight": 0.85, "bias": "WESTERN"},
     {"name": "Nikkei Asia", "url": "[https://asia.nikkei.com/rss/feed/nar](https://asia.nikkei.com/rss/feed/nar)", "cat": "Finanzen/Asien", "weight": 0.90, "bias": "MAINSTREAM"},
     {"name": "Finanzmarktwelt", "url": "[https://finanzmarktwelt.de/feed/](https://finanzmarktwelt.de/feed/)", "cat": "Finanzen DE", "weight": 0.80, "bias": "ALTERNATIVE"},
-    {"name": "Tagesschau Ausland", "url": "[https://www.tagesschau.de/ausland/index.xml](https://www.tagesschau.de/ausland/index.xml)", "cat": "Medien DE", "weight": 0.90, "bias": "MAINSTREAM"},
 
     # 💬 OSINT & COMMUNITY REDDIT FEEDS
     {"name": "Reddit r/geopolitics", "url": "[https://www.reddit.com/r/geopolitics/.rss](https://www.reddit.com/r/geopolitics/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
@@ -248,7 +305,6 @@ SOURCES = [
     {"name": "Reddit r/Economics", "url": "[https://www.reddit.com/r/Economics/.rss](https://www.reddit.com/r/Economics/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
     {"name": "Reddit r/Macroeconomics", "url": "[https://www.reddit.com/r/Macroeconomics/.rss](https://www.reddit.com/r/Macroeconomics/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
     {"name": "Reddit r/Commodities", "url": "[https://www.reddit.com/r/Commodities/.rss](https://www.reddit.com/r/Commodities/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
-    {"name": "Reddit r/worldnews", "url": "[https://www.reddit.com/r/worldnews/.rss](https://www.reddit.com/r/worldnews/.rss)", "cat": "Community", "weight": 0.50, "bias": "MAINSTREAM"},
 
     # 🔍 ALTERNATIVE, INVESTIGATIVE & KONTRÄRE MEDIEN
     {"name": "Scheerpost", "url": "[https://scheerpost.com/feed/](https://scheerpost.com/feed/)", "cat": "Investigativ", "weight": 0.75, "bias": "ALTERNATIVE"},
@@ -278,7 +334,7 @@ SOURCES = [
     {"name": "Caitlin Johnstone", "url": "[https://caitlinjohnstone.com.au/feed/](https://caitlinjohnstone.com.au/feed/)", "cat": "Kolumne", "weight": 0.55, "bias": "ALTERNATIVE"}
 ]
 
-browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) ArgusGridOSINTBot/2.5"
+browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) ArgusGridOSINTBot/3.0"
 
 def fetch_feed(src):
     try:
@@ -345,13 +401,13 @@ Gib das Ergebnis als strukturierte Stichpunkte zurück (max 3000 Wörter). Deuts
 filtered_context = filter_feeds(raw_feed_text)
 
 # ============================================================
-# STUFE 2a: DEEPSEEK-R1 (SPIELTHEORIE & KALTE LOGIK)
+# STUFE 2a: DEEPSEEK-R1 / V4 (SPIELTHEORIE & KALTE LOGIK)
 # ============================================================
 def run_deepseek_game_theory(context):
     if not client_deepseek:
         print("Hinweis: DeepSeek Key (DEEPSEEK_API_KEY) nicht konfiguriert.")
         return "DeepSeek Spieltheorie-Analyse nicht verfügbar."
-    print("Starte DeepSeek-R1 Spieltheorie-Analyse (Direkt-API deepseek-reasoner)...")
+    print("Starte DeepSeek-R1 Spieltheorie-Analyse (deepseek-reasoner)...")
     gt_prompt = """Analysiere das akuteste globale Krisenereignis aus den Feeds streng spieltheoretisch.
 Setze folgende 6 Prinzipien um:
 1. AKTEUR-GRANULARITÄT: Zerlege Staaten in interne Fraktionen (Exekutive, Militär, Parteiflügel, Lobby).
@@ -535,8 +591,11 @@ if not final_json_text:
 data = repair_and_parse_json(final_json_text)
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 
+# DIREKT-INJEKTION DER LIVE ADS-B FLUGDATEN IN DIE DATA.JSON
+data["live_recon_flights"] = live_recon_flights
+
 # JSON Speichern
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("✅ Argus Grid Multi-LLM Intelligence Engine erfolgreich gelaufen!")
+print(f"✅ Argus Grid Multi-LLM Intelligence Engine erfolgreich gelaufen! ({len(live_recon_flights)} Flugspuren erfasst)")
