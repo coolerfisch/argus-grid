@@ -110,6 +110,8 @@
       border-radius: 12px;
       padding: 20px;
       transition: border-color 0.2s ease;
+      min-width: 0; /* Verhindert das Ausbrechen von Tabellen im CSS Grid */
+      overflow: hidden;
     }
 
     .card:hover {
@@ -141,6 +143,7 @@
       padding: 16px;
       border-radius: 10px;
       text-align: center;
+      min-width: 0;
     }
 
     .kpi-label {
@@ -209,6 +212,7 @@
       padding: 14px;
       border-radius: 8px;
       border: 1px solid #1e293b;
+      min-width: 0;
     }
 
     .gt-box h4 {
@@ -298,7 +302,7 @@
       border-radius: 50%;
     }
 
-    /* ANIMATED PULSE MARKER (KRIEGSZONEN) */
+    /* ANIMATED PULSE MARKER */
     @keyframes pulse-ring {
       0% { transform: scale(0.33); opacity: 0.9; }
       80%, 100% { transform: scale(2.2); opacity: 0; }
@@ -352,7 +356,7 @@
       display: inline-block;
     }
 
-    /* ZWEI-SPALTEN BRENNOFF-LISTE */
+    /* ZWEI-SPALTEN BRENNPUNKT-LISTE */
     .hotspot-sections {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -395,33 +399,40 @@
       margin-bottom: 6px;
     }
 
-    /* TABELLEN STYLES */
+    /* OPTIMIERTE TABELLEN STYLES (FESTES LAYOUT & AUTOMATISCHER UMBRUCH) */
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
+      table-layout: fixed; /* Erzwingt feste Spaltenbreiten */
     }
 
     th, td {
-      padding: 10px 12px;
+      padding: 8px 6px;
       text-align: left;
       border-bottom: 1px solid #1e293b;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      vertical-align: top;
     }
 
     th {
       color: var(--text-muted);
       font-weight: 600;
       text-transform: uppercase;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.5px;
     }
 
     .ticker-badge {
       background: #0f172a;
-      padding: 3px 8px;
+      padding: 2px 6px;
       border-radius: 4px;
       font-family: monospace;
       font-weight: 700;
       color: var(--accent-cyan);
+      display: inline-block;
+      font-size: 0.8rem;
     }
 
     .stability-badge {
@@ -429,6 +440,7 @@
       border-radius: 4px;
       font-weight: 700;
       font-size: 0.75rem;
+      display: inline-block;
     }
 
     @media (max-width: 1024px) {
@@ -533,9 +545,9 @@
       <table>
         <thead>
           <tr>
-            <th style="width: 15%;">Region / Akteur</th>
-            <th style="width: 40%;">Innenpolitische Dynamik & Treiber</th>
-            <th style="width: 15%;">Stabilität</th>
+            <th style="width: 18%;">Region / Akteur</th>
+            <th style="width: 38%;">Innenpolitische Dynamik & Treiber</th>
+            <th style="width: 14%;">Stabilität</th>
             <th style="width: 30%;">Geopolitischer Spillover & Märkte</th>
           </tr>
         </thead>
@@ -562,17 +574,31 @@
       <div id="hotspots-list-container"></div>
     </div>
 
+    <!-- AKTIEN ROTATION CARD -->
     <div class="card">
       <h2>📈 Dynamische Aktien-Rotation</h2>
+      
       <h3 style="font-size: 0.85rem; color: var(--accent-green); margin: 10px 0 5px 0;">TOP 5 BUYS (ÜBERGEWICHTEN)</h3>
       <table>
-        <thead><tr><th>Ticker</th><th>Name</th><th>Grund</th></tr></thead>
+        <thead>
+          <tr>
+            <th style="width: 22%;">Ticker</th>
+            <th style="width: 28%;">Name</th>
+            <th style="width: 50%;">Grund</th>
+          </tr>
+        </thead>
         <tbody id="stocks-buys"></tbody>
       </table>
 
       <h3 style="font-size: 0.85rem; color: var(--accent-red); margin: 20px 0 5px 0;">FLOP 5 SELLS (UNTERGEWICHTEN)</h3>
       <table>
-        <thead><tr><th>Ticker</th><th>Name</th><th>Grund</th></tr></thead>
+        <thead>
+          <tr>
+            <th style="width: 22%;">Ticker</th>
+            <th style="width: 28%;">Name</th>
+            <th style="width: 50%;">Grund</th>
+          </tr>
+        </thead>
         <tbody id="stocks-sells"></tbody>
       </table>
     </div>
@@ -582,11 +608,11 @@
       <table>
         <thead>
           <tr>
-            <th>Thema / Gesetz</th>
-            <th>Akteur</th>
-            <th>Trend</th>
-            <th>Systemische Auswirkung</th>
-            <th>Marktreaktion</th>
+            <th style="width: 20%;">Thema / Gesetz</th>
+            <th style="width: 15%;">Akteur</th>
+            <th style="width: 15%;">Trend</th>
+            <th style="width: 25%;">Systemische Auswirkung</th>
+            <th style="width: 25%;">Marktreaktion</th>
           </tr>
         </thead>
         <tbody id="sovereignty-table"></tbody>
