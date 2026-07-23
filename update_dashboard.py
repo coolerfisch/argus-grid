@@ -39,10 +39,21 @@ def repair_and_parse_json(text):
         repaired += '}' * max(0, open_braces)
         return json.loads(repaired)
 
-# A. ECHTE LIVE-MARKTDATEN & ROHSTOFF-BASKET
+# A. ECHTE LIVE-FINANZ-, MAKRO-, ENERGIE- & ROHSTOFFDATEN
 def get_live_market_data():
     market_summary = ""
     tickers = {
+        # Währungen & Dollar-Stärke
+        "US Dollar Index (DXY)": "DX-Y.NYB",
+        "EUR/USD": "EURUSD=X",
+        "USD/JPY": "JPY=X",
+        
+        # Zinsen, Bond-Stress & Volatilität
+        "US 10Y Anleihe": "^TNX",
+        "VIX (Aktien-Volatilität)": "^VIX",
+        "HYG (High Yield Spreads ETF)": "HYG",
+        
+        # Rohstoffe & Energie
         "Gold (USD/oz)": "GC=F",
         "Silber (USD/oz)": "SI=F",
         "Brent Öl (USD/bbl)": "BZ=F",
@@ -50,12 +61,13 @@ def get_live_market_data():
         "US Erdgas (USD/MMBtu)": "NG=F",
         "Kupfer (USD/lb)": "HG=F",
         "Weizen (USD/bu)": "ZW=F",
+        
+        # Fracht, Logistik & Weltwirtschaft
+        "BDI (Baltic Dry Index ETF)": "BDRY",
         "S&P 500 Index": "^GSPC",
-        "Bitcoin (USD)": "BTC-USD",
-        "US 10Y Anleihe": "^TNX",
-        "VIX (Angstindex)": "^VIX"
+        "Bitcoin (USD)": "BTC-USD"
     }
-    print("Hole echte Finanz- & Rohstoffmarktdaten via yfinance...")
+    print("Hole echte Finanz-, Makro- & Rohstoffmarktdaten via yfinance...")
     try:
         for name, ticker in tickers.items():
             try:
@@ -75,7 +87,22 @@ def get_live_market_data():
 
 live_market_context = get_live_market_data()
 
-# B. HIGH-PRECISION MULTI-DOMAIN QUELLENMATRIX (90+ SPEZIAL-FEEDS)
+# B. DAS LANGZEIT-GEDÄCHTNIS LADEN (KNOWLEDGE GRAPH MEMORY)
+memory_file = "knowledge_graph.json"
+historical_memory = []
+if os.path.exists(memory_file):
+    try:
+        with open(memory_file, "r", encoding="utf-8") as f:
+            historical_memory = json.load(f)
+        print(f"Knowledge Graph geladen: {len(historical_memory)} historische Muster im Gedächtnis.")
+    except Exception as e:
+        print(f"Fehler beim Laden des Gedächtnisses: {e}")
+
+memory_context_str = "Bisherige historische Kern-Ereignisse im Knowledge Graph:\n"
+for item in historical_memory[-50:]: # Die letzten 50 wichtigsten Events übergeben
+    memory_context_str += f"- [{item.get('date')}] {item.get('category')}: {item.get('headline')} (Akteure: {item.get('actors')})\n"
+
+# C. VOLLSTÄNDIGER 100+ MULTI-DOMÄNEN QUELLENPOOL
 SOURCES = [
     # 🏛️ 1. ZENTRALBANKEN & MAKRO-INSTITUTIONEN (Gewicht: 1.0)
     {"name": "Federal Reserve Press", "url": "[https://www.federalreserve.gov/feeds/press_all.xml](https://www.federalreserve.gov/feeds/press_all.xml)", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
@@ -90,7 +117,16 @@ SOURCES = [
     {"name": "US Department of State", "url": "[https://www.state.gov/rss-feed/press-releases/feed/](https://www.state.gov/rss-feed/press-releases/feed/)", "cat": "Diplomatie", "weight": 1.00, "bias": "WESTERN"},
     {"name": "Schweizer Bundesrat", "url": "[https://www.admin.ch/gov/de/start/dokumentation/medienmitteilungen.rss.html](https://www.admin.ch/gov/de/start/dokumentation/medienmitteilungen.rss.html)", "cat": "Regierung", "weight": 1.00, "bias": "WESTERN"},
 
-    # 🛡️ 2. MILITÄR, OSINT, SATELLITEN & KATASTROPHEN (Gewicht: 0.85 - 0.95)
+    # 📊 2. SPEZIALISIERTE ENERGIE-, ROHSTOFF- & AGRAR-REPORTS (Gewicht: 0.95 - 1.00)
+    {"name": "EIA Petroleum Status Report", "url": "[https://news.google.com/rss/search?q=when:7d+site:eia.gov+%22Weekly+Petroleum+Status+Report%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:eia.gov+%22Weekly+Petroleum+Status+Report%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / EIA", "weight": 1.00, "bias": "OFFIZIELL"},
+    {"name": "IEA Oil Market Reports", "url": "[https://news.google.com/rss/search?q=when:7d+site:iea.org+%22Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:iea.org+%22Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / IEA", "weight": 1.00, "bias": "OFFIZIELL"},
+    {"name": "OPEC Monthly Market Reports", "url": "[https://news.google.com/rss/search?q=when:7d+OPEC+%22Monthly+Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+OPEC+%22Monthly+Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / OPEC", "weight": 1.00, "bias": "OFFIZIELL"},
+    {"name": "Freightos Shipping & Freight Index", "url": "[https://news.google.com/rss/search?q=when:7d+%22Freightos%22+OR+%22container+freight+rate%22+OR+%22Baltic+Dry%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22Freightos%22+OR+%22container+freight+rate%22+OR+%22Baltic+Dry%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Logistik / Container", "weight": 0.90, "bias": "MAINSTREAM"},
+    {"name": "FAO Food Price Index & Reports", "url": "[https://news.google.com/rss/search?q=when:7d+site:fao.org+%22Food+Price+Index%22+OR+%22Crop+Prospects%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:fao.org+%22Food+Price+Index%22+OR+%22Crop+Prospects%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Agrar / FAO", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "USDA Crop & Supply Reports", "url": "[https://news.google.com/rss/search?q=when:7d+site:usda.gov+%22WASDE%22+OR+%22Crop+Production%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:usda.gov+%22WASDE%22+OR+%22Crop+Production%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Agrar / USDA", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "MOVE Index & Bond Market Stress Alerts", "url": "[https://news.google.com/rss/search?q=when:7d+%22MOVE+index%22+OR+%22high+yield+spreads%22+OR+%22Credit+Default+Swap%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22MOVE+index%22+OR+%22high+yield+spreads%22+OR+%22Credit+Default+Swap%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Bond Stress", "weight": 0.90, "bias": "MAINSTREAM"},
+
+    # 🛡️ 3. MILITÄR, OSINT, SATELLITEN & KATASTROPHEN (Gewicht: 0.85 - 0.95)
     {"name": "NASA FIRMS Fire & Hazards", "url": "[https://earthobservatory.nasa.gov/feeder/natural_hazards.rss](https://earthobservatory.nasa.gov/feeder/natural_hazards.rss)", "cat": "OSINT / Satellit", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "USGS Earthquakes (M5.5+)", "url": "[https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/5.5_day.atom](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/5.5_day.atom)", "cat": "Seismik / Warnsystem", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "GDACS Global Disaster Alerts", "url": "[https://www.gdacs.org/xml/rss.xml](https://www.gdacs.org/xml/rss.xml)", "cat": "Frühwarnung", "weight": 0.95, "bias": "OFFIZIELL"},
@@ -101,31 +137,31 @@ SOURCES = [
     {"name": "Bellingcat OSINT", "url": "[https://www.bellingcat.com/feed/](https://www.bellingcat.com/feed/)", "cat": "OSINT / Satellit", "weight": 0.85, "bias": "ALTERNATIVE"},
     {"name": "Critical Threats Project", "url": "[https://www.criticalthreats.org/rss/articles](https://www.criticalthreats.org/rss/articles)", "cat": "Militär OSINT", "weight": 0.85, "bias": "WESTERN"},
 
-    # 💻 3. CYBER WARFARE, HYBRIDE BEDROHUNGEN & INFRASTRUKTUR (Gewicht: 0.90)
+    # 💻 4. CYBER WARFARE, HYBRIDE BEDROHUNGEN & INFRASTRUKTUR (Gewicht: 0.90)
     {"name": "CISA Cyber Alerts (US)", "url": "[https://www.cisa.gov/cybersecurity-advisories/all.xml](https://www.cisa.gov/cybersecurity-advisories/all.xml)", "cat": "Cyber / Infrastruktur", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "CERT-EU Security Alerts", "url": "[https://cert.europa.eu/publications/warnings/feed.xml](https://cert.europa.eu/publications/warnings/feed.xml)", "cat": "Cyber / Infrastruktur", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "Dark Reading Cyber Intelligence", "url": "[https://www.darkreading.com/rss.xml](https://www.darkreading.com/rss.xml)", "cat": "Cyber Warfare", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "Submarine Telecoms Cable News", "url": "[https://subtelforum.com/feed/](https://subtelforum.com/feed/)", "cat": "Seekabel / Infrastruktur", "weight": 0.90, "bias": "MAINSTREAM"},
     {"name": "Offshore Energy Today", "url": "[https://www.offshore-energy.biz/feed/](https://www.offshore-energy.biz/feed/)", "cat": "Energie / Pipelines", "weight": 0.85, "bias": "MAINSTREAM"},
 
-    # 🚢 4. MARITIME SECURITY & LOGISTIK (Gewicht: 0.85 - 0.95)
+    # 🚢 5. MARITIME SECURITY & LOGISTIK (Gewicht: 0.85 - 0.95)
     {"name": "UKMTO (UK Maritime Trade Ops)", "url": "[https://news.google.com/rss/search?q=when:24h+UKMTO+OR+%22Maritime+Trade+Operations%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+UKMTO+OR+%22Maritime+Trade+Operations%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Schifffahrt OSINT", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "gCaptain Maritime News", "url": "[https://gcaptain.com/feed/](https://gcaptain.com/feed/)", "cat": "Schifffahrt", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "Splash247 Shipping Intelligence", "url": "[https://splash247.com/feed/](https://splash247.com/feed/)", "cat": "Schifffahrt", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "Maritime Executive", "url": "[https://maritime-executive.com/rss](https://maritime-executive.com/rss)", "cat": "Schifffahrt", "weight": 0.85, "bias": "MAINSTREAM"},
 
-    # ✈️ 5. LUFTFAHRT, GPS-JAMMING & AIRSPACE OSINT (Gewicht: 0.85 - 0.90)
+    # ✈️ 6. LUFTFAHRT, GPS-JAMMING & AIRSPACE OSINT (Gewicht: 0.85 - 0.90)
     {"name": "Flightradar24 News & Incidents", "url": "[https://www.flightradar24.com/blog/feed/](https://www.flightradar24.com/blog/feed/)", "cat": "Luftfahrt OSINT", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "Aviation Safety Network (ASN)", "url": "[https://news.google.com/rss/search?q=when:24h+site:aviation-safety.net+OR+%22airspace+closure%22+OR+%22NOTAM%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+site:aviation-safety.net+OR+%22airspace+closure%22+OR+%22NOTAM%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Luftfahrt OSINT", "weight": 0.90, "bias": "OFFIZIELL"},
     {"name": "GPSJam & Electronic Warfare Alerts", "url": "[https://news.google.com/rss/search?q=when:24h+%22GPS+jamming%22+OR+%22ADS-B+spoofing%22+OR+%22NOTAM%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+%22GPS+jamming%22+OR+%22ADS-B+spoofing%22+OR+%22NOTAM%22&hl=en-US&gl=US&ceid=US:en)", "cat": "EW / Luftfahrt", "weight": 0.85, "bias": "ALTERNATIVE"},
 
-    # 📰 6. NACHRICHTENAGENTUREN (Gewicht: 0.95)
+    # 📰 7. NACHRICHTENAGENTUREN (Gewicht: 0.95)
     {"name": "AP News World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Reuters World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "AFP World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Agence+France-Presse&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Agence+France-Presse&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Kyodo News (Japan)", "url": "[https://english.kyodonews.net/rss/news.xml](https://english.kyodonews.net/rss/news.xml)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
 
-    # 🌍 7. BRICS, DIPLOMATIE & GLOBALER SÜDEN (Gewicht: 0.85 - 1.00)
+    # 🌍 8. BRICS, DIPLOMATIE & GLOBALER SÜDEN (Gewicht: 0.85 - 1.00)
     {"name": "Kremlin News", "url": "[http://en.kremlin.ru/rss/news](http://en.kremlin.ru/rss/news)", "cat": "Regierung", "weight": 1.00, "bias": "BRICS"},
     {"name": "Russisches Außenministerium", "url": "[https://mid.ru/en/rss.php](https://mid.ru/en/rss.php)", "cat": "Diplomatie", "weight": 1.00, "bias": "BRICS"},
     {"name": "Chinesisches Außenministerium", "url": "[https://www.fmprc.gov.cn/eng/zxmz/rss.xml](https://www.fmprc.gov.cn/eng/zxmz/rss.xml)", "cat": "Diplomatie", "weight": 1.00, "bias": "BRICS"},
@@ -138,14 +174,14 @@ SOURCES = [
     {"name": "The Cradle", "url": "[https://thecradle.co/feed](https://thecradle.co/feed)", "cat": "Fachmedien", "weight": 0.85, "bias": "BRICS"},
     {"name": "Asia Times", "url": "[https://asiatimes.com/feed/](https://asiatimes.com/feed/)", "cat": "Fachmedien", "weight": 0.85, "bias": "BRICS"},
 
-    # 🏛️ 8. THINK TANKS & AKADEMIE (Gewicht: 0.75)
+    # 🏛️ 9. THINK TANKS & AKADEMIE (Gewicht: 0.75)
     {"name": "CSIS Org", "url": "[https://www.csis.org/rss.xml](https://www.csis.org/rss.xml)", "cat": "Think Tank", "weight": 0.75, "bias": "WESTERN"},
     {"name": "CFR (Council Foreign Relations)", "url": "[https://www.cfr.org/rss.xml](https://www.cfr.org/rss.xml)", "cat": "Think Tank", "weight": 0.75, "bias": "WESTERN"},
     {"name": "ECFR Europe", "url": "[https://ecfr.eu/feed/](https://ecfr.eu/feed/)", "cat": "Think Tank", "weight": 0.75, "bias": "WESTERN"},
     {"name": "SWP Berlin", "url": "[https://www.swp-berlin.org/rss.xml](https://www.swp-berlin.org/rss.xml)", "cat": "Think Tank", "weight": 0.75, "bias": "WESTERN"},
     {"name": "World Economic Forum", "url": "[https://www.weforum.org/agenda/feed/](https://www.weforum.org/agenda/feed/)", "cat": "Think Tank", "weight": 0.75, "bias": "WESTERN"},
 
-    # 📈 9. MAINSTREAM FINANZEN & POLITIK (Gewicht: 0.85)
+    # 📈 10. MAINSTREAM FINANZEN & POLITIK (Gewicht: 0.85)
     {"name": "CNBC Finance", "url": "[https://www.cnbc.com/id/100003114/device/rss/rss.html](https://www.cnbc.com/id/100003114/device/rss/rss.html)", "cat": "Finanzen", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "Foreign Policy", "url": "[https://foreignpolicy.com/feed/](https://foreignpolicy.com/feed/)", "cat": "Politik", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "Nikkei Asia", "url": "[https://asia.nikkei.com/rss/feed/nar](https://asia.nikkei.com/rss/feed/nar)", "cat": "Finanzen", "weight": 0.85, "bias": "MAINSTREAM"},
@@ -156,7 +192,7 @@ SOURCES = [
     {"name": "Tagesschau", "url": "[https://www.tagesschau.de/ausland/index.xml](https://www.tagesschau.de/ausland/index.xml)", "cat": "Medien", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "BBC World", "url": "[http://feeds.bbci.co.uk/news/world/rss.xml](http://feeds.bbci.co.uk/news/world/rss.xml)", "cat": "Medien", "weight": 0.85, "bias": "MAINSTREAM"},
 
-    # 👥 10. REDDIT OSINT & FINANZ COMMUNITIES (Gewicht: 0.60)
+    # 👥 11. REDDIT OSINT & FINANZ COMMUNITIES (Gewicht: 0.60)
     {"name": "Reddit r/geopolitics", "url": "[https://www.reddit.com/r/geopolitics/hot.rss?limit=5](https://www.reddit.com/r/geopolitics/hot.rss?limit=5)", "cat": "Community OSINT", "weight": 0.60, "bias": "MIXED"},
     {"name": "Reddit r/OSINT", "url": "[https://www.reddit.com/r/OSINT/hot.rss?limit=5](https://www.reddit.com/r/OSINT/hot.rss?limit=5)", "cat": "Community OSINT", "weight": 0.60, "bias": "MIXED"},
     {"name": "Reddit r/CredibleDefense", "url": "[https://www.reddit.com/r/CredibleDefense/hot.rss?limit=5](https://www.reddit.com/r/CredibleDefense/hot.rss?limit=5)", "cat": "Militär OSINT", "weight": 0.65, "bias": "WESTERN"},
@@ -166,7 +202,7 @@ SOURCES = [
     {"name": "Reddit r/Commodities", "url": "[https://www.reddit.com/r/Commodities/hot.rss?limit=5](https://www.reddit.com/r/Commodities/hot.rss?limit=5)", "cat": "Rohstoff Community", "weight": 0.60, "bias": "MIXED"},
     {"name": "Reddit r/worldnews", "url": "[https://www.reddit.com/r/worldnews/hot.rss?limit=5](https://www.reddit.com/r/worldnews/hot.rss?limit=5)", "cat": "World News", "weight": 0.55, "bias": "MAINSTREAM"},
 
-    # 🔓 11. INVESTIGATIV, BLOGS & ALTERNATIVE ANALYSTEN (Gewicht: 0.40 - 0.55)
+    # 🔓 12. INVESTIGATIV, BLOGS & ALTERNATIVE ANALYSTEN (Gewicht: 0.40 - 0.55)
     {"name": "Multipolar Magazin", "url": "[https://multipolar-magazin.de/feed](https://multipolar-magazin.de/feed)", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
     {"name": "Manova / Rubikon", "url": "[https://www.manova.news/feed](https://www.manova.news/feed)", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
     {"name": "Berliner Tageszeitung", "url": "[https://www.berlinertageszeitung.de/rss.xml](https://www.berlinertageszeitung.de/rss.xml)", "cat": "Alternativ", "weight": 0.55, "bias": "ALTERNATIVE"},
@@ -190,7 +226,7 @@ SOURCES = [
 
 browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 ArgusGridOSINTBot/1.0"
 
-# C. PARALLEL SCRAPING METHODE VIA THREADPOOLEXECUTOR
+# D. PARALLEL SCRAPING VIA THREADPOOLEXECUTOR
 def fetch_single_feed(src):
     feed_str = ""
     try:
@@ -206,18 +242,18 @@ def fetch_single_feed(src):
         print(f"Hinweis bei Feed {src['name']}: {e}")
     return feed_str
 
-print("Hole und strukturiere News aus dem gewichteten Voll-Quellenpool (parallel via ThreadPoolExecutor)...")
+print("Hole und strukturiere News aus dem gewichteten Multi-Domänen Quellenpool (parallel)...")
 feed_context = ""
 
-with ThreadPoolExecutor(max_workers=25) as executor:
+with ThreadPoolExecutor(max_workers=30) as executor:
     future_to_src = {executor.submit(fetch_single_feed, src): src for src in SOURCES}
     for future in as_completed(future_to_src):
         res = future.result()
         if res:
             feed_context += res
 
-if len(feed_context) > 40000:
-    feed_context = feed_context[:40000] + "\n... [Quellenkontext zur Token-Schonung leicht gekürzt]"
+if len(feed_context) > 45000:
+    feed_context = feed_context[:45000] + "\n... [Quellenkontext zur Token-Schonung leicht gekürzt]"
 
 json_template_desc = """
 {
@@ -235,6 +271,15 @@ json_template_desc = """
       "liquidity": 50
     }
   },
+  "pattern_recognition": [
+    {
+      "trigger_event": "Beispiel: China erhöht Exportbeschränkungen für Seltene Erden",
+      "historical_pattern_detected": "Anhaltendes Protektionismus-Muster bei kritischen Mineralien",
+      "matched_past_events": ["März 2026: Zollerhöhung auf Gallium/Germanium", "August 2025: Bauxit-Exportstopp"],
+      "historical_consequences": "+12% Seltene-Erden-ETFs, +8% Bergbauaktien innerhalb von 14 Tagen",
+      "actionable_insight": "Long-Bias auf westliche Rare-Earth-Förderer"
+    }
+  ],
   "event_graph": [
     {
       "event_id": "EVT-2026-001",
@@ -303,8 +348,8 @@ client_anthropic = anthropic.Anthropic(api_key=anth_key)
 
 system_instruction = (
     "Du bist der Chef-Analyst und OSINT-Spezialist eines hochmodernen Geopolitik-Lagezentrums ('Argus Grid'). "
-    "DEINE AUFGABE: Berechne den synthetischen GeoScore (0-100), erstelle aus den Rohnachrichten einen deduplizierten Event-Graphen, berechne mehrstufige Kausalitätsketten (Impact Chains) und gewichte alle Erkenntnisse anhand der Quellenprioritäten. "
-    "Analysiere dabei die Eingaben aus ALLEN Domänen: Satelliten-Hitzedaten (NASA FIRMS), Cyber-Attacken (CISA, CERT-EU), Seekabel/Energienetze, Schifffahrt/UKMTO, Luftraum-Sperrungen (NOTAMs, GPS-Jamming) und Seismik. "
+    "DEINE AUFGABE: Nutze das bereitgestellte historische Langzeit-Gedächtnis (Knowledge Graph), um aktuelle Ereignisse mit Mustern der Vergangenheit abzugleichen. Berechne den synthetischen GeoScore (0-100), erstelle einen Event-Graphen, Kausalitätsketten und fülle die Pattern Recognition Engine mit historischen Entsprechungen. "
+    "Analysiere alle Domänen: Makro/Finanzen (DXY, Spreads, Baltic Dry), Energie/OPEC/EIA, Satelliten-Hitzedaten (NASA FIRMS), Cyber (CISA), Seekabel/Energie, Schifffahrt (UKMTO) und Luftraum (GPSJam/NOTAMs). "
     "WICHTIGSTE FORM-VORGABE: HALTE DICH IN ALLEN TEXTFELDERN UND BEGRÜNDUNGEN EXTREM PRÄGNANT UND KURZ (max. 1-2 Sätze pro Feld). Das JSON darf keinesfalls mitten im Satz abgeschnitten werden! "
     "Antworte AUSSCHLIESSLICH im rein validen JSON-Format basierend auf diesem Schema:\n" + json_template_desc
 )
@@ -323,7 +368,7 @@ for model_name in claude_models:
             model=model_name,
             max_tokens=8192,
             system=system_instruction,
-            messages=[{"role": "user", "content": f"Live-Rohstoffe & Marktdaten:\n{live_market_context}\n\nGewichteter Multi-Domänen OSINT-Kontext:\n{feed_context}"}]
+            messages=[{"role": "user", "content": f"Live-Finanz- & Makromarktdaten:\n{live_market_context}\n\nHistorisches Langzeit-Gedächtnis (Knowledge Graph):\n{memory_context_str}\n\nAktueller Multi-Domänen OSINT-Kontext:\n{feed_context}"}]
         )
         raw_text = response.content[0].text.strip()
         generator_used = f"Anthropic ({model_name})"
@@ -382,7 +427,7 @@ for h in data.get("conflict_hotspots", []):
 
 data["timestamp"] = datetime.utcnow().strftime("%d.%m.%Y - %H:%M UTC")
 
-# Historie tracken (inkl. GeoScore)
+# 1. HISTORIE TRACKEN (GeoScore Chart)
 history_file = "history.json"
 history_data = []
 if os.path.exists(history_file):
@@ -405,7 +450,25 @@ if not history_data or history_data[-1].get("date") != today_str:
     with open(history_file, "w", encoding="utf-8") as f:
         json.dump(history_data, f, ensure_ascii=False, indent=2)
 
+# 2. KNOWLEDGE GRAPH MEMORY AKTUALISIEREN
+today_iso = datetime.utcnow().strftime("%Y-%m-%d")
+for evt in data.get("event_graph", []):
+    mem_entry = {
+        "date": today_iso,
+        "headline": evt.get("headline"),
+        "category": evt.get("category"),
+        "actors": evt.get("actors", []),
+        "severity": evt.get("severity", 50)
+    }
+    if not any(item.get("headline") == mem_entry["headline"] for item in historical_memory):
+        historical_memory.append(mem_entry)
+
+historical_memory = historical_memory[-300:]
+with open(memory_file, "w", encoding="utf-8") as f:
+    json.dump(historical_memory, f, ensure_ascii=False, indent=2)
+
+# 3. DATEN FÜR DAS FRONTEND SCHREIBEN
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print(f"Argus Grid Lagezentrum erfolgreich mit 90+ Multi-Domänen Feeds ({generator_used}) aktualisiert!")
+print(f"Argus Grid Lagezentrum erfolgreich mit Multi-Domänen Feeds & Memory Engine ({generator_used}) aktualisiert!")
