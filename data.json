@@ -1,490 +1,349 @@
 {
+  "daily_executive_summary": "Brent Öl steigt scharf (+2.14% auf 96$) bei gleichzeitig fallendem Gold und niedrigem VIX, was auf einen isolierten geopolitischen Energie-Schock statt breiter Risikoflucht hindeutet. Steigende US-Renditen (10Y 4.66%) bei schwachem Dollar signalisieren Inflations- statt Wachstumssorgen. Die Kombination aus Ölstärke und Kupferanstieg deutet auf Angebotssorgen an maritimen Nadelöhren bei gleichzeitig robuster Industrienachfrage.",
+  "market_regime": "Inflationär mit selektiver geopolitischer Anspannung",
   "geoscore": {
-    "current_score": 76.2,
-    "previous_48h": 72.8,
-    "status_label": "ERHÖHTES ANSTECKUNGSRISIKO",
-    "vectors": {
-      "military": 74,
-      "energy": 82,
-      "geopolitics": 79,
-      "financial_stress": 58,
-      "trade_conflicts": 72,
-      "supply_chains": 65,
-      "liquidity": 48
-    }
+    "current_score": 68,
+    "status_label": "ERHÖHT",
+    "previous_48h": 63
   },
-  "pattern_recognition": [
-    {
-      "trigger_event": "Brent Öl +1.98% auf $95.93 – nähert sich kritischer $100-Marke",
-      "historical_pattern_detected": "Vor OPEC+-Drosselungs-Rally 2022–2023 zeigten sich identische Spread-Muster zwischen Brent und WTI bei steigenden US-Renditen",
-      "matched_past_events": [
-        "Oktober 2022: Brent $95→$120 nach OPEC+-Kürzung",
-        "September 2023: WTI-Rally +18% in 6 Wochen nach Saudi-Verlängerung"
-      ],
-      "historical_consequences": "Brent überschritt $100 innerhalb von 3–5 Wochen; US-CPI-Anstieg +0.4pp; Fed-Pause-Erwartungen sanken drastisch",
-      "actionable_insight": "Long-Bias Energy-Sektor (XOM, CVX), Short Airline-Sektor; Hedge auf CPI-Überraschung nach oben"
-    },
-    {
-      "trigger_event": "US 10Y Rendite +0.63% auf 4.66% trotz schwachem DXY (-0.17%)",
-      "historical_pattern_detected": "Divergenz zwischen steigenden Renditen und fallendem Dollar signalisiert fiskalisches Stress-Regime, analog zu UK Gilts-Krise Sept. 2022",
-      "matched_past_events": [
-        "September 2022: UK Gilt-Krise, GBP-Crash",
-        "August 2023: Fitch-Downgrade USA, 10Y auf 4.35%"
-      ],
-      "historical_consequences": "HYG fiel in beiden Fällen innerhalb von 10 Tagen um 3–5%; Emerging Markets verzeichneten Kapitalabflüsse >$40 Mrd.",
-      "actionable_insight": "Vorsicht bei Duration-Risiko; Short-Bias auf EM-Anleihen und HYG"
-    },
-    {
-      "trigger_event": "Gold -0.51% auf $4125 trotz globaler Risikoerhöhung",
-      "historical_pattern_detected": "Temporäre Gold-Korrekturen bei Rendite-Spike sind klassisches Liquidierungs-Muster vor erneutem Ausbruch nach oben",
-      "matched_past_events": [
-        "November 2022: Gold -4% bei Rendite-Peak, dann +22% Rally",
-        "Oktober 2023: Gold -3%, dann Ausbruch auf ATH"
-      ],
-      "historical_consequences": "Gold erholte sich in beiden Fällen innerhalb von 2–4 Wochen auf neue Hochs, sobald Renditen stagnieren",
-      "actionable_insight": "Dip-Käufe in Gold und Silber bei $4050–$4080 Support-Zone strategisch sinnvoll"
-    },
-    {
-      "trigger_event": "Kupfer +1.20% auf $6.53/lb – industrielle Nachfrage-Signal",
-      "historical_pattern_detected": "Simultaner Anstieg von Kupfer und Öl bei flachem BDI ist historisch ein Vorzeichen für angebotsseitigen Schock, nicht Nachfrageboom",
-      "matched_past_events": [
-        "März 2022: Kupfer+Öl-Rally bei kollabiertem BDI nach Ukraine-Invasion",
-        "Juni 2021: Infrastruktur-Paket-Spekulation trieb Kupfer isoliert"
-      ],
-      "historical_consequences": "BDI-Stagnation bei steigenden Rohstoffpreisen deutet auf geopolitische Risikoprämie statt organisches Wachstum",
-      "actionable_insight": "Kupfer-Rally ist geopolitisch getrieben; kein zyklisches Wachstumssignal – Vorsicht bei Industriesektor-Übergewichtung"
-    }
-  ],
-  "event_graph": [
-    {
-      "event_id": "EVT-2025-001",
-      "headline": "Ölpreis drängt auf $96 – Angebotsschock-Prämie steigt",
-      "actors": [
-        "OPEC+",
-        "Saudi-Arabien",
-        "Russland",
-        "USA"
-      ],
-      "category": "Energie / Rohstoffe",
-      "confidence_score": 0.88,
-      "severity": 80,
-      "sources_count": 14
-    },
-    {
-      "event_id": "EVT-2025-002",
-      "headline": "US-Rendite 4.66% – fiskalische Divergenz zum schwachen Dollar",
-      "actors": [
-        "Federal Reserve",
-        "US Treasury",
-        "Großinvestoren"
-      ],
-      "category": "Makrofinanzen / Anleihen",
-      "confidence_score": 0.85,
-      "severity": 72,
-      "sources_count": 11
-    },
-    {
-      "event_id": "EVT-2025-003",
-      "headline": "Gold auf Rekordhoch $4125 trotz Tageskorrektur",
-      "actors": [
-        "Zentralbanken EM",
-        "China PBoC",
-        "Spekulanten"
-      ],
-      "category": "Sichere Häfen / Währungen",
-      "confidence_score": 0.91,
-      "severity": 68,
-      "sources_count": 9
-    },
-    {
-      "event_id": "EVT-2025-004",
-      "headline": "Bitcoin -1.4% – Risk-off in Krypto parallel zu VIX-Normalisierung",
-      "actors": [
-        "Institutionelle Krypto-Investoren",
-        "ETF-Flows"
-      ],
-      "category": "Digitale Assets / Liquidität",
-      "confidence_score": 0.74,
-      "severity": 45,
-      "sources_count": 6
-    },
-    {
-      "event_id": "EVT-2025-005",
-      "headline": "BDI ETF schwächt ab (-0.87%) trotz steigender Rohstoffpreise",
-      "actors": [
-        "Reedereien",
-        "China Import-Demand",
-        "Geopolitische Akteure"
-      ],
-      "category": "Schifffahrt / Handel",
-      "confidence_score": 0.79,
-      "severity": 60,
-      "sources_count": 7
-    }
-  ],
-  "impact_chains": [
-    {
-      "trigger": "Brent Öl überschreitet $100-Marke",
-      "steps": [
-        "US-CPI Mai-Daten übertreffen Erwartungen (+0.3–0.5pp Aufwärtsdruck)",
-        "Fed verschiebt Zinssenkungspfad; Markt repriced auf 'Higher for Longer'",
-        "10Y Rendite steigt Richtung 5.0%; HYG unter Druck (Spread-Ausweitung)",
-        "EM-Währungen und -Anleihen unter Kapitalabfluss-Druck",
-        "S&P 500 korrigiert 5–8% von aktuellem Niveau"
-      ],
-      "primary_beneficiaries": [
-        "WTI Öl",
-        "Brent",
-        "XOM",
-        "CVX",
-        "Gold (nach Rendite-Peak)",
-        "USD (kurzfristig)"
-      ],
-      "primary_detractors": [
-        "Airlines",
-        "Chemie",
-        "EM-Bonds",
-        "HYG",
-        "Wachstumsaktien",
-        "Bitcoin"
-      ]
-    },
-    {
-      "trigger": "Divergenz: Steigende US-Renditen + fallender DXY",
-      "steps": [
-        "Ausländische Käufer verlieren Vertrauen in US-Fiskal-Stabilität",
-        "Risikoprämie auf US-Staatsanleihen steigt strukturell",
-        "Kapital flieht in Gold, EUR-Assets, CHF",
-        "EUR/USD testet 1.16–1.18 Zone"
-      ],
-      "primary_beneficiaries": [
-        "Gold",
-        "Silber",
-        "EUR/USD Long",
-        "CHF",
-        "Schweizer Aktien"
-      ],
-      "primary_detractors": [
-        "US-Treasuries",
-        "USD-Denominated EM Debt",
-        "US Financials"
-      ]
-    },
-    {
-      "trigger": "Schwacher BDI bei steigendem Kupfer und Öl",
-      "steps": [
-        "Angebotsseitige Schocks dominieren über Nachfrage-Impulse",
-        "Stagflationäres Signal: Preisinflation ohne Mengenwachstum",
-        "Gewinnmargen in Industrie und Konsum unter Druck",
-        "Zentralbanken in Zwickmühle: Inflation vs. Wachstum"
-      ],
-      "primary_beneficiaries": [
-        "Rohstoffproduzenten",
-        "Mining-Sektor",
-        "Energie-Infrastruktur"
-      ],
-      "primary_detractors": [
-        "Konsumgüter",
-        "Logistik",
-        "verarbeitende Industrie (Fernost)"
-      ]
-    }
-  ],
-  "probability_matrix": [
-    {
-      "scenario": "Brent überschreitet $100, Fed bleibt restriktiv – 'Stagflations-Squeeze'",
-      "probability_pct": 38,
-      "trend": "RISING"
-    },
-    {
-      "scenario": "Geopolitische Deeskalation, Öl konsolidiert $88–$95, Soft Landing",
-      "probability_pct": 27,
-      "trend": "STABLE"
-    },
-    {
-      "scenario": "US-Renditen durchbrechen 5.0%, Credit-Event im HY-Sektor",
-      "probability_pct": 18,
-      "trend": "RISING"
-    },
-    {
-      "scenario": "Eskalation in Nahost / Golf, Öl $110+, Schockrezession",
-      "probability_pct": 12,
-      "trend": "RISING"
-    },
-    {
-      "scenario": "OPEC+ Überraschungs-Erhöhung, Öl fällt auf $80, Disinflation",
-      "probability_pct": 5,
-      "trend": "FALLING"
-    }
-  ],
-  "daily_executive_summary": "Das Argus Grid registriert eine signifikante Divergenz zwischen steigenden Energiepreisen (Brent +$96, WTI $88) und einem schwächelnden Dollar-Index – ein klassisches fiskalisches Stress-Signal, das historisch Kapitalrotation in reale Assets ankündigt. US-10Y-Renditen bei 4.66% bei gleichzeitig stagnierendem BDI bestätigen ein stagflationäres Marktregime, nicht einen Wachstumsboom. Gold hält trotz Tageskorrektur das rekordnahe Niveau bei $4125, was strukturelle Zentralbank-Nachfrage und geopolitische Absicherung widerspiegelt. Hauptrisiko für die nächsten 72 Stunden: Brent-Durchbruch über $100 könnte Fed-Erwartungen schockartig neu setzen und eine Korrekturspirale im S&P 500 auslösen.",
-  "global_risk_score": 76,
-  "market_regime": "STAGFLATIONÄRES RISIKO-REGIME – Rohstoff-Inflation trifft fiskalische Überdehnung",
-  "top_overweight": "Gold, Silber, Energie-Sektor (XOM/CVX/SHEL), EUR/USD Long, Rohstoff-Produzenten",
-  "top_risk": "Brent $100+ → Fed-Repricing → 10Y Rendite 5%+ → HYG Credit-Event und S&P-Korrektur -8%",
   "defcon_status": {
     "level": 3,
-    "label": "DEFCON 3 – Erhöhte Wachsamkeit",
-    "nuclear_risk_percent": 14,
-    "primary_driver": "Energiepreis-Eskalation kombiniert mit geopolitischer Risikoprämie im Nahen Osten und anhaltender US-Fiskal-Divergenz"
+    "label": "DEFCON 3",
+    "nuclear_risk_percent": 12,
+    "primary_driver": "Maritime Spannungen an Energie-Nadelöhren treiben Ölpreis, jedoch ohne breite Risikoflucht (VIX niedrig, S&P stabil)."
   },
-  "narrative_divergence": [
+  "top_overweight": "Energie & industrielle Rohstoffe",
+  "top_risk": "Öl-getriebene Inflationsbeschleunigung zwingt Fed zu restriktivem Kurs",
+  "pattern_recognition": [
     {
-      "topic": "Ölpreis-Anstieg",
-      "mainstream_view": "OPEC+-Disziplin und saisonale Nachfrage treiben Erholung – vorübergehend",
-      "brics_view": "Petrodollar-Ablösung und BRICS-Parallelhandel in Nicht-Dollar-Währungen strukturell bullish für Öl",
-      "alternative_view": "Geopolitische Risikoprämie und Angebotsunterbrechungs-Hedging treiben den Preis – kein fundamentaler Nachfrageanstieg"
+      "trigger_event": "Ölpreisanstieg bei maritimen Spannungen (Brent +2.14%)",
+      "matched_past_events": [
+        "2019: Hormus-Drohung (+18% Brent)",
+        "2024: Bab al-Mandab Störungen (+40% Frachtraten)"
+      ],
+      "historical_consequences": "Brent Öl +18%, Tanker-Frachtraten +40%, Gold +6%",
+      "actionable_insight": "Long-Bias auf Tanker-Reeder (FRO) und Öl-Futures (BZ=F); Absicherung gegen Airline-Exposure."
     },
     {
-      "topic": "Schwacher DXY bei steigenden US-Renditen",
-      "mainstream_view": "Temporäre EUR-Stärke nach positiven EU-Daten; Dollar erholt sich bald",
-      "brics_view": "Struktureller Dollar-Vertrauensverlust durch US-Schuldenspirale und BRICS-De-Dollarisierung",
-      "alternative_view": "Ausländische Zentralbanken verkaufen US-Treasuries aktiv; Signalwirkung für Fiskal-Dominanz"
+      "trigger_event": "Kupfer-Anstieg (+0.82%) trotz nervöser Makrolage",
+      "matched_past_events": [
+        "2010: China Seltene Erden Stopp (+12% Bergbauaktien)",
+        "2025: Wiederholte Mineralien-Beschränkung"
+      ],
+      "historical_consequences": "Bergbauaktien +12%, Seltene Erden +45%",
+      "actionable_insight": "Selektiver Aufbau in westlichen Förderern (MP, LYC) bei Rohstoffknappheit."
+    }
+  ],
+  "conflict_hotspots": [
+    {
+      "region": "Straße von Hormus",
+      "actors": "Iran vs. USA/Israel",
+      "escalation_level": "ERHÖHT",
+      "catalyst": "Maritime Drohgebärden und Ölpreisreaktion",
+      "impact": "Brent Öl & Tanker-Frachtraten",
+      "lat": 26.56,
+      "lng": 56.25
     },
     {
-      "topic": "Gold auf Allzeithoch $4125",
-      "mainstream_view": "Inflationshedge und geopolitische Unsicherheit; taktische Überhitzung möglich",
-      "brics_view": "Zentralbank-Akkumulation als Vorbereitung auf neues Währungssystem (Gold-gedeckte BRICS-Reserve)",
-      "alternative_view": "Kollaps des Vertrauens in Fiat-Systeme; Gold repriced strukturell auf neues Paradigma"
+      "region": "Bab al-Mandab / Rotes Meer",
+      "actors": "Houthi vs. westliche Schifffahrt",
+      "escalation_level": "ERHÖHT",
+      "catalyst": "Angriffe auf Handelsrouten",
+      "impact": "Frachtraten & Lieferketten Asien-Europa",
+      "lat": 12.58,
+      "lng": 43.33
+    }
+  ],
+  "systemic_risks": [
+    {
+      "title": "Öl-getriebene Zweitrunden-Inflation",
+      "trend": "Steigend",
+      "risk_level": "HOCH",
+      "description": "Anhaltend hohe Energiepreise (Brent 96$) bei steigenden Renditen (10Y 4.66%) drohen Inflationserwartungen zu verankern und Fed-Lockerung zu verzögern."
+    },
+    {
+      "title": "Maritime Lieferketten-Unterbrechung",
+      "trend": "Steigend",
+      "risk_level": "ERHÖHT",
+      "description": "Spannungen an Hormus und Bab al-Mandab bedrohen kritische Transportkorridore für Energie und Güter."
     }
   ],
   "domestic_politics": [
     {
-      "country_region": "USA",
-      "topic": "Schuldenobergrenze & Haushaltsdefizit",
-      "status": "Kritisch – Defizit bei $1.8 Billionen p.a., Zinskosten explodieren",
-      "impact": "Struktureller Aufwärtsdruck auf 10Y-Renditen; fiskalische Dominanz-Risiko für Fed"
+      "country": "USA",
+      "topic": "Geldpolitik unter Inflationsdruck",
+      "stability_score": "ANGESPANNT",
+      "details": "Steigende Anleiherenditen bei schwächerem Dollar erhöhen den Druck auf die Fed, restriktiv zu bleiben trotz Wachstumssorgen."
     },
     {
-      "country_region": "EU / Deutschland",
-      "topic": "EUR/USD-Stärke und Exportwettbewerbsfähigkeit",
-      "status": "EUR/USD 1.14 – EZB-Dilemma zwischen Inflationsziel und Wachstum",
-      "impact": "Positiv für EUR-Anleihen, negativ für DAX-Exporteure bei weiterer EUR-Aufwertung"
+      "country": "EU",
+      "topic": "Energiesicherheit & Frachtkosten",
+      "stability_score": "ANGESPANNT",
+      "details": "Abhängigkeit von maritimen Energieimporten macht die Eurozone anfällig für Ölpreisschocks und Rotmeer-Störungen."
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Anhaltender Energie-Schock ohne breite Krise",
+      "probability_pct": 55,
+      "trigger": "Fortgesetzte maritime Spannungen ohne offene Blockade",
+      "market_consequence": "Brent hält 90-100$, Energieaktien outperformen, Gold seitwärts"
     },
     {
-      "country_region": "China",
-      "topic": "Industrielle Rohstoffnachfrage (Kupfer +1.2%)",
-      "status": "Stabilisierungsmaßnahmen stützen Nachfrage, aber strukturelle Immobilienkrise bleibt",
-      "impact": "Kupfer-Nachfrage kurzfristig gestützt; BDI-Schwäche signalisiert keine Vollbeschäftigung im Handel"
+      "title": "Eskalation zur Seestraßen-Blockade",
+      "probability_pct": 30,
+      "trigger": "Physische Sperrung von Hormus oder Bab al-Mandab",
+      "market_consequence": "Brent >110$, Gold +6%, VIX Sprung, S&P Korrektur"
     },
     {
-      "country_region": "Saudi-Arabien / OPEC+",
-      "topic": "Öl-Produktionspolitik",
-      "status": "Freiwillige Kürzungen bis Mitte 2025 verlängert; Preis-Ziel $90–$100",
-      "impact": "Direkter Treiber der aktuellen Brent-Rally; geopolitische Hebelmacht gegenüber Westen steigt"
+      "title": "Deeskalation & Normalisierung",
+      "probability_pct": 15,
+      "trigger": "Diplomatische Entspannung",
+      "market_consequence": "Brent zurück <85$, Risk-On, Bitcoin & Aktien erholen sich"
+    }
+  ],
+  "event_graph": [
+    {
+      "event_id": "EVT-2026-ENERGY-001",
+      "title": "Ölpreisschock durch maritime Spannungen an Nadelöhren",
+      "sources": [
+        "Reuters",
+        "UKMTO",
+        "Bloomberg"
+      ],
+      "confidence": 84,
+      "affected_regions": [
+        "Naher Osten",
+        "Rotes Meer"
+      ],
+      "affected_markets": [
+        "Brent Öl",
+        "WTI",
+        "Schifffahrt",
+        "Erdgas"
+      ]
+    },
+    {
+      "event_id": "EVT-2026-RATES-002",
+      "title": "Anstieg US-Renditen bei schwachem Dollar signalisiert Inflationssorgen",
+      "sources": [
+        "Bloomberg",
+        "WSJ"
+      ],
+      "confidence": 78,
+      "affected_regions": [
+        "USA",
+        "Global"
+      ],
+      "affected_markets": [
+        "Anleihen",
+        "Gold",
+        "USD"
+      ]
+    }
+  ],
+  "impact_chains": [
+    {
+      "trigger": "Maritime Spannungen Hormus / Bab al-Mandab",
+      "chain": [
+        "Tanker-Risikoprämien steigen",
+        "Brent Öl steigt auf 96$",
+        "Inflationserwartungen steigen",
+        "US-Renditen steigen (10Y 4.66%)",
+        "Fed bleibt restriktiv"
+      ],
+      "beneficiaries": [
+        "Brent Öl",
+        "Tanker-Reeder (FRO)",
+        "Energieaktien"
+      ],
+      "detractors": [
+        "Airlines (DAL)",
+        "Konsumgüter",
+        "Anleihen"
+      ]
+    },
+    {
+      "trigger": "Anhaltend hohe Energiepreise",
+      "chain": [
+        "Produktionskosten steigen",
+        "Margen unter Druck",
+        "Fed zögert bei Zinssenkungen",
+        "Bitcoin & Wachstumsaktien schwächeln"
+      ],
+      "beneficiaries": [
+        "Energiesektor",
+        "Rohstoffe"
+      ],
+      "detractors": [
+        "Tech-Wachstum",
+        "Bitcoin",
+        "Chemie"
+      ]
+    }
+  ],
+  "narrative_matrix": [
+    {
+      "topic": "Ölpreis & maritime Sicherheit",
+      "mainstream": "Temporäre Risikoprämie, Angebot bleibt ausreichend",
+      "brics": "Bestätigung der Notwendigkeit alternativer Energiekorridore und Entdollarisierung",
+      "alternative": "Beginn eines strukturellen Energie-Angebotsschocks mit Stagflationsrisiko"
+    },
+    {
+      "topic": "Fed-Zinspfad",
+      "mainstream": "Fed hält Kurs, Inflation kontrollierbar",
+      "brics": "US-Fiskaldominanz und hohe Renditen als Argument für Rohstoffabsicherung",
+      "alternative": "Renditeanstieg zwingt Fed in Zinsdilemma zwischen Inflation und Schuldenlast"
+    }
+  ],
+  "assets": [
+    {
+      "name": "Brent / WTI Öl",
+      "signal": "GREEN",
+      "signal_text": "🟢 Attraktiv",
+      "trend": "Stark steigend",
+      "driver": "Maritime Spannungen & Angebotsrisiko"
+    },
+    {
+      "name": "Kupfer",
+      "signal": "GREEN",
+      "signal_text": "🟢 Attraktiv",
+      "trend": "Steigend",
+      "driver": "Industrienachfrage & Angebotsknappheit"
+    },
+    {
+      "name": "Gold & Silber",
+      "signal": "YELLOW",
+      "signal_text": "🟡 Neutral",
+      "trend": "Konsolidierend",
+      "driver": "Steigende Realrenditen dämpfen kurzfristig, geopolitische Absicherung mittelfristig"
+    },
+    {
+      "name": "US-Anleihen (10Y)",
+      "signal": "RED",
+      "signal_text": "🔴 Meiden",
+      "trend": "Renditen steigend / Kurse fallend",
+      "driver": "Inflationssorgen & Fiskaldruck"
+    },
+    {
+      "name": "Bitcoin",
+      "signal": "YELLOW",
+      "signal_text": "🟡 Neutral",
+      "trend": "Fallend",
+      "driver": "Risk-Off-Neigung & steigende Renditen"
+    },
+    {
+      "name": "S&P 500",
+      "signal": "YELLOW",
+      "signal_text": "🟡 Neutral",
+      "trend": "Seitwärts",
+      "driver": "Robuste Aktien trotz Energie-Gegenwind"
     }
   ],
   "stock_picks": {
     "top_5_buys": [
       {
+        "ticker": "FRO",
+        "name": "Frontline (Tanker)",
+        "sector": "Schifffahrt",
+        "reason": "Steigende Frachtraten durch Umleitungen und Risikoprämien"
+      },
+      {
         "ticker": "XOM",
         "name": "ExxonMobil",
         "sector": "Energie",
-        "reason": "Direkter Profiteur von Brent $95+ mit starker Dividende und Buyback-Programm als Puffer"
+        "reason": "Direkte Profiteure des Brent-Anstiegs auf 96$"
       },
       {
-        "ticker": "GLD",
-        "name": "SPDR Gold ETF",
-        "sector": "Sichere Häfen / Rohstoffe",
-        "reason": "Strukturelle Zentralbank-Nachfrage und fiskalisches Stress-Regime treiben Gold langfristig auf neue ATHs"
-      },
-      {
-        "ticker": "SLV",
-        "name": "iShares Silver ETF",
-        "sector": "Industrie-Metalle / Sichere Häfen",
-        "reason": "Silber profitiert doppelt – industrielle Nachfrage (Solar/EV) und Edelmetall-Hedging bei Gold-Rally"
-      },
-      {
-        "ticker": "SHEL",
-        "name": "Shell PLC",
-        "sector": "Energie / LNG",
-        "reason": "LNG-Exposure und europäische Energiesicherheit machen Shell zum Hauptnutznießer steigender Energiepreise"
+        "ticker": "MP",
+        "name": "MP Materials",
+        "sector": "Bergbau",
+        "reason": "Westliche Unabhängigkeit bei kritischen Mineralien"
       },
       {
         "ticker": "FCX",
         "name": "Freeport-McMoRan",
-        "sector": "Kupfer / Mining",
-        "reason": "Kupferpreis $6.53 + geopolitische Angebotsrisiken stärken Freeport als weltgrößten Kupferproduzenten"
+        "sector": "Bergbau",
+        "reason": "Profiteur des Kupferanstiegs und Industrienachfrage"
+      },
+      {
+        "ticker": "COP",
+        "name": "ConocoPhillips",
+        "sector": "Energie",
+        "reason": "Hohe Hebelwirkung auf steigende Öl-Spotpreise"
       }
     ],
     "flop_5_sells": [
       {
         "ticker": "DAL",
         "name": "Delta Air Lines",
-        "sector": "Airlines / Transport",
-        "reason": "Brent $96+ drückt Kerosinkosten; historisch folgt bei $100+ eine Gewinnwarnung innerhalb von 6 Wochen"
-      },
-      {
-        "ticker": "HYG",
-        "name": "iShares HY Bond ETF",
-        "sector": "High Yield Credit",
-        "reason": "Steigende 10Y-Renditen bei 4.66% und Öl-Inflation erhöhen Ausfallrisiken im Hochzins-Segment strukturell"
+        "sector": "Luftfahrt",
+        "reason": "Hohe Treibstoffkosten und mögliche Flugumleitungen"
       },
       {
         "ticker": "LUV",
         "name": "Southwest Airlines",
-        "sector": "Airlines",
-        "reason": "Höchste Treibstoffkostenexponierung im US-Airline-Sektor; kein vollständiges Fuel-Hedging-Programm aktiv"
+        "sector": "Luftfahrt",
+        "reason": "Kerosin-Kostendruck durch Ölanstieg"
       },
       {
-        "ticker": "EMB",
-        "name": "iShares EM Bond ETF",
-        "sector": "Emerging Market Debt",
-        "reason": "Fiskalische Divergenz USA und Öl-Import-Kosten belasten EM-Schuldner; Kapitalabflüsse wahrscheinlich"
+        "ticker": "DOW",
+        "name": "Dow Inc.",
+        "sector": "Chemie",
+        "reason": "Steigende Energie- und Rohstoffkosten belasten Margen"
       },
       {
-        "ticker": "ARKK",
-        "name": "ARK Innovation ETF",
-        "sector": "Wachstum / Tech disruptiv",
-        "reason": "Higher-for-Longer Rendite-Regime komprimiert langfristige Cashflow-Bewertungen von Wachstumsaktien massiv"
+        "ticker": "TLT",
+        "name": "iShares 20+ Treasury",
+        "sector": "Anleihen",
+        "reason": "Steigende Renditen drücken langlaufende Anleihekurse"
+      },
+      {
+        "ticker": "MCD",
+        "name": "McDonald's",
+        "sector": "Konsum",
+        "reason": "Inflationsdruck belastet Konsumausgaben und Margen"
       }
     ]
   },
-  "conflict_hotspots": [
-    {
-      "region": "Naher Osten / Persischer Golf",
-      "actors": "Iran, USA, Israel, Houthi-Rebellen, Saudi-Arabien",
-      "escalation_level": "KRITISCH",
-      "catalyst": "Brent-Rally auf $96 reflektiert geopolitische Risikoprämie für Straße von Hormus und Rotes Meer",
-      "impact": "Tanker-Versicherungsprämien +40%; UKMTO-Warnungen aktiv; Ölversorgungsunterbrechungs-Risiko bei Eskalation",
-      "lat": 26.5,
-      "lng": 56.0
-    },
-    {
-      "region": "Ukraine / Osteuropa",
-      "actors": "Russland, Ukraine, NATO",
-      "escalation_level": "HOCH",
-      "catalyst": "Anhaltende Energieinfrastruktur-Angriffe und Gaspreis-Druck auf EU-Winterversorgung",
-      "impact": "EU-Gaspreise volatil; NATO-Logistik unter Druck; Weizen bei $703 bleibt erhöht durch Black-Sea-Risiken",
-      "lat": 49.0,
-      "lng": 32.0
-    },
-    {
-      "region": "Taiwan-Straße / Südchinesisches Meer",
-      "actors": "China PLA, Taiwan, USA, Japan",
-      "escalation_level": "ERHÖHT",
-      "catalyst": "Militärische Übungsaktivitäten und Chip-Exportrestriktionen erhöhen Spannungsniveau",
-      "impact": "Halbleiter-Lieferketten-Risiko; TSMC-Produktionsunterbrechungs-Szenario bewertet mit $2 Billionen Schaden global",
-      "lat": 24.0,
-      "lng": 121.5
-    }
-  ],
-  "systemic_risks": [
-    {
-      "topic": "US-Fiskal-Dominanz",
-      "category": "Makrofinanzen",
-      "risk_level": "HOCH",
-      "status": "10Y bei 4.66%; Schuldenobergrenze-Debatte; Zinskosten $1T+ p.a.",
-      "impact": "Verdrängungseffekt von Privatinvestitionen; strukturelle Dollar-Schwäche bei steigenden Renditen möglich"
-    },
-    {
-      "topic": "Öl-Preisschock $100+",
-      "category": "Energie / Inflation",
-      "risk_level": "HOCH",
-      "status": "Brent $95.93 – Schlüsselmarke $100 in Reichweite bei weiterem OPEC+-Commitment",
-      "impact": "CPI-Wiederanstieg zwingt Fed zur Pause; Stagflations-Szenario mit S&P-Korrektur 8–12%"
-    },
-    {
-      "topic": "Credit Stress im HY-Sektor",
-      "category": "Finanzsystem",
-      "risk_level": "MITTEL-HOCH",
-      "status": "HYG -0.16%; Spreads noch kontrolliert, aber 10Y-Rendite-Druck baut auf",
-      "impact": "Refinanzierungsrisiko für $4.2 Billionen US-HY-Schulden; Ausfallquote könnte auf 6–8% steigen"
-    },
-    {
-      "topic": "De-Dollarisierung / BRICS-Zahlungssysteme",
-      "category": "Währungssystem",
-      "risk_level": "MITTEL",
-      "status": "Strukturell zunehmend; Dollar-Reserven-Anteil fällt langsam von 59% auf 57%",
-      "impact": "Langfristiger Nachfrage-Rückgang für US-Treasuries; Risikoprämie auf US-Schulden steigt"
-    }
-  ],
-  "assets": [
-    {
-      "name": "Gold & Silber",
-      "signal": "GREEN",
-      "signal_text": "🟢 Strategisch Attraktiv",
-      "trend": "BULLISH (Konsolidierung)",
-      "driver": "Zentralbank-Akkumulation, fiskalisches Stress-Regime, Dollar-Schwäche strukturell"
-    },
-    {
-      "name": "Energie (Öl & Gas)",
-      "signal": "GREEN",
-      "signal_text": "🟢 Taktisch Attraktiv",
-      "trend": "BULLISH (Momentum)",
-      "driver": "OPEC+-Disziplin, geopolitische Risikoprämie, Brent nähert sich $100"
-    },
-    {
-      "name": "US 10Y Treasuries",
-      "signal": "RED",
-      "signal_text": "🔴 Meiden",
-      "trend": "BEARISH (Rendite steigt)",
-      "driver": "Fiskalische Überdehnung + Inflations-Repricing; 10Y auf dem Weg zu 5%+"
-    },
-    {
-      "name": "S&P 500 / US Aktien",
-      "signal": "YELLOW",
-      "signal_text": "🟡 Neutral / Vorsicht",
-      "trend": "SEITWÄRTS mit Abwärtsrisiko",
-      "driver": "Stagflations-Regime drückt Margen; VIX bei 16.64 noch kein Panik-Signal, aber Korrekturpotenzial"
-    },
-    {
-      "name": "HYG / High Yield Bonds",
-      "signal": "RED",
-      "signal_text": "🔴 Untergewichten",
-      "trend": "BEARISH (latent)",
-      "driver": "Steigende Renditen und Energie-Inflation erhöhen Ausfallrisiken strukturell"
-    },
-    {
-      "name": "EUR/USD",
-      "signal": "GREEN",
-      "signal_text": "🟢 Long-Bias",
-      "trend": "BULLISH",
-      "driver": "Dollar-Schwäche bei steigenden US-Renditen signalisiert fiskalische Vertrauenserosion"
-    },
-    {
-      "name": "Kupfer",
-      "signal": "YELLOW",
-      "signal_text": "🟡 Geopolitisch getrieben – nicht fundamental",
-      "trend": "BULLISH (kurzfristig)",
-      "driver": "Angebotsrisiko-Prämie dominiert; BDI-Schwäche zeigt fehlende echte Nachfrage"
-    },
-    {
-      "name": "Bitcoin / Krypto",
-      "signal": "YELLOW",
-      "signal_text": "🟡 Abwarten",
-      "trend": "SEITWÄRTS mit Downside",
-      "driver": "Risk-off Stimmung bei steigenden Renditen; $65K als technische Schlüsselmarke"
-    },
-    {
-      "name": "Weizen / Agrarrohstoffe",
-      "signal": "YELLOW",
-      "signal_text": "🟡 Beobachten",
-      "trend": "ERHÖHT – geopolitisch bedingt",
-      "driver": "Black-Sea-Risiken und Ukraine-Konflikt halten Weizen strukturell über $680"
-    }
-  ],
-  "scenarios": [
-    {
-      "title": "Stagflations-Squeeze: Öl $100+, Fed pausiert, S&P -8%",
-      "prob": 38
-    },
-    {
-      "title": "Geopolitische Deeskalation, Öl konsolidiert, Soft Landing",
-      "prob": 27
-    },
-    {
-      "title": "Rendite-Schock: 10Y auf 5%+, HY Credit Event",
-      "prob": 18
-    },
-    {
-      "title": "Nahost-Eskalation, Öl $110+, Schockrezession",
-      "prob": 12
-    },
-    {
-      "title": "OPEC+ Pivots, Öl fällt $80, Disinflation",
-      "prob": 5
-    }
-  ],
-  "timestamp": "23.07.2026 - 04:59 UTC"
+  "knowledge_graph_updates": {
+    "new_entities": [
+      {
+        "id": "E1",
+        "name": "Straße von Hormus",
+        "type": "CHOKEPOINT"
+      },
+      {
+        "id": "E2",
+        "name": "Bab al-Mandab",
+        "type": "CHOKEPOINT"
+      },
+      {
+        "id": "E3",
+        "name": "Brent Öl Schock 2026",
+        "type": "MARKET_EVENT"
+      }
+    ],
+    "new_relations": [
+      {
+        "subject": "Iran",
+        "predicate": "THREATENS_CLOSURE_OF",
+        "object": "Straße von Hormus",
+        "severity": 75
+      },
+      {
+        "subject": "Brent Öl Schock 2026",
+        "predicate": "DRIVES_UP",
+        "object": "Inflationserwartungen",
+        "severity": 70
+      },
+      {
+        "subject": "Bab al-Mandab",
+        "predicate": "DISRUPTS",
+        "object": "Asien-Europa Frachtrouten",
+        "severity": 65
+      }
+    ]
+  },
+  "timestamp": "23.07.2026 - 06:18 UTC"
 }
