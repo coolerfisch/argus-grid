@@ -1,282 +1,181 @@
 {
+  "daily_executive_summary": "Die Weltwirtschaft befindet sich in einem Zustand der Unsicherheit, begleitet von geopolitischen Spannungen und makroökonomischen Turbulenzen. Der Konflikt im Iran und die Versorgungsangst haben die Finanzmärkte erheblich beeinflusst.",
+  "global_risk_score": 82,
+  "market_regime": "Bewegungsloses Marktregime: Auf dem Spiel steht die Weltwirtschaft",
+  "top_overweight": "Gewinner-Assetklassen: KI, Halbleiter",
+  "top_risk": "Größtes Risiko heute: Iran-Konflikt",
   "defcon_status": {
     "level": 3,
-    "label": "DEFCON 3 - Erhöhte Alarmstufe",
-    "nuclear_risk_percent": 15,
-    "primary_driver": "Nukleardoktrin-Anpassungen & Rhetorik"
+    "label": "DEFCON Statusbezeichnung: Auf Alarmstufe drei",
+    "nuclear_risk_percent": 18,
+    "primary_driver": "Haupttreiber laut News: Iran-Konflikt"
   },
   "narrative_divergence": [
     {
-      "topic": "Ukraine & NATO-Ostflanke",
-      "mainstream_view": "Fokus auf NATO-Geschlossenheit, Sanktionen und westliche Hilfen",
-      "brics_view": "Fokus auf Sicherheitsinteressen Moskaus und Kritik an NATO-Osterweiterung",
-      "alternative_view": "Fokus auf geopolitische Abnutzung und verdeckte Diplomatie"
+      "topic": "Brennpunkt / Schauplatz 1",
+      "mainstream_view": "Einschätzung westlicher Medien: Iran droht mit Vergeltung",
+      "brics_view": "Einschätzung der BRICS-Staaten: Keine Änderung im Status quo",
+      "alternative_view": "Einschätzung unabhängiger Analysten: Vorbildliche Handlungen der internationalen Gemeinschaft notwendig"
     },
     {
-      "topic": "Naher Osten & Seewege (Rotes Meer)",
-      "mainstream_view": "Fokus auf Schutz der freien Schifffahrt und Abwehr von Milizen",
-      "brics_view": "Fokus auf Ursachen des Konflikts und Kritik am US-Einsatz",
-      "alternative_view": "Fokus auf globale Frachtkostensteigerung und Lieferkettenbrüche"
+      "topic": "Brennpunkt / Schauplatz 2",
+      "mainstream_view": "Einschätzung westlicher Medien: US-Russland-Spannungen eskalieren",
+      "brics_view": "Einschätzung der BRICS-Staaten: Die USA setzen einen Vertrauensbruch fort",
+      "alternative_view": "Einschätzung unabhängiger Analysten: Die internationale Gemeinschaft sollte handeln, um die Spannungen zu lösen"
     },
     {
-      "topic": "BRICS & Globale Dedollarisierung / Handelskonflikt",
-      "mainstream_view": "US-Dollar bleibt unangefochtene Reservewährung",
-      "brics_view": "Ausbau von Ausgleichssystemen in Lokalwährungen und Goldreserven",
-      "alternative_view": "Beschleunigte Fragmentierung des globalen Finanzsystems"
+      "topic": "Brennpunkt / Schauplatz 3",
+      "mainstream_view": "Einschätzung westlicher Medien: China expandiert wirtschaftlich in Afrika",
+      "brics_view": "Einschätzung der BRICS-Staaten: Die chinesische Initiative hat große Chancen nach sich gezogen",
+      "alternative_view": "Einschätzung unabhängiger Analysten: Afrika muss sich auf die möglichen Folgen der chinesischen Expansion vorbereiten"
     }
   ],
   "domestic_politics": [
     {
-      "country_region": "USA / Washington",
-      "topic": "US-Kongress & Budget-Rivalitäten",
-      "status": "Haushaltsstreit & Parteienpolarisation",
-      "impact": "Blockaden bei Auslandshilfen und Druck auf Außenpolitik"
+      "country_region": "Land / Region 1",
+      "topic": "Innenpolitisches Thema: Neuwahl in den USA",
+      "status": "Aktueller Stand: Eingeleitet, umgesetzt wird nächste Woche",
+      "impact": "Geopolitische Folge: Verteidigungsfähigkeit der USA beeinflusst"
     },
     {
-      "country_region": "Deutschland / EU",
-      "topic": "Regierungskrisen & Polarisierung",
-      "status": "Hohe Deindustrialisierung & Haushaltsprobleme",
-      "impact": "Eingeschränkte Handlungsfähigkeit Brüssels"
+      "country_region": "Land / Region 2",
+      "topic": "Innenpolitisches Thema: Wahlen in Indien",
+      "status": "Aktueller Stand: Wahlen abgeschlossen",
+      "impact": "Geopolitische Folge: Wirtschafts- und Handelspartnerschaft zwischen Indien und China beeinflusst"
     },
     {
-      "country_region": "China / BRICS",
-      "topic": "Immobilienkrise & Stimulus-Debatte",
-      "status": "Interne Wirtschaftsflaute in Peking",
-      "impact": "Erhöhter Druck auf Exportmärkte"
+      "country_region": "Land / Region 3",
+      "topic": "Innenpolitisches Thema: Wahlen in Russland",
+      "status": "Aktueller Stand: Eingeleitet, Ergebnis ist noch offen",
+      "impact": "Geopolitische Folge: Wirtschafts- und Handelspartnerschaft zwischen Russland und China beeinflusst"
     }
   ],
   "stock_picks": {
     "top_5_buys": [
       {
-        "ticker": "RHM.DE",
-        "name": "Rheinmetall",
-        "sector": "Verteidigung",
-        "reason": "Massives Aufrüstungsprogramm in Europa & NATO"
-      },
-      {
-        "ticker": "CCJ",
-        "name": "Cameco",
-        "sector": "Uran / Energie",
-        "reason": "Globale Energiekrise & Kernenergie-Renaissance"
-      },
-      {
-        "ticker": "GOLD",
-        "name": "Barrick Gold",
-        "sector": "Rohstoffe",
-        "reason": "BRICS-Zentralbankkäufe & Flucht in Gold"
-      },
-      {
-        "ticker": "LMT",
-        "name": "Lockheed Martin",
-        "sector": "US-Verteidigung",
-        "reason": "Hohe globale Auftragsbestände für Raketen/Jets"
+        "ticker": "TSLA",
+        "name": "Tesla",
+        "sector": "Autoindustrie",
+        "reason": "Begründung laut News: Fortschritt in der Technologie und Marktführer"
       },
       {
         "ticker": "NVDA",
-        "name": "Nvidia",
-        "sector": "KI & Tech",
-        "reason": "Ungebrochener Rüstungs- & KI-Hardware-Boom"
+        "name": "NVIDIA",
+        "sector": "Technologie",
+        "reason": "Begründung laut News: Starke Leistung im Bereich der halbleiterten Technologie"
+      },
+      {
+        "ticker": "VISA",
+        "name": "Visa",
+        "sector": "Finanzdienstleistungen",
+        "reason": "Begründung laut News: Starke Leistung aufgrund der zunehmenden digitalen Bezahlungsmethoden"
+      },
+      {
+        "ticker": "MSFT",
+        "name": "Microsoft",
+        "sector": "Technologie",
+        "reason": "Begründung laut News: Fortschritt in der Technologie und starkes Potenzial an der Börse"
+      },
+      {
+        "ticker": "AAPL",
+        "name": "Apple",
+        "sector": "Technologie",
+        "reason": "Begründung laut News: Starke Leistung aufgrund der zunehmenden Nachfrage nach mobilen Geräten und Digitalprodukten"
       }
     ],
     "flop_5_sells": [
       {
-        "ticker": "VNA.DE",
-        "name": "Vonovia",
-        "sector": "Immobilien",
-        "reason": "Hohe Zinslast & Refinanzierungsrisiken"
+        "ticker": "F",
+        "name": "Ford",
+        "sector": "Autoindustrie",
+        "reason": "Gegenwind laut News: Verluste in der Automobilindustrie"
       },
       {
-        "ticker": "NKE",
-        "name": "Nike",
-        "sector": "Konsumgüter",
-        "reason": "Schwächelnder Binnenmarkt in China"
+        "ticker": "GE",
+        "name": "General Electric",
+        "sector": "Technologie",
+        "reason": "Gegenwind laut News: schwaches Ergebnis aufgrund der anhaltenden Krise"
       },
       {
-        "ticker": "BA",
-        "name": "Boeing",
+        "ticker": "GM",
+        "name": "General Motors",
+        "sector": "Autoindustrie",
+        "reason": "Gegenwind laut News: negative Auswirkungen auf die Automobilindustrie"
+      },
+      {
+        "ticker": "X",
+        "name": "United Airlines",
         "sector": "Luftfahrt",
-        "reason": "Qualitätsprobleme & Lieferketten-Engpässe"
+        "reason": "Gegenwind laut News: schwache Leistung aufgrund der anhaltenden Krise in der Luftfahrtbranche"
       },
       {
-        "ticker": "DBK.DE",
-        "name": "Deutsche Bank",
-        "sector": "Banken",
-        "reason": "Kreditausfallrisiken bei Gewerbeimmobilien"
-      },
-      {
-        "ticker": "INTC",
-        "name": "Intel",
-        "sector": "Halbleiter (Old Gen)",
-        "reason": "Verlust von Marktanteilen im KI-Segment"
+        "ticker": "AIG",
+        "name": "American International Group",
+        "sector": "Versicherungswesen",
+        "reason": "Gegenwind laut News: schwache Leistung aufgrund der anhaltenden Krise in der Finanzbranche"
       }
     ]
   },
   "conflict_hotspots": [
     {
-      "region": "Naher Osten / Iran & Israel",
-      "actors": "USA / Israel vs. Iran / Achse",
-      "escalation_level": "KRITISCH",
-      "catalyst": "Militärische Schläge oder Angriffe auf Seewege",
-      "impact": "Brent-Öl und Frachtrouten",
-      "lat": 31.5,
-      "lng": 34.75
+      "region": "Krisenherd 1",
+      "actors": "US, Iran",
+      "escalation_level": "KRITIK",
+      "catalyst": "Auslöser laut News: der Konflikt im Iran",
+      "impact": "Märkte: geopolitische Spannungen und Risiko für eine neue Konflikt Eskalation",
+      "lat": 0.0,
+      "lng": 0.0
     },
     {
-      "region": "Ukraine / NATO-Ostflanke",
-      "actors": "Russland vs. Ukraine / NATO",
-      "escalation_level": "HOCH",
-      "catalyst": "Frontverlauf und Rüstung",
-      "impact": "Europäische Energiemärkte",
-      "lat": 48.37,
-      "lng": 31.16
+      "region": "Krisenherd 2",
+      "actors": "US, Russland",
+      "escalation_level": "KRITIK",
+      "catalyst": "Auslöser laut News: US-Russland-Spannungen",
+      "impact": "Märkte: geopolitische Spannungen und Risiko für eine neue Konflikt Eskalation",
+      "lat": 0.0,
+      "lng": 0.0
     },
     {
-      "region": "Taiwan-Straße & Indopazifik",
-      "actors": "China vs. Taiwan / USA",
-      "escalation_level": "MITTEL-HOCH",
-      "catalyst": "Militärmanöver und Chip-Sanktionen",
-      "impact": "Halbleiter-Lieferketten (TSMC)",
-      "lat": 23.69,
-      "lng": 120.96
-    },
-    {
-      "region": "Rotes Meer / Bab al-Mandab",
-      "actors": "Houthi vs. Marine-Allianz",
-      "escalation_level": "HOCH",
-      "catalyst": "Schiffsangriffe",
-      "impact": "Frachtraten und Lieferketten",
-      "lat": 12.58,
-      "lng": 43.33
+      "region": "Krisenherd 3",
+      "actors": "China, Indien",
+      "escalation_level": "KRITIK",
+      "catalyst": "Auslöser laut News: chinesische Expansion in Afrika",
+      "impact": "Märkte: geopolitische Spannungen und Risiko für eine neue Konflikt Eskalation",
+      "lat": 0.0,
+      "lng": 0.0
     }
   ],
   "systemic_risks": [
     {
-      "topic": "Moldawien & Transnistrien",
-      "category": "Geopolitische Region",
-      "risk_level": "HOCH",
-      "status": "Diplomatische Spannungen",
-      "impact": "Gefahr einer zweiten Front im Schwarzmeerraum"
+      "topic": "Systemisches Risiko 1",
+      "category": "Politische Spannungen",
+      "risk_level": "KRITIK",
+      "status": "Status",
+      "impact": "Folge: Risiko für eine neue Konflikt Eskalation"
     },
     {
-      "topic": "EU-Chatkontrolle & Verschlüsselung",
-      "category": "Digitale Kontrolle",
-      "risk_level": "HOCH",
-      "status": "Gesetzgebungsprozess EU",
-      "impact": "Risiken für Ende-zu-Ende-Verschlüsselung"
+      "topic": "Systemisches Risiko 2",
+      "category": "Wirtschaftskrise",
+      "risk_level": "KRITIK",
+      "status": "Status",
+      "impact": "Folge: schwache Wirtschaftsleistung und Risiko für eine weitere Verschlechterung"
     },
     {
-      "topic": "Seltene Erden Monopol",
-      "category": "Strategischer Hebel",
-      "risk_level": "MITTEL-HOCH",
-      "status": "Exportkontrollen",
-      "impact": "Versorgungsrisiken High-Tech"
+      "topic": "Systemisches Risiko 3",
+      "category": "Klimawandel",
+      "risk_level": "MITTEL",
+      "status": "Status",
+      "impact": "Folge: Risiko für Umweltzerstörung und negative Folgen für die Menschheit"
     }
   ],
-  "timestamp": "22.07.2026 - 23:51 UTC",
-  "global_risk_score": 79,
-  "market_regime": "Multipolare Stagflation & Zins-Unsicherheit",
-  "top_overweight": "Gold, Energie, Rohstoffe & Verteidigung",
-  "top_risk": "Versorgungsschock / Geopolitische Blockbildung",
-  "daily_executive_summary": "Ausführliche Synthese...",
   "assets": [
     {
       "name": "Gold & Silber",
       "signal": "GREEN",
-      "signal_text": "⧢ Sehr Attraktiv",
-      "trend": "Stark Steigend",
-      "driver": "BRICS-Käufe & Sichere Häfen"
-    },
-    {
-      "name": "KI & Halbleiter",
-      "signal": "GREEN",
-      "signal_text": "⧢ Attraktiv",
-      "trend": "Steigend",
-      "driver": "Hardware-Boom"
-    },
-    {
-      "name": "Uran & Energie",
-      "signal": "GREEN",
-      "signal_text": "⧢ Attraktiv",
-      "trend": "Stark Steigend",
-      "driver": "Angebotsdefizit"
-    },
-    {
-      "name": "S&P 500 / Nasdaq",
-      "signal": "AMBER",
-      "signal_text": "⟡ Neutral",
-      "trend": "Volatil",
-      "driver": "Zinsaussichten"
-    },
-    {
-      "name": "Bitcoin & Krypto",
-      "signal": "AMBER",
-      "signal_text": "⟡ Neutral",
-      "trend": "Volatil",
-      "driver": "Liquiditätsumfeld"
-    },
-    {
-      "name": "High-Yield Bonds",
-      "signal": "RED",
-      "signal_text": "⬤ Unattraktiv",
-      "trend": "Fallend",
-      "driver": "Refinanzierungsdruck"
-    },
-    {
-      "name": "Gewerbeimmobilien",
-      "signal": "RED",
-      "signal_text": "⬤ Meiden",
-      "trend": "Stark Fallend",
-      "driver": "Zinsniveau"
+      "signal_text": " 🟢 Attraktiv",
+      "trend": "Bullischem Trend, positiv",
+      "driver": "Fiskalisierung des Wertes des Goldes"
     }
   ],
-  "regions": [
-    {
-      "name": "USA",
-      "signal": "GREEN",
-      "signal_text": "⧢ Grün",
-      "summary": "Einschätzung"
-    },
-    {
-      "name": "BRICS & Globaler Süden",
-      "signal": "GREEN",
-      "signal_text": "⧢ Grün",
-      "summary": "Einschätzung"
-    },
-    {
-      "name": "Japan & Indien / ASEAN",
-      "signal": "GREEN",
-      "signal_text": "⧢ Grün",
-      "summary": "Einschätzung"
-    },
-    {
-      "name": "Kern-Europa (DE/FR/CH)",
-      "signal": "RED",
-      "signal_text": "⬤ Rot",
-      "summary": "Einschätzung"
-    },
-    {
-      "name": "China (Binnenmarkt)",
-      "signal": "RED",
-      "signal_text": "⬤ Rot",
-      "summary": "Einschätzung"
-    }
-  ],
-  "scenarios": [
-    {
-      "title": "Ausweitung Nahost-Konflikt (Ölschock >100$)",
-      "prob": 40
-    },
-    {
-      "title": "Zweite Inflationswelle / Stagflation",
-      "prob": 30
-    },
-    {
-      "title": "Direkte NATO-Eskalation",
-      "prob": 15
-    },
-    {
-      "title": "BRICS-Dedollarisierung",
-      "prob": 15
-    }
-  ]
+  "timestamp": "23.07.2026 - 00:05 UTC"
 }
