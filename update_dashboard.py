@@ -50,7 +50,7 @@ def get_live_market_data():
 
 live_market_context = get_live_market_data()
 
-# B. VOLLSTÄNDIGER VOLL-QUELLENPOOL (GEWICHTET INKL. EXPANDED REDDIT MATRIX)
+# B. VOLLSTÄNDIGER VOLL-QUELLENPOOL (68 QUELLEN GEWICHTET INKL. EXPANDED REDDIT MATRIX)
 SOURCES = [
     # 🏛️ 1. ZENTRALBANKEN & MAKRO-INSTITUTIONEN (Gewicht: 1.0)
     {"name": "Federal Reserve Press", "url": "https://www.federalreserve.gov/feeds/press_all.xml", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
@@ -266,7 +266,7 @@ json_template_desc = """
 """
 
 raw_text = None
-generator_used = "Claude 3.5 Sonnet"
+generator_used = "Claude"
 
 anth_key = os.environ.get("ANTHROPIC_API_KEY")
 if not anth_key:
@@ -282,7 +282,14 @@ system_instruction = (
     "Antworte AUSSCHLIESSLICH im rein validen JSON-Format basierend auf diesem Schema:\n" + json_template_desc
 )
 
-claude_models = ["claude-3-5-sonnet-latest", "claude-3-5-haiku-latest"]
+# AKTUELLES MODELL-ARRAY FÜR ANTHROPIC (INKLUSIVE NEUER SONNET MODELL-IDs)
+claude_models = [
+    "claude-5-sonnet-latest",
+    "claude-3-7-sonnet-latest",
+    "claude-3-5-sonnet-20241022",
+    "claude-3-5-sonnet-latest"
+]
+
 for model_name in claude_models:
     try:
         print(f"Generiere Palantir Light Lagebild mit Anthropic {model_name}...")
@@ -300,7 +307,7 @@ for model_name in claude_models:
         print(f"Hinweis: {model_name} nicht erreichbar: {e}")
 
 if not raw_text:
-    raise RuntimeError("Fehler: Anthropic konnte keine Antwort generieren. Bitte Key prüfen.")
+    raise RuntimeError("Fehler: Anthropic konnte keine Antwort generieren. Bitte Key & Modell-Berechtigungen prüfen.")
 
 if raw_text.startswith("```"):
     raw_text = re.sub(r"^```[a-zA-Z]*\n?", "", raw_text)
@@ -379,4 +386,4 @@ if not history_data or history_data[-1].get("date") != today_str:
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print(f"OSINT Lagezentrum erfolgreich mit GeoScore & Event-Graph (Claude {generator_used}) aktualisiert!")
+print(f"OSINT Lagezentrum erfolgreich mit GeoScore & Event-Graph ({generator_used}) aktualisiert!")
