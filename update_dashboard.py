@@ -50,7 +50,7 @@ def get_live_market_data():
 
 live_market_context = get_live_market_data()
 
-# B. VOLLSTÄNDIGER VOLL-QUELLENPOOL (68 QUELLEN GEWICHTET INKL. EXPANDED REDDIT MATRIX)
+# B. VOLLSTÄNDIGER VOLL-QUELLENPOOL (68 QUELLEN GEWICHTET INKL. REDDIT MATRIX)
 SOURCES = [
     # 🏛️ 1. ZENTRALBANKEN & MAKRO-INSTITUTIONEN (Gewicht: 1.0)
     {"name": "Federal Reserve Press", "url": "https://www.federalreserve.gov/feeds/press_all.xml", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
@@ -162,7 +162,6 @@ for src in SOURCES:
 if len(feed_context) > 35000:
     feed_context = feed_context[:35000] + "\n... [Quellenkontext zur Token-Schonung leicht gekürzt]"
 
-# ERWEITERTES SCHEMAS FÜR GEOSCORE, EVENT-GRAPH & KAUSALITÄTSKETTEN (PALANTIR LIGHT STAGE 2-7)
 json_template_desc = """
 {
   "geoscore": {
@@ -282,12 +281,12 @@ system_instruction = (
     "Antworte AUSSCHLIESSLICH im rein validen JSON-Format basierend auf diesem Schema:\n" + json_template_desc
 )
 
-# AKTUELLES MODELL-ARRAY FÜR ANTHROPIC (INKLUSIVE NEUER SONNET MODELL-IDs)
+# AKTUELLE ANTHROPIC MODELL-IDs (OFFIZIELLER STAND 2026)
 claude_models = [
-    "claude-5-sonnet-latest",
-    "claude-3-7-sonnet-latest",
-    "claude-3-5-sonnet-20241022",
-    "claude-3-5-sonnet-latest"
+    "claude-sonnet-5",
+    "claude-sonnet-4-6",
+    "claude-3-7-sonnet-20250219",
+    "claude-3-5-sonnet-20241022"
 ]
 
 for model_name in claude_models:
