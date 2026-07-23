@@ -90,7 +90,20 @@ knowledge_graph = {
     "entities": [],
     "relations": [],
     "causal_chains": [],
-    "historical_precedents": []
+    "historical_precedents": [
+        {
+            "trigger": "China Exportbeschränkung Seltene Erden",
+            "past_years": [2010, 2023, 2025],
+            "impact": "Seltene Erden +45%, Bergbauaktien +12%, Japan-Industrie -7%",
+            "affected_assets": ["MP", "LYC", "REMX"]
+        },
+        {
+            "trigger": "Drohung Sperrung Straße von Hormus / Bab al-Mandab",
+            "past_years": [2019, 2023, 2024],
+            "impact": "Brent Öl +18%, Tanker-Frachtraten +40%, Gold +6%",
+            "affected_assets": ["BZ=F", "CL=F", "FRO", "GC=F"]
+        }
+    ]
 }
 
 if os.path.exists(memory_file):
@@ -111,21 +124,35 @@ if len(kg_context_str) > 10000:
 # C. VOLLSTÄNDIGER QUELLENPOOL (100+ FEEDS)
 # ============================================================
 SOURCES = [
+    # Zentralbanken & Makro
     {"name": "Federal Reserve Press", "url": "[https://www.federalreserve.gov/feeds/press_all.xml](https://www.federalreserve.gov/feeds/press_all.xml)", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "EZB (Europäische Zentralbank)", "url": "[https://www.ecb.europa.eu/rss/press.html](https://www.ecb.europa.eu/rss/press.html)", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "BIS (Bank f. Intl. Zahlungsausgleich)", "url": "[https://www.bis.org/doclist/all.rss](https://www.bis.org/doclist/all.rss)", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
+    {"name": "IMF News", "url": "[https://www.imf.org/en/News/rss](https://www.imf.org/en/News/rss)", "cat": "Intl. Org", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "EU-Kommission Press", "url": "[https://ec.europa.eu/commission/presscorner/api/rss](https://ec.europa.eu/commission/presscorner/api/rss)", "cat": "Regierung/EU", "weight": 1.00, "bias": "WESTERN"},
+    {"name": "White House Briefing", "url": "[https://www.whitehouse.gov/briefing-room/feed/](https://www.whitehouse.gov/briefing-room/feed/)", "cat": "Regierung", "weight": 1.00, "bias": "WESTERN"},
+
+    # Energie, Rohstoffe & Logistik
     {"name": "EIA Petroleum Status Report", "url": "[https://news.google.com/rss/search?q=when:7d+site:eia.gov+%22Weekly+Petroleum+Status+Report%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:eia.gov+%22Weekly+Petroleum+Status+Report%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / EIA", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "IEA Oil Market Reports", "url": "[https://news.google.com/rss/search?q=when:7d+site:iea.org+%22Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:iea.org+%22Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / IEA", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "OPEC Monthly Market Reports", "url": "[https://news.google.com/rss/search?q=when:7d+OPEC+%22Monthly+Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+OPEC+%22Monthly+Oil+Market+Report%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Energie / OPEC", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "Freightos Shipping Index", "url": "[https://news.google.com/rss/search?q=when:7d+%22Freightos%22+OR+%22container+freight+rate%22+OR+%22Baltic+Dry%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22Freightos%22+OR+%22container+freight+rate%22+OR+%22Baltic+Dry%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Logistik / Container", "weight": 0.90, "bias": "MAINSTREAM"},
+    {"name": "FAO Food Price Index", "url": "[https://news.google.com/rss/search?q=when:7d+site:fao.org+%22Food+Price+Index%22+OR+%22Crop+Prospects%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+site:fao.org+%22Food+Price+Index%22+OR+%22Crop+Prospects%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Agrar / FAO", "weight": 0.95, "bias": "OFFIZIELL"},
+
+    # Militär, OSINT & Cyber
     {"name": "NASA FIRMS Fire & Hazards", "url": "[https://earthobservatory.nasa.gov/feeder/natural_hazards.rss](https://earthobservatory.nasa.gov/feeder/natural_hazards.rss)", "cat": "OSINT / Satellit", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "ISW (Institute f. Study of War)", "url": "[https://www.understandingwar.org/rss.xml](https://www.understandingwar.org/rss.xml)", "cat": "OSINT / Militär", "weight": 0.85, "bias": "WESTERN"},
+    {"name": "US Naval Institute News", "url": "[https://news.usni.org/feed](https://news.usni.org/feed)", "cat": "Marine / AIS OSINT", "weight": 0.85, "bias": "WESTERN"},
     {"name": "CISA Cyber Alerts (US)", "url": "[https://www.cisa.gov/cybersecurity-advisories/all.xml](https://www.cisa.gov/cybersecurity-advisories/all.xml)", "cat": "Cyber / Infrastruktur", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "UKMTO (UK Maritime Trade Ops)", "url": "[https://news.google.com/rss/search?q=when:24h+UKMTO+OR+%22Maritime+Trade+Operations%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+UKMTO+OR+%22Maritime+Trade+Operations%22&hl=en-US&gl=US&ceid=US:en)", "cat": "Schifffahrt OSINT", "weight": 0.95, "bias": "OFFIZIELL"},
+
+    # Diplomatie & Agenturen
     {"name": "AP News World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Reuters World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Kremlin News", "url": "[http://en.kremlin.ru/rss/news](http://en.kremlin.ru/rss/news)", "cat": "Regierung", "weight": 1.00, "bias": "BRICS"},
-    {"name": "Chinesisches Außenministerium", "url": "[https://www.fmprc.gov.cn/eng/zxmz/rss.xml](https://www.fmprc.gov.cn/eng/zxmz/rss.xml)", "cat": "Diplomatie", "weight": 1.00, "bias": "BRICS"}
+    {"name": "Chinesisches Außenministerium", "url": "[https://www.fmprc.gov.cn/eng/zxmz/rss.xml](https://www.fmprc.gov.cn/eng/zxmz/rss.xml)", "cat": "Diplomatie", "weight": 1.00, "bias": "BRICS"},
+    {"name": "Al Jazeera", "url": "[https://www.aljazeera.com/xml/rss/all.xml](https://www.aljazeera.com/xml/rss/all.xml)", "cat": "Medien", "weight": 0.85, "bias": "BRICS"},
+    {"name": "ZeroHedge", "url": "[http://feeds.feedburner.com/zerohedge/feed](http://feeds.feedburner.com/zerohedge/feed)", "cat": "Alternativ / Makro", "weight": 0.55, "bias": "ALTERNATIVE"}
 ]
 
 browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 ArgusGridOSINTBot/1.0"
@@ -158,78 +185,75 @@ with ThreadPoolExecutor(max_workers=25) as executor:
 if len(feed_context) > 35000:
     feed_context = feed_context[:35000] + "\n... [Quellenkontext gekürzt]"
 
-anth_key = os.environ.get("ANTHROPIC_API_KEY")
+# Clean API key extraction (Entfernt Zeilenumbrüche/Leerzeichen)
+anth_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
 if not anth_key:
     raise ValueError("ANTHROPIC_API_KEY wurde nicht in den Umgebungsvariablen gefunden!")
 
 client_anthropic = anthropic.Anthropic(api_key=anth_key)
 
 # ============================================================
-# D. SINGLE-PASS CLAUDE SYNTHESIZER (EINZIGER ROBUSTER CALL)
+# D. PHASE 2: INTELLIGENCE ENGINE (SINGLE-PASS CLAUDE CALL)
 # ============================================================
-orchestrator_prompt = """Du bist der CHEF-ANALYST & KNOWLEDGE GRAPH ENGINE von 'Argus Grid'.
-Analysiere den Eingabe-Kontext gleichzeitig aus 4 Perspektiven (Geopolitik, Makroökonomie, Rohstoffe/Logistik, Militär/OSINT) und führe eine finale Synthese durch.
+orchestrator_prompt = """Du bist die 'Argus Grid Intelligence Engine' (Chef-Analyst für Geopolitik, Makro, Rohstoffe & OSINT).
 
-DEINE AUFGABEN:
-1. EVENT FUSION: Bündele verwandte Meldungen zu deduplizierten Groß-Ereignissen mit Confidence-Score (0-100%).
-2. NARRATIVE DIVERGENCE: Erkenne Widersprüche zwischen offizieller Rhetorik (Fed, Diplomatie) und harten Sensordaten (Öl, DXY, Satelliten).
-3. HISTORICAL PATTERN MATCHING: Gleiche neue Ereignisse mit dem Knowledge Graph ab.
-4. KNOWLEDGE GRAPH REFACTORING: Extrahiere neue Entitäten und Triples (z.B. ["China", "RESTRICTS_EXPORTS_OF", "Seltene Erden"]).
-5. ARGUS RISK INDEX SUB-SCORES: Berechne 9 Teil-Scores (Geopolitik, Finanzsystem, Energie, Cyber, Lieferketten, Militär, Nuklear, Rezession, Inflation).
+Führe anhand der Eingabedaten eine tiefgehende Synthese mit folgenden 5 Modulen durch:
 
-ANTWORTE AUSSCHLIESSLICH IM VALIDEN JSON-FORMAT MIT DIESEM SCHEMA:
+1. EVENT FUSION: Bündele bis zu 30 Einzelmeldungen zu deduplizierten Groß-Ereignissen (z. B. 'EVENT #2026-0714-034') mit Titel, Quellenliste, Confidence (%) und betroffenen Märkten/Regionen.
+2. KAUSALITÄTSGRAPH: Erstelle gerichtete Wirkungssketten für Hauptkrisen (Trigger -> Step 1 -> Step 2 -> Step 3 -> Beneficiaries / Detractors).
+3. HISTORISCHER PATTERN-MATCHER: Gleiche neue Schocks (z.B. Seltene Erden, Hormus, GPS-Jamming) mit dem Knowledge Graph ab und zeige vergangene Jahre (z.B. 2010, 2023) sowie Marktreaktionen.
+4. WIDERSPRUCHSERKENNUNG (NARRATIVE DIVERGENCE): Vergleiche offizielle Rhetorik (Fed, Diplomatie) mit harten Sensordaten (Öl, DXY, Baltic Dry, Satelliten).
+5. FRÜHWARNSYSTEM (RISK SCORES): Berechne Risiko-Scores (0-100) für Cyber, Militär, Finanzen, Versorgung und Politik sowie den Gesamt-Argus-Index.
+
+ANTWORTE AUSSCHLIESSLICH IM VALIDEN JSON-FORMAT BASIEREND AUF DIESEM SCHEMA:
 {
   "argus_risk_index": {
     "total_score": 68,
-    "geopolitics": 72,
-    "financial_system": 58,
-    "energy": 75,
-    "cyber": 50,
-    "supply_chain": 69,
-    "military": 74,
-    "nuclear": 18,
-    "recession_risk": 55,
-    "inflation_risk": 64
+    "cyber_score": 50,
+    "military_score": 74,
+    "financial_score": 58,
+    "supply_score": 69,
+    "political_score": 72
   },
   "narrative_divergence": [
     {
-      "topic": "Beispiel: Fed Zinspfad vs. Rohstoff-Inflation",
-      "official_communication": "Inflationsdruck lässt nach.",
-      "hard_market_data": "Öl +4%, Baltic Dry +8%, Kupfer im Aufwärtstrend.",
+      "topic": "Fed Zinspfad vs. Rohstoff-Inflation",
+      "official_communication": "Fed meldet: Inflation unter Kontrolle / Dovish.",
+      "hard_market_data": "Kupfer ↑, Brent Öl ↑, Baltic Dry ↑, Freightos ↑.",
       "divergence_score": "HOCH (85/100)"
     }
   ],
   "pattern_recognition": [
     {
-      "trigger_event": "China beschränkt Export kritischer Mineralien",
-      "matched_past_events": ["2010: Seltene Erden Stopp (+45% ETFs)", "2023: Gallium Beschränkung"],
-      "historical_consequences": "+12% Bergbauaktien, +8% Kupfer",
-      "actionable_insight": "Long-Bias auf westliche Förderer (MP, LYC)"
+      "trigger_event": "China beschränkt Seltene Erden",
+      "matched_past_years": [2010, 2023, 2025],
+      "historical_consequences": "2010: Seltene Erden +45%, Japan-Industrie -7% | 2023: Kupfer +8%",
+      "actionable_insight": "Long-Bias auf westliche Rare-Earth Förderer"
     }
   ],
   "event_fusion": [
     {
-      "event_id": "EVT-2026-001",
-      "title": "Titel des zusammengefassten Großereignisses",
-      "confidence": 92,
-      "sources_count": 14,
+      "event_id": "EVT-2026-0714-034",
+      "title": "Iran droht mit Sperrung der Straße von Hormus",
+      "sources": ["Reuters", "AP", "UKMTO", "Al Jazeera", "USNI"],
+      "confidence_pct": 93,
       "affected_regions": ["Naher Osten"],
-      "affected_markets": ["Öl", "Gold", "Schifffahrt"]
+      "affected_markets": ["Öl", "LNG", "Versicherungen", "Schifffahrt", "Gold"]
     }
   ],
   "causal_graph": [
     {
-      "trigger": "Hormus Drohung / Blockade",
-      "steps": ["Ölangebot sinkt", "Brent Öl steigt", "Inflation steigt", "Fed bleibt restriktiv", "Gold steigt"],
-      "beneficiaries": ["Brent Öl", "Gold"],
-      "detractors": ["Airlines", "Chemie"]
+      "trigger": "Hormus blockiert / bedroht",
+      "steps": ["Ölangebot sinkt", "Brent steigt", "Inflation steigt", "Fed bleibt restriktiv", "Nasdaq unter Druck", "Gold steigt"],
+      "beneficiaries": ["Brent Öl", "Gold", "Tanker-Reeder"],
+      "detractors": ["Nasdaq", "Airlines", "Chemie"]
     }
   ],
   "knowledge_graph_updates": {
-    "new_entities": [{"id": "E1", "name": "China", "type": "STATE"}, {"id": "E2", "name": "Seltene Erden", "type": "COMMODITY"}],
-    "new_relations": [{"subject": "China", "predicate": "RESTRICTS_EXPORT_OF", "object": "Seltene Erden", "severity": 80}]
+    "new_entities": [{"id": "E1", "name": "Straße von Hormus", "type": "CHOKEPOINT"}],
+    "new_relations": [{"subject": "Iran", "predicate": "THREATENS_CLOSURE_OF", "object": "Straße von Hormus", "severity": 90}]
   },
-  "daily_executive_summary": "Kurze prägnante Synthese der aktuellen Lage (max 3 Sätze).",
+  "daily_executive_summary": "Kurze prägnante Synthese der aktuellen Gesamtlage (max 3 Sätze).",
   "market_regime": "Marktregime",
   "top_overweight": "Gewinner Assets",
   "top_risk": "Hauptrisiko",
@@ -259,13 +283,11 @@ user_payload = f"""
 """
 
 CLAUDE_MODELS = [
-    "claude-3-5-sonnet-latest",
-    "claude-3-5-haiku-latest",
     "claude-3-5-sonnet-20241022",
     "claude-3-haiku-20240307"
 ]
 
-print("Generiere finale Argus Grid Lageanalyse...")
+print("Generiere Argus Grid Phase 2 Intelligence Lageanalyse...")
 raw_text = None
 
 for model in CLAUDE_MODELS:
@@ -352,4 +374,4 @@ if not history_data or history_data[-1].get("date") != today_str:
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("Argus Grid erfolgreich im Single-Pass Verfahren aktualisiert!")
+print("Argus Grid Intelligence Engine erfolgreich aktualisiert!")
