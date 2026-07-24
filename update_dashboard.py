@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 """
-ARGUS GRID v3.0 - Collective Swarm Intelligence Engine Backend
-Kollaboratives Multi-LLM-System ("Kuchenbacken-Architektur"):
-1. Parallele Entwurfserstellung aller KI-Modelle auf der Gesamtlage
-2. Gegenseitiges Peer-Review & Fingerklopfen (Debatte & Korrektur)
-3. Konsens-Synthese mit Robuster Datenweitergabe, ID-Harmonisierung & Data Sanitization
+ARGUS GRID v3.0 - Full Spectrum Multi-LLM Intelligence Engine Backend
+Erfasst: Geopolitik, Spieltheorie, Sektor-Rotation (Top/Flop 5), 
+Innenpolitik-Matrix, Historische Parallelen, Prädiktiver Horizont & Karten-Hotspots.
 """
 
 import os
@@ -18,27 +16,25 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 import feedparser
 
-# External sources list import
 try:
     from sources import SOURCES
 except ImportError:
     logging.warning("sources.py nicht gefunden. Verwende leere Quellenliste.")
     SOURCES = []
 
-# Logging Config
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[logging.StreamHandler(sys.stdout)]
 )
 
-# Configuration & Constants
-MAX_FEED_WORKERS = 40  # Hohe Parallelität für I/O-Performance
-FEED_TIMEOUT = 8        # Sekunden pro Feed-Anfrage
-MAX_ARTICLE_AGE_HOURS = 48
+MAX_FEED_WORKERS = 40
+FEED_TIMEOUT = 8
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 
-# Environment Variables / API Keys
+CURRENT_DATE_STR = datetime.now(timezone.utc).strftime("%d.%m.%Y")
+CURRENT_YEAR = datetime.now(timezone.utc).year
+
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
 MISTRAL_API_KEY = os.environ.get("MISTRAL_API_KEY")
@@ -50,7 +46,6 @@ QWEN_API_KEY = os.environ.get("QWEN_API_KEY")
 NEMOTRON_API_KEY = os.environ.get("NEMOTRON_API_KEY")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
 
-# Global Health State Tracking
 pipeline_health = {
     "timestamp": datetime.now(timezone.utc).isoformat(),
     "feeds_total": 0,
@@ -64,10 +59,7 @@ pipeline_health = {
 }
 
 
-# --- HELPER & GUARDRAIL FUNCTIONS ---
-
 def clean_expert_input(raw_text: str) -> str:
-    """Meta-Bleed Guardrail: Filtert API-Fehler und Systemmeldungen aus Texten."""
     if not raw_text:
         return ""
     error_patterns = [
@@ -77,13 +69,11 @@ def clean_expert_input(raw_text: str) -> str:
     ]
     for pattern in error_patterns:
         if re.search(pattern, raw_text, re.IGNORECASE):
-            logging.warning(f"Meta-Bleed erkannt und herausgefiltert: {pattern}")
             return ""
     return raw_text.strip()
 
 
 def repair_and_parse_json(raw_text: str) -> dict:
-    """Versucht rohes LLM-JSON robust zu parsen und Syntaxfehler zu beheben."""
     if not raw_text:
         raise ValueError("Leerer Antworttext erhalten.")
 
@@ -120,34 +110,11 @@ def repair_and_parse_json(raw_text: str) -> dict:
         raise ValueError(f"JSON konnte nicht repariert werden: {e}")
 
 
-def sanitize_markdown(text: str) -> str:
-    """Entfernt Markdown-Sonderzeichen für saubere HTML-Ausgabe."""
-    if not isinstance(text, str):
-        return text
-    text = re.sub(r"\*{1,3}(.*?)\*{1,3}", r"\1", text)
-    text = re.sub(r"`{1,3}(.*?)(`{1,3}|$)", r"\1", text)
-    text = re.sub(r"^#{1,6}\s+", "", text, flags=re.MULTILINE)
-    return text.strip()
-
-
-def sanitize_data_structure(data):
-    """Rekursive Sanitization aller Strings im Daten-Dict."""
-    if isinstance(data, dict):
-        return {k: sanitize_data_structure(v) for k, v in data.items()}
-    elif isinstance(data, list):
-        return [sanitize_data_structure(item) for item in data]
-    elif isinstance(data, str):
-        return sanitize_markdown(data)
-    return data
-
-
 def select_balanced_articles(articles: list, max_count: int = 120) -> list:
-    """Sortiert Artikel nach Gewichtung und stellt eine ausgewogene Auslese sicher."""
     if not articles:
         return []
 
     sorted_articles = sorted(articles, key=lambda x: x.get("weight", 1.0), reverse=True)
-    
     cat_groups = {}
     for a in sorted_articles:
         cat = a.get("category", "General")
@@ -166,15 +133,9 @@ def select_balanced_articles(articles: list, max_count: int = 120) -> list:
 
 
 def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
-    """
-    ABSTURZ-SCHUTZ & SCHEMA-GARANTIE:
-    Harmonisiert Keys, korrigiert Graph-ID-Mismatches und garantiert
-    das Vorhandensein aller Objektpfade für index.html.
-    """
     if not isinstance(data, dict):
         data = {}
 
-    # 1. Grundlegende Texte & KPIs
     data["ampel_status"] = data.get("ampel_status") or "GELB"
     data["ampel_reason_simple"] = data.get("ampel_reason_simple") or "Erhöhte geopolitische Spannungen."
     data["daily_executive_summary"] = data.get("daily_executive_summary") or "Lagedaten werden verarbeitet."
@@ -197,14 +158,11 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
         data["defcon_level"] = 3
         data["defcon"] = 3
 
-    # 2. Spieltheorie / Debatte
-    ds_clean = clean_expert_input(debate_summary) if debate_summary else ""
+    ds_clean = debate_summary.strip() if debate_summary else ""
     text_content = ds_clean if ds_clean else "Keine spezifische Spieltheorie-Debatte erfasst."
     data["game_theory_analysis"] = data.get("game_theory_analysis") or text_content
-    data["deepseek_analysis"] = data.get("deepseek_analysis") or text_content
-    data["game_theory"] = data.get("game_theory") or text_content
 
-    # 3. Hotspots (Leaflet Lat/Lng & Lat/Lon Aliase)
+    # Hotspots mit Type-Sicherung
     hotspots = data.get("conflict_hotspots", [])
     if isinstance(hotspots, list):
         for h in hotspots:
@@ -213,16 +171,18 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
                     h["lng"] = h["lon"]
                 if "lon" not in h and "lng" in h:
                     h["lon"] = h["lng"]
+                if "type" not in h:
+                    h["type"] = "conflict"
     else:
         data["conflict_hotspots"] = []
 
-    # 4. Graph Network (Fix für Force-Graph ID-Mismatch)
+    # Graph-Netzwerk
     gn = data.get("graph_network", {})
     if isinstance(gn, dict):
         nodes = gn.get("nodes", [])
         edges = gn.get("edges", gn.get("links", []))
         
-        valid_node_ids = set()
+        valid_nodes = []
         if isinstance(nodes, list):
             for n in nodes:
                 if isinstance(n, dict):
@@ -231,9 +191,7 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
                     n["name"] = n.get("name") or n.get("label") or node_id
                     n["label"] = n.get("label") or n["name"]
                     if node_id:
-                        valid_node_ids.add(node_id)
-        else:
-            nodes = []
+                        valid_nodes.append(n)
         
         valid_edges = []
         if isinstance(edges, list):
@@ -241,30 +199,31 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
                 if isinstance(e, dict):
                     src = str(e.get("from") or e.get("source", "")).strip()
                     tgt = str(e.get("to") or e.get("target", "")).strip()
-                    
-                    # Garantieren, dass source/target und from/to übereinstimmen
                     e["from"] = src
                     e["to"] = tgt
                     e["source"] = src
                     e["target"] = tgt
-                    
                     if src and tgt:
                         valid_edges.append(e)
         
-        data["graph_network"] = {"nodes": nodes, "edges": valid_edges, "links": valid_edges}
+        data["graph_network"] = {"nodes": valid_nodes, "edges": valid_edges, "links": valid_edges}
     else:
         data["graph_network"] = {"nodes": [], "edges": [], "links": []}
 
-    # 5. Absicherung aller sonstigen Arrays & Unterobjekte
-    for array_key in ["predictive_horizon", "historical_precedents", "domestic_policy_matrix", "stress_test_scenarios", "key_takeaways", "game_theory_matrices"]:
+    # Arrays absichern
+    for array_key in ["predictive_horizon", "historical_precedents", "domestic_policy_matrix", "stress_test_scenarios", "key_takeaways"]:
         if array_key not in data or not isinstance(data[array_key], list):
             data[array_key] = []
 
-    if "equity_rotation" not in data or not isinstance(data["equity_rotation"], dict):
-        data["equity_rotation"] = {"buys": [], "sells": []}
-
-    if "digital_sovereignty_index" not in data or not isinstance(data["digital_sovereignty_index"], dict):
-        data["digital_sovereignty_index"] = {"score": 50, "status": "Neutral"}
+    # Market Rotation Object
+    eq = data.get("equity_rotation", {})
+    if not isinstance(eq, dict):
+        eq = {}
+    if "top5_buys" not in eq or not isinstance(eq["top5_buys"], list):
+        eq["top5_buys"] = []
+    if "flop5_sells" not in eq or not isinstance(eq["flop5_sells"], list):
+        eq["flop5_sells"] = []
+    data["equity_rotation"] = eq
 
     data["timestamp"] = datetime.now(timezone.utc).isoformat()
     data["pipeline_health"] = pipeline_health
@@ -272,10 +231,7 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
     return data
 
 
-# --- STEP 1: FEED INGESTION ---
-
 def fetch_single_feed(source: dict) -> list:
-    """Lädt einen einzelnen RSS/OSINT-Feed."""
     url = source.get("url")
     name = source.get("name", "Unknown")
     category = source.get("cat", source.get("category", "General"))
@@ -296,7 +252,6 @@ def fetch_single_feed(source: dict) -> list:
             title = entry.get("title", "").strip()
             summary = entry.get("summary", entry.get("description", "")).strip()
             link = entry.get("link", "").strip()
-            
             summary_clean = re.sub(r"<[^>]+>", "", summary)[:300]
 
             if title:
@@ -310,19 +265,17 @@ def fetch_single_feed(source: dict) -> list:
                     "weight": weight
                 })
         return articles
-
     except Exception:
         return []
 
 
 def fetch_all_feeds(sources_list: list) -> list:
-    """Startet parallele Feed-Abfragen mit 40 Workern."""
     pipeline_health["feeds_total"] = len(sources_list)
     all_articles = []
     successful_feeds = 0
     failed_feeds = 0
 
-    logging.info(f"Starte Feed-Ingestion für {len(sources_list)} Quellen mit {MAX_FEED_WORKERS} Workern...")
+    logging.info(f"Starte Feed-Ingestion für {len(sources_list)} Quellen...")
 
     with ThreadPoolExecutor(max_workers=MAX_FEED_WORKERS) as executor:
         future_to_source = {executor.submit(fetch_single_feed, src): src for src in sources_list}
@@ -336,15 +289,11 @@ def fetch_all_feeds(sources_list: list) -> list:
 
     pipeline_health["feeds_successful"] = successful_feeds
     pipeline_health["feeds_failed"] = failed_feeds
-
-    logging.info(f"Ingestion beendet: {len(all_articles)} Artikel aus {successful_feeds} Feeds geladen.")
+    logging.info(f"Ingestion beendet: {len(all_articles)} Artikel geladen.")
     return all_articles
 
 
-# --- STEP 2: THE SWARM BAKER COMMITTEE ---
-
 def baker_groq(payload: str) -> str:
-    """Groq (Llama 3.3 70B) - Schnell, faktenorientiert."""
     if not GROQ_API_KEY:
         return ""
     try:
@@ -355,7 +304,7 @@ def baker_groq(payload: str) -> str:
                 "model": "llama-3.3-70b-versatile",
                 "messages": [{
                     "role": "user",
-                    "content": f"Analysiere die Gesamtlage der weltweiten Feeds. Erstelle ein vollständiges Lagedokument: Key-Fakten, Geoscore-Einschätzung, DEFCON-Level, Hauptakteure und Risiko-Hotspots.\n\nFEEDS:\n{payload}"
+                    "content": f"DATUM: {CURRENT_DATE_STR} (JAHR {CURRENT_YEAR}). Analysiere alle Feeds. Erstelle ein vollständiges Lagedokument inklusive Sektor-Impulsen, Innenpolitik und Geodaten.\n\nFEEDS:\n{payload}"
                 }],
                 "max_tokens": 1800
             },
@@ -364,18 +313,14 @@ def baker_groq(payload: str) -> str:
         if res.status_code == 200:
             pipeline_health["bakers_active"].append("Groq (Llama-3.3)")
             return res.json()["choices"][0]["message"]["content"]
-        else:
-            logging.warning(f"Groq Baker API Status: {res.status_code}")
     except Exception as e:
         logging.warning(f"Groq Baker Fehler: {e}")
     return ""
 
 
 def baker_deepseek(payload: str) -> str:
-    """DeepSeek-R1 / V3 - Strategisch, spieltheoretisch, tiefgründig."""
     if not DEEPSEEK_API_KEY:
         return ""
-    
     for model_name in ["deepseek-reasoner", "deepseek-chat"]:
         try:
             res = requests.post(
@@ -385,7 +330,7 @@ def baker_deepseek(payload: str) -> str:
                     "model": model_name,
                     "messages": [{
                         "role": "user",
-                        "content": f"Analysiere die Gesamtlage aus strategischer und spieltheoretischer Sicht. Welche Akteure befinden sich in Zugzwängen, wo drohen Eskalationen?\n\nFEEDS:\n{payload[:2500]}"
+                        "content": f"DATUM: {CURRENT_DATE_STR} (JAHR {CURRENT_YEAR}). Analysiere die Lage aus strategischer und spieltheoretischer Sicht. Identifiziere historische Parallelen und prädiktive Indikatoren.\n\nFEEDS:\n{payload[:2500]}"
                     }],
                     "max_tokens": 1800
                 },
@@ -394,20 +339,15 @@ def baker_deepseek(payload: str) -> str:
             if res.status_code == 200:
                 pipeline_health["bakers_active"].append(f"DeepSeek ({model_name})")
                 return clean_expert_input(res.json()["choices"][0]["message"]["content"])
-            else:
-                logging.warning(f"DeepSeek ({model_name}) Status: {res.status_code}")
         except Exception as e:
-            logging.warning(f"DeepSeek Fehler ({model_name}): {e}")
-            
+            logging.warning(f"DeepSeek Fehler: {e}")
     return ""
 
 
 def baker_qwen_or_grok(payload: str) -> str:
-    """Qwen 2.5 / Grok / OpenRouter - Multipolare Makro-Perspektive."""
     api_key = OPENROUTER_API_KEY or XAI_API_KEY or QWEN_API_KEY
     if not api_key:
         return ""
-    
     endpoint = "https://openrouter.ai/api/v1/chat/completions" if OPENROUTER_API_KEY else "https://api.x.ai/v1/chat/completions"
     model = "qwen/qwen-2.5-72b-instruct" if OPENROUTER_API_KEY else "grok-2-latest"
 
@@ -419,7 +359,7 @@ def baker_qwen_or_grok(payload: str) -> str:
                 "model": model,
                 "messages": [{
                     "role": "user",
-                    "content": f"Analysiere die Lage aus makroökonomischer und multipolarer Sicht (BRICS, Lieferketten, Chokepoints). Erstelle eine vollständige Lagebeurteilung.\n\nFEEDS:\n{payload[:3000]}"
+                    "content": f"DATUM: {CURRENT_DATE_STR} (JAHR {CURRENT_YEAR}). Analysiere Makroökonomie, Chokepoints, Schifffahrt, Migration und BRICS.\n\nFEEDS:\n{payload[:3000]}"
                 }],
                 "max_tokens": 1800
             },
@@ -428,35 +368,90 @@ def baker_qwen_or_grok(payload: str) -> str:
         if res.status_code == 200:
             pipeline_health["bakers_active"].append(f"Swarm-Partner ({model.split('/')[-1]})")
             return res.json()["choices"][0]["message"]["content"]
-        else:
-            logging.warning(f"Macro Baker API Status: {res.status_code}")
     except Exception as e:
-        logging.warning(f"Qwen/Grok Baker Fehler: {e}")
+        logging.warning(f"Qwen/Grok Fehler: {e}")
     return ""
 
 
-# --- STEP 3: PEER DEBATE & FINGERKLOPFEN ---
-
 def run_swarm_debate(draft_groq: str, draft_deepseek: str, draft_macro: str) -> str:
-    """FÜHRT DIE KREUZPRÜFUNG DURCH ('Fingerklopfen')."""
     combined_drafts = f"ENTWURF GROQ/OSINT:\n{draft_groq}\n\nENTWURF DEEPSEEK:\n{draft_deepseek}\n\nENTWURF MACRO:\n{draft_macro}".strip()
-    
     api_key = MISTRAL_API_KEY or OPENROUTER_API_KEY or ANTHROPIC_API_KEY or GROQ_API_KEY
     if not api_key or not combined_drafts:
-        pipeline_health["swarm_debate_status"] = "SKIPPED (Fallback auf Entwürfe)"
         return combined_drafts
 
     endpoint = "https://api.mistral.ai/v1/chat/completions" if MISTRAL_API_KEY else ("https://openrouter.ai/api/v1/chat/completions" if OPENROUTER_API_KEY else "https://api.groq.com/openai/v1/chat/completions")
     model = "mistral-large-latest" if MISTRAL_API_KEY else ("qwen/qwen-2.5-72b-instruct" if OPENROUTER_API_KEY else "llama-3.3-70b-versatile")
 
     prompt = (
-        "Du bist der Moderator der KI-Analysten-Konferenz. Dir liegen die Lagedokumente von verschiedenen KI-Systemen vor:\n\n"
+        f"HEUTIGES DATUM: {CURRENT_DATE_STR} (JAHR {CURRENT_YEAR}).\n"
+        "Du bist der Moderator der KI-Analysten-Konferenz. Führe die Kreuzprüfung der Entwürfe durch ('Fingerklopfen'):\n\n"
         f"{combined_drafts[:3000]}\n\n"
-        "FÜHRE DIE KREUZPRÜFUNG DURCH ('Fingerklopfen'):\n"
-        "1. Wo widersprechen sich die Modelle direkt?\n"
-        "2. Welche Halluzinationen oder unbegründeten Behauptungen müssen gestrichen werden?\n"
-        "3. Was ist der einmütige, verifizierte KERN-KONSENS aller Modelle?\n"
-        "Formuliere eine messerscharfe Synthese dieser Debatte."
+        f"1. Halte strikt das Jahr {CURRENT_YEAR} ein.\n"
+        "2. Identifiziere direkte Widersprüche, Fehlinformationen und Halluzinationen.\n"
+        "3. Bilde den verifizierten KERN-KONSENS aller Modelle.\n"
+        "Formuliere eine messerscharfe Synthese in gut strukturiertem Markdown mit Tabellen!"
+    )
+
+    try:
+        res = requests.post(
+            endpoint,
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            json={"model": model, "messages": [{"role": "user", "content": prompt}], "temperature": 0.1, "max_tokens": 1800},
+            timeout=35
+        )
+        if res.status_code == 200:
+            pipeline_health["swarm_debate_status"] = "SUCCESS"
+            return res.json()["choices"][0]["message"]["content"]
+    except Exception as e:
+        pipeline_health["swarm_debate_status"] = f"ERROR ({e})"
+
+    return combined_drafts
+
+
+def call_synthesizer(debate_result: str, raw_payload: str) -> dict:
+    api_key = MISTRAL_API_KEY or OPENROUTER_API_KEY or GROQ_API_KEY
+    if not api_key:
+        return {}
+
+    endpoint = "https://api.mistral.ai/v1/chat/completions" if MISTRAL_API_KEY else "https://openrouter.ai/api/v1/chat/completions"
+    model = "mistral-large-latest" if MISTRAL_API_KEY else "qwen/qwen-2.5-72b-instruct"
+
+    prompt = (
+        f"HEUTIGES DATUM: {CURRENT_DATE_STR} (JAHR {CURRENT_YEAR}).\n"
+        "Generiere aus dem Konsens und den Feeds das finale JSON-Objekt. Antworte AUSSCHLIESSLICH mit validem JSON!\n\n"
+        f"DEBATTE:\n{debate_result[:2500]}\n\nFEEDS:\n{raw_payload[:2500]}\n\n"
+        "ERFORDERLICHE JSON-STRUKTUR:\n"
+        "{\n"
+        '  "overall_geoscore": int (0-100),\n'
+        '  "geoscore": int (0-100),\n'
+        '  "defcon_level": int (1-5),\n'
+        '  "defcon": int (1-5),\n'
+        '  "ampel_status": "GRÜN" | "GELB" | "ROT",\n'
+        '  "ampel_reason_simple": "...",\n'
+        '  "daily_executive_summary": "...",\n'
+        '  "daily_executive_summary_simple": "...",\n'
+        '  "key_takeaways": ["..."],\n'
+        '  "equity_rotation": {\n'
+        '    "top5_buys": [{"asset": "Sektor/Aktie/ETF", "reason": "..."}],\n'
+        '    "flop5_sells": [{"asset": "Sektor/Aktie/ETF", "reason": "..."}]\n'
+        '  },\n'
+        '  "domestic_policy_matrix": [\n'
+        '    {"region": "USA/EU/China/BRICS/Nahost", "stability": "ROT/GELB/GRÜN", "dynamics": "...", "spillover": "..."}\n'
+        '  ],\n'
+        '  "historical_precedents": [\n'
+        '    {"event": "Historisches Ereignis", "period": "Jahr/Epoche", "similarity": "Parallele zu 2026", "takeaway": "Erkenntnis für heute"}\n'
+        '  ],\n'
+        '  "predictive_horizon": [\n'
+        '    {"timeframe": "30 Tage (Taktisch)", "forecast": "...", "probability": "Hoch/Mittel/Niedrig", "early_warning_indicators": ["..."]}\n'
+        '  ],\n'
+        '  "conflict_hotspots": [\n'
+        '    {"name": "...", "lat": float, "lon": float, "type": "chokepoint/maritime/refugee/conflict", "intensity": "ROT/GELB", "description": "..."}\n'
+        '  ],\n'
+        '  "graph_network": {\n'
+        '    "nodes": [{"id": "...", "label": "...", "group": "...", "val": 5}],\n'
+        '    "edges": [{"from": "...", "to": "...", "label": "..."}]\n'
+        '  }\n'
+        "}"
     )
 
     try:
@@ -466,107 +461,22 @@ def run_swarm_debate(draft_groq: str, draft_deepseek: str, draft_macro: str) -> 
             json={
                 "model": model,
                 "messages": [{"role": "user", "content": prompt}],
-                "temperature": 0.1,
-                "max_tokens": 1500
-            },
-            timeout=35
-        )
-        if res.status_code == 200:
-            pipeline_health["swarm_debate_status"] = "SUCCESS"
-            return res.json()["choices"][0]["message"]["content"]
-        else:
-            logging.warning(f"Debate API Status: {res.status_code}")
-            pipeline_health["swarm_debate_status"] = f"FAILED ({res.status_code})"
-    except Exception as e:
-        logging.warning(f"Debate Exception: {e}")
-        pipeline_health["swarm_debate_status"] = f"ERROR ({e})"
-
-    return combined_drafts
-
-
-# --- STEP 4: CONSENSUS SYNTHESIS ---
-
-def call_synthesizer(debate_result: str, raw_payload: str) -> dict:
-    """Synthesizer baut das finale JSON auf Basis der Debatte UND der Roh-Feeds."""
-    api_key = MISTRAL_API_KEY or OPENROUTER_API_KEY or GROQ_API_KEY
-    if not api_key:
-        pipeline_health["synthesizer_status"] = "SKIPPED"
-        return {}
-
-    endpoint = "https://api.mistral.ai/v1/chat/completions" if MISTRAL_API_KEY else "https://openrouter.ai/api/v1/chat/completions"
-    model = "mistral-large-latest" if MISTRAL_API_KEY else "qwen/qwen-2.5-72b-instruct"
-
-    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-
-    prompt = (
-        "Du bist das finale ARGUS GRID Synthese-Modul. Bilde aus dem gemeinsamen Konsens "
-        "und den vorliegenden Nachrichten-Feeds das finale JSON-Objekt.\n"
-        "WICHTIG: Antworte AUSSCHLIESSLICH mit dem puren JSON-Objekt, ohne Markdown!\n"
-        "Nutze die echten Nachrichten, um konkrete Hotspots mit Koordinaten (z.B. Taiwan: 24.0/121.0, Rotes Meer: 14.0/42.0) "
-        "sowie Knotenpunkte für den Kaskaden-Graphen zu extrahieren!\n\n"
-        f"KONSENS & DEBATTE:\n{debate_result[:2500]}\n\n"
-        f"ROH-FEEDS FÜR EXTRAKTION:\n{raw_payload[:2500]}\n\n"
-        "ERFORDERLICHE JSON-STRUKTUR:\n"
-        "{\n"
-        '  "overall_geoscore": int (0-100),\n'
-        '  "geoscore": int (0-100),\n'
-        '  "defcon_level": int (1-5),\n'
-        '  "defcon": int (1-5),\n'
-        '  "ampel_status": "GRÜN" | "GELB" | "ROT",\n'
-        '  "ampel_reason_simple": "Kurze Begründung",\n'
-        '  "daily_executive_summary": "Ausführliche Analyse...",\n'
-        '  "daily_executive_summary_simple": "Einfache Zusammenfassung...",\n'
-        '  "key_takeaways": ["Punkt 1", "Punkt 2", "Punkt 3"],\n'
-        '  "predictive_horizon": [{"timeframe": "30 Tage (Taktisch)", "forecast": "...", "probability": "Hoch/Mittel/Niedrig", "early_warning_indicators": ["..."]}],\n'
-        '  "historical_precedents": [{"event": "...", "period": "...", "similarity": "...", "takeaway": "..."}],\n'
-        '  "conflict_hotspots": [{"name": "...", "lat": float, "lon": float, "lng": float, "intensity": "ROT/GELB", "description": "...", "military_activity": "..."}],\n'
-        '  "graph_network": {"nodes": [{"id": "...", "label": "...", "name": "...", "group": "...", "val": 5}], "edges": [{"from": "...", "to": "...", "source": "...", "target": "...", "label": "..."}]},\n'
-        '  "domestic_policy_matrix": [{"region": "...", "dynamics": "...", "stability": "GELB", "spillover": "..."}],\n'
-        '  "stress_test_scenarios": [{"scenario": "...", "impact": "...", "probability": "...", "mitigation": "..."}]\n'
-        "}"
-    )
-
-    try:
-        res = requests.post(
-            endpoint,
-            headers=headers,
-            json={
-                "model": model,
-                "messages": [{"role": "user", "content": prompt}],
                 "temperature": 0.2,
                 "response_format": {"type": "json_object"} if "mistral" in endpoint else None
             },
             timeout=60
         )
         if res.status_code == 200:
-            content = res.json()["choices"][0]["message"]["content"]
-            parsed_json = repair_and_parse_json(content)
-            pipeline_health["synthesizer_status"] = "SUCCESS"
-            return parsed_json
-        else:
-            logging.warning(f"Synthesizer HTTP Error: {res.status_code}")
-            pipeline_health["synthesizer_status"] = f"FAILED ({res.status_code})"
+            return repair_and_parse_json(res.json()["choices"][0]["message"]["content"])
     except Exception as e:
         logging.warning(f"Synthesizer Exception: {e}")
-        pipeline_health["synthesizer_status"] = f"ERROR ({e})"
 
     return {}
 
 
-# --- STEP 5: REDAKTIONELLER SCHLIFF ---
-
 def call_haiku_refine(data_dict: dict) -> dict:
-    """Claude 3.5 Haiku veredelt die Sprache der einfachen Ansicht."""
     if not ANTHROPIC_API_KEY or not data_dict:
-        pipeline_health["haiku_status"] = "SKIPPED"
         return data_dict
-
-    endpoint = "https://api.anthropic.com/v1/messages"
-    headers = {
-        "x-api-key": ANTHROPIC_API_KEY,
-        "anthropic-version": "2023-06-01",
-        "Content-Type": "application/json"
-    }
 
     exec_summary = data_dict.get("daily_executive_summary", "")
     ampel_reason = data_dict.get("ampel_reason_simple", "")
@@ -575,94 +485,62 @@ def call_haiku_refine(data_dict: dict) -> dict:
         return data_dict
 
     prompt = (
-        "Formuliere die folgenden zwei Texte für ein allgemeines Publikum um. "
-        "Klares Deutsch, flüssig, präzise, frei von KI-Floskeln.\n\n"
-        f"1. Executive Summary:\n{exec_summary}\n\n"
-        f"2. Ampel Begründung:\n{ampel_reason}\n\n"
-        'Antworte im JSON-Format: {"daily_executive_summary_simple": "...", "ampel_reason_simple": "..."}'
+        f"DATUM: {CURRENT_DATE_STR} (JAHR {CURRENT_YEAR}). Formuliere für Laien verständlich:\n\n"
+        f"1. Executive Summary:\n{exec_summary}\n\n2. Ampel Begründung:\n{ampel_reason}\n\n"
+        'JSON: {"daily_executive_summary_simple": "...", "ampel_reason_simple": "..."}'
     )
 
     try:
         res = requests.post(
-            endpoint,
-            headers=headers,
+            "https://api.anthropic.com/v1/messages",
+            headers={"x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "Content-Type": "application/json"},
             json={"model": "claude-3-5-haiku-20241022", "max_tokens": 1000, "messages": [{"role": "user", "content": prompt}]},
             timeout=25
         )
         if res.status_code == 200:
-            raw_content = res.json()["content"][0]["text"]
-            refined = repair_and_parse_json(raw_content)
-            if "daily_executive_summary_simple" in refined:
-                data_dict["daily_executive_summary_simple"] = refined["daily_executive_summary_simple"]
-            if "ampel_reason_simple" in refined:
-                data_dict["ampel_reason_simple"] = refined["ampel_reason_simple"]
-            pipeline_health["haiku_status"] = "SUCCESS"
+            refined = repair_and_parse_json(res.json()["content"][0]["text"])
+            data_dict.update(refined)
     except Exception as e:
-        pipeline_health["haiku_status"] = f"ERROR ({e})"
+        logging.warning(f"Haiku Exception: {e}")
 
     return data_dict
 
 
-# --- MAIN PIPELINE EXECUTION ---
-
 def main():
-    logging.info("=== ARGUS GRID v3.0 Collective Swarm Pipeline Start ===")
-
+    logging.info(f"=== ARGUS GRID v3.0 Start ({CURRENT_DATE_STR}) ===")
     articles = fetch_all_feeds(SOURCES)
 
     final_data = {}
     debate_summary = ""
 
-    if not articles:
-        logging.error("Keine Artikel geladen. Pipeline stoppt.")
-    else:
+    if articles:
         try:
             selected = select_balanced_articles(articles, max_count=100)
             raw_payload = "\n".join([f"[{a['category']} | {a['bias']}] {a['source']}: {a['title']} - {a['summary']}" for a in selected])
 
-            # 1. SWARM BAKER COMMITTEE (Parallele Lage-Analysen)
-            logging.info("Phase 1: Das Kollektiv rührt gemeinsam den Teig (Parallele Sprints von Groq, DeepSeek, Qwen/Grok)...")
             with ThreadPoolExecutor(max_workers=3) as executor:
                 f_groq = executor.submit(baker_groq, raw_payload)
                 f_ds   = executor.submit(baker_deepseek, raw_payload)
                 f_macro = executor.submit(baker_qwen_or_grok, raw_payload)
 
-                draft_groq = f_groq.result()
-                draft_ds   = f_ds.result()
-                draft_macro = f_macro.result()
+                draft_groq, draft_ds, draft_macro = f_groq.result(), f_ds.result(), f_macro.result()
 
-            # 2. DEBATTE & FINGERKLOPFEN (Peer Review)
-            logging.info("Phase 2: Das Fingerklopfen (Kreuzprüfung & Halluzinations-Check)...")
             debate_summary = run_swarm_debate(draft_groq, draft_ds, draft_macro)
-
-            # 3. KONSENS-SYNTHESE (Mistral / Qwen)
-            logging.info("Phase 3: Der Kuchen kommt aus dem Ofen (JSON-Synthese)...")
             synthesized_data = call_synthesizer(debate_summary, raw_payload)
-
-            # 4. REDAKTIONELLER SCHLIFF (Claude Haiku)
-            logging.info("Phase 4: Redaktionelle Veredelung via Claude Haiku...")
             final_data = call_haiku_refine(synthesized_data)
 
         except Exception as e:
-            logging.error(f"Fehler im Schwarm-Kollektiv: {e}")
-            pipeline_health["errors"].append(f"Pipeline Critical Error: {str(e)}")
+            logging.error(f"Fehler im Schwarm: {e}")
 
-    # 5. Schema-Harmonisierung & Absturz-Schutz
-    logging.info("Phase 5: Schema Harmonization & Crash Prevention...")
     final_data = harmonize_and_validate_schema(final_data, debate_summary)
-
-    # 6. Data Sanitization
-    logging.info("Phase 6: Data Sanitization...")
-    sanitized_data = sanitize_data_structure(final_data)
 
     output_path = "data.json"
     try:
         with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(sanitized_data, f, ensure_ascii=False, indent=2)
-        logging.info(f"Pipeline erfolgreich abgeschlossen. Output in '{output_path}' gespeichert.")
+            json.dump(final_data, f, ensure_ascii=False, indent=2)
+        logging.info(f"Pipeline erfolgreich. Speicherung in '{output_path}'.")
     except Exception as e:
-        logging.critical(f"Kritischer Fehler beim Schreiben von {output_path}: {e}")
-        sys.exit(1)
+        logging.critical(f"Schreibfehler: {e}")
 
 
 if __name__ == "__main__":
