@@ -4,7 +4,7 @@ ARGUS GRID v3.0 - Collective Swarm Intelligence Engine Backend
 Kollaboratives Multi-LLM-System ("Kuchenbacken-Architektur"):
 1. Parallele Entwurfserstellung aller KI-Modelle auf der Gesamtlage
 2. Gegenseitiges Peer-Review & Fingerklopfen (Debatte & Korrektur)
-3. Konsens-Synthese mit Robuster Datenweitergabe & Data Sanitization
+3. Konsens-Synthese mit Robuster Datenweitergabe, ID-Harmonisierung & Data Sanitization
 """
 
 import os
@@ -168,47 +168,43 @@ def select_balanced_articles(articles: list, max_count: int = 120) -> list:
 def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
     """
     ABSTURZ-SCHUTZ & SCHEMA-GARANTIE:
-    Verbindet Aliase (geoscore, defcon, lat/lng, source/target), 
-    damit index.html die Daten fehlerfrei anzeigt.
+    Harmonisiert Keys, korrigiert Graph-ID-Mismatches und garantiert
+    das Vorhandensein aller Objektpfade für index.html.
     """
     if not isinstance(data, dict):
         data = {}
 
-    if "ampel_status" not in data or not data["ampel_status"]:
-        data["ampel_status"] = "GELB"
-    if "ampel_reason_simple" not in data or not data["ampel_reason_simple"]:
-        data["ampel_reason_simple"] = "Erhöhte allgemeine Volatilität im geopolitischen Raum."
-
-    if "daily_executive_summary" not in data or not data["daily_executive_summary"]:
-        data["daily_executive_summary"] = "Für diesen Durchlauf liegt kein vollständiges Briefing vor."
-    if "daily_executive_summary_simple" not in data or not data["daily_executive_summary_simple"]:
-        data["daily_executive_summary_simple"] = "Das System verarbeitet aktuelle Lagedaten."
+    # 1. Grundlegende Texte & KPIs
+    data["ampel_status"] = data.get("ampel_status") or "GELB"
+    data["ampel_reason_simple"] = data.get("ampel_reason_simple") or "Erhöhte geopolitische Spannungen."
+    data["daily_executive_summary"] = data.get("daily_executive_summary") or "Lagedaten werden verarbeitet."
+    data["daily_executive_summary_simple"] = data.get("daily_executive_summary_simple") or "Lagedaten werden verarbeitet."
 
     geoscore = data.get("overall_geoscore") or data.get("geoscore") or 50
     defcon = data.get("defcon_level") or data.get("defcon") or 3
 
     try:
-        val = int(geoscore)
-        data["overall_geoscore"] = val
-        data["geoscore"] = val
+        data["overall_geoscore"] = int(geoscore)
+        data["geoscore"] = int(geoscore)
     except (ValueError, TypeError):
         data["overall_geoscore"] = 50
         data["geoscore"] = 50
 
     try:
-        val = int(defcon)
-        data["defcon_level"] = val
-        data["defcon"] = val
+        data["defcon_level"] = int(defcon)
+        data["defcon"] = int(defcon)
     except (ValueError, TypeError):
         data["defcon_level"] = 3
         data["defcon"] = 3
 
+    # 2. Spieltheorie / Debatte
     ds_clean = clean_expert_input(debate_summary) if debate_summary else ""
     text_content = ds_clean if ds_clean else "Keine spezifische Spieltheorie-Debatte erfasst."
     data["game_theory_analysis"] = data.get("game_theory_analysis") or text_content
     data["deepseek_analysis"] = data.get("deepseek_analysis") or text_content
     data["game_theory"] = data.get("game_theory") or text_content
 
+    # 3. Hotspots (Leaflet Lat/Lng & Lat/Lon Aliase)
     hotspots = data.get("conflict_hotspots", [])
     if isinstance(hotspots, list):
         for h in hotspots:
@@ -220,42 +216,55 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
     else:
         data["conflict_hotspots"] = []
 
+    # 4. Graph Network (Fix für Force-Graph ID-Mismatch)
     gn = data.get("graph_network", {})
     if isinstance(gn, dict):
         nodes = gn.get("nodes", [])
         edges = gn.get("edges", gn.get("links", []))
         
+        valid_node_ids = set()
         if isinstance(nodes, list):
             for n in nodes:
                 if isinstance(n, dict):
-                    if "name" not in n and "label" in n:
-                        n["name"] = n["label"]
-                    if "label" not in n and "name" in n:
-                        n["label"] = n["name"]
+                    node_id = str(n.get("id", n.get("name", n.get("label", "")))).strip()
+                    n["id"] = node_id
+                    n["name"] = n.get("name") or n.get("label") or node_id
+                    n["label"] = n.get("label") or n["name"]
+                    if node_id:
+                        valid_node_ids.add(node_id)
         else:
             nodes = []
         
+        valid_edges = []
         if isinstance(edges, list):
             for e in edges:
                 if isinstance(e, dict):
-                    if "source" not in e and "from" in e:
-                        e["source"] = e["from"]
-                    if "from" not in e and "source" in e:
-                        e["from"] = e["source"]
-                    if "target" not in e and "to" in e:
-                        e["target"] = e["to"]
-                    if "to" not in e and "target" in e:
-                        e["to"] = e["target"]
-        else:
-            edges = []
+                    src = str(e.get("from") or e.get("source", "")).strip()
+                    tgt = str(e.get("to") or e.get("target", "")).strip()
+                    
+                    # Garantieren, dass source/target und from/to übereinstimmen
+                    e["from"] = src
+                    e["to"] = tgt
+                    e["source"] = src
+                    e["target"] = tgt
+                    
+                    if src and tgt:
+                        valid_edges.append(e)
         
-        data["graph_network"] = {"nodes": nodes, "edges": edges, "links": edges}
+        data["graph_network"] = {"nodes": nodes, "edges": valid_edges, "links": valid_edges}
     else:
         data["graph_network"] = {"nodes": [], "edges": [], "links": []}
 
-    for array_key in ["predictive_horizon", "historical_precedents", "domestic_policy_matrix", "stress_test_scenarios", "key_takeaways"]:
+    # 5. Absicherung aller sonstigen Arrays & Unterobjekte
+    for array_key in ["predictive_horizon", "historical_precedents", "domestic_policy_matrix", "stress_test_scenarios", "key_takeaways", "game_theory_matrices"]:
         if array_key not in data or not isinstance(data[array_key], list):
             data[array_key] = []
+
+    if "equity_rotation" not in data or not isinstance(data["equity_rotation"], dict):
+        data["equity_rotation"] = {"buys": [], "sells": []}
+
+    if "digital_sovereignty_index" not in data or not isinstance(data["digital_sovereignty_index"], dict):
+        data["digital_sovereignty_index"] = {"score": 50, "status": "Neutral"}
 
     data["timestamp"] = datetime.now(timezone.utc).isoformat()
     data["pipeline_health"] = pipeline_health
@@ -363,30 +372,33 @@ def baker_groq(payload: str) -> str:
 
 
 def baker_deepseek(payload: str) -> str:
-    """DeepSeek-R1 - Strategisch, spieltheoretisch, tiefgründig."""
+    """DeepSeek-R1 / V3 - Strategisch, spieltheoretisch, tiefgründig."""
     if not DEEPSEEK_API_KEY:
         return ""
-    try:
-        res = requests.post(
-            "https://api.deepseek.com/chat/completions",
-            headers={"Authorization": f"Bearer {DEEPSEEK_API_KEY}", "Content-Type": "application/json"},
-            json={
-                "model": "deepseek-reasoner",
-                "messages": [{
-                    "role": "user",
-                    "content": f"Analysiere die Gesamtlage aus strategischer und spieltheoretischer Sicht. Welche Akteure befinden sich in Zugzwängen, wo drohen Eskalationen?\n\nFEEDS:\n{payload[:3000]}"
-                }],
-                "max_tokens": 1800
-            },
-            timeout=45
-        )
-        if res.status_code == 200:
-            pipeline_health["bakers_active"].append("DeepSeek-R1")
-            return clean_expert_input(res.json()["choices"][0]["message"]["content"])
-        else:
-            logging.warning(f"DeepSeek Baker API Status: {res.status_code}")
-    except Exception as e:
-        logging.warning(f"DeepSeek Baker Fehler: {e}")
+    
+    for model_name in ["deepseek-reasoner", "deepseek-chat"]:
+        try:
+            res = requests.post(
+                "https://api.deepseek.com/chat/completions",
+                headers={"Authorization": f"Bearer {DEEPSEEK_API_KEY}", "Content-Type": "application/json"},
+                json={
+                    "model": model_name,
+                    "messages": [{
+                        "role": "user",
+                        "content": f"Analysiere die Gesamtlage aus strategischer und spieltheoretischer Sicht. Welche Akteure befinden sich in Zugzwängen, wo drohen Eskalationen?\n\nFEEDS:\n{payload[:2500]}"
+                    }],
+                    "max_tokens": 1800
+                },
+                timeout=45
+            )
+            if res.status_code == 200:
+                pipeline_health["bakers_active"].append(f"DeepSeek ({model_name})")
+                return clean_expert_input(res.json()["choices"][0]["message"]["content"])
+            else:
+                logging.warning(f"DeepSeek ({model_name}) Status: {res.status_code}")
+        except Exception as e:
+            logging.warning(f"DeepSeek Fehler ({model_name}): {e}")
+            
     return ""
 
 
@@ -427,10 +439,8 @@ def baker_qwen_or_grok(payload: str) -> str:
 
 def run_swarm_debate(draft_groq: str, draft_deepseek: str, draft_macro: str) -> str:
     """FÜHRT DIE KREUZPRÜFUNG DURCH ('Fingerklopfen')."""
-    # Kombinierte Entwürfe als absoluter Sicherheits-Fallback
     combined_drafts = f"ENTWURF GROQ/OSINT:\n{draft_groq}\n\nENTWURF DEEPSEEK:\n{draft_deepseek}\n\nENTWURF MACRO:\n{draft_macro}".strip()
     
-    # Nutze bevorzugt Mistral oder OpenRouter für die Debatte, um Groq-Rate-Limits zu vermeiden
     api_key = MISTRAL_API_KEY or OPENROUTER_API_KEY or ANTHROPIC_API_KEY or GROQ_API_KEY
     if not api_key or not combined_drafts:
         pipeline_health["swarm_debate_status"] = "SKIPPED (Fallback auf Entwürfe)"
@@ -471,7 +481,6 @@ def run_swarm_debate(draft_groq: str, draft_deepseek: str, draft_macro: str) -> 
         logging.warning(f"Debate Exception: {e}")
         pipeline_health["swarm_debate_status"] = f"ERROR ({e})"
 
-    # FIX: Wenn die Debatte fehlschlägt, NIEMALS einen Dummy-Satz zurückgeben, sondern die echten Entwürfe weiterreichen!
     return combined_drafts
 
 
@@ -638,11 +647,11 @@ def main():
             logging.error(f"Fehler im Schwarm-Kollektiv: {e}")
             pipeline_health["errors"].append(f"Pipeline Critical Error: {str(e)}")
 
-    # 5. Schema-Harmonisierung & Absturz-Schutz (Garantiert valides JSON für index.html)
+    # 5. Schema-Harmonisierung & Absturz-Schutz
     logging.info("Phase 5: Schema Harmonization & Crash Prevention...")
     final_data = harmonize_and_validate_schema(final_data, debate_summary)
 
-    # 6. Data Sanitization (Markdown Stripping)
+    # 6. Data Sanitization
     logging.info("Phase 6: Data Sanitization...")
     sanitized_data = sanitize_data_structure(final_data)
 
