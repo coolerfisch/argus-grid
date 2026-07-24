@@ -1,198 +1,344 @@
 {
-  "overall_geoscore": 68,
+  "overall_geoscore": 72,
+  "geoscore": 72,
   "defcon_level": 3,
+  "defcon": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte politische Spannungen in Deutschland und den USA, internationale Konflikte und institutionelle Krisen erfordern erhöhte Aufmerksamkeit.",
-  "daily_executive_summary": "Die aktuelle Nachrichtenlage zeigt eine Mischung aus innenpolitischen Turbulenzen in Deutschland, insbesondere im Zusammenhang mit der Kabinettsumbildung der Bundesregierung und parteipolitischen Auseinandersetzungen, sowie internationalen Spannungen. In den USA dominieren juristische und politische Entwicklungen rund um Ex-Präsident Donald Trump die Schlagzeilen, während gleichzeitig geopolitische Konflikte wie der Austritt Venezuelas aus dem Internationalen Strafgerichtshof und militärische Spannungen zwischen den USA und dem Iran eskalieren. Die Entlassung des Chefanklägers des Internationalen Strafgerichtshofs wegen Vorwürfen sexuellen Fehlverhaltens unterstreicht zudem eine Krise internationaler Institutionen. Wirtschaftliche Warnungen, wie die Verdopplung der Kosten für Gasheizungen in Deutschland, deuten auf potenzielle soziale und politische Verwerfungen hin. Insgesamt ergibt sich ein Bild erhöhter Volatilität und Unsicherheit, das sowohl nationale als auch internationale Stabilität beeinträchtigen könnte.",
-  "daily_executive_summary_simple": "Politische Unsicherheiten in Deutschland und den USA, internationale Konflikte und Probleme bei globalen Institutionen führen zu einer angespannten Lage. Wirtschaftliche Warnungen verschärfen die Situation zusätzlich.",
+  "ampel_reason_simple": "Erhöhte geopolitische Spannungen mit regionalen Eskalationsrisiken, aber keine unmittelbare globale Bedrohung.",
+  "daily_executive_summary": "Die globale Sicherheitslage bleibt angespannt, jedoch ohne akute Eskalation zu einem großflächigen Konflikt. Regional konzentrieren sich die Spannungen auf Osteuropa (Ukraine-Konflikt), den Nahen Osten (Israel-Hamas-Krieg, Iran-Israel-Dynamik) und Ostasien (Taiwan-Frage, Nordkorea). Militärische Aktivitäten in diesen Regionen zeigen keine signifikante Deeskalation, aber auch keine unmittelbare Ausweitung. Wirtschaftliche und diplomatische Maßnahmen (Sanktionen, Waffenlieferungen) halten die Lage in einem labilen Gleichgewicht. Cyberangriffe und Desinformationskampagnen nehmen zu, was die digitale Souveränität vieler Staaten herausfordert. Die Wahrscheinlichkeit einer direkten militärischen Konfrontation zwischen Großmächten bleibt niedrig, jedoch sind lokale Eskalationen mit globalen Auswirkungen nicht auszuschließen.",
+  "daily_executive_summary_simple": "Die Welt ist aktuell nicht in einem großen Krieg, aber es gibt mehrere gefährliche Konflikte. Besonders kritisch sind die Ukraine, der Nahe Osten und Ostasien. Die Lage ist unsicher, aber eine direkte Konfrontation zwischen den USA, China oder Russland gilt als unwahrscheinlich.",
   "key_takeaways": [
-    "Die Kabinettsumbildung in Deutschland führt zu innerparteilichen Spannungen und öffentlicher Kritik, was die Regierungsstabilität beeinträchtigen könnte.",
-    "Juristische Auseinandersetzungen um Donald Trump in den USA und dessen aggressive Rhetorik erhöhen die politische Polarisierung.",
-    "Internationale Konflikte, wie der Austritt Venezuelas aus dem Internationalen Strafgerichtshof und militärische Spannungen zwischen den USA und dem Iran, bergen Eskalationsrisiken.",
-    "Institutionelle Krisen, wie die Entlassung des ICC-Chefanklägers, schwächen das Vertrauen in globale Rechtssysteme."
+    "Regionale Konflikte (Ukraine, Naher Osten, Taiwan) dominieren die Sicherheitslage, ohne dass eine globale Eskalation unmittelbar droht.",
+    "Militärische Aufrüstung und hybride Kriegsführung (Cyber, Desinformation) nehmen zu und destabilisieren die internationale Ordnung.",
+    "Diplomatische und wirtschaftliche Gegenmaßnahmen (Sanktionen, Bündnisse) verhindern derzeit eine weitere Verschärfung, lösen die Konflikte aber nicht."
   ],
   "predictive_horizon": [
     {
-      "timeframe": "30-90 Tage",
-      "forecast": "Die politischen Spannungen in Deutschland könnten zu einer weiteren Erosion des öffentlichen Vertrauens in die Regierung führen, insbesondere wenn die Kabinettsumbildung als chaotisch wahrgenommen wird. In den USA könnte die juristische Verfolgung Trumps zu verstärkten sozialen Unruhen oder einer Radikalisierung seiner Anhänger führen. Internationale Konflikte, insbesondere zwischen den USA und dem Iran, könnten sich weiter zuspitzen, falls keine diplomatischen Lösungen gefunden werden.",
-      "probability": "Hoch",
+      "timeframe": "30 Tage (Taktisch)",
+      "forecast": "Die aktuellen Konfliktherde bleiben bestehen, mit moderatem Risiko einer lokalen Eskalation (z. B. israelische Militäroperation im Libanon, ukrainische Gegenoffensive). Eine direkte Konfrontation zwischen NATO und Russland oder USA und China gilt als unwahrscheinlich, aber nicht ausgeschlossen. Cyberangriffe und Desinformationskampagnen werden zunehmen.",
+      "probability": "Mittel",
       "early_warning_indicators": [
-        "Zunahme gewalttätiger Proteste oder politisch motivierter Angriffe in den USA.",
-        "Weitere Rücktritte oder öffentliche Kritik an der deutschen Bundesregierung.",
-        "Militärische Provokationen oder Cyberangriffe zwischen den USA und dem Iran."
+        "Zunahme von Artillerie- und Drohnenangriffen in der Ukraine",
+        "Iranische Raketenangriffe auf Israel oder US-Stützpunkte im Nahen Osten",
+        "Chinesische Militärübungen in der Taiwanstraße mit Blockade-Szenarien",
+        "Erfolgreiche Cyberangriffe auf kritische Infrastruktur (Energie, Finanzen)"
       ]
     }
   ],
   "historical_precedents": [
     {
-      "event": "Politische Polarisierung und institutionelle Krisen in den USA (z. B. Watergate-Skandal, 2020-Wahl und Sturm auf das Kapitol)",
-      "period": "1970er-Jahre, 2020-2021",
-      "similarity": "Hoch (juristische Verfolgung eines ehemaligen Präsidenten, gesellschaftliche Spaltung)",
-      "takeaway": "Historische Präzedenzfälle zeigen, dass juristische Verfahren gegen hochrangige Politiker zu langfristigen politischen und sozialen Verwerfungen führen können, insbesondere wenn sie als politisch motiviert wahrgenommen werden."
+      "event": "Kubakrise (1962)",
+      "period": "13 Tage (Oktober 1962)",
+      "similarity": "Hohe Spannungen zwischen Großmächten mit nuklearer Bedrohung, aber letztliche Deeskalation durch Diplomatie. Unterschied: Keine direkte militärische Konfrontation, sondern Stellvertreterkriege.",
+      "takeaway": "Diplomatische Kanäle und klare rote Linien können eine Eskalation verhindern, selbst in hochriskanten Phasen."
     },
     {
-      "event": "Kabinettsumbildungen und Regierungsinstabilität in Deutschland (z. B. Rücktritt von Ministern während der Flüchtlingskrise 2015-2018)",
-      "period": "2015-2018",
-      "similarity": "Mittel (personelle Veränderungen, öffentliche Kritik)",
-      "takeaway": "Kabinettsumbildungen in Krisenzeiten können die Handlungsfähigkeit der Regierung schwächen und zu einem Vertrauensverlust in der Bevölkerung führen."
+      "event": "Vorkriegszeit Erster Weltkrieg (1914)",
+      "period": "Juli-Krise 1914",
+      "similarity": "Komplexes Bündnissystem und lokale Konflikte (Attentat von Sarajevo) führen zu globaler Eskalation. Unterschied: Aktuell keine vergleichbare Bündnisautomatik, aber ähnliche Risiken durch Fehleinschätzungen.",
+      "takeaway": "Fehleinschätzungen und starre Bündnisverpflichtungen können lokale Konflikte zu globalen Kriegen ausweiten."
     }
   ],
   "conflict_hotspots": [
     {
-      "name": "USA-Iran Spannungen",
-      "lat": 32.4279,
-      "lon": 53.688,
-      "intensity": "ROT",
-      "description": "Militärische Auseinandersetzungen und gegenseitige Angriffe im Persischen Golf, verbunden mit diplomatischen Spannungen.",
-      "military_activity": "Luft- und Seestreitkräfte beider Seiten in erhöhter Alarmbereitschaft; Cyberangriffe und Sabotageakte."
-    },
-    {
-      "name": "Ukraine-Konflikt (Russland)",
+      "name": "Ukraine (Ostfront)",
       "lat": 48.3794,
       "lon": 31.1656,
+      "lng": 31.1656,
       "intensity": "ROT",
-      "description": "Anhaltende militärische Angriffe Russlands auf die Ukraine, einschließlich gezielter Schläge gegen zivile und militärische Infrastruktur.",
-      "military_activity": "Ballistische Raketenangriffe, Drohnenangriffe, Bodentruppenbewegungen."
+      "description": "Anhaltende Kämpfe um Donezk und Luhansk mit hohen Verlusten auf beiden Seiten. Russische Truppen versuchen, Geländegewinne zu konsolidieren, während die Ukraine auf westliche Waffenlieferungen angewiesen ist.",
+      "military_activity": "Artillerie- und Drohnenangriffe, Minenkrieg, begrenzte Panzergefechte."
     },
     {
-      "name": "Venezuela (Austritt aus dem ICC)",
-      "lat": 6.4238,
-      "lon": -66.5897,
+      "name": "Israel-Gaza-Grenze",
+      "lat": 31.5,
+      "lon": 34.4667,
+      "lng": 34.4667,
+      "intensity": "ROT",
+      "description": "Anhaltende Raketenangriffe aus Gaza und israelische Luftschläge. Risiko einer Ausweitung auf den Libanon (Hisbollah) oder den Iran.",
+      "military_activity": "Raketenbeschuss, Luftangriffe, Spezialeinsätze."
+    },
+    {
+      "name": "Taiwanstraße",
+      "lat": 23.6978,
+      "lon": 120.9605,
+      "lng": 120.9605,
       "intensity": "GELB",
-      "description": "Venezuela tritt aus dem Internationalen Strafgerichtshof aus, was als Reaktion auf mögliche Ermittlungen wegen Menschenrechtsverletzungen gewertet wird.",
-      "military_activity": "Keine direkten militärischen Aktivitäten, aber erhöhte innenpolitische Repression."
+      "description": "Chinesische Militärübungen und US-Marinepräsenz erhöhen die Spannungen. Keine unmittelbare Invasion Taiwans, aber Risiko von Zwischenfällen.",
+      "military_activity": "Marine- und Luftmanöver, Aufklärungseinsätze."
+    },
+    {
+      "name": "Rotes Meer (Huthi-Angriffe)",
+      "lat": 15.0,
+      "lon": 42.0,
+      "lng": 42.0,
+      "intensity": "GELB",
+      "description": "Huthi-Rebellen greifen Handelsschiffe an, was die Schifffahrtsrouten gefährdet. US-geführte Koalition patrouilliert zur Sicherung.",
+      "military_activity": "Raketen- und Drohnenangriffe auf Schiffe, Marineeinsätze."
     }
   ],
   "graph_network": {
     "nodes": [
       {
-        "id": "DE-GOV",
-        "label": "Deutsche Bundesregierung",
-        "group": "Politik",
-        "val": 8
+        "id": "USA",
+        "label": "USA",
+        "name": "Vereinigte Staaten",
+        "group": "Großmacht",
+        "val": 10
       },
       {
-        "id": "US-TRUMP",
-        "label": "Donald Trump",
-        "group": "Politik",
+        "id": "China",
+        "label": "China",
+        "name": "Volksrepublik China",
+        "group": "Großmacht",
         "val": 9
       },
       {
-        "id": "ICC",
-        "label": "Internationaler Strafgerichtshof",
-        "group": "Institutionen",
-        "val": 7
-      },
-      {
-        "id": "USA-IRAN",
-        "label": "USA-Iran Konflikt",
-        "group": "Konflikte",
+        "id": "Russland",
+        "label": "Russland",
+        "name": "Russische Föderation",
+        "group": "Großmacht",
         "val": 8
       },
       {
-        "id": "VENEZUELA",
-        "label": "Venezuela",
-        "group": "Politik",
-        "val": 6
-      },
-      {
-        "id": "UKRAINE-RU",
-        "label": "Ukraine-Russland Krieg",
-        "group": "Konflikte",
-        "val": 9
-      },
-      {
-        "id": "DE-CDU",
-        "label": "CDU/CSU",
-        "group": "Politik",
+        "id": "Ukraine",
+        "label": "Ukraine",
+        "name": "Ukraine",
+        "group": "Konfliktpartei",
         "val": 7
       },
       {
-        "id": "DE-FDP",
-        "label": "FDP",
-        "group": "Politik",
+        "id": "Israel",
+        "label": "Israel",
+        "name": "Israel",
+        "group": "Konfliktpartei",
         "val": 6
       },
       {
-        "id": "US-DEM",
-        "label": "US-Demokraten",
-        "group": "Politik",
-        "val": 7
+        "id": "Iran",
+        "label": "Iran",
+        "name": "Iran",
+        "group": "Regionalmacht",
+        "val": 6
       },
       {
-        "id": "US-REP",
-        "label": "US-Republikaner",
-        "group": "Politik",
+        "id": "NATO",
+        "label": "NATO",
+        "name": "NATO",
+        "group": "Bündnis",
         "val": 8
+      },
+      {
+        "id": "Taiwan",
+        "label": "Taiwan",
+        "name": "Taiwan",
+        "group": "Konfliktpartei",
+        "val": 5
       }
     ],
     "edges": [
       {
-        "from": "DE-GOV",
-        "to": "DE-CDU",
-        "label": "Kabinettsumbildung"
+        "from": "USA",
+        "to": "Ukraine",
+        "source": "USA",
+        "target": "Ukraine",
+        "label": "Militärhilfe, Sanktionen gegen Russland"
       },
       {
-        "from": "DE-GOV",
-        "to": "DE-FDP",
-        "label": "Kritik"
+        "from": "USA",
+        "to": "Israel",
+        "source": "USA",
+        "target": "Israel",
+        "label": "Militärhilfe, diplomatische Unterstützung"
       },
       {
-        "from": "US-TRUMP",
-        "to": "US-DEM",
-        "label": "Juristische Verfolgung"
+        "from": "USA",
+        "to": "China",
+        "source": "USA",
+        "target": "China",
+        "label": "Handelskonflikt, Taiwan-Frage"
       },
       {
-        "from": "US-TRUMP",
-        "to": "US-REP",
-        "label": "Politische Unterstützung"
+        "from": "China",
+        "to": "Russland",
+        "source": "China",
+        "target": "Russland",
+        "label": "Wirtschaftliche Zusammenarbeit, diplomatische Unterstützung"
       },
       {
-        "from": "USA-IRAN",
-        "to": "ICC",
-        "label": "Diplomatische Spannungen"
+        "from": "Russland",
+        "to": "Ukraine",
+        "source": "Russland",
+        "target": "Ukraine",
+        "label": "Krieg, territoriale Ansprüche"
       },
       {
-        "from": "VENEZUELA",
-        "to": "ICC",
-        "label": "Austritt"
+        "from": "Iran",
+        "to": "Israel",
+        "source": "Iran",
+        "target": "Israel",
+        "label": "Feindseligkeiten, Unterstützung für Hisbollah/Hamas"
       },
       {
-        "from": "UKRAINE-RU",
-        "to": "ICC",
-        "label": "Kriegsverbrechen"
+        "from": "NATO",
+        "to": "Russland",
+        "source": "NATO",
+        "target": "Russland",
+        "label": "Osterweiterung, Militärübungen"
       },
       {
-        "from": "DE-CDU",
-        "to": "DE-FDP",
-        "label": "Koalitionsstreit"
+        "from": "China",
+        "to": "Taiwan",
+        "source": "China",
+        "target": "Taiwan",
+        "label": "Territoriale Ansprüche, Militärübungen"
+      }
+    ],
+    "links": [
+      {
+        "from": "USA",
+        "to": "Ukraine",
+        "source": "USA",
+        "target": "Ukraine",
+        "label": "Militärhilfe, Sanktionen gegen Russland"
+      },
+      {
+        "from": "USA",
+        "to": "Israel",
+        "source": "USA",
+        "target": "Israel",
+        "label": "Militärhilfe, diplomatische Unterstützung"
+      },
+      {
+        "from": "USA",
+        "to": "China",
+        "source": "USA",
+        "target": "China",
+        "label": "Handelskonflikt, Taiwan-Frage"
+      },
+      {
+        "from": "China",
+        "to": "Russland",
+        "source": "China",
+        "target": "Russland",
+        "label": "Wirtschaftliche Zusammenarbeit, diplomatische Unterstützung"
+      },
+      {
+        "from": "Russland",
+        "to": "Ukraine",
+        "source": "Russland",
+        "target": "Ukraine",
+        "label": "Krieg, territoriale Ansprüche"
+      },
+      {
+        "from": "Iran",
+        "to": "Israel",
+        "source": "Iran",
+        "target": "Israel",
+        "label": "Feindseligkeiten, Unterstützung für Hisbollah/Hamas"
+      },
+      {
+        "from": "NATO",
+        "to": "Russland",
+        "source": "NATO",
+        "target": "Russland",
+        "label": "Osterweiterung, Militärübungen"
+      },
+      {
+        "from": "China",
+        "to": "Taiwan",
+        "source": "China",
+        "target": "Taiwan",
+        "label": "Territoriale Ansprüche, Militärübungen"
       }
     ]
   },
-  "game_theory_matrices": [],
-  "domestic_policy_matrix": [],
-  "stress_test_scenarios": [],
+  "domestic_policy_matrix": [
+    {
+      "region": "Europa",
+      "dynamics": "Zunehmende Militärhaushalte, aber politische Fragmentierung (z. B. Ungarn, Slowakei). Energieabhängigkeit von Russland reduziert, aber wirtschaftliche Belastungen durch Sanktionen.",
+      "stability": "GELB",
+      "spillover": "Ukraine-Krieg führt zu Migration und wirtschaftlicher Unsicherheit, aber keine unmittelbare Destabilisierung."
+    },
+    {
+      "region": "Naher Osten",
+      "dynamics": "Instabilität durch Israel-Hamas-Krieg, iranische Einflussnahme und schwache Staaten (Libanon, Jemen). Wirtschaftliche Krisen verschärfen soziale Spannungen.",
+      "stability": "ROT",
+      "spillover": "Risiko von Flüchtlingsbewegungen nach Europa und regionalen Kriegen (z. B. Israel-Iran)."
+    },
+    {
+      "region": "Ostasien",
+      "dynamics": "Militärische Aufrüstung (China, Nordkorea), aber wirtschaftliche Verflechtungen dämpfen Eskalationsrisiko. Taiwan-Frage bleibt zentraler Konfliktpunkt.",
+      "stability": "GELB",
+      "spillover": "Handelskonflikte und militärische Zwischenfälle könnten globale Lieferketten stören."
+    }
+  ],
+  "stress_test_scenarios": [
+    {
+      "scenario": "Russischer Sieg in der Ukraine mit NATO-Intervention",
+      "impact": "Direkte Konfrontation NATO-Russland, nukleare Drohungen, globale Wirtschaftskrise.",
+      "probability": "Niedrig",
+      "mitigation": "Diplomatische Deeskalation, klare rote Linien, wirtschaftliche Vorbereitung."
+    },
+    {
+      "scenario": "Israelischer Angriff auf iranische Atomanlagen",
+      "impact": "Regionaler Krieg (Iran, Israel, Hisbollah), Ölpreisschock, globale Rezession.",
+      "probability": "Mittel",
+      "mitigation": "Diplomatischer Druck, Sicherheitsgarantien für Israel, Vorbereitung auf Ölpreisschocks."
+    },
+    {
+      "scenario": "Chinesische Blockade Taiwans",
+      "impact": "Handelskrieg, Unterbrechung von Halbleiterlieferketten, militärische Eskalation mit USA.",
+      "probability": "Mittel",
+      "mitigation": "Wirtschaftliche Diversifizierung, militärische Abschreckung, diplomatische Verhandlungen."
+    }
+  ],
   "equity_rotation": {
-    "buys": [],
-    "sells": []
+    "buys": [
+      {
+        "sector": "Rüstung",
+        "reason": "Erhöhte Militärhaushalte und anhaltende Konflikte stützen die Nachfrage."
+      },
+      {
+        "sector": "Energie",
+        "reason": "Geopolitische Risiken im Nahen Osten und Europa erhöhen die Volatilität der Öl- und Gaspreise."
+      },
+      {
+        "sector": "Cybersicherheit",
+        "reason": "Zunahme von Cyberangriffen und staatlich geförderter Hacking-Aktivitäten."
+      }
+    ],
+    "sells": [
+      {
+        "sector": "Luxusgüter",
+        "reason": "Wirtschaftliche Unsicherheit in China und Europa dämpft die Nachfrage."
+      },
+      {
+        "sector": "Reisebranche",
+        "reason": "Geopolitische Risiken und wirtschaftliche Belastungen reduzieren die Reisebereitschaft."
+      }
+    ]
   },
   "digital_sovereignty_index": {
     "score": 65,
-    "status": "Mittel: Erhöhte Abhängigkeit von internationalen Plattformen und Technologien, aber erste Ansätze zur Stärkung der digitalen Souveränität erkennbar."
+    "status": "Eingeschränkt. Zunehmende Abhängigkeit von ausländischer Technologie (Halbleiter, Cloud-Dienste) und wachsende Cyberbedrohungen gefährden die digitale Souveränität vieler Staaten."
   },
-  "timestamp": "2026-07-24T22:36:23.958564+00:00",
+  "timestamp": "2026-07-24T23:09:13.994646+00:00",
+  "game_theory_analysis": "Konsens-Debatte mit reduzierten Daten durchgeführt.",
+  "deepseek_analysis": "Konsens-Debatte mit reduzierten Daten durchgeführt.",
+  "game_theory": "Konsens-Debatte mit reduzierten Daten durchgeführt.",
   "pipeline_health": {
-    "timestamp": "2026-07-24T22:35:38.119636+00:00",
+    "timestamp": "2026-07-24T23:07:19.571746+00:00",
     "feeds_total": 230,
     "feeds_successful": 117,
     "feeds_failed": 113,
-    "groq_status": "FAILED (413)",
-    "deepseek_status": "FAILED (400)",
+    "bakers_active": [
+      "Groq (Llama-3.3)",
+      "Swarm-Partner (qwen-2.5-72b-instruct)"
+    ],
+    "swarm_debate_status": "PENDING",
     "synthesizer_status": "SUCCESS",
-    "haiku_status": "FAILED (404)",
-    "errors": [
-      "Groq API Error: 413",
-      "DeepSeek API Error: 400"
-    ]
+    "haiku_status": "PENDING",
+    "errors": []
   }
 }
