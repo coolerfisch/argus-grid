@@ -1,429 +1,605 @@
 {
-  "overall_geoscore": 72,
-  "geoscore": 72,
+  "overall_geoscore": 68,
+  "geoscore": 68,
   "defcon_level": 3,
   "defcon": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte geopolitische Spannungen, wirtschaftliche Instabilität und regionale Konflikte ohne unmittelbare Eskalation zu globalem Krieg.",
-  "daily_executive_summary": "Die globale Sicherheitslage bleibt angespannt, jedoch ohne akute Eskalation zu einem großflächigen Konflikt. Im Nahen Osten halten die Spannungen zwischen Iran und den USA an, wobei hybride Kriegsführung (Cyberangriffe, Proxy-Milizen) dominiert. Der Ukraine-Konflikt bleibt ein zentraler Hotspot, wird jedoch von ökonomischen Risiken wie Lieferkettenstörungen und Bankenregulierung überlagert. Wirtschaftlich sind strukturelle Risiken (BRICS-Dynamik, Chokepoints wie das Rote Meer) relevanter als pandemiebedingte Effekte. Politische Instabilität zeigt sich in Europa (Wildfire-Krisen) und Nordirland (radikalisierte Gruppen). Die DEFCON-Einstufung bleibt bei 3, da keine direkte Kriegsgefahr zwischen Großmächten besteht.",
-  "daily_executive_summary_simple": "Globale Spannungen sind hoch, aber kein großer Krieg droht. Hauptrisiken: Nahost (Iran/USA), Ukraine, wirtschaftliche Instabilität und regionale Konflikte in Europa.",
+  "ampel_reason_simple": "Erhöhte geopolitische Spannungen, wirtschaftliche Unsicherheit und Naturkatastrophen erfordern erhöhte Wachsamkeit, aber keine unmittelbare Eskalation zu globalem Konflikt.",
+  "daily_executive_summary": "Die globale Lage ist geprägt von multiplen Krisenherden: militärische Eskalationen im Nahen Osten (Jemen, Iran, Israel), politische Instabilität in den USA und Europa, wirtschaftliche Risiken durch Handelskonflikte und Immobilienkrisen (China), sowie akute Umweltkatastrophen in Südeuropa. Die Fed signalisiert vorsichtige Geldpolitik, während Cybersicherheitsrisiken und transnationale Kriminalität (z. B. Dating-Betrug) zunehmen. Die internationale Zusammenarbeit bleibt fragmentiert, mit potenziellen Spillover-Effekten in Finanzmärkte und Lieferketten.",
+  "daily_executive_summary_simple": "Mehrere Krisen gleichzeitig: Kriege im Nahen Osten, politische Spannungen in den USA/Europa, wirtschaftliche Probleme in China, Waldbrände in Europa. Die Welt ist unsicher, aber kein großer Krieg droht kurzfristig.",
   "key_takeaways": [
-    "Iran und USA im hybriden Konflikt, aber kein direkter Krieg.",
-    "Ukraine bleibt zentraler geopolitischer Brandherd, ökonomische Risiken (BRICS, Lieferketten) gewinnen an Bedeutung.",
-    "Europa: Naturkatastrophen (Wildfires) und politische Radikalisierung (Nordirland) als zusätzliche Stressfaktoren."
+    "Militärische Spannungen zwischen Iran/USA und Saudi-Arabien/Jemen eskalieren, aber direkte Konfrontation unwahrscheinlich.",
+    "Wirtschaftliche Risiken durch chinesische Immobilienkrise und Fed-Politik könnten Märkte destabilisieren.",
+    "Naturkatastrophen in Europa verschärfen Klimadruck; CO2-Reduktion bleibt dringend.",
+    "Cybersicherheit und transnationale Kriminalität (z. B. Social-Discovery-Betrug) erfordern globale Regulierung.",
+    "Politische Polarisierung in den USA (Trump-Prozesse) und Europa (Abschiebungsdebatten) untergräbt Stabilität."
   ],
-  "predictive_horizon": [
-    {
-      "timeframe": "30 Tage (Taktisch)",
-      "forecast": "Erhöhte Wahrscheinlichkeit für begrenzte militärische Aktionen im Nahen Osten (z. B. israelische oder US-Strikes gegen iranische Proxy-Ziele). Wirtschaftliche Volatilität durch Lieferkettenstörungen und Bankenregulierung. Keine direkte Eskalation zwischen Großmächten, aber regionale Konflikte (Ukraine, Taiwan) bleiben instabil.",
-      "probability": "Mittel",
-      "early_warning_indicators": [
-        "Zunahme von Cyberangriffen zwischen Iran und USA/Israel",
-        "Militärische Aufstockung im Roten Meer oder Südchinesischen Meer",
-        "BRICS-Währungsinitiativen oder Sanktionen gegen westliche Banken"
-      ]
-    }
-  ],
-  "historical_precedents": [
-    {
-      "event": "Kalter Krieg (1947–1991)",
-      "period": "20. Jahrhundert",
-      "similarity": "Hybride Kriegsführung, Proxy-Konflikte, wirtschaftliche Blockbildung (BRICS vs. Westen)",
-      "takeaway": "Langfristige Spannungen ohne direkte militärische Konfrontation, aber mit hohem Eskalationsrisiko durch Fehlkalkulationen."
-    },
-    {
-      "event": "Suez-Krise (1956)",
-      "period": "20. Jahrhundert",
-      "similarity": "Chokepoints (Rotes Meer, Suezkanal) als geopolitische Hebel",
-      "takeaway": "Wirtschaftliche und militärische Abhängigkeiten von Handelsrouten können Konflikte verschärfen."
-    }
-  ],
-  "conflict_hotspots": [
-    {
-      "name": "Taiwan-Straße",
-      "lat": 24.0,
-      "lon": 121.0,
-      "lng": 121.0,
-      "intensity": "GELB",
-      "description": "Spannungen zwischen China und Taiwan, unterstützt durch US-Militärpräsenz. Keine unmittelbare Invasion, aber erhöhte Militärübungen und diplomatische Provokationen.",
-      "military_activity": "Chinesische Luft- und Seemanöver, US-Fregatten in der Region."
-    },
-    {
-      "name": "Rotes Meer / Bab al-Mandab",
-      "lat": 14.0,
-      "lon": 42.0,
-      "lng": 42.0,
-      "intensity": "ROT",
-      "description": "Huthi-Rebellen (iranische Proxy) greifen Handelsschiffe an. US-geführte Koalition patrouilliert, aber Angriffe auf zivile Schiffe häufen sich.",
-      "military_activity": "US-Zerstörer und Luftabwehrsysteme im Einsatz, Huthi-Drohnenangriffe."
-    },
-    {
-      "name": "Ukraine",
-      "lat": 49.0,
-      "lon": 32.0,
-      "lng": 32.0,
-      "intensity": "ROT",
-      "description": "Fortdauernder Krieg mit russischen Offensiven im Donbas. Westliche Militärhilfe hält an, aber keine diplomatische Lösung in Sicht.",
-      "military_activity": "Artilleriegefechte, Drohnenangriffe, westliche Waffenlieferungen."
-    },
-    {
-      "name": "Gaza / Israel",
-      "lat": 31.5,
-      "lon": 34.5,
-      "lng": 34.5,
-      "intensity": "ROT",
-      "description": "Wiederaufnahme von Kämpfen nach gescheiterter Waffenruhe. Israelische Militäroperationen im Norden Gazas, humanitäre Krise verschärft sich.",
-      "military_activity": "Bodentruppen, Luftangriffe, Raketenbeschuss durch Hamas."
-    },
-    {
-      "name": "Nordirland",
-      "lat": 54.6,
-      "lon": -6.7,
-      "lng": -6.7,
-      "intensity": "GELB",
-      "description": "Radikalisierte republikanische Gruppen planen Anschläge. Bombenfund nahe der Grenze deutet auf erhöhte Terrorgefahr hin.",
-      "military_activity": "Polizeiliche Razzien, Überwachung von Verdächtigen."
-    }
-  ],
-  "graph_network": {
-    "nodes": [
+  "equity_rotation": {
+    "top5_buys": [
       {
-        "id": "iran",
-        "label": "Iran",
-        "name": "Iran",
-        "group": "Staat",
-        "val": 8
+        "asset": "Defense/Aerospace (z. B. Lockheed Martin, Rheinmetall)",
+        "reason": "Militärische Aufrüstung im Nahen Osten und Europa treibt Nachfrage."
       },
       {
-        "id": "usa",
-        "label": "USA",
-        "name": "USA",
-        "group": "Staat",
-        "val": 9
+        "asset": "Cybersecurity (z. B. Palo Alto Networks, CrowdStrike)",
+        "reason": "Zunehmende Bedrohungen durch staatliche und kriminelle Akteure."
       },
       {
-        "id": "israel",
-        "label": "Israel",
-        "name": "Israel",
-        "group": "Staat",
-        "val": 7
+        "asset": "Gold/Edelmetalle",
+        "reason": "Sicherer Hafen bei geopolitischen und wirtschaftlichen Unsicherheiten."
       },
       {
-        "id": "huthi",
-        "label": "Huthi-Rebellen",
-        "name": "Huthi-Rebellen",
-        "group": "Non-State Actor",
-        "val": 6
+        "asset": "Erneuerbare Energien (z. B. NextEra Energy, Orsted)",
+        "reason": "Klimakatastrophen beschleunigen Energiewende."
       },
       {
-        "id": "ukraine",
-        "label": "Ukraine",
-        "name": "Ukraine",
-        "group": "Staat",
-        "val": 8
-      },
-      {
-        "id": "russland",
-        "label": "Russland",
-        "name": "Russland",
-        "group": "Staat",
-        "val": 8
-      },
-      {
-        "id": "china",
-        "label": "China",
-        "name": "China",
-        "group": "Staat",
-        "val": 7
-      },
-      {
-        "id": "taiwan",
-        "label": "Taiwan",
-        "name": "Taiwan",
-        "group": "Staat",
-        "val": 6
-      },
-      {
-        "id": "brd",
-        "label": "BRICS",
-        "name": "BRICS",
-        "group": "Wirtschaftsblock",
-        "val": 7
-      },
-      {
-        "id": "nato",
-        "label": "NATO",
-        "name": "NATO",
-        "group": "Militärbündnis",
-        "val": 8
-      },
-      {
-        "id": "rotes_meer",
-        "label": "Rotes Meer",
-        "name": "Rotes Meer",
-        "group": "Chokepoint",
-        "val": 5
-      },
-      {
-        "id": "suezkanal",
-        "label": "Suezkanal",
-        "name": "Suezkanal",
-        "group": "Chokepoint",
-        "val": 5
-      },
-      {
-        "id": "nordirland",
-        "label": "Nordirland",
-        "name": "Nordirland",
-        "group": "Region",
-        "val": 4
+        "asset": "Pharma/Gesundheit (z. B. Moderna, BioNTech)",
+        "reason": "Globale Gesundheitsrisiken und Pandemie-Vorsorge bleiben relevant."
       }
     ],
-    "edges": [
+    "flop5_sells": [
       {
-        "from": "iran",
-        "to": "huthi",
-        "source": "Iran",
-        "target": "Huthi-Rebellen",
-        "label": "Unterstützung (Waffen, Finanzen)"
+        "asset": "Chinesische Immobilien (z. B. Evergrande, Country Garden)",
+        "reason": "Systemische Risiken durch Schuldenkrise und Marktkorrektur."
       },
       {
-        "from": "iran",
-        "to": "usa",
-        "source": "Iran",
-        "target": "USA",
-        "label": "Hybrider Konflikt (Cyber, Proxy)"
+        "asset": "Russische Aktien/ETFs",
+        "reason": "Sanktionen und geopolitische Isolation belasten Wirtschaft."
       },
       {
-        "from": "usa",
-        "to": "israel",
-        "source": "USA",
-        "target": "Israel",
-        "label": "Militärische Allianz"
+        "asset": "Langfristige Staatsanleihen (USA/EU)",
+        "reason": "Zinsrisiko durch mögliche Fed/EZB-Zinserhöhungen."
       },
       {
-        "from": "israel",
-        "to": "gaza",
-        "source": "Israel",
-        "target": "Gaza",
-        "label": "Militäroperationen"
+        "asset": "Tourismus/Airlines (z. B. Lufthansa, Delta)",
+        "reason": "Klimakatastrophen und geopolitische Spannungen dämpfen Reiseverkehr."
       },
       {
-        "from": "huthi",
-        "to": "rotes_meer",
-        "source": "Huthi-Rebellen",
-        "target": "Rotes Meer",
-        "label": "Angriffe auf Schiffe"
-      },
-      {
-        "from": "usa",
-        "to": "rotes_meer",
-        "source": "USA",
-        "target": "Rotes Meer",
-        "label": "Militärische Präsenz"
-      },
-      {
-        "from": "ukraine",
-        "to": "russland",
-        "source": "Ukraine",
-        "target": "Russland",
-        "label": "Krieg"
-      },
-      {
-        "from": "nato",
-        "to": "ukraine",
-        "source": "NATO",
-        "target": "Ukraine",
-        "label": "Militärhilfe"
-      },
-      {
-        "from": "china",
-        "to": "taiwan",
-        "source": "China",
-        "target": "Taiwan",
-        "label": "Drohungen, Militärübungen"
-      },
-      {
-        "from": "usa",
-        "to": "taiwan",
-        "source": "USA",
-        "target": "Taiwan",
-        "label": "Militärische Unterstützung"
-      },
-      {
-        "from": "brd",
-        "to": "usa",
-        "source": "BRICS",
-        "target": "USA",
-        "label": "Wirtschaftliche Rivalität"
-      },
-      {
-        "from": "nordirland",
-        "to": "uk",
-        "source": "Nordirland",
-        "target": "Vereinigtes Königreich",
-        "label": "Terrorgefahr"
-      },
-      {
-        "from": "suezkanal",
-        "to": "rotes_meer",
-        "source": "Suezkanal",
-        "target": "Rotes Meer",
-        "label": "Handelsroute"
-      }
-    ],
-    "links": [
-      {
-        "from": "iran",
-        "to": "huthi",
-        "source": "Iran",
-        "target": "Huthi-Rebellen",
-        "label": "Unterstützung (Waffen, Finanzen)"
-      },
-      {
-        "from": "iran",
-        "to": "usa",
-        "source": "Iran",
-        "target": "USA",
-        "label": "Hybrider Konflikt (Cyber, Proxy)"
-      },
-      {
-        "from": "usa",
-        "to": "israel",
-        "source": "USA",
-        "target": "Israel",
-        "label": "Militärische Allianz"
-      },
-      {
-        "from": "israel",
-        "to": "gaza",
-        "source": "Israel",
-        "target": "Gaza",
-        "label": "Militäroperationen"
-      },
-      {
-        "from": "huthi",
-        "to": "rotes_meer",
-        "source": "Huthi-Rebellen",
-        "target": "Rotes Meer",
-        "label": "Angriffe auf Schiffe"
-      },
-      {
-        "from": "usa",
-        "to": "rotes_meer",
-        "source": "USA",
-        "target": "Rotes Meer",
-        "label": "Militärische Präsenz"
-      },
-      {
-        "from": "ukraine",
-        "to": "russland",
-        "source": "Ukraine",
-        "target": "Russland",
-        "label": "Krieg"
-      },
-      {
-        "from": "nato",
-        "to": "ukraine",
-        "source": "NATO",
-        "target": "Ukraine",
-        "label": "Militärhilfe"
-      },
-      {
-        "from": "china",
-        "to": "taiwan",
-        "source": "China",
-        "target": "Taiwan",
-        "label": "Drohungen, Militärübungen"
-      },
-      {
-        "from": "usa",
-        "to": "taiwan",
-        "source": "USA",
-        "target": "Taiwan",
-        "label": "Militärische Unterstützung"
-      },
-      {
-        "from": "brd",
-        "to": "usa",
-        "source": "BRICS",
-        "target": "USA",
-        "label": "Wirtschaftliche Rivalität"
-      },
-      {
-        "from": "nordirland",
-        "to": "uk",
-        "source": "Nordirland",
-        "target": "Vereinigtes Königreich",
-        "label": "Terrorgefahr"
-      },
-      {
-        "from": "suezkanal",
-        "to": "rotes_meer",
-        "source": "Suezkanal",
-        "target": "Rotes Meer",
-        "label": "Handelsroute"
+        "asset": "TikTok/Meta (soziale Medien)",
+        "reason": "Regulatorische Risiken durch EU-DSA und Datenschutzverstöße."
       }
     ]
   },
   "domestic_policy_matrix": [
     {
       "region": "USA",
-      "dynamics": "Politische Polarisierung, Fokus auf Nahost-Politik und Bankenregulierung. Wirtschaftliche Unsicherheit durch Fed-Entscheidungen.",
       "stability": "GELB",
-      "spillover": "Internationale Märkte reagieren sensibel auf US-Zinspolitik und militärische Entscheidungen."
+      "dynamics": "Politische Polarisierung durch Trump-Prozesse und Wahlkampf; innenpolitische Spannungen könnten außenpolitische Entscheidungen beeinflussen.",
+      "spillover": "Marktvolatilität durch Unsicherheit; mögliche Handelskonflikte mit China."
     },
     {
       "region": "EU",
-      "dynamics": "Wildfire-Krisen in Südeuropa, politische Spannungen durch Migration und Energieabhängigkeit. Nordirland als innerer Sicherheitsrisikofaktor.",
       "stability": "GELB",
-      "spillover": "Wirtschaftliche Belastung durch Klimakrisen, mögliche Destabilisierung durch terroristische Anschläge."
+      "dynamics": "Debatten über Migration (Abschiebungen nach Afghanistan) und Klimapolitik (Waldbrände) spalten Mitgliedstaaten; regulatorischer Druck auf Tech-Konzerne.",
+      "spillover": "Wirtschaftliche Belastung durch Klimafolgen; mögliche Handelsbarrieren mit USA/China."
     },
     {
       "region": "China",
-      "dynamics": "Wirtschaftliche Verlangsamung, Fokus auf Taiwan und Südchinesisches Meer. BRICS-Initiativen als Gegengewicht zum Westen.",
       "stability": "GELB",
-      "spillover": "Handelskonflikte mit USA/EU, militärische Provokationen in der Taiwan-Straße."
+      "dynamics": "Immobilienkrise und schwache Binnennachfrage belasten Wirtschaft; geopolitische Spannungen mit USA.",
+      "spillover": "Globale Lieferkettenrisiken; mögliche Währungsabwertung."
     },
     {
-      "region": "Russland",
-      "dynamics": "Kriegswirtschaft, Isolation vom Westen, Abhängigkeit von China. Keine diplomatischen Lösungen in Sicht.",
+      "region": "BRICS",
+      "stability": "GELB",
+      "dynamics": "Heterogene Gruppe mit unterschiedlichen Interessen; wirtschaftliche Schwäche in China und Russland belastet Block.",
+      "spillover": "Alternative Handelsrouten und Währungen könnten USD-Dominanz herausfordern."
+    },
+    {
+      "region": "Nahost",
       "stability": "ROT",
-      "spillover": "Energiepreisschwankungen, globale Nahrungsmittelknappheit durch Ukraine-Krieg."
+      "dynamics": "Militärische Eskalation zwischen Saudi-Arabien/Jemen und Iran/USA; humanitäre Krise in Gaza.",
+      "spillover": "Ölpreisschocks möglich; Flüchtlingsströme nach Europa."
     }
   ],
-  "stress_test_scenarios": [
+  "historical_precedents": [
     {
-      "scenario": "Iranische Blockade der Straße von Hormus",
-      "impact": "Ölpreisschock (Brent >150 USD/Barrel), globale Rezession, militärische Eskalation zwischen Iran und USA/Israel.",
-      "probability": "Mittel",
-      "mitigation": "Internationale Marinekoalition, strategische Ölreserven, diplomatische Deeskalation."
+      "event": "Ölkrise 1973",
+      "period": "1970er",
+      "similarity": "Maritime Blockaden und regionale Konflikte (Jemen) könnten Ölpreise treiben.",
+      "takeaway": "Stagflation und wirtschaftliche Rezession möglich; Diversifizierung der Energiequellen entscheidend."
     },
     {
-      "scenario": "Chinesische Invasion Taiwans",
-      "impact": "Globaler Technologie-Kollaps (Halbleiterkrise), Handelskrieg zwischen China und Westen, militärische Konfrontation USA-China.",
-      "probability": "Niedrig (kurzfristig), Mittel (langfristig)",
-      "mitigation": "Stärkung der taiwanesischen Verteidigung, wirtschaftliche Diversifizierung, diplomatische Abschreckung."
+      "event": "Eurokrise 2010–2012",
+      "period": "2010er",
+      "similarity": "Staatsschuldenkrisen (China) und politische Fragmentierung (EU) erinnern an Eurokrise.",
+      "takeaway": "Vertrauensverlust in Märkte; Notwendigkeit struktureller Reformen."
     },
     {
-      "scenario": "Kollaps der ukrainischen Frontlinie",
-      "impact": "Russische Besetzung weiterer Gebiete, NATO-Direkteingriff möglich, globale Nahrungsmittelkrise.",
-      "probability": "Mittel",
-      "mitigation": "Erhöhte westliche Militärhilfe, Sanktionen gegen Russland, diplomatische Verhandlungen."
+      "event": "Kalter Krieg (1947–1991)",
+      "period": "20. Jahrhundert",
+      "similarity": "Proxy-Konflikte (Ukraine, Jemen) und ideologische Spannungen (USA vs. China/Russland).",
+      "takeaway": "Risiko direkter Konfrontation bleibt gering, aber Eskalationsspirale möglich."
     },
     {
-      "scenario": "Terroranschlag in Europa (z. B. Nordirland)",
-      "impact": "Politische Instabilität, verstärkte Überwachung, wirtschaftliche Verunsicherung.",
-      "probability": "Mittel",
-      "mitigation": "Intelligence-Sharing, präventive Polizeiarbeit, Deeskalationsprogramme."
+      "event": "Spanische Grippe 1918",
+      "period": "1918–1920",
+      "similarity": "Globale Gesundheitsrisiken durch Pandemien und schwache Infrastruktur.",
+      "takeaway": "Investitionen in Gesundheitssysteme und Frühwarnsysteme notwendig."
     }
   ],
-  "game_theory_analysis": "KI-Analysten-Konferenz – Kreuzprüfung & Synthese\nModerator: „Fingerklopfen“ – Widersprüche, Halluzinationen, Kernkonsens\n\n---\n\n1. Direkte Widersprüche zwischen den Modellen\n| Thema               | GROQ/OSINT                          | MACRO (implizit) / DEEPSEEK (unvollständig) | Bewertung                                                                 |\n|-------------------------|----------------------------------------|----------------------------------------------------|------------------------------------------------------------------------------|\n| Iran-Konflikt       | „USA und Iran im Kriegszustand“ (trotz Waffenruhe) | Keine Erwähnung                                    | Widerspruch: GROQ/OSINT überzeichnet – es gibt keine formelle Kriegserklärung. Angriffe auf US-Ziele sind Proxy-Konflikt (z. B. via Milizen), nicht direkter Krieg. |\n| DEFCON-Level        | USA: DEFCON 4, Iran: DEFCON 3          | –                                                  | Fragwürdig: DEFCON ist ein US-internes System. Iran hat kein DEFCON. GROQ/OSINT projiziert US-Militärlogik auf andere Akteure. |\n| Wirtschaftslage     | „Corona-Pandemie aktuell Haupttreiber“ | Fokus auf Bankenregulierung (Fed) und Lieferketten | Zeitliche Diskrepanz: GROQ/OSINT veraltet – Pandemie ist 2024 kein dominanter Faktor mehr. MACRO korrekt: Strukturelle Risiken (BRICS, Chokepoints) sind relevanter. |\n| Politische Akteure  | Donald Trump als US-Präsident          | –                                                  | Faktischer Fehler: Trump war 2020–2024 Präsident. Aktuell (2024) ist Joe Biden im Amt. |\n| Ukraine-Konflikt    | Als „Risiko-Hotspot“ gelistet          | –                                                  | Unterbewertet in MACRO: Ukraine ist der geopolitische Brandherd 2024, aber MACRO ignoriert ihn zugunsten ökonomischer Themen. |\n\n---\n\n2. Halluzinationen & unbegründete Behauptungen\n| Modell       | Behauptung                          | Korrektur                                                                 |\n|------------------|----------------------------------------|------------------------------------------------------------------------------|\n| GROQ/OSINT   | „USA und Iran im Kriegszustand“      | Falsch: Keine Kriegserklärung, sondern hybride Kriegsführung (Cyber, Proxy-Milizen). Korrekt: Hochgradige Spannungen. |\n|                  | „140.000 Evakuierte in Frankreich/Spanien“ | Übertrieben: 2023 gab es ~100.000 Evakuierte (Quelle: EU-Katastrophenschutz). 2024 bisher keine vergleichbaren Zahlen. |\n|                  | „DEFCON 3 für Iran“                    | Unsinnig: DEFCON ist US-spezifisch. Iran hat kein vergleichbares System. |\n| MACRO        | „Rechtswissenschaftsstudent in UK“ (unvollständig) | Fragmentarisch: Satzabbruch deutet auf Halluzination oder Datenlücke. Kein Kontext, daher nicht verwertbar. |\n| DEEPSEEK     | Kein Inhalt                          | Systemfehler: Modell liefert keine verwertbaren Daten – möglicherweise Prompt-Missverständnis oder Datenlücke. |\n\n---\n\n3. Einmütiger Kernkonsens (verifiziert)\nTrotz Widersprüchen und Fehlern stimmen die Modelle in folgenden Punkten überein:\n\nA. Geopolitische Risiken (Top 3)\n1. Naher Osten (Iran/USA/Golfstaaten)\n   - Konsens: Hybride Eskalation (Cyberangriffe, Proxy-Kriege, Angriffe auf US-Basen in Bahrain/Jordanien).\n   - Differenz: GROQ/OSINT dramatisiert („Kriegszustand“), MACRO ignoriert – Realität: DEFCON-äquivalent: 3–4 (erhöhte Alarmbereitschaft, aber keine direkte Konfrontation).\n   - Handlungsdruck: USA/Iran vermeiden direkte Kriegshandlungen, aber indirekte Eskalation (z. B. via Israel, Jemen) möglich.\n\n2. Ukraine-Konflikt\n   - Konsens: Russlands Krieg gegen die Ukraine bleibt zentraler Krisenherd (GROQ/OSINT nennt ihn, MACRO ignoriert ihn – Fehler in MACRO).\n   - Risiko: Eskalation durch NATO-Waffenlieferungen oder ukrainische Gegenoffensiven (z. B. in Kursk).\n\n3. Asien (China/USA/Südchinesisches Meer)\n   - Konsens: Multipolare Spannungen (Taiwan, Handelskriege, BRICS-Expansion).\n   - MACRO betont ökonomische Chokepoints (z. B. Malakkastraße), GROQ/OSINT militärische (DEFCON 4 für Asien).\n\nB. Ökonomische Risiken\n- Konsens:\n  - Lieferketteninstabilität (MACRO) + Inflationsdruck (GROQ/OSINT veraltet, aber strukturell korrekt).\n  - BRICS als Gegenpol zum Westen: MACRO nennt es explizit, GROQ/OSINT implizit (Spannungen China/USA).\n  - Differenz: MACRO sieht Bankenregulierung (Fed) als Stabilisator, GROQ/OSINT ignoriert Finanzsektor.\n\nC. Umwelt & Sicherheit\n- Konsens:\n  - Klimakatastrophen (Waldbrände in Europa) sind sekundäres Risiko, aber kumulativ gefährlich (z. B. für Nahrungsmittelpreise).\n  - Cyberangriffe (v. a. Iran-bezogen) sind wachsendes Risiko (GROQ/OSINT korrekt).\n\n---\n\n4. Messerscharfe Synthese: Die 3 Megatrends 2024\n1. „Hybride Kriege ersetzen direkte",
-  "deepseek_analysis": "KI-Analysten-Konferenz – Kreuzprüfung & Synthese\nModerator: „Fingerklopfen“ – Widersprüche, Halluzinationen, Kernkonsens\n\n---\n\n1. Direkte Widersprüche zwischen den Modellen\n| Thema               | GROQ/OSINT                          | MACRO (implizit) / DEEPSEEK (unvollständig) | Bewertung                                                                 |\n|-------------------------|----------------------------------------|----------------------------------------------------|------------------------------------------------------------------------------|\n| Iran-Konflikt       | „USA und Iran im Kriegszustand“ (trotz Waffenruhe) | Keine Erwähnung                                    | Widerspruch: GROQ/OSINT überzeichnet – es gibt keine formelle Kriegserklärung. Angriffe auf US-Ziele sind Proxy-Konflikt (z. B. via Milizen), nicht direkter Krieg. |\n| DEFCON-Level        | USA: DEFCON 4, Iran: DEFCON 3          | –                                                  | Fragwürdig: DEFCON ist ein US-internes System. Iran hat kein DEFCON. GROQ/OSINT projiziert US-Militärlogik auf andere Akteure. |\n| Wirtschaftslage     | „Corona-Pandemie aktuell Haupttreiber“ | Fokus auf Bankenregulierung (Fed) und Lieferketten | Zeitliche Diskrepanz: GROQ/OSINT veraltet – Pandemie ist 2024 kein dominanter Faktor mehr. MACRO korrekt: Strukturelle Risiken (BRICS, Chokepoints) sind relevanter. |\n| Politische Akteure  | Donald Trump als US-Präsident          | –                                                  | Faktischer Fehler: Trump war 2020–2024 Präsident. Aktuell (2024) ist Joe Biden im Amt. |\n| Ukraine-Konflikt    | Als „Risiko-Hotspot“ gelistet          | –                                                  | Unterbewertet in MACRO: Ukraine ist der geopolitische Brandherd 2024, aber MACRO ignoriert ihn zugunsten ökonomischer Themen. |\n\n---\n\n2. Halluzinationen & unbegründete Behauptungen\n| Modell       | Behauptung                          | Korrektur                                                                 |\n|------------------|----------------------------------------|------------------------------------------------------------------------------|\n| GROQ/OSINT   | „USA und Iran im Kriegszustand“      | Falsch: Keine Kriegserklärung, sondern hybride Kriegsführung (Cyber, Proxy-Milizen). Korrekt: Hochgradige Spannungen. |\n|                  | „140.000 Evakuierte in Frankreich/Spanien“ | Übertrieben: 2023 gab es ~100.000 Evakuierte (Quelle: EU-Katastrophenschutz). 2024 bisher keine vergleichbaren Zahlen. |\n|                  | „DEFCON 3 für Iran“                    | Unsinnig: DEFCON ist US-spezifisch. Iran hat kein vergleichbares System. |\n| MACRO        | „Rechtswissenschaftsstudent in UK“ (unvollständig) | Fragmentarisch: Satzabbruch deutet auf Halluzination oder Datenlücke. Kein Kontext, daher nicht verwertbar. |\n| DEEPSEEK     | Kein Inhalt                          | Systemfehler: Modell liefert keine verwertbaren Daten – möglicherweise Prompt-Missverständnis oder Datenlücke. |\n\n---\n\n3. Einmütiger Kernkonsens (verifiziert)\nTrotz Widersprüchen und Fehlern stimmen die Modelle in folgenden Punkten überein:\n\nA. Geopolitische Risiken (Top 3)\n1. Naher Osten (Iran/USA/Golfstaaten)\n   - Konsens: Hybride Eskalation (Cyberangriffe, Proxy-Kriege, Angriffe auf US-Basen in Bahrain/Jordanien).\n   - Differenz: GROQ/OSINT dramatisiert („Kriegszustand“), MACRO ignoriert – Realität: DEFCON-äquivalent: 3–4 (erhöhte Alarmbereitschaft, aber keine direkte Konfrontation).\n   - Handlungsdruck: USA/Iran vermeiden direkte Kriegshandlungen, aber indirekte Eskalation (z. B. via Israel, Jemen) möglich.\n\n2. Ukraine-Konflikt\n   - Konsens: Russlands Krieg gegen die Ukraine bleibt zentraler Krisenherd (GROQ/OSINT nennt ihn, MACRO ignoriert ihn – Fehler in MACRO).\n   - Risiko: Eskalation durch NATO-Waffenlieferungen oder ukrainische Gegenoffensiven (z. B. in Kursk).\n\n3. Asien (China/USA/Südchinesisches Meer)\n   - Konsens: Multipolare Spannungen (Taiwan, Handelskriege, BRICS-Expansion).\n   - MACRO betont ökonomische Chokepoints (z. B. Malakkastraße), GROQ/OSINT militärische (DEFCON 4 für Asien).\n\nB. Ökonomische Risiken\n- Konsens:\n  - Lieferketteninstabilität (MACRO) + Inflationsdruck (GROQ/OSINT veraltet, aber strukturell korrekt).\n  - BRICS als Gegenpol zum Westen: MACRO nennt es explizit, GROQ/OSINT implizit (Spannungen China/USA).\n  - Differenz: MACRO sieht Bankenregulierung (Fed) als Stabilisator, GROQ/OSINT ignoriert Finanzsektor.\n\nC. Umwelt & Sicherheit\n- Konsens:\n  - Klimakatastrophen (Waldbrände in Europa) sind sekundäres Risiko, aber kumulativ gefährlich (z. B. für Nahrungsmittelpreise).\n  - Cyberangriffe (v. a. Iran-bezogen) sind wachsendes Risiko (GROQ/OSINT korrekt).\n\n---\n\n4. Messerscharfe Synthese: Die 3 Megatrends 2024\n1. „Hybride Kriege ersetzen direkte",
-  "game_theory": "KI-Analysten-Konferenz – Kreuzprüfung & Synthese\nModerator: „Fingerklopfen“ – Widersprüche, Halluzinationen, Kernkonsens\n\n---\n\n1. Direkte Widersprüche zwischen den Modellen\n| Thema               | GROQ/OSINT                          | MACRO (implizit) / DEEPSEEK (unvollständig) | Bewertung                                                                 |\n|-------------------------|----------------------------------------|----------------------------------------------------|------------------------------------------------------------------------------|\n| Iran-Konflikt       | „USA und Iran im Kriegszustand“ (trotz Waffenruhe) | Keine Erwähnung                                    | Widerspruch: GROQ/OSINT überzeichnet – es gibt keine formelle Kriegserklärung. Angriffe auf US-Ziele sind Proxy-Konflikt (z. B. via Milizen), nicht direkter Krieg. |\n| DEFCON-Level        | USA: DEFCON 4, Iran: DEFCON 3          | –                                                  | Fragwürdig: DEFCON ist ein US-internes System. Iran hat kein DEFCON. GROQ/OSINT projiziert US-Militärlogik auf andere Akteure. |\n| Wirtschaftslage     | „Corona-Pandemie aktuell Haupttreiber“ | Fokus auf Bankenregulierung (Fed) und Lieferketten | Zeitliche Diskrepanz: GROQ/OSINT veraltet – Pandemie ist 2024 kein dominanter Faktor mehr. MACRO korrekt: Strukturelle Risiken (BRICS, Chokepoints) sind relevanter. |\n| Politische Akteure  | Donald Trump als US-Präsident          | –                                                  | Faktischer Fehler: Trump war 2020–2024 Präsident. Aktuell (2024) ist Joe Biden im Amt. |\n| Ukraine-Konflikt    | Als „Risiko-Hotspot“ gelistet          | –                                                  | Unterbewertet in MACRO: Ukraine ist der geopolitische Brandherd 2024, aber MACRO ignoriert ihn zugunsten ökonomischer Themen. |\n\n---\n\n2. Halluzinationen & unbegründete Behauptungen\n| Modell       | Behauptung                          | Korrektur                                                                 |\n|------------------|----------------------------------------|------------------------------------------------------------------------------|\n| GROQ/OSINT   | „USA und Iran im Kriegszustand“      | Falsch: Keine Kriegserklärung, sondern hybride Kriegsführung (Cyber, Proxy-Milizen). Korrekt: Hochgradige Spannungen. |\n|                  | „140.000 Evakuierte in Frankreich/Spanien“ | Übertrieben: 2023 gab es ~100.000 Evakuierte (Quelle: EU-Katastrophenschutz). 2024 bisher keine vergleichbaren Zahlen. |\n|                  | „DEFCON 3 für Iran“                    | Unsinnig: DEFCON ist US-spezifisch. Iran hat kein vergleichbares System. |\n| MACRO        | „Rechtswissenschaftsstudent in UK“ (unvollständig) | Fragmentarisch: Satzabbruch deutet auf Halluzination oder Datenlücke. Kein Kontext, daher nicht verwertbar. |\n| DEEPSEEK     | Kein Inhalt                          | Systemfehler: Modell liefert keine verwertbaren Daten – möglicherweise Prompt-Missverständnis oder Datenlücke. |\n\n---\n\n3. Einmütiger Kernkonsens (verifiziert)\nTrotz Widersprüchen und Fehlern stimmen die Modelle in folgenden Punkten überein:\n\nA. Geopolitische Risiken (Top 3)\n1. Naher Osten (Iran/USA/Golfstaaten)\n   - Konsens: Hybride Eskalation (Cyberangriffe, Proxy-Kriege, Angriffe auf US-Basen in Bahrain/Jordanien).\n   - Differenz: GROQ/OSINT dramatisiert („Kriegszustand“), MACRO ignoriert – Realität: DEFCON-äquivalent: 3–4 (erhöhte Alarmbereitschaft, aber keine direkte Konfrontation).\n   - Handlungsdruck: USA/Iran vermeiden direkte Kriegshandlungen, aber indirekte Eskalation (z. B. via Israel, Jemen) möglich.\n\n2. Ukraine-Konflikt\n   - Konsens: Russlands Krieg gegen die Ukraine bleibt zentraler Krisenherd (GROQ/OSINT nennt ihn, MACRO ignoriert ihn – Fehler in MACRO).\n   - Risiko: Eskalation durch NATO-Waffenlieferungen oder ukrainische Gegenoffensiven (z. B. in Kursk).\n\n3. Asien (China/USA/Südchinesisches Meer)\n   - Konsens: Multipolare Spannungen (Taiwan, Handelskriege, BRICS-Expansion).\n   - MACRO betont ökonomische Chokepoints (z. B. Malakkastraße), GROQ/OSINT militärische (DEFCON 4 für Asien).\n\nB. Ökonomische Risiken\n- Konsens:\n  - Lieferketteninstabilität (MACRO) + Inflationsdruck (GROQ/OSINT veraltet, aber strukturell korrekt).\n  - BRICS als Gegenpol zum Westen: MACRO nennt es explizit, GROQ/OSINT implizit (Spannungen China/USA).\n  - Differenz: MACRO sieht Bankenregulierung (Fed) als Stabilisator, GROQ/OSINT ignoriert Finanzsektor.\n\nC. Umwelt & Sicherheit\n- Konsens:\n  - Klimakatastrophen (Waldbrände in Europa) sind sekundäres Risiko, aber kumulativ gefährlich (z. B. für Nahrungsmittelpreise).\n  - Cyberangriffe (v. a. Iran-bezogen) sind wachsendes Risiko (GROQ/OSINT korrekt).\n\n---\n\n4. Messerscharfe Synthese: Die 3 Megatrends 2024\n1. „Hybride Kriege ersetzen direkte",
-  "timestamp": "2026-07-24T23:22:58.948963+00:00",
+  "predictive_horizon": [
+    {
+      "timeframe": "30 Tage (Taktisch)",
+      "forecast": "Militärische Spannungen im Nahen Osten bleiben hoch, aber direkte USA-Iran-Konfrontation unwahrscheinlich. Wirtschaftliche Daten (China, USA) könnten Märkte überraschen. Waldbrände in Europa verschärfen Klimadebatte.",
+      "probability": "Hoch",
+      "early_warning_indicators": [
+        "Zunahme von Cyberangriffen auf kritische Infrastruktur",
+        "Ölpreis über 100 USD/Barrel",
+        "Chinesische Immobilienunternehmen melden Insolvenz an",
+        "EU-Staaten verhängen Notfallmaßnahmen gegen Waldbrände",
+        "Trump wird in weiteren Prozessen angeklagt"
+      ]
+    }
+  ],
+  "conflict_hotspots": [
+    {
+      "name": "Jemen (Huthi-Konflikt)",
+      "lat": 15.5527,
+      "lon": 48.5164,
+      "type": "conflict",
+      "intensity": "ROT",
+      "description": "Saudi-Arabien greift Huthi-Ziele an; maritime Blockade bedroht globale Schifffahrt (Bab al-Mandab).",
+      "lng": 48.5164
+    },
+    {
+      "name": "Ukraine (Ostfront)",
+      "lat": 48.3794,
+      "lon": 31.1656,
+      "type": "conflict",
+      "intensity": "ROT",
+      "description": "Anhaltende Kämpfe; mögliche Eskalation durch westliche Waffenlieferungen.",
+      "lng": 31.1656
+    },
+    {
+      "name": "Gaza (Israel-Palästina)",
+      "lat": 31.5,
+      "lon": 34.4667,
+      "type": "conflict",
+      "intensity": "ROT",
+      "description": "Humanitäre Krise durch israelische Militäroperationen; fragile Waffenruhe nach Geisel-Deal.",
+      "lng": 34.4667
+    },
+    {
+      "name": "Straße von Hormus",
+      "lat": 26.5676,
+      "lon": 56.25,
+      "type": "chokepoint",
+      "intensity": "GELB",
+      "description": "Iranische Drohungen gegen Schifffahrt; Risiko von Ölpreisschocks.",
+      "lng": 56.25
+    },
+    {
+      "name": "Südeuropa (Waldbrände)",
+      "lat": 40.4637,
+      "lon": -3.7492,
+      "type": "environmental",
+      "intensity": "ROT",
+      "description": "Rekord-Waldbrände in Spanien/Frankreich; Evakuierungen und wirtschaftliche Schäden.",
+      "lng": -3.7492
+    },
+    {
+      "name": "Nordirland (Grenze)",
+      "lat": 54.6,
+      "lon": -6.6667,
+      "type": "conflict",
+      "intensity": "GELB",
+      "description": "Bombenfund deutet auf republikanische Milizen hin; Risiko von Terroranschlägen.",
+      "lng": -6.6667
+    }
+  ],
+  "graph_network": {
+    "nodes": [
+      {
+        "id": "USA",
+        "label": "USA",
+        "group": "Staat",
+        "val": 10,
+        "name": "USA"
+      },
+      {
+        "id": "China",
+        "label": "China",
+        "group": "Staat",
+        "val": 9,
+        "name": "China"
+      },
+      {
+        "id": "EU",
+        "label": "EU",
+        "group": "Staat",
+        "val": 8,
+        "name": "EU"
+      },
+      {
+        "id": "Russland",
+        "label": "Russland",
+        "group": "Staat",
+        "val": 7,
+        "name": "Russland"
+      },
+      {
+        "id": "Iran",
+        "label": "Iran",
+        "group": "Staat",
+        "val": 6,
+        "name": "Iran"
+      },
+      {
+        "id": "Saudi-Arabien",
+        "label": "Saudi-Arabien",
+        "group": "Staat",
+        "val": 6,
+        "name": "Saudi-Arabien"
+      },
+      {
+        "id": "Jemen",
+        "label": "Jemen",
+        "group": "Staat",
+        "val": 5,
+        "name": "Jemen"
+      },
+      {
+        "id": "Ukraine",
+        "label": "Ukraine",
+        "group": "Staat",
+        "val": 5,
+        "name": "Ukraine"
+      },
+      {
+        "id": "Israel",
+        "label": "Israel",
+        "group": "Staat",
+        "val": 5,
+        "name": "Israel"
+      },
+      {
+        "id": "Fed",
+        "label": "Fed",
+        "group": "Institution",
+        "val": 8,
+        "name": "Fed"
+      },
+      {
+        "id": "EU-Kommission",
+        "label": "EU-Kommission",
+        "group": "Institution",
+        "val": 7,
+        "name": "EU-Kommission"
+      },
+      {
+        "id": "ICC",
+        "label": "ICC",
+        "group": "Institution",
+        "val": 4,
+        "name": "ICC"
+      },
+      {
+        "id": "TikTok",
+        "label": "TikTok",
+        "group": "Unternehmen",
+        "val": 5,
+        "name": "TikTok"
+      },
+      {
+        "id": "Huthis",
+        "label": "Huthis",
+        "group": "Nichtstaatlich",
+        "val": 5,
+        "name": "Huthis"
+      },
+      {
+        "id": "Klimawandel",
+        "label": "Klimawandel",
+        "group": "Thema",
+        "val": 7,
+        "name": "Klimawandel"
+      },
+      {
+        "id": "Cybersicherheit",
+        "label": "Cybersicherheit",
+        "group": "Thema",
+        "val": 6,
+        "name": "Cybersicherheit"
+      },
+      {
+        "id": "Immobilienkrise",
+        "label": "Immobilienkrise",
+        "group": "Thema",
+        "val": 6,
+        "name": "Immobilienkrise"
+      },
+      {
+        "id": "Trump",
+        "label": "Trump",
+        "group": "Person",
+        "val": 8,
+        "name": "Trump"
+      },
+      {
+        "id": "Netanyahu",
+        "label": "Netanyahu",
+        "group": "Person",
+        "val": 5,
+        "name": "Netanyahu"
+      }
+    ],
+    "edges": [
+      {
+        "from": "USA",
+        "to": "Iran",
+        "label": "Militärische Spannungen",
+        "source": "USA",
+        "target": "Iran"
+      },
+      {
+        "from": "USA",
+        "to": "China",
+        "label": "Handelskonflikt",
+        "source": "USA",
+        "target": "China"
+      },
+      {
+        "from": "USA",
+        "to": "Fed",
+        "label": "Geldpolitik",
+        "source": "USA",
+        "target": "Fed"
+      },
+      {
+        "from": "USA",
+        "to": "Ukraine",
+        "label": "Militärhilfe",
+        "source": "USA",
+        "target": "Ukraine"
+      },
+      {
+        "from": "USA",
+        "to": "Israel",
+        "label": "Allianz",
+        "source": "USA",
+        "target": "Israel"
+      },
+      {
+        "from": "China",
+        "to": "Immobilienkrise",
+        "label": "Wirtschaftskrise",
+        "source": "China",
+        "target": "Immobilienkrise"
+      },
+      {
+        "from": "EU",
+        "to": "TikTok",
+        "label": "Regulatorischer Druck",
+        "source": "EU",
+        "target": "TikTok"
+      },
+      {
+        "from": "EU",
+        "to": "Klimawandel",
+        "label": "Umweltpolitik",
+        "source": "EU",
+        "target": "Klimawandel"
+      },
+      {
+        "from": "Saudi-Arabien",
+        "to": "Jemen",
+        "label": "Militärische Angriffe",
+        "source": "Saudi-Arabien",
+        "target": "Jemen"
+      },
+      {
+        "from": "Saudi-Arabien",
+        "to": "Huthis",
+        "label": "Konflikt",
+        "source": "Saudi-Arabien",
+        "target": "Huthis"
+      },
+      {
+        "from": "Iran",
+        "to": "Jemen",
+        "label": "Unterstützung Huthis",
+        "source": "Iran",
+        "target": "Jemen"
+      },
+      {
+        "from": "Iran",
+        "to": "Straße von Hormus",
+        "label": "Maritime Bedrohung",
+        "source": "Iran",
+        "target": "Straße von Hormus"
+      },
+      {
+        "from": "Russland",
+        "to": "Ukraine",
+        "label": "Krieg",
+        "source": "Russland",
+        "target": "Ukraine"
+      },
+      {
+        "from": "Israel",
+        "to": "Gaza",
+        "label": "Militäroperationen",
+        "source": "Israel",
+        "target": "Gaza"
+      },
+      {
+        "from": "Trump",
+        "to": "USA",
+        "label": "Politische Instabilität",
+        "source": "Trump",
+        "target": "USA"
+      },
+      {
+        "from": "Netanyahu",
+        "to": "Israel",
+        "label": "Politische Führung",
+        "source": "Netanyahu",
+        "target": "Israel"
+      },
+      {
+        "from": "Cybersicherheit",
+        "to": "USA",
+        "label": "Bedrohung",
+        "source": "Cybersicherheit",
+        "target": "USA"
+      },
+      {
+        "from": "Cybersicherheit",
+        "to": "China",
+        "label": "Bedrohung",
+        "source": "Cybersicherheit",
+        "target": "China"
+      },
+      {
+        "from": "ICC",
+        "to": "Khan",
+        "label": "Entlassung",
+        "source": "ICC",
+        "target": "Khan"
+      }
+    ],
+    "links": [
+      {
+        "from": "USA",
+        "to": "Iran",
+        "label": "Militärische Spannungen",
+        "source": "USA",
+        "target": "Iran"
+      },
+      {
+        "from": "USA",
+        "to": "China",
+        "label": "Handelskonflikt",
+        "source": "USA",
+        "target": "China"
+      },
+      {
+        "from": "USA",
+        "to": "Fed",
+        "label": "Geldpolitik",
+        "source": "USA",
+        "target": "Fed"
+      },
+      {
+        "from": "USA",
+        "to": "Ukraine",
+        "label": "Militärhilfe",
+        "source": "USA",
+        "target": "Ukraine"
+      },
+      {
+        "from": "USA",
+        "to": "Israel",
+        "label": "Allianz",
+        "source": "USA",
+        "target": "Israel"
+      },
+      {
+        "from": "China",
+        "to": "Immobilienkrise",
+        "label": "Wirtschaftskrise",
+        "source": "China",
+        "target": "Immobilienkrise"
+      },
+      {
+        "from": "EU",
+        "to": "TikTok",
+        "label": "Regulatorischer Druck",
+        "source": "EU",
+        "target": "TikTok"
+      },
+      {
+        "from": "EU",
+        "to": "Klimawandel",
+        "label": "Umweltpolitik",
+        "source": "EU",
+        "target": "Klimawandel"
+      },
+      {
+        "from": "Saudi-Arabien",
+        "to": "Jemen",
+        "label": "Militärische Angriffe",
+        "source": "Saudi-Arabien",
+        "target": "Jemen"
+      },
+      {
+        "from": "Saudi-Arabien",
+        "to": "Huthis",
+        "label": "Konflikt",
+        "source": "Saudi-Arabien",
+        "target": "Huthis"
+      },
+      {
+        "from": "Iran",
+        "to": "Jemen",
+        "label": "Unterstützung Huthis",
+        "source": "Iran",
+        "target": "Jemen"
+      },
+      {
+        "from": "Iran",
+        "to": "Straße von Hormus",
+        "label": "Maritime Bedrohung",
+        "source": "Iran",
+        "target": "Straße von Hormus"
+      },
+      {
+        "from": "Russland",
+        "to": "Ukraine",
+        "label": "Krieg",
+        "source": "Russland",
+        "target": "Ukraine"
+      },
+      {
+        "from": "Israel",
+        "to": "Gaza",
+        "label": "Militäroperationen",
+        "source": "Israel",
+        "target": "Gaza"
+      },
+      {
+        "from": "Trump",
+        "to": "USA",
+        "label": "Politische Instabilität",
+        "source": "Trump",
+        "target": "USA"
+      },
+      {
+        "from": "Netanyahu",
+        "to": "Israel",
+        "label": "Politische Führung",
+        "source": "Netanyahu",
+        "target": "Israel"
+      },
+      {
+        "from": "Cybersicherheit",
+        "to": "USA",
+        "label": "Bedrohung",
+        "source": "Cybersicherheit",
+        "target": "USA"
+      },
+      {
+        "from": "Cybersicherheit",
+        "to": "China",
+        "label": "Bedrohung",
+        "source": "Cybersicherheit",
+        "target": "China"
+      },
+      {
+        "from": "ICC",
+        "to": "Khan",
+        "label": "Entlassung",
+        "source": "ICC",
+        "target": "Khan"
+      }
+    ]
+  },
+  "game_theory_analysis": "ENTWURF GROQ/OSINT:\nDas vollständige Lagedokument umfasst eine Vielzahl von Themen, darunter politische Entwicklungen, wirtschaftliche Trends, militärische Konflikte und Umweltthemen. Hier ist eine zusammenfassende Übersicht der Hauptpunkte:\n\n**Sektor-Impulsen:**\n\n1. **Finanzsektor:** Die Fed hat ihre Wirtschaftsprognosen aktualisiert, und es gibt Bedenken hinsichtlich der Entwicklung der chinesischen Immobilienbranche.\n2. **Energie:** Saudi-Arabien hat Huthi-Militärziele im Jemen angegriffen, und es gibt Berichte über eine maritime Blockade.\n3. **Technologie:** Es gibt Bedenken hinsichtlich der Cybersicherheit, insbesondere im Zusammenhang mit der Verwendung von Smartphones durch US-Militärpersonal.\n\n**Innenpolitik:**\n\n1. **USA:** Donald Trump hat sich gegen Anschuldigungen wegen Straftaten verteidigt und den Richter und dessen Familie angegriffen.\n2. **Deutschland:** Es gibt Debatten über die Ausweitung von Abschiebungen nach Afghanistan und die Rolle des Innenministers.\n3. **Europa:** Die EU-Kommission hat TikTok wegen Verstößen gegen die Digital Services Act kritisiert.\n\n**Geodaten:**\n\n1. **Kriegsgebiete:** Es gibt Berichte über Angriffe auf die Ukraine, den Jemen und den Iran.\n2. **Naturkatastrophen:** Es gibt Berichte über Waldbrände in Frankreich, Spanien und anderen Ländern.\n3. **Umwelt:** Es gibt Bedenken hinsichtlich der Auswirkungen des Klimawandels und der Notwendigkeit, den CO2-Ausstoß zu reduzieren.\n\n**Weitere Themen:**\n\n1. **Internationale Beziehungen:** Es gibt Spannungen zwischen den USA und dem Iran, sowie zwischen Saudi-Arabien und dem Jemen.\n2. **Wirtschaft:** Es gibt Bedenken hinsichtlich der globalen Wirtschaftslage und der Auswirkungen von Handelskriegen.\n3. **Gesundheit:** Es gibt Bedenken hinsichtlich der Ausbreitung von Krankheiten und der Notwendigkeit, die globale Gesundheitsinfrastruktur zu stärken.\n\nInsgesamt zeigt sich, dass die Welt vor einer Vielzahl von Herausforderungen steht, darunter politische Instabilität, wirtschaftliche Unsicherheit, militärische Konflikte und Umweltprobleme. Es ist wichtig, dass die internationale Gemeinschaft zusammenarbeitet, um diese Herausforderungen zu meistern und eine sicherere, stabilere und nachhaltigere Welt zu schaffen.\n\nENTWURF DEEPSEEK:\n\n\nENTWURF MACRO:",
+  "stress_test_scenarios": [],
+  "timestamp": "2026-07-24T23:47:46.554448+00:00",
   "pipeline_health": {
-    "timestamp": "2026-07-24T23:20:45.931477+00:00",
+    "timestamp": "2026-07-24T23:46:04.082886+00:00",
     "feeds_total": 230,
     "feeds_successful": 117,
     "feeds_failed": 113,
@@ -431,8 +607,8 @@
       "Groq (Llama-3.3)",
       "Swarm-Partner (qwen-2.5-72b-instruct)"
     ],
-    "swarm_debate_status": "SUCCESS",
-    "synthesizer_status": "SUCCESS",
+    "swarm_debate_status": "ERROR (HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=35))",
+    "synthesizer_status": "PENDING",
     "haiku_status": "PENDING",
     "errors": []
   }
