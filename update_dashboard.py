@@ -180,6 +180,12 @@ live_recon_flights = get_live_military_flights()
 # C. ERWEITERTER, BALANCIERTER QUELLENPOOL (140+ FEEDS)
 # ============================================================
 SOURCES = [
+    # 𝕏 / TWITTER OSINT & LIVE SIGNALS (VIA GOOGLE NEWS RSS SUCHE)
+    {"name": "X / Twitter OSINT Breaking", "url": "[https://news.google.com/rss/search?q=when:24h+(site:x.com+OR+site:twitter.com)+%22OSINT%22+OR+%22breaking%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+(site:x.com+OR+site:twitter.com)+%22OSINT%22+OR+%22breaking%22&hl=en-US&gl=US&ceid=US:en)", "cat": "OSINT / X", "weight": 0.85, "bias": "ALTERNATIVE"},
+    {"name": "X / Twitter Geopolitics & Conflict", "url": "[https://news.google.com/rss/search?q=when:24h+(site:x.com+OR+site:twitter.com)+%22geopolitics%22+OR+%22conflict%22+OR+%22war%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+(site:x.com+OR+site:twitter.com)+%22geopolitics%22+OR+%22conflict%22+OR+%22war%22&hl=en-US&gl=US&ceid=US:en)", "cat": "OSINT / X", "weight": 0.85, "bias": "ALTERNATIVE"},
+    {"name": "X / Twitter Military & Frontline", "url": "[https://news.google.com/rss/search?q=when:24h+(site:x.com+OR+site:twitter.com)+%22defense%22+OR+%22military%22+OR+%22frontline%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+(site:x.com+OR+site:twitter.com)+%22defense%22+OR+%22military%22+OR+%22frontline%22&hl=en-US&gl=US&ceid=US:en)", "cat": "OSINT / X", "weight": 0.85, "bias": "ALTERNATIVE"},
+    {"name": "X / Twitter Cyber & EW Alerts", "url": "[https://news.google.com/rss/search?q=when:24h+(site:x.com+OR+site:twitter.com)+%22cyber%22+OR+%22jamming%22+OR+%22spoofing%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+(site:x.com+OR+site:twitter.com)+%22cyber%22+OR+%22jamming%22+OR+%22spoofing%22&hl=en-US&gl=US&ceid=US:en)", "cat": "OSINT / X", "weight": 0.85, "bias": "ALTERNATIVE"},
+
     # 🇺🇸 USA: POLITISCHES SPEKTRUM (DEMOKRATEN, REPUBLIKANER, LIBERTÄR)
     {"name": "CNN World", "url": "[http://rss.cnn.com/rss/edition.rss](http://rss.cnn.com/rss/edition.rss)", "cat": "US/Politik", "weight": 0.95, "bias": "US-LEFT-LIBERAL"},
     {"name": "MSNBC / NBC News", "url": "[https://feeds.nbcnews.com/nbcnews/public/news](https://feeds.nbcnews.com/nbcnews/public/news)", "cat": "US/Politik", "weight": 0.90, "bias": "US-LEFT-LIBERAL"},
@@ -271,6 +277,15 @@ SOURCES = [
     {"name": "Aviation Safety Network (ASN)", "url": "[https://news.google.com/rss/search?q=when:7d+%22Aviation+Safety+Network%22+OR+NOTAM&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:7d+%22Aviation+Safety+Network%22+OR+NOTAM&hl=en-US&gl=US&ceid=US:en)", "cat": "Luftfahrt", "weight": 0.85, "bias": "MAINSTREAM"},
     {"name": "GPSJam & Electronic Warfare Alerts", "url": "[https://news.google.com/rss/search?q=when:24h+%22GPS+jamming%22+OR+%22ADS-B+spoofing%22+OR+%22NOTAM%22&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+%22GPS+jamming%22+OR+%22ADS-B+spoofing%22+OR+%22NOTAM%22&hl=en-US&gl=US&ceid=US:en)", "cat": "EW / Luftfahrt", "weight": 0.85, "bias": "ALTERNATIVE"},
 
+    # 💬 OSINT & COMMUNITY REDDIT FEEDS
+    {"name": "Reddit r/geopolitics", "url": "[https://www.reddit.com/r/geopolitics/.rss](https://www.reddit.com/r/geopolitics/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
+    {"name": "Reddit r/OSINT", "url": "[https://www.reddit.com/r/OSINT/.rss](https://www.reddit.com/r/OSINT/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
+    {"name": "Reddit r/CredibleDefense", "url": "[https://www.reddit.com/r/CredibleDefense/.rss](https://www.reddit.com/r/CredibleDefense/.rss)", "cat": "Community", "weight": 0.65, "bias": "WESTERN"},
+    {"name": "Reddit r/LessCredibleDefence", "url": "[https://www.reddit.com/r/LessCredibleDefence/.rss](https://www.reddit.com/r/LessCredibleDefence/.rss)", "cat": "Community", "weight": 0.55, "bias": "ALTERNATIVE"},
+    {"name": "Reddit r/Economics", "url": "[https://www.reddit.com/r/Economics/.rss](https://www.reddit.com/r/Economics/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
+    {"name": "Reddit r/Macroeconomics", "url": "[https://www.reddit.com/r/Macroeconomics/.rss](https://www.reddit.com/r/Macroeconomics/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
+    {"name": "Reddit r/Commodities", "url": "[https://www.reddit.com/r/Commodities/.rss](https://www.reddit.com/r/Commodities/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
+
     # 🌍 WELT-NACHRICHTENAGENTUREN & DIPLOMATIE (GLOBAL COVERAGE)
     {"name": "AP News World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Associated+Press&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
     {"name": "Reuters World", "url": "[https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en](https://news.google.com/rss/search?q=when:24h+source:Reuters&hl=en-US&gl=US&ceid=US:en)", "cat": "Agentur", "weight": 0.95, "bias": "MAINSTREAM"},
@@ -304,15 +319,6 @@ SOURCES = [
     {"name": "Foreign Policy", "url": "[https://foreignpolicy.com/feed/](https://foreignpolicy.com/feed/)", "cat": "Magazin", "weight": 0.85, "bias": "WESTERN"},
     {"name": "Nikkei Asia", "url": "[https://asia.nikkei.com/rss/feed/nar](https://asia.nikkei.com/rss/feed/nar)", "cat": "Finanzen/Asien", "weight": 0.90, "bias": "MAINSTREAM"},
     {"name": "Finanzmarktwelt", "url": "[https://finanzmarktwelt.de/feed/](https://finanzmarktwelt.de/feed/)", "cat": "Finanzen DE", "weight": 0.80, "bias": "ALTERNATIVE"},
-
-    # 💬 OSINT & COMMUNITY REDDIT FEEDS
-    {"name": "Reddit r/geopolitics", "url": "[https://www.reddit.com/r/geopolitics/.rss](https://www.reddit.com/r/geopolitics/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
-    {"name": "Reddit r/OSINT", "url": "[https://www.reddit.com/r/OSINT/.rss](https://www.reddit.com/r/OSINT/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
-    {"name": "Reddit r/CredibleDefense", "url": "[https://www.reddit.com/r/CredibleDefense/.rss](https://www.reddit.com/r/CredibleDefense/.rss)", "cat": "Community", "weight": 0.65, "bias": "WESTERN"},
-    {"name": "Reddit r/LessCredibleDefence", "url": "[https://www.reddit.com/r/LessCredibleDefence/.rss](https://www.reddit.com/r/LessCredibleDefence/.rss)", "cat": "Community", "weight": 0.55, "bias": "ALTERNATIVE"},
-    {"name": "Reddit r/Economics", "url": "[https://www.reddit.com/r/Economics/.rss](https://www.reddit.com/r/Economics/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
-    {"name": "Reddit r/Macroeconomics", "url": "[https://www.reddit.com/r/Macroeconomics/.rss](https://www.reddit.com/r/Macroeconomics/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
-    {"name": "Reddit r/Commodities", "url": "[https://www.reddit.com/r/Commodities/.rss](https://www.reddit.com/r/Commodities/.rss)", "cat": "Community", "weight": 0.60, "bias": "ALTERNATIVE"},
 
     # 🔍 ALTERNATIVE, INVESTIGATIVE & KONTRÄRE MEDIEN
     {"name": "Scheerpost", "url": "[https://scheerpost.com/feed/](https://scheerpost.com/feed/)", "cat": "Investigativ", "weight": 0.75, "bias": "ALTERNATIVE"},
@@ -424,7 +430,7 @@ def run_deepseek_game_theory(context):
         return "DeepSeek Spieltheorie-Analyse nicht verfügbar."
     print("Starte DeepSeek-R1 Spieltheorie-Analyse (deepseek-reasoner)...")
     gt_prompt = f"""DYNAMISCHER ZEITANKER & REALITÄTS-CHECK:
-- HEUTIGES DATUM IS DER {CURRENT_DATE_STR} (Jahr: {CURRENT_YEAR} und folgende).
+- HEUTIGES DATUM IST DER {CURRENT_DATE_STR} (Jahr: {CURRENT_YEAR} und folgende).
 - Beziehe alle Analysen strikt auf die HEUTIGE politische Realität und tagesaktuelle Führungsebenen.
 - Erwähne NIEMALS veraltete historische Akteure oder Ereignisse (z. B. Biden-Administration, Midterms 2024)!
 
@@ -543,8 +549,7 @@ ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT:
       "scenario_name": "Szenario Name", "probability_pct": 40, "timeframe": "1-3 Monate",
       "trigger_events": ["Auslöser 1"], "cascade_chain": ["Kaskade 1", "Kaskade 2"],
       "winners_long": [{{"asset": "Asset", "reason": "Grund"}}],
-      "losers_short": [{{"asset": "Asset", "reason": "Grund"}}],
-      "hedging_strategy": "Absicherung"
+      "losers_short": [{{"asset": "Asset", "reason": "Grund"}}]
     }}
   ],
 
