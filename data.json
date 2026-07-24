@@ -1,835 +1,137 @@
 {
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte geopolitische Spannungen mit potenziellen Marktauswirkungen",
-  "daily_executive_summary_simple": "Aktive Konfliktherde in kritischen Schifffahrtsrouten belasten globale Lieferketten und Rohstoffmärkte. Defensive Sektoren profitieren, während Tech-Aktien unter Druck geraten.",
+  "ampel_reason_simple": "Automatische Synthese fehlgeschlagen - Anzeige basiert auf Fallback-Daten.",
+  "daily_executive_summary_simple": "Die Pipeline konnte heute keine vollständige Analyse erzeugen. Bitte Actions-Logs prüfen.",
   "simple_key_takeaways": [
-    "Strategische Schifffahrtsrouten bleiben Hochrisikozonen",
-    "Rohstoffpreise zeigen erhöhte Volatilität",
-    "Defensive Sektoren wie Rüstung und Gold im Aufwind",
-    "Zentralbankpolitik wird durch geopolitische Unsicherheit beeinflusst"
+    "Synthese-Stufe (Mistral/Qwen) war nicht erreichbar oder lieferte kein valides JSON",
+    "0/142 RSS-Feeds wurden erfolgreich geladen",
+    "Dies ist ein automatisch generierter Platzhalter, keine echte Lagebeurteilung"
   ],
-  "daily_executive_summary": "Das globale Sicherheitsumfeld bleibt angespannt mit zwei aktiven Konfliktzonen in kritischen Schifffahrtsrouten. Die Straße von Hormus und Bab al-Mandab zeigen weiterhin hohe Eskalationsrisiken, wobei iranische Akteure durch Drohungen und begrenzte militärische Aktionen den Öltransport gefährden. Dies führt zu temporären Preisschocks bei Brent-Rohöl mit direkten Auswirkungen auf die Frachtraten und Containerumleitungen. Der Rüstungssektor verzeichnet eine deutliche Nachfragesteigerung, während technologieorientierte Märkte unter der erhöhten Unsicherheit leiden. Die geopolitische Fragmentierung verschärft sich weiter, was zu einer stagflationären Marktlage beiträgt. Zentralbanken stehen vor dem Dilemma, zwischen Inflationsbekämpfung und Wachstumsförderung abwägen zu müssen, wobei die US-Wahlkampfphase zusätzliche Volatilität in die Zinspolitik bringt.",
-  "market_regime": "Stagflationär / Geopolitische Fragmentierung",
-  "top_risk": "Lieferketten-Unterbrechung durch maritime Blockaderisiken",
+  "daily_executive_summary": "Lagebericht konnte nicht generiert werden, da die finale Synthese-Stufe fehlgeschlagen ist. Siehe pipeline_health für Details.",
+  "market_regime": "Unbekannt (Synthese fehlgeschlagen)",
+  "top_risk": "Datenpipeline-Ausfall",
   "geoscore": {
-    "current_score": 76,
-    "previous_48h": 72,
-    "trend": "steigend",
-    "key_contributors": [
-      "Maritime Spannungen +3",
-      "Rohstoffvolatilität +1"
-    ]
+    "current_score": 0,
+    "previous_48h": 0
   },
   "defcon_status": {
     "level": 3,
-    "label": "DEFCON 3",
-    "nuclear_risk_percent": 15,
-    "recent_changes": [
-      {
-        "change": "Erhöhte maritime Patrouillenaktivität",
-        "actor": "USA/NATO",
-        "timestamp": "2026-07-23T18:45:00Z"
-      }
-    ]
+    "label": "DEFCON 3 (Fallback)",
+    "nuclear_risk_percent": 0
   },
   "predictive_horizon": {
-    "base_case_summary": "In den nächsten 30-90 Tagen wird mit einer Fortsetzung der aktuellen Spannungen gerechnet, wobei begrenzte militärische Zwischenfälle in den Schifffahrtsrouten wahrscheinlich sind. Die Rohölpreise bleiben volatil, aber ein vollständiger Lieferstopp gilt als unwahrscheinlich. Die Zentralbanken werden voraussichtlich eine abwartende Haltung einnehmen, bis sich die geopolitische Lage stabilisiert.",
-    "base_case_probability_pct": 65,
+    "base_case_summary": "Keine Prognose verfügbar (Synthese fehlgeschlagen).",
+    "base_case_probability_pct": 0,
     "time_horizons": {
-      "30_days_tactic": "Begrenzte militärische Zwischenfälle in Schifffahrtsrouten mit temporären Preisschocks",
-      "90_days_macro": "Fortgesetzte geopolitische Fragmentierung mit stagflationären Tendenzen in den Märkten",
-      "360_days_structural": "Neuordnung globaler Lieferketten mit verstärkter Regionalisierung der Produktion"
+      "30_days_tactic": "--",
+      "90_days_macro": "--",
+      "360_days_structural": "--"
     },
     "black_swan_tail_risk": {
-      "risk_event": "Unbeabsichtigte Eskalation durch Fehlkalkulation in der Straße von Hormus mit temporärer Blockade",
-      "probability_pct": 8,
-      "market_impact": "Ölpreis springt auf 120-140 USD/Barrel, globale Rezessionsrisiken steigen signifikant"
+      "risk_event": "--",
+      "probability_pct": 0,
+      "market_impact": "--"
     },
-    "leading_indicators_to_watch": [
-      {
-        "indicator": "IRGC-Übungen in der Straße von Hormus",
-        "current_status": "Erhöhte Frequenz",
-        "critical_threshold": "Mehr als 3 Übungen pro Woche",
-        "monitoring_source": "Satellitenaufklärung, SIGINT"
-      },
-      {
-        "indicator": "Öltanker-Versicherungskosten",
-        "current_status": "120% des historischen Durchschnitts",
-        "critical_threshold": "200% des historischen Durchschnitts",
-        "monitoring_source": "Lloyd's Market Association"
-      },
-      {
-        "indicator": "Gold-Öl-Ratio",
-        "current_status": "22,5",
-        "critical_threshold": "25+",
-        "monitoring_source": "Bloomberg, CME"
-      }
-    ]
+    "leading_indicators_to_watch": []
   },
-  "historical_precedents": [
-    {
-      "current_event": "Maritime Spannungen in der Straße von Hormus 2026",
-      "historical_analog": "Tankerkrieg 1980-1988 (Iran-Irak-Krieg)",
-      "similarity_degree": "HOCH",
-      "historical_outcome": "Begrenzte militärische Aktionen mit temporären Ölpreisschocks, aber keine vollständige Blockade",
-      "key_divergence": "Heutige Abhängigkeit von globalen Just-in-Time-Lieferketten erhöht die Verwundbarkeit",
-      "lessons_learned": "Diplomatische Kanäle bleiben entscheidend, um Eskalation zu verhindern"
-    },
-    {
-      "current_event": "Geopolitisch induzierte Stagflation 2026",
-      "historical_analog": "Ölkrise 1973/74",
-      "similarity_degree": "MITTEL",
-      "historical_outcome": "Kombination aus hoher Inflation und stagnierendem Wachstum mit anschließender Rezession",
-      "key_divergence": "Heutige Zentralbanken verfügen über größere geldpolitische Werkzeuge, aber höhere Staatsverschuldung",
-      "lessons_learned": "Notwendigkeit von strategischen Reserven und Diversifizierung der Energiequellen"
-    }
-  ],
+  "historical_precedents": [],
   "graph_network": {
     "nodes": [
       {
         "id": "n1",
-        "label": "Straße von Hormus",
+        "label": "Strasse von Hormus",
         "group": "hotspot",
-        "val": 10,
-        "metadata": {
-          "type": "maritime_chokepoint",
-          "daily_oil_flow": "21 Mio. Barrel",
-          "escalation_risk": "Hoch"
-        }
+        "val": 10
       },
       {
         "id": "n2",
-        "label": "Iran / IRGC",
+        "label": "Iran & IRGC",
         "group": "actor",
-        "val": 8,
-        "metadata": {
-          "type": "state_actor",
-          "capabilities": [
-            "Marine",
-            "Drohnen",
-            "Cyber"
-          ],
-          "recent_activity": "Erhöhte Übungsfrequenz"
-        }
+        "val": 8
       },
       {
         "id": "n3",
         "label": "Brent Rohöl",
         "group": "commodity",
-        "val": 9,
-        "metadata": {
-          "current_price": "92,45 USD/Barrel",
-          "24h_change": "+3,2%",
-          "volatility_index": "38,7"
-        }
+        "val": 9
       },
       {
         "id": "n4",
-        "label": "Rüstungssektor (MSCI World Defense)",
+        "label": "Rüstungssektor",
         "group": "market",
-        "val": 7,
-        "metadata": {
-          "30d_performance": "+8,7%",
-          "relative_strength": "1,45"
-        }
+        "val": 7
       },
       {
         "id": "n5",
-        "label": "US Federal Reserve",
-        "group": "institution",
-        "val": 6,
-        "metadata": {
-          "current_policy": "Datenabhängig",
-          "next_meeting": "2026-09-17",
-          "geopolitical_sensitivity": "Hoch"
-        }
-      },
-      {
-        "id": "n6",
-        "label": "Gold (Spot)",
-        "group": "commodity",
-        "val": 7,
-        "metadata": {
-          "current_price": "2345 USD/Unze",
-          "24h_change": "+1,8%",
-          "safe_haven_demand": "Erhöht"
-        }
-      },
-      {
-        "id": "n7",
-        "label": "Tech-Sektor (NASDAQ-100)",
-        "group": "market",
-        "val": 5,
-        "metadata": {
-          "30d_performance": "-4,2%",
-          "geopolitical_exposure": "Hoch (Lieferketten)"
-        }
+        "label": "Lieferketten-Schock",
+        "group": "risk",
+        "val": 8
       }
     ],
     "links": [
       {
         "source": "n2",
         "target": "n1",
-        "label": "Drohung / Militärische Präsenz",
-        "value": 8,
-        "metadata": {
-          "type": "escalation",
-          "recent_events": [
-            "IRGC-Übung am 22.07.2026",
-            "Warnschüsse am 20.07.2026"
-          ]
-        }
+        "label": "Drohung"
       },
       {
         "source": "n1",
+        "target": "n5",
+        "label": "Blockaderisiko"
+      },
+      {
+        "source": "n5",
         "target": "n3",
-        "label": "Preisschock-Risiko",
-        "value": 9,
-        "metadata": {
-          "type": "economic_impact",
-          "probability": "65%"
-        }
+        "label": "Preisschock"
       },
       {
         "source": "n3",
         "target": "n4",
-        "label": "Sektorrotation",
-        "value": 7,
-        "metadata": {
-          "type": "market_movement",
-          "rationale": "Defensive Positionierung"
-        }
-      },
-      {
-        "source": "n3",
-        "target": "n5",
-        "label": "Inflationsdruck",
-        "value": 6,
-        "metadata": {
-          "type": "policy_impact",
-          "expected_reaction": "Zinserhöhungspause"
-        }
-      },
-      {
-        "source": "n5",
-        "target": "n7",
-        "label": "Zinsrisiko",
-        "value": 5,
-        "metadata": {
-          "type": "market_pressure",
-          "impact": "Negativ für Wachstumsaktien"
-        }
-      },
-      {
-        "source": "n1",
-        "target": "n6",
-        "label": "Safe-Haven-Flows",
-        "value": 7,
-        "metadata": {
-          "type": "capital_movement",
-          "volume": "3,2 Mrd. USD (letzte 7 Tage)"
-        }
-      },
-      {
-        "source": "n2",
-        "target": "n7",
-        "label": "Cyberrisiko",
-        "value": 4,
-        "metadata": {
-          "type": "indirect_threat",
-          "recent_activity": "Erhöhte DDoS-Angriffe auf Tech-Infrastruktur"
-        }
+        "label": "Marge"
       }
     ]
   },
   "conflict_hotspots": [
     {
-      "region": "Straße von Hormus",
+      "region": "Strasse von Hormus",
       "status_type": "AKTIV",
       "escalation_level": "HOCH",
-      "impact": "Öltransport (21 Mio. Barrel/Tag) & globale Frachtraten",
+      "impact": "Öltransport-Risiko",
       "lat": 26.56,
-      "lng": 56.25,
-      "key_actors": [
-        "Iran (IRGC)",
-        "USA (5. Flotte)",
-        "Saudi-Arabien"
-      ],
-      "recent_events": [
-        {
-          "event": "IRGC-Übung mit Drohnen und Schnellbooten",
-          "date": "2026-07-22",
-          "escalation_risk": "Mittel"
-        },
-        {
-          "event": "Warnschüsse auf Handelsschiff",
-          "date": "2026-07-20",
-          "escalation_risk": "Hoch"
-        }
-      ],
-      "monitoring_sources": [
-        "Satellitenaufklärung",
-        "AIS-Daten",
-        "OSINT"
-      ],
-      "contingency_plans": [
-        {
-          "actor": "USA/NATO",
-          "plan": "Begleitschutz für Tanker",
-          "activation_threshold": "Mehr als 3 Vorfälle/Woche"
-        }
-      ]
+      "lng": 56.25
     },
     {
       "region": "Bab al-Mandab",
       "status_type": "AKTIV",
       "escalation_level": "HOCH",
-      "impact": "Container-Umleitungen (12% des globalen Handels) & Suezkanal-Routen",
+      "impact": "Container-Umleitungen",
       "lat": 12.58,
-      "lng": 43.33,
-      "key_actors": [
-        "Huthi-Rebellen",
-        "Saudi-Arabien",
-        "Ägypten"
-      ],
-      "recent_events": [
-        {
-          "event": "Raketenangriff auf Frachter",
-          "date": "2026-07-18",
-          "escalation_risk": "Hoch"
-        },
-        {
-          "event": "Erhöhte Patrouillenaktivität",
-          "date": "2026-07-21",
-          "escalation_risk": "Niedrig"
-        }
-      ],
-      "monitoring_sources": [
-        "Maritime Domain Awareness",
-        "SIGINT",
-        "HUMINT"
-      ],
-      "contingency_plans": [
-        {
-          "actor": "Reedereien",
-          "plan": "Umleitung um das Kap der Guten Hoffnung",
-          "activation_threshold": "Versicherungskosten > 150% des Durchschnitts"
-        }
-      ]
-    },
-    {
-      "region": "Südchinesisches Meer",
-      "status_type": "LATENT",
-      "escalation_level": "MITTEL",
-      "impact": "Handelsrouten (30% des globalen Schiffsverkehrs) & Halbleiter-Lieferketten",
-      "lat": 15.87,
-      "lng": 114.25,
-      "key_actors": [
-        "China",
-        "USA",
-        "Vietnam",
-        "Philippinen"
-      ],
-      "recent_events": [
-        {
-          "event": "Erneute Stationierung von Küstenwachschiffen",
-          "date": "2026-07-15",
-          "escalation_risk": "Mittel"
-        }
-      ],
-      "monitoring_sources": [
-        "Satelliten",
-        "ELINT",
-        "Diplomatische Kanäle"
-      ]
+      "lng": 43.33
     }
   ],
-  "domestic_politics_analysis": [
-    {
-      "region_actor": "USA",
-      "key_event_trend": "Präsidentschaftswahlkampf & Zinspolitik",
-      "regime_stability": "STABIL",
-      "geopolitical_impact": "Erhöhte Marktvolatilität durch politische Unsicherheit",
-      "key_developments": [
-        {
-          "event": "Fed-Signal für Zinspause",
-          "date": "2026-07-20",
-          "impact": "Druck auf Tech-Aktien, Stärkung des USD"
-        },
-        {
-          "event": "Debatte über Handelsbeschränkungen mit China",
-          "date": "2026-07-18",
-          "impact": "Unsicherheit in Lieferketten"
-        }
-      ],
-      "election_risks": {
-        "policy_shift_probability": "45%",
-        "key_issues": [
-          "Handelspolitik",
-          "Militärausgaben",
-          "Energiesicherheit"
-        ]
-      }
-    },
-    {
-      "region_actor": "EU",
-      "key_event_trend": "Energiesicherheit & Verteidigungskooperation",
-      "regime_stability": "STABIL",
-      "geopolitical_impact": "Beschleunigte militärische Integration, aber Fragmentierung in der Energiepolitik",
-      "key_developments": [
-        {
-          "event": "Verabschiedung des Europäischen Verteidigungsfonds",
-          "date": "2026-07-15",
-          "impact": "Stärkung der Rüstungsindustrie"
-        },
-        {
-          "event": "Streit über Gasimporte aus dem Nahen Osten",
-          "date": "2026-07-22",
-          "impact": "Verzögerte Entscheidungen über LNG-Terminals"
-        }
-      ]
-    }
-  ],
-  "stress_testing_scenarios": [
-    {
-      "scenario_name": "Eskalation in der Straße von Hormus",
-      "probability_pct": 35,
-      "timeframe": "1-3 Monate",
-      "cascade_chain": [
-        "Begrenzte Blockade (50% der Kapazität)",
-        "Ölpreisschock (+40% auf 130 USD/Barrel)",
-        "Inflationsanstieg (+1,5 Prozentpunkte)",
-        "Zentralbankreaktion (Zinserhöhung um 50 Basispunkte)"
-      ],
-      "winners_long": [
-        {
-          "asset": "Gold",
-          "ticker": "XAU=F",
-          "expected_return": "+15-20%"
-        },
-        {
-          "asset": "Rüstung",
-          "ticker": "ITA (iShares U.S. Aerospace & Defense ETF)",
-          "expected_return": "+12-18%"
-        },
-        {
-          "asset": "Energie (Öl & Gas)",
-          "ticker": "XLE (Energy Select Sector SPDR Fund)",
-          "expected_return": "+20-25%"
-        }
-      ],
-      "losers_short": [
-        {
-          "asset": "Tech (Wachstumsaktien)",
-          "ticker": "QQQ (Invesco QQQ Trust)",
-          "expected_return": "-10-15%"
-        },
-        {
-          "asset": "Emerging Markets (ohne Rohstoffe)",
-          "ticker": "EEM (iShares MSCI Emerging Markets ETF)",
-          "expected_return": "-8-12%"
-        },
-        {
-          "asset": "Langfristige Staatsanleihen",
-          "ticker": "TLT (iShares 20+ Year Treasury Bond ETF)",
-          "expected_return": "-5-8%"
-        }
-      ],
-      "hedging_strategies": [
-        {
-          "strategy": "Gold-Allokation erhöhen",
-          "implementation": "5-10% des Portfolios"
-        },
-        {
-          "strategy": "Put-Optionen auf Tech-Indizes",
-          "implementation": "3-Monats-Puts mit 10% Out-of-the-Money"
-        }
-      ]
-    },
-    {
-      "scenario_name": "Deeskalation & Stabilisierung",
-      "probability_pct": 40,
-      "timeframe": "3-6 Monate",
-      "cascade_chain": [
-        "Diplomatische Lösung in der Straße von Hormus",
-        "Ölpreisrückgang (-20% auf 75 USD/Barrel)",
-        "Inflationsrückgang (-0,8 Prozentpunkte)",
-        "Zinssenkungserwartungen (25 Basispunkte)"
-      ],
-      "winners_long": [
-        {
-          "asset": "Tech (Wachstumsaktien)",
-          "ticker": "QQQ",
-          "expected_return": "+15-20%"
-        },
-        {
-          "asset": "Emerging Markets",
-          "ticker": "EEM",
-          "expected_return": "+10-15%"
-        },
-        {
-          "asset": "Industriemetalle",
-          "ticker": "DBB (Invesco DB Base Metals Fund)",
-          "expected_return": "+12-18%"
-        }
-      ],
-      "losers_short": [
-        {
-          "asset": "Gold",
-          "ticker": "XAU=F",
-          "expected_return": "-8-12%"
-        },
-        {
-          "asset": "Rüstung",
-          "ticker": "ITA",
-          "expected_return": "-5-10%"
-        },
-        {
-          "asset": "Energie (Öl & Gas)",
-          "ticker": "XLE",
-          "expected_return": "-15-20%"
-        }
-      ]
-    },
-    {
-      "scenario_name": "Globale Rezession durch Lieferkettenkollaps",
-      "probability_pct": 25,
-      "timeframe": "6-12 Monate",
-      "cascade_chain": [
-        "Gleichzeitige Blockaden in Hormus und Bab al-Mandab",
-        "Ölpreis auf 180 USD/Barrel",
-        "Globale Produktionsrückgänge (-3%)",
-        "Zentralbanken senken Zinsen auf 0%"
-      ],
-      "winners_long": [
-        {
-          "asset": "Gold",
-          "ticker": "XAU=F",
-          "expected_return": "+30-40%"
-        },
-        {
-          "asset": "Staatsanleihen (USA, DE)",
-          "ticker": "TLT, Bund-Futures",
-          "expected_return": "+15-20%"
-        }
-      ],
-      "losers_short": [
-        {
-          "asset": "Aktien (global)",
-          "ticker": "ACWI (iShares MSCI ACWI ETF)",
-          "expected_return": "-25-35%"
-        },
-        {
-          "asset": "Immobilien",
-          "ticker": "VNQ (Vanguard Real Estate ETF)",
-          "expected_return": "-20-30%"
-        }
-      ]
-    }
-  ],
+  "domestic_politics_analysis": [],
+  "stress_testing_scenarios": [],
   "stock_picks": {
-    "top_5_buys": [
-      {
-        "ticker": "RHM.DE",
-        "name": "Rheinmetall AG",
-        "sector": "Rüstung",
-        "reason": "Starker Auftragsbestand durch erhöhte Verteidigungsausgaben in Europa und NATO-Ländern. Geopolitische Spannungen sichern langfristige Nachfrage.",
-        "price_target": "420 EUR",
-        "time_horizon": "12 Monate",
-        "risk_level": "Mittel",
-        "catalysts": [
-          "EU-Verteidigungsfonds-Auszahlungen (Q4 2026)",
-          "Mögliche NATO-Aufstockungen"
-        ]
-      },
-      {
-        "ticker": "NOC",
-        "name": "Northrop Grumman Corporation",
-        "sector": "Rüstung",
-        "reason": "Führend in Cybersecurity und strategischen Waffensystemen. Profitiert von US-Verteidigungsbudget und globaler Aufrüstung.",
-        "price_target": "580 USD",
-        "time_horizon": "12 Monate",
-        "risk_level": "Mittel",
-        "catalysts": [
-          "US-Verteidigungsbudget 2027 (voraussichtlich +5%)",
-          "Erhöhte Nachfrage nach Drohnen und Hyperschallwaffen"
-        ]
-      },
-      {
-        "ticker": "BHP.AX",
-        "name": "BHP Group Ltd",
-        "sector": "Rohstoffe",
-        "reason": "Diversifizierter Rohstoffproduzent mit starker Position in Kupfer und Eisenerz. Profitiert von Lieferkettenumstellungen und Energiewende.",
-        "price_target": "52 AUD",
-        "time_horizon": "12 Monate",
-        "risk_level": "Hoch",
-        "catalysts": [
-          "Kupferdefizit durch Energiewende (2027 erwartet)",
-          "Stabile Eisenerznachfrage aus China"
-        ]
-      },
-      {
-        "ticker": "GLD",
-        "name": "SPDR Gold Trust",
-        "sector": "Edelmetalle",
-        "reason": "Klassischer Safe-Haven-Asset in Zeiten geopolitischer Unsicherheit und stagflationärer Tendenzen.",
-        "price_target": "2600 USD/Unze",
-        "time_horizon": "6 Monate",
-        "risk_level": "Niedrig",
-        "catalysts": [
-          "Zentralbankkäufe (insbesondere China, Russland)",
-          "Erhöhte Nachfrage aus Schwellenländern"
-        ]
-      },
-      {
-        "ticker": "EQNR.OL",
-        "name": "Equinor ASA",
-        "sector": "Energie",
-        "reason": "Norwegischer Energiekonzern mit starker Position in Öl, Gas und erneuerbaren Energien. Geringeres geopolitisches Risiko als Nahost-Produzenten.",
-        "price_target": "380 NOK",
-        "time_horizon": "12 Monate",
-        "risk_level": "Mittel",
-        "catalysts": [
-          "Stabile Gaslieferungen nach Europa",
-          "Investitionen in Offshore-Wind"
-        ]
-      }
-    ],
-    "flop_5_sells": [
-      {
-        "ticker": "TSLA",
-        "name": "Tesla Inc.",
-        "sector": "Automobil/Tech",
-        "reason": "Hohe Bewertung in einem zinsempfindlichen Sektor. Lieferkettenrisiken durch geopolitische Spannungen und Rohstoffpreise.",
-        "price_target": "180 USD",
-        "time_horizon": "6 Monate",
-        "risk_level": "Hoch",
-        "downside_risks": [
-          "Zinserhöhungspause der Fed könnte sich verzögern",
-          "Wettbewerbsdruck durch chinesische Hersteller"
-        ]
-      },
-      {
-        "ticker": "AMZN",
-        "name": "Amazon.com Inc.",
-        "sector": "E-Commerce/Cloud",
-        "reason": "Hohe Bewertung und Margendruck durch erhöhte Logistikkosten. Cloud-Geschäft könnte unter reduzierten IT-Ausgaben leiden.",
-        "price_target": "140 USD",
-        "time_horizon": "6 Monate",
-        "risk_level": "Mittel",
-        "downside_risks": [
-          "Rezessionsängste reduzieren Werbeausgaben",
-          "Regulatorische Risiken in der EU"
-        ]
-      },
-      {
-        "ticker": "META",
-        "name": "Meta Platforms Inc.",
-        "sector": "Soziale Medien/Tech",
-        "reason": "Hohe Abhängigkeit von Werbeeinnahmen in einem rezessionsanfälligen Umfeld. Geopolitische Spannungen könnten globale Werbebudgets reduzieren.",
-        "price_target": "380 USD",
-        "time_horizon": "6 Monate",
-        "risk_level": "Mittel",
-        "downside_risks": [
-          "TikTok-Wettbewerb in Schwellenländern",
-          "Regulatorische Herausforderungen in den USA"
-        ]
-      },
-      {
-        "ticker": "NIO",
-        "name": "NIO Inc.",
-        "sector": "Automobil/Tech",
-        "reason": "Hohe Bewertung und Abhängigkeit von chinesischen Lieferketten. Geopolitische Spannungen könnten Exporte und Produktion beeinträchtigen.",
-        "price_target": "6 USD",
-        "time_horizon": "6 Monate",
-        "risk_level": "Sehr Hoch",
-        "downside_risks": [
-          "Handelsbeschränkungen zwischen USA und China",
-          "Liquiditätsrisiken durch hohe Cash-Burn-Rate"
-        ]
-      },
-      {
-        "ticker": "ARKK",
-        "name": "ARK Innovation ETF",
-        "sector": "Tech/Wachstum",
-        "reason": "Hohe Konzentration auf unprofitables Wachstum in einem zinsempfindlichen Umfeld. Geopolitische Risiken erhöhen die Volatilität.",
-        "price_target": "30 USD",
-        "time_horizon": "6 Monate",
-        "risk_level": "Hoch",
-        "downside_risks": [
-          "Zinserhöhungspause könnte sich verzögern",
-          "Reduzierte Risikobereitschaft der Anleger"
-        ]
-      }
-    ],
-    "watchlist": [
-      {
-        "ticker": "SAIC",
-        "name": "Science Applications International Corp",
-        "sector": "Rüstung/IT",
-        "reason": "Profitiert von US-Verteidigungsausgaben und Cybersecurity-Nachfrage. Geringere Bewertung als größere Konkurrenten.",
-        "potential_upside": "+25-30%"
-      },
-      {
-        "ticker": "SLV",
-        "name": "iShares Silver Trust",
-        "sector": "Edelmetalle",
-        "reason": "Silber könnte Gold in einem stagflationären Umfeld outperformen, da es sowohl industriell als auch als Safe-Haven genutzt wird.",
-        "potential_upside": "+20-25%"
-      },
-      {
-        "ticker": "KMI",
-        "name": "Kinder Morgan Inc.",
-        "sector": "Energieinfrastruktur",
-        "reason": "Stabile Cashflows durch Pipeline-Netzwerk in Nordamerika. Geringeres geopolitisches Risiko als internationale Ölproduzenten.",
-        "potential_upside": "+15-20%"
-      }
-    ]
+    "top_5_buys": [],
+    "flop_5_sells": []
   },
-  "digital_and_monetary_sovereignty": [
-    {
-      "topic": "CBDC (Central Bank Digital Currency)",
-      "actor": "EZB / Fed / PBOC",
-      "trend": "Beschleunigte Einführung mit geopolitischer Dimension",
-      "systemic_impact": "Erhöhte finanzielle Überwachung und potenzielle Fragmentierung des globalen Zahlungsverkehrs",
-      "market_implication": "Flucht in physische Assets (Gold, Silber) und dezentrale Kryptowährungen",
-      "key_developments": [
-        {
-          "actor": "EZB",
-          "development": "Digitaler Euro startet in Pilotphase (Q4 2026)",
-          "impact": "Mögliche Kapitalverkehrskontrollen in Krisenzeiten"
-        },
-        {
-          "actor": "Fed",
-          "development": "FedNow wird mit CBDC-Funktionalitäten erweitert",
-          "impact": "Erhöhte Konkurrenz für kommerzielle Banken"
-        },
-        {
-          "actor": "China",
-          "development": "e-CNY wird für grenzüberschreitende Transaktionen mit BRICS-Ländern genutzt",
-          "impact": "Reduzierte Abhängigkeit vom USD"
-        }
-      ],
-      "risks": [
-        {
-          "risk": "Programmierbare Geldpolitik",
-          "description": "Zentralbanken könnten Ausgabenlimits oder Verfallsdaten für Geld einführen",
-          "probability": "Mittel"
-        },
-        {
-          "risk": "Finanzielle Repression",
-          "description": "Negativzinsen könnten leichter durchgesetzt werden",
-          "probability": "Hoch"
-        }
-      ]
-    },
-    {
-      "topic": "Kryptowährungen & DeFi",
-      "actor": "USA / EU / China",
-      "trend": "Regulatorische Zersplitterung mit geopolitischen Untertönen",
-      "systemic_impact": "Erhöhte Volatilität und Fragmentierung der Krypto-Märkte",
-      "market_implication": "Institutionelle Investoren bevorzugen regulierte Produkte (Bitcoin-ETFs, Stablecoins)",
-      "key_developments": [
-        {
-          "actor": "USA",
-          "development": "SEC klassifiziert Ethereum als Wertpapier (Q3 2026)",
-          "impact": "Reduzierte Liquidität für ETH, Shift zu Bitcoin"
-        },
-        {
-          "actor": "EU",
-          "development": "MiCA-Regulierung tritt in Kraft (2026)",
-          "impact": "Erhöhte Compliance-Kosten für Krypto-Börsen"
-        },
-        {
-          "actor": "China",
-          "development": "Blockchain-basierte Handelsplattform für BRICS-Länder",
-          "impact": "Alternative zum SWIFT-System"
-        }
-      ],
-      "risks": [
-        {
-          "risk": "Bann von Privacy-Coins",
-          "description": "Monero, Zcash könnten in westlichen Ländern verboten werden",
-          "probability": "Hoch"
-        },
-        {
-          "risk": "Stablecoin-Run",
-          "description": "Tether oder USDC könnten in einer Krise unter Liquiditätsdruck geraten",
-          "probability": "Mittel"
-        }
-      ]
-    },
-    {
-      "topic": "SWIFT-Alternativen",
-      "actor": "BRICS / EU / China",
-      "trend": "Aufbau paralleler Zahlungssysteme zur Reduzierung der USD-Abhängigkeit",
-      "systemic_impact": "Langfristige Erosion der USD-Dominanz im internationalen Handel",
-      "market_implication": "Erhöhte Volatilität in Devisenmärkten, insbesondere USD-Paare",
-      "key_developments": [
-        {
-          "actor": "BRICS",
-          "development": "BRICS-Pay-System geht live (2026)",
-          "impact": "Handel zwischen Mitgliedsländern wird in lokalen Währungen abgewickelt"
-        },
-        {
-          "actor": "EU",
-          "development": "INSTEX 2.0 für Iran-Handel wird erweitert",
-          "impact": "Reduzierte Effektivität von US-Sanktionen"
-        },
-        {
-          "actor": "China",
-          "development": "CIPS (Cross-Border Interbank Payment System) wird mit e-CNY verknüpft",
-          "impact": "Alternative zu SWIFT für asiatische Handelspartner"
-        }
-      ],
-      "risks": [
-        {
-          "risk": "Fragmentierung des globalen Zahlungsverkehrs",
-          "description": "Erhöhte Transaktionskosten und Verzögerungen im internationalen Handel",
-          "probability": "Hoch"
-        },
-        {
-          "risk": "Währungskriege",
-          "description": "Wettlauf um Abwertung zur Steigerung der Exportwettbewerbsfähigkeit",
-          "probability": "Mittel"
-        }
-      ]
-    }
-  ],
-  "game_theory_analysis": {
-    "status": "KEINE DATEN VERFÜGBAR",
-    "last_update": "2026-07-24T00:00:00Z",
-    "recommended_actions": [
-      "Überwachung von Akteursstrategien durch OSINT und diplomatische Kanäle",
-      "Szenarioanalyse mit spieltheoretischen Modellen bei Verfügbarkeit neuer Daten",
-      "Berücksichtigung von Fehlkalkulationsrisiken in der Eskalationsdynamik"
-    ],
-    "key_actors_to_monitor": [
-      {
-        "actor": "Iran (IRGC)",
-        "strategy_hypothesis": "Begrenzte Eskalation zur Erhöhung des geopolitischen Gewichts",
-        "red_lines": [
-          "Direkter Angriff auf US-Schiffe",
-          "Schließung der Straße von Hormus"
-        ]
-      },
-      {
-        "actor": "USA (Biden-Administration)",
-        "strategy_hypothesis": "Abschreckung durch militärische Präsenz ohne direkte Konfrontation",
-        "red_lines": [
-          "Angriff auf US-Bürger oder -Interessen",
-          "Iranische Nuklearwaffenentwicklung"
-        ]
-      },
-      {
-        "actor": "China (Xi Jinping)",
-        "strategy_hypothesis": "Nutzung der Krise zur Stärkung der eigenen Position im Südchinesischen Meer",
-        "red_lines": [
-          "US-Militärpräsenz in Taiwan-Straße",
-          "Sanktionen gegen chinesische Tech-Firmen"
-        ]
-      }
+  "digital_and_monetary_sovereignty": [],
+  "timestamp": "24.07.2026 - 18:22 UTC",
+  "pipeline_health": {
+    "feeds_loaded": 0,
+    "feeds_total": 142,
+    "groq_filter_ok": false,
+    "deepseek_ok": false,
+    "synthesizer_used": "mistral",
+    "json_parse_ok": false,
+    "errors": [
+      "[Feed-Ingestion] 0 Feeds geladen! Prüfe Netzwerk/Timeouts/User-Agent-Blocking.",
+      "[Groq-Filter] Kein Groq-Client oder leerer Text -> ungefiltert weiterverwendet.",
+      "[Groq-Filter] filtered_text ist leer - nachfolgende Stufen bekommen keinen Kontext.",
+      "[DeepSeek] Leerer Kontext übergeben.",
+      "[JSON-Parse] Erster Versuch fehlgeschlagen (Invalid control character at: line 10 column 688 (char 1351)), starte Reparatur...",
+      "[JSON-Parse] Reparatur ebenfalls fehlgeschlagen (Invalid control character at: line 10 column 688 (char 1351)). Nutze Notfall-Fallback.",
+      "[Synthese] Kein verwertbares JSON von Mistral/Qwen erhalten. Nutze vollständigen Notfall-Fallback."
     ]
-  },
-  "timestamp": "24.07.2026 - 18:00 UTC"
+  }
 }
