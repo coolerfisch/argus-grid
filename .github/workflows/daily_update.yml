@@ -2,8 +2,8 @@ name: ARGUS GRID Daily Update
 
 on:
   schedule:
-    - cron: '0 */4 * * *'  # Läuft alle 4 Stunden
-  workflow_dispatch:        # Manueller Start-Button auf GitHub
+    - cron: '0 6 * * *'   # Läuft 1x täglich um 06:00 UTC (Früh-Morgens-Briefing)
+  workflow_dispatch:       # Manueller Start-Button in GitHub Actions bleibt aktiv
 
 jobs:
   build-and-update:
@@ -39,11 +39,11 @@ jobs:
         run: |
           python update_dashboard.py
 
-      - name: Ergebnisse (data.json) committen und pushen
+      - name: Ergebnisse (JSON-Dateien) committen und pushen
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add data.json
+          git add *.json
           git status
           git diff-index --quiet HEAD || git commit -m "auto: update ARGUS GRID intelligence briefing [skip ci]"
           git push
