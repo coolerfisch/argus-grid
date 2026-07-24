@@ -4,39 +4,38 @@
   "defcon_level": 3,
   "defcon": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte geopolitische Spannungen mit regionalen Eskalationsrisiken, aber keine unmittelbare globale Bedrohung.",
-  "daily_executive_summary": "Die globale Sicherheitslage bleibt angespannt, jedoch ohne akute Eskalation zu einem großflächigen Konflikt. Regional konzentrieren sich die Spannungen auf Osteuropa (Ukraine-Konflikt), den Nahen Osten (Israel-Hamas-Krieg, Iran-Israel-Dynamik) und Ostasien (Taiwan-Frage, Nordkorea). Militärische Aktivitäten in diesen Regionen zeigen keine signifikante Deeskalation, aber auch keine unmittelbare Ausweitung. Wirtschaftliche und diplomatische Maßnahmen (Sanktionen, Waffenlieferungen) halten die Lage in einem labilen Gleichgewicht. Cyberangriffe und Desinformationskampagnen nehmen zu, was die digitale Souveränität vieler Staaten herausfordert. Die Wahrscheinlichkeit einer direkten militärischen Konfrontation zwischen Großmächten bleibt niedrig, jedoch sind lokale Eskalationen mit globalen Auswirkungen nicht auszuschließen.",
-  "daily_executive_summary_simple": "Die Welt ist aktuell nicht in einem großen Krieg, aber es gibt mehrere gefährliche Konflikte. Besonders kritisch sind die Ukraine, der Nahe Osten und Ostasien. Die Lage ist unsicher, aber eine direkte Konfrontation zwischen den USA, China oder Russland gilt als unwahrscheinlich.",
+  "ampel_reason_simple": "Erhöhte geopolitische Spannungen mit moderatem Eskalationsrisiko, aber keine unmittelbare Kriegsgefahr",
+  "daily_executive_summary": "Die globale Sicherheitslage bleibt angespannt, jedoch ohne akute Eskalation zu einem großflächigen Konflikt. Die Hauptrisikofaktoren umfassen anhaltende Spannungen im Nahen Osten, insbesondere zwischen Israel und dem Iran sowie dessen Stellvertretern, sowie die fortgesetzte militärische Aktivität Russlands in der Ukraine. Die NATO zeigt weiterhin geschlossene Unterstützung für die Ukraine, während China seine militärische Präsenz im Südchinesischen Meer ausbaut. Wirtschaftliche Sanktionen und Gegenmaßnahmen führen zu einer Fragmentierung globaler Lieferketten, was langfristig die globale Wirtschaftsstabilität beeinträchtigen könnte. Cyberangriffe auf kritische Infrastrukturen nehmen zu, bleiben jedoch unterhalb der Schwelle eines hybriden Krieges. Die innenpolitische Lage in mehreren Schlüsselstaaten (USA, EU, China) ist stabil, aber durch Polarisierung und soziale Spannungen belastet.",
+  "daily_executive_summary_simple": "Die Welt ist aktuell nicht in einem Krieg, aber es gibt viele Spannungen. Besonders im Nahen Osten und in der Ukraine gibt es Kämpfe. Die NATO unterstützt die Ukraine, und China wird im Südchinesischen Meer aktiver. Cyberangriffe und wirtschaftliche Sanktionen belasten die globale Stabilität. Innenpolitisch gibt es in einigen Ländern starke Spannungen.",
   "key_takeaways": [
-    "Regionale Konflikte (Ukraine, Naher Osten, Taiwan) dominieren die Sicherheitslage, ohne dass eine globale Eskalation unmittelbar droht.",
-    "Militärische Aufrüstung und hybride Kriegsführung (Cyber, Desinformation) nehmen zu und destabilisieren die internationale Ordnung.",
-    "Diplomatische und wirtschaftliche Gegenmaßnahmen (Sanktionen, Bündnisse) verhindern derzeit eine weitere Verschärfung, lösen die Konflikte aber nicht."
+    "Anhaltende militärische Konflikte im Nahen Osten und in der Ukraine ohne unmittelbare Deeskalation",
+    "Zunehmende Cyberbedrohungen und hybride Kriegsführung unterhalb der Schwelle konventioneller Kriege",
+    "Wirtschaftliche Fragmentierung durch Sanktionen und Gegenmaßnahmen mit langfristigen globalen Auswirkungen"
   ],
   "predictive_horizon": [
     {
       "timeframe": "30 Tage (Taktisch)",
-      "forecast": "Die aktuellen Konfliktherde bleiben bestehen, mit moderatem Risiko einer lokalen Eskalation (z. B. israelische Militäroperation im Libanon, ukrainische Gegenoffensive). Eine direkte Konfrontation zwischen NATO und Russland oder USA und China gilt als unwahrscheinlich, aber nicht ausgeschlossen. Cyberangriffe und Desinformationskampagnen werden zunehmen.",
-      "probability": "Mittel",
+      "forecast": "Die Spannungen im Nahen Osten könnten sich weiter verschärfen, insbesondere durch mögliche direkte Konfrontationen zwischen Israel und dem Iran. In der Ukraine wird mit einer Fortsetzung der russischen Offensivbemühungen gerechnet, während die NATO ihre Unterstützung aufrechterhält. Cyberangriffe auf westliche und russische Ziele werden voraussichtlich zunehmen, bleiben aber begrenzt. Die wirtschaftliche Fragmentierung wird sich fortsetzen, ohne jedoch zu einem vollständigen Zusammenbruch globaler Lieferketten zu führen.",
+      "probability": "Hoch",
       "early_warning_indicators": [
-        "Zunahme von Artillerie- und Drohnenangriffen in der Ukraine",
-        "Iranische Raketenangriffe auf Israel oder US-Stützpunkte im Nahen Osten",
-        "Chinesische Militärübungen in der Taiwanstraße mit Blockade-Szenarien",
-        "Erfolgreiche Cyberangriffe auf kritische Infrastruktur (Energie, Finanzen)"
+        "Direkte militärische Angriffe zwischen Israel und dem Iran",
+        "Erhebliche Eskalation der Cyberangriffe auf kritische Infrastrukturen",
+        "Ausweitung der NATO-Unterstützung für die Ukraine (z. B. Lieferung von Langstreckenwaffen)"
       ]
     }
   ],
   "historical_precedents": [
     {
-      "event": "Kubakrise (1962)",
-      "period": "13 Tage (Oktober 1962)",
-      "similarity": "Hohe Spannungen zwischen Großmächten mit nuklearer Bedrohung, aber letztliche Deeskalation durch Diplomatie. Unterschied: Keine direkte militärische Konfrontation, sondern Stellvertreterkriege.",
-      "takeaway": "Diplomatische Kanäle und klare rote Linien können eine Eskalation verhindern, selbst in hochriskanten Phasen."
+      "event": "Kalter Krieg (1947–1991)",
+      "period": "20. Jahrhundert",
+      "similarity": "Mittel bis Hoch (Proxy-Konflikte, ideologische Konfrontation, wirtschaftliche Sanktionen)",
+      "takeaway": "Langfristige geopolitische Spannungen können ohne direkten Krieg bestehen, führen jedoch zu anhaltender Instabilität und Fragmentierung."
     },
     {
-      "event": "Vorkriegszeit Erster Weltkrieg (1914)",
-      "period": "Juli-Krise 1914",
-      "similarity": "Komplexes Bündnissystem und lokale Konflikte (Attentat von Sarajevo) führen zu globaler Eskalation. Unterschied: Aktuell keine vergleichbare Bündnisautomatik, aber ähnliche Risiken durch Fehleinschätzungen.",
-      "takeaway": "Fehleinschätzungen und starre Bündnisverpflichtungen können lokale Konflikte zu globalen Kriegen ausweiten."
+      "event": "Kuba-Krise (1962)",
+      "period": "20. Jahrhundert",
+      "similarity": "Niedrig bis Mittel (hohe Eskalationsgefahr, aber diplomatische Deeskalation)",
+      "takeaway": "Direkte Kommunikation und diplomatische Kanäle sind entscheidend, um eine Eskalation zu vermeiden."
     }
   ],
   "conflict_hotspots": [
@@ -46,35 +45,26 @@
       "lon": 31.1656,
       "lng": 31.1656,
       "intensity": "ROT",
-      "description": "Anhaltende Kämpfe um Donezk und Luhansk mit hohen Verlusten auf beiden Seiten. Russische Truppen versuchen, Geländegewinne zu konsolidieren, während die Ukraine auf westliche Waffenlieferungen angewiesen ist.",
-      "military_activity": "Artillerie- und Drohnenangriffe, Minenkrieg, begrenzte Panzergefechte."
+      "description": "Anhaltende schwere Kämpfe zwischen russischen und ukrainischen Streitkräften, insbesondere in den Regionen Donezk und Luhansk. Russland führt Offensivoperationen durch, während die Ukraine auf westliche Waffenlieferungen angewiesen ist.",
+      "military_activity": "Hoch (Artillerie, Luftangriffe, Bodentruppen)"
     },
     {
-      "name": "Israel-Gaza-Grenze",
+      "name": "Gaza/Israel",
       "lat": 31.5,
       "lon": 34.4667,
       "lng": 34.4667,
       "intensity": "ROT",
-      "description": "Anhaltende Raketenangriffe aus Gaza und israelische Luftschläge. Risiko einer Ausweitung auf den Libanon (Hisbollah) oder den Iran.",
-      "military_activity": "Raketenbeschuss, Luftangriffe, Spezialeinsätze."
+      "description": "Fortgesetzte militärische Auseinandersetzungen zwischen Israel und der Hamas, mit regelmäßigen Raketenangriffen und israelischen Gegenoperationen. Risiko einer regionalen Ausweitung durch Einbindung des Iran und der Hisbollah.",
+      "military_activity": "Hoch (Raketenangriffe, Luftschläge, Bodeneinsätze)"
     },
     {
-      "name": "Taiwanstraße",
-      "lat": 23.6978,
-      "lon": 120.9605,
-      "lng": 120.9605,
+      "name": "Südchinesisches Meer",
+      "lat": 12.0,
+      "lon": 114.0,
+      "lng": 114.0,
       "intensity": "GELB",
-      "description": "Chinesische Militärübungen und US-Marinepräsenz erhöhen die Spannungen. Keine unmittelbare Invasion Taiwans, aber Risiko von Zwischenfällen.",
-      "military_activity": "Marine- und Luftmanöver, Aufklärungseinsätze."
-    },
-    {
-      "name": "Rotes Meer (Huthi-Angriffe)",
-      "lat": 15.0,
-      "lon": 42.0,
-      "lng": 42.0,
-      "intensity": "GELB",
-      "description": "Huthi-Rebellen greifen Handelsschiffe an, was die Schifffahrtsrouten gefährdet. US-geführte Koalition patrouilliert zur Sicherung.",
-      "military_activity": "Raketen- und Drohnenangriffe auf Schiffe, Marineeinsätze."
+      "description": "China baut seine militärische Präsenz in umstrittenen Gewässern aus, mit regelmäßigen Manövern und Konfrontationen mit US-Schiffen sowie den Streitkräften der Philippinen und Vietnams. Keine unmittelbare Eskalation, aber hohes Risiko von Zwischenfällen.",
+      "military_activity": "Mittel (Marine- und Luftmanöver, Aufklärung)"
     }
   ],
   "graph_network": {
@@ -83,57 +73,50 @@
         "id": "USA",
         "label": "USA",
         "name": "Vereinigte Staaten",
-        "group": "Großmacht",
+        "group": "NATO",
         "val": 10
-      },
-      {
-        "id": "China",
-        "label": "China",
-        "name": "Volksrepublik China",
-        "group": "Großmacht",
-        "val": 9
       },
       {
         "id": "Russland",
         "label": "Russland",
         "name": "Russische Föderation",
-        "group": "Großmacht",
+        "group": "Ostblock",
+        "val": 9
+      },
+      {
+        "id": "China",
+        "label": "China",
+        "name": "Volksrepublik China",
+        "group": "BRICS",
         "val": 8
       },
       {
         "id": "Ukraine",
         "label": "Ukraine",
         "name": "Ukraine",
-        "group": "Konfliktpartei",
+        "group": "NATO-Partner",
         "val": 7
-      },
-      {
-        "id": "Israel",
-        "label": "Israel",
-        "name": "Israel",
-        "group": "Konfliktpartei",
-        "val": 6
       },
       {
         "id": "Iran",
         "label": "Iran",
-        "name": "Iran",
-        "group": "Regionalmacht",
+        "name": "Islamische Republik Iran",
+        "group": "Achse des Widerstands",
+        "val": 6
+      },
+      {
+        "id": "Israel",
+        "label": "Israel",
+        "name": "Staat Israel",
+        "group": "NATO-Partner",
         "val": 6
       },
       {
         "id": "NATO",
         "label": "NATO",
         "name": "NATO",
-        "group": "Bündnis",
+        "group": "Militärbündnis",
         "val": 8
-      },
-      {
-        "id": "Taiwan",
-        "label": "Taiwan",
-        "name": "Taiwan",
-        "group": "Konfliktpartei",
-        "val": 5
       }
     ],
     "edges": [
@@ -142,56 +125,49 @@
         "to": "Ukraine",
         "source": "USA",
         "target": "Ukraine",
-        "label": "Militärhilfe, Sanktionen gegen Russland"
-      },
-      {
-        "from": "USA",
-        "to": "Israel",
-        "source": "USA",
-        "target": "Israel",
-        "label": "Militärhilfe, diplomatische Unterstützung"
-      },
-      {
-        "from": "USA",
-        "to": "China",
-        "source": "USA",
-        "target": "China",
-        "label": "Handelskonflikt, Taiwan-Frage"
-      },
-      {
-        "from": "China",
-        "to": "Russland",
-        "source": "China",
-        "target": "Russland",
-        "label": "Wirtschaftliche Zusammenarbeit, diplomatische Unterstützung"
+        "label": "Militärhilfe"
       },
       {
         "from": "Russland",
         "to": "Ukraine",
         "source": "Russland",
         "target": "Ukraine",
-        "label": "Krieg, territoriale Ansprüche"
+        "label": "Militärische Aggression"
+      },
+      {
+        "from": "USA",
+        "to": "Israel",
+        "source": "USA",
+        "target": "Israel",
+        "label": "Militärhilfe"
       },
       {
         "from": "Iran",
         "to": "Israel",
         "source": "Iran",
         "target": "Israel",
-        "label": "Feindseligkeiten, Unterstützung für Hisbollah/Hamas"
+        "label": "Proxy-Konflikt (Hisbollah, Hamas)"
+      },
+      {
+        "from": "China",
+        "to": "Russland",
+        "source": "China",
+        "target": "Russland",
+        "label": "Strategische Partnerschaft"
+      },
+      {
+        "from": "USA",
+        "to": "China",
+        "source": "USA",
+        "target": "China",
+        "label": "Handelskonflikt, militärische Konkurrenz"
       },
       {
         "from": "NATO",
         "to": "Russland",
         "source": "NATO",
         "target": "Russland",
-        "label": "Osterweiterung, Militärübungen"
-      },
-      {
-        "from": "China",
-        "to": "Taiwan",
-        "source": "China",
-        "target": "Taiwan",
-        "label": "Territoriale Ansprüche, Militärübungen"
+        "label": "Konfrontation"
       }
     ],
     "links": [
@@ -200,138 +176,115 @@
         "to": "Ukraine",
         "source": "USA",
         "target": "Ukraine",
-        "label": "Militärhilfe, Sanktionen gegen Russland"
-      },
-      {
-        "from": "USA",
-        "to": "Israel",
-        "source": "USA",
-        "target": "Israel",
-        "label": "Militärhilfe, diplomatische Unterstützung"
-      },
-      {
-        "from": "USA",
-        "to": "China",
-        "source": "USA",
-        "target": "China",
-        "label": "Handelskonflikt, Taiwan-Frage"
-      },
-      {
-        "from": "China",
-        "to": "Russland",
-        "source": "China",
-        "target": "Russland",
-        "label": "Wirtschaftliche Zusammenarbeit, diplomatische Unterstützung"
+        "label": "Militärhilfe"
       },
       {
         "from": "Russland",
         "to": "Ukraine",
         "source": "Russland",
         "target": "Ukraine",
-        "label": "Krieg, territoriale Ansprüche"
+        "label": "Militärische Aggression"
+      },
+      {
+        "from": "USA",
+        "to": "Israel",
+        "source": "USA",
+        "target": "Israel",
+        "label": "Militärhilfe"
       },
       {
         "from": "Iran",
         "to": "Israel",
         "source": "Iran",
         "target": "Israel",
-        "label": "Feindseligkeiten, Unterstützung für Hisbollah/Hamas"
+        "label": "Proxy-Konflikt (Hisbollah, Hamas)"
+      },
+      {
+        "from": "China",
+        "to": "Russland",
+        "source": "China",
+        "target": "Russland",
+        "label": "Strategische Partnerschaft"
+      },
+      {
+        "from": "USA",
+        "to": "China",
+        "source": "USA",
+        "target": "China",
+        "label": "Handelskonflikt, militärische Konkurrenz"
       },
       {
         "from": "NATO",
         "to": "Russland",
         "source": "NATO",
         "target": "Russland",
-        "label": "Osterweiterung, Militärübungen"
-      },
-      {
-        "from": "China",
-        "to": "Taiwan",
-        "source": "China",
-        "target": "Taiwan",
-        "label": "Territoriale Ansprüche, Militärübungen"
+        "label": "Konfrontation"
       }
     ]
   },
   "domestic_policy_matrix": [
     {
-      "region": "Europa",
-      "dynamics": "Zunehmende Militärhaushalte, aber politische Fragmentierung (z. B. Ungarn, Slowakei). Energieabhängigkeit von Russland reduziert, aber wirtschaftliche Belastungen durch Sanktionen.",
+      "region": "USA",
+      "dynamics": "Polarisierung zwischen Demokraten und Republikanern, innenpolitische Spannungen durch Wahlen 2024, aber stabile Regierungsführung.",
       "stability": "GELB",
-      "spillover": "Ukraine-Krieg führt zu Migration und wirtschaftlicher Unsicherheit, aber keine unmittelbare Destabilisierung."
+      "spillover": "Innenpolitische Instabilität könnte außenpolitische Entscheidungen beeinflussen (z. B. Unterstützung für die Ukraine)."
     },
     {
-      "region": "Naher Osten",
-      "dynamics": "Instabilität durch Israel-Hamas-Krieg, iranische Einflussnahme und schwache Staaten (Libanon, Jemen). Wirtschaftliche Krisen verschärfen soziale Spannungen.",
-      "stability": "ROT",
-      "spillover": "Risiko von Flüchtlingsbewegungen nach Europa und regionalen Kriegen (z. B. Israel-Iran)."
+      "region": "EU",
+      "dynamics": "Stabile politische Lage, aber wirtschaftliche Herausforderungen durch Energiekrise und Inflation. Rechtspopulistische Parteien gewinnen an Einfluss.",
+      "stability": "GELB",
+      "spillover": "Wirtschaftliche Instabilität könnte die Unterstützung für die Ukraine schwächen."
     },
     {
-      "region": "Ostasien",
-      "dynamics": "Militärische Aufrüstung (China, Nordkorea), aber wirtschaftliche Verflechtungen dämpfen Eskalationsrisiko. Taiwan-Frage bleibt zentraler Konfliktpunkt.",
+      "region": "Russland",
+      "dynamics": "Autoritäre Stabilität unter Putin, aber wirtschaftliche Belastung durch Sanktionen und militärische Verluste. Keine akute Bedrohung für das Regime.",
       "stability": "GELB",
-      "spillover": "Handelskonflikte und militärische Zwischenfälle könnten globale Lieferketten stören."
+      "spillover": "Militärische Niederlagen könnten zu innenpolitischen Unruhen führen."
+    },
+    {
+      "region": "China",
+      "dynamics": "Stabile Einparteienherrschaft, aber wirtschaftliche Herausforderungen durch Immobilienkrise und Demografie. Keine akute Instabilität.",
+      "stability": "GELB",
+      "spillover": "Wirtschaftliche Probleme könnten die militärische Expansion bremsen."
     }
   ],
   "stress_test_scenarios": [
     {
-      "scenario": "Russischer Sieg in der Ukraine mit NATO-Intervention",
-      "impact": "Direkte Konfrontation NATO-Russland, nukleare Drohungen, globale Wirtschaftskrise.",
-      "probability": "Niedrig",
-      "mitigation": "Diplomatische Deeskalation, klare rote Linien, wirtschaftliche Vorbereitung."
+      "scenario": "Direkter militärischer Konflikt zwischen Israel und dem Iran",
+      "impact": "Regionale Ausweitung des Konflikts, mögliche Einbindung der USA und anderer regionaler Akteure. Wirtschaftliche Verwerfungen durch Unterbrechung der Ölversorgung.",
+      "probability": "Mittel",
+      "mitigation": "Diplomatische Deeskalation, internationale Vermittlung, gezielte Sanktionen gegen Aggressoren."
     },
     {
-      "scenario": "Israelischer Angriff auf iranische Atomanlagen",
-      "impact": "Regionaler Krieg (Iran, Israel, Hisbollah), Ölpreisschock, globale Rezession.",
-      "probability": "Mittel",
-      "mitigation": "Diplomatischer Druck, Sicherheitsgarantien für Israel, Vorbereitung auf Ölpreisschocks."
+      "scenario": "Ukrainischer Zusammenbruch unter russischer Offensive",
+      "impact": "Verstärkte NATO-Involvierung, mögliche direkte Konfrontation mit Russland. Globale wirtschaftliche Instabilität durch Sanktionen und Gegenmaßnahmen.",
+      "probability": "Niedrig bis Mittel",
+      "mitigation": "Verstärkte militärische Unterstützung für die Ukraine, diplomatische Verhandlungen zur Deeskalation."
     },
     {
-      "scenario": "Chinesische Blockade Taiwans",
-      "impact": "Handelskrieg, Unterbrechung von Halbleiterlieferketten, militärische Eskalation mit USA.",
-      "probability": "Mittel",
-      "mitigation": "Wirtschaftliche Diversifizierung, militärische Abschreckung, diplomatische Verhandlungen."
+      "scenario": "Cyberangriff auf kritische Infrastruktur (z. B. Stromnetze in den USA oder Europa)",
+      "impact": "Kurzfristige wirtschaftliche und soziale Verwerfungen, mögliche militärische Gegenmaßnahmen. Langfristige Investitionen in Cybersicherheit.",
+      "probability": "Hoch",
+      "mitigation": "Stärkung der Cybersicherheit, internationale Abkommen zur Eindämmung von Cyberkriegen."
     }
   ],
   "equity_rotation": {
-    "buys": [
-      {
-        "sector": "Rüstung",
-        "reason": "Erhöhte Militärhaushalte und anhaltende Konflikte stützen die Nachfrage."
-      },
-      {
-        "sector": "Energie",
-        "reason": "Geopolitische Risiken im Nahen Osten und Europa erhöhen die Volatilität der Öl- und Gaspreise."
-      },
-      {
-        "sector": "Cybersicherheit",
-        "reason": "Zunahme von Cyberangriffen und staatlich geförderter Hacking-Aktivitäten."
-      }
-    ],
-    "sells": [
-      {
-        "sector": "Luxusgüter",
-        "reason": "Wirtschaftliche Unsicherheit in China und Europa dämpft die Nachfrage."
-      },
-      {
-        "sector": "Reisebranche",
-        "reason": "Geopolitische Risiken und wirtschaftliche Belastungen reduzieren die Reisebereitschaft."
-      }
-    ]
+    "buys": [],
+    "sells": []
   },
   "digital_sovereignty_index": {
-    "score": 65,
-    "status": "Eingeschränkt. Zunehmende Abhängigkeit von ausländischer Technologie (Halbleiter, Cloud-Dienste) und wachsende Cyberbedrohungen gefährden die digitale Souveränität vieler Staaten."
+    "score": 68,
+    "status": "Mittel (zunehmende Fragmentierung, aber noch keine vollständige Entkopplung)"
   },
-  "timestamp": "2026-07-24T23:09:13.994646+00:00",
+  "timestamp": "2026-07-24T23:15:28.905802+00:00",
   "game_theory_analysis": "Konsens-Debatte mit reduzierten Daten durchgeführt.",
   "deepseek_analysis": "Konsens-Debatte mit reduzierten Daten durchgeführt.",
   "game_theory": "Konsens-Debatte mit reduzierten Daten durchgeführt.",
   "pipeline_health": {
-    "timestamp": "2026-07-24T23:07:19.571746+00:00",
+    "timestamp": "2026-07-24T23:13:23.457697+00:00",
     "feeds_total": 230,
-    "feeds_successful": 117,
-    "feeds_failed": 113,
+    "feeds_successful": 111,
+    "feeds_failed": 119,
     "bakers_active": [
       "Groq (Llama-3.3)",
       "Swarm-Partner (qwen-2.5-72b-instruct)"
