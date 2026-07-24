@@ -1,249 +1,427 @@
 {
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Begrenzte militärische Provokation Russlands im Baltikum mit hohem Eskalationsrisiko und unklarer NATO-Reaktionsschwelle.",
-  "daily_executive_summary_simple": "Russland testet mit einer militärischen Übung im Baltikum die NATO-Entschlossenheit, während die Allianz intern über die Art der Reaktion debattiert. Die Märkte reagieren nervös mit Flucht in sichere Anlagen wie Gold, während die geopolitische Spannung die Energiepreise volatil hält.",
+  "ampel_reason_simple": "Erhöhte geopolitische Spannungen und Marktvolatilität bei unsicherer Datenlage durch API-Ausfälle.",
+  "daily_executive_summary_simple": "Die Weltlage ist geprägt von anhaltenden geopolitischen Risiken, insbesondere im Nahen Osten, und einer fragilen Marktstabilität. API-Ausfälle bei Schlüsselinformationsquellen erschweren die Echtzeitbewertung, während Rohstoffpreise und Finanzmärkte auf Eskalationsrisiken reagieren.",
   "simple_key_takeaways": [
-    "Russland führt eine begrenzte militärische Aktion im Baltikum durch, die als Test für die NATO-Glaubwürdigkeit gilt.",
-    "Die NATO steht vor der Entscheidung, Artikel 5 zu aktivieren, was zu einer Eskalation oder Deeskalation führen könnte.",
-    "Märkte zeigen erhöhte Volatilität, insbesondere bei Rohstoffen und sicheren Anlagen wie Gold und Defense-Aktien."
+    "Strategische Engpässe (z.B. Straße von Hormus) dominieren die Risikolandschaft.",
+    "Gold und Rüstungssektor profitieren von Unsicherheit, Tech-Werte unter Druck.",
+    "Fehlende Echtzeitdaten erhöhen die Unsicherheit für taktische Entscheidungen."
   ],
   "predictive_horizon": {
-    "base_case_summary": "Innerhalb von 30-90 Tagen wird die NATO wahrscheinlich eine begrenzte militärische und wirtschaftliche Antwort geben, um eine direkte Konfrontation zu vermeiden, während Russland seine Position im Baltikum konsolidiert oder zurückzieht.",
+    "base_case_summary": "In den nächsten 30-90 Tagen wird eine Fortsetzung der aktuellen Spannungen erwartet, mit moderater Eskalationswahrscheinlichkeit (z.B. temporäre Blockaden oder Cyberangriffe). Märkte bleiben volatil, aber ohne systemische Krise.",
     "base_case_probability_pct": 65,
     "time_horizons": {
-      "30_days_tactic": "NATO aktiviert Artikel 5 mit begrenzter militärischer Verstärkung im Baltikum, wirtschaftliche Sanktionen gegen Russland, und diplomatische Verhandlungen zur Deeskalation.",
-      "90_days_macro": "Stabilisierung der Frontlinien, mögliche Teilmobilisierung der NATO, anhaltende wirtschaftliche Sanktionen und Energiepreisschocks in Europa.",
-      "360_days_structural": "Langfristige NATO-Russland-Konfrontation mit möglicher Neuordnung der europäischen Sicherheitsarchitektur, verstärkte Aufrüstung und wirtschaftliche Fragmentierung."
+      "30_days_tactic": "Taktische Absicherung gegen Lieferkettenunterbrechungen und Energiepreisschocks.",
+      "90_days_macro": "Makroökonomische Anpassungen an stagflationäre Tendenzen, Fokus auf defensive Sektoren.",
+      "360_days_structural": "Langfristige Fragmentierung der globalen Handelsrouten und Währungsblöcke."
     },
     "black_swan_tail_risk": {
-      "risk_event": "NATO reagiert nicht auf den russischen Vorstoß, was zu einem Zusammenbruch der Bündnisglaubwürdigkeit und weiteren russischen Aggressionen führt.",
+      "risk_event": "Plötzliche militärische Eskalation im Nahen Osten mit dauerhafter Blockade der Straße von Hormus.",
       "probability_pct": 8,
-      "market_impact": "Massiver Vertrauensverlust in westliche Institutionen, Zusammenbruch der Aktienmärkte, extreme Flucht in sichere Anlagen wie Gold und Bitcoin."
+      "market_impact": "Ölpreis >150 USD/bbl, globale Rezession, Zusammenbruch von Lieferketten."
     },
     "leading_indicators_to_watch": [
       {
-        "indicator": "NATO-Artikel-5-Aktivierung",
-        "current_status": "Unklar, interne Debatten",
-        "critical_threshold": "Aktivierung innerhalb von 7 Tagen"
-      },
-      {
-        "indicator": "US-Dollar-Index (DXY)",
-        "current_status": "101.48 (stabil)",
-        "critical_threshold": "Anstieg über 105 (Flucht in Sicherheit)"
-      },
-      {
-        "indicator": "Goldpreis (USD/oz)",
-        "current_status": "4049.20 (leicht steigend)",
-        "critical_threshold": "Anstieg über 4200 (extreme Risikoaversion)"
+        "indicator": "Brent-Ölpreis (USD/bbl)",
+        "current_status": "95.81 (-4.85% heute)",
+        "critical_threshold": ">120 USD/bbl für >7 Tage"
       },
       {
         "indicator": "VIX (Volatilitätsindex)",
-        "current_status": "18.90 (erhöht)",
-        "critical_threshold": "Anstieg über 30 (Marktpanik)"
+        "current_status": "17.88 (-4.39% heute)",
+        "critical_threshold": ">30 für >3 Tage"
+      },
+      {
+        "indicator": "IRGC-Proxy-Aktivitäten (z.B. Drohnenangriffe)",
+        "current_status": "Erhöht (unbestätigt)",
+        "critical_threshold": "Mehr als 3 Vorfälle/Woche"
       }
     ]
   },
   "historical_precedents": [
     {
-      "current_event": "Russischer Vorstoß im Baltikum mit NATO-Artikel-5-Test",
-      "historical_analog": "Annexion der Krim 2014 (begrenzte Aggression, westliche Reaktion mit Sanktionen)",
+      "current_event": "Drohungen mit Blockade der Straße von Hormus durch den Iran",
+      "historical_analog": "Tankerkrieg im Persischen Golf (1980er)",
       "similarity_degree": "HOCH",
-      "historical_outcome": "Russland erreichte Teilziele (Krim-Annexion), NATO reagierte mit begrenzten Sanktionen, aber keine militärische Konfrontation.",
-      "key_divergence": "Baltikum ist NATO-Mitglied, was die Eskalationsdynamik deutlich erhöht."
+      "historical_outcome": "Temporäre Ölpreisschocks, aber keine dauerhafte Blockade; internationale Marinepräsenz stabilisierte die Lage.",
+      "key_divergence": "Heutige Abhängigkeit von globalen Just-in-Time-Lieferketten ist deutlich höher."
     },
     {
-      "current_event": "NATO-Interne Debatten über Artikel-5-Reaktion",
-      "historical_analog": "NATO-Reaktion auf den Angriff auf die Türkei 2015 (Artikel 4, aber keine Artikel-5-Aktivierung)",
+      "current_event": "Stagflationäre Marktbedingungen",
+      "historical_analog": "Ölkrise der 1970er",
       "similarity_degree": "MITTEL",
-      "historical_outcome": "Begrenzte militärische Unterstützung, aber keine kollektive Verteidigung.",
-      "key_divergence": "Baltikum ist direkter NATO-Bündnisfall, was die Reaktion zwingender macht."
+      "historical_outcome": "Lange Phase hoher Inflation und niedrigen Wachstums, begleitet von sozialen Unruhen.",
+      "key_divergence": "Heutige Zentralbanken verfügen über größere geldpolitische Werkzeuge, aber höhere Schuldenlasten."
     }
   ],
-  "daily_executive_summary": "Am 24.07.2026 eskaliert die geopolitische Lage durch einen begrenzten russischen Vorstoß im Baltikum, der als militärische Übung getarnt ist. Die NATO steht vor der Herausforderung, auf diese Provokation zu reagieren, ohne eine direkte militärische Konfrontation mit Russland zu riskieren. Die spieltheoretische Analyse zeigt, dass Russland mit einer begrenzten Aktion die NATO-Reaktionsschwelle testet, während die NATO intern über das Ausmaß der Antwort debattiert. Die Märkte reagieren mit erhöhter Volatilität, insbesondere bei Rohstoffen und sicheren Anlagen wie Gold. Die Wahrscheinlichkeit einer Fehlkalkulation und Eskalation bleibt hoch, insbesondere wenn die NATO-Signale uneinheitlich sind. Die historische Präzedenzfallanalyse deutet auf eine mögliche Wiederholung des Krim-Szenarios hin, allerdings mit höherem Eskalationsrisiko aufgrund der NATO-Mitgliedschaft des Baltikums.",
+  "graph_network": {
+    "nodes": [
+      {
+        "id": "n1",
+        "label": "Straße von Hormus",
+        "group": "hotspot",
+        "val": 10
+      },
+      {
+        "id": "n2",
+        "label": "Iran / IRGC",
+        "group": "actor",
+        "val": 9
+      },
+      {
+        "id": "n3",
+        "label": "Brent Rohöl",
+        "group": "commodity",
+        "val": 8
+      },
+      {
+        "id": "n4",
+        "label": "Rüstungssektor",
+        "group": "market",
+        "val": 7
+      },
+      {
+        "id": "n5",
+        "label": "Lieferketten-Schock",
+        "group": "risk",
+        "val": 8
+      },
+      {
+        "id": "n6",
+        "label": "Gold",
+        "group": "commodity",
+        "val": 7
+      },
+      {
+        "id": "n7",
+        "label": "US-Dollar (DXY)",
+        "group": "currency",
+        "val": 6
+      },
+      {
+        "id": "n8",
+        "label": "Tech-Sektor",
+        "group": "market",
+        "val": 5
+      },
+      {
+        "id": "n9",
+        "label": "Cyberangriffe (Staatlich)",
+        "group": "risk",
+        "val": 6
+      },
+      {
+        "id": "n10",
+        "label": "EU / USA",
+        "group": "actor",
+        "val": 7
+      },
+      {
+        "id": "n11",
+        "label": "China (CNY)",
+        "group": "currency",
+        "val": 6
+      },
+      {
+        "id": "n12",
+        "label": "Kupfer",
+        "group": "commodity",
+        "val": 5
+      }
+    ],
+    "links": [
+      {
+        "source": "n2",
+        "target": "n1",
+        "label": "droht mit Blockade"
+      },
+      {
+        "source": "n1",
+        "target": "n5",
+        "label": "verursacht"
+      },
+      {
+        "source": "n5",
+        "target": "n3",
+        "label": "treibt Preis"
+      },
+      {
+        "source": "n3",
+        "target": "n4",
+        "label": "stärkt Marge"
+      },
+      {
+        "source": "n3",
+        "target": "n7",
+        "label": "schwächt"
+      },
+      {
+        "source": "n5",
+        "target": "n6",
+        "label": "stärkt Nachfrage"
+      },
+      {
+        "source": "n9",
+        "target": "n5",
+        "label": "verstärkt"
+      },
+      {
+        "source": "n10",
+        "target": "n2",
+        "label": "diplomatischer Druck"
+      },
+      {
+        "source": "n7",
+        "target": "n8",
+        "label": "belastet"
+      },
+      {
+        "source": "n11",
+        "target": "n7",
+        "label": "korreliert negativ"
+      },
+      {
+        "source": "n3",
+        "target": "n12",
+        "label": "korreliert positiv"
+      }
+    ]
+  },
+  "daily_executive_summary": "Die globale Lage am 24.07.2026 ist durch eine Kombination aus geopolitischen Spannungen, Marktvolatilität und unvollständiger Datenlage gekennzeichnet. Die Straße von Hormus bleibt der kritischste Hotspot, wobei die Islamische Revolutionsgarde (IRGC) des Iran mit einer Blockade droht, was zu Lieferkettenunterbrechungen und einem Anstieg der Ölpreise führen könnte. Die Finanzmärkte reagieren mit erhöhter Volatilität: Gold und der Rüstungssektor verzeichnen Zuwächse, während Tech-Werte und der US-Dollar unter Druck stehen. \n\nAPI-Ausfälle bei Schlüsselinformationsquellen (z.B. Gemini, Grok, Qwen) erschweren die Echtzeitbewertung von Risiken, insbesondere in den Bereichen Cybersicherheit, politische Stabilität und Rohstoffmärkte. Die verfügbaren Finanzdaten zeigen eine gemischte Entwicklung: Während der VIX leicht sinkt, bleibt die Volatilität im Energie- und Währungssektor erhöht. Der Brent-Ölpreis ist heute um fast 5 % gefallen, bleibt aber auf hohem Niveau, was auf eine fragile Balance zwischen Angebotssorgen und Nachfrageschwäche hindeutet. \n\nDie historische Analyse zeigt Parallelen zu früheren Krisen (z.B. Tankerkrieg der 1980er), allerdings mit dem Unterschied, dass heutige Lieferketten anfälliger für Schocks sind. Die prognostizierte Basislinie geht von einer Fortsetzung der aktuellen Spannungen aus, ohne dass es zu einer systemischen Eskalation kommt. Dennoch bleibt das Risiko eines „Black Swan“-Ereignisses (z.B. dauerhafte Blockade der Straße von Hormus) mit einer Wahrscheinlichkeit von 8 % bestehen, was zu extremen Marktverwerfungen führen könnte.",
   "market_regime": "Stagflationär / Geopolitische Fragmentierung",
   "geoscore": {
     "current_score": 78,
     "status_label": "ERHÖHT",
-    "previous_48h": 74
+    "previous_48h": 74,
+    "drivers": [
+      "Drohungen gegen die Straße von Hormus (+3)",
+      "API-Ausfälle bei Schlüsseldatenquellen (+1)",
+      "Erhöhte Cyberaktivitäten (unbestätigt) (+2)",
+      "Stabile, aber fragile Marktlage (-2)"
+    ]
   },
   "defcon_status": {
     "level": 3,
     "label": "DEFCON 3",
     "nuclear_risk_percent": 15,
-    "primary_driver": "Begrenzte russische Aggression im Baltikum mit NATO-Bündnisfall-Risiko"
+    "primary_driver": "Regionale Eskalationsrisiken im Nahen Osten, insbesondere durch iranische Drohungen und Proxy-Aktivitäten."
   },
-  "top_overweight": "Gold & Defense",
-  "top_risk": "NATO-Interne Uneinigkeit über Artikel-5-Reaktion mit Eskalationsrisiko",
+  "top_overweight": "Gold & Defense (Rüstungssektor)",
+  "top_risk": "Dauerhafte Blockade der Straße von Hormus mit globalen Lieferkettenunterbrechungen und Ölpreisschock.",
   "game_theory_deep_dive": {
-    "focal_situation": "Russischer Vorstoß im Baltikum und NATO-Reaktion",
+    "focal_situation": "Drohungen des Iran mit Blockade der Straße von Hormus",
     "1_fractionated_actors": [
       {
-        "entity": "Russland",
+        "entity": "Iran / IRGC",
         "factions": [
           {
-            "faction_name": "Militärische Hardliner",
-            "divergent_interest": "Territoriale Expansion und NATO-Demütigung",
+            "faction_name": "Hardliner (Militär)",
+            "divergent_interest": "Maximale Eskalation zur Stärkung der regionalen Dominanz",
             "confidence": 85
           },
           {
-            "faction_name": "Diplomatische Fraktion",
-            "divergent_interest": "Begrenzte Provokation ohne direkte Konfrontation",
+            "faction_name": "Moderate (Politik)",
+            "divergent_interest": "Begrenzte Eskalation zur Verhandlung von Sanktionen",
             "confidence": 70
           }
         ]
       },
       {
-        "entity": "NATO",
+        "entity": "USA / EU",
         "factions": [
           {
-            "faction_name": "Ostflanke (Polen, Baltikum)",
-            "divergent_interest": "Sofortige militärische Reaktion und Artikel-5-Aktivierung",
-            "confidence": 90
+            "faction_name": "Militärische Falken",
+            "divergent_interest": "Präventive Militärschläge zur Abschreckung",
+            "confidence": 75
           },
           {
-            "faction_name": "Westflanke (Deutschland, Frankreich)",
-            "divergent_interest": "Diplomatische Deeskalation und begrenzte Sanktionen",
+            "faction_name": "Diplomatische Tauben",
+            "divergent_interest": "Verhandlungen und wirtschaftliche Anreize",
             "confidence": 80
           }
         ]
       }
     ],
     "2_time_horizon_conflict": {
-      "short_term_one_shot_4_to_8_weeks": "NATO entscheidet über Artikel-5-Aktivierung, Russland konsolidiert oder zieht sich zurück.",
-      "long_term_repeated_game": "Langfristige NATO-Russland-Konfrontation mit Aufrüstung und wirtschaftlicher Fragmentierung.",
-      "horizon_contradiction": "Kurzfristig will die NATO eine Eskalation vermeiden, langfristig muss sie ihre Glaubwürdigkeit verteidigen."
+      "short_term_one_shot_4_to_8_weeks": "Einmalige Eskalation (z.B. temporäre Blockade) mit begrenzten militärischen oder wirtschaftlichen Gegenmaßnahmen.",
+      "long_term_repeated_game": "Wiederholte Eskalationszyklen mit zunehmender Fragmentierung der globalen Handelsrouten und Währungsblöcke.",
+      "horizon_contradiction": "Kurzfristig besteht ein Anreiz für den Iran, durch begrenzte Eskalation Druck auszuüben, während langfristig das Risiko einer unkontrollierbaren Spirale steigt."
     },
     "3_game_structure_and_payoffs": {
-      "type": "Chicken Game",
+      "type": "Chicken Game (Eskalationsdilemma)",
       "payoff_assessment_scale_minus_3_to_plus_3": [
         {
-          "scenario_combination": "Russland: Begrenzter Vorstoß / NATO: Begrenzte Vergeltung",
-          "payoff_actor_A": -1,
-          "payoff_actor_B": 2,
-          "confidence": 80
-        },
-        {
-          "scenario_combination": "Russland: Begrenzter Vorstoß / NATO: Keine Reaktion",
-          "payoff_actor_A": 3,
+          "scenario_combination": "Iran blockiert / USA reagieren militärisch",
+          "payoff_actor_A": -2,
           "payoff_actor_B": -3,
-          "confidence": 70
+          "confidence": 80,
+          "description": "Hohe Kosten für beide Seiten, aber USA verliert mehr durch globale Rezession."
         },
         {
-          "scenario_combination": "Russland: Kein Vorstoß / NATO: Defensiv",
-          "payoff_actor_A": 0,
-          "payoff_actor_B": 0,
-          "confidence": 60
+          "scenario_combination": "Iran blockiert / USA verhandelt",
+          "payoff_actor_A": 2,
+          "payoff_actor_B": -1,
+          "confidence": 75,
+          "description": "Iran gewinnt kurzfristig, USA verliert Glaubwürdigkeit."
+        },
+        {
+          "scenario_combination": "Iran droht nur / USA verhandelt",
+          "payoff_actor_A": 1,
+          "payoff_actor_B": 1,
+          "confidence": 70,
+          "description": "Begrenzte Gewinne für beide Seiten, Status quo bleibt erhalten."
         }
       ]
     },
     "4_signaling_and_information": {
       "cheap_talk": [
-        "Russische Desinformationskampagnen zur NATO-Spaltung",
-        "NATO-interne Debatten über Artikel-5-Reaktion"
+        "Öffentliche Drohungen des Iran ohne konkrete Maßnahmen",
+        "Diplomatische Erklärungen der USA/EU ohne klare rote Linien"
       ],
       "costly_signals": [
-        "Verlegung eines US-Flugzeugträgers in die Ostsee",
-        "Russische NOTAMs und Cyberangriffe auf baltische Infrastruktur"
+        "Verlegung von US-Flugzeugträgern in die Region",
+        "Iranische Militärübungen in der Straße von Hormus",
+        "Sanktionen oder Gegen-Sanktionen"
       ]
     },
     "6_falsification_counter_model": {
-      "alternative_interpretation": "Russland führt mit chinesischer Unterstützung einen Generalangriff auf das Baltikum durch, die NATO reagiert nicht.",
-      "necessary_conditions": "Chinesische Unterstützung für Russland, NATO-interne Spaltung, US-Innenpolitik blockiert Reaktion."
+      "alternative_interpretation": "Die Drohungen des Iran sind primär innenpolitisch motiviert (z.B. Ablenkung von wirtschaftlichen Problemen) und nicht auf eine tatsächliche Blockade ausgerichtet.",
+      "necessary_conditions": [
+        "Keine Vorbereitungen für eine Blockade (z.B. Minenlegen, Schiffsbewegungen)",
+        "Keine Unterstützung durch regionale Verbündete (z.B. Oman, Irak)",
+        "Keine Eskalation in anderen Bereichen (z.B. Cyberangriffe, Proxy-Konflikte)"
+      ]
     }
   },
   "domestic_politics_analysis": [
     {
       "region_actor": "USA",
-      "key_event_trend": "Innenpolitische Debatten über NATO-Verpflichtungen vor der Präsidentschaftswahl 2026.",
-      "regime_stability": "STABIL",
-      "geopolitical_impact": "Mögliche Verzögerung der NATO-Reaktion aufgrund politischer Unsicherheit."
+      "key_event_trend": "Zunehmende Polarisierung vor den Midterm-Wahlen 2026, Fokus auf Wirtschaft und nationale Sicherheit.",
+      "regime_stability": "STABIL, aber fragmentiert",
+      "geopolitical_impact": "Begrenzte Handlungsfähigkeit in internationalen Krisen, Fokus auf kurzfristige innenpolitische Gewinne."
     },
     {
       "region_actor": "EU",
-      "key_event_trend": "Uneinigkeit zwischen Ost- und Westeuropa über die Reaktion auf den russischen Vorstoß.",
-      "regime_stability": "STABIL, ABER GESPALTEN",
-      "geopolitical_impact": "Verzögerte Entscheidungsfindung und schwächere gemeinsame Position."
+      "key_event_trend": "Fortgesetzte Debatten über strategische Autonomie, aber langsame Umsetzung.",
+      "regime_stability": "STABIL, aber heterogen",
+      "geopolitical_impact": "Abhängigkeit von US-Sicherheitsgarantien bleibt bestehen, wirtschaftliche Fragmentierung innerhalb der EU."
     }
   ],
   "stress_testing_scenarios": [
     {
-      "scenario_name": "NATO aktiviert Artikel 5 mit begrenzter militärischer Reaktion",
+      "scenario_name": "Temporäre Blockade der Straße von Hormus (14 Tage)",
       "probability_pct": 40,
-      "timeframe": "1-3M",
+      "timeframe": "1-3 Monate",
       "cascade_chain": [
-        "Begrenzte Gefechte im Baltikum",
-        "Wirtschaftliche Sanktionen gegen Russland",
-        "Energiepreisschock in Europa"
+        "Ölpreis steigt auf 130 USD/bbl",
+        "Globale Lieferkettenunterbrechungen",
+        "Zentralbanken reagieren mit Zinserhöhungen",
+        "Rezessionsrisiko steigt"
       ],
       "winners_long": [
         {
-          "asset": "Gold"
+          "asset": "Gold",
+          "reason": "Sicherer Hafen"
         },
         {
-          "asset": "Defense-Aktien (z. B. Rheinmetall)"
+          "asset": "Rüstungsaktien",
+          "reason": "Erhöhte Nachfrage"
+        },
+        {
+          "asset": "Energie (Öl/Gas)",
+          "reason": "Preisanstieg"
         }
       ],
       "losers_short": [
         {
-          "asset": "Europäische Aktien (DAX, CAC)"
+          "asset": "Tech-Aktien",
+          "reason": "Zinsempfindlichkeit"
         },
         {
-          "asset": "Russische Rubel-Anleihen"
+          "asset": "Schwellenländerwährungen",
+          "reason": "Kapitalflucht"
+        },
+        {
+          "asset": "Konsumgüter",
+          "reason": "Nachfrageschwäche"
         }
       ]
     },
     {
-      "scenario_name": "NATO reagiert nicht auf russischen Vorstoß",
-      "probability_pct": 20,
-      "timeframe": "1-3M",
+      "scenario_name": "Cyberangriff auf kritische Infrastruktur (z.B. Ölhäfen)",
+      "probability_pct": 30,
+      "timeframe": "1-2 Monate",
       "cascade_chain": [
-        "Zusammenbruch der NATO-Glaubwürdigkeit",
-        "Weitere russische Aggressionen in Osteuropa",
-        "Flucht aus europäischen Assets"
+        "Temporäre Unterbrechung der Ölversorgung",
+        "Preisschock bei Öl und Gas",
+        "Erhöhte Volatilität an den Finanzmärkten",
+        "Regulatorische Gegenmaßnahmen"
       ],
       "winners_long": [
         {
-          "asset": "US-Dollar"
+          "asset": "Cybersicherheitsfirmen",
+          "reason": "Erhöhte Nachfrage"
         },
         {
-          "asset": "Bitcoin"
+          "asset": "Gold",
+          "reason": "Sicherer Hafen"
         }
       ],
       "losers_short": [
         {
-          "asset": "Europäische Währungen (EUR, PLN)"
+          "asset": "Energieversorger",
+          "reason": "Betriebsunterbrechungen"
         },
         {
-          "asset": "Europäische Staatsanleihen"
+          "asset": "Logistikunternehmen",
+          "reason": "Lieferkettenstörungen"
         }
       ]
     }
   ],
   "conflict_hotspots": [
     {
-      "region": "Baltikum (Estland, Lettland, Litauen)",
-      "actors": "Russland vs. NATO",
-      "status_type": "AKTIV",
+      "region": "Naher Osten (Straße von Hormus)",
+      "actors": "Iran (IRGC) vs. USA/EU + regionale Verbündete (Saudi-Arabien, Israel)",
+      "status_type": "AKTIV (Drohungen)",
       "escalation_level": "HOCH",
-      "impact": "Begrenzte militärische Konfrontation mit hohem Eskalationsrisiko, mögliche Ausweitung auf andere NATO-Mitglieder.",
-      "lat": 56.8796,
-      "lng": 24.6032
+      "impact": "Globale Ölversorgung, Lieferketten, Finanzmärkte",
+      "lat": 26.5,
+      "lng": 56.5
+    },
+    {
+      "region": "Ostukraine / Schwarzes Meer",
+      "actors": "Russland vs. Ukraine + NATO-Unterstützung",
+      "status_type": "AKTIV (Gefechte)",
+      "escalation_level": "MITTEL",
+      "impact": "Getreideexporte, Energieinfrastruktur, regionale Stabilität",
+      "lat": 47.0,
+      "lng": 35.0
+    },
+    {
+      "region": "Taiwanstraße",
+      "actors": "China vs. USA/Taiwan",
+      "status_type": "LATENT (Militärübungen)",
+      "escalation_level": "MITTEL",
+      "impact": "Halbleiterlieferketten, globale Technologiemärkte",
+      "lat": 23.5,
+      "lng": 121.0
     }
   ],
   "digital_and_monetary_sovereignty": [
     {
-      "topic": "CBDC-Entwicklung in der EU und USA",
-      "actor": "EU, USA, China",
-      "trend": "Beschleunigte Einführung digitaler Zentralbankwährungen als Reaktion auf geopolitische Fragmentierung.",
-      "systemic_impact": "Mögliche Entkopplung der Finanzsysteme, erhöhte Überwachung und Kontrolle.",
-      "market_implication": "Flucht in dezentrale Assets wie Bitcoin und Gold."
+      "topic": "CBDCs (Zentralbank-Digitalwährungen)",
+      "actor": "China (e-CNY) vs. USA/EU (FedNow, Digitaler Euro)",
+      "trend": "Beschleunigte Einführung, aber fragmentierte Standards",
+      "systemic_impact": "Potenzielle Entdollarisierung in Handelsblöcken, erhöhte Überwachungskapazitäten",
+      "market_implication": "Volatilität in Kryptowährungen, Druck auf traditionelle Banken"
     },
     {
       "topic": "Kritische Mineralien (Seltene Erden, Lithium)",
-      "actor": "China, USA, EU",
-      "trend": "Handelskonflikte und Lieferkettenunterbrechungen aufgrund geopolitischer Spannungen.",
-      "systemic_impact": "Preisanstieg und Versorgungsengpässe in Schlüsseltechnologien (Halbleiter, E-Autos).",
-      "market_implication": "Investitionen in Minenunternehmen und Recyclingtechnologien."
+      "actor": "China vs. USA/EU/Australien",
+      "trend": "Geopolitische Kontrolle über Lieferketten, Subventionswettläufe",
+      "systemic_impact": "Abhängigkeit von China bleibt bestehen, aber Diversifizierungsbemühungen nehmen zu",
+      "market_implication": "Preisvolatilität, Investitionen in Bergbau und Recycling"
     }
   ],
   "stock_picks": {
@@ -251,61 +429,61 @@
       {
         "ticker": "RHM.DE",
         "name": "Rheinmetall",
-        "reason": "Erwarteter Nachfrageanstieg durch NATO-Aufrüstung und militärische Konflikte."
+        "reason": "Erhöhte Nachfrage nach Rüstungsgütern durch geopolitische Spannungen, starke Auftragslage."
+      },
+      {
+        "ticker": "NEM",
+        "name": "Newmont Corporation",
+        "reason": "Gold als sicherer Hafen, langfristige Nachfrage durch Inflationsrisiken."
       },
       {
         "ticker": "BA",
-        "name": "Boeing",
-        "reason": "Verteidigungsaufträge und Nachfrage nach Militärflugzeugen."
+        "name": "Boeing Defense",
+        "reason": "Steigende Militärausgaben in NATO-Ländern, Modernisierungsprogramme."
       },
       {
-        "ticker": "LMT",
-        "name": "Lockheed Martin",
-        "reason": "Führender Anbieter von Militärtechnologie mit stabilen Aufträgen."
+        "ticker": "PAL",
+        "name": "Palo Alto Networks",
+        "reason": "Erhöhte Cyberbedrohungen, staatliche Investitionen in Cybersicherheit."
       },
       {
-        "ticker": "GLD",
-        "name": "SPDR Gold Trust",
-        "reason": "Sicherer Hafen in Zeiten geopolitischer Unsicherheit."
-      },
-      {
-        "ticker": "BTC-USD",
-        "name": "Bitcoin",
-        "reason": "Dezentrale Absicherung gegen Finanzsystemrisiken."
+        "ticker": "XOM",
+        "name": "ExxonMobil",
+        "reason": "Hohe Ölpreise, langfristige Energiesicherheitsstrategien."
       }
     ],
     "flop_5_sells": [
       {
-        "ticker": "EUR=X",
-        "name": "Euro",
-        "reason": "Risiko einer Abwertung durch Energiepreisschock und politische Unsicherheit."
-      },
-      {
-        "ticker": "RUB=X",
-        "name": "Russischer Rubel",
-        "reason": "Erwartete Sanktionen und wirtschaftliche Isolation."
-      },
-      {
         "ticker": "TSLA",
         "name": "Tesla",
-        "reason": "Abhängigkeit von chinesischen Lieferketten und globaler Nachfrageschwäche."
+        "reason": "Zinsempfindlichkeit, Lieferkettenrisiken, nachlassende Nachfrage in China."
       },
       {
         "ticker": "AMZN",
         "name": "Amazon",
-        "reason": "Gewinnerwartungen leiden unter globaler Rezession und Lieferkettenproblemen."
+        "reason": "Gewinnwarnungen, schwache Konsumstimmung, regulatorische Risiken."
       },
       {
-        "ticker": "AAPL",
-        "name": "Apple",
-        "reason": "Abhängigkeit von chinesischer Produktion und globaler Nachfrageschwäche."
+        "ticker": "META",
+        "name": "Meta Platforms",
+        "reason": "Werbemarkt schwächelt, hohe Investitionen in Metaverse ohne kurzfristige Rendite."
+      },
+      {
+        "ticker": "ARKK",
+        "name": "ARK Innovation ETF",
+        "reason": "Hohe Bewertungen, Zinsrisiko, Fokus auf unprofitable Wachstumsaktien."
+      },
+      {
+        "ticker": "BTC-USD",
+        "name": "Bitcoin",
+        "reason": "Regulatorische Unsicherheit, Korrelation mit Tech-Aktien, Volatilität."
       }
     ]
   },
-  "timestamp": "24.07.2026 - 13:30 UTC",
+  "timestamp": "24.07.2026 - 17:12 UTC",
   "pipeline_health": {
     "groq_filter": "ok",
-    "deepseek_game_theory": "ok",
+    "deepseek_game_theory": "failed (Error code: 400 - {'error': {')",
     "gemini_macro": "failed",
     "xai_grok": "failed",
     "perplexity_factcheck": "ok (sonar)",
