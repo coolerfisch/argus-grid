@@ -6,8 +6,8 @@
   <title>ARGUS GRID // World Intelligence</title>
   
   <!-- LEAFLET MAP & FORCE GRAPH LIBRARIES -->
-  <link rel="stylesheet" href="[https://unpkg.com/leaflet@1.9.4/dist/leaflet.css](https://unpkg.com/leaflet@1.9.4/dist/leaflet.css)" />
-  <script src="[https://unpkg.com/force-graph](https://unpkg.com/force-graph)"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/force-graph"></script>
 
   <style>
     :root {
@@ -245,7 +245,7 @@
 
     .highlight-box { background: rgba(234, 179, 8, 0.08); border-left: 3px solid var(--accent-gold); padding: 12px; border-radius: 4px; font-size: 0.9rem; }
 
-    #hotspot-map { height: 400px; width: 100%; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 10px; background: #090d16; }
+    #hotspot-map { height: 420px; width: 100%; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 10px; background: #090d16; }
     #knowledge-graph { height: 480px; width: 100%; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 10px; background: #070a12; }
 
     .map-legend { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 12px; font-size: 0.82rem; color: var(--text-muted); }
@@ -611,11 +611,12 @@
     </div>
   </div>
 
-  <script src="[https://unpkg.com/leaflet@1.9.4/dist/leaflet.js](https://unpkg.com/leaflet@1.9.4/dist/leaflet.js)"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script>
     let map = null;
     let graphInstance = null;
+    let cachedHotspots = [], cachedFlights = [], cachedShips = [];
 
     function openSourcesModal() { document.getElementById('sources-modal').classList.add('active'); }
     function closeSourcesModal(event) {
@@ -634,13 +635,19 @@
         document.getElementById('btn-detailed').classList.add('active');
         document.getElementById('btn-simple').classList.remove('active');
         
+        // RE-CALCULATE SIZES FÜR MAP UND GRAPH BEIM EINBLENDEN
         setTimeout(() => {
-          if (map) map.invalidateSize();
+          if (!map) {
+            initMap(cachedHotspots, cachedFlights, cachedShips);
+          } else {
+            map.invalidateSize();
+          }
+
           if (graphInstance) {
             const container = document.getElementById('knowledge-graph');
             if (container) graphInstance.width(container.clientWidth);
           }
-        }, 200);
+        }, 300);
       }
     }
 
@@ -976,13 +983,18 @@
         }
       } catch(e) { console.error("Error Sovereignty:", e); }
 
-      // MAP & HOTSPOTS
+      // MAP & HOTSPOTS DATA CACHING
       try {
-        const hotspots = Array.isArray(data.conflict_hotspots) ? data.conflict_hotspots : [];
-        const flights = Array.isArray(data.live_recon_flights) ? data.live_recon_flights : [];
-        const ships = Array.isArray(data.maritime_chokepoints) ? data.maritime_chokepoints : [];
-        initMap(hotspots, flights, ships);
-        renderHotspotsList(hotspots);
+        cachedHotspots = Array.isArray(data.conflict_hotspots) ? data.conflict_hotspots : [];
+        cachedFlights = Array.isArray(data.live_recon_flights) ? data.live_recon_flights : [];
+        cachedShips = Array.isArray(data.maritime_chokepoints) ? data.maritime_chokepoints : [];
+        
+        renderHotspotsList(cachedHotspots);
+        
+        // Falls die Seite direkt im Modus 'detailed' gestartet werden sollte:
+        if (!document.body.classList.contains('simple-mode')) {
+          initMap(cachedHotspots, cachedFlights, cachedShips);
+        }
       } catch(e) { console.error("Error Map/Hotspots:", e); }
     }
 
@@ -1022,7 +1034,7 @@
       if (!mapContainer) return;
 
       map = L.map('hotspot-map').setView([35, 25], 3);
-      L.tileLayer('https://{s}[.basemaps.cartocdn.com/dark_all/](https://.basemaps.cartocdn.com/dark_all/){z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(map);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(map);
 
       hotspots.forEach(spot => {
         if (spot && spot.lat != null && spot.lng != null) {
@@ -1065,6 +1077,8 @@
           shipMarker.bindPopup(`<strong>⚓ ${s.chokepoint || 'Nadelöhr'}</strong><br>Status: <span style="color:var(--accent-gold);">${s.status}</span><br>Logistik: ${s.tanker_flow}`);
         }
       });
+
+      setTimeout(() => { map.invalidateSize(); }, 200);
     }
 
     function renderHotspotsList(hotspots) {
