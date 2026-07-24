@@ -1,137 +1,198 @@
 {
+  "overall_geoscore": 68,
+  "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Automatische Synthese fehlgeschlagen - Anzeige basiert auf Fallback-Daten.",
-  "daily_executive_summary_simple": "Die Pipeline konnte heute keine vollständige Analyse erzeugen. Bitte Actions-Logs prüfen.",
-  "simple_key_takeaways": [
-    "Synthese-Stufe (Mistral/Qwen) war nicht erreichbar oder lieferte kein valides JSON",
-    "0/142 RSS-Feeds wurden erfolgreich geladen",
-    "Dies ist ein automatisch generierter Platzhalter, keine echte Lagebeurteilung"
+  "ampel_reason_simple": "Erhöhte politische Spannungen in Deutschland und den USA, internationale Konflikte und institutionelle Krisen erfordern erhöhte Aufmerksamkeit.",
+  "daily_executive_summary": "Die aktuelle Nachrichtenlage zeigt eine Mischung aus innenpolitischen Turbulenzen in Deutschland, insbesondere im Zusammenhang mit der Kabinettsumbildung der Bundesregierung und parteipolitischen Auseinandersetzungen, sowie internationalen Spannungen. In den USA dominieren juristische und politische Entwicklungen rund um Ex-Präsident Donald Trump die Schlagzeilen, während gleichzeitig geopolitische Konflikte wie der Austritt Venezuelas aus dem Internationalen Strafgerichtshof und militärische Spannungen zwischen den USA und dem Iran eskalieren. Die Entlassung des Chefanklägers des Internationalen Strafgerichtshofs wegen Vorwürfen sexuellen Fehlverhaltens unterstreicht zudem eine Krise internationaler Institutionen. Wirtschaftliche Warnungen, wie die Verdopplung der Kosten für Gasheizungen in Deutschland, deuten auf potenzielle soziale und politische Verwerfungen hin. Insgesamt ergibt sich ein Bild erhöhter Volatilität und Unsicherheit, das sowohl nationale als auch internationale Stabilität beeinträchtigen könnte.",
+  "daily_executive_summary_simple": "Politische Unsicherheiten in Deutschland und den USA, internationale Konflikte und Probleme bei globalen Institutionen führen zu einer angespannten Lage. Wirtschaftliche Warnungen verschärfen die Situation zusätzlich.",
+  "key_takeaways": [
+    "Die Kabinettsumbildung in Deutschland führt zu innerparteilichen Spannungen und öffentlicher Kritik, was die Regierungsstabilität beeinträchtigen könnte.",
+    "Juristische Auseinandersetzungen um Donald Trump in den USA und dessen aggressive Rhetorik erhöhen die politische Polarisierung.",
+    "Internationale Konflikte, wie der Austritt Venezuelas aus dem Internationalen Strafgerichtshof und militärische Spannungen zwischen den USA und dem Iran, bergen Eskalationsrisiken.",
+    "Institutionelle Krisen, wie die Entlassung des ICC-Chefanklägers, schwächen das Vertrauen in globale Rechtssysteme."
   ],
-  "daily_executive_summary": "Lagebericht konnte nicht generiert werden, da die finale Synthese-Stufe fehlgeschlagen ist. Siehe pipeline_health für Details.",
-  "market_regime": "Unbekannt (Synthese fehlgeschlagen)",
-  "top_risk": "Datenpipeline-Ausfall",
-  "geoscore": {
-    "current_score": 0,
-    "previous_48h": 0
-  },
-  "defcon_status": {
-    "level": 3,
-    "label": "DEFCON 3 (Fallback)",
-    "nuclear_risk_percent": 0
-  },
-  "predictive_horizon": {
-    "base_case_summary": "Keine Prognose verfügbar (Synthese fehlgeschlagen).",
-    "base_case_probability_pct": 0,
-    "time_horizons": {
-      "30_days_tactic": "--",
-      "90_days_macro": "--",
-      "360_days_structural": "--"
+  "predictive_horizon": [
+    {
+      "timeframe": "30-90 Tage",
+      "forecast": "Die politischen Spannungen in Deutschland könnten zu einer weiteren Erosion des öffentlichen Vertrauens in die Regierung führen, insbesondere wenn die Kabinettsumbildung als chaotisch wahrgenommen wird. In den USA könnte die juristische Verfolgung Trumps zu verstärkten sozialen Unruhen oder einer Radikalisierung seiner Anhänger führen. Internationale Konflikte, insbesondere zwischen den USA und dem Iran, könnten sich weiter zuspitzen, falls keine diplomatischen Lösungen gefunden werden.",
+      "probability": "Hoch",
+      "early_warning_indicators": [
+        "Zunahme gewalttätiger Proteste oder politisch motivierter Angriffe in den USA.",
+        "Weitere Rücktritte oder öffentliche Kritik an der deutschen Bundesregierung.",
+        "Militärische Provokationen oder Cyberangriffe zwischen den USA und dem Iran."
+      ]
+    }
+  ],
+  "historical_precedents": [
+    {
+      "event": "Politische Polarisierung und institutionelle Krisen in den USA (z. B. Watergate-Skandal, 2020-Wahl und Sturm auf das Kapitol)",
+      "period": "1970er-Jahre, 2020-2021",
+      "similarity": "Hoch (juristische Verfolgung eines ehemaligen Präsidenten, gesellschaftliche Spaltung)",
+      "takeaway": "Historische Präzedenzfälle zeigen, dass juristische Verfahren gegen hochrangige Politiker zu langfristigen politischen und sozialen Verwerfungen führen können, insbesondere wenn sie als politisch motiviert wahrgenommen werden."
     },
-    "black_swan_tail_risk": {
-      "risk_event": "--",
-      "probability_pct": 0,
-      "market_impact": "--"
+    {
+      "event": "Kabinettsumbildungen und Regierungsinstabilität in Deutschland (z. B. Rücktritt von Ministern während der Flüchtlingskrise 2015-2018)",
+      "period": "2015-2018",
+      "similarity": "Mittel (personelle Veränderungen, öffentliche Kritik)",
+      "takeaway": "Kabinettsumbildungen in Krisenzeiten können die Handlungsfähigkeit der Regierung schwächen und zu einem Vertrauensverlust in der Bevölkerung führen."
+    }
+  ],
+  "conflict_hotspots": [
+    {
+      "name": "USA-Iran Spannungen",
+      "lat": 32.4279,
+      "lon": 53.688,
+      "intensity": "ROT",
+      "description": "Militärische Auseinandersetzungen und gegenseitige Angriffe im Persischen Golf, verbunden mit diplomatischen Spannungen.",
+      "military_activity": "Luft- und Seestreitkräfte beider Seiten in erhöhter Alarmbereitschaft; Cyberangriffe und Sabotageakte."
     },
-    "leading_indicators_to_watch": []
-  },
-  "historical_precedents": [],
+    {
+      "name": "Ukraine-Konflikt (Russland)",
+      "lat": 48.3794,
+      "lon": 31.1656,
+      "intensity": "ROT",
+      "description": "Anhaltende militärische Angriffe Russlands auf die Ukraine, einschließlich gezielter Schläge gegen zivile und militärische Infrastruktur.",
+      "military_activity": "Ballistische Raketenangriffe, Drohnenangriffe, Bodentruppenbewegungen."
+    },
+    {
+      "name": "Venezuela (Austritt aus dem ICC)",
+      "lat": 6.4238,
+      "lon": -66.5897,
+      "intensity": "GELB",
+      "description": "Venezuela tritt aus dem Internationalen Strafgerichtshof aus, was als Reaktion auf mögliche Ermittlungen wegen Menschenrechtsverletzungen gewertet wird.",
+      "military_activity": "Keine direkten militärischen Aktivitäten, aber erhöhte innenpolitische Repression."
+    }
+  ],
   "graph_network": {
     "nodes": [
       {
-        "id": "n1",
-        "label": "Strasse von Hormus",
-        "group": "hotspot",
-        "val": 10
-      },
-      {
-        "id": "n2",
-        "label": "Iran & IRGC",
-        "group": "actor",
+        "id": "DE-GOV",
+        "label": "Deutsche Bundesregierung",
+        "group": "Politik",
         "val": 8
       },
       {
-        "id": "n3",
-        "label": "Brent Rohöl",
-        "group": "commodity",
+        "id": "US-TRUMP",
+        "label": "Donald Trump",
+        "group": "Politik",
         "val": 9
       },
       {
-        "id": "n4",
-        "label": "Rüstungssektor",
-        "group": "market",
+        "id": "ICC",
+        "label": "Internationaler Strafgerichtshof",
+        "group": "Institutionen",
         "val": 7
       },
       {
-        "id": "n5",
-        "label": "Lieferketten-Schock",
-        "group": "risk",
+        "id": "USA-IRAN",
+        "label": "USA-Iran Konflikt",
+        "group": "Konflikte",
+        "val": 8
+      },
+      {
+        "id": "VENEZUELA",
+        "label": "Venezuela",
+        "group": "Politik",
+        "val": 6
+      },
+      {
+        "id": "UKRAINE-RU",
+        "label": "Ukraine-Russland Krieg",
+        "group": "Konflikte",
+        "val": 9
+      },
+      {
+        "id": "DE-CDU",
+        "label": "CDU/CSU",
+        "group": "Politik",
+        "val": 7
+      },
+      {
+        "id": "DE-FDP",
+        "label": "FDP",
+        "group": "Politik",
+        "val": 6
+      },
+      {
+        "id": "US-DEM",
+        "label": "US-Demokraten",
+        "group": "Politik",
+        "val": 7
+      },
+      {
+        "id": "US-REP",
+        "label": "US-Republikaner",
+        "group": "Politik",
         "val": 8
       }
     ],
-    "links": [
+    "edges": [
       {
-        "source": "n2",
-        "target": "n1",
-        "label": "Drohung"
+        "from": "DE-GOV",
+        "to": "DE-CDU",
+        "label": "Kabinettsumbildung"
       },
       {
-        "source": "n1",
-        "target": "n5",
-        "label": "Blockaderisiko"
+        "from": "DE-GOV",
+        "to": "DE-FDP",
+        "label": "Kritik"
       },
       {
-        "source": "n5",
-        "target": "n3",
-        "label": "Preisschock"
+        "from": "US-TRUMP",
+        "to": "US-DEM",
+        "label": "Juristische Verfolgung"
       },
       {
-        "source": "n3",
-        "target": "n4",
-        "label": "Marge"
+        "from": "US-TRUMP",
+        "to": "US-REP",
+        "label": "Politische Unterstützung"
+      },
+      {
+        "from": "USA-IRAN",
+        "to": "ICC",
+        "label": "Diplomatische Spannungen"
+      },
+      {
+        "from": "VENEZUELA",
+        "to": "ICC",
+        "label": "Austritt"
+      },
+      {
+        "from": "UKRAINE-RU",
+        "to": "ICC",
+        "label": "Kriegsverbrechen"
+      },
+      {
+        "from": "DE-CDU",
+        "to": "DE-FDP",
+        "label": "Koalitionsstreit"
       }
     ]
   },
-  "conflict_hotspots": [
-    {
-      "region": "Strasse von Hormus",
-      "status_type": "AKTIV",
-      "escalation_level": "HOCH",
-      "impact": "Öltransport-Risiko",
-      "lat": 26.56,
-      "lng": 56.25
-    },
-    {
-      "region": "Bab al-Mandab",
-      "status_type": "AKTIV",
-      "escalation_level": "HOCH",
-      "impact": "Container-Umleitungen",
-      "lat": 12.58,
-      "lng": 43.33
-    }
-  ],
-  "domestic_politics_analysis": [],
-  "stress_testing_scenarios": [],
-  "stock_picks": {
-    "top_5_buys": [],
-    "flop_5_sells": []
+  "game_theory_matrices": [],
+  "domestic_policy_matrix": [],
+  "stress_test_scenarios": [],
+  "equity_rotation": {
+    "buys": [],
+    "sells": []
   },
-  "digital_and_monetary_sovereignty": [],
-  "timestamp": "24.07.2026 - 18:22 UTC",
+  "digital_sovereignty_index": {
+    "score": 65,
+    "status": "Mittel: Erhöhte Abhängigkeit von internationalen Plattformen und Technologien, aber erste Ansätze zur Stärkung der digitalen Souveränität erkennbar."
+  },
+  "timestamp": "2026-07-24T22:36:23.958564+00:00",
   "pipeline_health": {
-    "feeds_loaded": 0,
-    "feeds_total": 142,
-    "groq_filter_ok": false,
-    "deepseek_ok": false,
-    "synthesizer_used": "mistral",
-    "json_parse_ok": false,
+    "timestamp": "2026-07-24T22:35:38.119636+00:00",
+    "feeds_total": 230,
+    "feeds_successful": 117,
+    "feeds_failed": 113,
+    "groq_status": "FAILED (413)",
+    "deepseek_status": "FAILED (400)",
+    "synthesizer_status": "SUCCESS",
+    "haiku_status": "FAILED (404)",
     "errors": [
-      "[Feed-Ingestion] 0 Feeds geladen! Prüfe Netzwerk/Timeouts/User-Agent-Blocking.",
-      "[Groq-Filter] Kein Groq-Client oder leerer Text -> ungefiltert weiterverwendet.",
-      "[Groq-Filter] filtered_text ist leer - nachfolgende Stufen bekommen keinen Kontext.",
-      "[DeepSeek] Leerer Kontext übergeben.",
-      "[JSON-Parse] Erster Versuch fehlgeschlagen (Invalid control character at: line 10 column 688 (char 1351)), starte Reparatur...",
-      "[JSON-Parse] Reparatur ebenfalls fehlgeschlagen (Invalid control character at: line 10 column 688 (char 1351)). Nutze Notfall-Fallback.",
-      "[Synthese] Kein verwertbares JSON von Mistral/Qwen erhalten. Nutze vollständigen Notfall-Fallback."
+      "Groq API Error: 413",
+      "DeepSeek API Error: 400"
     ]
   }
 }
