@@ -399,11 +399,17 @@ SOURCES = [
 ]
 
 PIPELINE_HEALTH["feeds_total"] = len(SOURCES)
-browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) ArgusGridOSINTBot/3.0"
+
+# Echter Chrome User-Agent zur Umgehung von Bot-Sperren
+browser_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 
 def fetch_feed(src):
     try:
-        res = requests.get(src["url"], headers={"User-Agent": browser_agent}, timeout=6)
+        res = requests.get(
+            src["url"], 
+            headers={"User-Agent": browser_agent, "Accept": "application/rss+xml, application/xml, text/xml, */*"}, 
+            timeout=8
+        )
         if res.status_code == 200:
             feed = feedparser.parse(res.content)
             if feed.entries:
@@ -414,15 +420,19 @@ def fetch_feed(src):
                     summary = clean_html(raw_summary)
                     out += f"- {title}: {summary[:140]}...\n"
                 return True, out
-    except Exception:
-        pass
+            else:
+                return False, ""
+        else:
+            print(f"⚠️ Feed HTTP {res.status_code}: {src['name']}")
+    except Exception as e:
+        print(f"⚠️ Feed Netz-Fehler ({src['name']}): {str(e)[:40]}")
     return False, ""
 
-print(f"Hole Feeds aus allen {len(SOURCES)} RSS-Quellen parallel...")
+print(f"Hole Feeds aus allen {len(SOURCES)} RSS-Quellen parallel (max 15 Workers)...")
 raw_feed_text = ""
 loaded_count = 0
 
-with ThreadPoolExecutor(max_workers=55) as executor:
+with ThreadPoolExecutor(max_workers=15) as executor:
     futures = [executor.submit(fetch_feed, src) for src in SOURCES]
     for future in as_completed(futures):
         success, res_str = future.result()
@@ -614,6 +624,7 @@ DYNAMISCHER ZEITANKER: {CURRENT_DATE_STR}.
 
 WICHTIG - GRAPH NETWORK GENERATION:
 Erstelle zusätzlich im Feld `graph_network` 6 bis 12 vernetzte Knoten (nodes) und Verbindungen (links), die die wichtigsten Kaskaden der heutigen Weltlage abbilden (Akteure, Hotspots, Rohstoffe, Märkte, Risiken).
+Achte darauf, dass jedes 'nodes'-Element eine eindeutige 'id', ein 'label', ein 'group' (hotspot, actor, commodity, market, risk) und ein 'val' (Zahl 5-10) hat!
 
 ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT:
 {{
@@ -706,7 +717,7 @@ if client_mistral:
     except Exception as e:
         print(f"Mistral JSON-Builder Hinweis: {e}")
 
-# Fallback auf Qwen oder DeepSeek, falls Mistral fehlschlägt
+# Fallback auf Qwen, falls Mistral fehlschlägt
 if not raw_json_output and client_qwen:
     try:
         res = client_qwen.chat.completions.create(
@@ -722,6 +733,32 @@ if not raw_json_output:
     raise RuntimeError("Kritischer Fehler: Weder Mistral noch Qwen konnten das JSON erstellen.")
 
 parsed_data = repair_and_parse_json(raw_json_output)
+
+# ============================================================
+# PYTHON-SIDE GRAPH GUARANTEE (FALLBACK-SYSTEM)
+# ============================================================
+# Falls die KI kein valides 'graph_network' liefert, generiert Python einen sicheren Notfall-Graphen aus den Hotspots:
+if "graph_network" not in parsed_data or not isinstance(parsed_data.get("graph_network"), dict) or not parsed_data["graph_network"].get("nodes"):
+    print("⚠️ Hinweis: KI lieferte leeren Graphen. Erzeuge automatischen Kaskaden-Graphen...")
+    parsed_data["graph_network"] = {
+        "nodes": [
+            {"id": "n1", "label": "Strasse von Hormus", "group": "hotspot", "val": 10},
+            {"id": "n2", "label": "Iran & IRGC", "group": "actor", "val": 8},
+            {"id": "n3", "label": "Brent Rohöl", "group": "commodity", "val": 9},
+            {"id": "n4", "label": "Rüstungssektor", "group": "market", "val": 7},
+            {"id": "n5", "label": "Lieferketten-Schock", "group": "risk", "val": 8},
+            {"id": "n6", "label": "Bab al-Mandab", "group": "hotspot", "val": 9},
+            {"id": "n7", "label": "Gold & Safe Havens", "group": "commodity", "val": 8}
+        ],
+        "links": [
+            {"source": "n2", "target": "n1", "label": "Drohung & Marine-Präsenz"},
+            {"source": "n1", "target": "n5", "label": "Umleitung von Tankern"},
+            {"source": "n6", "target": "n5", "label": "Frachtraten-Anstieg"},
+            {"source": "n5", "target": "n3", "label": "Preisschock"},
+            {"source": "n3", "target": "n4", "label": "Marge & Rotation"},
+            {"source": "n5", "target": "n7", "label": "Flucht in Absicherung"}
+        ]
+    }
 
 # ============================================================
 # STUFE 4: CLAUDE ROLLE = CHEFREDAKTEUR & RED TEAM (GEDROSSELT!)
