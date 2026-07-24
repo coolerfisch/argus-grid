@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 ARGUS GRID v3.0 - Systemic Intelligence Engine Backend
-Automatisierte Feed-Ingestion, Multi-LLM-Synthese, Data Sanitization & Schema Validation.
+Automatisierte Feed-Ingestion, Multi-LLM-Synthese, Key-Harmonisierung & Data Sanitization.
+Strikte Datenintegrität: Keine gefälschten oder erfundenen Inhalte.
 """
 
 import os
@@ -30,7 +31,7 @@ logging.basicConfig(
 )
 
 # Configuration & Constants
-MAX_FEED_WORKERS = 40  # Erhöht zur Vermeidung von I/O-Flaschenhälsen
+MAX_FEED_WORKERS = 40  # Hohe Parallelität für I/O-Performance
 FEED_TIMEOUT = 8        # Sekunden pro Feed-Anfrage
 MAX_ARTICLE_AGE_HOURS = 48
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
@@ -57,74 +58,6 @@ pipeline_health = {
     "synthesizer_status": "PENDING",
     "haiku_status": "PENDING",
     "errors": []
-}
-
-# Vollständiges Fallback-Template (alle von index.html erwarteten Keys)
-FALLBACK_DATA = {
-    "timestamp": datetime.now(timezone.utc).isoformat(),
-    "overall_geoscore": 58,
-    "geoscore": 58,
-    "defcon_level": 3,
-    "defcon": 3,
-    "ampel_status": "GELB",
-    "ampel_reason_simple": "Erhöhte allgemeine Volatilität im geopolitischen Raum.",
-    "daily_executive_summary": "Die automatisierte Datenanalyse konnte aufgrund temporärer API-Störungen nicht vollständig durchgeführt werden. Das System läuft im abgesicherten Fallback-Betrieb.",
-    "daily_executive_summary_simple": "Das Dashboard läuft aktuell im Notbetrieb. Neue Analysen werden beim nächsten automatischen Durchlauf generiert.",
-    "key_takeaways": [
-        "System befindet sich im automatischen Fallback-Modus.",
-        "Feed-Ingestion läuft stabil; Synthese-APIs meldeten Teilausfälle.",
-        "Nächster automatischer Retry erfolgt zum geplanten Cronjob-Zeitpunkt (06:00 UTC)."
-    ],
-    "predictive_horizon": [
-        {
-            "timeframe": "30 Tage (Taktisch)",
-            "forecast": "Anhaltende Volatilität an Energie- und Devisenmärkten.",
-            "probability": "Hoch",
-            "early_warning_indicators": ["Leitzins-Entscheidungen", "AIS-Schiffsdaten"]
-        },
-        {
-            "timeframe": "90 Tage (Quartal & Makro)",
-            "forecast": "Verschärfung von Handelshemmnissen und Zollsanktionen.",
-            "probability": "Mittel",
-            "early_warning_indicators": ["BRICS-Gipfelergebnisse", "Rohstoff-Lagerbestände"]
-        },
-        {
-            "timeframe": "360 Tage (Strukturell)",
-            "forecast": "Beschleunigte geo-ökonomische Blockbildung und De-Dollarisierung.",
-            "probability": "Hoch",
-            "early_warning_indicators": ["Zentralbank-Goldkäufe", "Subsea-Kabel-Sicherheit"]
-        }
-    ],
-    "historical_precedents": [
-        {
-            "event": "Temporäre Datenunterbrechung",
-            "period": "System-Archiv",
-            "similarity": "Hoch",
-            "takeaway": "Keine dauerhafte Beeinträchtigung der historischen Datenbasis."
-        }
-    ],
-    "conflict_hotspots": [
-        {"name": "Taiwan-Straße", "lat": 24.0, "lon": 119.5, "lng": 119.5, "intensity": "ROT", "description": "Militärische Manöver & Halbleiter-Lieferketten.", "military_activity": "Erhöht"},
-        {"name": "Scharfes Meer / Bab al-Mandab", "lat": 12.6, "lon": 43.3, "lng": 43.3, "intensity": "ROT", "description": "Angriffe auf Handelsschifffahrt & Marine-Einsätze.", "military_activity": "Hoch"},
-        {"name": "Suwalki-Lücke / Baltikum", "lat": 54.2, "lon": 23.3, "lng": 23.3, "intensity": "GELB", "description": "NATO-Ostflanke & Hybrid-Threats.", "military_activity": "Mittel"}
-    ],
-    "graph_network": {
-        "nodes": [
-            {"id": "US_FED", "label": "Geldpolitik & Zinsen", "name": "Geldpolitik & Zinsen", "group": "Finanzen", "val": 8},
-            {"id": "GEO_TENSION", "label": "Geopolitische Spannungen", "name": "Geopolitische Spannungen", "group": "Konflikt", "val": 10},
-            {"id": "ENERGY_GRID", "label": "Energie & Lieferketten", "name": "Energie & Lieferketten", "group": "Infrastruktur", "val": 7}
-        ],
-        "edges": [
-            {"from": "GEO_TENSION", "to": "ENERGY_GRID", "source": "GEO_TENSION", "target": "ENERGY_GRID", "label": "Sanktionen / Routen"},
-            {"from": "US_FED", "to": "GEO_TENSION", "source": "US_FED", "target": "GEO_TENSION", "label": "Zinsdruck"}
-        ]
-    },
-    "game_theory_matrices": [],
-    "domestic_policy_matrix": [],
-    "stress_test_scenarios": [],
-    "equity_rotation": {"buys": [], "sells": []},
-    "digital_sovereignty_index": {"score": 50, "status": "Neutral"},
-    "pipeline_health": pipeline_health
 }
 
 
@@ -206,7 +139,7 @@ def sanitize_data_structure(data):
 
 
 def select_balanced_articles(articles: list, max_count: int = 120) -> list:
-    """Sortiert Artikel nach Gewichtung und stellt eine ausgewogene Auslese sicher."""
+    """Sortiert Artikel nach Gewichtung und stellt eine ausgewogene Auslese über alle Kategorien sicher."""
     if not articles:
         return []
 
@@ -229,128 +162,93 @@ def select_balanced_articles(articles: list, max_count: int = 120) -> list:
     return balanced
 
 
-def enrich_and_validate_data(data: dict, deepseek_text: str) -> dict:
+def harmonize_and_validate_schema(data: dict, deepseek_text: str) -> dict:
     """
-    GARANTIE-GUARDRAIL FÜR INDEX.HTML:
-    Stellt sicher, dass alle Feldaliase existieren und leere LLM-Arrays 
-    mit validen, hochqualitativen Daten angereichert werden.
+    STRIKTE SCHEMA-HARMONISIERUNG UND DEEPSEEK-INJEKTION:
+    Erzeugt KEINE erfundenen Daten, sondern übersetzt Schlüssel-Aliase,
+    damit index.html die echten LLM-Daten fehlerfrei anzeigt.
     """
     if not isinstance(data, dict):
-        data = FALLBACK_DATA
+        data = {}
 
-    # 1. KPI-Aliase
-    geoscore = data.get("overall_geoscore") or data.get("geoscore") or 58
-    defcon = data.get("defcon_level") or data.get("defcon") or 3
+    # 1. KPI & Score-Aliase spiegeln
+    geoscore = data.get("overall_geoscore") or data.get("geoscore")
+    defcon = data.get("defcon_level") or data.get("defcon")
 
-    try:
-        data["overall_geoscore"] = int(geoscore)
-        data["geoscore"] = int(geoscore)
-    except (ValueError, TypeError):
-        data["overall_geoscore"] = 58
-        data["geoscore"] = 58
+    if geoscore is not None:
+        try:
+            val = int(geoscore)
+            data["overall_geoscore"] = val
+            data["geoscore"] = val
+        except (ValueError, TypeError):
+            pass
 
-    try:
-        data["defcon_level"] = int(defcon)
-        data["defcon"] = int(defcon)
-    except (ValueError, TypeError):
-        data["defcon_level"] = 3
-        data["defcon"] = 3
+    if defcon is not None:
+        try:
+            val = int(defcon)
+            data["defcon_level"] = val
+            data["defcon"] = val
+        except (ValueError, TypeError):
+            pass
 
-    if "markt_regime" not in data or not data["markt_regime"]:
-        data["markt_regime"] = "Makro-Umfeld: Stagflationsdruck & Rohstoff-Volatilität"
-    if "hauptrisiko" not in data or not data["hauptrisiko"]:
-        data["hauptrisiko"] = "Geopolitische Eskalation & Lieferketten-Chokepoints"
-
-    # 2. DeepSeek / Spieltheorie Text-Injektion (Löst "Analyse wird geladen...")
+    # 2. DeepSeek Spieltheorie-Text in alle erwarteten Key-Namen injizieren
     ds_clean = clean_expert_input(deepseek_text) if deepseek_text else ""
-    if not ds_clean or len(ds_clean) < 50:
-        ds_clean = "Spieltheoretisches Gutachten: Akteure agieren in einem Szenario erhöhter diplomatischer und militärischer Abschreckung. Eskalationsrisiken konzentrieren sich auf maritime Chokepoints und Handelsrestriktionen."
-
-    data["game_theory_analysis"] = ds_clean
-    data["deepseek_analysis"] = ds_clean
-    data["game_theory"] = ds_clean
-
-    # 3. Graph Network (Dual Format for Force-Graph & Vis.js)
-    gn = data.get("graph_network", {})
-    nodes = gn.get("nodes", []) if isinstance(gn, dict) else []
-    edges = gn.get("edges", gn.get("links", [])) if isinstance(gn, dict) else []
-
-    if not nodes or len(nodes) < 3:
-        nodes = [
-            {"id": "US_FED", "label": "Geldpolitik & Zinsen", "name": "Geldpolitik & Zinsen", "group": "Finanzen", "val": 8},
-            {"id": "GEO_TENSION", "label": "Geopolitische Spannungen", "name": "Geopolitische Spannungen", "group": "Konflikt", "val": 10},
-            {"id": "ENERGY_GRID", "label": "Energie & Lieferketten", "name": "Energie & Lieferketten", "group": "Infrastruktur", "val": 7},
-            {"id": "BRICS_TRADE", "label": "BRICS Handelsblöcke", "name": "BRICS Handelsblöcke", "group": "Makro", "val": 8},
-            {"id": "TECH_SOV", "label": "Halbleiter & AI Souveränität", "name": "Halbleiter & AI Souveränität", "group": "Tech", "val": 6}
-        ]
-        edges = [
-            {"from": "GEO_TENSION", "to": "ENERGY_GRID", "source": "GEO_TENSION", "target": "ENERGY_GRID", "label": "Sanktionen / Routen"},
-            {"from": "US_FED", "to": "BRICS_TRADE", "source": "US_FED", "target": "BRICS_TRADE", "label": "Zinsdruck"},
-            {"from": "BRICS_TRADE", "to": "TECH_SOV", "source": "BRICS_TRADE", "target": "TECH_SOV", "label": "Exportkontrollen"}
-        ]
+    if ds_clean:
+        data["game_theory_analysis"] = ds_clean
+        data["deepseek_analysis"] = ds_clean
+        data["game_theory"] = ds_clean
     else:
-        for n in nodes:
-            if "name" not in n and "label" in n:
-                n["name"] = n["label"]
-            if "label" not in n and "name" in n:
-                n["label"] = n["name"]
-        for e in edges:
-            if "source" not in e and "from" in e:
-                e["source"] = e["from"]
-            if "from" not in e and "source" in e:
-                e["from"] = e["source"]
-            if "target" not in e and "to" in e:
-                e["target"] = e["to"]
-            if "to" not in e and "target" in e:
-                e["to"] = e["target"]
+        if "game_theory_analysis" not in data:
+            data["game_theory_analysis"] = "Keine spieltheoretische Analyse für diesen Durchlauf verfügbar."
 
-    data["graph_network"] = {"nodes": nodes, "edges": edges, "links": edges}
-
-    # 4. Hotspots for Leaflet Radar Map (Fixes empty Map)
+    # 3. Hotspots: Koordinaten-Aliase für Leaflet (lat/lon <-> lat/lng)
     hotspots = data.get("conflict_hotspots", [])
-    if not hotspots or len(hotspots) < 2:
-        hotspots = [
-            {"name": "Taiwan-Straße", "lat": 24.0, "lon": 119.5, "lng": 119.5, "intensity": "ROT", "description": "Militärische Manöver & Halbleiter-Lieferketten.", "military_activity": "Erhöht"},
-            {"name": "Scharfes Meer / Bab al-Mandab", "lat": 12.6, "lon": 43.3, "lng": 43.3, "intensity": "ROT", "description": "Angriffe auf Handelsschifffahrt & Marine-Einsätze.", "military_activity": "Hoch"},
-            {"name": "Suwalki-Lücke / Baltikum", "lat": 54.2, "lon": 23.3, "lng": 23.3, "intensity": "GELB", "description": "NATO-Ostflanke & Hybrid-Threats.", "military_activity": "Mittel"},
-            {"name": "Straße von Hormus", "lat": 26.6, "lon": 56.2, "lng": 56.2, "intensity": "GELB", "description": "Öl-Chokepoint & Schattenflotten-Aktivität.", "military_activity": "Mittel"}
-        ]
-    else:
+    if isinstance(hotspots, list):
         for h in hotspots:
-            if "lng" not in h and "lon" in h:
-                h["lng"] = h["lon"]
-            if "lon" not in h and "lng" in h:
-                h["lon"] = h["lng"]
+            if isinstance(h, dict):
+                if "lng" not in h and "lon" in h:
+                    h["lng"] = h["lon"]
+                if "lon" not in h and "lng" in h:
+                    h["lon"] = h["lng"]
+    else:
+        data["conflict_hotspots"] = []
 
-    data["conflict_hotspots"] = hotspots
+    # 4. Graph Network: Aliase für Force-Graph / Canvas (from/to <-> source/target, label <-> name)
+    gn = data.get("graph_network", {})
+    if isinstance(gn, dict):
+        nodes = gn.get("nodes", [])
+        edges = gn.get("edges", gn.get("links", []))
+        
+        if isinstance(nodes, list):
+            for n in nodes:
+                if isinstance(n, dict):
+                    if "name" not in n and "label" in n:
+                        n["name"] = n["label"]
+                    if "label" not in n and "name" in n:
+                        n["label"] = n["name"]
+        
+        if isinstance(edges, list):
+            for e in edges:
+                if isinstance(e, dict):
+                    if "source" not in e and "from" in e:
+                        e["source"] = e["from"]
+                    if "from" not in e and "source" in e:
+                        e["from"] = e["source"]
+                    if "target" not in e and "to" in e:
+                        e["target"] = e["to"]
+                    if "to" not in e and "target" in e:
+                        e["to"] = e["target"]
+        
+        data["graph_network"] = {"nodes": nodes, "edges": edges, "links": edges}
+    else:
+        data["graph_network"] = {"nodes": [], "edges": [], "links": []}
 
-    # 5. Predictive Horizon (Fixes Prognostik)
-    ph = data.get("predictive_horizon", [])
-    if not ph or len(ph) < 3:
-        data["predictive_horizon"] = [
-            {"timeframe": "30 Tage (Taktisch)", "forecast": "Anhaltende Volatilität an Energie- und Devisenmärkten.", "probability": "Hoch", "early_warning_indicators": ["Leitzins-Entscheidungen", "AIS-Schiffsdaten"]},
-            {"timeframe": "90 Tage (Quartal & Makro)", "forecast": "Verschärfung von Handelshemmnissen und Zollsanktionen.", "probability": "Mittel", "early_warning_indicators": ["BRICS-Gipfelergebnisse", "Rohstoff-Lagerbestände"]},
-            {"timeframe": "360 Tage (Strukturell)", "forecast": "Beschleunigte geo-ökonomische Blockbildung und De-Dollarisierung.", "probability": "Hoch", "early_warning_indicators": ["Zentralbank-Goldkäufe", "Subsea-Kabel-Sicherheit"]}
-        ]
+    # 5. Absicherung für sonstige Listen
+    for array_key in ["predictive_horizon", "historical_precedents", "domestic_policy_matrix", "stress_test_scenarios", "key_takeaways"]:
+        if array_key not in data or not isinstance(data[array_key], list):
+            data[array_key] = []
 
-    # 6. Domestic Policy Matrix (Fixes Innenpolitik)
-    dp = data.get("domestic_policy_matrix", [])
-    if not dp:
-        data["domestic_policy_matrix"] = [
-            {"region": "Deutschland / EU", "dynamics": "Haushaltsdebatten & Industriestandort-Druck", "stability": "GELB", "spillover": "Energiepreise & Standortverlagerung"},
-            {"region": "USA", "dynamics": "Wahlkampf-Polarisierung & Handelsrestriktionen", "stability": "GELB", "spillover": "Globale Tarif-Szenarien"},
-            {"region": "China", "dynamics": "Immobiliensektor-Restrukturierung & Exportoffensive", "stability": "GELB", "spillover": "Deflationsdruck & Rohstoffnachfrage"}
-        ]
-
-    # 7. Stress Test Scenarios
-    st = data.get("stress_test_scenarios", [])
-    if not st:
-        data["stress_test_scenarios"] = [
-            {"scenario": "Chokepoint-Blockade (Suez / Hormus)", "impact": "Ölpreis-Schock (+25%), Frachtkosten-Anstieg", "probability": "Mittel", "mitigation": "Strategische Reserven & Kapazitätsumleitung"},
-            {"scenario": "Kritische Infrastruktur (Cyber/Untersee)", "impact": "Ausfall von Kommunikations- & Finanzknoten", "probability": "Gering-Mittel", "mitigation": "Redundante Kaskadensysteme"}
-        ]
-
-    # 8. Root-Level Health Indicators
+    # 6. Health State anhängen
     data["feeds_total"] = pipeline_health.get("feeds_total", 0)
     data["feeds_successful"] = pipeline_health.get("feeds_successful", 0)
     data["feeds_failed"] = pipeline_health.get("feeds_failed", 0)
@@ -362,7 +260,7 @@ def enrich_and_validate_data(data: dict, deepseek_text: str) -> dict:
 # --- STEP 1: FEED INGESTION ---
 
 def fetch_single_feed(source: dict) -> list:
-    """Lädt einen einzelnen RSS/OSINT-Feed mit Timeout und Altersfilter."""
+    """Lädt einen einzelnen RSS/OSINT-Feed mit Timeout."""
     url = source.get("url")
     name = source.get("name", "Unknown")
     category = source.get("cat", source.get("category", "General"))
@@ -481,7 +379,7 @@ def call_deepseek_reasoner(facts: str) -> str:
     """Stufe 2: DeepSeek-R1 zur spieltheoretischen Analyse."""
     if not DEEPSEEK_API_KEY:
         pipeline_health["deepseek_status"] = "SKIPPED (No API Key)"
-        return "Spieltheoretische Analyse aufgrund fehlender API-Konfiguration übersprungen."
+        return ""
 
     endpoint = "https://api.deepseek.com/chat/completions"
     headers = {"Authorization": f"Bearer {DEEPSEEK_API_KEY}", "Content-Type": "application/json"}
@@ -510,7 +408,7 @@ def call_deepseek_reasoner(facts: str) -> str:
         pipeline_health["deepseek_status"] = f"ERROR ({str(e)})"
         pipeline_health["errors"].append(f"DeepSeek Exception: {str(e)}")
 
-    return "Keine spieltheoretische Analyse verfügbar."
+    return ""
 
 
 def call_synthesizer(facts: str, game_theory: str) -> dict:
@@ -531,15 +429,16 @@ def call_synthesizer(facts: str, game_theory: str) -> dict:
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
 
     prompt = (
-        "Du bist das ARGUS GRID Synthese-Modul. Generiere aus den vorliegenden Daten "
-        "ein valides JSON-Objekt gemäß der festgelegten Struktur.\n"
+        "Du bist das ARGUS GRID Synthese-Modul. Generiere aus den vorliegenden Fakten ein valides JSON-Objekt.\n"
         "WICHTIG: Antworte AUSSCHLIESSLICH mit dem puren JSON-Objekt, ohne Markdown-Formatierung!\n"
-        "Fülle ALLE Felder und erstelle für jedes Array mindestens 3-4 konkrete Einträge!\n\n"
+        "Erstelle auf Basis der realen Fakten möglichst präzise Einträge für alle Felder.\n\n"
         f"FAKTEN:\n{facts}\n\nSPIELTHEORIE:\n{game_theory}\n\n"
         "ERFORDERLICHE JSON-STRUKTUR:\n"
         "{\n"
         '  "overall_geoscore": int (0-100),\n'
+        '  "geoscore": int (0-100),\n'
         '  "defcon_level": int (1-5),\n'
+        '  "defcon": int (1-5),\n'
         '  "ampel_status": "GRÜN" | "GELB" | "ROT",\n'
         '  "ampel_reason_simple": "Kurze Begründung",\n'
         '  "daily_executive_summary": "Ausführliche Analyse...",\n'
@@ -547,11 +446,10 @@ def call_synthesizer(facts: str, game_theory: str) -> dict:
         '  "key_takeaways": ["Punkt 1", "Punkt 2", "Punkt 3"],\n'
         '  "predictive_horizon": [{"timeframe": "30 Tage (Taktisch)", "forecast": "...", "probability": "Hoch/Mittel/Niedrig", "early_warning_indicators": ["..."]}],\n'
         '  "historical_precedents": [{"event": "...", "period": "...", "similarity": "...", "takeaway": "..."}],\n'
-        '  "conflict_hotspots": [{"name": "...", "lat": float, "lon": float, "intensity": "ROT/GELB", "description": "...", "military_activity": "..."}],\n'
-        '  "graph_network": {"nodes": [{"id": "...", "label": "...", "group": "...", "val": 5}], "edges": [{"from": "...", "to": "...", "label": "..."}]},\n'
-        '  "game_theory_matrices": [],\n'
-        '  "domestic_policy_matrix": [],\n'
-        '  "stress_test_scenarios": [],\n'
+        '  "conflict_hotspots": [{"name": "...", "lat": float, "lon": float, "lng": float, "intensity": "ROT/GELB", "description": "...", "military_activity": "..."}],\n'
+        '  "graph_network": {"nodes": [{"id": "...", "label": "...", "name": "...", "group": "...", "val": 5}], "edges": [{"from": "...", "to": "...", "source": "...", "target": "...", "label": "..."}]},\n'
+        '  "domestic_policy_matrix": [{"region": "...", "dynamics": "...", "stability": "GELB", "spillover": "..."}],\n'
+        '  "stress_test_scenarios": [{"scenario": "...", "impact": "...", "probability": "...", "mitigation": "..."}],\n'
         '  "equity_rotation": {"buys": [], "sells": []},\n'
         '  "digital_sovereignty_index": {"score": int, "status": "..."}\n'
         "}"
@@ -641,8 +539,8 @@ def main():
     game_theory_text = ""
 
     if not articles:
-        logging.error("Keine Artikel geladen. Verwende Notfall-Fallback.")
-        final_data = FALLBACK_DATA
+        logging.error("Keine Artikel geladen. Erzeuge leeres Status-JSON.")
+        final_data = {}
     else:
         try:
             logging.info("Stufe 1: Denoising via Groq...")
@@ -658,16 +556,16 @@ def main():
             final_data = call_haiku_refine(synthesized_data)
 
         except Exception as e:
-            logging.error(f"Fehler in der LLM-Pipeline: {e}. Aktiviere Notfall-Fallback.")
+            logging.error(f"Fehler in der LLM-Pipeline: {e}.")
             pipeline_health["errors"].append(f"Pipeline Critical Error: {str(e)}")
-            final_data = FALLBACK_DATA
+            final_data = {}
 
-    # Metadata Injection
+    # Timestamp Injection
     final_data["timestamp"] = datetime.now(timezone.utc).isoformat()
 
-    # Schema Validation & Fallback Enrichment (Fixes UI blanks)
-    logging.info("Stufe 5: Schema Validation & Frontend Enrichment...")
-    final_data = enrich_and_validate_data(final_data, game_theory_text)
+    # Schema Validation & Key-Harmonization (Löst leere Frontend-Felder ohne Datenfälschung)
+    logging.info("Stufe 5: Schema Harmonization & Validation...")
+    final_data = harmonize_and_validate_schema(final_data, game_theory_text)
 
     # Data Sanitization (Markdown Stripping)
     logging.info("Stufe 6: Data Sanitization...")
