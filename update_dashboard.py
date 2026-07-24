@@ -447,7 +447,7 @@ DYNAMISCHER ZEITANKER:
 - HEUTIGES DATUM: {CURRENT_DATE_STR} (Jahr: {CURRENT_YEAR}). Bevorzuge Quellen mit GEWICHT >= 0.90 für Fakten!
 
 BEHALTE UNBEDINGT:
-1. PREDICTION MARKETS & ODDS: Polymarket / Kalshi.
+1. PREDICTION MARKETS & ODDS: Polymarket / Kalshi / Manifold.
 2. REDDIT & 𝕏/TWITTER OSINT: Eilmeldungen, NOTAMs, Cyber Threats, Frontline Update.
 3. REGIONALE KRISEN & PARTEIEN: Frankreich, Polen/Baltikum/Ukraine, AUKUS/Pazifik, Südeuropa, USA.
 4. ESKALATIONSSPIRALEN, CYBER & DESINFO: EUvsDisinfo, Shadowserver, CISA.
@@ -612,6 +612,9 @@ Synthetisiere die Experten-Berichte zu einer unvoreingenommenen Gesamtlage.
 
 DYNAMISCHER ZEITANKER: {CURRENT_DATE_STR}.
 
+WICHTIG - GRAPH NETWORK GENERATION:
+Erstelle zusätzlich im Feld `graph_network` 6 bis 12 vernetzte Knoten (nodes) und Verbindungen (links), die die wichtigsten Kaskaden der heutigen Weltlage abbilden (Akteure, Hotspots, Rohstoffe, Märkte, Risiken).
+
 ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT:
 {{
   "ampel_status": "GELB",
@@ -626,6 +629,23 @@ ANTWORTE AUSSCHLIESSLICH IM REIN VALIDEN JSON-FORMAT:
     "leading_indicators_to_watch": [{{"indicator": "...", "current_status": "...", "critical_threshold": "..."}}]
   }},
   "historical_precedents": [{{"current_event": "...", "historical_analog": "...", "similarity_degree": "HOCH", "historical_outcome": "...", "key_divergence": "..."}}],
+  
+  "graph_network": {{
+    "nodes": [
+      {{"id": "n1", "label": "Strasse von Hormus", "group": "hotspot", "val": 10}},
+      {{"id": "n2", "label": "Iran / IRGC", "group": "actor", "val": 8}},
+      {{"id": "n3", "label": "Brent Rohöl", "group": "commodity", "val": 8}},
+      {{"id": "n4", "label": "Rüstungssektor", "group": "market", "val": 6}},
+      {{"id": "n5", "label": "Lieferketten-Schock", "group": "risk", "val": 7}}
+    ],
+    "links": [
+      {{"source": "n2", "target": "n1", "label": "droht mit Blockade"}},
+      {{"source": "n1", "target": "n5", "label": "verursacht"}},
+      {{"source": "n5", "target": "n3", "label": "treibt Preis"}},
+      {{"source": "n3", "target": "n4", "label": "stärkt Marge"}}
+    ]
+  }},
+
   "daily_executive_summary": "Ausführlicher Bericht...",
   "market_regime": "Stagflationär / Geopolitische Fragmentierung",
   "geoscore": {{"current_score": 78, "status_label": "ERHÖHT", "previous_48h": 74}},
@@ -714,7 +734,6 @@ Aufgabe:
 2. Optimiere NUR die Felder `daily_executive_summary_simple`, `ampel_reason_simple` und `simple_key_takeaways` für maximale Verständlichkeit.
 3. Gib das überarbeitete JSON exakt in derselben Struktur zurück. Ändere KEINE Datenwerte oder Zahlen!"""
 
-    # Claude erhält NUR das kompakte JSON (~1.200 Tokens Input statt 50.000 Tokens!)
     slim_payload = json.dumps({
         "ampel_status": parsed_data.get("ampel_status"),
         "ampel_reason_simple": parsed_data.get("ampel_reason_simple"),
@@ -725,14 +744,13 @@ Aufgabe:
 
     try:
         res = client_anthropic.messages.create(
-            model="claude-3-5-haiku-20241022", # HARD LOCK: Nur Haiku! Kein Opus, kein Fable!
-            max_tokens=1000, # STRIKTE TOKEN-DROSSELUNG!
+            model="claude-3-5-haiku-20241022",
+            max_tokens=1000,
             system=editor_prompt,
             messages=[{"role": "user", "content": slim_payload}]
         )
         refined_json = repair_and_parse_json(res.content[0].text.strip())
         
-        # Injektion der von Claude veredelten Texte
         if "daily_executive_summary_simple" in refined_json:
             parsed_data["daily_executive_summary_simple"] = refined_json["daily_executive_summary_simple"]
         if "ampel_reason_simple" in refined_json:
