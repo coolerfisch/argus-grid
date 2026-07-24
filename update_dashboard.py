@@ -133,24 +133,18 @@ def clean_expert_input(raw_text: str) -> str:
 
 
 def repair_and_parse_json(raw_text: str) -> dict:
-    """
-    Versucht rohes LLM-JSON robust zu parsen.
-    Entfernt Code-Zäune, repariert Trailing Commas und schließt offene Klammern.
-    """
+    """Versucht rohes LLM-JSON robust zu parsen und Syntaxfehler zu beheben."""
     if not raw_text:
         raise ValueError("Leerer Antworttext erhalten.")
 
-    # 1. Strippe Markdown-Codeblocks
     text = re.sub(r"^```(?:json)?\s*", "", raw_text.strip(), flags=re.MULTILINE)
     text = re.sub(r"\s*```$", "", text, flags=re.MULTILINE).strip()
 
-    # 2. Versuch: Standard-Parse
     try:
         return json.loads(text)
     except json.JSONDecodeError:
         pass
 
-    # 3. Versuch: Äußersten JSON-Block { ... } extrahieren
     match = re.search(r"\{.*\}", text, re.DOTALL)
     if match:
         extracted = match.group(0)
@@ -159,14 +153,12 @@ def repair_and_parse_json(raw_text: str) -> dict:
         except json.JSONDecodeError:
             text = extracted
 
-    # 4. Versuch: Trailing Commas vor ] oder } entfernen
     repaired = re.sub(r",\s*([\]}])", r"\1", text)
     try:
         return json.loads(repaired)
     except json.JSONDecodeError:
         pass
 
-    # 5. Versuch: Offene Klammern bei abgeschnittenem Output schließen
     open_braces = text.count('{') - text.count('}')
     open_brackets = text.count('[') - text.count(']')
     text_patched = text + (']' * max(0, open_brackets)) + ('}' * max(0, open_braces))
@@ -208,13 +200,47 @@ def ensure_fallback_structures(data: dict) -> dict:
     return data
 
 
+def select_balanced_articles(articles: list, max_count: int = 120) -> list:
+    """
+    FIX für 180+ Feeds:
+    Sortiert Artikel nach Gewichtung und stellt sicher, dass aus ALLEN Kategorien
+    (Zentralbanken, Schattenflotten, Agrar, OSINT etc.) Artikel berücksichtigt werden.
+    """
+    if not articles:
+        return []
+
+    # Sortiere absteigend nach Gewichtung
+    sorted_articles = sorted(articles, key=lambda x: x.get("weight", 1.0), reverse=True)
+    
+    # Nach Kategorien gruppieren
+    cat_groups = {}
+    for a in sorted_articles:
+        cat = a.get("category", "General")
+        if cat not in cat_groups:
+            cat_groups[cat] = []
+        cat_groups[cat].append(a)
+
+    balanced = []
+    # Reihum aus jeder Kategorie die Top-Artikel ziehen
+    while len(balanced) < max_count and any(cat_groups.values()):
+        for cat in list(cat_groups.keys()):
+            if cat_groups[cat]:
+                balanced.append(cat_groups[cat].pop(0))
+            if len(balanced) >= max_count:
+                break
+    return balanced
+
+
 # --- STEP 1: FEED INGESTION ---
 
 def fetch_single_feed(source: dict) -> list:
     """Lädt einen einzelnen RSS/OSINT-Feed mit Timeout und Altersfilter."""
     url = source.get("url")
     name = source.get("name", "Unknown")
-    category = source.get("category", "General")
+    
+    # KEY-FIX: Unterstüzt sowohl "cat" als auch "category"
+    category = source.get("cat", source.get("category", "General"))
+    bias = source.get("bias", "NEUTRAL")
     weight = source.get("weight", 1.0)
 
     articles = []
@@ -226,15 +252,12 @@ def fetch_single_feed(source: dict) -> list:
             return []
 
         parsed = feedparser.parse(response.content)
-        now = datetime.now(timezone.utc)
-        cutoff_time = now - timedelta(hours=MAX_ARTICLE_AGE_HOURS)
 
-        for entry in parsed.entries[:10]:
+        for entry in parsed.entries[:8]:
             title = entry.get("title", "").strip()
             summary = entry.get("summary", entry.get("description", "")).strip()
             link = entry.get("link", "").strip()
             
-            # HTML-Tags aus Summary entfernen
             summary_clean = re.sub(r"<[^>]+>", "", summary)[:300]
 
             if title:
@@ -244,16 +267,17 @@ def fetch_single_feed(source: dict) -> list:
                     "link": link,
                     "source": name,
                     "category": category,
+                    "bias": bias,
                     "weight": weight
                 })
         return articles
 
-    except Exception as e:
+    except Exception:
         return []
 
 
 def fetch_all_feeds(sources_list: list) -> list:
-    """Startet parallele Feed-Abfragen mit optimierter Worker-Anzahl."""
+    """Startet parallele Feed-Abfragen mit 40 Workern."""
     pipeline_health["feeds_total"] = len(sources_list)
     all_articles = []
     successful_feeds = 0
@@ -289,13 +313,19 @@ def call_groq_denoise(articles: list) -> str:
     endpoint = "https://api.groq.com/openai/v1/chat/completions"
     headers = {"Authorization": f"Bearer {GROQ_API_KEY}", "Content-Type": "application/json"}
     
-    # Komprimierten Input erstellen
-    raw_payload = "\n".join([f"[{a['category']}] {a['source']}: {a['title']} - {a['summary']}" for a in articles[:100]])
+    # Verwende balancierte Artikel-Auswahl über alle Kategorien hinweg
+    selected_articles = select_balanced_articles(articles, max_count=120)
+    
+    raw_payload = "\n".join([
+        f"[{a['category']} | {a['bias']}] {a['source']}: {a['title']} - {a['summary']}" 
+        for a in selected_articles
+    ])
     
     prompt = (
-        "Du bist ein leitender OSINT-Analyst. Analysiere folgende Roh-Feeds. "
-        "Filtere Rauschen, Propaganda und Duplikate heraus. "
-        "Extrahiere nur die 25 wichtigsten, verifizierbaren geopolitischen & makroökonomischen Fakten des Tages. "
+        "Du bist ein leitender OSINT-Analyst. Analysiere folgende Roh-Feeds aus aller Welt "
+        "(Geopolitik, Zentralbanken, Schattenflotten, Agrar, Cyber, Militär).\n"
+        "Filtere Rauschen, Propaganda und Duplikate heraus.\n"
+        "Extrahiere die 30 wichtigsten, verifizierbaren geopolitischen, militärischen & makroökonomischen Fakten des Tages. "
         "Formatiere als sachliche Stichpunkte mit Quellenbezug.\n\n"
         f"FEEDS:\n{raw_payload}"
     )
@@ -304,11 +334,11 @@ def call_groq_denoise(articles: list) -> str:
         "model": "llama-3.3-70b-versatile",
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.2,
-        "max_tokens": 2000
+        "max_tokens": 2500
     }
 
     try:
-        res = requests.post(endpoint, headers=headers, json=data, timeout=30)
+        res = requests.post(endpoint, headers=headers, json=data, timeout=35)
         if res.status_code == 200:
             pipeline_health["groq_status"] = "SUCCESS"
             return res.json()["choices"][0]["message"]["content"]
@@ -365,7 +395,6 @@ def call_synthesizer(facts: str, game_theory: str) -> dict:
         pipeline_health["synthesizer_status"] = "SKIPPED (No Key)"
         raise ValueError("Kein gültiger API-Key für Synthesizer vorhanden.")
 
-    # Standard-Endpoint (Mistral Native)
     endpoint = "https://api.mistral.ai/v1/chat/completions"
     model = "mistral-large-latest"
 
@@ -488,19 +517,15 @@ def main():
         final_data = FALLBACK_DATA
     else:
         try:
-            # 2. Stage 1: Denoise via Groq
             logging.info("Stufe 1: Denoising via Groq...")
             facts = call_groq_denoise(articles)
 
-            # 3. Stage 2: DeepSeek Reasoner
             logging.info("Stufe 2: Game-Theory via DeepSeek...")
             game_theory = call_deepseek_reasoner(facts)
 
-            # 4. Stage 3: Synthesizer (Mistral/Qwen)
             logging.info("Stufe 3: Synthesizing JSON...")
             synthesized_data = call_synthesizer(facts, game_theory)
 
-            # 5. Stage 4: Refine via Claude Haiku
             logging.info("Stufe 4: Refining prose via Claude Haiku...")
             final_data = call_haiku_refine(synthesized_data)
 
