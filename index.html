@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ARGUS GRID // World Intelligence</title>
   
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  
+  <!-- LEAFLET MAP & FORCE GRAPH LIBRARIES -->
+  <link rel="stylesheet" href="[https://unpkg.com/leaflet@1.9.4/dist/leaflet.css](https://unpkg.com/leaflet@1.9.4/dist/leaflet.css)" />
+  <script src="[https://unpkg.com/force-graph](https://unpkg.com/force-graph)"></script>
+
   <style>
     :root {
       --bg-main: #0b0f19;
@@ -244,6 +246,8 @@
     .highlight-box { background: rgba(234, 179, 8, 0.08); border-left: 3px solid var(--accent-gold); padding: 12px; border-radius: 4px; font-size: 0.9rem; }
 
     #hotspot-map { height: 400px; width: 100%; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 10px; background: #090d16; }
+    #knowledge-graph { height: 480px; width: 100%; border-radius: 8px; border: 1px solid var(--border-color); margin-top: 10px; background: #070a12; }
+
     .map-legend { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 12px; font-size: 0.82rem; color: var(--text-muted); }
     .legend-item { display: flex; align-items: center; gap: 6px; }
     .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
@@ -405,6 +409,24 @@
 
   <div class="dashboard-grid">
 
+    <!-- 🕸️ KNOWLEDGE GRAPH MATRIX (OBSIDIAN STYLE) -->
+    <div class="card detailed-section" style="grid-column: 1 / -1; border-left: 4px solid var(--accent-cyan);">
+      <h2>🕸️ Entity-Relationship & Geopolitisches Kaskaden-Netzwerk</h2>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 10px;">
+        Interaktive Beziehungs- & Abhängigkeits-Matrix der aktuellen Weltlage. Zoom mit Mausrad, Drag & Drop von Knoten.
+      </p>
+
+      <div id="knowledge-graph"></div>
+
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background: #ef4444; box-shadow: 0 0 6px #ef4444;"></div> 🔴 Hotspot / Konflikt</div>
+        <div class="legend-item"><div class="legend-dot" style="background: #a855f7;"></div> 🟣 Akteur / Staat</div>
+        <div class="legend-item"><div class="legend-dot" style="background: #eab308;"></div> 🟡 Rohstoff / Lieferkette</div>
+        <div class="legend-item"><div class="legend-dot" style="background: #22c55e;"></div> 🟢 Markt / Sektor</div>
+        <div class="legend-item"><div class="legend-dot" style="background: #f97316;"></div> 🟠 Risiko / Kaskade</div>
+      </div>
+    </div>
+
     <!-- PROGNOSTIK & ZEITACHSEN MATRIX -->
     <div class="card detailed-section" style="grid-column: 1 / -1; border-left: 4px solid var(--accent-purple);">
       <h2>🔮 Wissenschaftliche Prognostik & Superforecasting Matrix</h2>
@@ -480,7 +502,7 @@
       <div id="stress-scenarios-container" class="dashboard-grid" style="margin-bottom: 0;"></div>
     </div>
 
-    <!-- KARTE UND HOTSPOTS (NUR IN TIEFENANALYSE) -->
+    <!-- KARTE UND HOTSPOTS -->
     <div class="card detailed-section" style="grid-column: span 2;">
       <h2>🗺️ Live Tactical Radar, ADS-B Recon & Maritime AIS Chokepoints</h2>
       <div id="hotspot-map"></div>
@@ -589,10 +611,11 @@
     </div>
   </div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="[https://unpkg.com/leaflet@1.9.4/dist/leaflet.js](https://unpkg.com/leaflet@1.9.4/dist/leaflet.js)"></script>
 
   <script>
     let map = null;
+    let graphInstance = null;
 
     function openSourcesModal() { document.getElementById('sources-modal').classList.add('active'); }
     function closeSourcesModal(event) {
@@ -610,8 +633,15 @@
         document.body.classList.remove('simple-mode');
         document.getElementById('btn-detailed').classList.add('active');
         document.getElementById('btn-simple').classList.remove('active');
+        
+        setTimeout(() => {
+          if (map) map.invalidateSize();
+          if (graphInstance) {
+            const container = document.getElementById('knowledge-graph');
+            if (container) graphInstance.width(container.clientWidth);
+          }
+        }, 200);
       }
-      if (map && mode === 'detailed') setTimeout(() => map.invalidateSize(), 200);
     }
 
     async function loadDashboard() {
@@ -725,7 +755,14 @@
         }
       } catch(e) { console.error("Error Historical Precedents:", e); }
 
-      // 4. ENGINE HEALTH BADGE
+      // 4. RENDERING FORCE-DIRECTED KNOWLEDGE GRAPH
+      try {
+        if (data.graph_network) {
+          initKnowledgeGraph(data.graph_network);
+        }
+      } catch(e) { console.error("Error Knowledge Graph:", e); }
+
+      // 5. ENGINE HEALTH BADGE
       try {
         if (data.pipeline_health) {
           const ph = data.pipeline_health;
@@ -949,6 +986,34 @@
       } catch(e) { console.error("Error Map/Hotspots:", e); }
     }
 
+    function initKnowledgeGraph(graphData) {
+      const container = document.getElementById('knowledge-graph');
+      if (!container || !graphData || !Array.isArray(graphData.nodes) || graphData.nodes.length === 0) return;
+
+      container.innerHTML = '';
+
+      const colorMap = {
+        'hotspot': '#ef4444',
+        'actor': '#a855f7',
+        'commodity': '#eab308',
+        'market': '#22c55e',
+        'risk': '#f97316'
+      };
+
+      graphInstance = ForceGraph()(container)
+        .graphData(graphData)
+        .nodeId('id')
+        .nodeLabel(node => `${node.label} [${(node.group || 'entity').toUpperCase()}]`)
+        .nodeVal(node => node.val || 6)
+        .nodeColor(node => colorMap[node.group] || '#38bdf8')
+        .linkColor(() => '#334155')
+        .linkWidth(1.5)
+        .linkLabel(link => link.label || '')
+        .linkDirectionalParticles(2)
+        .linkDirectionalParticleSpeed(0.006)
+        .backgroundColor('#070a12');
+    }
+
     function initMap(hotspots, flights, ships) {
       if (typeof L === 'undefined') return;
       if (map) { map.remove(); map = null; }
@@ -957,7 +1022,7 @@
       if (!mapContainer) return;
 
       map = L.map('hotspot-map').setView([35, 25], 3);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(map);
+      L.tileLayer('https://{s}[.basemaps.cartocdn.com/dark_all/](https://.basemaps.cartocdn.com/dark_all/){z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(map);
 
       hotspots.forEach(spot => {
         if (spot && spot.lat != null && spot.lng != null) {
