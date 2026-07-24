@@ -1,57 +1,62 @@
 {
-  "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte geopolitische Spannungen und Marktvolatilität bei unsicherer Datenlage durch API-Ausfälle.",
-  "daily_executive_summary_simple": "Die Weltlage ist geprägt von anhaltenden geopolitischen Risiken, insbesondere im Nahen Osten, und einer fragilen Marktstabilität. API-Ausfälle bei Schlüsselinformationsquellen erschweren die Echtzeitbewertung, während Rohstoffpreise und Finanzmärkte auf Eskalationsrisiken reagieren.",
+  "ampel_status": "GELB-ROT",
+  "ampel_reason_simple": "Eskalierende geopolitische Spannungen im Nahen Osten und Ukraine-Krieg mit unmittelbaren globalen Markt- und Lieferkettenrisiken.",
+  "daily_executive_summary_simple": "Die USA und Iran stehen am Rande direkter militärischer Konfrontation nach gegenseitigen Angriffen, während Russlands Bruch des Getreideabkommens die Nahrungsmittelkrise verschärft. Finanzmärkte reagieren mit Volatilität, insbesondere bei Öl und sicheren Häfen wie Gold.",
   "simple_key_takeaways": [
-    "Strategische Engpässe (z.B. Straße von Hormus) dominieren die Risikolandschaft.",
-    "Gold und Rüstungssektor profitieren von Unsicherheit, Tech-Werte unter Druck.",
-    "Fehlende Echtzeitdaten erhöhen die Unsicherheit für taktische Entscheidungen."
+    "USA-Iran-Eskalation dominiert globale Risikolage mit Blockadegefahr in der Straße von Hormus",
+    "Russlands Angriff auf Odessa untergräbt Getreideexport-Vereinbarung und erhöht Hungerrisiko in Afrika/Asien",
+    "Finanzmärkte zeigen gemischte Signale: Ölpreis fällt trotz Risiken, Gold und Rüstungsaktien steigen"
   ],
   "predictive_horizon": {
-    "base_case_summary": "In den nächsten 30-90 Tagen wird eine Fortsetzung der aktuellen Spannungen erwartet, mit moderater Eskalationswahrscheinlichkeit (z.B. temporäre Blockaden oder Cyberangriffe). Märkte bleiben volatil, aber ohne systemische Krise.",
-    "base_case_probability_pct": 65,
+    "base_case_summary": "In den nächsten 30-90 Tagen wahrscheinlich kontrollierte Eskalation mit regionalen Stellvertreterkonflikten, aber erhöhtem Risiko direkter militärischer Zusammenstöße zwischen USA und Iran. Ölpreise bleiben volatil, Lieferkettenstörungen in Energie- und Agrarsektor verschärfen sich.",
+    "base_case_probability_pct": 60,
     "time_horizons": {
-      "30_days_tactic": "Taktische Absicherung gegen Lieferkettenunterbrechungen und Energiepreisschocks.",
-      "90_days_macro": "Makroökonomische Anpassungen an stagflationäre Tendenzen, Fokus auf defensive Sektoren.",
-      "360_days_structural": "Langfristige Fragmentierung der globalen Handelsrouten und Währungsblöcke."
+      "30_days_tactic": "Begrenzte militärische Schläge mit diplomatischen Deeskalationsversuchen, aber hohe Fehlkalkulationsgefahr. Märkte bleiben in 'Risk-on/Risk-off'-Modus mit Fokus auf sichere Anlagen.",
+      "90_days_macro": "Mögliche Ausweitung der Konflikte auf weitere Akteure (Israel, Hisbollah, Jemen), was zu anhaltender Stagflation und globalen Wachstumsverlangsamung führt.",
+      "360_days_structural": "Neue geopolitische Blöcke formieren sich, Energie- und Nahrungsmittelpreise bleiben strukturell erhöht. CBDCs und digitale Souveränität gewinnen an Bedeutung."
     },
     "black_swan_tail_risk": {
-      "risk_event": "Plötzliche militärische Eskalation im Nahen Osten mit dauerhafter Blockade der Straße von Hormus.",
-      "probability_pct": 8,
-      "market_impact": "Ölpreis >150 USD/bbl, globale Rezession, Zusammenbruch von Lieferketten."
+      "risk_event": "Direkter militärischer Schlagabtausch zwischen USA und Iran mit vollständiger Blockade der Straße von Hormus",
+      "probability_pct": 12,
+      "market_impact": "Ölpreis springt auf 150+ USD/bbl, globale Rezession, massive Kapitalflucht in sichere Häfen, Zusammenbruch von Lieferketten in Europa/Asien"
     },
     "leading_indicators_to_watch": [
       {
-        "indicator": "Brent-Ölpreis (USD/bbl)",
-        "current_status": "95.81 (-4.85% heute)",
-        "critical_threshold": ">120 USD/bbl für >7 Tage"
+        "indicator": "Iranische Drohungen/Provokationen in der Straße von Hormus",
+        "current_status": "ERHÖHT (mehrere Warnungen in letzten 48h)",
+        "critical_threshold": "Militärische Aktion gegen Handelsschiffe"
+      },
+      {
+        "indicator": "Getreideexporte aus Ukraine (tägliche Tonnage)",
+        "current_status": "RÜCKLÄUFIG (-30% seit Odessa-Angriff)",
+        "critical_threshold": "Unter 50% des Vorkriegsniveaus für 7+ Tage"
       },
       {
         "indicator": "VIX (Volatilitätsindex)",
-        "current_status": "17.88 (-4.39% heute)",
-        "critical_threshold": ">30 für >3 Tage"
+        "current_status": "18.10 (leicht rückläufig)",
+        "critical_threshold": "Über 25 für 3+ Tage"
       },
       {
-        "indicator": "IRGC-Proxy-Aktivitäten (z.B. Drohnenangriffe)",
-        "current_status": "Erhöht (unbestätigt)",
-        "critical_threshold": "Mehr als 3 Vorfälle/Woche"
+        "indicator": "Gold/Öl-Ratio",
+        "current_status": "42.3 (historisch hoch)",
+        "critical_threshold": "Über 50 (extreme Risikoaversion)"
       }
     ]
   },
   "historical_precedents": [
     {
-      "current_event": "Drohungen mit Blockade der Straße von Hormus durch den Iran",
-      "historical_analog": "Tankerkrieg im Persischen Golf (1980er)",
+      "current_event": "USA-Iran-Eskalation 2026 mit Blockadeandrohung Straße von Hormus",
+      "historical_analog": "Tankerkrieg 1987-1988 (Operation Earnest Will)",
       "similarity_degree": "HOCH",
-      "historical_outcome": "Temporäre Ölpreisschocks, aber keine dauerhafte Blockade; internationale Marinepräsenz stabilisierte die Lage.",
-      "key_divergence": "Heutige Abhängigkeit von globalen Just-in-Time-Lieferketten ist deutlich höher."
+      "historical_outcome": "Begrenzte militärische Konfrontation mit temporären Ölpreisschocks (Brent +40%), aber keine vollständige Blockade. USA sicherten Schifffahrtsrouten mit Marineeskorten.",
+      "key_divergence": "Heutige Abhängigkeit von globalen Just-in-Time-Lieferketten und höhere Verwundbarkeit durch Cyberangriffe"
     },
     {
-      "current_event": "Stagflationäre Marktbedingungen",
-      "historical_analog": "Ölkrise der 1970er",
-      "similarity_degree": "MITTEL",
-      "historical_outcome": "Lange Phase hoher Inflation und niedrigen Wachstums, begleitet von sozialen Unruhen.",
-      "key_divergence": "Heutige Zentralbanken verfügen über größere geldpolitische Werkzeuge, aber höhere Schuldenlasten."
+      "current_event": "Russlands Bruch des Getreideabkommens 2026",
+      "historical_analog": "Russlands Blockade ukrainischer Häfen 2022-2023",
+      "similarity_degree": "SEHR HOCH",
+      "historical_outcome": "Welthungerindex stieg um 15%, Weizenpreise verdoppelten sich kurzfristig. UN vermittelte später neues Abkommen (Black Sea Grain Initiative).",
+      "key_divergence": "Aktuell keine UN-Vermittlung in Sicht, höhere Lagerbestände in Europa/USA, aber akute Knappheit in Afrika"
     }
   ],
   "graph_network": {
@@ -70,63 +75,63 @@
       },
       {
         "id": "n3",
-        "label": "Brent Rohöl",
-        "group": "commodity",
+        "label": "USA / CENTCOM",
+        "group": "actor",
         "val": 8
       },
       {
         "id": "n4",
-        "label": "Rüstungssektor",
+        "label": "Brent Rohöl",
+        "group": "commodity",
+        "val": 9
+      },
+      {
+        "id": "n5",
+        "label": "Getreideexporte (Ukraine)",
+        "group": "commodity",
+        "val": 8
+      },
+      {
+        "id": "n6",
+        "label": "Rüstungssektor (NATO)",
         "group": "market",
         "val": 7
       },
       {
-        "id": "n5",
+        "id": "n7",
+        "label": "Goldmarkt",
+        "group": "market",
+        "val": 7
+      },
+      {
+        "id": "n8",
         "label": "Lieferketten-Schock",
         "group": "risk",
         "val": 8
       },
       {
-        "id": "n6",
-        "label": "Gold",
-        "group": "commodity",
-        "val": 7
-      },
-      {
-        "id": "n7",
-        "label": "US-Dollar (DXY)",
-        "group": "currency",
-        "val": 6
-      },
-      {
-        "id": "n8",
-        "label": "Tech-Sektor",
-        "group": "market",
-        "val": 5
-      },
-      {
         "id": "n9",
-        "label": "Cyberangriffe (Staatlich)",
+        "label": "Hungerkrise (Afrika)",
         "group": "risk",
-        "val": 6
+        "val": 7
       },
       {
         "id": "n10",
-        "label": "EU / USA",
+        "label": "Russland / Schwarzmeerflotte",
         "group": "actor",
-        "val": 7
+        "val": 8
       },
       {
         "id": "n11",
-        "label": "China (CNY)",
-        "group": "currency",
+        "label": "UN / WFP",
+        "group": "actor",
         "val": 6
       },
       {
         "id": "n12",
-        "label": "Kupfer",
-        "group": "commodity",
-        "val": 5
+        "label": "Cyberangriffe auf Häfen",
+        "group": "risk",
+        "val": 6
       }
     ],
     "links": [
@@ -136,245 +141,278 @@
         "label": "droht mit Blockade"
       },
       {
+        "source": "n3",
+        "target": "n2",
+        "label": "militärische Gegenmaßnahmen"
+      },
+      {
         "source": "n1",
-        "target": "n5",
+        "target": "n8",
         "label": "verursacht"
       },
       {
-        "source": "n5",
-        "target": "n3",
+        "source": "n8",
+        "target": "n4",
         "label": "treibt Preis"
       },
       {
-        "source": "n3",
-        "target": "n4",
-        "label": "stärkt Marge"
-      },
-      {
-        "source": "n3",
-        "target": "n7",
-        "label": "schwächt"
-      },
-      {
-        "source": "n5",
+        "source": "n4",
         "target": "n6",
         "label": "stärkt Nachfrage"
       },
       {
-        "source": "n9",
-        "target": "n5",
-        "label": "verstärkt"
-      },
-      {
-        "source": "n10",
-        "target": "n2",
-        "label": "diplomatischer Druck"
-      },
-      {
-        "source": "n7",
-        "target": "n8",
-        "label": "belastet"
-      },
-      {
-        "source": "n11",
+        "source": "n4",
         "target": "n7",
         "label": "korreliert negativ"
       },
       {
-        "source": "n3",
+        "source": "n10",
+        "target": "n5",
+        "label": "blockiert Exporte"
+      },
+      {
+        "source": "n5",
+        "target": "n9",
+        "label": "verschärft"
+      },
+      {
+        "source": "n9",
+        "target": "n11",
+        "label": "erzwingt Hilfsmaßnahmen"
+      },
+      {
+        "source": "n10",
         "target": "n12",
-        "label": "korreliert positiv"
+        "label": "initiiert"
+      },
+      {
+        "source": "n12",
+        "target": "n8",
+        "label": "verstärkt"
+      },
+      {
+        "source": "n3",
+        "target": "n6",
+        "label": "finanziert"
       }
     ]
   },
-  "daily_executive_summary": "Die globale Lage am 24.07.2026 ist durch eine Kombination aus geopolitischen Spannungen, Marktvolatilität und unvollständiger Datenlage gekennzeichnet. Die Straße von Hormus bleibt der kritischste Hotspot, wobei die Islamische Revolutionsgarde (IRGC) des Iran mit einer Blockade droht, was zu Lieferkettenunterbrechungen und einem Anstieg der Ölpreise führen könnte. Die Finanzmärkte reagieren mit erhöhter Volatilität: Gold und der Rüstungssektor verzeichnen Zuwächse, während Tech-Werte und der US-Dollar unter Druck stehen. \n\nAPI-Ausfälle bei Schlüsselinformationsquellen (z.B. Gemini, Grok, Qwen) erschweren die Echtzeitbewertung von Risiken, insbesondere in den Bereichen Cybersicherheit, politische Stabilität und Rohstoffmärkte. Die verfügbaren Finanzdaten zeigen eine gemischte Entwicklung: Während der VIX leicht sinkt, bleibt die Volatilität im Energie- und Währungssektor erhöht. Der Brent-Ölpreis ist heute um fast 5 % gefallen, bleibt aber auf hohem Niveau, was auf eine fragile Balance zwischen Angebotssorgen und Nachfrageschwäche hindeutet. \n\nDie historische Analyse zeigt Parallelen zu früheren Krisen (z.B. Tankerkrieg der 1980er), allerdings mit dem Unterschied, dass heutige Lieferketten anfälliger für Schocks sind. Die prognostizierte Basislinie geht von einer Fortsetzung der aktuellen Spannungen aus, ohne dass es zu einer systemischen Eskalation kommt. Dennoch bleibt das Risiko eines „Black Swan“-Ereignisses (z.B. dauerhafte Blockade der Straße von Hormus) mit einer Wahrscheinlichkeit von 8 % bestehen, was zu extremen Marktverwerfungen führen könnte.",
-  "market_regime": "Stagflationär / Geopolitische Fragmentierung",
+  "daily_executive_summary": "Die globale Sicherheitslage hat sich am 24.07.2026 dramatisch verschärft, getrieben von zwei parallelen Eskalationsspiralen: \n\n1. **Nahost-Konflikt (USA vs. Iran):** Nach US-Luftangriffen auf iranische Stellungen im Irak und Syrien hat Teheran mit Gegenangriffen auf US-Basen in der Region reagiert. Die IRGC droht mit einer Blockade der Straße von Hormus, durch die täglich ~21 Mio. Barrel Öl transportiert werden. Die USA haben bereits zusätzliche Flugzeugträger in die Region verlegt, während Israel seine Luftabwehr hochfährt. Die Märkte reagieren mit einem Rückgang der Ölpreise (-4.4% bei Brent), was auf eine 'Buy the Rumor, Sell the News'-Dynamik hindeutet – allerdings bleibt das Risiko einer plötzlichen Preisexplosion bei einer tatsächlichen Blockade bestehen.\n\n2. **Ukraine-Krieg (Russland vs. Westen):** Russlands Angriff auf Odessa nur Stunden nach einer Getreideexport-Vereinbarung mit der Türkei hat das Vertrauen in diplomatische Lösungen zerstört. Die Ukraine meldet schwere Gefechte im Donbass, während die Schwarzmeerflotte ihre Präsenz erhöht. Die UN warnt vor einer Verschärfung der Hungerkrise in Afrika, wo Länder wie Somalia, Äthiopien und der Jemen stark von ukrainischem Getreide abhängig sind. Die EU diskutiert Notfallpläne für alternative Lieferrouten über Rumänien und Polen.\n\n**Finanzmärkte im Spannungsfeld:** \n- **Energie:** Trotz der geopolitischen Risiken fallen die Ölpreise, was auf eine Kombination aus Rezessionsängsten und Spekulationen über strategische Reservenfreigaben hindeutet. Gold (+0.55%) und Silber (+1.88%) profitieren als sichere Häfen.\n- **Agrar:** Weizenpreise geben nach (-2.73%), da Märkte auf alternative Lieferungen aus Russland und Indien hoffen – allerdings bleibt das fundamentale Angebot knapp.\n- **Aktien:** Der S&P 500 (+0.47%) zeigt sich resilient, getrieben von Rüstungsaktien (z.B. Rheinmetall) und Tech-Werten, die von KI-Hype profitieren. Allerdings deuten die steigenden Credit Spreads (HYG +0.05%) auf wachsende Risikoaversion hin.\n\n**Humanitäre Lage:** Die UN hat 10 Mio. USD für Somalia freigegeben, um eine Hungersnot abzuwenden. Im Gazastreifen verschärft sich die Krise durch neue Vertreibungen, während im Südlibanon erste Rückkehrbewegungen beobachtet werden. \n\n**Cyber- und Hybridbedrohungen:** Bisher keine bestätigten großangelegten Cyberangriffe, aber die Gefahr von Sabotageakten gegen Häfen (z.B. Rotterdam, Odessa) oder Desinformationskampagnen zur Destabilisierung westlicher Gesellschaften bleibt hoch.\n\n**Politische Entwicklungen:** Marine Le Pens Wahlkampfstart in Frankreich signalisiert eine mögliche Verschiebung der EU-Politik nach rechts, was die Handlungsfähigkeit in der Ukraine-Krise weiter einschränken könnte. In Deutschland sorgt ein Stromausfall in Reutlingen für Diskussionen über die Verwundbarkeit kritischer Infrastruktur.\n\n**Ausblick:** Die nächsten 72 Stunden sind kritisch. Sollte Iran tatsächlich die Straße von Hormus blockieren oder Russland die Getreideexporte dauerhaft unterbinden, drohen massive Preisschocks und Lieferengpässe. Die Märkte unterschätzen derzeit die systemischen Risiken, was zu abrupten Korrekturen führen könnte.",
+  "market_regime": "Stagflationär / Geopolitische Fragmentierung mit hoher Volatilität",
   "geoscore": {
-    "current_score": 78,
-    "status_label": "ERHÖHT",
+    "current_score": 82,
+    "status_label": "SEHR ERHÖHT",
     "previous_48h": 74,
-    "drivers": [
-      "Drohungen gegen die Straße von Hormus (+3)",
-      "API-Ausfälle bei Schlüsseldatenquellen (+1)",
-      "Erhöhte Cyberaktivitäten (unbestätigt) (+2)",
-      "Stabile, aber fragile Marktlage (-2)"
-    ]
+    "components": {
+      "conflict_intensity": 90,
+      "supply_chain_risk": 85,
+      "energy_security": 88,
+      "food_security": 75,
+      "cyber_threat_level": 65,
+      "political_stability": 70
+    }
   },
   "defcon_status": {
     "level": 3,
-    "label": "DEFCON 3",
-    "nuclear_risk_percent": 15,
-    "primary_driver": "Regionale Eskalationsrisiken im Nahen Osten, insbesondere durch iranische Drohungen und Proxy-Aktivitäten."
+    "label": "DEFCON 3 (Erhöhte Bereitschaft)",
+    "nuclear_risk_percent": 18,
+    "primary_driver": "Direkte militärische Konfrontation zwischen USA und Iran mit Eskalationspotenzial",
+    "secondary_drivers": [
+      "Russlands nukleare Rhetorik im Ukraine-Krieg",
+      "Nordkoreas Raketentests (letzte 48h)"
+    ]
   },
-  "top_overweight": "Gold & Defense (Rüstungssektor)",
-  "top_risk": "Dauerhafte Blockade der Straße von Hormus mit globalen Lieferkettenunterbrechungen und Ölpreisschock.",
+  "top_overweight": "Gold, Rüstungsaktien (NATO), Agrar-Futures (kurzfristig), Cybersecurity",
+  "top_underweight": "Tech-Aktien (Zinsrisiko), Europäische Banken, Langfristige Anleihen",
+  "top_risk": "Direkte militärische Eskalation USA-Iran mit Blockade der Straße von Hormus und daraus resultierendem Ölpreisschock (150+ USD/bbl)",
   "game_theory_deep_dive": {
-    "focal_situation": "Drohungen des Iran mit Blockade der Straße von Hormus",
+    "focal_situation": "USA-Iran-Eskalation in der Straße von Hormus",
     "1_fractionated_actors": [
       {
-        "entity": "Iran / IRGC",
+        "entity": "Iran",
         "factions": [
           {
-            "faction_name": "Hardliner (Militär)",
-            "divergent_interest": "Maximale Eskalation zur Stärkung der regionalen Dominanz",
-            "confidence": 85
+            "faction_name": "IRGC (Revolutionsgarden)",
+            "divergent_interest": "Maximale Eskalation zur Festigung interner Macht und Schwächung des Westens",
+            "confidence": 90
           },
           {
-            "faction_name": "Moderate (Politik)",
-            "divergent_interest": "Begrenzte Eskalation zur Verhandlung von Sanktionen",
+            "faction_name": "Moderate Regierung (Raisi)",
+            "divergent_interest": "Kontrollierte Eskalation zur Verhandlung von Sanktionen, aber keine direkte Konfrontation mit USA",
             "confidence": 70
           }
         ]
       },
       {
-        "entity": "USA / EU",
+        "entity": "USA",
         "factions": [
           {
-            "faction_name": "Militärische Falken",
-            "divergent_interest": "Präventive Militärschläge zur Abschreckung",
-            "confidence": 75
+            "faction_name": "Pentagon / CENTCOM",
+            "divergent_interest": "Abschreckung durch militärische Präsenz, aber Vermeidung eines großen Krieges",
+            "confidence": 85
           },
           {
-            "faction_name": "Diplomatische Tauben",
-            "divergent_interest": "Verhandlungen und wirtschaftliche Anreize",
+            "faction_name": "Weißes Haus (Biden-Administration)",
+            "divergent_interest": "Deeskalation zur Vermeidung von Ölpreisschock vor Wahlen, aber keine Schwäche zeigen",
             "confidence": 80
           }
         ]
       }
     ],
     "2_time_horizon_conflict": {
-      "short_term_one_shot_4_to_8_weeks": "Einmalige Eskalation (z.B. temporäre Blockade) mit begrenzten militärischen oder wirtschaftlichen Gegenmaßnahmen.",
-      "long_term_repeated_game": "Wiederholte Eskalationszyklen mit zunehmender Fragmentierung der globalen Handelsrouten und Währungsblöcke.",
-      "horizon_contradiction": "Kurzfristig besteht ein Anreiz für den Iran, durch begrenzte Eskalation Druck auszuüben, während langfristig das Risiko einer unkontrollierbaren Spirale steigt."
+      "short_term_one_shot_4_to_8_weeks": "Iran testet mit begrenzten Blockaden oder Cyberangriffen die US-Reaktion, während die USA mit gezielten Schlägen auf IRGC-Stellungen antworten. Beide Seiten vermeiden direkte Angriffe auf Territorium des anderen.",
+      "long_term_repeated_game": "Aushöhlung der US-Sanktionen durch China/Russland, Aufbau alternativer Handelsrouten (z.B. Nord-Süd-Korridor), Iran nutzt Eskalation zur Stärkung der regionalen Hegemonie (Irak, Syrien, Jemen).",
+      "horizon_contradiction": "Kurzfristig besteht ein starker Anreiz zur Deeskalation (Ölpreise, Wahlen), langfristig führt die Eskalation jedoch zu einer Verfestigung der Blockbildung (USA/EU vs. Iran/Russland/China)."
     },
     "3_game_structure_and_payoffs": {
-      "type": "Chicken Game (Eskalationsdilemma)",
+      "type": "Chicken Game mit asymmetrischen Payoffs",
       "payoff_assessment_scale_minus_3_to_plus_3": [
         {
-          "scenario_combination": "Iran blockiert / USA reagieren militärisch",
-          "payoff_actor_A": -2,
-          "payoff_actor_B": -3,
-          "confidence": 80,
-          "description": "Hohe Kosten für beide Seiten, aber USA verliert mehr durch globale Rezession."
-        },
-        {
-          "scenario_combination": "Iran blockiert / USA verhandelt",
-          "payoff_actor_A": 2,
-          "payoff_actor_B": -1,
-          "confidence": 75,
-          "description": "Iran gewinnt kurzfristig, USA verliert Glaubwürdigkeit."
-        },
-        {
-          "scenario_combination": "Iran droht nur / USA verhandelt",
+          "scenario_combination": "USA deeskaliert / Iran deeskaliert",
           "payoff_actor_A": 1,
           "payoff_actor_B": 1,
+          "confidence": 60,
+          "description": "Status quo bleibt erhalten, aber Iran gewinnt an regionalem Einfluss."
+        },
+        {
+          "scenario_combination": "USA deeskaliert / Iran eskaliert (Blockade)",
+          "payoff_actor_A": -3,
+          "payoff_actor_B": 3,
+          "confidence": 75,
+          "description": "USA verlieren Glaubwürdigkeit, Ölpreise explodieren, Iran dominiert die Region."
+        },
+        {
+          "scenario_combination": "USA eskaliert (militärische Schläge) / Iran deeskaliert",
+          "payoff_actor_A": 2,
+          "payoff_actor_B": -2,
           "confidence": 70,
-          "description": "Begrenzte Gewinne für beide Seiten, Status quo bleibt erhalten."
+          "description": "USA demonstrieren Stärke, Iran zieht sich zurück, aber Risiko von Vergeltungsschlägen bleibt."
+        },
+        {
+          "scenario_combination": "USA eskaliert / Iran eskaliert (Krieg)",
+          "payoff_actor_A": -1,
+          "payoff_actor_B": -3,
+          "confidence": 80,
+          "description": "Beide Seiten verlieren, aber Iran verliert mehr (Regime Change-Risiko). Globale Rezession."
         }
       ]
     },
     "4_signaling_and_information": {
       "cheap_talk": [
-        "Öffentliche Drohungen des Iran ohne konkrete Maßnahmen",
-        "Diplomatische Erklärungen der USA/EU ohne klare rote Linien"
+        "Iranische Drohungen mit 'vernichtender Antwort' auf US-Angriffe (keine konkreten Handlungen)",
+        "US-Warnungen vor 'schwerwiegenden Konsequenzen' (ohne Details)",
+        "Russische Rhetorik über 'rote Linien' im Ukraine-Krieg"
       ],
       "costly_signals": [
-        "Verlegung von US-Flugzeugträgern in die Region",
-        "Iranische Militärübungen in der Straße von Hormus",
-        "Sanktionen oder Gegen-Sanktionen"
+        "Verlegung des US-Flugzeugträgers USS Theodore Roosevelt in den Persischen Golf",
+        "Iranische Militärübungen mit Minen in der Straße von Hormus",
+        "Russlands Angriff auf Odessa trotz Getreideabkommen"
       ]
     },
     "6_falsification_counter_model": {
-      "alternative_interpretation": "Die Drohungen des Iran sind primär innenpolitisch motiviert (z.B. Ablenkung von wirtschaftlichen Problemen) und nicht auf eine tatsächliche Blockade ausgerichtet.",
+      "alternative_interpretation": "Die Eskalation ist ein inszeniertes Spiel zur Ablenkung von innenpolitischen Problemen (USA: Wahlen; Iran: Wirtschaftskrise; Russland: Kriegsmüdigkeit). Beide Seiten haben kein Interesse an einem großen Krieg, sondern nutzen die Spannungen für interne Zwecke.",
       "necessary_conditions": [
-        "Keine Vorbereitungen für eine Blockade (z.B. Minenlegen, Schiffsbewegungen)",
-        "Keine Unterstützung durch regionale Verbündete (z.B. Oman, Irak)",
-        "Keine Eskalation in anderen Bereichen (z.B. Cyberangriffe, Proxy-Konflikte)"
-      ]
+        "Keine direkten Angriffe auf Territorium des anderen (z.B. keine US-Schläge auf Iran oder iranische Angriffe auf US-Städte)",
+        "Begrenzte Dauer der Eskalation (max. 4-6 Wochen)",
+        "Keine signifikante Unterbrechung des Ölhandels (trotz Drohungen)"
+      ],
+      "probability_pct": 30
     }
   },
   "domestic_politics_analysis": [
     {
       "region_actor": "USA",
-      "key_event_trend": "Zunehmende Polarisierung vor den Midterm-Wahlen 2026, Fokus auf Wirtschaft und nationale Sicherheit.",
-      "regime_stability": "STABIL, aber fragmentiert",
-      "geopolitical_impact": "Begrenzte Handlungsfähigkeit in internationalen Krisen, Fokus auf kurzfristige innenpolitische Gewinne."
+      "key_event_trend": "Wahlkampf 2026 dominiert außenpolitische Entscheidungen. Biden steht unter Druck, Stärke zu zeigen, aber keinen Krieg zu beginnen. Republikaner fordern härtere Linie gegen Iran, was die Eskalationsspirale beschleunigen könnte.",
+      "regime_stability": "STABIL, aber polarisiert",
+      "geopolitical_impact": "Kurzfristige Eskalationsbereitschaft steigt, langfristig könnte ein Regierungswechsel 2027 zu radikaler Kursänderung führen."
     },
     {
       "region_actor": "EU",
-      "key_event_trend": "Fortgesetzte Debatten über strategische Autonomie, aber langsame Umsetzung.",
-      "regime_stability": "STABIL, aber heterogen",
-      "geopolitical_impact": "Abhängigkeit von US-Sicherheitsgarantien bleibt bestehen, wirtschaftliche Fragmentierung innerhalb der EU."
+      "key_event_trend": "Frankreichs Rechtsruck (Le Pen) und Deutschlands Energiekrise schwächen die europäische Handlungsfähigkeit. Die EU sucht nach Alternativen zu russischem Gas und ukrainischem Getreide, bleibt aber abhängig von globalen Märkten.",
+      "regime_stability": "GESPALTEN, aber stabil",
+      "geopolitical_impact": "Geringere Unterstützung für Ukraine, höhere Anfälligkeit für Energiepreisschocks."
+    },
+    {
+      "region_actor": "Iran",
+      "key_event_trend": "Wirtschaftskrise und Proteste schwächen die Regierung, während die IRGC an Einfluss gewinnt. Die Eskalation dient auch der Ablenkung von internen Problemen.",
+      "regime_stability": "INSTABIL, aber kontrolliert",
+      "geopolitical_impact": "Höhere Risikobereitschaft der IRGC, aber begrenzte Fähigkeit zu langfristiger Kriegsführung."
     }
   ],
   "stress_testing_scenarios": [
     {
-      "scenario_name": "Temporäre Blockade der Straße von Hormus (14 Tage)",
+      "scenario_name": "Blockade der Straße von Hormus (30 Tage)",
       "probability_pct": 40,
       "timeframe": "1-3 Monate",
       "cascade_chain": [
-        "Ölpreis steigt auf 130 USD/bbl",
-        "Globale Lieferkettenunterbrechungen",
-        "Zentralbanken reagieren mit Zinserhöhungen",
-        "Rezessionsrisiko steigt"
+        "Iran blockiert Straße von Hormus → Ölpreise steigen auf 150 USD/bbl → globale Rezession → Zentralbanken senken Zinsen trotz Inflation",
+        "USA starten militärische Operation zur Öffnung der Straße → Iran greift US-Basen im Irak/Syrien an → Israel tritt in Konflikt ein",
+        "China nutzt Krise, um Taiwan zu bedrohen → USA verlegen Truppen aus Nahost in den Pazifik"
       ],
       "winners_long": [
         {
           "asset": "Gold",
-          "reason": "Sicherer Hafen"
+          "reason": "Sicherer Hafen, Inflationsschutz"
         },
         {
-          "asset": "Rüstungsaktien",
-          "reason": "Erhöhte Nachfrage"
+          "asset": "Rüstungsaktien (Lockheed, Rheinmetall)",
+          "reason": "Erhöhte Militärausgaben"
         },
         {
-          "asset": "Energie (Öl/Gas)",
-          "reason": "Preisanstieg"
+          "asset": "Agrar-Futures (Weizen, Mais)",
+          "reason": "Lieferkettenunterbrechungen"
         }
       ],
       "losers_short": [
         {
-          "asset": "Tech-Aktien",
-          "reason": "Zinsempfindlichkeit"
+          "asset": "Tech-Aktien (Nasdaq)",
+          "reason": "Zinserhöhungen, Rezessionsängste"
         },
         {
-          "asset": "Schwellenländerwährungen",
-          "reason": "Kapitalflucht"
+          "asset": "Europäische Banken",
+          "reason": "Energiekrise, Kreditausfälle"
         },
         {
-          "asset": "Konsumgüter",
-          "reason": "Nachfrageschwäche"
+          "asset": "Langfristige Staatsanleihen",
+          "reason": "Inflationsdruck, Zinsrisiko"
         }
       ]
     },
     {
-      "scenario_name": "Cyberangriff auf kritische Infrastruktur (z.B. Ölhäfen)",
-      "probability_pct": 30,
-      "timeframe": "1-2 Monate",
+      "scenario_name": "Russland blockiert ukrainische Getreideexporte dauerhaft",
+      "probability_pct": 60,
+      "timeframe": "3-6 Monate",
       "cascade_chain": [
-        "Temporäre Unterbrechung der Ölversorgung",
-        "Preisschock bei Öl und Gas",
-        "Erhöhte Volatilität an den Finanzmärkten",
-        "Regulatorische Gegenmaßnahmen"
+        "Russland zerstört ukrainische Häfen → Getreidepreise steigen um 50% → Hungerkrise in Afrika/Asien verschärft sich",
+        "EU aktiviert Notfallpläne für alternative Routen → höhere Transportkosten → Inflation in Europa steigt",
+        "UN scheitert mit Vermittlung → Türkei und Indien füllen Lücke, aber mit höheren Preisen → globale Nahrungsmittelknappheit"
       ],
       "winners_long": [
         {
-          "asset": "Cybersicherheitsfirmen",
-          "reason": "Erhöhte Nachfrage"
+          "asset": "Russische Agrarunternehmen",
+          "reason": "Höhere Exporteinnahmen"
         },
         {
-          "asset": "Gold",
-          "reason": "Sicherer Hafen"
+          "asset": "Indische Getreideproduzenten",
+          "reason": "Ersatzlieferungen für Ukraine"
+        },
+        {
+          "asset": "Logistikunternehmen (Maersk, Hapag-Lloyd)",
+          "reason": "Höhere Frachtraten"
         }
       ],
       "losers_short": [
         {
-          "asset": "Energieversorger",
-          "reason": "Betriebsunterbrechungen"
+          "asset": "Afrikanische/asiatische Länder (Ägypten, Jemen, Somalia)",
+          "reason": "Hunger, politische Instabilität"
         },
         {
-          "asset": "Logistikunternehmen",
-          "reason": "Lieferkettenstörungen"
+          "asset": "Ukrainische Wirtschaft",
+          "reason": "Verlust von Exportmärkten"
+        },
+        {
+          "asset": "EU-Lebensmittelindustrie",
+          "reason": "Höhere Inputkosten"
         }
       ]
     }
@@ -382,46 +420,62 @@
   "conflict_hotspots": [
     {
       "region": "Naher Osten (Straße von Hormus)",
-      "actors": "Iran (IRGC) vs. USA/EU + regionale Verbündete (Saudi-Arabien, Israel)",
-      "status_type": "AKTIV (Drohungen)",
+      "actors": "USA, Iran, Israel, Saudi-Arabien, VAE",
+      "status_type": "AKTIV / ESKALIEREND",
+      "escalation_level": "SEHR HOCH",
+      "impact": "Potenzielle Blockade der globalen Öllieferungen mit massiven wirtschaftlichen Folgen. Risiko einer regionalen Ausweitung auf Israel/Libanon.",
+      "lat": 26.5625,
+      "lng": 56.25
+    },
+    {
+      "region": "Ukraine (Odessa/Donbass)",
+      "actors": "Russland, Ukraine, NATO (indirekt)",
+      "status_type": "AKTIV / VERSCHÄRFEND",
       "escalation_level": "HOCH",
-      "impact": "Globale Ölversorgung, Lieferketten, Finanzmärkte",
-      "lat": 26.5,
-      "lng": 56.5
+      "impact": "Zerstörung der Getreideexport-Infrastruktur verschärft globale Nahrungsmittelkrise. Risiko einer NATO-Intervention bei Angriffen auf NATO-Lieferungen.",
+      "lat": 46.4825,
+      "lng": 30.7233
     },
     {
-      "region": "Ostukraine / Schwarzes Meer",
-      "actors": "Russland vs. Ukraine + NATO-Unterstützung",
-      "status_type": "AKTIV (Gefechte)",
+      "region": "Gaza/Südlibanon",
+      "actors": "Israel, Hamas, Hisbollah, Iran",
+      "status_type": "AKTIV / FLUKTUIEREND",
       "escalation_level": "MITTEL",
-      "impact": "Getreideexporte, Energieinfrastruktur, regionale Stabilität",
-      "lat": 47.0,
-      "lng": 35.0
+      "impact": "Humanitäre Krise in Gaza, Risiko einer neuen Flüchtlingswelle nach Europa. Hisbollah könnte in größeren Konflikt mit Israel gezogen werden.",
+      "lat": 31.5,
+      "lng": 34.4667
     },
     {
-      "region": "Taiwanstraße",
-      "actors": "China vs. USA/Taiwan",
-      "status_type": "LATENT (Militärübungen)",
+      "region": "Somalia",
+      "actors": "Al-Shabaab, UN, USA (Drohnenangriffe)",
+      "status_type": "AKTIV / HUMANITÄR",
       "escalation_level": "MITTEL",
-      "impact": "Halbleiterlieferketten, globale Technologiemärkte",
-      "lat": 23.5,
-      "lng": 121.0
+      "impact": "Akute Hungersnot bedroht Millionen. Risiko einer Destabilisierung Ostafrikas mit Auswirkungen auf Migration und Piraterie.",
+      "lat": 5.1521,
+      "lng": 46.1996
     }
   ],
   "digital_and_monetary_sovereignty": [
     {
-      "topic": "CBDCs (Zentralbank-Digitalwährungen)",
-      "actor": "China (e-CNY) vs. USA/EU (FedNow, Digitaler Euro)",
-      "trend": "Beschleunigte Einführung, aber fragmentierte Standards",
-      "systemic_impact": "Potenzielle Entdollarisierung in Handelsblöcken, erhöhte Überwachungskapazitäten",
-      "market_implication": "Volatilität in Kryptowährungen, Druck auf traditionelle Banken"
+      "topic": "CBDCs und Sanktionen",
+      "actor": "USA/EU vs. Russland/Iran/China",
+      "trend": "Beschleunigte Entwicklung von CBDCs als Reaktion auf US-Dollar-Hegemonie. China testet digitalen Yuan in BRICS-Ländern, Russland nutzt Krypto für Sanktionen-Umgehung.",
+      "systemic_impact": "Fragmentierung des globalen Finanzsystems in Dollar- und Nicht-Dollar-Blöcke. Höhere Volatilität in Devisenmärkten.",
+      "market_implication": "Gold und Bitcoin profitieren als alternative Wertaufbewahrungsmittel. Banken mit CBDC-Expertise (z.B. JPMorgan, HSBC) gewinnen Marktanteile."
     },
     {
       "topic": "Kritische Mineralien (Seltene Erden, Lithium)",
-      "actor": "China vs. USA/EU/Australien",
-      "trend": "Geopolitische Kontrolle über Lieferketten, Subventionswettläufe",
-      "systemic_impact": "Abhängigkeit von China bleibt bestehen, aber Diversifizierungsbemühungen nehmen zu",
-      "market_implication": "Preisvolatilität, Investitionen in Bergbau und Recycling"
+      "actor": "China, USA, EU, Australien",
+      "trend": "China nutzt Exportkontrollen für Seltene Erden als geopolitisches Druckmittel. USA und EU beschleunigen Minenprojekte in Afrika/Lateinamerika, aber mit langen Vorlaufzeiten.",
+      "systemic_impact": "Strukturelle Knappheit bei Schlüsselrohstoffen für Energiewende und Rüstung. Höhere Preise für Elektroautos und erneuerbare Energien.",
+      "market_implication": "Minenunternehmen (z.B. MP Materials, Lynas) profitieren, Tech-Hersteller (z.B. Tesla, Apple) leiden unter höheren Kosten."
+    },
+    {
+      "topic": "Cyberangriffe auf Häfen und Logistik",
+      "actor": "Russland, Iran, Nordkorea (staatlich unterstützt)",
+      "trend": "Zunehmende Angriffe auf kritische Infrastruktur (z.B. Rotterdam, Singapur, Los Angeles) zur Störung von Lieferketten. Bisher keine großangelegten erfolgreichen Attacken, aber hohe Aktivität.",
+      "systemic_impact": "Erhöhte Kosten für Cybersecurity, Versicherungen und redundante Lieferketten. Risiko von plötzlichen Lieferunterbrechungen.",
+      "market_implication": "Cybersecurity-Unternehmen (z.B. Palo Alto Networks, CrowdStrike) und Logistik-Resilienz-Dienstleister profitieren."
     }
   ],
   "stock_picks": {
@@ -429,58 +483,78 @@
       {
         "ticker": "RHM.DE",
         "name": "Rheinmetall",
-        "reason": "Erhöhte Nachfrage nach Rüstungsgütern durch geopolitische Spannungen, starke Auftragslage."
+        "reason": "Führender europäischer Rüstungshersteller mit starker Nachfrage durch NATO-Aufrüstung und Ukraine-Krieg. Aktie profitiert von erhöhten Militärausgaben in Deutschland/EU.",
+        "target_price": "520 EUR (aktuell: 485 EUR)",
+        "timeframe": "3-6 Monate"
       },
       {
-        "ticker": "NEM",
-        "name": "Newmont Corporation",
-        "reason": "Gold als sicherer Hafen, langfristige Nachfrage durch Inflationsrisiken."
+        "ticker": "GLD",
+        "name": "SPDR Gold Trust",
+        "reason": "Gold als sicherer Hafen in Zeiten geopolitischer Unsicherheit und Inflation. Aktuell unterbewertet im Vergleich zu historischen Krisenniveaus.",
+        "target_price": "220 USD (aktuell: 195 USD)",
+        "timeframe": "1-3 Monate"
       },
       {
-        "ticker": "BA",
-        "name": "Boeing Defense",
-        "reason": "Steigende Militärausgaben in NATO-Ländern, Modernisierungsprogramme."
+        "ticker": "NVDA",
+        "name": "NVIDIA",
+        "reason": "KI-Hype treibt Nachfrage nach GPUs. Trotz hoher Bewertung bleibt das Unternehmen führend in der KI-Revolution, was geopolitische Risiken überlagert.",
+        "target_price": "150 USD (aktuell: 128 USD)",
+        "timeframe": "6-12 Monate"
       },
       {
-        "ticker": "PAL",
-        "name": "Palo Alto Networks",
-        "reason": "Erhöhte Cyberbedrohungen, staatliche Investitionen in Cybersicherheit."
+        "ticker": "MP",
+        "name": "MP Materials",
+        "reason": "Einziger großer US-Produzent von Seltenen Erden mit strategischer Bedeutung für Rüstung und Energiewende. Staatliche Subventionen sichern langfristige Nachfrage.",
+        "target_price": "65 USD (aktuell: 52 USD)",
+        "timeframe": "12+ Monate"
       },
       {
-        "ticker": "XOM",
-        "name": "ExxonMobil",
-        "reason": "Hohe Ölpreise, langfristige Energiesicherheitsstrategien."
+        "ticker": "ZS",
+        "name": "Zscaler",
+        "reason": "Cybersecurity wird durch geopolitische Spannungen und Remote Work immer wichtiger. Zscaler profitiert von der Cloud-Sicherheitsnachfrage.",
+        "target_price": "280 USD (aktuell: 245 USD)",
+        "timeframe": "6-12 Monate"
       }
     ],
     "flop_5_sells": [
       {
         "ticker": "TSLA",
         "name": "Tesla",
-        "reason": "Zinsempfindlichkeit, Lieferkettenrisiken, nachlassende Nachfrage in China."
+        "reason": "Hohe Bewertung, sinkende Margen durch Preiskriege in China und höhere Rohstoffkosten. Geopolitische Risiken (China-Abhängigkeit) belasten zusätzlich.",
+        "target_price": "120 USD (aktuell: 175 USD)",
+        "timeframe": "3-6 Monate"
       },
       {
-        "ticker": "AMZN",
-        "name": "Amazon",
-        "reason": "Gewinnwarnungen, schwache Konsumstimmung, regulatorische Risiken."
-      },
-      {
-        "ticker": "META",
-        "name": "Meta Platforms",
-        "reason": "Werbemarkt schwächelt, hohe Investitionen in Metaverse ohne kurzfristige Rendite."
-      },
-      {
-        "ticker": "ARKK",
-        "name": "ARK Innovation ETF",
-        "reason": "Hohe Bewertungen, Zinsrisiko, Fokus auf unprofitable Wachstumsaktien."
+        "ticker": "DBK.DE",
+        "name": "Deutsche Bank",
+        "reason": "Europäische Banken leiden unter Energiekrise, Zinsrisiko und schwacher Wirtschaft. Deutsche Bank ist besonders anfällig für Kreditausfälle in Europa.",
+        "target_price": "8 EUR (aktuell: 12 EUR)",
+        "timeframe": "6-12 Monate"
       },
       {
         "ticker": "BTC-USD",
         "name": "Bitcoin",
-        "reason": "Regulatorische Unsicherheit, Korrelation mit Tech-Aktien, Volatilität."
+        "reason": "Kurzfristig überkauft, Korrelation mit Tech-Aktien erhöht das Risiko. Geopolitische Krisen führen nicht automatisch zu Bitcoin-Rallys (vgl. Ukraine-Krieg 2022).",
+        "target_price": "50000 USD (aktuell: 63926 USD)",
+        "timeframe": "1-3 Monate"
+      },
+      {
+        "ticker": "TLT",
+        "name": "iShares 20+ Year Treasury Bond ETF",
+        "reason": "Langfristige Anleihen leiden unter Inflationsdruck und Zinserhöhungsrisiko. Geopolitische Krisen führen nicht zu 'Flight to Quality' in Bonds, sondern in Gold.",
+        "target_price": "80 USD (aktuell: 92 USD)",
+        "timeframe": "3-6 Monate"
+      },
+      {
+        "ticker": "AAL",
+        "name": "Anglo American",
+        "reason": "Rohstoffpreise (Platin, Diamanten) fallen aufgrund von Rezessionsängsten. Südafrikas politische Instabilität erhöht das Risiko für Minenunternehmen.",
+        "target_price": "18 USD (aktuell: 25 USD)",
+        "timeframe": "6-12 Monate"
       }
     ]
   },
-  "timestamp": "24.07.2026 - 17:12 UTC",
+  "timestamp": "24.07.2026 - 17:33 UTC",
   "pipeline_health": {
     "groq_filter": "ok",
     "deepseek_game_theory": "failed (Error code: 400 - {'error': {')",
