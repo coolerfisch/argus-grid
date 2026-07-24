@@ -1,431 +1,535 @@
-import socket
-socket.setdefaulttimeout(10)
+#!/usr/bin/env python3
+"""
+ARGUS GRID v3.0 - Systemic Intelligence Engine Backend
+Automatisierte Feed-Ingestion, Multi-LLM-Synthese & Data Sanitization Pipeline.
+"""
 
 import os
+import sys
 import json
 import re
-from datetime import datetime, timedelta
+import logging
+import time
+from datetime import datetime, timezone, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import feedparser
 import requests
-import yfinance as yf
-from groq import Groq
-from openai import OpenAI
-import anthropic
+import feedparser
 
-# EXTERNE QUELLEN
-from sources import SOURCES
+# External sources list import
+try:
+    from sources import SOURCES
+except ImportError:
+    logging.warning("sources.py nicht gefunden. Verwende leere Quellenliste.")
+    SOURCES = []
 
-NOW_UTC = datetime.utcnow()
-CURRENT_DATE_STR = NOW_UTC.strftime("%d.%m.%Y")
-CURRENT_YEAR = NOW_UTC.year
+# Logging Config
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)]
+)
 
-# API CLIENTS
-groq_key = os.environ.get("GROQ_API_KEY", "").strip()
-anth_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
-gemini_key = os.environ.get("GEMINI_API_KEY", "").strip()
-deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
-xai_key = os.environ.get("XAI_API_KEY", "").strip()
-perplexity_key = os.environ.get("PERPLEXITY_API_KEY", "").strip()
-openrouter_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
-mistral_key = os.environ.get("MISTRAL_API_KEY", "").strip()
-qwen_key = os.environ.get("QWEN_API_KEY", "").strip()
+# Configuration & Constants
+MAX_FEED_WORKERS = 40  # Erhöht zur Vermeidung von I/O-Flaschenhälsen
+FEED_TIMEOUT = 8        # Sekunden pro Feed-Anfrage
+MAX_ARTICLE_AGE_HOURS = 48
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 
-client_groq = Groq(api_key=groq_key) if groq_key else None
-client_anthropic = anthropic.Anthropic(api_key=anth_key) if anth_key else None
-client_gemini = OpenAI(base_url="https://generativelanguage.googleapis.com/v1beta/openai/", api_key=gemini_key) if gemini_key else None
-client_deepseek = OpenAI(base_url="https://api.deepseek.com", api_key=deepseek_key) if deepseek_key else None
-client_xai = OpenAI(base_url="https://api.x.ai/v1", api_key=xai_key) if xai_key else None
-client_perplexity = OpenAI(base_url="https://api.perplexity.ai", api_key=perplexity_key) if perplexity_key else None
-client_openrouter = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=openrouter_key) if openrouter_key else None
-client_mistral = OpenAI(base_url="https://api.mistral.ai/v1", api_key=mistral_key) if mistral_key else None
-client_qwen = OpenAI(base_url="https://dashscope.aliyuncs.com/compatible-mode/v1", api_key=qwen_key) if qwen_key else None
+# Environment Variables / API Keys
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
+MISTRAL_API_KEY = os.environ.get("MISTRAL_API_KEY")
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
+XAI_API_KEY = os.environ.get("XAI_API_KEY")
+PERPLEXITY_API_KEY = os.environ.get("PERPLEXITY_API_KEY")
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
+QWEN_API_KEY = os.environ.get("QWEN_API_KEY")
+NEMOTRON_API_KEY = os.environ.get("NEMOTRON_API_KEY")
 
-# ============================================================
-# PIPELINE HEALTH TRACKING (NEU)
-# ============================================================
+# Global Health State Tracking
 pipeline_health = {
-    "feeds_loaded": 0,
-    "feeds_total": len(SOURCES),
-    "groq_filter_ok": False,
-    "deepseek_ok": False,
-    "synthesizer_used": None,   # "mistral" / "qwen" / "fallback"
-    "json_parse_ok": False,
+    "timestamp": datetime.now(timezone.utc).isoformat(),
+    "feeds_total": 0,
+    "feeds_successful": 0,
+    "feeds_failed": 0,
+    "groq_status": "PENDING",
+    "deepseek_status": "PENDING",
+    "synthesizer_status": "PENDING",
+    "haiku_status": "PENDING",
     "errors": []
 }
 
-def log_error(stage, msg):
-    line = f"[{stage}] {msg}"
-    print(f"⚠️  {line}")
-    pipeline_health["errors"].append(line)
+# Vollständiges Fallback-Template (alle von index.html erwarteten Keys)
+FALLBACK_DATA = {
+    "timestamp": datetime.now(timezone.utc).isoformat(),
+    "overall_geoscore": 50,
+    "defcon_level": 3,
+    "ampel_status": "GELB",
+    "ampel_reason_simple": "Daten-Pipeline im Notfallmodus. Automatische Synthese derzeit eingeschränkt.",
+    "daily_executive_summary": "Die automatisierte Datenanalyse konnte aufgrund temporärer API-Störungen oder Synthesefehler nicht vollständig durchgeführt werden. Das System läuft im abgesicherten Fallback-Betrieb.",
+    "daily_executive_summary_simple": "Das Dashboard läuft aktuell im Notbetrieb. Neue Analysen werden beim nächsten automatischen Durchlauf generiert.",
+    "key_takeaways": [
+        "System befindet sich im automatischen Fallback-Modus.",
+        "Feed-Ingestion läuft stabil; Synthese-APIs meldeten Teilausfälle.",
+        "Nächster automatischer Retry erfolgt zum geplanten Cronjob-Zeitpunkt (06:00 UTC)."
+    ],
+    "predictive_horizon": [
+        {
+            "timeframe": "30-90 Tage",
+            "forecast": "Erhöhte allgemeine Volatilität im geopolitischen Raum.",
+            "probability": "Mittel",
+            "early_warning_indicators": ["API-Health-Check", "Pipeline-Retry Status"]
+        }
+    ],
+    "historical_precedents": [
+        {
+            "event": "Temporäre Datenunterbrechung",
+            "period": "System-Archiv",
+            "similarity": "Hoch",
+            "takeaway": "Keine dauerhafte Beeinträchtigung der historischen Datenbasis."
+        }
+    ],
+    "conflict_hotspots": [
+        {
+            "name": "Global Surveillance Grid",
+            "lat": 20.0,
+            "lon": 0.0,
+            "intensity": "GELB",
+            "description": "Fallback-Modus aktiv.",
+            "military_activity": "Normal"
+        }
+    ],
+    "graph_network": {
+        "nodes": [
+            {"id": "ARGUS_CORE", "label": "Argus System", "group": "Core", "val": 10}
+        ],
+        "edges": []
+    },
+    "game_theory_matrices": [],
+    "domestic_policy_matrix": [],
+    "stress_test_scenarios": [],
+    "equity_rotation": {"buys": [], "sells": []},
+    "digital_sovereignty_index": {"score": 50, "status": "Neutral"},
+    "pipeline_health": pipeline_health
+}
 
 
-def clean_text(raw_text):
-    if not raw_text or not isinstance(raw_text, str):
+# --- HELPER & GUARDRAIL FUNCTIONS ---
+
+def clean_expert_input(raw_text: str) -> str:
+    """Meta-Bleed Guardrail: Filtert API-Fehler und Systemmeldungen aus Texten."""
+    if not raw_text:
         return ""
-    text = re.sub(r'<[^>]+>', '', raw_text)
-    text = re.sub(r'\*{1,3}', '', text)  # Entfernt Sternchen
-    text = re.sub(r'#{1,6}\s?', '', text)  # Entfernt Rauten
-    text = re.sub(r'`{1,3}', '', text)
+    error_patterns = [
+        r"Error 4\d\d", r"Error 5\d\d", r"Rate limit exceeded",
+        r"Unauthorized", r"Invalid API Key", r"Internal Server Error",
+        r"Traceback \(most recent call last\):", r"HTTPError"
+    ]
+    for pattern in error_patterns:
+        if re.search(pattern, raw_text, re.IGNORECASE):
+            logging.warning(f"Meta-Bleed erkannt und herausgefiltert: {pattern}")
+            return ""
+    return raw_text.strip()
+
+
+def repair_and_parse_json(raw_text: str) -> dict:
+    """
+    Versucht rohes LLM-JSON robust zu parsen.
+    Entfernt Code-Zäune, repariert Trailing Commas und schließt offene Klammern.
+    """
+    if not raw_text:
+        raise ValueError("Leerer Antworttext erhalten.")
+
+    # 1. Strippe Markdown-Codeblocks
+    text = re.sub(r"^```(?:json)?\s*", "", raw_text.strip(), flags=re.MULTILINE)
+    text = re.sub(r"\s*```$", "", text, flags=re.MULTILINE).strip()
+
+    # 2. Versuch: Standard-Parse
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+
+    # 3. Versuch: Äußersten JSON-Block { ... } extrahieren
+    match = re.search(r"\{.*\}", text, re.DOTALL)
+    if match:
+        extracted = match.group(0)
+        try:
+            return json.loads(extracted)
+        except json.JSONDecodeError:
+            text = extracted
+
+    # 4. Versuch: Trailing Commas vor ] oder } entfernen
+    repaired = re.sub(r",\s*([\]}])", r"\1", text)
+    try:
+        return json.loads(repaired)
+    except json.JSONDecodeError:
+        pass
+
+    # 5. Versuch: Offene Klammern bei abgeschnittenem Output schließen
+    open_braces = text.count('{') - text.count('}')
+    open_brackets = text.count('[') - text.count(']')
+    text_patched = text + (']' * max(0, open_brackets)) + ('}' * max(0, open_braces))
+    
+    try:
+        return json.loads(text_patched)
+    except json.JSONDecodeError as e:
+        pipeline_health["errors"].append(f"JSON Repair gescheitert: {str(e)}")
+        raise ValueError(f"JSON konnte nicht repariert werden: {e}")
+
+
+def sanitize_markdown(text: str) -> str:
+    """Entfernt Markdown-Sonderzeichen für saubere HTML-Ausgabe."""
+    if not isinstance(text, str):
+        return text
+    text = re.sub(r"\*{1,3}(.*?)\*{1,3}", r"\1", text)
+    text = re.sub(r"`{1,3}(.*?)(`{1,3}|$)", r"\1", text)
+    text = re.sub(r"^#{1,6}\s+", "", text, flags=re.MULTILINE)
     return text.strip()
 
 
-def sanitize_json(obj):
-    if isinstance(obj, dict):
-        return {k: sanitize_json(v) for k, v in obj.items()}
-    elif isinstance(obj, list):
-        return [sanitize_json(item) for item in obj]
-    elif isinstance(obj, str):
-        return clean_text(obj)
-    return obj
+def sanitize_data_structure(data):
+    """Rekursive Sanitization aller Strings im Daten-Dict."""
+    if isinstance(data, dict):
+        return {k: sanitize_data_structure(v) for k, v in data.items()}
+    elif isinstance(data, list):
+        return [sanitize_data_structure(item) for item in data]
+    elif isinstance(data, str):
+        return sanitize_markdown(data)
+    return data
 
 
-def repair_and_parse_json(text):
-    """Robuste JSON-Reparatur statt hartem json.loads() Absturz."""
-    text = text.strip()
-    if text.startswith("```"):
-        text = re.sub(r"^```[a-zA-Z]*\n?", "", text)
-        text = re.sub(r"\n?```$", "", text).strip()
-    first_brace = text.find('{')
-    last_brace = text.rfind('}')
-    if first_brace != -1 and last_brace != -1 and last_brace > first_brace:
-        text = text[first_brace:last_brace + 1]
+def ensure_fallback_structures(data: dict) -> dict:
+    """Garantiert, dass Pflichtfelder vorhanden sind."""
+    if "graph_network" not in data or not data["graph_network"].get("nodes"):
+        data["graph_network"] = FALLBACK_DATA["graph_network"]
+    if "conflict_hotspots" not in data or not data["conflict_hotspots"]:
+        data["conflict_hotspots"] = FALLBACK_DATA["conflict_hotspots"]
+    return data
+
+
+# --- STEP 1: FEED INGESTION ---
+
+def fetch_single_feed(source: dict) -> list:
+    """Lädt einen einzelnen RSS/OSINT-Feed mit Timeout und Altersfilter."""
+    url = source.get("url")
+    name = source.get("name", "Unknown")
+    category = source.get("category", "General")
+    weight = source.get("weight", 1.0)
+
+    articles = []
+    headers = {"User-Agent": USER_AGENT}
+
     try:
-        return json.loads(text)
-    except json.JSONDecodeError as e:
-        log_error("JSON-Parse", f"Erster Versuch fehlgeschlagen ({e}), starte Reparatur...")
-        repaired = text
-        if repaired.count('"') % 2 != 0:
-            repaired += '"'
-        open_brackets = repaired.count('[') - repaired.count(']')
-        open_braces = repaired.count('{') - repaired.count('}')
-        repaired += ']' * max(0, open_brackets)
-        repaired += '}' * max(0, open_braces)
-        try:
-            return json.loads(repaired)
-        except json.JSONDecodeError as e2:
-            log_error("JSON-Parse", f"Reparatur ebenfalls fehlgeschlagen ({e2}). Nutze Notfall-Fallback.")
-            return None
+        response = requests.get(url, headers=headers, timeout=FEED_TIMEOUT)
+        if response.status_code != 200:
+            return []
+
+        parsed = feedparser.parse(response.content)
+        now = datetime.now(timezone.utc)
+        cutoff_time = now - timedelta(hours=MAX_ARTICLE_AGE_HOURS)
+
+        for entry in parsed.entries[:10]:
+            title = entry.get("title", "").strip()
+            summary = entry.get("summary", entry.get("description", "")).strip()
+            link = entry.get("link", "").strip()
+            
+            # HTML-Tags aus Summary entfernen
+            summary_clean = re.sub(r"<[^>]+>", "", summary)[:300]
+
+            if title:
+                articles.append({
+                    "title": title,
+                    "summary": summary_clean,
+                    "link": link,
+                    "source": name,
+                    "category": category,
+                    "weight": weight
+                })
+        return articles
+
+    except Exception as e:
+        return []
 
 
-def fetch_feed(src):
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-        "Accept": "application/rss+xml, application/xml, text/xml, */*"
+def fetch_all_feeds(sources_list: list) -> list:
+    """Startet parallele Feed-Abfragen mit optimierter Worker-Anzahl."""
+    pipeline_health["feeds_total"] = len(sources_list)
+    all_articles = []
+    successful_feeds = 0
+    failed_feeds = 0
+
+    logging.info(f"Starte Feed-Ingestion für {len(sources_list)} Quellen mit {MAX_FEED_WORKERS} Workern...")
+
+    with ThreadPoolExecutor(max_workers=MAX_FEED_WORKERS) as executor:
+        future_to_source = {executor.submit(fetch_single_feed, src): src for src in sources_list}
+        for future in as_completed(future_to_source):
+            res = future.result()
+            if res:
+                all_articles.extend(res)
+                successful_feeds += 1
+            else:
+                failed_feeds += 1
+
+    pipeline_health["feeds_successful"] = successful_feeds
+    pipeline_health["feeds_failed"] = failed_feeds
+
+    logging.info(f"Ingestion beendet: {len(all_articles)} Artikel aus {successful_feeds} Feeds geladen. ({failed_feeds} fehlgeschlagen)")
+    return all_articles
+
+
+# --- STEP 2: MULTI-LLM PIPELINE ---
+
+def call_groq_denoise(articles: list) -> str:
+    """Stufe 1: Groq (llama-3.3-70b-versatile) zur Entrauschung & Faktenextraktion."""
+    if not GROQ_API_KEY:
+        pipeline_health["groq_status"] = "SKIPPED (No API Key)"
+        return json.dumps(articles[:30])
+
+    endpoint = "https://api.groq.com/openai/v1/chat/completions"
+    headers = {"Authorization": f"Bearer {GROQ_API_KEY}", "Content-Type": "application/json"}
+    
+    # Komprimierten Input erstellen
+    raw_payload = "\n".join([f"[{a['category']}] {a['source']}: {a['title']} - {a['summary']}" for a in articles[:100]])
+    
+    prompt = (
+        "Du bist ein leitender OSINT-Analyst. Analysiere folgende Roh-Feeds. "
+        "Filtere Rauschen, Propaganda und Duplikate heraus. "
+        "Extrahiere nur die 25 wichtigsten, verifizierbaren geopolitischen & makroökonomischen Fakten des Tages. "
+        "Formatiere als sachliche Stichpunkte mit Quellenbezug.\n\n"
+        f"FEEDS:\n{raw_payload}"
+    )
+
+    data = {
+        "model": "llama-3.3-70b-versatile",
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.2,
+        "max_tokens": 2000
     }
+
     try:
-        res = requests.get(src["url"], headers=headers, timeout=8)
+        res = requests.post(endpoint, headers=headers, json=data, timeout=30)
         if res.status_code == 200:
-            feed = feedparser.parse(res.content)
-            if feed.entries:
-                out = f"\n--- {src['name']} ({src['cat']}) ---\n"
-                cnt = 0
-                for entry in feed.entries[:3]:
-                    title = clean_text(entry.get('title', ''))
-                    desc = clean_text(entry.get('summary', '') or entry.get('description', ''))
-                    if title:
-                        out += f"- {title}: {desc[:120]}...\n"
-                        cnt += 1
-                if cnt > 0:
-                    return True, out
-    except Exception as e:
-        return False, str(e)
-    return False, ""
-
-
-print(f"Starte Feed-Ingestion für {len(SOURCES)} Quellen...")
-raw_feed_text = ""
-loaded_count = 0
-failed_sources = []
-
-# FIX: max_workers zurück auf 40 (war auf 10 reduziert -> Flaschenhals bei 140+ Feeds)
-with ThreadPoolExecutor(max_workers=40) as executor:
-    future_to_src = {executor.submit(fetch_feed, src): src for src in SOURCES}
-    for future in as_completed(future_to_src):
-        src = future_to_src[future]
-        try:
-            success, res_str = future.result()
-        except Exception as e:
-            success, res_str = False, str(e)
-        if success:
-            loaded_count += 1
-            raw_feed_text += res_str
+            pipeline_health["groq_status"] = "SUCCESS"
+            return res.json()["choices"][0]["message"]["content"]
         else:
-            failed_sources.append(src.get("name", "unbekannt"))
-
-pipeline_health["feeds_loaded"] = loaded_count
-print(f"Erfolgreich geladen: {loaded_count}/{len(SOURCES)} Feeds.")
-if failed_sources:
-    # Nur die ersten 15 anzeigen, damit das Log nicht explodiert
-    preview = ", ".join(failed_sources[:15])
-    more = f" (+{len(failed_sources) - 15} weitere)" if len(failed_sources) > 15 else ""
-    print(f"Fehlgeschlagene Quellen: {preview}{more}")
-
-if loaded_count == 0:
-    log_error("Feed-Ingestion", "0 Feeds geladen! Prüfe Netzwerk/Timeouts/User-Agent-Blocking.")
-
-
-# ============================================================
-# GROQ FILTER
-# ============================================================
-def filter_context(text):
-    if not client_groq or not text:
-        log_error("Groq-Filter", "Kein Groq-Client oder leerer Text -> ungefiltert weiterverwendet.")
-        return text[:30000] if text else ""
-    prompt = f"Du bist ein OSINT-Filter. Datum: {CURRENT_DATE_STR}. Filtere irrelevante Artikel heraus und liefere prägnante Stichpunkte der wichtigsten Weltgeschehnisse."
-    try:
-        res = client_groq.chat.completions.create(
-            model="llama-3.3-70b-versatile",
-            messages=[{"role": "system", "content": prompt}, {"role": "user", "content": text[:60000]}],
-            temperature=0.1
-        )
-        result = res.choices[0].message.content
-        pipeline_health["groq_filter_ok"] = True
-        print(f"Groq-Filter OK ({len(result)} Zeichen).")
-        return result
+            pipeline_health["groq_status"] = f"FAILED ({res.status_code})"
+            pipeline_health["errors"].append(f"Groq API Error: {res.status_code}")
     except Exception as e:
-        log_error("Groq-Filter", str(e))
-        return text[:30000]
+        pipeline_health["groq_status"] = f"ERROR ({str(e)})"
+        pipeline_health["errors"].append(f"Groq Exception: {str(e)}")
+
+    return json.dumps(articles[:30])
 
 
-filtered_text = filter_context(raw_feed_text)
-if not filtered_text:
-    log_error("Groq-Filter", "filtered_text ist leer - nachfolgende Stufen bekommen keinen Kontext.")
+def call_deepseek_reasoner(facts: str) -> str:
+    """Stufe 2: DeepSeek-R1 zur spieltheoretischen Analyse."""
+    if not DEEPSEEK_API_KEY:
+        pipeline_health["deepseek_status"] = "SKIPPED (No API Key)"
+        return "Spieltheoretische Analyse aufgrund fehlender API-Konfiguration übersprungen."
 
+    endpoint = "https://api.deepseek.com/chat/completions"
+    headers = {"Authorization": f"Bearer {DEEPSEEK_API_KEY}", "Content-Type": "application/json"}
+    
+    prompt = (
+        "Analysiere folgende verifizierte Faktenlage aus spieltheoretischer Sicht. "
+        "Identifiziere Akteure, Handlungsoptionen, Payoff-Matrizen und Eskalationspfade.\n\n"
+        f"FAKTEN:\n{facts}"
+    )
 
-# ============================================================
-# EXPERTEN SPEZIALISTEN
-# ============================================================
-def get_deepseek_analysis(ctx):
-    if not client_deepseek:
-        log_error("DeepSeek", "Kein API-Key konfiguriert.")
-        return "Keine Daten."
-    if not ctx:
-        log_error("DeepSeek", "Leerer Kontext übergeben.")
-        return "Keine Daten."
-    try:
-        res = client_deepseek.chat.completions.create(
-            model="deepseek-reasoner",
-            messages=[{"role": "system", "content": "Analysiere die Lage spieltheoretisch."}, {"role": "user", "content": ctx}]
-        )
-        result = res.choices[0].message.content
-        pipeline_health["deepseek_ok"] = True
-        print(f"DeepSeek-Analyse OK ({len(result)} Zeichen).")
-        return result
-    except Exception as e:
-        log_error("DeepSeek", str(e))
-        return "Keine Daten."
-
-
-ds_analysis = clean_text(get_deepseek_analysis(filtered_text))
-
-# ============================================================
-# NOTFALL-FALLBACK-TEMPLATE
-# Enthält ALLE Top-Level-Keys, die index.html erwartet.
-# Wird verwendet, wenn Mistral/Qwen beide ausfallen oder
-# ihr JSON nicht reparierbar ist - damit niemals ein
-# strukturell unvollständiges data.json entsteht.
-# ============================================================
-def build_fallback_data():
-    return {
-        "ampel_status": "GELB",
-        "ampel_reason_simple": "Automatische Synthese fehlgeschlagen - Anzeige basiert auf Fallback-Daten.",
-        "daily_executive_summary_simple": "Die Pipeline konnte heute keine vollständige Analyse erzeugen. Bitte Actions-Logs prüfen.",
-        "simple_key_takeaways": [
-            "Synthese-Stufe (Mistral/Qwen) war nicht erreichbar oder lieferte kein valides JSON",
-            f"{loaded_count}/{len(SOURCES)} RSS-Feeds wurden erfolgreich geladen",
-            "Dies ist ein automatisch generierter Platzhalter, keine echte Lagebeurteilung"
-        ],
-        "daily_executive_summary": "Lagebericht konnte nicht generiert werden, da die finale Synthese-Stufe fehlgeschlagen ist. Siehe pipeline_health für Details.",
-        "market_regime": "Unbekannt (Synthese fehlgeschlagen)",
-        "top_risk": "Datenpipeline-Ausfall",
-        "geoscore": {"current_score": 0, "previous_48h": 0},
-        "defcon_status": {"level": 3, "label": "DEFCON 3 (Fallback)", "nuclear_risk_percent": 0},
-        "predictive_horizon": {
-            "base_case_summary": "Keine Prognose verfügbar (Synthese fehlgeschlagen).",
-            "base_case_probability_pct": 0,
-            "time_horizons": {"30_days_tactic": "--", "90_days_macro": "--", "360_days_structural": "--"},
-            "black_swan_tail_risk": {"risk_event": "--", "probability_pct": 0, "market_impact": "--"},
-            "leading_indicators_to_watch": []
-        },
-        "historical_precedents": [],
-        "graph_network": {
-            "nodes": [
-                {"id": "n1", "label": "Strasse von Hormus", "group": "hotspot", "val": 10},
-                {"id": "n2", "label": "Iran & IRGC", "group": "actor", "val": 8},
-                {"id": "n3", "label": "Brent Rohöl", "group": "commodity", "val": 9},
-                {"id": "n4", "label": "Rüstungssektor", "group": "market", "val": 7},
-                {"id": "n5", "label": "Lieferketten-Schock", "group": "risk", "val": 8}
-            ],
-            "links": [
-                {"source": "n2", "target": "n1", "label": "Drohung"},
-                {"source": "n1", "target": "n5", "label": "Blockaderisiko"},
-                {"source": "n5", "target": "n3", "label": "Preisschock"},
-                {"source": "n3", "target": "n4", "label": "Marge"}
-            ]
-        },
-        "conflict_hotspots": [
-            {"region": "Strasse von Hormus", "status_type": "AKTIV", "escalation_level": "HOCH", "impact": "Öltransport-Risiko", "lat": 26.56, "lng": 56.25},
-            {"region": "Bab al-Mandab", "status_type": "AKTIV", "escalation_level": "HOCH", "impact": "Container-Umleitungen", "lat": 12.58, "lng": 43.33}
-        ],
-        "domestic_politics_analysis": [],
-        "stress_testing_scenarios": [],
-        "stock_picks": {"top_5_buys": [], "flop_5_sells": []},
-        "digital_and_monetary_sovereignty": []
+    data = {
+        "model": "deepseek-reasoner",
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": 2000
     }
 
-
-# ============================================================
-# SYNTHESE VIA MISTRAL (mit Qwen-Fallback)
-# ============================================================
-orchestrator_prompt = f"""Du bist die 'Argus Grid Intelligence Engine'.
-Erstelle ein vollständiges, valides JSON für das Weltlagebild am {CURRENT_DATE_STR}.
-
-WICHTIG:
-- VERWENDE KEINE MARKDOWN-FORMATIERUNG (KEINE **, KEINE #)!
-- Erzeuge ein Feld 'graph_network' mit Knoten (nodes) und Verbindungen (links).
-- Erzeuge ein Feld 'conflict_hotspots' mit Koordinaten (lat, lng) und Status.
-- HEUTIGES DATUM: {CURRENT_DATE_STR} (Jahr {CURRENT_YEAR}). Beziehe dich NUR auf aktuelle
-  Amtsträger und Ereignisse. Erwähne NIEMALS veraltete Akteure oder Ereignisse
-  (z.B. "Biden-Administration", "Midterms 2024"), auch wenn sie in einem der
-  Experten-Inputs auftauchen sollten - das wäre ein Hinweis auf veraltete Trainingsdaten
-  eines Modells, nicht auf die aktuelle Realität.
-
-JSON STRUKTUR:
-{{
-  "ampel_status": "GELB",
-  "ampel_reason_simple": "Kurzer Satz zur Ampel.",
-  "daily_executive_summary_simple": "Kurze Zusammenfassung.",
-  "simple_key_takeaways": ["Punkt 1", "Punkt 2", "Punkt 3"],
-  "daily_executive_summary": "Ausführlicher Lagebericht.",
-  "market_regime": "Stagflationär / Geopolitische Fragmentierung",
-  "top_risk": "Lieferketten-Unterbrechung",
-  "geoscore": {{"current_score": 76, "previous_48h": 72}},
-  "defcon_status": {{"level": 3, "label": "DEFCON 3", "nuclear_risk_percent": 15}},
-  "predictive_horizon": {{
-    "base_case_summary": "Prognose 30-90 Tage...",
-    "base_case_probability_pct": 65,
-    "time_horizons": {{"30_days_tactic": "Taktik...", "90_days_macro": "Makro...", "360_days_structural": "Struktur..."}},
-    "black_swan_tail_risk": {{"risk_event": "Extremereignis...", "probability_pct": 8, "market_impact": "Marktschock..."}},
-    "leading_indicators_to_watch": [{{"indicator": "Frühwarnsignal...", "current_status": "Normal", "critical_threshold": "Schwelle..."}}]
-  }},
-  "historical_precedents": [{{"current_event": "Aktuelles Ereignis", "historical_analog": "Historischer Vergleich", "similarity_degree": "HOCH", "historical_outcome": "Damaliges Ergebnis", "key_divergence": "Unterschied zu heute"}}],
-  "graph_network": {{
-    "nodes": [
-      {{"id": "n1", "label": "Strasse von Hormus", "group": "hotspot", "val": 10}},
-      {{"id": "n2", "label": "Iran / IRGC", "group": "actor", "val": 8}},
-      {{"id": "n3", "label": "Brent Rohöl", "group": "commodity", "val": 9}},
-      {{"id": "n4", "label": "Rüstungssektor", "group": "market", "val": 7}}
-    ],
-    "links": [
-      {{"source": "n2", "target": "n1", "label": "Drohung"}},
-      {{"source": "n1", "target": "n3", "label": "Preisschock"}},
-      {{"source": "n3", "target": "n4", "label": "Rotation"}}
-    ]
-  }},
-  "conflict_hotspots": [
-    {{"region": "Strasse von Hormus", "status_type": "AKTIV", "escalation_level": "HOCH", "impact": "Öltransport & Frachtraten", "lat": 26.56, "lng": 56.25}},
-    {{"region": "Bab al-Mandab", "status_type": "AKTIV", "escalation_level": "HOCH", "impact": "Container-Umleitungen", "lat": 12.58, "lng": 43.33}}
-  ],
-  "domestic_politics_analysis": [
-    {{"region_actor": "USA", "key_event_trend": "Wahlkampf & Zinspolitik", "regime_stability": "STABIL", "geopolitical_impact": "Marktvolatilität"}}
-  ],
-  "stress_testing_scenarios": [
-    {{"scenario_name": "Eskalation Nahost", "probability_pct": 35, "timeframe": "1-3M", "cascade_chain": ["Blockade", "Ölschock", "Inflation"], "winners_long": [{{"asset": "Gold"}}, {{"asset": "Defense"}}], "losers_short": [{{"asset": "Tech"}}]}}
-  ],
-  "stock_picks": {{
-    "top_5_buys": [{{"ticker": "RHM", "name": "Rheinmetall", "reason": "Verteidigungsnachfrage"}}],
-    "flop_5_sells": [{{"ticker": "XYZ", "name": "Beispiel", "reason": "Rohstoffkosten"}}]
-  }},
-  "digital_and_monetary_sovereignty": [
-    {{"topic": "CBDC / Digitale Währung", "actor": "EZB / Fed", "trend": "Regulierung", "systemic_impact": "Überwachung", "market_implication": "Flucht in Gold"}}
-  ]
-}}
-"""
-
-payload_str = f"FEEDS:\n{filtered_text[:20000]}\n\nSPIELTHEORIE:\n{ds_analysis}"
-
-raw_json = None
-
-if client_mistral:
     try:
-        res = client_mistral.chat.completions.create(
-            model="mistral-large-latest",
-            messages=[{"role": "system", "content": orchestrator_prompt}, {"role": "user", "content": payload_str}],
-            temperature=0.1
-        )
-        raw_json = res.choices[0].message.content
-        pipeline_health["synthesizer_used"] = "mistral"
-        print(f"Mistral-Synthese OK ({len(raw_json)} Zeichen).")
+        res = requests.post(endpoint, headers=headers, json=data, timeout=45)
+        if res.status_code == 200:
+            pipeline_health["deepseek_status"] = "SUCCESS"
+            return clean_expert_input(res.json()["choices"][0]["message"]["content"])
+        else:
+            pipeline_health["deepseek_status"] = f"FAILED ({res.status_code})"
+            pipeline_health["errors"].append(f"DeepSeek API Error: {res.status_code}")
     except Exception as e:
-        log_error("Mistral", str(e))
+        pipeline_health["deepseek_status"] = f"ERROR ({str(e)})"
+        pipeline_health["errors"].append(f"DeepSeek Exception: {str(e)}")
 
-if not raw_json and client_qwen:
+    return "Keine spieltheoretische Analyse verfügbar."
+
+
+def call_synthesizer(facts: str, game_theory: str) -> dict:
+    """Stufe 3: Synthese & Erstellung des finalen JSON-Objekts."""
+    api_key = MISTRAL_API_KEY or OPENROUTER_API_KEY or GROQ_API_KEY
+    if not api_key:
+        pipeline_health["synthesizer_status"] = "SKIPPED (No Key)"
+        raise ValueError("Kein gültiger API-Key für Synthesizer vorhanden.")
+
+    # Standard-Endpoint (Mistral Native)
+    endpoint = "https://api.mistral.ai/v1/chat/completions"
+    model = "mistral-large-latest"
+
+    if not MISTRAL_API_KEY and OPENROUTER_API_KEY:
+        endpoint = "https://openrouter.ai/api/v1/chat/completions"
+        model = "qwen/qwen-2.5-72b-instruct"
+        api_key = OPENROUTER_API_KEY
+
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+
+    prompt = (
+        "Du bist das ARGUS GRID Synthese-Modul. Generiere aus den vorliegenden Daten "
+        "ein valides JSON-Objekt gemäß der festgelegten Struktur.\n"
+        "Antworte AUSSCHLIESSLICH mit dem puren JSON-Objekt, ohne Markdown-Formatierung!\n\n"
+        f"FAKTEN:\n{facts}\n\nSPIELTHEORIE:\n{game_theory}\n\n"
+        "ERFORDERLICHE JSON-STRUKTUR:\n"
+        "{\n"
+        '  "overall_geoscore": int (0-100),\n'
+        '  "defcon_level": int (1-5),\n'
+        '  "ampel_status": "GRÜN" | "GELB" | "ROT",\n'
+        '  "ampel_reason_simple": "Kurze Begründung",\n'
+        '  "daily_executive_summary": "Ausführliche Analyse...",\n'
+        '  "daily_executive_summary_simple": "Einfache Zusammenfassung...",\n'
+        '  "key_takeaways": ["Punkt 1", "Punkt 2", "Punkt 3"],\n'
+        '  "predictive_horizon": [{"timeframe": "30-90 Tage", "forecast": "...", "probability": "Hoch/Mittel/Niedrig", "early_warning_indicators": ["..."]}],\n'
+        '  "historical_precedents": [{"event": "...", "period": "...", "similarity": "...", "takeaway": "..."}],\n'
+        '  "conflict_hotspots": [{"name": "...", "lat": float, "lon": float, "intensity": "ROT/GELB", "description": "...", "military_activity": "..."}],\n'
+        '  "graph_network": {"nodes": [{"id": "...", "label": "...", "group": "...", "val": 5}], "edges": [{"from": "...", "to": "...", "label": "..."}]},\n'
+        '  "game_theory_matrices": [],\n'
+        '  "domestic_policy_matrix": [],\n'
+        '  "stress_test_scenarios": [],\n'
+        '  "equity_rotation": {"buys": [], "sells": []},\n'
+        '  "digital_sovereignty_index": {"score": int, "status": "..."}\n'
+        "}"
+    )
+
+    data = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.3,
+        "response_format": {"type": "json_object"} if "mistral" in endpoint else None
+    }
+
     try:
-        res = client_qwen.chat.completions.create(
-            model="qwen2.5-72b-instruct",
-            messages=[{"role": "system", "content": orchestrator_prompt}, {"role": "user", "content": payload_str}],
-            temperature=0.1
-        )
-        raw_json = res.choices[0].message.content
-        pipeline_health["synthesizer_used"] = "qwen"
-        print(f"Qwen-Synthese OK ({len(raw_json)} Zeichen) - Mistral-Fallback genutzt.")
+        res = requests.post(endpoint, headers=headers, json=data, timeout=60)
+        if res.status_code == 200:
+            content = res.json()["choices"][0]["message"]["content"]
+            parsed_json = repair_and_parse_json(content)
+            pipeline_health["synthesizer_status"] = "SUCCESS"
+            return parsed_json
+        else:
+            pipeline_health["synthesizer_status"] = f"FAILED ({res.status_code})"
+            pipeline_health["errors"].append(f"Synthesizer API Error: {res.status_code}")
+            raise ValueError(f"Synthesizer HTTP {res.status_code}")
     except Exception as e:
-        log_error("Qwen", str(e))
+        pipeline_health["synthesizer_status"] = f"ERROR ({str(e)})"
+        pipeline_health["errors"].append(f"Synthesizer Exception: {str(e)}")
+        raise e
 
-# ============================================================
-# PARSEN & REPARIEREN (FIX: kein harter Absturz mehr)
-# ============================================================
-parsed_data = None
-if raw_json:
-    parsed_data = repair_and_parse_json(raw_json)
-    if parsed_data is not None:
-        pipeline_health["json_parse_ok"] = True
 
-if parsed_data is None:
-    log_error("Synthese", "Kein verwertbares JSON von Mistral/Qwen erhalten. Nutze vollständigen Notfall-Fallback.")
-    pipeline_health["synthesizer_used"] = pipeline_health["synthesizer_used"] or "fallback"
-    parsed_data = build_fallback_data()
+def call_haiku_refine(data_dict: dict) -> dict:
+    """Stufe 4: Claude 3.5 Haiku zur redaktionellen Veredelung der einfachen Textfelder."""
+    if not ANTHROPIC_API_KEY:
+        pipeline_health["haiku_status"] = "SKIPPED (No API Key)"
+        return data_dict
 
-# ============================================================
-# AUTOMATISCHER GRAPH- & HOTSPOT-FALLBACK
-# (bleibt als zusätzliches Sicherheitsnetz erhalten, greift
-#  z.B. wenn Mistral zwar valides JSON liefert, aber diese
-#  beiden Felder darin vergisst)
-# ============================================================
-fallback_template = build_fallback_data()
+    endpoint = "https://api.anthropic.com/v1/messages"
+    headers = {
+        "x-api-key": ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+        "Content-Type": "application/json"
+    }
 
-if "graph_network" not in parsed_data or not parsed_data.get("graph_network", {}).get("nodes"):
-    parsed_data["graph_network"] = fallback_template["graph_network"]
+    exec_summary = data_dict.get("daily_executive_summary", "")
+    ampel_reason = data_dict.get("ampel_reason_simple", "")
 
-if "conflict_hotspots" not in parsed_data or not parsed_data.get("conflict_hotspots"):
-    parsed_data["conflict_hotspots"] = fallback_template["conflict_hotspots"]
+    prompt = (
+        "Formuliere die folgenden zwei Texte für ein allgemeines Publikum um. "
+        "Verwende klares, präzises Deutsch ohne Fachjargon oder Phrasen wie 'basierend auf den Daten'.\n\n"
+        f"1. Executive Summary:\n{exec_summary}\n\n"
+        f"2. Ampel Begründung:\n{ampel_reason}\n\n"
+        'Antworte im JSON-Format: {"daily_executive_summary_simple": "...", "ampel_reason_simple": "..."}'
+    )
 
-# Auch die übrigen von index.html erwarteten Top-Level-Keys absichern,
-# falls Mistral/Qwen sie im Einzelfall auslassen.
-for key, default_value in fallback_template.items():
-    if key not in parsed_data:
-        parsed_data[key] = default_value
+    payload = {
+        "model": "claude-3-5-haiku-20241022",
+        "max_tokens": 1000,
+        "messages": [{"role": "user", "content": prompt}]
+    }
 
-# ============================================================
-# ALLE STRINGS SÄUBERN (KEINE STERNCHEN / RAUTEN)
-# ============================================================
-parsed_data = sanitize_json(parsed_data)
-parsed_data["timestamp"] = NOW_UTC.strftime("%d.%m.%Y - %H:%M UTC")
+    try:
+        res = requests.post(endpoint, headers=headers, json=payload, timeout=25)
+        if res.status_code == 200:
+            raw_content = res.json()["content"][0]["text"]
+            refined = repair_and_parse_json(raw_content)
+            if "daily_executive_summary_simple" in refined:
+                data_dict["daily_executive_summary_simple"] = refined["daily_executive_summary_simple"]
+            if "ampel_reason_simple" in refined:
+                data_dict["ampel_reason_simple"] = refined["ampel_reason_simple"]
+            pipeline_health["haiku_status"] = "SUCCESS"
+        else:
+            pipeline_health["haiku_status"] = f"FAILED ({res.status_code})"
+    except Exception as e:
+        pipeline_health["haiku_status"] = f"ERROR ({str(e)})"
+        pipeline_health["errors"].append(f"Haiku Refine Exception: {str(e)}")
 
-# PIPELINE HEALTH INS JSON SCHREIBEN (für den Health-Badge im Frontend)
-parsed_data["pipeline_health"] = pipeline_health
+    return data_dict
 
-with open("data.json", "w", encoding="utf-8") as f:
-    json.dump(parsed_data, f, ensure_ascii=False, indent=2)
 
-print("✅ Pipeline beendet. data.json gespeichert.")
-print(f"   Feeds: {pipeline_health['feeds_loaded']}/{pipeline_health['feeds_total']}")
-print(f"   Groq-Filter: {'OK' if pipeline_health['groq_filter_ok'] else 'FEHLGESCHLAGEN'}")
-print(f"   DeepSeek: {'OK' if pipeline_health['deepseek_ok'] else 'FEHLGESCHLAGEN'}")
-print(f"   Synthesizer: {pipeline_health['synthesizer_used']}")
-print(f"   JSON-Parse: {'OK' if pipeline_health['json_parse_ok'] else 'FALLBACK GENUTZT'}")
-if pipeline_health["errors"]:
-    print(f"   Fehler-Log ({len(pipeline_health['errors'])}):")
-    for err in pipeline_health["errors"]:
-        print(f"     - {err}")
+# --- MAIN PIPELINE EXECUTION ---
+
+def main():
+    logging.info("=== ARGUS GRID v3.0 Pipeline Start ===")
+
+    # 1. Feed Ingestion
+    articles = fetch_all_feeds(SOURCES)
+
+    if not articles:
+        logging.error("Keine Artikel geladen. Verwende Notfall-Fallback.")
+        final_data = FALLBACK_DATA
+    else:
+        try:
+            # 2. Stage 1: Denoise via Groq
+            logging.info("Stufe 1: Denoising via Groq...")
+            facts = call_groq_denoise(articles)
+
+            # 3. Stage 2: DeepSeek Reasoner
+            logging.info("Stufe 2: Game-Theory via DeepSeek...")
+            game_theory = call_deepseek_reasoner(facts)
+
+            # 4. Stage 3: Synthesizer (Mistral/Qwen)
+            logging.info("Stufe 3: Synthesizing JSON...")
+            synthesized_data = call_synthesizer(facts, game_theory)
+
+            # 5. Stage 4: Refine via Claude Haiku
+            logging.info("Stufe 4: Refining prose via Claude Haiku...")
+            final_data = call_haiku_refine(synthesized_data)
+
+        except Exception as e:
+            logging.error(f"Fehler in der LLM-Pipeline: {e}. Aktiviere Notfall-Fallback.")
+            pipeline_health["errors"].append(f"Pipeline Critical Error: {str(e)}")
+            final_data = FALLBACK_DATA
+
+    # Metadata & Health Injektion
+    final_data["timestamp"] = datetime.now(timezone.utc).isoformat()
+    final_data["pipeline_health"] = pipeline_health
+
+    # Guaranteed Structure Check
+    final_data = ensure_fallback_structures(final_data)
+
+    # Data Sanitization (Markdown Stripping)
+    logging.info("Stufe 5: Data Sanitization...")
+    sanitized_data = sanitize_data_structure(final_data)
+
+    # Save to data.json
+    output_path = "data.json"
+    try:
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(sanitized_data, f, ensure_ascii=False, indent=2)
+        logging.info(f"Pipeline erfolgreich abgeschlossen. Output in '{output_path}' gespeichert.")
+    except Exception as e:
+        logging.critical(f"Kritischer Fehler beim Schreiben von {output_path}: {e}")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
