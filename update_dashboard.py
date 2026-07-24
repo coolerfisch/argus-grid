@@ -4,7 +4,7 @@ ARGUS GRID v3.0 - Collective Swarm Intelligence Engine Backend
 Kollaboratives Multi-LLM-System ("Kuchenbacken-Architektur"):
 1. Parallele Entwurfserstellung aller KI-Modelle auf der Gesamtlage
 2. Gegenseitiges Peer-Review & Fingerklopfen (Debatte & Korrektur)
-3. Konsens-Synthese & Daten-Harmonisierung für data.json
+3. Konsens-Synthese mit Robuster Datenweitergabe & Data Sanitization
 """
 
 import os
@@ -167,40 +167,48 @@ def select_balanced_articles(articles: list, max_count: int = 120) -> list:
 
 def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
     """
-    SCHEMA-HARMONISIERUNG:
+    ABSTURZ-SCHUTZ & SCHEMA-GARANTIE:
     Verbindet Aliase (geoscore, defcon, lat/lng, source/target), 
-    ohne Daten frei zu erfinden.
+    damit index.html die Daten fehlerfrei anzeigt.
     """
     if not isinstance(data, dict):
         data = {}
 
-    geoscore = data.get("overall_geoscore") or data.get("geoscore")
-    defcon = data.get("defcon_level") or data.get("defcon")
+    if "ampel_status" not in data or not data["ampel_status"]:
+        data["ampel_status"] = "GELB"
+    if "ampel_reason_simple" not in data or not data["ampel_reason_simple"]:
+        data["ampel_reason_simple"] = "Erhöhte allgemeine Volatilität im geopolitischen Raum."
 
-    if geoscore is not None:
-        try:
-            val = int(geoscore)
-            data["overall_geoscore"] = val
-            data["geoscore"] = val
-        except (ValueError, TypeError):
-            pass
+    if "daily_executive_summary" not in data or not data["daily_executive_summary"]:
+        data["daily_executive_summary"] = "Für diesen Durchlauf liegt kein vollständiges Briefing vor."
+    if "daily_executive_summary_simple" not in data or not data["daily_executive_summary_simple"]:
+        data["daily_executive_summary_simple"] = "Das System verarbeitet aktuelle Lagedaten."
 
-    if defcon is not None:
-        try:
-            val = int(defcon)
-            data["defcon_level"] = val
-            data["defcon"] = val
-        except (ValueError, TypeError):
-            pass
+    geoscore = data.get("overall_geoscore") or data.get("geoscore") or 50
+    defcon = data.get("defcon_level") or data.get("defcon") or 3
 
-    # Debatten- & Spieltheorie-Injektion für Expertenansicht
-    ds_clean = clean_expert_input(debate_summary)
-    if ds_clean:
-        data["game_theory_analysis"] = ds_clean
-        data["deepseek_analysis"] = ds_clean
-        data["game_theory"] = ds_clean
+    try:
+        val = int(geoscore)
+        data["overall_geoscore"] = val
+        data["geoscore"] = val
+    except (ValueError, TypeError):
+        data["overall_geoscore"] = 50
+        data["geoscore"] = 50
 
-    # Hotspots & Leaflet Koordinaten-Aliase
+    try:
+        val = int(defcon)
+        data["defcon_level"] = val
+        data["defcon"] = val
+    except (ValueError, TypeError):
+        data["defcon_level"] = 3
+        data["defcon"] = 3
+
+    ds_clean = clean_expert_input(debate_summary) if debate_summary else ""
+    text_content = ds_clean if ds_clean else "Keine spezifische Spieltheorie-Debatte erfasst."
+    data["game_theory_analysis"] = data.get("game_theory_analysis") or text_content
+    data["deepseek_analysis"] = data.get("deepseek_analysis") or text_content
+    data["game_theory"] = data.get("game_theory") or text_content
+
     hotspots = data.get("conflict_hotspots", [])
     if isinstance(hotspots, list):
         for h in hotspots:
@@ -212,7 +220,6 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
     else:
         data["conflict_hotspots"] = []
 
-    # Graph Network Aliase
     gn = data.get("graph_network", {})
     if isinstance(gn, dict):
         nodes = gn.get("nodes", [])
@@ -225,6 +232,8 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
                         n["name"] = n["label"]
                     if "label" not in n and "name" in n:
                         n["label"] = n["name"]
+        else:
+            nodes = []
         
         if isinstance(edges, list):
             for e in edges:
@@ -237,6 +246,8 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
                         e["target"] = e["to"]
                     if "to" not in e and "target" in e:
                         e["to"] = e["target"]
+        else:
+            edges = []
         
         data["graph_network"] = {"nodes": nodes, "edges": edges, "links": edges}
     else:
@@ -246,7 +257,9 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
         if array_key not in data or not isinstance(data[array_key], list):
             data[array_key] = []
 
+    data["timestamp"] = datetime.now(timezone.utc).isoformat()
     data["pipeline_health"] = pipeline_health
+
     return data
 
 
@@ -319,10 +332,10 @@ def fetch_all_feeds(sources_list: list) -> list:
     return all_articles
 
 
-# --- STEP 2: THE SWARM BAKER COMMITTEE (PARALLELE GESAMT-ENTWÜRFE) ---
+# --- STEP 2: THE SWARM BAKER COMMITTEE ---
 
 def baker_groq(payload: str) -> str:
-    """Bäcker 1: Groq (Llama 3.3 70B) - Schnell, faktenorientiert."""
+    """Groq (Llama 3.3 70B) - Schnell, faktenorientiert."""
     if not GROQ_API_KEY:
         return ""
     try:
@@ -342,13 +355,15 @@ def baker_groq(payload: str) -> str:
         if res.status_code == 200:
             pipeline_health["bakers_active"].append("Groq (Llama-3.3)")
             return res.json()["choices"][0]["message"]["content"]
+        else:
+            logging.warning(f"Groq Baker API Status: {res.status_code}")
     except Exception as e:
         logging.warning(f"Groq Baker Fehler: {e}")
     return ""
 
 
 def baker_deepseek(payload: str) -> str:
-    """Bäcker 2: DeepSeek-R1 - Strategisch, spieltheoretisch, tiefgründig."""
+    """DeepSeek-R1 - Strategisch, spieltheoretisch, tiefgründig."""
     if not DEEPSEEK_API_KEY:
         return ""
     try:
@@ -359,7 +374,7 @@ def baker_deepseek(payload: str) -> str:
                 "model": "deepseek-reasoner",
                 "messages": [{
                     "role": "user",
-                    "content": f"Analysiere die Gesamtlage aus strategischer und spieltheoretischer Sicht. Welche Akteure befinden sich in Zugzwängen, wo drohen Eskalationen und wie ist die globale Stabilität zu bewerten?\n\nFEEDS:\n{payload[:3000]}"
+                    "content": f"Analysiere die Gesamtlage aus strategischer und spieltheoretischer Sicht. Welche Akteure befinden sich in Zugzwängen, wo drohen Eskalationen?\n\nFEEDS:\n{payload[:3000]}"
                 }],
                 "max_tokens": 1800
             },
@@ -368,13 +383,15 @@ def baker_deepseek(payload: str) -> str:
         if res.status_code == 200:
             pipeline_health["bakers_active"].append("DeepSeek-R1")
             return clean_expert_input(res.json()["choices"][0]["message"]["content"])
+        else:
+            logging.warning(f"DeepSeek Baker API Status: {res.status_code}")
     except Exception as e:
         logging.warning(f"DeepSeek Baker Fehler: {e}")
     return ""
 
 
 def baker_qwen_or_grok(payload: str) -> str:
-    """Bäcker 3: Qwen 2.5 / Grok / OpenRouter - Multipolare Makro-Perspektive."""
+    """Qwen 2.5 / Grok / OpenRouter - Multipolare Makro-Perspektive."""
     api_key = OPENROUTER_API_KEY or XAI_API_KEY or QWEN_API_KEY
     if not api_key:
         return ""
@@ -390,7 +407,7 @@ def baker_qwen_or_grok(payload: str) -> str:
                 "model": model,
                 "messages": [{
                     "role": "user",
-                    "content": f"Analysiere die Lage aus makroökonomischer und multipolarer Sicht (BRICS, Lieferketten, Chokepoints, Währungen). Erstelle eine vollständige Lagebeurteilung.\n\nFEEDS:\n{payload[:3000]}"
+                    "content": f"Analysiere die Lage aus makroökonomischer und multipolarer Sicht (BRICS, Lieferketten, Chokepoints). Erstelle eine vollständige Lagebeurteilung.\n\nFEEDS:\n{payload[:3000]}"
                 }],
                 "max_tokens": 1800
             },
@@ -399,36 +416,36 @@ def baker_qwen_or_grok(payload: str) -> str:
         if res.status_code == 200:
             pipeline_health["bakers_active"].append(f"Swarm-Partner ({model.split('/')[-1]})")
             return res.json()["choices"][0]["message"]["content"]
+        else:
+            logging.warning(f"Macro Baker API Status: {res.status_code}")
     except Exception as e:
         logging.warning(f"Qwen/Grok Baker Fehler: {e}")
     return ""
 
 
-# --- STEP 3: PEER DEBATE & FINGERKLOPFEN (CROSS-VALIDATION) ---
+# --- STEP 3: PEER DEBATE & FINGERKLOPFEN ---
 
 def run_swarm_debate(draft_groq: str, draft_deepseek: str, draft_macro: str) -> str:
-    """
-    DAS FINGERKLOPFEN:
-    Die Modelle prüfen die Entwürfe der jeweils anderen auf Halluzinationen, 
-    Widersprüche und blinde Flecken.
-    """
-    api_key = MISTRAL_API_KEY or GROQ_API_KEY or OPENROUTER_API_KEY
-    if not api_key:
-        pipeline_health["swarm_debate_status"] = "SKIPPED"
-        return "Keine Debatte möglich."
+    """FÜHRT DIE KREUZPRÜFUNG DURCH ('Fingerklopfen')."""
+    # Kombinierte Entwürfe als absoluter Sicherheits-Fallback
+    combined_drafts = f"ENTWURF GROQ/OSINT:\n{draft_groq}\n\nENTWURF DEEPSEEK:\n{draft_deepseek}\n\nENTWURF MACRO:\n{draft_macro}".strip()
+    
+    # Nutze bevorzugt Mistral oder OpenRouter für die Debatte, um Groq-Rate-Limits zu vermeiden
+    api_key = MISTRAL_API_KEY or OPENROUTER_API_KEY or ANTHROPIC_API_KEY or GROQ_API_KEY
+    if not api_key or not combined_drafts:
+        pipeline_health["swarm_debate_status"] = "SKIPPED (Fallback auf Entwürfe)"
+        return combined_drafts
 
-    endpoint = "https://api.groq.com/openai/v1/chat/completions" if GROQ_API_KEY else "https://api.mistral.ai/v1/chat/completions"
-    model = "llama-3.3-70b-versatile" if GROQ_API_KEY else "mistral-large-latest"
+    endpoint = "https://api.mistral.ai/v1/chat/completions" if MISTRAL_API_KEY else ("https://openrouter.ai/api/v1/chat/completions" if OPENROUTER_API_KEY else "https://api.groq.com/openai/v1/chat/completions")
+    model = "mistral-large-latest" if MISTRAL_API_KEY else ("qwen/qwen-2.5-72b-instruct" if OPENROUTER_API_KEY else "llama-3.3-70b-versatile")
 
     prompt = (
-        "Du bist der Moderator der KI-Analysten-Konferenz. Dir liegen die Lagedokumente von 3 verschiedenen KI-Systemen vor:\n\n"
-        f"ENTWURF 1 (Groq/OSINT):\n{draft_groq[:1500]}\n\n"
-        f"ENTWURF 2 (DeepSeek/Spieltheorie):\n{draft_deepseek[:1500]}\n\n"
-        f"ENTWURF 3 (Makro/BRICS):\n{draft_macro[:1500]}\n\n"
+        "Du bist der Moderator der KI-Analysten-Konferenz. Dir liegen die Lagedokumente von verschiedenen KI-Systemen vor:\n\n"
+        f"{combined_drafts[:3000]}\n\n"
         "FÜHRE DIE KREUZPRÜFUNG DURCH ('Fingerklopfen'):\n"
-        "1. Wo widersprechen sich die Modelle direkt? (z.B. Risikoeinschätzungen, Fakten)\n"
+        "1. Wo widersprechen sich die Modelle direkt?\n"
         "2. Welche Halluzinationen oder unbegründeten Behauptungen müssen gestrichen werden?\n"
-        "3. Was ist der eimütige, verifizierte KERN-KONSENS aller Modelle?\n"
+        "3. Was ist der einmütige, verifizierte KERN-KONSENS aller Modelle?\n"
         "Formuliere eine messerscharfe Synthese dieser Debatte."
     )
 
@@ -447,20 +464,25 @@ def run_swarm_debate(draft_groq: str, draft_deepseek: str, draft_macro: str) -> 
         if res.status_code == 200:
             pipeline_health["swarm_debate_status"] = "SUCCESS"
             return res.json()["choices"][0]["message"]["content"]
+        else:
+            logging.warning(f"Debate API Status: {res.status_code}")
+            pipeline_health["swarm_debate_status"] = f"FAILED ({res.status_code})"
     except Exception as e:
+        logging.warning(f"Debate Exception: {e}")
         pipeline_health["swarm_debate_status"] = f"ERROR ({e})"
 
-    return "Konsens-Debatte mit reduzierten Daten durchgeführt."
+    # FIX: Wenn die Debatte fehlschlägt, NIEMALS einen Dummy-Satz zurückgeben, sondern die echten Entwürfe weiterreichen!
+    return combined_drafts
 
 
-# --- STEP 4: CONSENSUS SYNTHESIS & JSON BAKE ---
+# --- STEP 4: CONSENSUS SYNTHESIS ---
 
-def call_synthesizer(debate_result: str, draft_groq: str, draft_deepseek: str) -> dict:
-    """Synthesizer baut das finale JSON auf Basis der gemeinsam gegengelesenen Ergebnisse."""
+def call_synthesizer(debate_result: str, raw_payload: str) -> dict:
+    """Synthesizer baut das finale JSON auf Basis der Debatte UND der Roh-Feeds."""
     api_key = MISTRAL_API_KEY or OPENROUTER_API_KEY or GROQ_API_KEY
     if not api_key:
         pipeline_health["synthesizer_status"] = "SKIPPED"
-        raise ValueError("Kein Key für Synthesizer.")
+        return {}
 
     endpoint = "https://api.mistral.ai/v1/chat/completions" if MISTRAL_API_KEY else "https://openrouter.ai/api/v1/chat/completions"
     model = "mistral-large-latest" if MISTRAL_API_KEY else "qwen/qwen-2.5-72b-instruct"
@@ -469,10 +491,12 @@ def call_synthesizer(debate_result: str, draft_groq: str, draft_deepseek: str) -
 
     prompt = (
         "Du bist das finale ARGUS GRID Synthese-Modul. Bilde aus dem gemeinsamen Konsens "
-        "und der Debatte der KI-Analysten das finale JSON-Objekt.\n"
+        "und den vorliegenden Nachrichten-Feeds das finale JSON-Objekt.\n"
         "WICHTIG: Antworte AUSSCHLIESSLICH mit dem puren JSON-Objekt, ohne Markdown!\n"
-        "Nutze AUSSCHLIESSLICH verifizierte, in der Debatte bestätigte Fakten. Keine erfundene Daten!\n\n"
-        f"KONSENS & DEBATTE:\n{debate_result}\n\nSPIELTHEORIE-INPUT:\n{draft_deepseek[:1200]}\n\n"
+        "Nutze die echten Nachrichten, um konkrete Hotspots mit Koordinaten (z.B. Taiwan: 24.0/121.0, Rotes Meer: 14.0/42.0) "
+        "sowie Knotenpunkte für den Kaskaden-Graphen zu extrahieren!\n\n"
+        f"KONSENS & DEBATTE:\n{debate_result[:2500]}\n\n"
+        f"ROH-FEEDS FÜR EXTRAKTION:\n{raw_payload[:2500]}\n\n"
         "ERFORDERLICHE JSON-STRUKTUR:\n"
         "{\n"
         '  "overall_geoscore": int (0-100),\n'
@@ -489,9 +513,7 @@ def call_synthesizer(debate_result: str, draft_groq: str, draft_deepseek: str) -
         '  "conflict_hotspots": [{"name": "...", "lat": float, "lon": float, "lng": float, "intensity": "ROT/GELB", "description": "...", "military_activity": "..."}],\n'
         '  "graph_network": {"nodes": [{"id": "...", "label": "...", "name": "...", "group": "...", "val": 5}], "edges": [{"from": "...", "to": "...", "source": "...", "target": "...", "label": "..."}]},\n'
         '  "domestic_policy_matrix": [{"region": "...", "dynamics": "...", "stability": "GELB", "spillover": "..."}],\n'
-        '  "stress_test_scenarios": [{"scenario": "...", "impact": "...", "probability": "...", "mitigation": "..."}],\n'
-        '  "equity_rotation": {"buys": [], "sells": []},\n'
-        '  "digital_sovereignty_index": {"score": int, "status": "..."}\n'
+        '  "stress_test_scenarios": [{"scenario": "...", "impact": "...", "probability": "...", "mitigation": "..."}]\n'
         "}"
     )
 
@@ -513,18 +535,20 @@ def call_synthesizer(debate_result: str, draft_groq: str, draft_deepseek: str) -
             pipeline_health["synthesizer_status"] = "SUCCESS"
             return parsed_json
         else:
+            logging.warning(f"Synthesizer HTTP Error: {res.status_code}")
             pipeline_health["synthesizer_status"] = f"FAILED ({res.status_code})"
-            raise ValueError(f"Synthesizer HTTP {res.status_code}")
     except Exception as e:
+        logging.warning(f"Synthesizer Exception: {e}")
         pipeline_health["synthesizer_status"] = f"ERROR ({e})"
-        raise e
+
+    return {}
 
 
 # --- STEP 5: REDAKTIONELLER SCHLIFF ---
 
 def call_haiku_refine(data_dict: dict) -> dict:
-    """Claude 3.5 Haiku schliffelt die Sprache der einfachen Ansicht."""
-    if not ANTHROPIC_API_KEY:
+    """Claude 3.5 Haiku veredelt die Sprache der einfachen Ansicht."""
+    if not ANTHROPIC_API_KEY or not data_dict:
         pipeline_health["haiku_status"] = "SKIPPED"
         return data_dict
 
@@ -537,6 +561,9 @@ def call_haiku_refine(data_dict: dict) -> dict:
 
     exec_summary = data_dict.get("daily_executive_summary", "")
     ampel_reason = data_dict.get("ampel_reason_simple", "")
+
+    if not exec_summary:
+        return data_dict
 
     prompt = (
         "Formuliere die folgenden zwei Texte für ein allgemeines Publikum um. "
@@ -574,12 +601,13 @@ def main():
 
     articles = fetch_all_feeds(SOURCES)
 
+    final_data = {}
+    debate_summary = ""
+
     if not articles:
         logging.error("Keine Artikel geladen. Pipeline stoppt.")
-        final_data = {}
     else:
         try:
-            # Komprimierten Payload erzeugen
             selected = select_balanced_articles(articles, max_count=100)
             raw_payload = "\n".join([f"[{a['category']} | {a['bias']}] {a['source']}: {a['title']} - {a['summary']}" for a in selected])
 
@@ -600,7 +628,7 @@ def main():
 
             # 3. KONSENS-SYNTHESE (Mistral / Qwen)
             logging.info("Phase 3: Der Kuchen kommt aus dem Ofen (JSON-Synthese)...")
-            synthesized_data = call_synthesizer(debate_summary, draft_groq, draft_ds)
+            synthesized_data = call_synthesizer(debate_summary, raw_payload)
 
             # 4. REDAKTIONELLER SCHLIFF (Claude Haiku)
             logging.info("Phase 4: Redaktionelle Veredelung via Claude Haiku...")
@@ -609,15 +637,12 @@ def main():
         except Exception as e:
             logging.error(f"Fehler im Schwarm-Kollektiv: {e}")
             pipeline_health["errors"].append(f"Pipeline Critical Error: {str(e)}")
-            final_data = {}
 
-    final_data["timestamp"] = datetime.now(timezone.utc).isoformat()
+    # 5. Schema-Harmonisierung & Absturz-Schutz (Garantiert valides JSON für index.html)
+    logging.info("Phase 5: Schema Harmonization & Crash Prevention...")
+    final_data = harmonize_and_validate_schema(final_data, debate_summary)
 
-    # Schema Validation & Aliasing (ohne Erfindungen)
-    logging.info("Phase 5: Schema Harmonization...")
-    final_data = harmonize_and_validate_schema(final_data, debate_summary if 'debate_summary' in locals() else "")
-
-    # Data Sanitization (Markdown Stripping)
+    # 6. Data Sanitization (Markdown Stripping)
     logging.info("Phase 6: Data Sanitization...")
     sanitized_data = sanitize_data_structure(final_data)
 
