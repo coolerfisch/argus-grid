@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <!-- Vis.js Network for Graph -->
     <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <!-- Marked.js für wunderschönes Markdown/Tabellen-Rendering -->
+    <!-- Marked.js -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     
     <script>
@@ -35,29 +35,42 @@
     <style>
         body { background-color: #080c14; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; }
         .glass-card { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); border: 1px solid #1e293b; }
-        #map { height: 450px; width: 100%; border-radius: 0.5rem; }
-        #network-container { height: 400px; width: 100%; border-radius: 0.5rem; }
+        #map { height: 480px; width: 100%; border-radius: 0.5rem; }
+        #network-container { height: 420px; width: 100%; border-radius: 0.5rem; }
 
-        /* Elegant Markdown Styling für die Schwarm-Debatte */
+        /* Markdown Styling */
         .markdown-body { color: #cbd5e1; font-size: 0.875rem; line-height: 1.6; }
         .markdown-body h1, .markdown-body h2, .markdown-body h3 { color: #38bdf8; font-weight: 700; margin-top: 1.25rem; margin-bottom: 0.5rem; }
-        .markdown-body h2 { font-size: 1.1rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.25rem; }
-        .markdown-body h3 { font-size: 0.95rem; }
-        .markdown-body p { margin-bottom: 0.75rem; }
-        .markdown-body ul, .markdown-body ol { margin-left: 1.25rem; margin-bottom: 0.75rem; list-style-type: disc; }
-        .markdown-body hr { border-color: #1e293b; margin: 1.5rem 0; }
-        
-        /* High-End Dark Mode Tables */
         .markdown-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; overflow-x: auto; display: block; border-radius: 0.5rem; border: 1px solid #334155; }
-        .markdown-body th { background-color: #0f172a; color: #38bdf8; text-align: left; padding: 0.6rem 0.8rem; font-family: monospace; font-size: 0.75rem; border-bottom: 2px solid #334155; text-transform: uppercase; }
-        .markdown-body td { padding: 0.6rem 0.8rem; border-bottom: 1px solid #1e293b; background-color: rgba(15, 23, 42, 0.5); font-size: 0.8rem; }
+        .markdown-body th { background-color: #0f172a; color: #38bdf8; text-align: left; padding: 0.6rem 0.8rem; font-family: monospace; font-size: 0.75rem; border-bottom: 2px solid #334155; }
+        .markdown-body td { padding: 0.6rem 0.8rem; border-bottom: 1px solid #1e293b; font-size: 0.8rem; }
         .markdown-body tr:nth-child(even) td { background-color: rgba(30, 41, 59, 0.3); }
-        .markdown-body tr:hover td { background-color: rgba(56, 189, 248, 0.08); }
+
+        /* Radar Icons */
+        .radar-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            border-radius: 50%;
+            box-shadow: 0 0 12px rgba(0,0,0,0.8);
+            transition: all 0.3s ease;
+        }
+        .radar-conflict { background: rgba(239, 68, 68, 0.3); border: 2px solid #ef4444; animation: pulse 1.5s infinite; }
+        .radar-flight { background: rgba(56, 189, 248, 0.3); border: 2px solid #38bdf8; }
+        .radar-ship { background: rgba(250, 204, 21, 0.3); border: 2px solid #facc15; }
+        .radar-refugee { background: rgba(168, 85, 247, 0.3); border: 2px solid #a855f7; animation: pulse 2s infinite; }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
     </style>
 </head>
 <body class="p-4 md:p-8 min-h-screen">
 
-    <!-- HEADER / NAVIGATION -->
+    <!-- HEADER -->
     <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 glass-card p-4 rounded-xl">
         <div class="flex items-center gap-3">
             <div class="w-3 h-3 rounded-full bg-accentBlue animate-ping"></div>
@@ -67,18 +80,12 @@
             <span id="timestamp-badge" class="text-slate-400">Stand: --</span>
             <span id="feeds-badge" class="px-3 py-1 rounded-full bg-slate-800 text-accentBlue border border-slate-700">Feeds: --/180+</span>
             <div class="flex bg-slate-900 p-1 rounded-lg border border-slate-800">
-                <button id="btn-mode-simple" onclick="setMode('simple')" class="px-3 py-1 rounded text-xs transition-all bg-accentBlue text-slate-950 font-bold">Standard (Einfach)</button>
+                <button id="btn-mode-simple" onclick="setMode('simple')" class="px-3 py-1 rounded text-xs transition-all bg-accentBlue text-slate-950 font-bold">Standard</button>
                 <button id="btn-mode-expert" onclick="setMode('expert')" class="px-3 py-1 rounded text-xs transition-all text-slate-400 hover:text-white">Tiefen-Analyse</button>
             </div>
         </div>
     </header>
 
-    <!-- ERROR BANNER -->
-    <div id="error-banner" class="hidden mb-6 p-4 rounded-xl bg-red-950/80 border border-red-500 text-red-200 text-sm">
-        <strong class="font-bold">System-Hinweis:</strong> <span id="error-message">Ladefehler</span>
-    </div>
-
-    <!-- MAIN CONTENT -->
     <main class="space-y-6">
 
         <!-- AMPEL STATUS & EXECUTIVE BRIEFING -->
@@ -86,7 +93,7 @@
             <div class="flex items-center gap-4">
                 <div id="ampel-indicator" class="w-8 h-8 rounded-full bg-accentYellow shadow-lg shadow-accentYellow/20"></div>
                 <div>
-                    <h2 id="ampel-title" class="text-xl font-bold">Weltlage: GELB (Erhöhte Spannungen)</h2>
+                    <h2 id="ampel-title" class="text-xl font-bold">Weltlage: GELB</h2>
                     <p id="ampel-reason" class="text-slate-300 text-sm">Lagedaten werden geladen...</p>
                 </div>
             </div>
@@ -97,57 +104,114 @@
             </div>
         </section>
 
-        <!-- KPI METRICS GRID -->
-        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="glass-card p-4 rounded-xl text-center">
-                <span class="text-xs font-mono text-slate-400 uppercase">Geopolitischer Score</span>
-                <div id="kpi-geoscore" class="text-3xl font-bold text-accentBlue my-1">--</div>
-                <span class="text-xs text-slate-500">Skala 0 - 100</span>
+        <!-- KPI METRICS & MARKET ROTATION (TOP 5 / FLOP 5) -->
+        <section class="grid md:grid-cols-3 gap-6">
+            <div class="glass-card p-6 rounded-xl flex flex-col justify-between space-y-4">
+                <div>
+                    <span class="text-xs font-mono text-slate-400 uppercase">Geopolitischer Score</span>
+                    <div id="kpi-geoscore" class="text-4xl font-bold text-accentBlue my-1">--</div>
+                    <span class="text-xs text-slate-500">Skala 0 (Stabil) bis 100 (Kritisch)</span>
+                </div>
+                <div>
+                    <span class="text-xs font-mono text-slate-400 uppercase">DEFCON Bereitschaft</span>
+                    <div id="kpi-defcon" class="text-4xl font-bold text-accentYellow my-1">--</div>
+                    <span class="text-xs text-slate-500">Stufe 1 (Krieg) - 5 (Frieden)</span>
+                </div>
             </div>
-            <div class="glass-card p-4 rounded-xl text-center">
-                <span class="text-xs font-mono text-slate-400 uppercase">DEFCON Bereitschaft</span>
-                <div id="kpi-defcon" class="text-3xl font-bold text-accentYellow my-1">--</div>
-                <span class="text-xs text-slate-500">Stufe 1 (Extrem) - 5 (Normal)</span>
+
+            <div class="glass-card p-5 rounded-xl border-l-4 border-l-accentGreen">
+                <h3 class="text-xs font-mono uppercase text-accentGreen font-bold mb-3 flex items-center gap-2">
+                    📈 Top 5 Profiteure / Buys (Sektoren & ETFs)
+                </h3>
+                <div id="buys-list" class="space-y-2 text-xs">
+                    <span class="text-slate-500">Lade Marktimpulse...</span>
+                </div>
             </div>
-            <div class="glass-card p-4 rounded-xl text-center">
-                <span class="text-xs font-mono text-slate-400 uppercase">Markt-Regime</span>
-                <div id="kpi-market" class="text-sm font-semibold text-slate-200 mt-2">Makro-Umfeld</div>
-            </div>
-            <div class="glass-card p-4 rounded-xl text-center">
-                <span class="text-xs font-mono text-slate-400 uppercase">Hauptrisiko</span>
-                <div id="kpi-risk" class="text-sm font-semibold text-slate-200 mt-2">Geopolitik & Supply</div>
+
+            <div class="glass-card p-5 rounded-xl border-l-4 border-l-accentRed">
+                <h3 class="text-xs font-mono uppercase text-accentRed font-bold mb-3 flex items-center gap-2">
+                    📉 Flop 5 Verlierer / Sells (Risikofaktoren)
+                </h3>
+                <div id="sells-list" class="space-y-2 text-xs">
+                    <span class="text-slate-500">Lade Marktimpulse...</span>
+                </div>
             </div>
         </section>
 
-        <!-- SCHWARM-DEBATTE / PEER REVIEW BOX (WUNDERSCHÖN FORMATIERT) -->
+        <!-- INNENPOLITIK & REGIONALE STABILITÄTS-MATRIX -->
+        <section class="glass-card p-6 rounded-xl">
+            <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue mb-4">🏛️ Innenpolitik & Regionale Stabilitäts-Matrix</h3>
+            <div id="domestic-matrix-container" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <span class="text-slate-500 text-xs">Lade Stabilitätsmatrix...</span>
+            </div>
+        </section>
+
+        <!-- SCHWARM-DEBATTE & KREUZPRÜFUNG (GRAFISCHES GRID) -->
         <section class="glass-card p-6 rounded-xl space-y-4">
-            <div class="flex items-center justify-between">
-                <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue">♟️ Schwarm-Debatte & Kreuzprüfung ("Fingerklopfen")</h3>
-                <span class="text-xs font-mono text-slate-500">Multi-LLM Consensus</span>
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-borderDark pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">♟️</span>
+                    <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue font-bold">Schwarm-Debatte & Kreuzprüfung ("Fingerklopfen")</h3>
+                </div>
+                <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Multi-LLM Consensus</span>
             </div>
-            <div id="game-theory-box" class="markdown-body p-5 rounded-lg bg-slate-950/90 border border-slate-800 max-h-[550px] overflow-y-auto">
-                Analyse wird geladen...
+            <div id="swarm-visual-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+                <div class="col-span-full text-center text-slate-500 text-xs font-mono py-8">Analysiere Lagedaten...</div>
             </div>
         </section>
 
-        <!-- BEZIEHUNGSNETZWERK (GRAPH) -->
+        <!-- GESCHICHTS-KOMPASS & HISTORISCHE PARALLELEN -->
         <section class="glass-card p-6 rounded-xl">
-            <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue mb-4">🕸️ Entity-Relationship & Kaskaden-Netzwerk</h3>
-            <div id="network-container" class="bg-slate-950/50 border border-slate-800"></div>
+            <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue mb-4">📜 Geschichts-Kompass (Historische Parallelen)</h3>
+            <div id="history-container" class="grid md:grid-cols-2 gap-4">
+                <span class="text-slate-500 text-xs">Lade historische Vergleiche...</span>
+            </div>
         </section>
 
-        <!-- PROGNOSTIK MATRIX -->
-        <section class="glass-card p-6 rounded-xl">
-            <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue mb-4">🔮 Wissenschaftliche Prognostik Matrix</h3>
+        <!-- GLASKUGEL / PRÄDIKTIVER HORIZONT -->
+        <section class="glass-card p-6 rounded-xl space-y-4">
+            <div class="flex items-center justify-between border-b border-borderDark pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">🔮</span>
+                    <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue font-bold">Wissenschaftliche Prognostik Matrix</h3>
+                </div>
+                <span class="text-xs font-mono text-slate-400">Superforecasting Engine</span>
+            </div>
             <div id="predictive-container" class="grid md:grid-cols-3 gap-4">
-                <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800"><span class="text-xs font-mono text-slate-400">Lade Prognosen...</span></div>
+                <span class="text-slate-500 text-xs">Lade Prognosen...</span>
             </div>
         </section>
 
-        <!-- TACTICAL MAP & HOTSPOTS -->
-        <section class="glass-card p-6 rounded-xl">
-            <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue mb-4">🗺️ Live Tactical Radar & Conflict Hotspots</h3>
+        <!-- TACTICAL RADAR MAP (MIT RADAR ICONS & CORRIDORS) -->
+        <section class="glass-card p-6 rounded-xl space-y-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-borderDark pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">🗺️</span>
+                    <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue font-bold">Live Tactical Radar: Flugverkehr, Schifffahrt & Migration</h3>
+                </div>
+                <div class="flex flex-wrap gap-3 text-[11px] font-mono">
+                    <span class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-950/80 border border-red-800 text-red-300">💥 Konflikt</span>
+                    <span class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-sky-950/80 border border-sky-800 text-sky-300">✈️ Luftraum</span>
+                    <span class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800 text-amber-300">🚢 Schifffahrt / ⚓ Chokepoint</span>
+                    <span class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-purple-950/80 border border-purple-800 text-purple-300">🧳 Migration</span>
+                </div>
+            </div>
             <div id="map"></div>
+        </section>
+
+        <!-- ENTITY GRAPH MIT FARB-LEGENDE -->
+        <section class="glass-card p-6 rounded-xl space-y-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-borderDark pb-3">
+                <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue font-bold">🕸️ Kaskaden- & Beziehungsnetzwerk</h3>
+                <div class="flex flex-wrap gap-3 text-[11px] font-mono">
+                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-sky-400 border border-sky-600"></span> Staaten</span>
+                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-red-500 border border-red-700"></span> Milizen/Konflikt</span>
+                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-emerald-500 border border-emerald-700"></span> Institutionen</span>
+                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-purple-500 border border-purple-700"></span> Tech/Cyber</span>
+                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-amber-500 border border-amber-700"></span> Themen/Risiken</span>
+                </div>
+            </div>
+            <div id="network-container" class="bg-slate-950/50 border border-slate-800"></div>
         </section>
 
     </main>
@@ -168,19 +232,16 @@
         async function loadData() {
             try {
                 const response = await fetch('data.json?v=' + Date.now());
-                if (!response.ok) throw new Error(`HTTP ${response.status} beim Laden von data.json`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 currentData = await response.json();
                 renderContent();
             } catch (err) {
-                console.error("Dashboard Render Error:", err);
-                document.getElementById('error-banner').classList.remove('hidden');
-                document.getElementById('error-message').innerText = "Konntest Lagebild nicht laden (" + err.message + ").";
+                console.error("Dashboard Error:", err);
             }
         }
 
         function renderContent() {
             if (!currentData) return;
-
             const d = currentData;
 
             document.getElementById('timestamp-badge').innerText = "Stand: " + (d?.timestamp ? new Date(d.timestamp).toLocaleString('de-DE') : '--');
@@ -199,45 +260,318 @@
                 document.getElementById('ampel-title').innerText = 'Weltlage: GELB (Erhöhte Spannungen)';
             }
 
-            document.getElementById('ampel-reason').innerText = d?.ampel_reason_simple || d?.ampel_reason || 'Keine spezifische Begründung vorliegend.';
-
-            if (currentMode === 'simple') {
-                document.getElementById('executive-summary').innerText = d?.daily_executive_summary_simple || d?.daily_executive_summary || 'Lagedaten werden aufbereitet.';
-            } else {
-                document.getElementById('executive-summary').innerText = d?.daily_executive_summary || d?.daily_executive_summary_simple || 'Lagedaten werden aufbereitet.';
-            }
+            document.getElementById('ampel-reason').innerText = d?.ampel_reason_simple || d?.ampel_reason || 'Keine Begründung.';
+            document.getElementById('executive-summary').innerText = currentMode === 'simple' ? (d?.daily_executive_summary_simple || d?.daily_executive_summary) : (d?.daily_executive_summary || d?.daily_executive_summary_simple);
 
             document.getElementById('kpi-geoscore').innerText = d?.overall_geoscore ?? d?.geoscore ?? '--';
             document.getElementById('kpi-defcon').innerText = d?.defcon_level ?? d?.defcon ?? '--';
 
-            // DEBATTE MIT MARKED.JS PERFEKT FORMALISIEREN UND RENDERN
-            const rawDebateText = d?.game_theory_analysis || d?.deepseek_analysis || d?.game_theory || 'Keine Analyse verfügbar.';
-            document.getElementById('game-theory-box').innerHTML = marked.parse(rawDebateText);
+            renderMarketRotation(d?.equity_rotation);
+            renderDomesticMatrix(d?.domestic_policy_matrix);
 
-            renderPredictiveHorizon(d?.predictive_horizon || []);
-            renderNetworkGraph(d?.graph_network || { nodes: [], edges: [] });
-            renderTacticalMap(d?.conflict_hotspots || []);
+            const rawDebateText = d?.game_theory_analysis || d?.deepseek_analysis || d?.game_theory || '';
+            renderVisualDebate(rawDebateText);
+
+            renderHistoryPrecedents(d?.historical_precedents);
+            renderPredictiveHorizon(d?.predictive_horizon);
+            renderTacticalMap(d?.conflict_hotspots);
+            renderNetworkGraph(d?.graph_network);
+        }
+
+        function renderMarketRotation(equityData) {
+            const buysContainer = document.getElementById('buys-list');
+            const sellsContainer = document.getElementById('sells-list');
+
+            buysContainer.innerHTML = '';
+            sellsContainer.innerHTML = '';
+
+            const buys = equityData?.top5_buys || [];
+            const sells = equityData?.flop5_sells || [];
+
+            if (buys.length === 0) buysContainer.innerHTML = '<span class="text-slate-500">Keine spezifischen Buys.</span>';
+            buys.forEach(b => {
+                buysContainer.innerHTML += `
+                    <div class="p-2 rounded bg-emerald-950/30 border border-emerald-900/50">
+                        <div class="font-bold text-emerald-400">${b.asset || 'Sektor'}</div>
+                        <div class="text-slate-300 text-[11px]">${b.reason || ''}</div>
+                    </div>`;
+            });
+
+            if (sells.length === 0) sellsContainer.innerHTML = '<span class="text-slate-500">Keine spezifischen Sells.</span>';
+            sells.forEach(s => {
+                sellsContainer.innerHTML += `
+                    <div class="p-2 rounded bg-rose-950/30 border border-rose-900/50">
+                        <div class="font-bold text-rose-400">${s.asset || 'Sektor'}</div>
+                        <div class="text-slate-300 text-[11px]">${s.reason || ''}</div>
+                    </div>`;
+            });
+        }
+
+        function renderDomesticMatrix(matrixList) {
+            const container = document.getElementById('domestic-matrix-container');
+            container.innerHTML = '';
+
+            if (!Array.isArray(matrixList) || matrixList.length === 0) {
+                container.innerHTML = '<div class="text-slate-500 text-xs">Keine Innenpolitik-Matrix verfügbar.</div>';
+                return;
+            }
+
+            matrixList.forEach(m => {
+                const isRot = (m.stability || '').toUpperCase().includes('ROT');
+                const isGruen = (m.stability || '').toUpperCase().includes('GRÜN');
+                const badgeClass = isRot ? 'bg-red-950 text-red-400 border-red-800' : (isGruen ? 'bg-emerald-950 text-emerald-400 border-emerald-800' : 'bg-amber-950 text-amber-400 border-amber-800');
+
+                container.innerHTML += `
+                    <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-white text-xs">${m.region || 'Region'}</span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 rounded border ${badgeClass}">${m.stability || 'GELB'}</span>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-snug">${m.dynamics || ''}</p>
+                        ${m.spillover ? `<div class="text-[10px] text-slate-400 font-mono">Spillover: ${m.spillover}</div>` : ''}
+                    </div>`;
+            });
+        }
+
+        function renderVisualDebate(rawText) {
+            const container = document.getElementById('swarm-visual-grid');
+            if (!container) return;
+
+            if (!rawText || rawText.trim().length === 0) {
+                container.innerHTML = '<div class="col-span-full text-slate-500 text-xs font-mono p-4">Keine Schwarm-Daten verfügbar.</div>';
+                return;
+            }
+
+            if (rawText.includes('|') && rawText.includes('---')) {
+                container.innerHTML = `<div class="col-span-full markdown-body bg-slate-950/80 p-4 rounded-xl border border-slate-800">${marked.parse(rawText)}</div>`;
+                return;
+            }
+
+            const categories = [
+                { key: 'Sektor', title: '⚡ Sektor-Impulse', color: 'border-l-sky-500', bg: 'bg-sky-950/20' },
+                { key: 'Innenpolitik', title: '🏛️ Innenpolitik', color: 'border-l-indigo-500', bg: 'bg-indigo-950/20' },
+                { key: 'Geodaten', title: '🗺️ Geodaten & Krisen', color: 'border-l-rose-500', bg: 'bg-rose-950/20' },
+                { key: 'Weitere', title: '🌐 Globale Makro-Themen', color: 'border-l-amber-500', bg: 'bg-amber-950/20' }
+            ];
+
+            container.innerHTML = '';
+
+            categories.forEach(cat => {
+                const lines = rawText.split('\n').filter(l => l.trim().length > 0);
+                let itemsHtml = '';
+
+                lines.forEach(line => {
+                    if (line.toLowerCase().includes(cat.key.toLowerCase()) || line.startsWith('*') || line.startsWith('-')) {
+                        let cleanLine = line.replace(/^[\*\-\#\d\.]+\s*/, '').trim();
+                        
+                        if (cleanLine.includes(':')) {
+                            const parts = cleanLine.split(':');
+                            const topic = parts[0].trim();
+                            const desc = parts.slice(1).join(':').trim();
+                            
+                            itemsHtml += `
+                                <div class="p-2.5 rounded bg-slate-900/80 border border-slate-800/80 space-y-1">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-bold text-accentBlue text-xs">${topic}</span>
+                                        <span class="w-2 h-2 rounded-full bg-accentBlue/80"></span>
+                                    </div>
+                                    <p class="text-slate-300 text-[11px] leading-relaxed">${desc}</p>
+                                </div>`;
+                        } else if (cleanLine.length > 10 && !cleanLine.toLowerCase().includes('entwurf') && !cleanLine.toLowerCase().includes('hauptpunkte')) {
+                            itemsHtml += `
+                                <div class="p-2 rounded bg-slate-900/50 text-slate-300 text-[11px] border border-slate-800/50">
+                                    • ${cleanLine}
+                                </div>`;
+                        }
+                    }
+                });
+
+                if (!itemsHtml) {
+                    itemsHtml = '<span class="text-slate-600 text-[11px] italic">Keine direkten Signale.</span>';
+                }
+
+                const card = document.createElement('div');
+                card.className = `p-4 rounded-xl border-l-4 ${cat.color} ${cat.bg} border border-slate-800 flex flex-col justify-between space-y-3`;
+                card.innerHTML = `
+                    <div>
+                        <h4 class="font-bold text-xs uppercase tracking-wider text-slate-200 mb-3 flex items-center justify-between">
+                            <span>${cat.title}</span>
+                        </h4>
+                        <div class="space-y-2">
+                            ${itemsHtml}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function renderHistoryPrecedents(historyList) {
+            const container = document.getElementById('history-container');
+            container.innerHTML = '';
+
+            if (!Array.isArray(historyList) || historyList.length === 0) {
+                container.innerHTML = '<div class="text-slate-500 text-xs">Keine historischen Parallelen erfasst.</div>';
+                return;
+            }
+
+            historyList.forEach(h => {
+                container.innerHTML += `
+                    <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2">
+                        <div class="flex justify-between items-baseline">
+                            <span class="font-bold text-accentBlue text-xs">${h.event || 'Ereignis'}</span>
+                            <span class="text-[10px] font-mono text-slate-400">${h.period || ''}</span>
+                        </div>
+                        <p class="text-xs text-slate-300"><strong>Parallele:</strong> ${h.similarity || ''}</p>
+                        <div class="p-2 rounded bg-slate-950 text-xs text-amber-300/90 font-mono border border-slate-800">
+                            <strong>Erkenntnis für 2026:</strong> ${h.takeaway || ''}
+                        </div>
+                    </div>`;
+            });
         }
 
         function renderPredictiveHorizon(horizonList) {
             const container = document.getElementById('predictive-container');
+            if (!container) return;
             container.innerHTML = '';
 
             if (!Array.isArray(horizonList) || horizonList.length === 0) {
-                container.innerHTML = '<div class="col-span-3 text-slate-500 text-xs font-mono p-4">Keine strukturierten Prognosen für diesen Zyklus.</div>';
+                container.innerHTML = '<div class="col-span-3 text-slate-500 text-xs font-mono p-4">Keine Prognose-Daten verfügbar.</div>';
                 return;
             }
 
             horizonList.forEach(item => {
+                const timeframe = item?.timeframe || 'Taktisch';
+                const forecast = item?.forecast || 'Keine Details vorliegend.';
+                const prob = (item?.probability || 'Mittel').toLowerCase();
+                const indicators = item?.early_warning_indicators || [];
+
+                let badgeClass = 'bg-amber-950/80 text-amber-400 border-amber-800/80';
+                if (prob.includes('hoch') || prob.includes('high')) {
+                    badgeClass = 'bg-rose-950/80 text-rose-400 border-rose-800/80';
+                } else if (prob.includes('niedrig') || prob.includes('low')) {
+                    badgeClass = 'bg-emerald-950/80 text-emerald-400 border-emerald-800/80';
+                }
+
+                let indicatorsHtml = '';
+                if (Array.isArray(indicators) && indicators.length > 0) {
+                    indicatorsHtml = `
+                        <div class="pt-3 border-t border-slate-800/80 mt-auto">
+                            <span class="text-[10px] font-mono text-accentBlue uppercase tracking-wider block mb-1.5 font-semibold flex items-center gap-1">
+                                <span>🚨</span> Frühwarn-Indikatoren
+                            </span>
+                            <ul class="space-y-1">
+                                ${indicators.map(ind => `
+                                    <li class="text-[11px] text-slate-300 flex items-start gap-1.5 leading-snug">
+                                        <span class="text-accentBlue mt-0.5">•</span>
+                                        <span>${ind}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    `;
+                }
+
                 const card = document.createElement('div');
-                card.className = 'p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2';
+                card.className = 'p-5 rounded-xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between space-y-4 hover:border-slate-700 transition-all shadow-lg';
                 card.innerHTML = `
-                    <div class="text-xs font-mono font-bold text-accentBlue">${item?.timeframe || 'Horizont'}</div>
-                    <p class="text-xs text-slate-300 leading-relaxed">${item?.forecast || 'Keine Details'}</p>
-                    <div class="text-[10px] text-slate-400 font-mono">Wahrscheinlichkeit: <span class="text-slate-200">${item?.probability || 'Unbekannt'}</span></div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between border-b border-slate-800/80 pb-2.5">
+                            <span class="text-xs font-mono font-bold text-accentBlue uppercase tracking-wider flex items-center gap-1.5">
+                                <span>⏱️</span> ${timeframe}
+                            </span>
+                            <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full border ${badgeClass} font-semibold">
+                                ${item?.probability || 'Mittel'}
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-200 leading-relaxed font-sans">${forecast}</p>
+                    </div>
+                    ${indicatorsHtml}
                 `;
                 container.appendChild(card);
             });
+        }
+
+        function renderTacticalMap(hotspots) {
+            if (!mapInstance) {
+                mapInstance = L.map('map').setView([20, 15], 2);
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(mapInstance);
+            }
+
+            mapInstance.eachLayer(layer => {
+                if (layer instanceof L.Marker || layer instanceof L.Polyline || layer instanceof L.CircleMarker) {
+                    mapInstance.removeLayer(layer);
+                }
+            });
+
+            if (!Array.isArray(hotspots) || hotspots.length === 0) return;
+
+            hotspots.forEach(h => {
+                const lat = parseFloat(h?.lat);
+                const lng = parseFloat(h?.lng ?? h?.lon);
+
+                if (!isNaN(lat) && !isNaN(lng)) {
+                    const rawType = (h?.type || '').toLowerCase();
+                    const desc = (h?.description || '').toLowerCase();
+
+                    let iconSymbol = '💥';
+                    let cssClass = 'radar-conflict';
+
+                    if (rawType.includes('flight') || rawType.includes('air') || desc.includes('flug')) {
+                        iconSymbol = '✈️';
+                        cssClass = 'radar-flight';
+                    } else if (rawType.includes('ship') || rawType.includes('maritime') || rawType.includes('chokepoint') || desc.includes('schiff')) {
+                        iconSymbol = '🚢';
+                        cssClass = 'radar-ship';
+                    } else if (rawType.includes('refugee') || rawType.includes('migration') || desc.includes('flüchtling')) {
+                        iconSymbol = '🧳';
+                        cssClass = 'radar-refugee';
+                    }
+
+                    const customIcon = L.divIcon({
+                        className: `radar-icon ${cssClass}`,
+                        html: `<span>${iconSymbol}</span>`,
+                        iconSize: [28, 28],
+                        iconAnchor: [14, 14]
+                    });
+
+                    const marker = L.marker([lat, lng], { icon: customIcon }).addTo(mapInstance);
+
+                    marker.bindPopup(`
+                        <div style="background-color: #0f172a; color: #f8fafc; padding: 10px; border-radius: 6px; font-size: 12px; border: 1px solid #334155; max-width: 220px;">
+                            <div style="font-weight: bold; color: #38bdf8; margin-bottom: 4px; display: flex; items-center; gap: 4px;">
+                                <span>${iconSymbol}</span> <span>${h?.name || 'Hotspot'}</span>
+                            </div>
+                            <div style="font-size: 11px; color: #cbd5e1;">${h?.description || ''}</div>
+                        </div>
+                    `);
+                }
+            });
+
+            const redSeaCorridor = [[12.5, 43.3], [15.0, 41.5], [27.8, 34.0]];
+            const medMigrationRoute = [[32.8, 13.1], [35.8, 14.5], [37.5, 15.0]];
+
+            L.polyline(redSeaCorridor, { color: '#facc15', weight: 2, dashArray: '5, 8', opacity: 0.8 }).addTo(mapInstance);
+            L.polyline(medMigrationRoute, { color: '#a855f7', weight: 2, dashArray: '4, 6', opacity: 0.8 }).addTo(mapInstance);
+        }
+
+        function getNodeColor(group, label) {
+            const grp = (group || '').toLowerCase();
+            const lbl = (label || '').toLowerCase();
+
+            if (grp.includes('miliz') || grp.includes('non-state') || grp.includes('konflikt') || lbl.includes('huthi') || lbl.includes('iran') || lbl.includes('krieg')) {
+                return { background: '#ef4444', border: '#b91c1c' };
+            }
+            if (grp.includes('staat') || grp.includes('bündnis') || lbl.includes('usa') || lbl.includes('china') || lbl.includes('russland') || lbl.includes('israel') || lbl.includes('ukraine')) {
+                return { background: '#38bdf8', border: '#0284c7' };
+            }
+            if (grp.includes('wirtschaft') || grp.includes('zentralbank') || grp.includes('institution') || lbl.includes('fed') || lbl.includes('eu') || lbl.includes('icc')) {
+                return { background: '#10b981', border: '#047857' };
+            }
+            if (grp.includes('tech') || lbl.includes('tiktok') || lbl.includes('cyber')) {
+                return { background: '#a855f7', border: '#7e22ce' };
+            }
+            return { background: '#f59e0b', border: '#b45309' };
         }
 
         function renderNetworkGraph(graphData) {
@@ -245,82 +579,38 @@
             if (!container) return;
 
             const rawNodes = Array.isArray(graphData?.nodes) ? graphData.nodes : [];
-            const rawEdges = Array.isArray(graphData?.edges) ? graphData.edges : (Array.isArray(graphData?.links) ? graphData.links : []);
+            const rawEdges = Array.isArray(graphData?.edges) ? graphData.edges : [];
 
             if (rawNodes.length === 0) {
                 container.innerHTML = '<div class="p-8 text-center text-xs font-mono text-slate-500">Keine Graphknoten verfügbar.</div>';
                 return;
             }
 
-            const nodes = new vis.DataSet(rawNodes.map(n => ({
-                id: n.id || n.name || n.label,
-                label: n.label || n.name || n.id,
-                shape: 'dot',
-                size: (n.val || 5) * 2,
-                color: { background: '#38bdf8', border: '#0284c7' },
-                font: { color: '#f8fafc', size: 12 }
-            })));
+            const nodes = new vis.DataSet(rawNodes.map(n => {
+                const nodeLabel = n.label || n.name || n.id;
+                return {
+                    id: n.id || n.name || n.label,
+                    label: nodeLabel,
+                    shape: 'dot',
+                    size: (n.val || 5) * 2.2,
+                    color: getNodeColor(n.group, nodeLabel),
+                    font: { color: '#f8fafc', size: 12, face: 'system-ui' }
+                };
+            }));
 
             const edges = new vis.DataSet(rawEdges.map(e => ({
                 from: e.from || e.source,
                 to: e.to || e.target,
                 label: e.label || '',
-                color: { color: '#334155' },
-                font: { color: '#94a3b8', size: 9 }
+                color: { color: '#334155', highlight: '#38bdf8' },
+                font: { color: '#94a3b8', size: 10, align: 'horizontal' }
             })));
 
-            const data = { nodes, edges };
-            const options = {
-                physics: { solver: 'forceAtlas2Based', forceAtlas2Based: { gravitationalConstant: -30 } },
+            container.innerHTML = '';
+            new vis.Network(container, { nodes, edges }, {
+                physics: { solver: 'forceAtlas2Based', forceAtlas2Based: { gravitationalConstant: -35, centralGravity: 0.01, springLength: 100 } },
                 nodes: { borderWidth: 2 },
                 interaction: { hover: true, zoomView: true }
-            };
-
-            container.innerHTML = '';
-            new vis.Network(container, data, options);
-        }
-
-        function renderTacticalMap(hotspots) {
-            if (!Array.isArray(hotspots) || hotspots.length === 0) return;
-
-            if (!mapInstance) {
-                mapInstance = L.map('map').setView([20, 10], 2);
-                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-                    attribution: '&copy; OpenStreetMap &copy; CARTO',
-                    maxZoom: 18
-                }).addTo(mapInstance);
-            }
-
-            mapInstance.eachLayer(layer => {
-                if (layer instanceof L.CircleMarker) {
-                    mapInstance.removeLayer(layer);
-                }
-            });
-
-            hotspots.forEach(h => {
-                const lat = parseFloat(h?.lat);
-                const lng = parseFloat(h?.lng ?? h?.lon);
-
-                if (!isNaN(lat) && !isNaN(lng)) {
-                    const isRed = (h?.intensity || '').toUpperCase() === 'ROT';
-                    const color = isRed ? '#ef4444' : '#facc15';
-
-                    const marker = L.circleMarker([lat, lng], {
-                        radius: 8,
-                        fillColor: color,
-                        color: color,
-                        weight: 2,
-                        opacity: 0.8,
-                        fillOpacity: 0.4
-                    }).addTo(mapInstance);
-
-                    marker.bindPopup(`
-                        <div style="background-color: #0f172a; color: #f8fafc; padding: 8px; border-radius: 4px; font-size: 12px;">
-                            <strong style="color: ${color}">${h?.name || 'Hotspot'}</strong><br/>
-                            <span>${h?.description || ''}</span>
-                        </div>
-                    `);
-                }
             });
         }
 
