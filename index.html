@@ -6,8 +6,8 @@
   <title>ARGUS GRID // World Intelligence</title>
   
   <!-- LEAFLET MAP & FORCE GRAPH LIBRARIES -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/force-graph"></script>
+  <link rel="stylesheet" href="[https://unpkg.com/leaflet@1.9.4/dist/leaflet.css](https://unpkg.com/leaflet@1.9.4/dist/leaflet.css)" />
+  <script src="[https://unpkg.com/force-graph](https://unpkg.com/force-graph)"></script>
 
   <style>
     :root {
@@ -611,11 +611,12 @@
     </div>
   </div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="[https://unpkg.com/leaflet@1.9.4/dist/leaflet.js](https://unpkg.com/leaflet@1.9.4/dist/leaflet.js)"></script>
 
   <script>
     let map = null;
     let graphInstance = null;
+    let cachedGraphData = null;
     let cachedHotspots = [], cachedFlights = [], cachedShips = [];
 
     function openSourcesModal() { document.getElementById('sources-modal').classList.add('active'); }
@@ -643,9 +644,8 @@
             map.invalidateSize();
           }
 
-          if (graphInstance) {
-            const container = document.getElementById('knowledge-graph');
-            if (container) graphInstance.width(container.clientWidth);
+          if (cachedGraphData) {
+            initKnowledgeGraph(cachedGraphData);
           }
         }, 300);
       }
@@ -762,12 +762,12 @@
         }
       } catch(e) { console.error("Error Historical Precedents:", e); }
 
-      // 4. RENDERING FORCE-DIRECTED KNOWLEDGE GRAPH
+      // 4. CACHING KNOWLEDGE GRAPH DATA
       try {
         if (data.graph_network) {
-          initKnowledgeGraph(data.graph_network);
+          cachedGraphData = data.graph_network;
         }
-      } catch(e) { console.error("Error Knowledge Graph:", e); }
+      } catch(e) { console.error("Error Knowledge Graph Data:", e); }
 
       // 5. ENGINE HEALTH BADGE
       try {
@@ -991,16 +991,16 @@
         
         renderHotspotsList(cachedHotspots);
         
-        // Falls die Seite direkt im Modus 'detailed' gestartet werden sollte:
         if (!document.body.classList.contains('simple-mode')) {
           initMap(cachedHotspots, cachedFlights, cachedShips);
+          if (cachedGraphData) initKnowledgeGraph(cachedGraphData);
         }
       } catch(e) { console.error("Error Map/Hotspots:", e); }
     }
 
     function initKnowledgeGraph(graphData) {
       const container = document.getElementById('knowledge-graph');
-      if (!container || !graphData || !Array.isArray(graphData.nodes) || graphData.nodes.length === 0) return;
+      if (!container || typeof ForceGraph === 'undefined') return;
 
       container.innerHTML = '';
 
@@ -1012,7 +1012,11 @@
         'risk': '#f97316'
       };
 
+      const width = container.clientWidth || 800;
+
       graphInstance = ForceGraph()(container)
+        .width(width)
+        .height(480)
         .graphData(graphData)
         .nodeId('id')
         .nodeLabel(node => `${node.label} [${(node.group || 'entity').toUpperCase()}]`)
@@ -1034,7 +1038,7 @@
       if (!mapContainer) return;
 
       map = L.map('hotspot-map').setView([35, 25], 3);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(map);
+      L.tileLayer('https://{s}[.basemaps.cartocdn.com/dark_all/](https://.basemaps.cartocdn.com/dark_all/){z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(map);
 
       hotspots.forEach(spot => {
         if (spot && spot.lat != null && spot.lng != null) {
