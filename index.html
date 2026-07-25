@@ -116,11 +116,9 @@
       white-space: nowrap;
     }
 
-    /* VISIBILITY CONTROLS */
     body.simple-mode .detailed-section { display: none !important; }
     body:not(.simple-mode) .simple-only-section { display: none !important; }
 
-    /* AMPEL WIDGET */
     .ampel-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -155,7 +153,6 @@
     .ampel-light.yellow.active { background: #eab308; opacity: 1; box-shadow: 0 0 20px #eab308; }
     .ampel-light.red.active { background: #ef4444; opacity: 1; box-shadow: 0 0 20px #ef4444; }
 
-    /* GRIDS & CARDS */
     .takeaways-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -228,12 +225,10 @@
 
     .ticker-badge { background: #0f172a; padding: 2px 6px; border-radius: 4px; font-family: monospace; color: var(--accent-cyan); }
 
-    /* MODAL POPUP */
     .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 15, 25, 0.85); backdrop-filter: blur(6px); z-index: 9999; justify-content: center; align-items: center; padding: 20px; }
     .modal-overlay.active { display: flex; }
     .modal-content { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; max-width: 800px; width: 100%; max-height: 80vh; padding: 24px; overflow-y: auto; }
 
-    /* RADAR ICONS */
     .radar-icon {
       display: flex;
       align-items: center;
@@ -254,7 +249,6 @@
       100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
     }
 
-    /* MARKDOWN STYLING FOR SCHWARM-DEBATTE */
     .markdown-body { color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; }
     .markdown-body table { width: 100%; border-collapse: collapse; margin: 12px 0; border: 1px solid var(--border-color); }
     .markdown-body th { background: #0f172a; color: var(--accent-cyan); padding: 8px; border-bottom: 2px solid var(--border-color); text-transform: uppercase; font-size: 0.75rem; }
@@ -358,7 +352,6 @@
         </div>
       </div>
 
-      <!-- SCHWARM-DEBATTE ("FINGERKLOPFEN") GRID/MARKDOWN -->
       <div class="card" style="margin-bottom: 25px; border-left: 4px solid var(--accent-cyan);">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
           <h2>♟️ Schwarm-Debatte & Kreuzprüfung ("Fingerklopfen")</h2>
@@ -369,14 +362,12 @@
         </div>
       </div>
 
-      <!-- INNENPOLITIK MATRIX -->
       <div class="card" style="margin-bottom: 25px; border-left: 4px solid var(--accent-gold);">
         <h2>🏛️ Innenpolitik & Regionale Stabilitäts-Matrix</h2>
         <div id="domestic-matrix-container" class="dashboard-grid" style="margin-top: 15px;"></div>
       </div>
 
       <div class="dashboard-grid">
-        <!-- GRAPH NETZWERK -->
         <div class="card" style="grid-column: 1 / -1; border-left: 4px solid var(--accent-cyan);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
             <h2>🕸️ Entity-Relationship & Kaskaden-Netzwerk</h2>
@@ -391,7 +382,6 @@
           <div id="knowledge-graph"></div>
         </div>
 
-        <!-- KARTE -->
         <div class="card" style="grid-column: 1 / -1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
             <h2>🗺️ Live Tactical Radar: Flugverkehr, Schifffahrt & Migration</h2>
@@ -405,7 +395,6 @@
           <div id="hotspot-map"></div>
         </div>
 
-        <!-- AKTIEN ROTATION -->
         <div class="card" style="grid-column: 1 / -1;">
           <h2>📈 Aktien- & Sektor-Rotation (Top Buys & Flop Sells)</h2>
           <div class="table-wrapper">
@@ -609,7 +598,7 @@
       document.getElementById('kpi-regime').innerText = cleanText(globalData.market_regime || "Volatil");
       document.getElementById('kpi-risk').innerText = cleanText(globalData.top_risk || "Lieferketten");
 
-      // AKTIEN ROTATION (BUYS & SELLS)
+      // AKTIEN ROTATION
       const stockData = globalData.equity_rotation || globalData.stock_picks || {};
       const buys = stockData.top5_buys || stockData.top_5_buys || [];
       const sells = stockData.flop5_sells || stockData.flop_5_sells || [];
@@ -658,9 +647,17 @@
           id: n.id || lbl,
           label: cleanText(lbl),
           shape: 'dot',
-          size: (n.val || 5) * 2.2,
+          size: Math.max(18, (n.val || 5) * 3.2),
           color: getNodeColor(n.group, lbl),
-          font: { color: '#f8fafc', size: 12 }
+          font: {
+            color: '#ffffff',
+            size: 15,
+            face: 'Segoe UI, system-ui, sans-serif',
+            bold: true,
+            strokeWidth: 4,
+            strokeColor: '#0b0f19'
+          },
+          borderWidth: 2
         };
       }));
 
@@ -668,15 +665,43 @@
         from: e.from || e.source,
         to: e.to || e.target,
         label: cleanText(e.label || ''),
-        color: { color: '#23314d' },
-        font: { color: '#94a3b8', size: 10 }
+        color: { color: '#475569', highlight: '#94a3b8' },
+        width: 1.8,
+        font: {
+          color: '#e2e8f0',
+          size: 12,
+          face: 'Segoe UI, system-ui, sans-serif',
+          strokeWidth: 3,
+          strokeColor: '#0b0f19',
+          align: 'middle'
+        },
+        smooth: { type: 'continuous' }
       })));
 
       container.innerHTML = '';
       networkInstance = new vis.Network(container, { nodes, edges }, {
-        physics: { solver: 'forceAtlas2Based', forceAtlas2Based: { gravitationalConstant: -35 } },
-        nodes: { borderWidth: 2 },
-        interaction: { hover: true, zoomView: true }
+        physics: {
+          solver: 'forceAtlas2Based',
+          forceAtlas2Based: {
+            gravitationalConstant: -42,
+            springLength: 110,
+            springConstant: 0.08
+          },
+          stabilization: { iterations: 120 }
+        },
+        nodes: {
+          borderWidth: 2,
+          shadow: true
+        },
+        edges: {
+          arrows: { to: { enabled: true, scaleFactor: 0.6 } },
+          selectionWidth: 2
+        },
+        interaction: {
+          hover: true,
+          zoomView: true,
+          tooltipDelay: 120
+        }
       });
     }
 
@@ -720,7 +745,6 @@
         }
       });
 
-      // Taktische Korridore
       const redSeaCorridor = [[12.5, 43.3], [15.0, 41.5], [27.8, 34.0]];
       const medMigrationRoute = [[32.8, 13.1], [35.8, 14.5], [37.5, 15.0]];
 
