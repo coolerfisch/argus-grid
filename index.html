@@ -240,7 +240,7 @@
       transition: all 0.3s ease;
     }
     .radar-conflict { background: rgba(239, 68, 68, 0.3); border: 2px solid #ef4444; animation: pulse 1.5s infinite; }
-    .radar-flight { background: rgba(56, 189, 248, 0.3); border: 2px solid #38bdf8; }
+    .radar-flight { background: rgba(56, 189, 248, 0.3); border: 2px solid #38bdf8; animation: pulse 2s infinite; }
     .radar-ship { background: rgba(250, 204, 21, 0.3); border: 2px solid #facc15; }
     .radar-refugee { background: rgba(168, 85, 247, 0.3); border: 2px solid #a855f7; animation: pulse 2s infinite; }
 
@@ -488,20 +488,17 @@
       // TIMESTAMP
       document.getElementById('last-update').innerText = "Stand: " + (globalData.timestamp ? new Date(globalData.timestamp).toLocaleString('de-DE') : "2026");
 
-      // HEALTH BADGE (Multi-Source Status)
+      // HEALTH BADGE
       try {
         if (globalData.pipeline_health) {
           const ph = globalData.pipeline_health;
           const success = ph.feeds_successful || 0;
           const total = ph.feeds_total || 0;
-          const rate = total > 0 ? Math.round((success / total) * 100) : 0;
           
           let color = "#22c55e";
-          if (rate < 40) color = "#ef4444";
-          else if (rate < 65) color = "#eab308";
+          if (total > 0 && (success / total) < 0.4) color = "#ef4444";
 
           const bakers = (ph.bakers_active || []).join(", ") || "keine";
-          const debate = ph.swarm_debate_status || "—";
           const gdelt = ph.gdelt_articles || 0;
           const tg = ph.telegram_posts || 0;
           const opensky = ph.opensky_status || "—";
@@ -545,17 +542,22 @@
         takeaways.forEach((t, i) => {
           html += `<div class="takeaway-card"><strong style="color:var(--accent-cyan);">PUNKT ${i+1}:</strong> ${cleanText(t)}</div>`;
         });
-        document.getElementById('takeaways-container').innerHTML = html;
+        document.getElementById('takeaways-container').innerHTML = html || '<div class="takeaway-card">Lade Kernaussagen...</div>';
       }
 
       // PROGNOSE
       if (globalData.predictive_horizon) {
         const ph = globalData.predictive_horizon;
         if (typeof ph === 'object' && ph.base_case_summary) {
-          document.getElementById('forecast-prob-badge').innerText = `${ph.base_case_probability_pct || 65}%`;
+          document.getElementById('forecast-prob-badge').innerText = `${ph.base_case_probability_pct || 65}% Wahrscheinlichkeit`;
           document.getElementById('forecast-simple-text').innerText = cleanText(ph.base_case_summary);
+          
           if (Array.isArray(ph.leading_indicators_to_watch) && ph.leading_indicators_to_watch.length > 0) {
-            document.getElementById('forecast-indicator-text').innerText = cleanText(ph.leading_indicators_to_watch[0].indicator || ph.leading_indicators_to_watch[0]);
+            const firstInd = ph.leading_indicators_to_watch[0];
+            const textVal = typeof firstInd === 'object' ? (firstInd.indicator || firstInd.name || JSON.stringify(firstInd)) : firstInd;
+            document.getElementById('forecast-indicator-text').innerText = cleanText(textVal);
+          } else {
+            document.getElementById('forecast-indicator-text').innerText = "Sektor-Volatilität & Cyber-Advisories beobachten.";
           }
         }
       }
@@ -571,7 +573,7 @@
               ${hp.takeaway ? `<div style="font-size:0.8rem; margin-top:6px; color:var(--accent-gold); font-family:monospace;">Erkenntnis für 2026: ${cleanText(hp.takeaway)}</div>` : ''}
             </div>`;
         });
-        document.getElementById('simple-historical-container').innerHTML = hHtml;
+        document.getElementById('simple-historical-container').innerHTML = hHtml || '<div class="card">Lade historische Parallelen...</div>';
       }
 
       // SCHWARM-DEBATTE
@@ -724,8 +726,15 @@
       L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(map);
 
       hotspots.forEach(h => {
-        const lat = parseFloat(h.lat);
-        const lng = parseFloat(h.lng ?? h.lon);
+        let lat = parseFloat(h.lat);
+        let lng = parseFloat(h.lng ?? h.lon);
+
+        // SCHUTZVORRICHTUNG GEGEN DRITTVAN-LAT/LON-VERTAUSCHUNGEN
+        if (Math.abs(lat) > 90 && Math.abs(lng) <= 90) {
+          const tmp = lat;
+          lat = lng;
+          lng = tmp;
+        }
 
         if (!isNaN(lat) && !isNaN(lng)) {
           const rawType = (h.type || '').toLowerCase();
@@ -734,9 +743,18 @@
           let iconSymbol = '💥';
           let cssClass = 'radar-conflict';
 
-          if (rawType.includes('flight') || desc.includes('flug') || desc.includes('ads-b')) { iconSymbol = '✈️'; cssClass = 'radar-flight'; }
-          else if (rawType.includes('ship') || rawType.includes('maritime') || desc.includes('schiff')) { iconSymbol = '🚢'; cssClass = 'radar-ship'; }
-          else if (rawType.includes('refugee') || desc.includes('flüchtling')) { iconSymbol = '🧳'; cssClass = 'radar-refugee'; }
+          if (rawType.includes('flight') || desc.includes('flug') || desc.includes('callsign') || desc.includes('ads-b')) { 
+            iconSymbol = '✈️'; 
+            cssClass = 'radar-flight'; 
+          }
+          else if (rawType.includes('ship') || rawType.includes('maritime') || desc.includes('schiff')) { 
+            iconSymbol = '🚢'; 
+            cssClass = 'radar-ship'; 
+          }
+          else if (rawType.includes('refugee') || desc.includes('flüchtling')) { 
+            iconSymbol = '🧳'; 
+            cssClass = 'radar-refugee'; 
+          }
 
           const customIcon = L.divIcon({
             className: `radar-icon ${cssClass}`,
@@ -748,14 +766,18 @@
           L.marker([lat, lng], { icon: customIcon })
             .addTo(map)
             .bindPopup(`
-              <div style="background:#0f172a; color:#f8fafc; padding:8px; border-radius:6px; font-size:12px; border:1px solid #23314d; max-width:220px;">
-                <strong style="color:#38bdf8">${iconSymbol} ${cleanText(h.region || h.name)}</strong><br>
-                <span style="font-size:11px; color:#cbd5e1;">${cleanText(h.impact || h.description)}</span>
+              <div style="background:#0f172a; color:#f8fafc; padding:10px; border-radius:8px; font-size:12px; border:1px solid #23314d; max-width:240px;">
+                <strong style="color:#38bdf8; font-size:13px;">${iconSymbol} ${cleanText(h.name || h.region)}</strong><br>
+                <div style="margin-top:6px; font-size:11px; color:#e2e8f0; line-height:1.4;">
+                  ${cleanText(h.description || '')}
+                </div>
+                ${h.impact ? `<div style="margin-top:6px; font-size:10px; color:var(--accent-gold); font-family:monospace;">${cleanText(h.impact)}</div>` : ''}
               </div>
             `);
         }
       });
 
+      // STRATEGISCHE KORRIDORE
       const redSeaCorridor = [[12.5, 43.3], [15.0, 41.5], [27.8, 34.0]];
       const medMigrationRoute = [[32.8, 13.1], [35.8, 14.5], [37.5, 15.0]];
 
