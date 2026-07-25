@@ -4,6 +4,7 @@ ARGUS GRID v3.0 - Full Spectrum Multi-LLM Intelligence Engine Backend
 Kollaboratives Multi-LLM-System ("Kuchenbacken-Architektur"):
 - Parallele Sprints (Groq, DeepSeek, Qwen/Grok)
 - Peer-Debatte & Fingerklopfen ("Kreuzprüfung")
+- OpenSky Network Live-ADS-B-Tracking für Militär- & Aufklärungsflüge in Krisenzonen
 - Synthese für Sektor-Rotation (Top/Flop 5), Innenpolitik, Historische Parallelen, Prognostik & Tactical Radar.
 - Erzeugt 100% abwärtskompatibles JSON für das klassische und neue Dashboard-Design (Jahr 2026).
 """
@@ -32,10 +33,10 @@ logging.basicConfig(
 )
 
 # ============================================================
-# FEED-FETCHER KONSTANTEN (verbessert)
+# KONSTANTEN & SCHLÜSSEL
 # ============================================================
-MAX_FEED_WORKERS = 20          # vorher 40 – weniger Aggression = stabiler
-FEED_TIMEOUT = 12              # vorher 8
+MAX_FEED_WORKERS = 20
+FEED_TIMEOUT = 12
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 FEED_HEADERS = {
     "User-Agent": USER_AGENT,
@@ -58,6 +59,9 @@ QWEN_API_KEY = os.environ.get("QWEN_API_KEY")
 NEMOTRON_API_KEY = os.environ.get("NEMOTRON_API_KEY")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
 
+OPENSKY_USER = os.environ.get("OPENSKY_USER")
+OPENSKY_PASSWORD = os.environ.get("OPENSKY_PASSWORD")
+
 pipeline_health = {
     "timestamp": datetime.now(timezone.utc).isoformat(),
     "feeds_total": 0,
@@ -67,6 +71,7 @@ pipeline_health = {
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "PENDING",
     "haiku_status": "PENDING",
+    "opensky_status": "PENDING",
     "errors": []
 }
 
@@ -144,7 +149,85 @@ def select_balanced_articles(articles: list, max_count: int = 120) -> list:
     return balanced
 
 
-def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
+# ============================================================
+# OPENSKY LIVE ADS-B TRACKER INTEGRATION
+# ============================================================
+def fetch_opensky_flights() -> list:
+    """
+    Lädt Live-Flugdaten aus strategischen Krisenzonen via OpenSky Network API.
+    Identifiziert militärische Callsigns und auffällige ADS-B Signale.
+    """
+    if not OPENSKY_USER or not OPENSKY_PASSWORD:
+        logging.info("[OPENSKY] Keine Zugangsdaten gesetzt. Überspringe Live-Flug-Tracking.")
+        pipeline_health["opensky_status"] = "SKIPPED (No Credentials)"
+        return []
+
+    # Strategische Bounding-Boxen (lamin, lomin, lamax, lomax)
+    regions = [
+        {"name": "Schwarzes Meer / Osteuropa", "bbox": (40.0, 25.0, 52.0, 42.0)},
+        {"name": "Naher Osten / Rotes Meer", "bbox": (12.0, 32.0, 36.0, 52.0)},
+        {"name": "Taiwan-Straße / Ostasien", "bbox": (15.0, 115.0, 28.0, 126.0)},
+    ]
+
+    mil_keywords = ["FORTE", "LAGR", "HOMER", "JAKE", "DUKE", "HAWK", "RRR", "NATO", "CNV", "NAVY", "USAF", "BAF", "GAF"]
+    flight_hotspots = []
+    total_found = 0
+
+    for reg in regions:
+        lamin, lomin, lamax, lomax = reg["bbox"]
+        url = f"https://opensky-network.org/api/states/all?lamin={lamin}&lomin={lomin}&lamax={lamax}&lomax={lomax}"
+
+        try:
+            res = requests.get(url, auth=(OPENSKY_USER, OPENSKY_PASSWORD), timeout=10)
+            if res.status_code == 200:
+                data = res.json()
+                states = data.get("states", []) or []
+                
+                region_count = 0
+                for st in states:
+                    callsign = (st[1] or "").strip()
+                    longitude = st[5]
+                    latitude = st[6]
+                    altitude = st[7]  # Meter
+                    velocity = st[9]  # m/s
+                    on_ground = st[8]
+
+                    if latitude is None or longitude is None or on_ground:
+                        continue
+
+                    is_mil = any(kw in callsign.upper() for kw in mil_keywords)
+
+                    # Füge gezielt Militärflüge oder repräsentative Stichproben hinzu
+                    if is_mil or region_count < 2:
+                        alt_km = round((altitude or 0) / 1000, 1)
+                        speed_kmh = round((velocity or 0) * 3.6)
+                        display_name = f"Flug {callsign}" if callsign else f"ADS-B Signal {st[0][:6].upper()}"
+
+                        flight_hotspots.append({
+                            "name": display_name,
+                            "region": reg["name"],
+                            "lat": float(latitude),
+                            "lon": float(longitude),
+                            "lng": float(longitude),
+                            "type": "flight",
+                            "intensity": "ROT" if is_mil else "GELB",
+                            "description": f"Live ADS-B Korridor ({reg['name']}): Höhe ~{alt_km}km, Speed ~{speed_kmh}km/h. Callsign: {callsign or 'Unbekannt'}",
+                            "impact": "Militärische Luftraumüberwachung / Aufklärung" if is_mil else "Luftverkehr-Korridor"
+                        })
+                        region_count += 1
+                        total_found += 1
+
+            else:
+                logging.warning(f"[OPENSKY] API HTTP {res.status_code} für {reg['name']}")
+        except Exception as e:
+            logging.warning(f"[OPENSKY] Fehler bei Abfrage von {reg['name']}: {e}")
+
+    pipeline_health["opensky_status"] = f"SUCCESS ({total_found} Live-Signale)"
+    logging.info(f"[OPENSKY] Ingestion beendet: {total_found} Live-Flugsignale erfasst.")
+    return flight_hotspots
+
+
+def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights: list = None) -> dict:
     if not isinstance(data, dict):
         data = {}
 
@@ -197,23 +280,29 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
     text_content = ds_clean if ds_clean else "Keine spezifische Spieltheorie-Debatte erfasst."
     data["game_theory_analysis"] = data.get("game_theory_analysis") or text_content
 
-    # 5. Hotspots mit Typen-Sicherung
+    # 5. Hotspots mit Typen-Sicherung + OpenSky Integration
     hotspots = data.get("conflict_hotspots", [])
-    if isinstance(hotspots, list):
-        for h in hotspots:
-            if isinstance(h, dict):
-                if "lng" not in h and "lon" in h:
-                    h["lng"] = h["lon"]
-                if "lon" not in h and "lng" in h:
-                    h["lon"] = h["lng"]
-                if "region" not in h and "name" in h:
-                    h["region"] = h["name"]
-                if "impact" not in h and "description" in h:
-                    h["impact"] = h["description"]
-                if "type" not in h:
-                    h["type"] = "conflict"
-    else:
-        data["conflict_hotspots"] = []
+    if not isinstance(hotspots, list):
+        hotspots = []
+
+    for h in hotspots:
+        if isinstance(h, dict):
+            if "lng" not in h and "lon" in h:
+                h["lng"] = h["lon"]
+            if "lon" not in h and "lng" in h:
+                h["lon"] = h["lng"]
+            if "region" not in h and "name" in h:
+                h["region"] = h["name"]
+            if "impact" not in h and "description" in h:
+                h["impact"] = h["description"]
+            if "type" not in h:
+                h["type"] = "conflict"
+
+    # Füge Live ADS-B Flugdaten von OpenSky hinzu
+    if live_flights and isinstance(live_flights, list):
+        hotspots.extend(live_flights)
+
+    data["conflict_hotspots"] = hotspots
 
     # 6. Graph-Netzwerk
     gn = data.get("graph_network", {})
@@ -314,7 +403,6 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
             "horizon_list": []
         }
 
-    # Sonstige Arrays absichern
     for array_key in ["domestic_policy_matrix", "stress_test_scenarios"]:
         if array_key not in data or not isinstance(data[array_key], list):
             data[array_key] = []
@@ -336,9 +424,7 @@ def fetch_single_feed(source: dict) -> list:
         logging.warning(f"[FEED] {name}: keine gültige URL")
         return []
 
-    # Manche Quellen haben Markdown-Reste in der URL (Copy-Paste-Fehler)
     url = url.strip().strip("[]()")
-
     articles = []
 
     try:
@@ -348,7 +434,6 @@ def fetch_single_feed(source: dict) -> list:
             logging.debug(f"[FEED] {name}: HTTP {response.status_code}")
             return []
 
-        # Content-Type grob prüfen
         content_type = response.headers.get("Content-Type", "").lower()
         if "html" in content_type and "xml" not in content_type and "rss" not in content_type:
             logging.debug(f"[FEED] {name}: scheint HTML statt Feed zu sein")
@@ -646,7 +731,12 @@ def call_haiku_refine(data_dict: dict) -> dict:
 
 def main():
     logging.info(f"=== ARGUS GRID v3.0 Start ({CURRENT_DATE_STR}) ===")
+    
+    # 1. RSS & OSINT Feeds laden
     articles = fetch_all_feeds(SOURCES)
+
+    # 2. OpenSky Live ADS-B Tracking ausführen
+    live_flights = fetch_opensky_flights()
 
     final_data = {}
     debate_summary = ""
@@ -670,7 +760,8 @@ def main():
         except Exception as e:
             logging.error(f"Fehler im Schwarm: {e}")
 
-    final_data = harmonize_and_validate_schema(final_data, debate_summary)
+    # 3. Schema harmonisieren & Live-Flugdaten mit KI-Hotspots zusammenführen
+    final_data = harmonize_and_validate_schema(final_data, debate_summary, live_flights=live_flights)
 
     output_path = "data.json"
     try:
