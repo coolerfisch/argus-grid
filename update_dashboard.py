@@ -5,7 +5,8 @@ Kollaboratives Multi-LLM-System ("Kuchenbacken-Architektur"):
 - Parallele Sprints (Groq, DeepSeek, Qwen/Grok)
 - Peer-Debatte & Fingerklopfen ("Kreuzprüfung")
 - OpenSky Network Live-ADS-B-Tracking für Militär- & Aufklärungsflüge in Krisenzonen
-- Synthese für Sektor-Rotation (Top/Flop 5), Innenpolitik, Historische Parallelen, Prognostik & Tactical Radar.
+- Dynamisches Kaskaden-Graphen-Merging (Akkumulation & 14-Tage-Decay historischer Beziehungen)
+- Synthese für Sektor-Rotation (Top/Flop 5), Innenpolitik, Historische Parallelen & Tactical Radar.
 - Erzeugt 100% abwärtskompatibles JSON für das klassische und neue Dashboard-Design (Jahr 2026).
 """
 
@@ -72,6 +73,7 @@ pipeline_health = {
     "synthesizer_status": "PENDING",
     "haiku_status": "PENDING",
     "opensky_status": "PENDING",
+    "graph_merge_status": "PENDING",
     "errors": []
 }
 
@@ -153,16 +155,12 @@ def select_balanced_articles(articles: list, max_count: int = 120) -> list:
 # OPENSKY LIVE ADS-B TRACKER INTEGRATION
 # ============================================================
 def fetch_opensky_flights() -> list:
-    """
-    Lädt Live-Flugdaten aus strategischen Krisenzonen via OpenSky Network API.
-    Identifiziert militärische Callsigns und auffällige ADS-B Signale.
-    """
+    """Lädt Live-Flugdaten aus strategischen Krisenzonen via OpenSky Network API."""
     if not OPENSKY_USER or not OPENSKY_PASSWORD:
         logging.info("[OPENSKY] Keine Zugangsdaten gesetzt. Überspringe Live-Flug-Tracking.")
         pipeline_health["opensky_status"] = "SKIPPED (No Credentials)"
         return []
 
-    # Strategische Bounding-Boxen (lamin, lomin, lamax, lomax)
     regions = [
         {"name": "Schwarzes Meer / Osteuropa", "bbox": (40.0, 25.0, 52.0, 42.0)},
         {"name": "Naher Osten / Rotes Meer", "bbox": (12.0, 32.0, 36.0, 52.0)},
@@ -188,8 +186,8 @@ def fetch_opensky_flights() -> list:
                     callsign = (st[1] or "").strip()
                     longitude = st[5]
                     latitude = st[6]
-                    altitude = st[7]  # Meter
-                    velocity = st[9]  # m/s
+                    altitude = st[7]
+                    velocity = st[9]
                     on_ground = st[8]
 
                     if latitude is None or longitude is None or on_ground:
@@ -197,7 +195,6 @@ def fetch_opensky_flights() -> list:
 
                     is_mil = any(kw in callsign.upper() for kw in mil_keywords)
 
-                    # Füge gezielt Militärflüge oder repräsentative Stichproben hinzu
                     if is_mil or region_count < 2:
                         alt_km = round((altitude or 0) / 1000, 1)
                         speed_kmh = round((velocity or 0) * 3.6)
@@ -216,7 +213,6 @@ def fetch_opensky_flights() -> list:
                         })
                         region_count += 1
                         total_found += 1
-
             else:
                 logging.warning(f"[OPENSKY] API HTTP {res.status_code} für {reg['name']}")
         except Exception as e:
@@ -227,7 +223,183 @@ def fetch_opensky_flights() -> list:
     return flight_hotspots
 
 
-def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights: list = None) -> dict:
+# ============================================================
+# PERSISTENTES KASKADEN-GRAPHEN MERGING & DECAY
+# ============================================================
+def load_existing_graph(filepath="data.json") -> dict:
+    """Lädt den bestehenden Graphen aus der letzten data.json."""
+    if not os.path.exists(filepath):
+        return {"nodes": [], "edges": []}
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            old_data = json.load(f)
+            gn = old_data.get("graph_network", {})
+            if isinstance(gn, dict):
+                return {
+                    "nodes": gn.get("nodes", []),
+                    "edges": gn.get("edges", gn.get("links", []))
+                }
+    except Exception as e:
+        logging.warning(f"[GRAPH Memory] Konnte bestehenden Graphen aus {filepath} nicht laden: {e}")
+    return {"nodes": [], "edges": []}
+
+
+def merge_and_decay_graph(new_graph: dict, old_graph: dict, max_age_days: int = 14) -> dict:
+    """
+    Akkumuliert alte und neue Graphenknoten/-kanten.
+    - Knoten, die erneut auftauchen, wachsen im Wert (val) und werden visuell größer.
+    - Knoten/Kanten, die > 14 Tage nicht mehr erwähnt wurden, verblassen und verschwinden.
+    """
+    now_dt = datetime.now(timezone.utc)
+    today_str = now_dt.strftime("%Y-%m-%d")
+
+    # 1. NODES MERGEN
+    node_dict = {}
+
+    # Altbestand laden
+    for n in old_graph.get("nodes", []):
+        if not isinstance(n, dict): continue
+        raw_id = str(n.get("id") or n.get("name") or n.get("label", "")).strip()
+        nid = raw_id.lower()
+        if not nid: continue
+
+        node_dict[nid] = {
+            "id": nid,
+            "label": n.get("label") or n.get("name") or raw_id,
+            "group": n.get("group", "actor"),
+            "val": int(n.get("val", 5)),
+            "first_seen": n.get("first_seen", today_str),
+            "last_seen": n.get("last_seen", today_str),
+            "seen_today": False
+        }
+
+    # Neue Nodes mergen
+    for n in new_graph.get("nodes", []):
+        if not isinstance(n, dict): continue
+        raw_id = str(n.get("id") or n.get("name") or n.get("label", "")).strip()
+        nid = raw_id.lower()
+        if not nid: continue
+
+        new_val = int(n.get("val", 5))
+        new_group = n.get("group") or "actor"
+        new_label = n.get("label") or n.get("name") or raw_id
+
+        if nid in node_dict:
+            # Existiert bereits: Gewicht steigern & Datum aktualisieren
+            node_dict[nid]["val"] = min(22, node_dict[nid]["val"] + max(1, new_val // 2))
+            node_dict[nid]["last_seen"] = today_str
+            node_dict[nid]["seen_today"] = True
+            if new_group and new_group != "actor":
+                node_dict[nid]["group"] = new_group
+        else:
+            # Neu
+            node_dict[nid] = {
+                "id": nid,
+                "label": new_label,
+                "group": new_group,
+                "val": max(5, new_val),
+                "first_seen": today_str,
+                "last_seen": today_str,
+                "seen_today": True
+            }
+
+    # Alterung/Decay für inaktive Nodes
+    final_nodes = []
+    for nid, n in node_dict.items():
+        if not n["seen_today"]:
+            try:
+                last_dt = datetime.strptime(n["last_seen"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                age_days = (now_dt - last_dt).days
+            except Exception:
+                age_days = 0
+
+            if age_days > max_age_days:
+                continue  # Zu alt -> fliegt raus
+            else:
+                n["val"] = max(3, n["val"] - 1)  # Schrumpft leicht
+
+        del n["seen_today"]
+        final_nodes.append(n)
+
+    valid_node_ids = {n["id"] for n in final_nodes}
+
+    # 2. EDGES MERGEN
+    edge_dict = {}
+
+    # Altbestand Edges
+    for e in old_graph.get("edges", []):
+        if not isinstance(e, dict): continue
+        src = str(e.get("from") or e.get("source", "")).strip().lower()
+        tgt = str(e.get("to") or e.get("target", "")).strip().lower()
+        if not src or not tgt: continue
+
+        edge_key = f"{src}-->{tgt}"
+        edge_dict[edge_key] = {
+            "from": src,
+            "to": tgt,
+            "source": src,
+            "target": tgt,
+            "label": e.get("label", ""),
+            "last_seen": e.get("last_seen", today_str),
+            "seen_today": False
+        }
+
+    # Neue Edges
+    for e in new_graph.get("edges", []):
+        if not isinstance(e, dict): continue
+        src = str(e.get("from") or e.get("source", "")).strip().lower()
+        tgt = str(e.get("to") or e.get("target", "")).strip().lower()
+        if not src or not tgt: continue
+
+        edge_key = f"{src}-->{tgt}"
+        lbl = e.get("label", "")
+
+        if edge_key in edge_dict:
+            edge_dict[edge_key]["last_seen"] = today_str
+            edge_dict[edge_key]["seen_today"] = True
+            if lbl:
+                edge_dict[edge_key]["label"] = lbl
+        else:
+            edge_dict[edge_key] = {
+                "from": src,
+                "to": tgt,
+                "source": src,
+                "target": tgt,
+                "label": lbl,
+                "last_seen": today_str,
+                "seen_today": True
+            }
+
+    # Decay & Filter für Edges
+    final_edges = []
+    for e_key, e in edge_dict.items():
+        if e["from"] not in valid_node_ids or e["to"] not in valid_node_ids:
+            continue
+
+        if not e["seen_today"]:
+            try:
+                last_dt = datetime.strptime(e["last_seen"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                age_days = (now_dt - last_dt).days
+            except Exception:
+                age_days = 0
+
+            if age_days > max_age_days:
+                continue
+
+        del e["seen_today"]
+        final_edges.append(e)
+
+    pipeline_health["graph_merge_status"] = f"SUCCESS ({len(final_nodes)} Nodes, {len(final_edges)} Edges)"
+    logging.info(f"[GRAPH Memory] Merging beendet: {len(final_nodes)} aktive Knoten, {len(final_edges)} Kanten.")
+
+    return {
+        "nodes": final_nodes,
+        "edges": final_edges,
+        "links": final_edges
+    }
+
+
+def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights: list = None, old_graph: dict = None) -> dict:
     if not isinstance(data, dict):
         data = {}
 
@@ -298,46 +470,17 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights:
             if "type" not in h:
                 h["type"] = "conflict"
 
-    # Füge Live ADS-B Flugdaten von OpenSky hinzu
     if live_flights and isinstance(live_flights, list):
         hotspots.extend(live_flights)
 
     data["conflict_hotspots"] = hotspots
 
-    # 6. Graph-Netzwerk
-    gn = data.get("graph_network", {})
-    if isinstance(gn, dict):
-        nodes = gn.get("nodes", [])
-        edges = gn.get("edges", gn.get("links", []))
-        
-        valid_nodes = []
-        if isinstance(nodes, list):
-            for n in nodes:
-                if isinstance(n, dict):
-                    node_id = str(n.get("id", n.get("name", n.get("label", "")))).strip()
-                    n["id"] = node_id
-                    n["name"] = n.get("name") or n.get("label") or node_id
-                    n["label"] = n.get("label") or n["name"]
-                    n["group"] = n.get("group", "actor")
-                    if node_id:
-                        valid_nodes.append(n)
-        
-        valid_edges = []
-        if isinstance(edges, list):
-            for e in edges:
-                if isinstance(e, dict):
-                    src = str(e.get("from") or e.get("source", "")).strip()
-                    tgt = str(e.get("to") or e.get("target", "")).strip()
-                    e["from"] = src
-                    e["to"] = tgt
-                    e["source"] = src
-                    e["target"] = tgt
-                    if src and tgt:
-                        valid_edges.append(e)
-        
-        data["graph_network"] = {"nodes": valid_nodes, "edges": valid_edges, "links": valid_edges}
-    else:
-        data["graph_network"] = {"nodes": [], "edges": [], "links": []}
+    # 6. GRAPH-NETZWERK PERSISTENT MERGEN
+    raw_gn = data.get("graph_network", {})
+    if not isinstance(raw_gn, dict):
+        raw_gn = {"nodes": [], "edges": []}
+
+    data["graph_network"] = merge_and_decay_graph(raw_gn, old_graph or {"nodes": [], "edges": []})
 
     # 7. Historische Parallelen Dual-Mapping
     hist = data.get("historical_precedents", [])
@@ -732,6 +875,9 @@ def call_haiku_refine(data_dict: dict) -> dict:
 def main():
     logging.info(f"=== ARGUS GRID v3.0 Start ({CURRENT_DATE_STR}) ===")
     
+    # 0. Vorherigen Graphen laden (Graphen-Gedächtnis)
+    old_graph = load_existing_graph("data.json")
+
     # 1. RSS & OSINT Feeds laden
     articles = fetch_all_feeds(SOURCES)
 
@@ -760,8 +906,13 @@ def main():
         except Exception as e:
             logging.error(f"Fehler im Schwarm: {e}")
 
-    # 3. Schema harmonisieren & Live-Flugdaten mit KI-Hotspots zusammenführen
-    final_data = harmonize_and_validate_schema(final_data, debate_summary, live_flights=live_flights)
+    # 3. Schema harmonisieren + Graphen-Memory mergen + OpenSky Flüge integrieren
+    final_data = harmonize_and_validate_schema(
+        final_data, 
+        debate_summary, 
+        live_flights=live_flights, 
+        old_graph=old_graph
+    )
 
     output_path = "data.json"
     try:
