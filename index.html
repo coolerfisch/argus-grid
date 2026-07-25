@@ -1,620 +1,688 @@
 <!DOCTYPE html>
-<html lang="de" class="dark">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARGUS GRID v3.0 Multi-LLM Command Center</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Leaflet CSS & JS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <!-- Vis.js Network for Graph -->
-    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <!-- Marked.js -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        bgDark: '#080c14',
-                        cardDark: '#0f172a',
-                        borderDark: '#1e293b',
-                        accentBlue: '#38bdf8',
-                        accentYellow: '#facc15',
-                        accentRed: '#ef4444',
-                        accentGreen: '#22c55e'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { background-color: #080c14; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; }
-        .glass-card { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); border: 1px solid #1e293b; }
-        #map { height: 480px; width: 100%; border-radius: 0.5rem; }
-        #network-container { height: 420px; width: 100%; border-radius: 0.5rem; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARGUS GRID // World Intelligence</title>
+  
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <!-- Vis.js Network & Marked.js -->
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-        /* Markdown Styling */
-        .markdown-body { color: #cbd5e1; font-size: 0.875rem; line-height: 1.6; }
-        .markdown-body h1, .markdown-body h2, .markdown-body h3 { color: #38bdf8; font-weight: 700; margin-top: 1.25rem; margin-bottom: 0.5rem; }
-        .markdown-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; overflow-x: auto; display: block; border-radius: 0.5rem; border: 1px solid #334155; }
-        .markdown-body th { background-color: #0f172a; color: #38bdf8; text-align: left; padding: 0.6rem 0.8rem; font-family: monospace; font-size: 0.75rem; border-bottom: 2px solid #334155; }
-        .markdown-body td { padding: 0.6rem 0.8rem; border-bottom: 1px solid #1e293b; font-size: 0.8rem; }
-        .markdown-body tr:nth-child(even) td { background-color: rgba(30, 41, 59, 0.3); }
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-card: #151d30;
+      --bg-card-hover: #1c2742;
+      --border-color: #23314d;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent-cyan: #38bdf8;
+      --accent-green: #22c55e;
+      --accent-red: #ef4444;
+      --accent-gold: #eab308;
+      --accent-purple: #a855f7;
+    }
 
-        /* Radar Icons */
-        .radar-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            border-radius: 50%;
-            box-shadow: 0 0 12px rgba(0,0,0,0.8);
-            transition: all 0.3s ease;
-        }
-        .radar-conflict { background: rgba(239, 68, 68, 0.3); border: 2px solid #ef4444; animation: pulse 1.5s infinite; }
-        .radar-flight { background: rgba(56, 189, 248, 0.3); border: 2px solid #38bdf8; }
-        .radar-ship { background: rgba(250, 204, 21, 0.3); border: 2px solid #facc15; }
-        .radar-refugee { background: rgba(168, 85, 247, 0.3); border: 2px solid #a855f7; animation: pulse 2s infinite; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-            70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-        }
-    </style>
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      padding: 15px;
+    }
+
+    .app-container {
+      max-width: 1600px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+      gap: 15px;
+    }
+
+    .brand-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: var(--accent-cyan);
+    }
+
+    .timestamp { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .view-toggle {
+      display: flex;
+      gap: 6px;
+      background: #0f172a;
+      padding: 4px;
+      border-radius: 25px;
+      border: 1px solid var(--border-color);
+    }
+
+    .toggle-btn, .action-btn {
+      background: transparent;
+      color: var(--text-muted);
+      border: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .toggle-btn.active {
+      background: var(--accent-cyan);
+      color: #000000;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+    }
+
+    .action-btn {
+      background: #0f172a;
+      border: 1px solid var(--border-color);
+      color: var(--accent-cyan);
+    }
+
+    /* VISIBILITY CONTROLS */
+    body.simple-mode .detailed-section { display: none !important; }
+    body:not(.simple-mode) .simple-only-section { display: none !important; }
+
+    /* AMPEL WIDGET */
+    .ampel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .ampel-box {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #070a12;
+      padding: 16px 14px;
+      border-radius: 40px;
+      border: 2px solid #1e293b;
+    }
+
+    .ampel-light {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      opacity: 0.15;
+      transition: all 0.4s ease;
+    }
+
+    .ampel-light.green.active { background: #22c55e; opacity: 1; box-shadow: 0 0 20px #22c55e; }
+    .ampel-light.yellow.active { background: #eab308; opacity: 1; box-shadow: 0 0 20px #eab308; }
+    .ampel-light.red.active { background: #ef4444; opacity: 1; box-shadow: 0 0 20px #ef4444; }
+
+    /* GRIDS & CARDS */
+    .takeaways-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .takeaway-card {
+      background: #0f172a;
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-cyan);
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding-bottom: 8px;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 16px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .kpi-label { font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); }
+    .kpi-value { font-size: 1.6rem; font-weight: 800; margin: 6px 0; }
+
+    #hotspot-map, #knowledge-graph {
+      height: 450px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      background: #070a12;
+    }
+
+    .table-wrapper { width: 100%; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; min-width: 500px; }
+    th, td { padding: 10px 8px; text-align: left; border-bottom: 1px solid #1e293b; }
+    th { color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; }
+
+    .ticker-badge { background: #0f172a; padding: 2px 6px; border-radius: 4px; font-family: monospace; color: var(--accent-cyan); }
+
+    /* MODAL POPUP */
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 15, 25, 0.85); backdrop-filter: blur(6px); z-index: 9999; justify-content: center; align-items: center; padding: 20px; }
+    .modal-overlay.active { display: flex; }
+    .modal-content { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; max-width: 800px; width: 100%; max-height: 80vh; padding: 24px; overflow-y: auto; }
+
+    /* RADAR ICONS */
+    .radar-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(0,0,0,0.8);
+      transition: all 0.3s ease;
+    }
+    .radar-conflict { background: rgba(239, 68, 68, 0.3); border: 2px solid #ef4444; animation: pulse 1.5s infinite; }
+    .radar-flight { background: rgba(56, 189, 248, 0.3); border: 2px solid #38bdf8; }
+    .radar-ship { background: rgba(250, 204, 21, 0.3); border: 2px solid #facc15; }
+    .radar-refugee { background: rgba(168, 85, 247, 0.3); border: 2px solid #a855f7; animation: pulse 2s infinite; }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+      70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+
+    /* MARKDOWN STYLING FOR SCHWARM-DEBATTE */
+    .markdown-body { color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; }
+    .markdown-body table { width: 100%; border-collapse: collapse; margin: 12px 0; border: 1px solid var(--border-color); }
+    .markdown-body th { background: #0f172a; color: var(--accent-cyan); padding: 8px; border-bottom: 2px solid var(--border-color); text-transform: uppercase; font-size: 0.75rem; }
+    .markdown-body td { padding: 8px; border-bottom: 1px solid var(--border-color); }
+    .markdown-body tr:nth-child(even) td { background: rgba(15, 23, 42, 0.5); }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; }
+      .ampel-card { flex-direction: column; text-align: center; }
+      .ampel-box { flex-direction: row; }
+      #hotspot-map, #knowledge-graph { height: 320px; }
+    }
+  </style>
 </head>
-<body class="p-4 md:p-8 min-h-screen">
+<body class="simple-mode">
 
-    <!-- HEADER -->
-    <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 glass-card p-4 rounded-xl">
-        <div class="flex items-center gap-3">
-            <div class="w-3 h-3 rounded-full bg-accentBlue animate-ping"></div>
-            <h1 class="text-2xl font-bold tracking-wider text-white">ARGUS GRID <span class="text-xs font-mono px-2 py-0.5 rounded bg-accentBlue/20 text-accentBlue border border-accentBlue/30">v3.0 Swarm</span></h1>
+  <div class="app-container">
+    <header>
+      <div>
+        <div class="brand-title">🌐 ARGUS GRID</div>
+        <div id="last-update" class="timestamp">Warte auf Synchronisation...</div>
+      </div>
+      
+      <div class="header-actions">
+        <button class="action-btn" onclick="openSourcesModal()">📡 Quellen (180+ Feeds)</button>
+
+        <div class="view-toggle">
+          <button id="btn-simple" class="toggle-btn active" onclick="setMode('simple')">⚡ Standard (Einfach)</button>
+          <button id="btn-detailed" class="toggle-btn" onclick="setMode('detailed')">🔬 Tiefenanalyse</button>
         </div>
-        <div class="flex flex-wrap items-center gap-3 text-sm font-mono">
-            <span id="timestamp-badge" class="text-slate-400">Stand: --</span>
-            <span id="feeds-badge" class="px-3 py-1 rounded-full bg-slate-800 text-accentBlue border border-slate-700">Feeds: --/180+</span>
-            <div class="flex bg-slate-900 p-1 rounded-lg border border-slate-800">
-                <button id="btn-mode-simple" onclick="setMode('simple')" class="px-3 py-1 rounded text-xs transition-all bg-accentBlue text-slate-950 font-bold">Standard</button>
-                <button id="btn-mode-expert" onclick="setMode('expert')" class="px-3 py-1 rounded text-xs transition-all text-slate-400 hover:text-white">Tiefen-Analyse</button>
-            </div>
-        </div>
+      </div>
     </header>
 
-    <main class="space-y-6">
+    <!-- AMPEL WIDGET -->
+    <div class="ampel-card">
+      <div class="ampel-box">
+        <div id="ampel-red" class="ampel-light red"></div>
+        <div id="ampel-yellow" class="ampel-light yellow"></div>
+        <div id="ampel-green" class="ampel-light green"></div>
+      </div>
+      <div>
+        <h3 id="ampel-title" style="font-size: 1.4rem; font-weight: 800; margin-bottom: 6px; color: var(--accent-gold);">Weltlage: Lade Daten...</h3>
+        <p id="ampel-reason" style="font-size: 1.05rem; color: #cbd5e1;">Analysiere weltweite Feeds...</p>
+      </div>
+    </div>
 
-        <!-- AMPEL STATUS & EXECUTIVE BRIEFING -->
-        <section class="glass-card p-6 rounded-xl space-y-4">
-            <div class="flex items-center gap-4">
-                <div id="ampel-indicator" class="w-8 h-8 rounded-full bg-accentYellow shadow-lg shadow-accentYellow/20"></div>
-                <div>
-                    <h2 id="ampel-title" class="text-xl font-bold">Weltlage: GELB</h2>
-                    <p id="ampel-reason" class="text-slate-300 text-sm">Lagedaten werden geladen...</p>
-                </div>
-            </div>
-            <hr class="border-borderDark">
-            <div>
-                <h3 class="text-xs font-mono uppercase tracking-widest text-accentBlue mb-2">📋 Executive Briefing</h3>
-                <p id="executive-summary" class="text-slate-200 leading-relaxed text-sm">Lade Zusammenfassung...</p>
-            </div>
-        </section>
+    <!-- ⚡ STANDARD MODUS (EINFACH) -->
+    <div class="simple-only-section">
+      <div class="card" style="margin-bottom: 25px; border-left: 4px solid var(--accent-cyan);">
+        <h2 style="font-size: 1.2rem;">💬 Das Wichtigste auf einen Blick</h2>
+        <p id="simple-summary-text" style="font-size: 1.05rem; line-height: 1.6; color: #f1f5f9; margin-bottom: 20px;"></p>
+        <div id="takeaways-container" class="takeaways-grid"></div>
+      </div>
 
-        <!-- KPI METRICS & MARKET ROTATION (TOP 5 / FLOP 5) -->
-        <section class="grid md:grid-cols-3 gap-6">
-            <div class="glass-card p-6 rounded-xl flex flex-col justify-between space-y-4">
-                <div>
-                    <span class="text-xs font-mono text-slate-400 uppercase">Geopolitischer Score</span>
-                    <div id="kpi-geoscore" class="text-4xl font-bold text-accentBlue my-1">--</div>
-                    <span class="text-xs text-slate-500">Skala 0 (Stabil) bis 100 (Kritisch)</span>
-                </div>
-                <div>
-                    <span class="text-xs font-mono text-slate-400 uppercase">DEFCON Bereitschaft</span>
-                    <div id="kpi-defcon" class="text-4xl font-bold text-accentYellow my-1">--</div>
-                    <span class="text-xs text-slate-500">Stufe 1 (Krieg) - 5 (Frieden)</span>
-                </div>
-            </div>
+      <div class="card" style="margin-bottom: 25px; border-left: 4px solid var(--accent-purple);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <h2>🔮 "Glaskugel" // Zukunfts-Prognose Matrix</h2>
+          <span id="forecast-prob-badge" class="ticker-badge" style="color: var(--accent-purple);">--%</span>
+        </div>
+        <p id="forecast-simple-text" style="font-size: 1.05rem; line-height: 1.6; color: #f1f5f9; margin-bottom: 15px;"></p>
+        <div id="forecast-indicators-box" style="background: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid var(--border-color); font-size: 0.88rem;">
+          <strong style="color: var(--accent-gold);">⚠️ Frühwarn-Signal:</strong>
+          <span id="forecast-indicator-text" style="color: #cbd5e1; margin-left: 5px;">--</span>
+        </div>
+      </div>
 
-            <div class="glass-card p-5 rounded-xl border-l-4 border-l-accentGreen">
-                <h3 class="text-xs font-mono uppercase text-accentGreen font-bold mb-3 flex items-center gap-2">
-                    📈 Top 5 Profiteure / Buys (Sektoren & ETFs)
-                </h3>
-                <div id="buys-list" class="space-y-2 text-xs">
-                    <span class="text-slate-500">Lade Marktimpulse...</span>
-                </div>
-            </div>
+      <div class="card" style="border-left: 4px solid var(--accent-gold);">
+        <h2>📜 Historische Parallelen („Das gab es ähnlich schonmal...“)</h2>
+        <div id="simple-historical-container" class="dashboard-grid" style="margin-top: 15px;"></div>
+      </div>
+    </div>
 
-            <div class="glass-card p-5 rounded-xl border-l-4 border-l-accentRed">
-                <h3 class="text-xs font-mono uppercase text-accentRed font-bold mb-3 flex items-center gap-2">
-                    📉 Flop 5 Verlierer / Sells (Risikofaktoren)
-                </h3>
-                <div id="sells-list" class="space-y-2 text-xs">
-                    <span class="text-slate-500">Lade Marktimpulse...</span>
-                </div>
-            </div>
-        </section>
+    <!-- 🔬 TIEFENANALYSE MODUS -->
+    <div class="detailed-section">
+      <div class="card" style="margin-bottom: 20px; border-left: 4px solid var(--accent-cyan);">
+        <h2>📋 Ausführliches Executive Briefing</h2>
+        <p id="exec-summary" style="font-size: 1.05rem; line-height: 1.6; color: #e2e8f0;"></p>
+      </div>
 
-        <!-- INNENPOLITIK & REGIONALE STABILITÄTS-MATRIX -->
-        <section class="glass-card p-6 rounded-xl">
-            <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue mb-4">🏛️ Innenpolitik & Regionale Stabilitäts-Matrix</h3>
-            <div id="domestic-matrix-container" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <span class="text-slate-500 text-xs">Lade Stabilitätsmatrix...</span>
-            </div>
-        </section>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Geopolitischer Score</div>
+          <div id="kpi-geoscore" class="kpi-value">--</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">DEFCON Status</div>
+          <div id="kpi-defcon" class="kpi-value" style="color: var(--accent-gold);">--</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Markt-Regime</div>
+          <div id="kpi-regime" class="kpi-value" style="font-size: 1.1rem; margin-top: 10px;">--</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Hauptrisiko</div>
+          <div id="kpi-risk" class="kpi-value" style="font-size: 1.0rem; color: var(--accent-red); margin-top: 10px;">--</div>
+        </div>
+      </div>
 
-        <!-- SCHWARM-DEBATTE & KREUZPRÜFUNG (GRAFISCHES GRID) -->
-        <section class="glass-card p-6 rounded-xl space-y-4">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-borderDark pb-3">
-                <div class="flex items-center gap-2">
-                    <span class="text-xl">♟️</span>
-                    <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue font-bold">Schwarm-Debatte & Kreuzprüfung ("Fingerklopfen")</h3>
-                </div>
-                <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Multi-LLM Consensus</span>
-            </div>
-            <div id="swarm-visual-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
-                <div class="col-span-full text-center text-slate-500 text-xs font-mono py-8">Analysiere Lagedaten...</div>
-            </div>
-        </section>
+      <!-- SCHWARM-DEBATTE ("FINGERKLOPFEN") GRID/MARKDOWN -->
+      <div class="card" style="margin-bottom: 25px; border-left: 4px solid var(--accent-cyan);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <h2>♟️ Schwarm-Debatte & Kreuzprüfung ("Fingerklopfen")</h2>
+          <span class="ticker-badge">Multi-LLM Consensus</span>
+        </div>
+        <div id="swarm-visual-box" class="markdown-body" style="background: #070a12; padding: 16px; border-radius: 8px; border: 1px solid var(--border-color); max-height: 500px; overflow-y: auto;">
+          Analysiere Lagedaten...
+        </div>
+      </div>
 
-        <!-- GESCHICHTS-KOMPASS & HISTORISCHE PARALLELEN -->
-        <section class="glass-card p-6 rounded-xl">
-            <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue mb-4">📜 Geschichts-Kompass (Historische Parallelen)</h3>
-            <div id="history-container" class="grid md:grid-cols-2 gap-4">
-                <span class="text-slate-500 text-xs">Lade historische Vergleiche...</span>
+      <!-- INNENPOLITIK MATRIX -->
+      <div class="card" style="margin-bottom: 25px; border-left: 4px solid var(--accent-gold);">
+        <h2>🏛️ Innenpolitik & Regionale Stabilitäts-Matrix</h2>
+        <div id="domestic-matrix-container" class="dashboard-grid" style="margin-top: 15px;"></div>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- GRAPH NETZWERK -->
+        <div class="card" style="grid-column: 1 / -1; border-left: 4px solid var(--accent-cyan);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <h2>🕸️ Entity-Relationship & Kaskaden-Netzwerk</h2>
+            <div style="display: flex; gap: 12px; font-size: 0.75rem; font-family: monospace;">
+              <span><strong style="color: #38bdf8;">●</strong> Staaten</span>
+              <span><strong style="color: #ef4444;">●</strong> Milizen/Konflikt</span>
+              <span><strong style="color: #22c55e;">●</strong> Institutionen</span>
+              <span><strong style="color: #a855f7;">●</strong> Tech/Cyber</span>
+              <span><strong style="color: #eab308;">●</strong> Themen</span>
             </div>
-        </section>
+          </div>
+          <div id="knowledge-graph"></div>
+        </div>
 
-        <!-- GLASKUGEL / PRÄDIKTIVER HORIZONT -->
-        <section class="glass-card p-6 rounded-xl space-y-4">
-            <div class="flex items-center justify-between border-b border-borderDark pb-3">
-                <div class="flex items-center gap-2">
-                    <span class="text-xl">🔮</span>
-                    <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue font-bold">Wissenschaftliche Prognostik Matrix</h3>
-                </div>
-                <span class="text-xs font-mono text-slate-400">Superforecasting Engine</span>
+        <!-- KARTE -->
+        <div class="card" style="grid-column: 1 / -1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <h2>🗺️ Live Tactical Radar: Flugverkehr, Schifffahrt & Migration</h2>
+            <div style="display: flex; gap: 10px; font-size: 0.75rem; font-family: monospace;">
+              <span>💥 Konflikt</span>
+              <span>✈️ Luftraum</span>
+              <span>🚢 Schifffahrt/Chokepoint</span>
+              <span>🧳 Migration</span>
             </div>
-            <div id="predictive-container" class="grid md:grid-cols-3 gap-4">
-                <span class="text-slate-500 text-xs">Lade Prognosen...</span>
-            </div>
-        </section>
+          </div>
+          <div id="hotspot-map"></div>
+        </div>
 
-        <!-- TACTICAL RADAR MAP (MIT RADAR ICONS & CORRIDORS) -->
-        <section class="glass-card p-6 rounded-xl space-y-4">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-borderDark pb-3">
-                <div class="flex items-center gap-2">
-                    <span class="text-xl">🗺️</span>
-                    <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue font-bold">Live Tactical Radar: Flugverkehr, Schifffahrt & Migration</h3>
-                </div>
-                <div class="flex flex-wrap gap-3 text-[11px] font-mono">
-                    <span class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-950/80 border border-red-800 text-red-300">💥 Konflikt</span>
-                    <span class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-sky-950/80 border border-sky-800 text-sky-300">✈️ Luftraum</span>
-                    <span class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800 text-amber-300">🚢 Schifffahrt / ⚓ Chokepoint</span>
-                    <span class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-purple-950/80 border border-purple-800 text-purple-300">🧳 Migration</span>
-                </div>
-            </div>
-            <div id="map"></div>
-        </section>
+        <!-- AKTIEN ROTATION -->
+        <div class="card" style="grid-column: 1 / -1;">
+          <h2>📈 Aktien- & Sektor-Rotation (Top Buys & Flop Sells)</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr><th>Typ</th><th>Asset / Ticker</th><th>Sektor / Name</th><th>Begründung</th></tr>
+              </thead>
+              <tbody id="stocks-buys-sells"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <!-- ENTITY GRAPH MIT FARB-LEGENDE -->
-        <section class="glass-card p-6 rounded-xl space-y-4">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-borderDark pb-3">
-                <h3 class="text-sm font-mono uppercase tracking-widest text-accentBlue font-bold">🕸️ Kaskaden- & Beziehungsnetzwerk</h3>
-                <div class="flex flex-wrap gap-3 text-[11px] font-mono">
-                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-sky-400 border border-sky-600"></span> Staaten</span>
-                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-red-500 border border-red-700"></span> Milizen/Konflikt</span>
-                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-emerald-500 border border-emerald-700"></span> Institutionen</span>
-                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-purple-500 border border-purple-700"></span> Tech/Cyber</span>
-                    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-amber-500 border border-amber-700"></span> Themen/Risiken</span>
-                </div>
-            </div>
-            <div id="network-container" class="bg-slate-950/50 border border-slate-800"></div>
-        </section>
+    <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.8rem; text-align: center;">
+      🌐 <strong>ARGUS GRID</strong> Systemic Intelligence Engine &bull; Version 3.0 (2026)
+    </footer>
+  </div>
 
-    </main>
+  <!-- QUELLEN MODAL -->
+  <div id="sources-modal" class="modal-overlay" onclick="closeSourcesModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h2 style="color: var(--accent-cyan);">📡 Quellverzeichnis (180+ Primärquellen)</h2>
+        <button style="background:none; border:none; color:#fff; font-size: 1.5rem; cursor:pointer;" onclick="closeSourcesModal()">&times;</button>
+      </div>
+      <p style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;">
+        ARGUS GRID analysiert automatisch über 180 globale Primärquellen: Reuters, AP, Bloomberg, Financial Times, WSJ, taz, Spiegel, NZZ, Federal Reserve, EZB, UNHCR, CISA, ISW, UKMTO, gCaptain, Lloyd's List sowie Reddit OSINT und Prediction Markets.
+      </p>
+    </div>
+  </div>
 
-    <!-- FRONTEND JAVASCRIPT -->
-    <script>
-        let currentData = null;
-        let currentMode = 'simple';
-        let mapInstance = null;
+  <script>
+    let map = null;
+    let networkInstance = null;
+    let globalData = null;
 
-        function setMode(mode) {
-            currentMode = mode;
-            document.getElementById('btn-mode-simple').className = mode === 'simple' ? 'px-3 py-1 rounded text-xs transition-all bg-accentBlue text-slate-950 font-bold' : 'px-3 py-1 rounded text-xs transition-all text-slate-400 hover:text-white';
-            document.getElementById('btn-mode-expert').className = mode === 'expert' ? 'px-3 py-1 rounded text-xs transition-all bg-accentBlue text-slate-950 font-bold' : 'px-3 py-1 rounded text-xs transition-all text-slate-400 hover:text-white';
-            renderContent();
+    function cleanText(str) {
+      if (!str || typeof str !== 'string') return str || '';
+      return str.replace(/\*{1,3}/g, '').replace(/#{1,6}\s?/g, '').replace(/`{1,3}/g, '').trim();
+    }
+
+    function openSourcesModal() { document.getElementById('sources-modal').classList.add('active'); }
+    function closeSourcesModal(e) {
+      if (!e || e.target === document.getElementById('sources-modal')) {
+        document.getElementById('sources-modal').classList.remove('active');
+      }
+    }
+
+    function setMode(mode) {
+      if (mode === 'simple') {
+        document.body.classList.add('simple-mode');
+        document.getElementById('btn-simple').classList.add('active');
+        document.getElementById('btn-detailed').classList.remove('active');
+      } else {
+        document.body.classList.remove('simple-mode');
+        document.getElementById('btn-detailed').classList.add('active');
+        document.getElementById('btn-simple').classList.remove('active');
+        
+        setTimeout(() => {
+          if (globalData) {
+            if (!map) initMap(globalData.conflict_hotspots || []);
+            else map.invalidateSize();
+
+            if (globalData.graph_network) initKnowledgeGraph(globalData.graph_network);
+          }
+        }, 250);
+      }
+    }
+
+    async function loadDashboard() {
+      try {
+        const response = await fetch('./data.json?v=' + new Date().getTime());
+        if (!response.ok) throw new Error("Keine data.json gefunden.");
+        globalData = await response.json();
+      } catch (e) {
+        console.error(e);
+        document.getElementById('ampel-title').innerText = "⚠️ Daten werden geladen...";
+        return;
+      }
+
+      // TIMESTAMP
+      document.getElementById('last-update').innerText = "Stand: " + (globalData.timestamp ? new Date(globalData.timestamp).toLocaleString('de-DE') : "2026");
+
+      // AMPEL
+      const status = (globalData.ampel_status || 'GELB').toUpperCase();
+      document.getElementById('ampel-red').classList.toggle('active', status === 'ROT');
+      document.getElementById('ampel-yellow').classList.toggle('active', status === 'GELB');
+      document.getElementById('ampel-green').classList.toggle('active', status === 'GRÜN');
+
+      const titleEl = document.getElementById('ampel-title');
+      if (status === 'ROT') { titleEl.innerText = "Weltlage: ROT (Höchste Warnstufe)"; titleEl.style.color = "var(--accent-red)"; }
+      else if (status === 'GRÜN') { titleEl.innerText = "Weltlage: GRÜN (Stabil)"; titleEl.style.color = "var(--accent-green)"; }
+      else { titleEl.innerText = "Weltlage: GELB (Spannungen & Konflikte)"; titleEl.style.color = "var(--accent-gold)"; }
+
+      document.getElementById('ampel-reason').innerText = cleanText(globalData.ampel_reason_simple);
+      document.getElementById('simple-summary-text').innerText = cleanText(globalData.daily_executive_summary_simple || globalData.daily_executive_summary);
+      document.getElementById('exec-summary').innerText = cleanText(globalData.daily_executive_summary);
+
+      // TAKEAWAYS
+      const takeaways = globalData.simple_key_takeaways || globalData.key_takeaways || [];
+      if (Array.isArray(takeaways)) {
+        let html = "";
+        takeaways.forEach((t, i) => {
+          html += `<div class="takeaway-card"><strong style="color:var(--accent-cyan);">PUNKT ${i+1}:</strong> ${cleanText(t)}</div>`;
+        });
+        document.getElementById('takeaways-container').innerHTML = html;
+      }
+
+      // PROGNOSE
+      if (globalData.predictive_horizon) {
+        const ph = globalData.predictive_horizon;
+        if (typeof ph === 'object' && ph.base_case_summary) {
+          document.getElementById('forecast-prob-badge').innerText = `${ph.base_case_probability_pct || 65}%`;
+          document.getElementById('forecast-simple-text').innerText = cleanText(ph.base_case_summary);
+          if (Array.isArray(ph.leading_indicators_to_watch) && ph.leading_indicators_to_watch.length > 0) {
+            document.getElementById('forecast-indicator-text').innerText = cleanText(ph.leading_indicators_to_watch[0].indicator || ph.leading_indicators_to_watch[0]);
+          }
         }
+      }
 
-        async function loadData() {
-            try {
-                const response = await fetch('data.json?v=' + Date.now());
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                currentData = await response.json();
-                renderContent();
-            } catch (err) {
-                console.error("Dashboard Error:", err);
-            }
+      // HISTORISCHE PARALLELEN
+      if (Array.isArray(globalData.historical_precedents)) {
+        let hHtml = "";
+        globalData.historical_precedents.forEach(hp => {
+          hHtml += `
+            <div class="card" style="background:#0f172a; border-left: 3px solid var(--accent-gold);">
+              <strong style="color:var(--accent-cyan);">${cleanText(hp.current_event || hp.event)}</strong>
+              <div style="font-size:0.88rem; margin-top:6px; color:#cbd5e1;">🏛️ Analog: ${cleanText(hp.historical_analog || hp.similarity)}</div>
+              ${hp.takeaway ? `<div style="font-size:0.8rem; margin-top:6px; color:var(--accent-gold); font-family:monospace;">Erkenntnis für 2026: ${cleanText(hp.takeaway)}</div>` : ''}
+            </div>`;
+        });
+        document.getElementById('simple-historical-container').innerHTML = hHtml;
+      }
+
+      // SCHWARM-DEBATTE
+      const debateText = globalData.game_theory_analysis || globalData.deepseek_analysis || '';
+      if (debateText.includes('|') && debateText.includes('---')) {
+        document.getElementById('swarm-visual-box').innerHTML = marked.parse(debateText);
+      } else {
+        document.getElementById('swarm-visual-box').innerText = cleanText(debateText);
+      }
+
+      // INNENPOLITIK MATRIX
+      if (Array.isArray(globalData.domestic_policy_matrix)) {
+        let mHtml = "";
+        globalData.domestic_policy_matrix.forEach(m => {
+          const isRot = (m.stability || '').toUpperCase().includes('ROT');
+          const isGruen = (m.stability || '').toUpperCase().includes('GRÜN');
+          const color = isRot ? 'var(--accent-red)' : (isGruen ? 'var(--accent-green)' : 'var(--accent-gold)');
+
+          mHtml += `
+            <div class="card" style="background:#0f172a; padding: 14px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <strong style="color:#fff;">${cleanText(m.region)}</strong>
+                <span style="font-size:0.75rem; font-family:monospace; padding:2px 6px; border-radius:4px; border:1px solid ${color}; color:${color}">${m.stability || 'GELB'}</span>
+              </div>
+              <p style="font-size:0.85rem; color:#cbd5e1;">${cleanText(m.dynamics)}</p>
+            </div>`;
+        });
+        document.getElementById('domestic-matrix-container').innerHTML = mHtml;
+      }
+
+      // KPIS
+      const geoscore = globalData.overall_geoscore || (globalData.geoscore ? globalData.geoscore.current_score : 75);
+      document.getElementById('kpi-geoscore').innerText = geoscore + " / 100";
+
+      const defcon = globalData.defcon_status ? globalData.defcon_status.label : `DEFCON ${globalData.defcon_level || 3}`;
+      document.getElementById('kpi-defcon').innerText = defcon;
+
+      document.getElementById('kpi-regime').innerText = cleanText(globalData.market_regime || "Volatil");
+      document.getElementById('kpi-risk').innerText = cleanText(globalData.top_risk || "Lieferketten");
+
+      // AKTIEN ROTATION (BUYS & SELLS)
+      const stockData = globalData.equity_rotation || globalData.stock_picks || {};
+      const buys = stockData.top5_buys || stockData.top_5_buys || [];
+      const sells = stockData.flop5_sells || stockData.flop_5_sells || [];
+
+      let stockRows = "";
+      buys.forEach(b => {
+        stockRows += `<tr><td><span class="ticker-badge" style="color:var(--accent-green)">BUY</span></td><td>${cleanText(b.ticker || b.asset)}</td><td>${cleanText(b.name || b.asset)}</td><td style="color:#cbd5e1">${cleanText(b.reason)}</td></tr>`;
+      });
+      sells.forEach(s => {
+        stockRows += `<tr><td><span class="ticker-badge" style="color:var(--accent-red)">SELL</span></td><td>${cleanText(s.ticker || s.asset)}</td><td>${cleanText(s.name || s.asset)}</td><td style="color:#cbd5e1">${cleanText(s.reason)}</td></tr>`;
+      });
+      document.getElementById('stocks-buys-sells').innerHTML = stockRows || '<tr><td colspan="4">Keine Sektor-Rotationen erfasst.</td></tr>';
+    }
+
+    function getNodeColor(group, label) {
+      const grp = (group || '').toLowerCase();
+      const lbl = (label || '').toLowerCase();
+
+      if (grp.includes('miliz') || grp.includes('non-state') || grp.includes('konflikt') || lbl.includes('huthi') || lbl.includes('iran') || lbl.includes('krieg')) {
+        return { background: '#ef4444', border: '#b91c1c' };
+      }
+      if (grp.includes('staat') || grp.includes('bündnis') || lbl.includes('usa') || lbl.includes('china') || lbl.includes('russland') || lbl.includes('israel')) {
+        return { background: '#38bdf8', border: '#0284c7' };
+      }
+      if (grp.includes('wirtschaft') || grp.includes('zentralbank') || grp.includes('institution') || lbl.includes('fed') || lbl.includes('eu')) {
+        return { background: '#22c55e', border: '#15803d' };
+      }
+      if (grp.includes('tech') || lbl.includes('tiktok') || lbl.includes('cyber')) {
+        return { background: '#a855f7', border: '#7e22ce' };
+      }
+      return { background: '#eab308', border: '#a16207' };
+    }
+
+    function initKnowledgeGraph(graphData) {
+      const container = document.getElementById('knowledge-graph');
+      if (!container) return;
+
+      const rawNodes = Array.isArray(graphData?.nodes) ? graphData.nodes : [];
+      const rawEdges = Array.isArray(graphData?.edges) ? graphData.edges : [];
+
+      if (rawNodes.length === 0) return;
+
+      const nodes = new vis.DataSet(rawNodes.map(n => {
+        const lbl = n.label || n.name || n.id;
+        return {
+          id: n.id || lbl,
+          label: cleanText(lbl),
+          shape: 'dot',
+          size: (n.val || 5) * 2.2,
+          color: getNodeColor(n.group, lbl),
+          font: { color: '#f8fafc', size: 12 }
+        };
+      }));
+
+      const edges = new vis.DataSet(rawEdges.map(e => ({
+        from: e.from || e.source,
+        to: e.to || e.target,
+        label: cleanText(e.label || ''),
+        color: { color: '#23314d' },
+        font: { color: '#94a3b8', size: 10 }
+      })));
+
+      container.innerHTML = '';
+      networkInstance = new vis.Network(container, { nodes, edges }, {
+        physics: { solver: 'forceAtlas2Based', forceAtlas2Based: { gravitationalConstant: -35 } },
+        nodes: { borderWidth: 2 },
+        interaction: { hover: true, zoomView: true }
+      });
+    }
+
+    function initMap(hotspots) {
+      const container = document.getElementById('hotspot-map');
+      if (!container || map) return;
+
+      map = L.map('hotspot-map').setView([20, 15], 2);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(map);
+
+      hotspots.forEach(h => {
+        const lat = parseFloat(h.lat);
+        const lng = parseFloat(h.lng ?? h.lon);
+
+        if (!isNaN(lat) && !isNaN(lng)) {
+          const rawType = (h.type || '').toLowerCase();
+          const desc = (h.description || h.impact || '').toLowerCase();
+
+          let iconSymbol = '💥';
+          let cssClass = 'radar-conflict';
+
+          if (rawType.includes('flight') || desc.includes('flug')) { iconSymbol = '✈️'; cssClass = 'radar-flight'; }
+          else if (rawType.includes('ship') || rawType.includes('maritime') || desc.includes('schiff')) { iconSymbol = '🚢'; cssClass = 'radar-ship'; }
+          else if (rawType.includes('refugee') || desc.includes('flüchtling')) { iconSymbol = '🧳'; cssClass = 'radar-refugee'; }
+
+          const customIcon = L.divIcon({
+            className: `radar-icon ${cssClass}`,
+            html: `<span>${iconSymbol}</span>`,
+            iconSize: [28, 28],
+            iconAnchor: [14, 14]
+          });
+
+          L.marker([lat, lng], { icon: customIcon })
+            .addTo(map)
+            .bindPopup(`
+              <div style="background:#0f172a; color:#f8fafc; padding:8px; border-radius:6px; font-size:12px; border:1px solid #23314d; max-width:200px;">
+                <strong style="color:#38bdf8">${iconSymbol} ${cleanText(h.region || h.name)}</strong><br>
+                <span style="font-size:11px; color:#cbd5e1;">${cleanText(h.impact || h.description)}</span>
+              </div>
+            `);
         }
+      });
 
-        function renderContent() {
-            if (!currentData) return;
-            const d = currentData;
+      // Taktische Korridore
+      const redSeaCorridor = [[12.5, 43.3], [15.0, 41.5], [27.8, 34.0]];
+      const medMigrationRoute = [[32.8, 13.1], [35.8, 14.5], [37.5, 15.0]];
 
-            document.getElementById('timestamp-badge').innerText = "Stand: " + (d?.timestamp ? new Date(d.timestamp).toLocaleString('de-DE') : '--');
-            document.getElementById('feeds-badge').innerText = `Feeds: ${d?.feeds_successful || 0}/${d?.feeds_total || 180}`;
+      L.polyline(redSeaCorridor, { color: '#eab308', weight: 2, dashArray: '5, 8', opacity: 0.8 }).addTo(map);
+      L.polyline(medMigrationRoute, { color: '#a855f7', weight: 2, dashArray: '4, 6', opacity: 0.8 }).addTo(map);
 
-            const ampelStatus = (d?.ampel_status || 'GELB').toUpperCase();
-            const ampelEl = document.getElementById('ampel-indicator');
-            if (ampelStatus === 'ROT') {
-                ampelEl.className = 'w-8 h-8 rounded-full bg-accentRed shadow-lg shadow-accentRed/30 animate-pulse';
-                document.getElementById('ampel-title').innerText = 'Weltlage: ROT (Kritische Eskalation)';
-            } else if (ampelStatus === 'GRÜN') {
-                ampelEl.className = 'w-8 h-8 rounded-full bg-accentGreen shadow-lg shadow-accentGreen/30';
-                document.getElementById('ampel-title').innerText = 'Weltlage: GRÜN (Stabil)';
-            } else {
-                ampelEl.className = 'w-8 h-8 rounded-full bg-accentYellow shadow-lg shadow-accentYellow/30';
-                document.getElementById('ampel-title').innerText = 'Weltlage: GELB (Erhöhte Spannungen)';
-            }
+      setTimeout(() => { map.invalidateSize(); }, 200);
+    }
 
-            document.getElementById('ampel-reason').innerText = d?.ampel_reason_simple || d?.ampel_reason || 'Keine Begründung.';
-            document.getElementById('executive-summary').innerText = currentMode === 'simple' ? (d?.daily_executive_summary_simple || d?.daily_executive_summary) : (d?.daily_executive_summary || d?.daily_executive_summary_simple);
-
-            document.getElementById('kpi-geoscore').innerText = d?.overall_geoscore ?? d?.geoscore ?? '--';
-            document.getElementById('kpi-defcon').innerText = d?.defcon_level ?? d?.defcon ?? '--';
-
-            renderMarketRotation(d?.equity_rotation);
-            renderDomesticMatrix(d?.domestic_policy_matrix);
-
-            const rawDebateText = d?.game_theory_analysis || d?.deepseek_analysis || d?.game_theory || '';
-            renderVisualDebate(rawDebateText);
-
-            renderHistoryPrecedents(d?.historical_precedents);
-            renderPredictiveHorizon(d?.predictive_horizon);
-            renderTacticalMap(d?.conflict_hotspots);
-            renderNetworkGraph(d?.graph_network);
-        }
-
-        function renderMarketRotation(equityData) {
-            const buysContainer = document.getElementById('buys-list');
-            const sellsContainer = document.getElementById('sells-list');
-
-            buysContainer.innerHTML = '';
-            sellsContainer.innerHTML = '';
-
-            const buys = equityData?.top5_buys || [];
-            const sells = equityData?.flop5_sells || [];
-
-            if (buys.length === 0) buysContainer.innerHTML = '<span class="text-slate-500">Keine spezifischen Buys.</span>';
-            buys.forEach(b => {
-                buysContainer.innerHTML += `
-                    <div class="p-2 rounded bg-emerald-950/30 border border-emerald-900/50">
-                        <div class="font-bold text-emerald-400">${b.asset || 'Sektor'}</div>
-                        <div class="text-slate-300 text-[11px]">${b.reason || ''}</div>
-                    </div>`;
-            });
-
-            if (sells.length === 0) sellsContainer.innerHTML = '<span class="text-slate-500">Keine spezifischen Sells.</span>';
-            sells.forEach(s => {
-                sellsContainer.innerHTML += `
-                    <div class="p-2 rounded bg-rose-950/30 border border-rose-900/50">
-                        <div class="font-bold text-rose-400">${s.asset || 'Sektor'}</div>
-                        <div class="text-slate-300 text-[11px]">${s.reason || ''}</div>
-                    </div>`;
-            });
-        }
-
-        function renderDomesticMatrix(matrixList) {
-            const container = document.getElementById('domestic-matrix-container');
-            container.innerHTML = '';
-
-            if (!Array.isArray(matrixList) || matrixList.length === 0) {
-                container.innerHTML = '<div class="text-slate-500 text-xs">Keine Innenpolitik-Matrix verfügbar.</div>';
-                return;
-            }
-
-            matrixList.forEach(m => {
-                const isRot = (m.stability || '').toUpperCase().includes('ROT');
-                const isGruen = (m.stability || '').toUpperCase().includes('GRÜN');
-                const badgeClass = isRot ? 'bg-red-950 text-red-400 border-red-800' : (isGruen ? 'bg-emerald-950 text-emerald-400 border-emerald-800' : 'bg-amber-950 text-amber-400 border-amber-800');
-
-                container.innerHTML += `
-                    <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2">
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-white text-xs">${m.region || 'Region'}</span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded border ${badgeClass}">${m.stability || 'GELB'}</span>
-                        </div>
-                        <p class="text-xs text-slate-300 leading-snug">${m.dynamics || ''}</p>
-                        ${m.spillover ? `<div class="text-[10px] text-slate-400 font-mono">Spillover: ${m.spillover}</div>` : ''}
-                    </div>`;
-            });
-        }
-
-        function renderVisualDebate(rawText) {
-            const container = document.getElementById('swarm-visual-grid');
-            if (!container) return;
-
-            if (!rawText || rawText.trim().length === 0) {
-                container.innerHTML = '<div class="col-span-full text-slate-500 text-xs font-mono p-4">Keine Schwarm-Daten verfügbar.</div>';
-                return;
-            }
-
-            if (rawText.includes('|') && rawText.includes('---')) {
-                container.innerHTML = `<div class="col-span-full markdown-body bg-slate-950/80 p-4 rounded-xl border border-slate-800">${marked.parse(rawText)}</div>`;
-                return;
-            }
-
-            const categories = [
-                { key: 'Sektor', title: '⚡ Sektor-Impulse', color: 'border-l-sky-500', bg: 'bg-sky-950/20' },
-                { key: 'Innenpolitik', title: '🏛️ Innenpolitik', color: 'border-l-indigo-500', bg: 'bg-indigo-950/20' },
-                { key: 'Geodaten', title: '🗺️ Geodaten & Krisen', color: 'border-l-rose-500', bg: 'bg-rose-950/20' },
-                { key: 'Weitere', title: '🌐 Globale Makro-Themen', color: 'border-l-amber-500', bg: 'bg-amber-950/20' }
-            ];
-
-            container.innerHTML = '';
-
-            categories.forEach(cat => {
-                const lines = rawText.split('\n').filter(l => l.trim().length > 0);
-                let itemsHtml = '';
-
-                lines.forEach(line => {
-                    if (line.toLowerCase().includes(cat.key.toLowerCase()) || line.startsWith('*') || line.startsWith('-')) {
-                        let cleanLine = line.replace(/^[\*\-\#\d\.]+\s*/, '').trim();
-                        
-                        if (cleanLine.includes(':')) {
-                            const parts = cleanLine.split(':');
-                            const topic = parts[0].trim();
-                            const desc = parts.slice(1).join(':').trim();
-                            
-                            itemsHtml += `
-                                <div class="p-2.5 rounded bg-slate-900/80 border border-slate-800/80 space-y-1">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-bold text-accentBlue text-xs">${topic}</span>
-                                        <span class="w-2 h-2 rounded-full bg-accentBlue/80"></span>
-                                    </div>
-                                    <p class="text-slate-300 text-[11px] leading-relaxed">${desc}</p>
-                                </div>`;
-                        } else if (cleanLine.length > 10 && !cleanLine.toLowerCase().includes('entwurf') && !cleanLine.toLowerCase().includes('hauptpunkte')) {
-                            itemsHtml += `
-                                <div class="p-2 rounded bg-slate-900/50 text-slate-300 text-[11px] border border-slate-800/50">
-                                    • ${cleanLine}
-                                </div>`;
-                        }
-                    }
-                });
-
-                if (!itemsHtml) {
-                    itemsHtml = '<span class="text-slate-600 text-[11px] italic">Keine direkten Signale.</span>';
-                }
-
-                const card = document.createElement('div');
-                card.className = `p-4 rounded-xl border-l-4 ${cat.color} ${cat.bg} border border-slate-800 flex flex-col justify-between space-y-3`;
-                card.innerHTML = `
-                    <div>
-                        <h4 class="font-bold text-xs uppercase tracking-wider text-slate-200 mb-3 flex items-center justify-between">
-                            <span>${cat.title}</span>
-                        </h4>
-                        <div class="space-y-2">
-                            ${itemsHtml}
-                        </div>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        function renderHistoryPrecedents(historyList) {
-            const container = document.getElementById('history-container');
-            container.innerHTML = '';
-
-            if (!Array.isArray(historyList) || historyList.length === 0) {
-                container.innerHTML = '<div class="text-slate-500 text-xs">Keine historischen Parallelen erfasst.</div>';
-                return;
-            }
-
-            historyList.forEach(h => {
-                container.innerHTML += `
-                    <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2">
-                        <div class="flex justify-between items-baseline">
-                            <span class="font-bold text-accentBlue text-xs">${h.event || 'Ereignis'}</span>
-                            <span class="text-[10px] font-mono text-slate-400">${h.period || ''}</span>
-                        </div>
-                        <p class="text-xs text-slate-300"><strong>Parallele:</strong> ${h.similarity || ''}</p>
-                        <div class="p-2 rounded bg-slate-950 text-xs text-amber-300/90 font-mono border border-slate-800">
-                            <strong>Erkenntnis für 2026:</strong> ${h.takeaway || ''}
-                        </div>
-                    </div>`;
-            });
-        }
-
-        function renderPredictiveHorizon(horizonList) {
-            const container = document.getElementById('predictive-container');
-            if (!container) return;
-            container.innerHTML = '';
-
-            if (!Array.isArray(horizonList) || horizonList.length === 0) {
-                container.innerHTML = '<div class="col-span-3 text-slate-500 text-xs font-mono p-4">Keine Prognose-Daten verfügbar.</div>';
-                return;
-            }
-
-            horizonList.forEach(item => {
-                const timeframe = item?.timeframe || 'Taktisch';
-                const forecast = item?.forecast || 'Keine Details vorliegend.';
-                const prob = (item?.probability || 'Mittel').toLowerCase();
-                const indicators = item?.early_warning_indicators || [];
-
-                let badgeClass = 'bg-amber-950/80 text-amber-400 border-amber-800/80';
-                if (prob.includes('hoch') || prob.includes('high')) {
-                    badgeClass = 'bg-rose-950/80 text-rose-400 border-rose-800/80';
-                } else if (prob.includes('niedrig') || prob.includes('low')) {
-                    badgeClass = 'bg-emerald-950/80 text-emerald-400 border-emerald-800/80';
-                }
-
-                let indicatorsHtml = '';
-                if (Array.isArray(indicators) && indicators.length > 0) {
-                    indicatorsHtml = `
-                        <div class="pt-3 border-t border-slate-800/80 mt-auto">
-                            <span class="text-[10px] font-mono text-accentBlue uppercase tracking-wider block mb-1.5 font-semibold flex items-center gap-1">
-                                <span>🚨</span> Frühwarn-Indikatoren
-                            </span>
-                            <ul class="space-y-1">
-                                ${indicators.map(ind => `
-                                    <li class="text-[11px] text-slate-300 flex items-start gap-1.5 leading-snug">
-                                        <span class="text-accentBlue mt-0.5">•</span>
-                                        <span>${ind}</span>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-                    `;
-                }
-
-                const card = document.createElement('div');
-                card.className = 'p-5 rounded-xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between space-y-4 hover:border-slate-700 transition-all shadow-lg';
-                card.innerHTML = `
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between border-b border-slate-800/80 pb-2.5">
-                            <span class="text-xs font-mono font-bold text-accentBlue uppercase tracking-wider flex items-center gap-1.5">
-                                <span>⏱️</span> ${timeframe}
-                            </span>
-                            <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full border ${badgeClass} font-semibold">
-                                ${item?.probability || 'Mittel'}
-                            </span>
-                        </div>
-                        <p class="text-xs text-slate-200 leading-relaxed font-sans">${forecast}</p>
-                    </div>
-                    ${indicatorsHtml}
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        function renderTacticalMap(hotspots) {
-            if (!mapInstance) {
-                mapInstance = L.map('map').setView([20, 15], 2);
-                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(mapInstance);
-            }
-
-            mapInstance.eachLayer(layer => {
-                if (layer instanceof L.Marker || layer instanceof L.Polyline || layer instanceof L.CircleMarker) {
-                    mapInstance.removeLayer(layer);
-                }
-            });
-
-            if (!Array.isArray(hotspots) || hotspots.length === 0) return;
-
-            hotspots.forEach(h => {
-                const lat = parseFloat(h?.lat);
-                const lng = parseFloat(h?.lng ?? h?.lon);
-
-                if (!isNaN(lat) && !isNaN(lng)) {
-                    const rawType = (h?.type || '').toLowerCase();
-                    const desc = (h?.description || '').toLowerCase();
-
-                    let iconSymbol = '💥';
-                    let cssClass = 'radar-conflict';
-
-                    if (rawType.includes('flight') || rawType.includes('air') || desc.includes('flug')) {
-                        iconSymbol = '✈️';
-                        cssClass = 'radar-flight';
-                    } else if (rawType.includes('ship') || rawType.includes('maritime') || rawType.includes('chokepoint') || desc.includes('schiff')) {
-                        iconSymbol = '🚢';
-                        cssClass = 'radar-ship';
-                    } else if (rawType.includes('refugee') || rawType.includes('migration') || desc.includes('flüchtling')) {
-                        iconSymbol = '🧳';
-                        cssClass = 'radar-refugee';
-                    }
-
-                    const customIcon = L.divIcon({
-                        className: `radar-icon ${cssClass}`,
-                        html: `<span>${iconSymbol}</span>`,
-                        iconSize: [28, 28],
-                        iconAnchor: [14, 14]
-                    });
-
-                    const marker = L.marker([lat, lng], { icon: customIcon }).addTo(mapInstance);
-
-                    marker.bindPopup(`
-                        <div style="background-color: #0f172a; color: #f8fafc; padding: 10px; border-radius: 6px; font-size: 12px; border: 1px solid #334155; max-width: 220px;">
-                            <div style="font-weight: bold; color: #38bdf8; margin-bottom: 4px; display: flex; items-center; gap: 4px;">
-                                <span>${iconSymbol}</span> <span>${h?.name || 'Hotspot'}</span>
-                            </div>
-                            <div style="font-size: 11px; color: #cbd5e1;">${h?.description || ''}</div>
-                        </div>
-                    `);
-                }
-            });
-
-            const redSeaCorridor = [[12.5, 43.3], [15.0, 41.5], [27.8, 34.0]];
-            const medMigrationRoute = [[32.8, 13.1], [35.8, 14.5], [37.5, 15.0]];
-
-            L.polyline(redSeaCorridor, { color: '#facc15', weight: 2, dashArray: '5, 8', opacity: 0.8 }).addTo(mapInstance);
-            L.polyline(medMigrationRoute, { color: '#a855f7', weight: 2, dashArray: '4, 6', opacity: 0.8 }).addTo(mapInstance);
-        }
-
-        function getNodeColor(group, label) {
-            const grp = (group || '').toLowerCase();
-            const lbl = (label || '').toLowerCase();
-
-            if (grp.includes('miliz') || grp.includes('non-state') || grp.includes('konflikt') || lbl.includes('huthi') || lbl.includes('iran') || lbl.includes('krieg')) {
-                return { background: '#ef4444', border: '#b91c1c' };
-            }
-            if (grp.includes('staat') || grp.includes('bündnis') || lbl.includes('usa') || lbl.includes('china') || lbl.includes('russland') || lbl.includes('israel') || lbl.includes('ukraine')) {
-                return { background: '#38bdf8', border: '#0284c7' };
-            }
-            if (grp.includes('wirtschaft') || grp.includes('zentralbank') || grp.includes('institution') || lbl.includes('fed') || lbl.includes('eu') || lbl.includes('icc')) {
-                return { background: '#10b981', border: '#047857' };
-            }
-            if (grp.includes('tech') || lbl.includes('tiktok') || lbl.includes('cyber')) {
-                return { background: '#a855f7', border: '#7e22ce' };
-            }
-            return { background: '#f59e0b', border: '#b45309' };
-        }
-
-        function renderNetworkGraph(graphData) {
-            const container = document.getElementById('network-container');
-            if (!container) return;
-
-            const rawNodes = Array.isArray(graphData?.nodes) ? graphData.nodes : [];
-            const rawEdges = Array.isArray(graphData?.edges) ? graphData.edges : [];
-
-            if (rawNodes.length === 0) {
-                container.innerHTML = '<div class="p-8 text-center text-xs font-mono text-slate-500">Keine Graphknoten verfügbar.</div>';
-                return;
-            }
-
-            const nodes = new vis.DataSet(rawNodes.map(n => {
-                const nodeLabel = n.label || n.name || n.id;
-                return {
-                    id: n.id || n.name || n.label,
-                    label: nodeLabel,
-                    shape: 'dot',
-                    size: (n.val || 5) * 2.2,
-                    color: getNodeColor(n.group, nodeLabel),
-                    font: { color: '#f8fafc', size: 12, face: 'system-ui' }
-                };
-            }));
-
-            const edges = new vis.DataSet(rawEdges.map(e => ({
-                from: e.from || e.source,
-                to: e.to || e.target,
-                label: e.label || '',
-                color: { color: '#334155', highlight: '#38bdf8' },
-                font: { color: '#94a3b8', size: 10, align: 'horizontal' }
-            })));
-
-            container.innerHTML = '';
-            new vis.Network(container, { nodes, edges }, {
-                physics: { solver: 'forceAtlas2Based', forceAtlas2Based: { gravitationalConstant: -35, centralGravity: 0.01, springLength: 100 } },
-                nodes: { borderWidth: 2 },
-                interaction: { hover: true, zoomView: true }
-            });
-        }
-
-        window.addEventListener('DOMContentLoaded', loadData);
-    </script>
+    document.addEventListener("DOMContentLoaded", loadDashboard);
+  </script>
 </body>
 </html>
