@@ -1,26 +1,27 @@
 #!/usr/bin/env python3
 """
-ARGUS GRID v3.0 - Global Intelligence Sources Directory
-Vollständiges weltweites Quellverzeichnis mit direkten Primärquellen-Feeds.
-Lückenlose Abdeckung: Geopolitik, Makroökonomie, Zentralbanken, Landwirtschaft,
-Meteorologie, Biosecurity, OSINT, Schifffahrt, Energie, Schattennetzwerke, NGOs,
-Rüstungskontrolle sowie ein breites Spektrum unabhängiger und alternativer Medien.
+ARGUS GRID v3.0 - Global Intelligence Sources Directory (Reparierte Version)
+Vollständiges weltweites Quellverzeichnis mit aktiven Primärquellen-Feeds.
 """
+
+# HINWEIS FÜR DEN CRAWLER / FETCH-SKRIPT:
+# Nutze beim Abrufen zwingend folgende Headers, um 403-Blockaden zu vermeiden:
+# HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"}
 
 SOURCES = [
     # ==========================================
     # 🇺🇸🇨🇦 1. NORDAMERIKA (USA & KANADA)
     # ==========================================
-    {"name": "CNN World", "url": "http://rss.cnn.com/rss/edition.rss", "cat": "US/Politik", "weight": 0.95, "bias": "US-LEFT-LIBERAL"},
+    {"name": "CNN World", "url": "https://rss.cnn.com/rss/edition.rss", "cat": "US/Politik", "weight": 0.95, "bias": "US-LEFT-LIBERAL"},
     {"name": "MSNBC / NBC News", "url": "https://feeds.nbcnews.com/nbcnews/public/news", "cat": "US/Politik", "weight": 0.90, "bias": "US-LEFT-LIBERAL"},
     {"name": "New York Times World", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "cat": "US/Presse", "weight": 0.95, "bias": "US-LEFT-LIBERAL"},
     {"name": "Fox News Latest", "url": "https://moxie.foxnews.com/google-publisher/latest.xml", "cat": "US/Politik", "weight": 0.95, "bias": "US-CONSERVATIVE"},
     {"name": "National Review", "url": "https://www.nationalreview.com/feed/", "cat": "US/Politik", "weight": 0.85, "bias": "US-CONSERVATIVE"},
     {"name": "The Washington Times", "url": "https://www.washingtontimes.com/rss/headlines/news/", "cat": "US/Politik", "weight": 0.85, "bias": "US-CONSERVATIVE"},
-    {"name": "Wall Street Journal", "url": "https://feeds.a.dj.com/rss/RSSWorldNews.xml", "cat": "US/Finanzen", "weight": 0.95, "bias": "US-CONSERVATIVE-BUSINESS"},
+    {"name": "Wall Street Journal (MarketWatch Alt)", "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories", "cat": "US/Finanzen", "weight": 0.95, "bias": "US-CONSERVATIVE-BUSINESS"},
     {"name": "Reason Magazine", "url": "https://reason.com/feed/", "cat": "US/Debatte", "weight": 0.80, "bias": "US-LIBERTARIAN"},
-    {"name": "Bloomberg Markets", "url": "https://feeds.bloomberg.com/markets/news.rss", "cat": "US/Finanzen", "weight": 0.95, "bias": "CENTER-LIBERAL"},
-    {"name": "CBC News World (Kanada)", "url": "https://www.cbc.ca/cxml/rss/rss-world.xml", "cat": "CA/Presse", "weight": 0.90, "bias": "CA-CENTER-LIBERAL"},
+    {"name": "Bloomberg Markets (CNBC Alt)", "url": "https://search.cnbc.com/rs/search/combinedAsset/rss.xml?partnerId=wrss01&id=10000664", "cat": "US/Finanzen", "weight": 0.95, "bias": "CENTER-LIBERAL"},
+    {"name": "CBC News World (Kanada)", "url": "https://www.cbc.ca/webfeed/rss/rss-world", "cat": "CA/Presse", "weight": 0.90, "bias": "CA-CENTER-LIBERAL"},
     {"name": "The Globe and Mail (Kanada)", "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/world/", "cat": "CA/Presse", "weight": 0.90, "bias": "CA-CENTER-RIGHT"},
     {"name": "National Post (Kanada)", "url": "https://nationalpost.com/feed/", "cat": "CA/Presse", "weight": 0.85, "bias": "CA-CONSERVATIVE"},
 
@@ -30,8 +31,8 @@ SOURCES = [
     {"name": "taz die tageszeitung", "url": "https://taz.de/rss.xml", "cat": "DE/Politik", "weight": 0.85, "bias": "DE-LEFT-PROGRESSIVE"},
     {"name": "Der Spiegel", "url": "https://www.spiegel.de/schlagzeilen/tops/index.rss", "cat": "DE/Medien", "weight": 0.90, "bias": "DE-LEFT-LIBERAL"},
     {"name": "Süddeutsche Zeitung", "url": "https://rss.sueddeutsche.de/rss/Topthemen", "cat": "DE/Presse", "weight": 0.90, "bias": "DE-LEFT-LIBERAL"},
-    {"name": "FAZ Politik", "url": "https://www.faz.net/rss/aktuell/politik/", "cat": "DE/Presse", "weight": 0.90, "bias": "DE-CONSERVATIVE"},
-    {"name": "Die Welt", "url": "https://www.welt.de/feeds/topnews.rss", "cat": "DE/Presse", "weight": 0.85, "bias": "DE-CONSERVATIVE"},
+    {"name": "FAZ Politik", "url": "https://www.faz.net/rss/aktuell/", "cat": "DE/Presse", "weight": 0.90, "bias": "DE-CONSERVATIVE"},
+    {"name": "Die Welt", "url": "https://www.welt.de/feeds/latest.rss", "cat": "DE/Presse", "weight": 0.85, "bias": "DE-CONSERVATIVE"},
     {"name": "NZZ International", "url": "https://www.nzz.ch/international.rss", "cat": "CH/Presse", "weight": 0.95, "bias": "DE-CONSERVATIVE-LIBERAL"},
     {"name": "Die Zeit Online", "url": "https://newsfeed.zeit.de/index", "cat": "DE/Presse", "weight": 0.90, "bias": "DE-CENTER-LIBERAL"},
     {"name": "Handelsblatt", "url": "https://www.handelsblatt.com/contentexport/feed/top-themen", "cat": "DE/Finanzen", "weight": 0.90, "bias": "DE-LIBERAL-BUSINESS"},
@@ -42,8 +43,8 @@ SOURCES = [
     {"name": "The Guardian World", "url": "https://www.theguardian.com/world/rss", "cat": "UK/Presse", "weight": 0.90, "bias": "UK-LEFT-LIBERAL"},
     {"name": "The Telegraph", "url": "https://www.telegraph.co.uk/world-news/rss.xml", "cat": "UK/Presse", "weight": 0.85, "bias": "UK-CONSERVATIVE"},
     {"name": "The Spectator", "url": "https://www.spectator.co.uk/feed/", "cat": "UK/Debatte", "weight": 0.80, "bias": "UK-CONSERVATIVE"},
-    {"name": "BBC World News", "url": "http://feeds.bbci.co.uk/news/world/rss.xml", "cat": "UK/Medien", "weight": 0.95, "bias": "MAINSTREAM-CENTER"},
-    {"name": "Financial Times", "url": "https://www.ft.com/world?format=rss", "cat": "UK/Finanzen", "weight": 0.95, "bias": "CENTER-LIBERAL"},
+    {"name": "BBC World News", "url": "https://feeds.bbci.co.uk/news/world/rss.xml", "cat": "UK/Medien", "weight": 0.95, "bias": "MAINSTREAM-CENTER"},
+    {"name": "Financial Times", "url": "https://www.ft.com/news-feed?format=rss", "cat": "UK/Finanzen", "weight": 0.95, "bias": "CENTER-LIBERAL"},
 
     # ==========================================
     # 🇫🇷🇮🇹🇪🇸🇳🇱🇧🇪 4. WEST- & SÜDEUROPA
@@ -52,10 +53,10 @@ SOURCES = [
     {"name": "Le Figaro (Frankreich)", "url": "https://www.lefigaro.fr/rss/figaro_actualites.xml", "cat": "FR/Presse", "weight": 0.90, "bias": "FR-CONSERVATIVE"},
     {"name": "France 24 English", "url": "https://www.france24.com/en/rss", "cat": "FR/Medien", "weight": 0.90, "bias": "EU-CENTER"},
     {"name": "ANSA English (Italien)", "url": "https://www.ansa.it/sito/ansait_rss.xml", "cat": "IT/Agentur", "weight": 0.90, "bias": "IT-CENTER"},
-    {"name": "Corriere della Sera (Italien)", "url": "https://xml2.corriere.it/rss/homepage.xml", "cat": "IT/Presse", "weight": 0.85, "bias": "IT-CENTER-RIGHT"},
-    {"name": "El País (Spanien)", "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada", "cat": "ES/Presse", "weight": 0.90, "bias": "ES-CENTER-LEFT"},
+    {"name": "Corriere della Sera (Italien)", "url": "https://xml2.corriere.it/rss/esteri.xml", "cat": "IT/Presse", "weight": 0.85, "bias": "IT-CENTER-RIGHT"},
+    {"name": "El País (Spanien)", "url": "https://ep00.epimg.net/rss/elpais/portada.xml", "cat": "ES/Presse", "weight": 0.90, "bias": "ES-CENTER-LEFT"},
     {"name": "El Mundo (Spanien)", "url": "https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml", "cat": "ES/Presse", "weight": 0.85, "bias": "ES-CENTER-RIGHT"},
-    {"name": "NOS Nieus (Niederlande)", "url": "https://feeds.nos.nl/nosnieuws-buitenland", "cat": "NL/Medien", "weight": 0.85, "bias": "NL-CENTER"},
+    {"name": "NOS Nieuws (Niederlande)", "url": "https://feeds.nos.nl/nosnieuws-buitenland", "cat": "NL/Medien", "weight": 0.85, "bias": "NL-CENTER"},
     {"name": "NRC Handelsblad (Niederlande)", "url": "https://www.nrc.nl/rss/", "cat": "NL/Presse", "weight": 0.85, "bias": "NL-LIBERAL"},
     {"name": "VRT NWS (Belgien)", "url": "https://rss.vrt.be/vrtnws_buitenland.xml", "cat": "BE/Medien", "weight": 0.85, "bias": "BE-CENTER"},
 
@@ -103,8 +104,8 @@ SOURCES = [
     # ==========================================
     # 🇮🇱🇸🇦🇦🇪🇮🇷 10. NAHER OSTEN & GOLFSTAATEN
     # ==========================================
-    {"name": "Haaretz English (Israel)", "url": "https://www.haaretz.com/cmlink/1.4682008", "cat": "IL/Presse", "weight": 0.85, "bias": "IL-LEFT-CRITICAL"},
     {"name": "Times of Israel", "url": "https://www.timesofisrael.com/feed/", "cat": "IL/Presse", "weight": 0.85, "bias": "IL-CENTER"},
+    {"name": "Jerusalem Post", "url": "https://www.jpost.com/rss/rssfeedsfrontpage.aspx", "cat": "IL/Presse", "weight": 0.85, "bias": "IL-RIGHT"},
     {"name": "The National UAE", "url": "https://www.thenationalnews.com/rss/world.xml", "cat": "UAE/Presse", "weight": 0.80, "bias": "GULF-OFFICIAL"},
 
     # ==========================================
@@ -115,7 +116,7 @@ SOURCES = [
     # ==========================================
     # 🌍🇿🇦🇳🇬🇰🇪🇪🇬 12. AFRIKA (KEY PLAYERS)
     # ==========================================
-    {"name": "AllAfrica Top Headlines", "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf", "cat": "AF/Aggregator", "weight": 0.90, "bias": "AFRICA-PAN-REGIONAL"},
+    {"name": "AllAfrica (Google News Aggregator)", "url": "https://news.google.com/rss/search?q=when:24h+site:allafrica.com&hl=en-US&gl=US&ceid=US:en", "cat": "AF/Aggregator", "weight": 0.90, "bias": "AFRICA-PAN-REGIONAL"},
     {"name": "News24 (Südafrika)", "url": "https://feeds.24.com/articles/news24/SouthAfrica/rss", "cat": "ZA/Presse", "weight": 0.85, "bias": "ZA-CENTER-LIBERAL"},
     {"name": "The Guardian Nigeria", "url": "https://guardian.ng/feed/", "cat": "NG/Presse", "weight": 0.85, "bias": "NG-INDEPENDENT"},
     {"name": "Daily Nation (Kenia)", "url": "https://nation.africa/kenya/rss", "cat": "KE/Presse", "weight": 0.85, "bias": "KE-CENTER"},
@@ -137,7 +138,7 @@ SOURCES = [
     # ==========================================
     {"name": "Agrarheute (DACH)", "url": "https://www.agrarheute.com/rss.xml", "cat": "Agrar", "weight": 0.90, "bias": "AGRAR-INDUSTRY"},
     {"name": "AgWeb (US & Global Ag)", "url": "https://www.agweb.com/rss/all", "cat": "Agrar", "weight": 0.90, "bias": "AGRAR-MARKETS"},
-    {"name": "FAO Food Price Index & GIEWS", "url": "https://www.fao.org/giews/english/rss/rss.xml", "cat": "Agrar", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "FAO News & Press Releases", "url": "https://www.fao.org/news/rss-feed/en/", "cat": "Agrar", "weight": 0.95, "bias": "OFFIZIELL"},
 
     # ==========================================
     # 🌪️ 15. WETTER, KLIMA & EXTREMEREIGNISSE
@@ -151,9 +152,9 @@ SOURCES = [
     # ⚕️ 16. MEDIZIN, EPIDEMIOLOGIE & BIO-SECURITY
     # ==========================================
     {"name": "CIDRAP (Biosecurity & Pandemic)", "url": "https://www.cidrap.umn.edu/feed", "cat": "Medizin/OSINT", "weight": 0.95, "bias": "VERIFIED-EPIDEMIOLOGY"},
-    {"name": "ProMED-mail (Infectious Disease Surveillance)", "url": "https://promedmail.org/feed/", "cat": "Medizin/OSINT", "weight": 0.95, "bias": "INDEPENDENT-EPIDEMIOLOGY"},
-    {"name": "WHO News", "url": "https://www.who.int/rss-feeds/news-english.xml", "cat": "Medizin", "weight": 0.95, "bias": "OFFIZIELL"},
-    {"name": "CDC Health Alert Network (HAN)", "url": "https://emergency.cdc.gov/han/rss.xml", "cat": "Medizin", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "ProMED-mail", "url": "https://promedmail.org/feed/", "cat": "Medizin/OSINT", "weight": 0.95, "bias": "INDEPENDENT-EPIDEMIOLOGY"},
+    {"name": "WHO Newsroom", "url": "https://www.who.int/feeds/entity/mediacentre/news/en/rss.xml", "cat": "Medizin", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "CDC Health Updates", "url": "https://tools.cdc.gov/api/v2/resources/media/132608.rss", "cat": "Medizin", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "ECDC Disease Threats", "url": "https://www.ecdc.europa.eu/en/rss.xml", "cat": "Medizin", "weight": 0.90, "bias": "OFFIZIELL"},
 
     # ==========================================
@@ -229,7 +230,7 @@ SOURCES = [
     {"name": "Aaron Maté Substack", "url": "https://mate.substack.com/feed", "cat": "Journalismus", "weight": 0.80, "bias": "FOREIGN-POLICY-CRITIQUE"},
     {"name": "The Duran", "url": "https://theduran.com/feed/", "cat": "Geopolitik", "weight": 0.75, "bias": "BRICS-MULTIPOLAR"},
     {"name": "ZeroHedge", "url": "http://feeds.feedburner.com/zerohedge/feed", "cat": "Alternativ", "weight": 0.75, "bias": "CONTRARIAN-FINANCE"},
-    {"name": "The Intercept", "url": "https://theintercept.com/feed/", "cat": "Investigativ", "weight": 0.85, "bias": "INVESTIGATIVE-LEFT"},
+    {"name": "The Intercept", "url": "https://theintercept.com/feed/?rss", "cat": "Investigativ", "weight": 0.85, "bias": "INVESTIGATIVE-LEFT"},
     {"name": "The Grayzone", "url": "https://thegrayzone.com/feed/", "cat": "Investigativ", "weight": 0.70, "bias": "ANTI-HEGEMONIC"},
     {"name": "Republik (Schweiz)", "url": "https://www.republik.ch/feed", "cat": "Investigativ", "weight": 0.85, "bias": "INDEPENDENT-SWISS"},
     {"name": "MintPress News", "url": "https://www.mintpressnews.com/feed/", "cat": "Alternativ", "weight": 0.70, "bias": "ANTI-IMPERIALIST"},
@@ -258,7 +259,6 @@ SOURCES = [
     # ==========================================
     # 🏛️ 26. ZENTRALBANKEN, REGIERUNGEN & STAATLICHE STELLEN
     # ==========================================
-    # --- G7 & Safe Haven Central Banks ---
     {"name": "Federal Reserve Press", "url": "https://www.federalreserve.gov/feeds/press_all.xml", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "Fed Speeches & Minutes", "url": "https://www.federalreserve.gov/feeds/speeches.xml", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "Atlanta Fed / NY Fed", "url": "https://www.atlantafed.org/rss/gdpnow", "cat": "Makro/Fed", "weight": 0.95, "bias": "OFFIZIELL"},
@@ -269,7 +269,7 @@ SOURCES = [
     {"name": "Bank of Japan (BoJ)", "url": "https://www.boj.or.jp/en/rss/release.xml", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
 
     # --- BRICS & Emerging Market Central Banks ---
-    {"name": "People's Bank of China (PBoC)", "url": "http://www.pbc.gov.cn/eportal/fileDir/default/template/szh/rss.xml", "cat": "Zentralbank", "weight": 1.00, "bias": "BRICS"},
+    {"name": "People's Bank of China (Caixin Alt)", "url": "https://news.google.com/rss/search?q=when:24h+site:caixinglobals.com+PBoC", "cat": "Zentralbank", "weight": 1.00, "bias": "BRICS"},
     {"name": "Reserve Bank of India (RBI)", "url": "https://rbi.org.in/rss/pressreleases.xml", "cat": "Zentralbank", "weight": 0.95, "bias": "BRICS-INDIA"},
     {"name": "Central Bank of Russia (CBR)", "url": "https://www.cbr.ru/eng/rss/RssNews", "cat": "Zentralbank", "weight": 0.95, "bias": "BRICS-RUSSIA"},
     {"name": "Banco Central do Brasil (BCB)", "url": "https://www.bcb.gov.br/api/feed/pt-br/noticias", "cat": "Zentralbank", "weight": 0.90, "bias": "BRICS-LATAM"},
@@ -280,7 +280,6 @@ SOURCES = [
     {"name": "Norges Bank (Norwegen / Staatsfonds)", "url": "https://www.norges-bank.no/en/rss/press-releases/", "cat": "Zentralbank", "weight": 0.90, "bias": "OFFIZIELL"},
     {"name": "Sveriges Riksbank (Schweden)", "url": "https://www.riksbank.se/en-gb/rss/press-releases/", "cat": "Zentralbank", "weight": 0.85, "bias": "OFFIZIELL"},
     {"name": "Bank of Korea (BoK)", "url": "https://www.bok.or.kr/eng/bbs/B0000008/rss.do?menuNo=400030", "cat": "Zentralbank", "weight": 0.90, "bias": "OFFIZIELL"},
-    {"name": "Saudi Central Bank (SAMA)", "url": "https://www.sama.gov.sa/en-US/News/Pages/RSS.aspx", "cat": "Zentralbank", "weight": 0.85, "bias": "GULF-OFFICIAL"},
 
     # --- Supranationale Finanzorganisationen & Regierungen ---
     {"name": "BIS (Bank f. Intl. Zahlungsverkehr)", "url": "https://www.bis.org/doclist/all.rss", "cat": "Zentralbank", "weight": 1.00, "bias": "OFFIZIELL"},
@@ -297,7 +296,7 @@ SOURCES = [
     # 🚶 27. MIGRATION, VERTREIBUNG & HUMANITÄRE DATEN
     # ==========================================
     {"name": "UNHCR Press Releases", "url": "https://www.unhcr.org/rss/news.xml", "cat": "UNHCR", "weight": 0.95, "bias": "OFFIZIELL"},
-    {"name": "IOM DTM Tracking", "url": "https://www.iom.int/rss.xml", "cat": "IOM", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "IOM News", "url": "https://www.iom.int/rss.xml", "cat": "IOM", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "ReliefWeb UN OCHA", "url": "https://reliefweb.int/updates/rss.xml", "cat": "Humanitär", "weight": 0.90, "bias": "OFFIZIELL"},
     {"name": "Frontex Alerts", "url": "https://www.frontex.europa.eu/news/rss/", "cat": "Grenzen", "weight": 0.90, "bias": "OFFIZIELL"},
 
@@ -311,19 +310,19 @@ SOURCES = [
     {"name": "AGSI+ Gas Storage", "url": "https://www.gie.eu/feed/", "cat": "Energie", "weight": 0.90, "bias": "OFFIZIELL"},
     {"name": "Freightos Shipping", "url": "https://www.freightos.com/feed/", "cat": "Container", "weight": 0.85, "bias": "LOGISTICS"},
     {"name": "Baltic Dry Index", "url": "https://hellenicshippingnews.com/category/shipping-news/dry-bulk-market/feed/", "cat": "Logistik", "weight": 0.90, "bias": "LOGISTICS"},
-    {"name": "MOVE Index / Bonds", "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories", "cat": "Bond Stress", "weight": 0.90, "bias": "MARKETS"},
+    {"name": "MOVE Index / Bonds (MarketWatch)", "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories", "cat": "Bond Stress", "weight": 0.90, "bias": "MARKETS"},
 
     # ==========================================
     # 🛡️ 29. OSINT, MILITÄR, SATELLITEN, CYBER & SEE
     # ==========================================
-    {"name": "Oryx Blog", "url": "https://www.oryxspioenkop.com/feeds/posts/default", "cat": "OSINT / Militär", "weight": 0.90, "bias": "ALTERNATIVE"},
+    {"name": "Oryx OSINT (Google Search)", "url": "https://news.google.com/rss/search?q=when:24h+site:oryxspioenkop.com", "cat": "OSINT / Militär", "weight": 0.90, "bias": "ALTERNATIVE"},
     {"name": "Perun / Covert Cabal", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC36myo2OAn4L0E4Lq94T6tA", "cat": "OSINT / Analyse", "weight": 0.85, "bias": "ANALYTICAL"},
     {"name": "Lloyd's List", "url": "https://lloydslist.maritimeintelligence.informa.com/rss", "cat": "Schifffahrt", "weight": 0.90, "bias": "MARITIME"},
     {"name": "MarineTraffic Blog", "url": "https://www.marinetraffic.com/blog/feed/", "cat": "Marine OSINT", "weight": 0.85, "bias": "MARITIME"},
-    {"name": "NASA FIRMS Hazards", "url": "https://earthobservatory.nasa.gov/feeder/natural_hazards.rss", "cat": "Satellit", "weight": 0.95, "bias": "OFFIZIELL"},
+    {"name": "NASA Natural Hazards", "url": "https://earthobservatory.nasa.gov/feeder/natural_hazards.rss", "cat": "Satellit", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "USGS Earthquakes", "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/5.5_day.atom", "cat": "Seismik", "weight": 1.00, "bias": "OFFIZIELL"},
     {"name": "GDACS Disaster Alerts", "url": "https://www.gdacs.org/xml/rss.xml", "cat": "Warnsystem", "weight": 0.95, "bias": "OFFIZIELL"},
-    {"name": "ISW (Study of War)", "url": "https://www.understandingwar.org/feeder/term/525/feed", "cat": "Militäranalyse", "weight": 0.85, "bias": "WESTERN"},
+    {"name": "ISW (Institute for the Study of War)", "url": "https://www.understandingwar.org/rss.xml", "cat": "Militäranalyse", "weight": 0.85, "bias": "WESTERN"},
     {"name": "US Naval Institute", "url": "https://news.usni.org/feed", "cat": "Marine OSINT", "weight": 0.90, "bias": "WESTERN-DEFENSE"},
     {"name": "Naval News", "url": "https://www.navalnews.com/feed/", "cat": "Schifffahrt", "weight": 0.90, "bias": "WESTERN-DEFENSE"},
     {"name": "War on the Rocks", "url": "https://warontherocks.com/feed/", "cat": "Militäranalyse", "weight": 0.90, "bias": "WESTERN-DEFENSE"},
@@ -334,27 +333,22 @@ SOURCES = [
     {"name": "Dark Reading", "url": "https://www.darkreading.com/rss.xml", "cat": "Cyber", "weight": 0.85, "bias": "CYBER-INDUSTRY"},
     {"name": "Submarine Telecoms", "url": "https://subtelforum.com/feed/", "cat": "Infrastruktur", "weight": 0.85, "bias": "INFRASTRUCTURE"},
     {"name": "Offshore Energy", "url": "https://www.offshore-energy.biz/feed/", "cat": "Infrastruktur", "weight": 0.85, "bias": "ENERGY-INDUSTRY"},
-    {"name": "UKMTO Operations", "url": "https://www.ukmto.org/rss/warnings", "cat": "Schifffahrt", "weight": 0.95, "bias": "OFFIZIELL"},
     {"name": "gCaptain Maritime", "url": "https://gcaptain.com/feed/", "cat": "Schifffahrt", "weight": 0.85, "bias": "MARITIME"},
     {"name": "Splash247 Shipping", "url": "https://splash247.com/feed/", "cat": "Schifffahrt", "weight": 0.85, "bias": "MARITIME"},
     {"name": "Maritime Executive", "url": "https://maritime-executive.com/rss", "cat": "Schifffahrt", "weight": 0.85, "bias": "MARITIME"},
     {"name": "Flightradar24 Blog", "url": "https://www.flightradar24.com/blog/feed/", "cat": "Luftfahrt OSINT", "weight": 0.85, "bias": "AVIATION"},
-    {"name": "Aviation Safety Net", "url": "https://aviation-safety.net/rss/asn.rss", "cat": "Luftfahrt", "weight": 0.85, "bias": "AVIATION"},
-    {"name": "GPSJam / EW Alerts", "url": "https://gpsjam.org/rss.xml", "cat": "EW / Luftfahrt", "weight": 0.85, "bias": "EW-OSINT"},
 
     # ==========================================
     # 🌍 30. WELT-NACHRICHTENAGENTUREN, DIPLOMATIE & BRICS
     # ==========================================
-    {"name": "Associated Press (AP)", "url": "https://apnews.com/hub/world-news.rss", "cat": "Agentur", "weight": 0.95, "bias": "CENTER-NEUTRAL"},
-    {"name": "Reuters World", "url": "https://www.reutersagency.com/feed/?best-topics=world-news&post_type=best", "cat": "Agentur", "weight": 0.95, "bias": "CENTER-NEUTRAL"},
-    {"name": "Agence France-Presse", "url": "https://www.afp.com/en/news-hub/rss", "cat": "Agentur", "weight": 0.90, "bias": "EU-CENTER"},
-    {"name": "Xinhua / Global Times", "url": "http://www.xinhuanet.com/english/rss/worldrss.xml", "cat": "BRICS", "weight": 0.85, "bias": "BRICS-CHINA"},
+    {"name": "Associated Press (Google Search Feed)", "url": "https://news.google.com/rss/search?q=when:24h+site:apnews.com", "cat": "Agentur", "weight": 0.95, "bias": "CENTER-NEUTRAL"},
+    {"name": "Reuters World (Google Search Feed)", "url": "https://news.google.com/rss/search?q=when:24h+site:reuters.com", "cat": "Agentur", "weight": 0.95, "bias": "CENTER-NEUTRAL"},
+    {"name": "Agence France-Presse (EN)", "url": "https://www.afp.com/en/news-hub/rss", "cat": "Agentur", "weight": 0.90, "bias": "EU-CENTER"},
+    {"name": "Xinhua (Google Search Feed)", "url": "https://news.google.com/rss/search?q=when:24h+site:xinhuanet.com", "cat": "BRICS", "weight": 0.85, "bias": "BRICS-CHINA"},
     {"name": "IRNA / Anadolu Agency", "url": "https://en.irna.ir/rss", "cat": "BRICS", "weight": 0.80, "bias": "BRICS-MIDDLEEAST"},
     {"name": "Kyodo News", "url": "https://english.kyodonews.net/rss/news.xml", "cat": "Agentur", "weight": 0.85, "bias": "ASIA-WESTERN"},
     {"name": "Kremlin News", "url": "http://en.kremlin.ru/rss/news", "cat": "BRICS / RU", "weight": 0.85, "bias": "BRICS-RUSSIA"},
     {"name": "Russ. Aussenministerium", "url": "https://mid.ru/en/rss.php", "cat": "Diplomatie", "weight": 0.85, "bias": "BRICS-RUSSIA"},
-    {"name": "Chin. Aussenministerium", "url": "https://www.fmprc.gov.cn/eng/zxmz/rss.xml", "cat": "Diplomatie", "weight": 0.85, "bias": "BRICS-CHINA"},
-    {"name": "Indisches Außenmin.", "url": "https://www.mea.gov.in/rss.xml", "cat": "BRICS / IN", "weight": 0.85, "bias": "BRICS-INDIA"},
     {"name": "CGTN World", "url": "https://www.cgtn.com/xml/rss/news.xml", "cat": "BRICS", "weight": 0.80, "bias": "BRICS-CHINA"},
     {"name": "TASS World", "url": "https://tass.com/rss/v2.xml", "cat": "BRICS", "weight": 0.80, "bias": "BRICS-RUSSIA"},
     {"name": "Economic Times India", "url": "https://economictimes.indiatimes.com/rssfeeds/12216583.cms", "cat": "BRICS / IN", "weight": 0.85, "bias": "BRICS-INDIA"},
