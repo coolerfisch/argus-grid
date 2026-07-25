@@ -1,16 +1,15 @@
 {
-  "overall_geoscore": 72,
+  "overall_geoscore": 75,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Regionale Konflikte eskalieren begrenzt, Cyberangriffe auf kritische Infrastruktur, wirtschaftliche Unsicherheiten durch Klimakrisen und geopolitische Spannungen.",
-  "daily_executive_summary": "Die globale Lage ist geprägt von einer Zunahme regionaler Konflikte, insbesondere zwischen den USA und Iran, sowie einer Verschärfung der Cyberbedrohungen gegen industrielle Steuerungssysteme. Das US-Saudi-Atomabkommen wurde unterzeichnet, allerdings ohne militärische Komponente, was zu Spannungen mit Israel und dem Iran führt. Klimabedingte Extremereignisse wie Waldbrände in Europa und tropische Wirbelsturmaktivitäten im Atlantik verschärfen die humanitären und wirtschaftlichen Herausforderungen. Die Federal Reserve hat Enforcement-Maßnahmen gegen Führungskräfte der Heritage State Bank ergriffen, was auf anhaltende regulatorische Strenge hindeutet.",
-  "daily_executive_summary_simple": "Geopolitische Spannungen und Cyberangriffe nehmen zu. Klimakrisen verschärfen sich. Die USA und Iran liefern sich begrenzte Scharmützel, während das US-Saudi-Atomabkommen für Unruhe sorgt. Wirtschaftlich bleibt die Lage volatil.",
+  "ampel_reason_simple": "Erhöhte geopolitische Spannungen, wirtschaftliche Unsicherheit und Naturkatastrophen erfordern erhöhte Wachsamkeit.",
+  "daily_executive_summary": "Am 25.07.2026 zeigt das Lagebild eine Mischung aus wirtschaftlichen Herausforderungen, geopolitischen Spannungen und akuten Krisen. Die US-Wirtschaft verzeichnet ein moderates BIP-Wachstum von 1,2% im Q2, während die Fed gegen die Heritage State Bank vorgeht. Technologische Sicherheitslücken in industriellen Systemen (Weintek, Rockwell) und die Veröffentlichung von C4ADS-Tools zur Finanzverfolgung erhöhen das Cyberrisiko. Geopolitisch eskalieren Spannungen durch US-Sanktionen gegen den Iran und die EU-Verwarnung an TikTok. Naturkatastrophen wie Waldbrände in Frankreich und Spanien führen zu Evakuierungen von über 260.000 Menschen. In der Ukraine fordert ein russischer Angriff auf ein Ferienlager zivile Opfer.",
+  "daily_executive_summary_simple": "Wirtschaftlich stabil, aber mit Risiken. Geopolitische Spannungen und Naturkatastrophen erfordern Aufmerksamkeit. Cyberrisiken und Sanktionen prägen das globale Bild.",
   "key_takeaways": [
-    "Begrenzte militärische Eskalation zwischen USA und Iran, aber keine direkte Kriegsführung; Cyberangriffe als primäres Eskalationsmittel.",
-    "US-Saudi-Atomabkommen unterzeichnet – zivile Nutzung bestätigt, aber regionale Proliferationssorgen bleiben bestehen.",
-    "Kritische Schwachstellen in industriellen Steuerungssystemen (Weintek, Rockwell) ausgenutzt; Ransomware-Gruppen als mutmaßliche Täter.",
-    "Klimabedingte Extremereignisse (Waldbrände in Europa, tropische Stürme) verschärfen humanitäre und wirtschaftliche Risiken.",
-    "Regulatorische Maßnahmen der Fed gegen Bankenführung signalisieren anhaltende Compliance-Risiken im Finanzsektor."
+    "US-Wirtschaft wächst moderat (1,2% BIP Q2), Fed handelt gegen Heritage State Bank.",
+    "Kritische Sicherheitslücken in industriellen Systemen (Weintek, Rockwell) und neue Finanzverfolgungstools (C4ADS).",
+    "Geopolitische Spannungen: US-Sanktionen gegen Iran, EU-Verwarnung an TikTok, Italiens 'Mattei-Plan' für Afrika-Energie.",
+    "Naturkatastrophen: Waldbrände in FR/ES mit 260.000+ Evakuierungen, zivile Opfer in der Ukraine durch russischen Angriff."
   ],
   "market_regime": "Fragmentiert / Volatil",
   "top_risk": "Lieferketten & Energie",
@@ -18,65 +17,17 @@
     "top5_buys": [
       {
         "ticker": "XLE",
-        "name": "Energy Select Sector SPDR Fund",
+        "name": "Energy ETF",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen im Nahen Osten und US-Saudi-Atomabkommen erhöhen die Unsicherheit in der Energieversorgung, was zu Preisanstiegen führen könnte."
-      },
-      {
-        "ticker": "GLD",
-        "name": "SPDR Gold Shares",
-        "asset": "Edelmetalle",
-        "reason": "Sicherer Hafen bei anhaltenden geopolitischen Risiken und Marktvolatilität."
-      },
-      {
-        "ticker": "LMT",
-        "name": "Lockheed Martin",
-        "asset": "Rüstung",
-        "reason": "Erhöhte militärische Aktivitäten und Aufrüstung in Konfliktregionen."
-      },
-      {
-        "ticker": "CYBR",
-        "name": "Global X Cybersecurity ETF",
-        "asset": "Cybersicherheit",
-        "reason": "Zunehmende Cyberangriffe auf kritische Infrastruktur und Unternehmen."
-      },
-      {
-        "ticker": "NEE",
-        "name": "NextEra Energy",
-        "asset": "Erneuerbare Energien",
-        "reason": "Klimakrisen und Extremwetterereignisse beschleunigen die Nachfrage nach resilienter Energieinfrastruktur."
+        "reason": "Erhöhte Nachfrage durch geopolitische Unsicherheiten und Energieprojekte wie Italiens 'Mattei-Plan'."
       }
     ],
     "flop5_sells": [
       {
         "ticker": "EEM",
-        "name": "iShares MSCI Emerging Markets ETF",
+        "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Geopolitische Spannungen, Klimarisiken und regulatorische Unsicherheiten belasten die Wachstumsaussichten."
-      },
-      {
-        "ticker": "XLU",
-        "name": "Utilities Select Sector SPDR Fund",
-        "asset": "Versorger",
-        "reason": "Klimabedingte Extremereignisse erhöhen operative Risiken und Kosten."
-      },
-      {
-        "ticker": "AAL",
-        "name": "American Airlines Group",
-        "asset": "Luftfahrt",
-        "reason": "Eskalierende Konflikte und Energiepreisschwankungen beeinträchtigen die Reisebranche."
-      },
-      {
-        "ticker": "BABA",
-        "name": "Alibaba Group",
-        "asset": "Technologie/E-Commerce",
-        "reason": "Geopolitische Spannungen zwischen USA und China sowie regulatorische Risiken in China."
-      },
-      {
-        "ticker": "IYT",
-        "name": "iShares U.S. Transportation ETF",
-        "asset": "Transportwesen",
-        "reason": "Lieferkettenunterbrechungen und erhöhte Energiekosten belasten die Transportbranche."
+        "reason": "Instabilität durch Sanktionen, Naturkatastrophen und politische Unsicherheiten."
       }
     ]
   },
@@ -84,134 +35,147 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Politische Polarisierung und regulatorische Maßnahmen (z. B. Fed-Enforcement) erhöhen die Unsicherheit. Militärische Eskalation mit Iran bleibt begrenzt, aber Cyberkonflikte nehmen zu.",
-      "spillover": "Wirtschaftliche Volatilität durch geopolitische Risiken, Klimakrisen und regulatorische Eingriffe. Energie- und Rüstungssektor profitieren, während Schwellenländer und Transportbranche belastet werden."
+      "dynamics": "Fed-Interventionen und Medienfreiheitsdebatten (FCC-Lizenzprüfung für ABC) prägen die Innenpolitik.",
+      "spillover": "Potenzielle Auswirkungen auf globale Finanzmärkte und Medienlandschaft."
     },
     {
       "region": "EU",
       "stability": "GELB",
-      "dynamics": "Klimabedingte Extremereignisse (Waldbrände) und wirtschaftliche Belastungen durch Energieunsicherheit. Keine akuten militärischen Bedrohungen, aber erhöhte Cyberrisiken.",
-      "spillover": "Wirtschaftliche Erholung durch Klimaresilienz-Investitionen, aber kurzfristige Belastungen durch Extremwetter."
+      "dynamics": "Waldbrände in FR/ES und DSA-Verwarnung an TikTok belasten die Stabilität.",
+      "spillover": "Mögliche wirtschaftliche und soziale Folgen für die EU-Wirtschaft."
     },
     {
-      "region": "Naher Osten",
-      "stability": "ROT",
-      "dynamics": "US-Saudi-Atomabkommen und begrenzte militärische Auseinandersetzungen zwischen USA und Iran erhöhen die regionale Instabilität. Israel reagiert mit Besorgnis auf das Abkommen.",
-      "spillover": "Energiepreise und Lieferkettenrisiken steigen. Proliferationssorgen könnten zu weiteren regionalen Spannungen führen."
+      "region": "Indien",
+      "stability": "GELB",
+      "dynamics": "Rücktritt des Bildungsministers aufgrund eines Prüfungsskandals.",
+      "spillover": "Kurzfristige politische Unsicherheit, langfristige Auswirkungen auf das Bildungssystem."
     }
   ],
   "historical_precedents": [
     {
       "event": "Kalter Krieg",
-      "current_event": "Sanktionspolitik und Cyberkonflikte 2026",
+      "current_event": "Sanktionspolitik 2026",
       "period": "20. Jh.",
-      "similarity": "Blockbildung und Stellvertreterkonflikte",
+      "similarity": "Blockbildung und wirtschaftliche Druckmittel",
       "historical_analog": "Kubakrise 1962",
-      "takeaway": "Deeskalation erfordert klare Kommunikationskanäle und vertrauensbildende Maßnahmen, um unbeabsichtigte Eskalationen zu vermeiden."
-    },
-    {
-      "event": "Ölkrise 1973",
-      "current_event": "US-Saudi-Atomabkommen und regionale Spannungen 2026",
-      "period": "20. Jh.",
-      "similarity": "Energieversorgung als geopolitisches Druckmittel",
-      "historical_analog": "Ölembargo der OPEC",
-      "takeaway": "Energieabhängigkeiten können zu Marktvolatilität und politischen Spannungen führen; Diversifizierung der Energiequellen ist entscheidend."
-    },
-    {
-      "event": "Stuxnet-Angriff 2010",
-      "current_event": "Cyberangriffe auf industrielle Steuerungssysteme 2026",
-      "period": "21. Jh.",
-      "similarity": "Staatlich unterstützte Cyberangriffe auf kritische Infrastruktur",
-      "historical_analog": "Stuxnet-Wurm gegen iranische Nuklearanlagen",
-      "takeaway": "Cyberangriffe können physische Schäden verursachen und erfordern verstärkte Investitionen in Cybersicherheit."
+      "takeaway": "Deeskalation durch diplomatische Kanäle und klare Kommunikation ist entscheidend."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Begrenzte militärische Eskalation zwischen USA und Iran bleibt wahrscheinlich, mit Schwerpunkt auf Cyberangriffen und Stellvertreterkonflikten. Klimabedingte Extremereignisse werden zunehmen und wirtschaftliche Belastungen verstärken. Energiepreise bleiben volatil aufgrund geopolitischer Unsicherheiten.",
+    "base_case_summary": "Erhöhtes Risiko für Cyberangriffe auf kritische Infrastruktur und weitere wirtschaftliche Sanktionen. Naturkatastrophen könnten Lieferketten zusätzlich belasten.",
     "leading_indicators_to_watch": [
       {
-        "indicator": "Zunahme von Cyberangriffen auf kritische Infrastruktur"
+        "indicator": "Cyberangriffe"
       },
       {
-        "indicator": "Militärische Bewegungen im Nahen Osten (z. B. US-Drohnenangriffe, iranische Cyberaktivitäten)"
+        "indicator": "Verschärfung von Sanktionen"
       },
       {
-        "indicator": "Extremwetterwarnungen (Hurrikane, Waldbrände)"
-      },
-      {
-        "indicator": "Regulatorische Maßnahmen gegen Finanzinstitute (Fed-Enforcement)"
+        "indicator": "Zunahme von Naturkatastrophen"
       }
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage (Taktisch)",
-        "forecast": "Begrenzte militärische Eskalation zwischen USA und Iran bleibt wahrscheinlich, mit Schwerpunkt auf Cyberangriffen und Stellvertreterkonflikten. Klimabedingte Extremereignisse werden zunehmen und wirtschaftliche Belastungen verstärken. Energiepreise bleiben volatil aufgrund geopolitischer Unsicherheiten.",
+        "forecast": "Erhöhtes Risiko für Cyberangriffe auf kritische Infrastruktur und weitere wirtschaftliche Sanktionen. Naturkatastrophen könnten Lieferketten zusätzlich belasten.",
         "probability": "Mittel",
         "early_warning_indicators": [
-          "Zunahme von Cyberangriffen auf kritische Infrastruktur",
-          "Militärische Bewegungen im Nahen Osten (z. B. US-Drohnenangriffe, iranische Cyberaktivitäten)",
-          "Extremwetterwarnungen (Hurrikane, Waldbrände)",
-          "Regulatorische Maßnahmen gegen Finanzinstitute (Fed-Enforcement)"
-        ]
-      },
-      {
-        "timeframe": "90 Tage (Operativ)",
-        "forecast": "Regionale Konflikte könnten sich ausweiten, falls das US-Saudi-Atomabkommen zu weiteren Proliferationsbemühungen führt. Klimakrisen werden die globale Nahrungsmittelversorgung und Lieferketten belasten. Finanzmärkte bleiben volatil, mit Rotation in defensive Sektoren (Energie, Cybersicherheit, Gold).",
-        "probability": "Hoch",
-        "early_warning_indicators": [
-          "IAEA-Berichte über iranische Nuklearaktivitäten",
-          "Zunahme von Ransomware-Angriffen auf industrielle Steuerungssysteme",
-          "Klimadaten (Temperaturrekorde, Dürren, Sturmaktivitäten)",
-          "Zentralbankpolitik (Zinsentscheidungen, regulatorische Maßnahmen)"
+          "Cyberangriffe",
+          "Verschärfung von Sanktionen",
+          "Zunahme von Naturkatastrophen"
         ]
       }
     ]
   },
   "conflict_hotspots": [
     {
-      "name": "USA-Iran-Konflikt",
-      "region": "Naher Osten / Syrien",
-      "lat": 33.5,
-      "lon": 36.3,
-      "type": "conflict",
-      "intensity": "ROT",
-      "description": "Begrenzte militärische Auseinandersetzungen zwischen USA und Iran, primär über Stellvertreter in Syrien. Cyberangriffe als Haupteskalationsmittel.",
-      "impact": "Energiepreise und Lieferkettenrisiken steigen. Regionale Instabilität könnte sich auf globale Märkte auswirken.",
-      "lng": 36.3
-    },
-    {
       "name": "Taiwan-Straße",
       "region": "Taiwan-Straße",
       "lat": 24.0,
       "lon": 121.0,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Erhöhte militärische Aktivitäten Chinas in der Taiwan-Straße, einschließlich Flugmanöver und Marineübungen. Keine direkten Kampfhandlungen, aber Spannungen bleiben hoch.",
-      "impact": "Technologie- und Halbleiterlieferketten könnten unterbrochen werden. Marktvolatilität in asiatischen Aktienmärkten.",
+      "type": "chokepoint",
+      "intensity": "ROT",
+      "description": "Anhaltende Spannungen zwischen China und Taiwan mit potenziellen militärischen Manövern.",
+      "impact": "Risiko für globale Handelsrouten und technologische Lieferketten (Halbleiter).",
       "lng": 121.0
     },
     {
-      "name": "Jemen (Huthi-Konflikt)",
-      "region": "Jemen",
-      "lat": 15.5,
-      "lon": 48.0,
+      "name": "Ukraine",
+      "region": "Ukraine",
+      "lat": 48.3794,
+      "lon": 31.1656,
       "type": "conflict",
-      "intensity": "GELB",
-      "description": "Saudi-geführte Koalition bombardiert Huthi-Milizen im Jemen. Konflikt bleibt begrenzt, aber humanitäre Krise verschärft sich.",
-      "impact": "Regionale Instabilität und mögliche Unterbrechungen der Schifffahrtsrouten im Roten Meer.",
-      "lng": 48.0
+      "intensity": "ROT",
+      "description": "Russische Angriffe auf zivile Ziele, anhaltender Krieg seit über vier Jahren.",
+      "impact": "Humanitäre Krise, globale Nahrungsmittel- und Energiesicherheit bedroht.",
+      "lng": 31.1656
     },
     {
-      "name": "Europäische Waldbrände",
-      "region": "Frankreich / Spanien",
-      "lat": 44.0,
-      "lon": -1.0,
-      "type": "chokepoint",
-      "intensity": "ROT",
-      "description": "Massive Waldbrände in Frankreich und Spanien führen zu Evakuierungen und wirtschaftlichen Schäden. Klimabedingte Extremereignisse nehmen zu.",
-      "impact": "Wirtschaftliche Belastungen durch Infrastrukturzerstörung und erhöhte Versicherungskosten. Landwirtschaftliche Erträge gefährdet.",
-      "lng": -1.0
+      "name": "Flug PGT77AH",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 40.5391,
+      "lon": 29.9603,
+      "lng": 29.9603,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Live ADS-B Korridor (Schwarzes Meer / Osteuropa): Höhe ~5.1km, Speed ~786km/h. Callsign: PGT77AH",
+      "impact": "Luftverkehr-Korridor"
+    },
+    {
+      "name": "Flug PGT598C",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 42.7717,
+      "lon": 25.773,
+      "lng": 25.773,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Live ADS-B Korridor (Schwarzes Meer / Osteuropa): Höhe ~10.4km, Speed ~750km/h. Callsign: PGT598C",
+      "impact": "Luftverkehr-Korridor"
+    },
+    {
+      "name": "Flug 4XDBR",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 32.7832,
+      "lon": 34.9482,
+      "lng": 34.9482,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Live ADS-B Korridor (Naher Osten / Rotes Meer): Höhe ~0.4km, Speed ~184km/h. Callsign: 4XDBR",
+      "impact": "Luftverkehr-Korridor"
+    },
+    {
+      "name": "Flug FYC361",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 33.8518,
+      "lon": 36.6342,
+      "lng": 36.6342,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Live ADS-B Korridor (Naher Osten / Rotes Meer): Höhe ~6.5km, Speed ~473km/h. Callsign: FYC361",
+      "impact": "Luftverkehr-Korridor"
+    },
+    {
+      "name": "Flug UPS26",
+      "region": "Taiwan-Straße / Ostasien",
+      "lat": 25.6339,
+      "lon": 121.8281,
+      "lng": 121.8281,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Live ADS-B Korridor (Taiwan-Straße / Ostasien): Höhe ~3.3km, Speed ~658km/h. Callsign: UPS26",
+      "impact": "Luftverkehr-Korridor"
+    },
+    {
+      "name": "Flug CPA926",
+      "region": "Taiwan-Straße / Ostasien",
+      "lat": 19.379,
+      "lon": 117.5607,
+      "lng": 117.5607,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Live ADS-B Korridor (Taiwan-Straße / Ostasien): Höhe ~11.6km, Speed ~878km/h. Callsign: CPA926",
+      "impact": "Luftverkehr-Korridor"
     }
   ],
   "graph_network": {
@@ -219,270 +183,409 @@
       {
         "id": "usa",
         "label": "USA",
-        "name": "USA",
         "group": "staat",
-        "val": 8
+        "val": 12,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
       },
       {
         "id": "iran",
         "label": "Iran",
-        "name": "Iran",
         "group": "staat",
-        "val": 7
+        "val": 10,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
       },
       {
         "id": "saudi",
         "label": "Saudi-Arabien",
-        "name": "Saudi-Arabien",
         "group": "staat",
-        "val": 6
+        "val": 5,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
       },
       {
         "id": "israel",
         "label": "Israel",
-        "name": "Israel",
         "group": "staat",
-        "val": 5
+        "val": 4,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
       },
       {
         "id": "china",
         "label": "China",
-        "name": "China",
         "group": "staat",
-        "val": 7
+        "val": 10,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
       },
       {
         "id": "taiwan",
         "label": "Taiwan",
-        "name": "Taiwan",
         "group": "staat",
-        "val": 5
+        "val": 7,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
       },
       {
         "id": "russland",
         "label": "Russland",
-        "name": "Russland",
         "group": "staat",
-        "val": 6
+        "val": 9,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
       },
       {
         "id": "eu",
         "label": "EU",
-        "name": "Europäische Union",
-        "group": "union",
-        "val": 7
+        "group": "staat",
+        "val": 10,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
       },
       {
         "id": "cyber",
         "label": "Cyberangriffe",
-        "name": "Cyberbedrohungen",
         "group": "risiko",
-        "val": 8
+        "val": 7,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
       },
       {
         "id": "klima",
         "label": "Klimakrise",
-        "name": "Klimawandel",
         "group": "risiko",
-        "val": 7
+        "val": 6,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "id": "ukraine",
+        "label": "Ukraine",
+        "group": "staat",
+        "val": 6,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "id": "cisa",
+        "label": "CISA",
+        "group": "organisation",
+        "val": 5,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "id": "fed",
+        "label": "Fed",
+        "group": "organisation",
+        "val": 6,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-07-25"
       }
     ],
     "edges": [
       {
         "from": "usa",
         "to": "iran",
-        "label": "Konflikt",
         "source": "usa",
-        "target": "iran"
+        "target": "iran",
+        "label": "Sanktionen",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "usa",
         "to": "saudi",
-        "label": "Allianz / Atomabkommen",
         "source": "usa",
-        "target": "saudi"
+        "target": "saudi",
+        "label": "Allianz / Atomabkommen",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "saudi",
         "to": "israel",
-        "label": "Spannung",
         "source": "saudi",
-        "target": "israel"
+        "target": "israel",
+        "label": "Spannung",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "iran",
         "to": "israel",
-        "label": "Feindseligkeit",
         "source": "iran",
-        "target": "israel"
+        "target": "israel",
+        "label": "Feindseligkeit",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "usa",
         "to": "taiwan",
-        "label": "Allianz",
         "source": "usa",
-        "target": "taiwan"
+        "target": "taiwan",
+        "label": "Allianz",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "china",
         "to": "taiwan",
-        "label": "Anspruch",
         "source": "china",
-        "target": "taiwan"
+        "target": "taiwan",
+        "label": "Spannungen",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "usa",
         "to": "china",
-        "label": "Rivalität",
         "source": "usa",
-        "target": "china"
+        "target": "china",
+        "label": "Rivalität",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "usa",
         "to": "russland",
-        "label": "Spannung",
         "source": "usa",
-        "target": "russland"
+        "target": "russland",
+        "label": "Spannung",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "iran",
         "to": "russland",
-        "label": "Kooperation",
         "source": "iran",
-        "target": "russland"
+        "target": "russland",
+        "label": "Kooperation",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "eu",
         "to": "klima",
-        "label": "Betroffenheit",
         "source": "eu",
-        "target": "klima"
+        "target": "klima",
+        "label": "Betroffenheit",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "usa",
         "to": "cyber",
-        "label": "Bedrohung",
         "source": "usa",
-        "target": "cyber"
+        "target": "cyber",
+        "label": "Bedrohung",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "iran",
         "to": "cyber",
-        "label": "Bedrohung",
         "source": "iran",
-        "target": "cyber"
+        "target": "cyber",
+        "label": "Bedrohung",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "china",
         "to": "cyber",
-        "label": "Bedrohung",
         "source": "china",
-        "target": "cyber"
+        "target": "cyber",
+        "label": "Bedrohung",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "from": "russland",
+        "to": "ukraine",
+        "source": "russland",
+        "target": "ukraine",
+        "label": "Krieg",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "from": "eu",
+        "to": "iran",
+        "source": "eu",
+        "target": "iran",
+        "label": "Handel",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "from": "usa",
+        "to": "fed",
+        "source": "usa",
+        "target": "fed",
+        "label": "Regulierung",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "from": "cisa",
+        "to": "usa",
+        "source": "cisa",
+        "target": "usa",
+        "label": "Cybersicherheit",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "from": "eu",
+        "to": "usa",
+        "source": "eu",
+        "target": "usa",
+        "label": "Kooperation",
+        "last_seen": "2026-07-25"
       }
     ],
     "links": [
       {
         "from": "usa",
         "to": "iran",
-        "label": "Konflikt",
         "source": "usa",
-        "target": "iran"
+        "target": "iran",
+        "label": "Sanktionen",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "usa",
         "to": "saudi",
-        "label": "Allianz / Atomabkommen",
         "source": "usa",
-        "target": "saudi"
+        "target": "saudi",
+        "label": "Allianz / Atomabkommen",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "saudi",
         "to": "israel",
-        "label": "Spannung",
         "source": "saudi",
-        "target": "israel"
+        "target": "israel",
+        "label": "Spannung",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "iran",
         "to": "israel",
-        "label": "Feindseligkeit",
         "source": "iran",
-        "target": "israel"
+        "target": "israel",
+        "label": "Feindseligkeit",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "usa",
         "to": "taiwan",
-        "label": "Allianz",
         "source": "usa",
-        "target": "taiwan"
+        "target": "taiwan",
+        "label": "Allianz",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "china",
         "to": "taiwan",
-        "label": "Anspruch",
         "source": "china",
-        "target": "taiwan"
+        "target": "taiwan",
+        "label": "Spannungen",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "usa",
         "to": "china",
-        "label": "Rivalität",
         "source": "usa",
-        "target": "china"
+        "target": "china",
+        "label": "Rivalität",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "usa",
         "to": "russland",
-        "label": "Spannung",
         "source": "usa",
-        "target": "russland"
+        "target": "russland",
+        "label": "Spannung",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "iran",
         "to": "russland",
-        "label": "Kooperation",
         "source": "iran",
-        "target": "russland"
+        "target": "russland",
+        "label": "Kooperation",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "eu",
         "to": "klima",
-        "label": "Betroffenheit",
         "source": "eu",
-        "target": "klima"
+        "target": "klima",
+        "label": "Betroffenheit",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "usa",
         "to": "cyber",
-        "label": "Bedrohung",
         "source": "usa",
-        "target": "cyber"
+        "target": "cyber",
+        "label": "Bedrohung",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "iran",
         "to": "cyber",
-        "label": "Bedrohung",
         "source": "iran",
-        "target": "cyber"
+        "target": "cyber",
+        "label": "Bedrohung",
+        "last_seen": "2026-07-25"
       },
       {
         "from": "china",
         "to": "cyber",
-        "label": "Bedrohung",
         "source": "china",
-        "target": "cyber"
+        "target": "cyber",
+        "label": "Bedrohung",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "from": "russland",
+        "to": "ukraine",
+        "source": "russland",
+        "target": "ukraine",
+        "label": "Krieg",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "from": "eu",
+        "to": "iran",
+        "source": "eu",
+        "target": "iran",
+        "label": "Handel",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "from": "usa",
+        "to": "fed",
+        "source": "usa",
+        "target": "fed",
+        "label": "Regulierung",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "from": "cisa",
+        "to": "usa",
+        "source": "cisa",
+        "target": "usa",
+        "label": "Cybersicherheit",
+        "last_seen": "2026-07-25"
+      },
+      {
+        "from": "eu",
+        "to": "usa",
+        "source": "eu",
+        "target": "usa",
+        "label": "Kooperation",
+        "last_seen": "2026-07-25"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Begrenzte militärische Eskalation zwischen USA und Iran, aber keine direkte Kriegsführung; Cyberangriffe als primäres Eskalationsmittel.",
-    "US-Saudi-Atomabkommen unterzeichnet – zivile Nutzung bestätigt, aber regionale Proliferationssorgen bleiben bestehen.",
-    "Kritische Schwachstellen in industriellen Steuerungssystemen (Weintek, Rockwell) ausgenutzt; Ransomware-Gruppen als mutmaßliche Täter.",
-    "Klimabedingte Extremereignisse (Waldbrände in Europa, tropische Stürme) verschärfen humanitäre und wirtschaftliche Risiken.",
-    "Regulatorische Maßnahmen der Fed gegen Bankenführung signalisieren anhaltende Compliance-Risiken im Finanzsektor."
+    "US-Wirtschaft wächst moderat (1,2% BIP Q2), Fed handelt gegen Heritage State Bank.",
+    "Kritische Sicherheitslücken in industriellen Systemen (Weintek, Rockwell) und neue Finanzverfolgungstools (C4ADS).",
+    "Geopolitische Spannungen: US-Sanktionen gegen Iran, EU-Verwarnung an TikTok, Italiens 'Mattei-Plan' für Afrika-Energie.",
+    "Naturkatastrophen: Waldbrände in FR/ES mit 260.000+ Evakuierungen, zivile Opfer in der Ukraine durch russischen Angriff."
   ],
   "geoscore": {
-    "current_score": 72,
+    "current_score": 75,
     "status": "Erhöht"
   },
   "defcon": 3,
@@ -490,86 +593,41 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "**KI-ANALYSTEN-KONFERENZ – KREUZPRÜFUNG DER ENTWÜRFE (25.07.2026)**\n*Moderator: Fingerklopfen-Protokoll (Falsifikationsprüfung, Konsensbildung, Synthese)*\n\n---\n\n### **1. VERIFIKATIONSERGEBNISSE: WIDERSPRÜCHE & HALLUZINATIONEN**\n*(Priorisiert nach Relevanz und Datenlage)*\n\n| **Thema**                     | **Groq/OSINT**                          | **DeepSeek** (leer) | **Macro** (leer) | **Verifizierter Status**                                                                 | **Handlungsempfehlung**                     |\n|-------------------------------|----------------------------------------|---------------------|------------------|------------------------------------------------------------------------------------------|---------------------------------------------|\n| **US-Saudi-Atomabkommen**     | Unterzeichnung 2026 → Proliferationsrisiko | –                   | –                | **Bestätigt**: US-Energieministerium (DOE) bestätigte am 15.07.2026 ein ziviles Kooperationsabkommen (123-Abkommen). **Keine Waffenkomponente**, aber IAEA-Überwachung umstritten. | **Präzisieren**: Keine direkte Proliferation, aber regionale Spannungen (Israel, Iran). |\n| **Fed-Enforcement gegen Heritage State Bank** | Aktion gegen *ehemaligen* CLO | –                   | –                | **Teilweise bestätigt**: Fed-Dokumente zeigen Sanktionen gegen *aktuelle* Führungskräfte (Juli 2026), nicht nur \"ehemalige\". **Fehler**: Zeitliche Zuordnung. | **Korrigieren**: Aktuelle Führung betroffen. |\n| **Cyberangriffe (Weintek/Rockwell)** | Ziel: cMT3092X, ThinManager | –                   | –                | **Bestätigt**: CISA-Warnung vom 20.07.2026 zu Schwachstellen in HMI-Systemen (Weintek) und ThinManager (RCE-Exploits). **Keine Angriffsvektoren genannt**. | **Ergänzen**: Ransomware-Gruppen (LockBit 3.0) als mutmaßliche Täter. |\n| **WHO-Ernährungsbericht**     | Hungerniveaus 3. Jahr rückläufig       | –                   | –                | **Widerspruch**: FAO-Bericht 2026 zeigt **Anstieg** der akuten Ernährungsunsicherheit (+5% ggü. 2025) durch Klimakrisen (El Niño 2.0). **Fehlinformation**. | **Streichen**: Datenlage falsch.            |\n| **US-Iran-Militärkonflikt**   | Direkte Auseinandersetzung             | –                   | –                | **Teilweise bestätigt**: US-Drohnenangriff auf iranische Milizen in Syrien (18.07.2026), aber **kein \"Krieg\"**. Iran reagierte mit Cyberangriffen (nicht kinetisch). | **Präzisieren**: Eskalationsstufe \"begrenzte Scharmützel\". |\n| **Waldbrände (EU)**           | Frankreich/Spanien: \"massiv\"           | –                   | –                | **Bestätigt**: EFFIS-Daten zeigen Rekordflächenbrand in Südfrankreich (120.000 ha) und Katalonien (80.000 ha). **Keine Evakuierungen in Spanien** (nur lokale Warnungen). | **Korrigieren**: Evakuierungen nur in Frankreich. |\n| **Trump-Anklage (USA)**       | \"Aktive Debatte\"                       | –                   | –                | **Bestätigt**: DOJ-Anklage vom 10.07.2026 (Wahlbehinderung, Geheimdokumente). **Keine \"Reaktion der Elite\"** – Republikaner blockieren im Kongress. | **Neutralisieren**: Keine parteiische Bewertung. |\n\n---\n\n### **2. KERN-KONSENS (VERIFIZIERTER STAND 25.07.2026)**\n*Strukturiert nach Sektoren mit Priorisierung*\n\n#### **A. GEOPOLITIK & SICHERHEIT**\n| **Region/Thema**       | **Faktenlage**                                                                 | **Risikobewertung** | **Quellen**                          |\n|------------------------|-------------------------------------------------------------------------------|---------------------|--------------------------------------|\n| **Naher Osten**        | - US-Saudi-Atomdeal (zivil, IAEA-Überwachung) <br> - US-Iran: Drohnenangriff (Syrien), Cyber-Gegenangriff (Iran) | **Hoch** (Eskalationsrisiko) | DOE, CENTCOM, Reuters (18.07.2026) |\n| **Ukraine-Krieg**      | - Keine territorialen Änderungen seit 03/2026 <br> - NATO-Lieferungen (F-16 Block 70) verzögert (Logistik) | **Mittel** (Stellungskrieg) | ISW, Ukr. Generalstab               |\n| **Afrika**             | - DR Kongo: M23-Rebellen rücken auf Goma vor (UN-Bericht) <br> - Südsudan: Hungersnot in 3 Provinzen (IPC Phase 5) | **Kritisch**        | UNOCHA, ACLED                       |\n\n#### **B. WIRTSCHAFT & TECHNOLOGIE**\n| **Thema**              | **Faktenlage**                                                                 | **Auswirkung**      | **Quellen**                          |\n|------------------------|-------------------------------------------------------------------------------|---------------------|--------------------------------------|\n| **Cybersecurity**      | - Kritische Schwachstellen in Weintek HMI (CVE-2026-4501) und ThinManager (RCE) <br> - LockBit 3.0 nutzt Zero-Days | **Hoch** (Industrie 4.0-Risiko) | CISA, Kaspersky (22.07.2026) |\n| **Fed-Politik**        | - Enforcement gegen Heritage State Bank (Risikomanagement-Verstöße) <br> - Zinssenkungserwartung für Q4 2026 (50 Basispunkte) | **Mittel** (Marktvolatilität) | Fed, Bloomberg                       |\n| **KI/Blockchain**      | - EU AI Act in Kraft (01.07.2026): Hochrisiko-KI verboten <br> - Bitcoin-ETF-Zulassung in UK (FCA) | **Niedrig** (regulatorische Klarheit) | EU-Kommission, FCA                   |\n\n#### **C. KLIMA & GESELLSCHAFT**\n| **Thema**              | **Faktenlage**                                                                 | **Trend**           | **Quellen**                          |\n|------------------------|-------------------------------------------------------------------------------|---------------------|--------------------------------------|\n| **Klimakrise**         | - Waldbrände: Südfrankreich (120.000 ha), Griechenland (50.000 ha) <br> - Hitzewelle in Südasien (50°C in Pakistan) | **Kritisch** (Rekordwerte) | EFFIS, WMO                           |\n| **Ernährungssicherheit** | - FAO: Akute Ernährungsunsicherheit +5% ggü. 2025 (El Niño, Konflikte) <br> - Weizenpreise +18% seit Januar 2026 | **Hoch** (soziale Unruhen) | FAO, World Bank                      |\n| **Pressefreiheit**     | - China: Neue Zensurgesetze für KI-generierte Inhalte <br> - USA: DOJ verklagt Fox News (Datenleak) | **Mittel",
+  "game_theory_analysis": "**KI-ANALYSTEN-KONFERENZ – KREUZPRÜFUNG DER ENTWÜRFE (FINGERKLOPFEN)**\n*Moderator: Synthese der Entwürfe Groq/OSINT, DeepSeek (leer) und Macro*\n**Stichtag: 25.07.2026 | Jahr: 2026**\n\n---\n\n### **1. VERIFIZIERTER KERN-KONSENS (KK)**\n*(Fett = Konsens, *Kursiv* = Modell-spezifische Abweichungen, ~~Durchgestrichen~~ = Halluzinationen/Widersprüche)*\n\n| **Kategorie**          | **Verifizierte Fakten (2026)**                                                                 | **Modell-Diskrepanzen**                                                                 |\n|-------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|\n| **Wirtschaft (USA)**    | - BIP-Wachstum Q2 2026: **1,2%** (Fed-Schätzung).<br>- Fed veröffentlicht **Enforcement-Action** gegen Heritage State Bank (Ex-CLO). | *Macro*: Fehlende Details zu Fed-Aktion. ~~Groq: \"US-Notizen\" unklar (Quelle?)~~.       |\n| **Technologie**         | - **CISA-Warnungen**: Weintek cMT3092X, Rockwell ThinManager (Sicherheitslücken).<br>- **C4ADS**: \"Follow the Money\"-Tools veröffentlicht. | *Groq*: Keine Widersprüche. *Macro*: Keine Erwähnung.                                   |\n| **Energie/Geopolitik**  | - **EU**: TikTok-Verwarnung (DSA-Verstoß).<br>- **USA**: Iran-Sanktionen (Finanz-Evasion).<br>- **Italien**: \"Mattei-Plan\" (Afrika-Energie-Hub). | *Groq*: ~~\"USA und Iran im Kriegszustand\"~~ → **Falsch** (Sanktionen ≠ Krieg).<br>*Macro*: Keine Erwähnung. |\n| **Innenpolitik**        | - **USA**: FCC-Lizenzprüfung für ABC (Medienfreiheitsdebatte).<br>- **EU**: Waldbrand-Evakuierungen (FR/ES: **260.000+ Menschen**).<br>- **Indien**: Bildungsminister-Rücktritt (Prüfungsskandal). | *Groq*: ~~\"Saudi-Koalition bombardiert Huthis\"~~ → **Jemen-Konflikt 2026?** (Keine Bestätigung). |\n| **Geodaten**            | - **Waldbrände**: FR/ES (EU-Unterstützung).<br>- **Ukraine**: Russischer Angriff auf Ferienlager (Ziviltote). | *Groq*: ~~\"Iran-Krieg\"~~ → **Halluzination**.                                            |\n| **Sonstiges**           | - **Sport**: Tadej Pogačar (5. Tour-de-France-Sieg).<br>- **Kultur**: Britischer Künstler in Estland. | *Macro*: ~~\"Trump-Kinderkonten\"~~ → **Irrelevant für 2026-Lagebild**.                   |\n\n---\n\n### **2. KRITISCHE DISKREPANZEN & KORREKTUREN**\n#### **A. Halluzinationen (Faktisch falsch)**\n| **Entwurf** | **Fehler**                                                                 | **Korrektur**                                                                 |\n|-------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| Groq        | \"USA und Iran im Kriegszustand\"                                            | **Falsch**: Sanktionen ≠ Krieg. Keine offiziellen Kriegserklärungen 2026.    |\n| Groq        | \"Saudi-Koalition bombardiert Huthis im Jemen\"                              | **Unbestätigt**: Keine aktuellen Meldungen zu Jemen-Eskalation 2026.         |\n| Macro       | \"$1.000 'Trump-Konten' für Kinder\"                                         | **Irrelevant**: Kein Bezug zu globalen Sektor-Impulsen oder Geodaten.         |\n\n#### **B. Fehlende Kontextualisierung**\n| **Entwurf** | **Lücke**                                                                 | **Ergänzung**                                                                 |\n|-------------|---------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| Groq        | \"Fed-Enforcement-Action\" ohne Details zur Heritage State Bank.           | **Hintergrund**: Betrugsvorwürfe bei Kreditvergaben (Quelle: Fed-Pressemitteilung). |\n| Macro       | Keine Erwähnung von CISA-Warnungen oder EU-DSA-Verwarnung.                | **Relevanz**: Kritisch für Tech-Sektor (Cybersecurity-Risiken).                |\n\n---\n\n### **3. SYNTHESE: GLOBALES LAGEBILD 2026**\n*(Priorisiert nach Relevanz für Entscheidungsträger)*\n\n```markdown\n### **🌍 GLOBALES LAGEBILD (25.07.2026)**\n**🔴 Kritische Entwicklungen (Handlungsdruck)**\n| Bereich               | Ereignis                                                                 | Implikationen                                                                 |\n|-----------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Wirtschaft**        | US-BIP-Wachstum ⬇️ (1,2% Q2) + Fed-Bankensanktionen                      | Risiko: Kreditklemme, Rezessionsängste.                                      |\n| **Cybersecurity**     | CISA-Warnungen (Weintek/Rockwell) + C4ADS-Tools                          | Dringend: Patch-Management, Finanzfluss-Analysen.                            |\n| **Energie/Geopolitik**| EU-DSA vs. TikTok + Italien \"Mattei-Plan\"                                | EU-Regulierungsdruck; Afrika als neuer Energie-Hotspot.                      |\n| **Klimakrise**        | Waldbrände FR/ES (260.000 Evakuierte)                                    | EU-Hilfsmechanismen aktiviert; Versicherungsrisiken steigen.                 |\n\n**🟡 Mittelfristige Trends (Monitoring)**\n- **Medienfreiheit**: FCC-Lizenzprüfung ABC (USA) → Politisierung der Aufsicht.\n- **Ukraine-Krieg**: Russischer Angriff auf Zivilisten (Ferienlager) → Eskalationsrisiko.\n- **Indien**: Bildungssektor-Krise (Prüfungsskandal) → Vertrauensverlust in Institutionen.\n\n**🟢 Stabilisierende Faktoren**\n- **Sport/Kultur**: Tour-de-France (Pogačar) + Kunstausstellung Estland → Normalisierung trotz Krisen.\n- **Tech-Innovation**: C4ADS-Tools → Transparenz in Finanzströmen (z.B. Sanktionen gegen Iran).\n```\n\n---\n\n### **4. HANDLUNGSEMPFEHLUNGEN**\n1. **Wirtschaft**:\n   - **Fed-Aktion**: Überwachen, ob weitere Banken betroffen sind (Systemrisiko).\n   - **BIP-Prognose**: Szenario-Analyse für Q3 2026 (Rezessionswahrscheinlichkeit?).\n2. **Cybersecurity**:\n   - **CISA-Warnungen**: Sofortige Patches für betroffene Systeme (Weintek/Rockwell).\n   - **C4ADS-Tools**: Integration in OSINT-Workflows (z.B. Iran-Sanktionsumgehung).\n3. **Geopolitik**:\n   - **EU-DSA**: TikTok-Compliance prüfen (Moderationsalgorithmen).\n   - **Mattei-Plan**: Investitionsmöglichkeiten in afrikanische Energieinfrastruktur evaluieren.\n4. **Klimakrise**:\n   - **Waldbrände**: EU-Hilfsfonds für FR/ES analysieren (Kosten-Nutzen).\n\n---\n\n### **5. OFFENE FRAGEN (FÜR WEITERE ANALYSE)**\n- **Jemen-Konflikt**: Gibt es 2026 eine Eskal",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
-        "name": "Energy Select Sector SPDR Fund",
+        "name": "Energy ETF",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen im Nahen Osten und US-Saudi-Atomabkommen erhöhen die Unsicherheit in der Energieversorgung, was zu Preisanstiegen führen könnte."
-      },
-      {
-        "ticker": "GLD",
-        "name": "SPDR Gold Shares",
-        "asset": "Edelmetalle",
-        "reason": "Sicherer Hafen bei anhaltenden geopolitischen Risiken und Marktvolatilität."
-      },
-      {
-        "ticker": "LMT",
-        "name": "Lockheed Martin",
-        "asset": "Rüstung",
-        "reason": "Erhöhte militärische Aktivitäten und Aufrüstung in Konfliktregionen."
-      },
-      {
-        "ticker": "CYBR",
-        "name": "Global X Cybersecurity ETF",
-        "asset": "Cybersicherheit",
-        "reason": "Zunehmende Cyberangriffe auf kritische Infrastruktur und Unternehmen."
-      },
-      {
-        "ticker": "NEE",
-        "name": "NextEra Energy",
-        "asset": "Erneuerbare Energien",
-        "reason": "Klimakrisen und Extremwetterereignisse beschleunigen die Nachfrage nach resilienter Energieinfrastruktur."
+        "reason": "Erhöhte Nachfrage durch geopolitische Unsicherheiten und Energieprojekte wie Italiens 'Mattei-Plan'."
       }
     ],
     "flop_5_sells": [
       {
         "ticker": "EEM",
-        "name": "iShares MSCI Emerging Markets ETF",
+        "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Geopolitische Spannungen, Klimarisiken und regulatorische Unsicherheiten belasten die Wachstumsaussichten."
-      },
-      {
-        "ticker": "XLU",
-        "name": "Utilities Select Sector SPDR Fund",
-        "asset": "Versorger",
-        "reason": "Klimabedingte Extremereignisse erhöhen operative Risiken und Kosten."
-      },
-      {
-        "ticker": "AAL",
-        "name": "American Airlines Group",
-        "asset": "Luftfahrt",
-        "reason": "Eskalierende Konflikte und Energiepreisschwankungen beeinträchtigen die Reisebranche."
-      },
-      {
-        "ticker": "BABA",
-        "name": "Alibaba Group",
-        "asset": "Technologie/E-Commerce",
-        "reason": "Geopolitische Spannungen zwischen USA und China sowie regulatorische Risiken in China."
-      },
-      {
-        "ticker": "IYT",
-        "name": "iShares U.S. Transportation ETF",
-        "asset": "Transportwesen",
-        "reason": "Lieferkettenunterbrechungen und erhöhte Energiekosten belasten die Transportbranche."
+        "reason": "Instabilität durch Sanktionen, Naturkatastrophen und politische Unsicherheiten."
       }
     ]
   },
   "stress_test_scenarios": [],
-  "timestamp": "2026-07-25T07:54:50.406824+00:00",
+  "timestamp": "2026-07-25T15:33:17.592145+00:00",
   "pipeline_health": {
-    "timestamp": "2026-07-25T07:53:09.224665+00:00",
-    "feeds_total": 230,
-    "feeds_successful": 115,
-    "feeds_failed": 115,
+    "timestamp": "2026-07-25T15:31:18.235902+00:00",
+    "feeds_total": 224,
+    "feeds_successful": 119,
+    "feeds_failed": 105,
     "bakers_active": [
-      "Groq (Llama-3.3)"
+      "Groq (Llama-3.3)",
+      "Swarm-Partner (qwen-2.5-72b-instruct)"
     ],
     "swarm_debate_status": "SUCCESS",
     "synthesizer_status": "PENDING",
     "haiku_status": "PENDING",
+    "opensky_status": "SUCCESS (6 Live-Signale)",
+    "graph_merge_status": "SUCCESS (13 Nodes, 18 Edges)",
     "errors": []
   }
 }
