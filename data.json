@@ -1,180 +1,89 @@
 {
-  "overall_geoscore": 75,
-  "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte geopolitische Spannungen, wirtschaftliche Unsicherheit und Naturkatastrophen erfordern erhöhte Wachsamkeit.",
-  "daily_executive_summary": "Am 25.07.2026 zeigt das Lagebild eine Mischung aus wirtschaftlichen Herausforderungen, geopolitischen Spannungen und akuten Krisen. Die US-Wirtschaft verzeichnet ein moderates BIP-Wachstum von 1,2% im Q2, während die Fed gegen die Heritage State Bank vorgeht. Technologische Sicherheitslücken in industriellen Systemen (Weintek, Rockwell) und die Veröffentlichung von C4ADS-Tools zur Finanzverfolgung erhöhen das Cyberrisiko. Geopolitisch eskalieren Spannungen durch US-Sanktionen gegen den Iran und die EU-Verwarnung an TikTok. Naturkatastrophen wie Waldbrände in Frankreich und Spanien führen zu Evakuierungen von über 260.000 Menschen. In der Ukraine fordert ein russischer Angriff auf ein Ferienlager zivile Opfer.",
-  "daily_executive_summary_simple": "Wirtschaftlich stabil, aber mit Risiken. Geopolitische Spannungen und Naturkatastrophen erfordern Aufmerksamkeit. Cyberrisiken und Sanktionen prägen das globale Bild.",
-  "key_takeaways": [
-    "US-Wirtschaft wächst moderat (1,2% BIP Q2), Fed handelt gegen Heritage State Bank.",
-    "Kritische Sicherheitslücken in industriellen Systemen (Weintek, Rockwell) und neue Finanzverfolgungstools (C4ADS).",
-    "Geopolitische Spannungen: US-Sanktionen gegen Iran, EU-Verwarnung an TikTok, Italiens 'Mattei-Plan' für Afrika-Energie.",
-    "Naturkatastrophen: Waldbrände in FR/ES mit 260.000+ Evakuierungen, zivile Opfer in der Ukraine durch russischen Angriff."
-  ],
-  "market_regime": "Fragmentiert / Volatil",
-  "top_risk": "Lieferketten & Energie",
-  "equity_rotation": {
-    "top5_buys": [
-      {
-        "ticker": "XLE",
-        "name": "Energy ETF",
-        "asset": "Energie",
-        "reason": "Erhöhte Nachfrage durch geopolitische Unsicherheiten und Energieprojekte wie Italiens 'Mattei-Plan'."
-      }
-    ],
-    "flop5_sells": [
-      {
-        "ticker": "EEM",
-        "name": "Emerging Markets",
-        "asset": "Schwellenländer",
-        "reason": "Instabilität durch Sanktionen, Naturkatastrophen und politische Unsicherheiten."
-      }
-    ]
+  "ampel_reason_simple": "Erhöhte allgemeine Volatilität im geopolitischen Raum.",
+  "daily_executive_summary": "Für diesen Durchlauf liegt kein vollständiges Briefing vor.",
+  "daily_executive_summary_simple": "Für diesen Durchlauf liegt kein vollständiges Briefing vor.",
+  "key_takeaways": [],
+  "simple_key_takeaways": [],
+  "overall_geoscore": 75,
+  "geoscore": {
+    "current_score": 75,
+    "status": "Erhöht"
   },
-  "domestic_policy_matrix": [
-    {
-      "region": "USA",
-      "stability": "GELB",
-      "dynamics": "Fed-Interventionen und Medienfreiheitsdebatten (FCC-Lizenzprüfung für ABC) prägen die Innenpolitik.",
-      "spillover": "Potenzielle Auswirkungen auf globale Finanzmärkte und Medienlandschaft."
-    },
-    {
-      "region": "EU",
-      "stability": "GELB",
-      "dynamics": "Waldbrände in FR/ES und DSA-Verwarnung an TikTok belasten die Stabilität.",
-      "spillover": "Mögliche wirtschaftliche und soziale Folgen für die EU-Wirtschaft."
-    },
-    {
-      "region": "Indien",
-      "stability": "GELB",
-      "dynamics": "Rücktritt des Bildungsministers aufgrund eines Prüfungsskandals.",
-      "spillover": "Kurzfristige politische Unsicherheit, langfristige Auswirkungen auf das Bildungssystem."
-    }
-  ],
-  "historical_precedents": [
-    {
-      "event": "Kalter Krieg",
-      "current_event": "Sanktionspolitik 2026",
-      "period": "20. Jh.",
-      "similarity": "Blockbildung und wirtschaftliche Druckmittel",
-      "historical_analog": "Kubakrise 1962",
-      "takeaway": "Deeskalation durch diplomatische Kanäle und klare Kommunikation ist entscheidend."
-    }
-  ],
-  "predictive_horizon": {
-    "base_case_probability_pct": 65,
-    "base_case_summary": "Erhöhtes Risiko für Cyberangriffe auf kritische Infrastruktur und weitere wirtschaftliche Sanktionen. Naturkatastrophen könnten Lieferketten zusätzlich belasten.",
-    "leading_indicators_to_watch": [
-      {
-        "indicator": "Cyberangriffe"
-      },
-      {
-        "indicator": "Verschärfung von Sanktionen"
-      },
-      {
-        "indicator": "Zunahme von Naturkatastrophen"
-      }
-    ],
-    "horizon_list": [
-      {
-        "timeframe": "30 Tage (Taktisch)",
-        "forecast": "Erhöhtes Risiko für Cyberangriffe auf kritische Infrastruktur und weitere wirtschaftliche Sanktionen. Naturkatastrophen könnten Lieferketten zusätzlich belasten.",
-        "probability": "Mittel",
-        "early_warning_indicators": [
-          "Cyberangriffe",
-          "Verschärfung von Sanktionen",
-          "Zunahme von Naturkatastrophen"
-        ]
-      }
-    ]
+  "defcon_level": 3,
+  "defcon": 3,
+  "defcon_status": {
+    "level": 3,
+    "label": "DEFCON 3"
   },
+  "market_regime": "Geopolitische Segmentierung",
+  "top_risk": "Lieferketten & Chokepoints",
+  "game_theory_analysis": "Hier ist eine **Kreuzprüfung („Fingerklopfen“)** der von **GROQ** genannten Themen mit plausiblen Entwicklungen bis **2026**, basierend auf aktuellen Trends, historischen Mustern und makroökonomischen/geopolitischen Prognosen. Die Bewertung erfolgt nach **Plausibilität (P)**, **Wahrscheinlichkeit (W)** und **möglichen Abweichungen (A)**.\n\n---\n\n### **1. Internationale Politik**\n| **Thema** | **Plausibilität (P)** | **Wahrscheinlichkeit (W)** | **Mögliche Abweichungen (A)** | **Kommentar** |\n|-----------|----------------------|---------------------------|-------------------------------|---------------|\n| **USA erweitern Sanktionen gegen Iran (Umgehung UN-Waffenembargo)** | ⭐⭐⭐⭐ | 80% | Iran könnte mit Cyberangriffen oder Proxy-Konflikten (z. B. Jemen, Irak) reagieren. | Seit 2020 eskalieren US-Iran-Spannungen zyklisch. Ein UN-Embargo-Ende (2023) könnte neue Sanktionen provozieren. |\n| **Rücktritt iranischer Bildungsminister nach Protesten** | ⭐⭐⭐⭐ | 75% | Proteste könnten sich auf andere Ministerien ausweiten (z. B. Justiz). | Ähnliche Muster 2022/23 (Mahsa-Amini-Proteste). Bildungssektor ist oft Ziel von Unzufriedenheit. |\n| **Angriffe auf Schiffe in der Straße von Hormus** | ⭐⭐⭐⭐⭐ | 90% | Eskalation zu direkten US-Iran-Konfrontationen möglich. | Seit 2019 wiederholte Vorfälle (z. B. Tankerangriffe 2019, Drohnenangriffe 2021). |\n| **Spannungen USA-Iran** | ⭐⭐⭐⭐⭐ | 95% | Iran könnte Atomprogramm beschleunigen oder Urananreicherung erhöhen. | Keine diplomatische Entspannung in Sicht; JCPOA (Atomabkommen) bleibt tot. |\n\n**Fazit**: Sehr plausibel. Die US-Iran-Dynamik folgt einem **zyklischen Eskalationsmuster** (Sanktionen → iranische Provokationen → US-Militärschläge → Deeskalation). 2026 könnte ein **Höhepunkt** erreicht werden, besonders vor den US-Wahlen 2024/2028.\n\n---\n\n### **2. Wirtschaft & Finanzen**\n| **Thema** | **P** | **W** | **A** | **Kommentar** |\n|-----------|------|------|------|---------------|\n| **Fed senkt Wirtschaftsprognose Q2 2026** | ⭐⭐⭐⭐ | 85% | Rezessionsängste könnten zu Zinssenkungen führen. | Nach 2022/23 (Inflationsbekämpfung) folgt oft eine **„Soft Landing“-Phase** mit gedämpftem Wachstum. |\n| **Globale Schuldenkrise (Brasilien)** | ⭐⭐⭐ | 60% | Andere Schwellenländer (Argentinien, Türkei) könnten folgen. | Brasilien hat hohe Auslandsschulden und politische Instabilität (Lula vs. Bolsonaro-Nachfolger). |\n| **Nervöse Aktienmärkte (globale Abschwächung)** | ⭐⭐⭐⭐ | 80% | Tech-Blase könnte platzen (z. B. KI-Aktien). | Historisch folgt auf Zinserhöhungszyklen (2022–2024) eine **Marktkorrektur**. |\n\n**Fazit**: **Hohe Plausibilität**, besonders für eine **globale Wachstumsverlangsamung**. Die Fed könnte 2026 bereits **Zinssenkungen** einleiten, um eine Rezession zu vermeiden.\n\n---\n\n### **3. Umwelt & Katastrophen**\n| **Thema** | **P** | **W** | **A** | **Kommentar** |\n|-----------|------|------|------|---------------|\n| **Waldbrände in Frankreich/Spanien** | ⭐⭐⭐⭐⭐ | 95% | Evakuierungen könnten Millionen betreffen. | Klimawandel erhöht Häufigkeit (vgl. 2022: 785.000 ha verbrannt in EU). |\n| **Überschwemmungen in Japan** | ⭐⭐⭐⭐ | 85% | Taifune könnten noch verheerender werden. | Japan erlebt seit 2018 **rekordverdächtige Regenfälle** (z. B. Taifun Hagibis 2019). |\n| **Hurrikan-Warnung in der Karibik (NOAA)** | ⭐⭐⭐⭐ | 90% | Hurrikan-Saison 2026 könnte **überdurchschnittlich** stark sein. | Atlantische Hurrikane nehmen an Intensität zu (Klimawandel). |\n\n**Fazit**: **Sehr wahrscheinlich**. Extremwetterereignisse werden **häufiger und intensiver**. Die NOAA warnt seit Jahren vor einer **„neuen Normalität“**.\n\n---\n\n### **4. Sicherheit & Technologie**\n| **Thema** | **P** | **W** | **A** | **Kommentar** |\n|-----------|------|------|------|---------------|\n| **Sicherheitslücke in Weintek-cMT3092X** | ⭐⭐⭐ | 70% | Betrifft vor allem Industrieanlagen (z. B. Energie, Wasser). | OT-Sicherheit (Operational Technology) ist ein **wachsendes Angriffsziel** (vgl. Colonial Pipeline 2021). |\n| **CISA-Warnung zu Rockwell ThinManager** | ⭐⭐⭐⭐ | 80% | Kritische Infrastruktur (Strom, Chemie) könnte betroffen sein. | Rockwell ist ein **Schlüsselplayer in der Industrieautomation**. |\n| **Cyberangriffe auf US-Militär-Smartphones** | ⭐⭐⭐⭐ | 85% | China/Russland könnten Zero-Day-Exploits nutzen. | Seit 2020 zunehmende Angriffe auf **militärische Mobilgeräte** (z. B. SolarWinds-Hack 2020). |\n\n**Fazit**: **Sehr plausibel**. Die **Digitalisierung der Kriegsführung** (z. B. Drohnen, IoT) erhöht die Angriffsfläche. 2026 könnte ein **Jahr der Cyber-Eskalation** werden.\n\n---\n\n### **5. Gesundheit**\n| **Thema** | **P** | **W** | **A** | **Kommentar** |\n|-----------|------|------|------|---------------|\n| **Cyclospora-Ausbruch (Eisbergsalat, USA)** | ⭐⭐⭐ | 70% | Ausbrüche könnten sich auf andere Lebensmittel ausweiten. | Cyclospora-Ausbrüche **nehmen zu** (vgl. 2020: 1.200 Fälle in USA). |\n| **CDC-Warnung zur WM 2026** | ⭐⭐⭐⭐ | 90% | Massenevents bergen **Pandemie-Risiken** (z. B. neue COVID-Variante). | WM 2022 in Katar führte zu **Infektionswellen",
   "conflict_hotspots": [
     {
-      "name": "Taiwan-Straße",
-      "region": "Taiwan-Straße",
-      "lat": 24.0,
-      "lon": 121.0,
-      "type": "chokepoint",
-      "intensity": "ROT",
-      "description": "Anhaltende Spannungen zwischen China und Taiwan mit potenziellen militärischen Manövern.",
-      "impact": "Risiko für globale Handelsrouten und technologische Lieferketten (Halbleiter).",
-      "lng": 121.0
-    },
-    {
-      "name": "Ukraine",
-      "region": "Ukraine",
-      "lat": 48.3794,
-      "lon": 31.1656,
-      "type": "conflict",
-      "intensity": "ROT",
-      "description": "Russische Angriffe auf zivile Ziele, anhaltender Krieg seit über vier Jahren.",
-      "impact": "Humanitäre Krise, globale Nahrungsmittel- und Energiesicherheit bedroht.",
-      "lng": 31.1656
-    },
-    {
-      "name": "Flug PGT77AH",
+      "name": "Flug PGT362",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.5391,
-      "lon": 29.9603,
-      "lng": 29.9603,
+      "lat": 41.1813,
+      "lon": 29.7148,
+      "lng": 29.7148,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Live ADS-B Korridor (Schwarzes Meer / Osteuropa): Höhe ~5.1km, Speed ~786km/h. Callsign: PGT77AH",
+      "description": "Live ADS-B Korridor (Schwarzes Meer / Osteuropa): Höhe ~2.5km, Speed ~531km/h. Callsign: PGT362",
       "impact": "Luftverkehr-Korridor"
     },
     {
-      "name": "Flug PGT598C",
+      "name": "Flug PGT48AA",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.7717,
-      "lon": 25.773,
-      "lng": 25.773,
+      "lat": 45.1897,
+      "lon": 25.3567,
+      "lng": 25.3567,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Live ADS-B Korridor (Schwarzes Meer / Osteuropa): Höhe ~10.4km, Speed ~750km/h. Callsign: PGT598C",
+      "description": "Live ADS-B Korridor (Schwarzes Meer / Osteuropa): Höhe ~10.7km, Speed ~929km/h. Callsign: PGT48AA",
       "impact": "Luftverkehr-Korridor"
     },
     {
-      "name": "Flug 4XDBR",
+      "name": "Flug NSZ4401",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.7832,
-      "lon": 34.9482,
-      "lng": 34.9482,
+      "lat": 34.893,
+      "lon": 33.7842,
+      "lng": 33.7842,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Live ADS-B Korridor (Naher Osten / Rotes Meer): Höhe ~0.4km, Speed ~184km/h. Callsign: 4XDBR",
+      "description": "Live ADS-B Korridor (Naher Osten / Rotes Meer): Höhe ~1.2km, Speed ~430km/h. Callsign: NSZ4401",
       "impact": "Luftverkehr-Korridor"
     },
     {
-      "name": "Flug FYC361",
+      "name": "Flug IAW146",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.8518,
-      "lon": 36.6342,
-      "lng": 36.6342,
+      "lat": 30.9097,
+      "lon": 36.272,
+      "lng": 36.272,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Live ADS-B Korridor (Naher Osten / Rotes Meer): Höhe ~6.5km, Speed ~473km/h. Callsign: FYC361",
+      "description": "Live ADS-B Korridor (Naher Osten / Rotes Meer): Höhe ~11.3km, Speed ~947km/h. Callsign: IAW146",
       "impact": "Luftverkehr-Korridor"
     },
     {
-      "name": "Flug UPS26",
+      "name": "Flug UAE367",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.6339,
-      "lon": 121.8281,
-      "lng": 121.8281,
+      "lat": 19.4654,
+      "lon": 118.2457,
+      "lng": 118.2457,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Live ADS-B Korridor (Taiwan-Straße / Ostasien): Höhe ~3.3km, Speed ~658km/h. Callsign: UPS26",
+      "description": "Live ADS-B Korridor (Taiwan-Straße / Ostasien): Höhe ~11.0km, Speed ~935km/h. Callsign: UAE367",
       "impact": "Luftverkehr-Korridor"
     },
     {
-      "name": "Flug CPA926",
+      "name": "Flug JJP81",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 19.379,
-      "lon": 117.5607,
-      "lng": 117.5607,
+      "lat": 15.6606,
+      "lon": 122.2697,
+      "lng": 122.2697,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Live ADS-B Korridor (Taiwan-Straße / Ostasien): Höhe ~11.6km, Speed ~878km/h. Callsign: CPA926",
+      "description": "Live ADS-B Korridor (Taiwan-Straße / Ostasien): Höhe ~8.7km, Speed ~745km/h. Callsign: JJP81",
       "impact": "Luftverkehr-Korridor"
     }
   ],
@@ -184,7 +93,7 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 12,
+        "val": 11,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -192,7 +101,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -200,7 +109,7 @@
         "id": "saudi",
         "label": "Saudi-Arabien",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -208,7 +117,7 @@
         "id": "israel",
         "label": "Israel",
         "group": "staat",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -216,7 +125,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -224,7 +133,7 @@
         "id": "taiwan",
         "label": "Taiwan",
         "group": "staat",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -232,7 +141,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 9,
+        "val": 8,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -240,7 +149,7 @@
         "id": "eu",
         "label": "EU",
         "group": "staat",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -248,7 +157,7 @@
         "id": "cyber",
         "label": "Cyberangriffe",
         "group": "risiko",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -256,7 +165,7 @@
         "id": "klima",
         "label": "Klimakrise",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -264,7 +173,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -272,7 +181,7 @@
         "id": "cisa",
         "label": "CISA",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -280,7 +189,7 @@
         "id": "fed",
         "label": "Fed",
         "group": "organisation",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       }
@@ -578,56 +487,23 @@
       }
     ]
   },
-  "simple_key_takeaways": [
-    "US-Wirtschaft wächst moderat (1,2% BIP Q2), Fed handelt gegen Heritage State Bank.",
-    "Kritische Sicherheitslücken in industriellen Systemen (Weintek, Rockwell) und neue Finanzverfolgungstools (C4ADS).",
-    "Geopolitische Spannungen: US-Sanktionen gegen Iran, EU-Verwarnung an TikTok, Italiens 'Mattei-Plan' für Afrika-Energie.",
-    "Naturkatastrophen: Waldbrände in FR/ES mit 260.000+ Evakuierungen, zivile Opfer in der Ukraine durch russischen Angriff."
-  ],
-  "geoscore": {
-    "current_score": 75,
-    "status": "Erhöht"
-  },
-  "defcon": 3,
-  "defcon_status": {
-    "level": 3,
-    "label": "DEFCON 3"
-  },
-  "game_theory_analysis": "**KI-ANALYSTEN-KONFERENZ – KREUZPRÜFUNG DER ENTWÜRFE (FINGERKLOPFEN)**\n*Moderator: Synthese der Entwürfe Groq/OSINT, DeepSeek (leer) und Macro*\n**Stichtag: 25.07.2026 | Jahr: 2026**\n\n---\n\n### **1. VERIFIZIERTER KERN-KONSENS (KK)**\n*(Fett = Konsens, *Kursiv* = Modell-spezifische Abweichungen, ~~Durchgestrichen~~ = Halluzinationen/Widersprüche)*\n\n| **Kategorie**          | **Verifizierte Fakten (2026)**                                                                 | **Modell-Diskrepanzen**                                                                 |\n|-------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|\n| **Wirtschaft (USA)**    | - BIP-Wachstum Q2 2026: **1,2%** (Fed-Schätzung).<br>- Fed veröffentlicht **Enforcement-Action** gegen Heritage State Bank (Ex-CLO). | *Macro*: Fehlende Details zu Fed-Aktion. ~~Groq: \"US-Notizen\" unklar (Quelle?)~~.       |\n| **Technologie**         | - **CISA-Warnungen**: Weintek cMT3092X, Rockwell ThinManager (Sicherheitslücken).<br>- **C4ADS**: \"Follow the Money\"-Tools veröffentlicht. | *Groq*: Keine Widersprüche. *Macro*: Keine Erwähnung.                                   |\n| **Energie/Geopolitik**  | - **EU**: TikTok-Verwarnung (DSA-Verstoß).<br>- **USA**: Iran-Sanktionen (Finanz-Evasion).<br>- **Italien**: \"Mattei-Plan\" (Afrika-Energie-Hub). | *Groq*: ~~\"USA und Iran im Kriegszustand\"~~ → **Falsch** (Sanktionen ≠ Krieg).<br>*Macro*: Keine Erwähnung. |\n| **Innenpolitik**        | - **USA**: FCC-Lizenzprüfung für ABC (Medienfreiheitsdebatte).<br>- **EU**: Waldbrand-Evakuierungen (FR/ES: **260.000+ Menschen**).<br>- **Indien**: Bildungsminister-Rücktritt (Prüfungsskandal). | *Groq*: ~~\"Saudi-Koalition bombardiert Huthis\"~~ → **Jemen-Konflikt 2026?** (Keine Bestätigung). |\n| **Geodaten**            | - **Waldbrände**: FR/ES (EU-Unterstützung).<br>- **Ukraine**: Russischer Angriff auf Ferienlager (Ziviltote). | *Groq*: ~~\"Iran-Krieg\"~~ → **Halluzination**.                                            |\n| **Sonstiges**           | - **Sport**: Tadej Pogačar (5. Tour-de-France-Sieg).<br>- **Kultur**: Britischer Künstler in Estland. | *Macro*: ~~\"Trump-Kinderkonten\"~~ → **Irrelevant für 2026-Lagebild**.                   |\n\n---\n\n### **2. KRITISCHE DISKREPANZEN & KORREKTUREN**\n#### **A. Halluzinationen (Faktisch falsch)**\n| **Entwurf** | **Fehler**                                                                 | **Korrektur**                                                                 |\n|-------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| Groq        | \"USA und Iran im Kriegszustand\"                                            | **Falsch**: Sanktionen ≠ Krieg. Keine offiziellen Kriegserklärungen 2026.    |\n| Groq        | \"Saudi-Koalition bombardiert Huthis im Jemen\"                              | **Unbestätigt**: Keine aktuellen Meldungen zu Jemen-Eskalation 2026.         |\n| Macro       | \"$1.000 'Trump-Konten' für Kinder\"                                         | **Irrelevant**: Kein Bezug zu globalen Sektor-Impulsen oder Geodaten.         |\n\n#### **B. Fehlende Kontextualisierung**\n| **Entwurf** | **Lücke**                                                                 | **Ergänzung**                                                                 |\n|-------------|---------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| Groq        | \"Fed-Enforcement-Action\" ohne Details zur Heritage State Bank.           | **Hintergrund**: Betrugsvorwürfe bei Kreditvergaben (Quelle: Fed-Pressemitteilung). |\n| Macro       | Keine Erwähnung von CISA-Warnungen oder EU-DSA-Verwarnung.                | **Relevanz**: Kritisch für Tech-Sektor (Cybersecurity-Risiken).                |\n\n---\n\n### **3. SYNTHESE: GLOBALES LAGEBILD 2026**\n*(Priorisiert nach Relevanz für Entscheidungsträger)*\n\n```markdown\n### **🌍 GLOBALES LAGEBILD (25.07.2026)**\n**🔴 Kritische Entwicklungen (Handlungsdruck)**\n| Bereich               | Ereignis                                                                 | Implikationen                                                                 |\n|-----------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Wirtschaft**        | US-BIP-Wachstum ⬇️ (1,2% Q2) + Fed-Bankensanktionen                      | Risiko: Kreditklemme, Rezessionsängste.                                      |\n| **Cybersecurity**     | CISA-Warnungen (Weintek/Rockwell) + C4ADS-Tools                          | Dringend: Patch-Management, Finanzfluss-Analysen.                            |\n| **Energie/Geopolitik**| EU-DSA vs. TikTok + Italien \"Mattei-Plan\"                                | EU-Regulierungsdruck; Afrika als neuer Energie-Hotspot.                      |\n| **Klimakrise**        | Waldbrände FR/ES (260.000 Evakuierte)                                    | EU-Hilfsmechanismen aktiviert; Versicherungsrisiken steigen.                 |\n\n**🟡 Mittelfristige Trends (Monitoring)**\n- **Medienfreiheit**: FCC-Lizenzprüfung ABC (USA) → Politisierung der Aufsicht.\n- **Ukraine-Krieg**: Russischer Angriff auf Zivilisten (Ferienlager) → Eskalationsrisiko.\n- **Indien**: Bildungssektor-Krise (Prüfungsskandal) → Vertrauensverlust in Institutionen.\n\n**🟢 Stabilisierende Faktoren**\n- **Sport/Kultur**: Tour-de-France (Pogačar) + Kunstausstellung Estland → Normalisierung trotz Krisen.\n- **Tech-Innovation**: C4ADS-Tools → Transparenz in Finanzströmen (z.B. Sanktionen gegen Iran).\n```\n\n---\n\n### **4. HANDLUNGSEMPFEHLUNGEN**\n1. **Wirtschaft**:\n   - **Fed-Aktion**: Überwachen, ob weitere Banken betroffen sind (Systemrisiko).\n   - **BIP-Prognose**: Szenario-Analyse für Q3 2026 (Rezessionswahrscheinlichkeit?).\n2. **Cybersecurity**:\n   - **CISA-Warnungen**: Sofortige Patches für betroffene Systeme (Weintek/Rockwell).\n   - **C4ADS-Tools**: Integration in OSINT-Workflows (z.B. Iran-Sanktionsumgehung).\n3. **Geopolitik**:\n   - **EU-DSA**: TikTok-Compliance prüfen (Moderationsalgorithmen).\n   - **Mattei-Plan**: Investitionsmöglichkeiten in afrikanische Energieinfrastruktur evaluieren.\n4. **Klimakrise**:\n   - **Waldbrände**: EU-Hilfsfonds für FR/ES analysieren (Kosten-Nutzen).\n\n---\n\n### **5. OFFENE FRAGEN (FÜR WEITERE ANALYSE)**\n- **Jemen-Konflikt**: Gibt es 2026 eine Eskal",
-  "stock_picks": {
-    "top_5_buys": [
-      {
-        "ticker": "XLE",
-        "name": "Energy ETF",
-        "asset": "Energie",
-        "reason": "Erhöhte Nachfrage durch geopolitische Unsicherheiten und Energieprojekte wie Italiens 'Mattei-Plan'."
-      }
-    ],
-    "flop_5_sells": [
-      {
-        "ticker": "EEM",
-        "name": "Emerging Markets",
-        "asset": "Schwellenländer",
-        "reason": "Instabilität durch Sanktionen, Naturkatastrophen und politische Unsicherheiten."
-      }
-    ]
-  },
-  "stress_test_scenarios": [],
-  "timestamp": "2026-07-25T15:33:17.592145+00:00",
+  "timestamp": "2026-07-25T16:54:29.455515+00:00",
   "pipeline_health": {
-    "timestamp": "2026-07-25T15:31:18.235902+00:00",
+    "timestamp": "2026-07-25T16:52:21.286331+00:00",
     "feeds_total": 224,
-    "feeds_successful": 119,
-    "feeds_failed": 105,
+    "feeds_successful": 114,
+    "feeds_failed": 110,
+    "gdelt_articles": 35,
+    "telegram_posts": 0,
     "bakers_active": [
       "Groq (Llama-3.3)",
-      "Swarm-Partner (qwen-2.5-72b-instruct)"
+      "qwen-2.5-72b-instruct"
     ],
     "swarm_debate_status": "SUCCESS",
     "synthesizer_status": "PENDING",
     "haiku_status": "PENDING",
-    "opensky_status": "SUCCESS (6 Live-Signale)",
-    "graph_merge_status": "SUCCESS (13 Nodes, 18 Edges)",
+    "opensky_status": "SUCCESS (6 Signale)",
+    "graph_merge_status": "SUCCESS (13 Nodes)",
     "errors": []
   }
 }
