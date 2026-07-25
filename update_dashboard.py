@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """
 ARGUS GRID v3.0 - Full Spectrum Multi-LLM Intelligence Engine Backend
-Erfasst: Geopolitik, Spieltheorie, Sektor-Rotation (Top/Flop 5), 
-Innenpolitik-Matrix, Historische Parallelen, Prädiktiver Horizont & Karten-Hotspots.
+Kollaboratives Multi-LLM-System ("Kuchenbacken-Architektur"):
+- Parallele Sprints (Groq, DeepSeek, Qwen/Grok)
+- Peer-Debatte & Fingerklopfen ("Kreuzprüfung")
+- Synthese für Sektor-Rotation (Top/Flop 5), Innenpolitik, Historische Parallelen, Prognostik & Tactical Radar.
+- Erzeugt 100% abwärtskompatibles JSON für das klassische und neue Dashboard-Design (Jahr 2026).
 """
 
 import os
@@ -136,33 +139,56 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
     if not isinstance(data, dict):
         data = {}
 
-    data["ampel_status"] = data.get("ampel_status") or "GELB"
-    data["ampel_reason_simple"] = data.get("ampel_reason_simple") or "Erhöhte geopolitische Spannungen."
-    data["daily_executive_summary"] = data.get("daily_executive_summary") or "Lagedaten werden verarbeitet."
-    data["daily_executive_summary_simple"] = data.get("daily_executive_summary_simple") or "Lagedaten werden verarbeitet."
+    # 1. Grundlegende Ampel & Texte
+    data["ampel_status"] = (data.get("ampel_status") or "GELB").upper()
+    data["ampel_reason_simple"] = data.get("ampel_reason_simple") or "Erhöhte allgemeine Volatilität im geopolitischen Raum."
+    data["daily_executive_summary"] = data.get("daily_executive_summary") or "Für diesen Durchlauf liegt kein vollständiges Briefing vor."
+    data["daily_executive_summary_simple"] = data.get("daily_executive_summary_simple") or data["daily_executive_summary"]
 
-    geoscore = data.get("overall_geoscore") or data.get("geoscore") or 50
-    defcon = data.get("defcon_level") or data.get("defcon") or 3
+    # 2. Key Takeaways Dual-Mapping
+    takeaways = data.get("key_takeaways") or data.get("simple_key_takeaways") or []
+    if not isinstance(takeaways, list):
+        takeaways = []
+    data["key_takeaways"] = takeaways
+    data["simple_key_takeaways"] = takeaways
 
-    try:
-        data["overall_geoscore"] = int(geoscore)
-        data["geoscore"] = int(geoscore)
-    except (ValueError, TypeError):
-        data["overall_geoscore"] = 50
-        data["geoscore"] = 50
+    # 3. Geoscore & DEFCON Dual-Mapping
+    geoscore_val = data.get("overall_geoscore") or data.get("geoscore") or 75
+    if isinstance(geoscore_val, dict):
+        geoscore_num = geoscore_val.get("current_score", 75)
+    else:
+        try:
+            geoscore_num = int(geoscore_val)
+        except (ValueError, TypeError):
+            geoscore_num = 75
 
-    try:
-        data["defcon_level"] = int(defcon)
-        data["defcon"] = int(defcon)
-    except (ValueError, TypeError):
-        data["defcon_level"] = 3
-        data["defcon"] = 3
+    data["overall_geoscore"] = geoscore_num
+    data["geoscore"] = {"current_score": geoscore_num, "status": "Erhöht"}
 
+    defcon_val = data.get("defcon_level") or data.get("defcon") or 3
+    if isinstance(defcon_val, dict):
+        defcon_num = 3
+        defcon_label = defcon_val.get("label", "DEFCON 3")
+    else:
+        try:
+            defcon_num = int(defcon_val)
+        except (ValueError, TypeError):
+            defcon_num = 3
+        defcon_label = f"DEFCON {defcon_num}"
+
+    data["defcon_level"] = defcon_num
+    data["defcon"] = defcon_num
+    data["defcon_status"] = {"level": defcon_num, "label": defcon_label}
+
+    data["market_regime"] = data.get("market_regime") or "Geopolitische Segmentierung"
+    data["top_risk"] = data.get("top_risk") or "Lieferketten & Chokepoints"
+
+    # 4. Schwarm-Debatte
     ds_clean = debate_summary.strip() if debate_summary else ""
     text_content = ds_clean if ds_clean else "Keine spezifische Spieltheorie-Debatte erfasst."
     data["game_theory_analysis"] = data.get("game_theory_analysis") or text_content
 
-    # Hotspots mit Type-Sicherung
+    # 5. Hotspots mit Typen-Sicherung
     hotspots = data.get("conflict_hotspots", [])
     if isinstance(hotspots, list):
         for h in hotspots:
@@ -171,12 +197,16 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
                     h["lng"] = h["lon"]
                 if "lon" not in h and "lng" in h:
                     h["lon"] = h["lng"]
+                if "region" not in h and "name" in h:
+                    h["region"] = h["name"]
+                if "impact" not in h and "description" in h:
+                    h["impact"] = h["description"]
                 if "type" not in h:
                     h["type"] = "conflict"
     else:
         data["conflict_hotspots"] = []
 
-    # Graph-Netzwerk
+    # 6. Graph-Netzwerk
     gn = data.get("graph_network", {})
     if isinstance(gn, dict):
         nodes = gn.get("nodes", [])
@@ -190,6 +220,7 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
                     n["id"] = node_id
                     n["name"] = n.get("name") or n.get("label") or node_id
                     n["label"] = n.get("label") or n["name"]
+                    n["group"] = n.get("group", "actor")
                     if node_id:
                         valid_nodes.append(n)
         
@@ -210,20 +241,74 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str) -> dict:
     else:
         data["graph_network"] = {"nodes": [], "edges": [], "links": []}
 
-    # Arrays absichern
-    for array_key in ["predictive_horizon", "historical_precedents", "domestic_policy_matrix", "stress_test_scenarios", "key_takeaways"]:
+    # 7. Historische Parallelen Dual-Mapping
+    hist = data.get("historical_precedents", [])
+    if isinstance(hist, list):
+        for h in hist:
+            if isinstance(h, dict):
+                if "current_event" not in h and "event" in h:
+                    h["current_event"] = h["event"]
+                if "historical_analog" not in h and "similarity" in h:
+                    h["historical_analog"] = f"{h.get('period', '')}: {h['similarity']}"
+    else:
+        data["historical_precedents"] = []
+
+    # 8. Stock Picks / Equity Rotation Dual-Mapping
+    eq = data.get("equity_rotation", {})
+    stock_picks = data.get("stock_picks", {})
+    
+    buys = eq.get("top5_buys") or stock_picks.get("top_5_buys") or []
+    sells = eq.get("flop5_sells") or stock_picks.get("flop_5_sells") or []
+
+    formatted_buys = []
+    for b in buys:
+        if isinstance(b, dict):
+            formatted_buys.append({
+                "ticker": b.get("ticker") or b.get("asset") or "BUY",
+                "name": b.get("name") or b.get("asset") or "Sektor",
+                "asset": b.get("asset") or b.get("name") or "Sektor",
+                "reason": b.get("reason") or "Positiver Makro-Impuls"
+            })
+
+    formatted_sells = []
+    for s in sells:
+        if isinstance(s, dict):
+            formatted_sells.append({
+                "ticker": s.get("ticker") or s.get("asset") or "SELL",
+                "name": s.get("name") or s.get("asset") or "Sektor",
+                "asset": s.get("asset") or s.get("name") or "Sektor",
+                "reason": s.get("reason") or "Erhöhtes Georisiko"
+            })
+
+    data["equity_rotation"] = {"top5_buys": formatted_buys, "flop5_sells": formatted_sells}
+    data["stock_picks"] = {"top_5_buys": formatted_buys, "flop_5_sells": formatted_sells}
+
+    # 9. Predictive Horizon
+    ph = data.get("predictive_horizon", [])
+    if isinstance(ph, dict):
+        pass
+    elif isinstance(ph, list) and len(ph) > 0:
+        first_item = ph[0]
+        indicators = first_item.get("early_warning_indicators", [])
+        ind_list = [{"indicator": ind} if isinstance(ind, str) else ind for ind in indicators]
+        data["predictive_horizon"] = {
+            "base_case_probability_pct": 65,
+            "base_case_summary": first_item.get("forecast", "Stabile Trendfortsetzung."),
+            "leading_indicators_to_watch": ind_list,
+            "horizon_list": ph
+        }
+    else:
+        data["predictive_horizon"] = {
+            "base_case_probability_pct": 60,
+            "base_case_summary": "Lagedaten werden ausgewertet.",
+            "leading_indicators_to_watch": [],
+            "horizon_list": []
+        }
+
+    # Sonstige Arrays absichern
+    for array_key in ["domestic_policy_matrix", "stress_test_scenarios"]:
         if array_key not in data or not isinstance(data[array_key], list):
             data[array_key] = []
-
-    # Market Rotation Object
-    eq = data.get("equity_rotation", {})
-    if not isinstance(eq, dict):
-        eq = {}
-    if "top5_buys" not in eq or not isinstance(eq["top5_buys"], list):
-        eq["top5_buys"] = []
-    if "flop5_sells" not in eq or not isinstance(eq["flop5_sells"], list):
-        eq["flop5_sells"] = []
-    data["equity_rotation"] = eq
 
     data["timestamp"] = datetime.now(timezone.utc).isoformat()
     data["pipeline_health"] = pipeline_health
@@ -422,34 +507,34 @@ def call_synthesizer(debate_result: str, raw_payload: str) -> dict:
         f"DEBATTE:\n{debate_result[:2500]}\n\nFEEDS:\n{raw_payload[:2500]}\n\n"
         "ERFORDERLICHE JSON-STRUKTUR:\n"
         "{\n"
-        '  "overall_geoscore": int (0-100),\n'
-        '  "geoscore": int (0-100),\n'
-        '  "defcon_level": int (1-5),\n'
-        '  "defcon": int (1-5),\n'
+        '  "overall_geoscore": 75,\n'
+        '  "defcon_level": 3,\n'
         '  "ampel_status": "GRÜN" | "GELB" | "ROT",\n'
         '  "ampel_reason_simple": "...",\n'
         '  "daily_executive_summary": "...",\n'
         '  "daily_executive_summary_simple": "...",\n'
-        '  "key_takeaways": ["..."],\n'
+        '  "key_takeaways": ["Punkt 1", "Punkt 2", "Punkt 3"],\n'
+        '  "market_regime": "Fragmentiert / Volatil",\n'
+        '  "top_risk": "Lieferketten & Energie",\n'
         '  "equity_rotation": {\n'
-        '    "top5_buys": [{"asset": "Sektor/Aktie/ETF", "reason": "..."}],\n'
-        '    "flop5_sells": [{"asset": "Sektor/Aktie/ETF", "reason": "..."}]\n'
+        '    "top5_buys": [{"ticker": "XLE", "name": "Energy ETF", "asset": "Energie", "reason": "..."}],\n'
+        '    "flop5_sells": [{"ticker": "EEM", "name": "Emerging Markets", "asset": "Schwellenländer", "reason": "..."}]\n'
         '  },\n'
         '  "domestic_policy_matrix": [\n'
-        '    {"region": "USA/EU/China/BRICS/Nahost", "stability": "ROT/GELB/GRÜN", "dynamics": "...", "spillover": "..."}\n'
+        '    {"region": "USA", "stability": "GELB", "dynamics": "...", "spillover": "..."}\n'
         '  ],\n'
         '  "historical_precedents": [\n'
-        '    {"event": "Historisches Ereignis", "period": "Jahr/Epoche", "similarity": "Parallele zu 2026", "takeaway": "Erkenntnis für heute"}\n'
+        '    {"event": "Kalter Krieg", "current_event": "Sanktionspolitik 2026", "period": "20. Jh.", "similarity": "Blockbildung", "historical_analog": "Kubakrise 1962", "takeaway": "Deeskalation via Kanäle"}\n'
         '  ],\n'
         '  "predictive_horizon": [\n'
-        '    {"timeframe": "30 Tage (Taktisch)", "forecast": "...", "probability": "Hoch/Mittel/Niedrig", "early_warning_indicators": ["..."]}\n'
+        '    {"timeframe": "30 Tage (Taktisch)", "forecast": "...", "probability": "Mittel", "early_warning_indicators": ["Cyberangriffe"]}\n'
         '  ],\n'
         '  "conflict_hotspots": [\n'
-        '    {"name": "...", "lat": float, "lon": float, "type": "chokepoint/maritime/refugee/conflict", "intensity": "ROT/GELB", "description": "..."}\n'
+        '    {"name": "Taiwan-Straße", "region": "Taiwan-Straße", "lat": 24.0, "lon": 121.0, "type": "flight" | "ship" | "refugee" | "chokepoint" | "conflict", "intensity": "ROT", "description": "...", "impact": "..."}\n'
         '  ],\n'
         '  "graph_network": {\n'
-        '    "nodes": [{"id": "...", "label": "...", "group": "...", "val": 5}],\n'
-        '    "edges": [{"from": "...", "to": "...", "label": "..."}]\n'
+        '    "nodes": [{"id": "usa", "label": "USA", "name": "USA", "group": "staat", "val": 8}],\n'
+        '    "edges": [{"from": "usa", "to": "taiwan", "label": "Allianz"}]\n'
         '  }\n'
         "}"
     )
