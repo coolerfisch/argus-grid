@@ -31,9 +31,18 @@ logging.basicConfig(
     handlers=[logging.StreamHandler(sys.stdout)]
 )
 
-MAX_FEED_WORKERS = 40
-FEED_TIMEOUT = 8
+# ============================================================
+# FEED-FETCHER KONSTANTEN (verbessert)
+# ============================================================
+MAX_FEED_WORKERS = 20          # vorher 40 – weniger Aggression = stabiler
+FEED_TIMEOUT = 12              # vorher 8
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+FEED_HEADERS = {
+    "User-Agent": USER_AGENT,
+    "Accept": "application/rss+xml, application/xml, text/xml, application/atom+xml, */*",
+    "Accept-Language": "en-US,en;q=0.9,de;q=0.8",
+    "Cache-Control": "no-cache",
+}
 
 CURRENT_DATE_STR = datetime.now(timezone.utc).strftime("%d.%m.%Y")
 CURRENT_YEAR = datetime.now(timezone.utc).year
@@ -323,20 +332,38 @@ def fetch_single_feed(source: dict) -> list:
     bias = source.get("bias", "NEUTRAL")
     weight = source.get("weight", 1.0)
 
+    if not url or not isinstance(url, str):
+        logging.warning(f"[FEED] {name}: keine gültige URL")
+        return []
+
+    # Manche Quellen haben Markdown-Reste in der URL (Copy-Paste-Fehler)
+    url = url.strip().strip("[]()")
+
     articles = []
-    headers = {"User-Agent": USER_AGENT}
 
     try:
-        response = requests.get(url, headers=headers, timeout=FEED_TIMEOUT)
+        response = requests.get(url, headers=FEED_HEADERS, timeout=FEED_TIMEOUT, allow_redirects=True)
+
         if response.status_code != 200:
+            logging.debug(f"[FEED] {name}: HTTP {response.status_code}")
+            return []
+
+        # Content-Type grob prüfen
+        content_type = response.headers.get("Content-Type", "").lower()
+        if "html" in content_type and "xml" not in content_type and "rss" not in content_type:
+            logging.debug(f"[FEED] {name}: scheint HTML statt Feed zu sein")
             return []
 
         parsed = feedparser.parse(response.content)
 
+        if getattr(parsed, "bozo", False) and not parsed.entries:
+            logging.debug(f"[FEED] {name}: Parse-Fehler ({getattr(parsed, 'bozo_exception', '')})")
+            return []
+
         for entry in parsed.entries[:8]:
-            title = entry.get("title", "").strip()
-            summary = entry.get("summary", entry.get("description", "")).strip()
-            link = entry.get("link", "").strip()
+            title = (entry.get("title") or "").strip()
+            summary = (entry.get("summary") or entry.get("description") or "").strip()
+            link = (entry.get("link") or "").strip()
             summary_clean = re.sub(r"<[^>]+>", "", summary)[:300]
 
             if title:
@@ -349,8 +376,17 @@ def fetch_single_feed(source: dict) -> list:
                     "bias": bias,
                     "weight": weight
                 })
+
         return articles
-    except Exception:
+
+    except requests.exceptions.Timeout:
+        logging.debug(f"[FEED] {name}: Timeout")
+        return []
+    except requests.exceptions.RequestException as e:
+        logging.debug(f"[FEED] {name}: Request-Fehler ({type(e).__name__})")
+        return []
+    except Exception as e:
+        logging.debug(f"[FEED] {name}: Unerwarteter Fehler ({e})")
         return []
 
 
@@ -359,22 +395,39 @@ def fetch_all_feeds(sources_list: list) -> list:
     all_articles = []
     successful_feeds = 0
     failed_feeds = 0
+    failed_names = []
 
-    logging.info(f"Starte Feed-Ingestion für {len(sources_list)} Quellen...")
+    logging.info(f"Starte Feed-Ingestion für {len(sources_list)} Quellen (Workers={MAX_FEED_WORKERS}, Timeout={FEED_TIMEOUT}s)...")
 
     with ThreadPoolExecutor(max_workers=MAX_FEED_WORKERS) as executor:
         future_to_source = {executor.submit(fetch_single_feed, src): src for src in sources_list}
+
         for future in as_completed(future_to_source):
-            res = future.result()
-            if res:
-                all_articles.extend(res)
-                successful_feeds += 1
-            else:
+            src = future_to_source[future]
+            name = src.get("name", "Unknown")
+            try:
+                res = future.result()
+                if res:
+                    all_articles.extend(res)
+                    successful_feeds += 1
+                else:
+                    failed_feeds += 1
+                    failed_names.append(name)
+            except Exception as e:
                 failed_feeds += 1
+                failed_names.append(name)
+                logging.debug(f"[FEED] {name}: Future-Exception ({e})")
 
     pipeline_health["feeds_successful"] = successful_feeds
     pipeline_health["feeds_failed"] = failed_feeds
-    logging.info(f"Ingestion beendet: {len(all_articles)} Artikel geladen.")
+
+    logging.info(f"Ingestion beendet: {successful_feeds}/{len(sources_list)} Feeds erfolgreich → {len(all_articles)} Artikel")
+
+    if failed_names:
+        preview = ", ".join(failed_names[:20])
+        more = f" (+{len(failed_names)-20} weitere)" if len(failed_names) > 20 else ""
+        logging.info(f"Fehlgeschlagene Quellen (Auszug): {preview}{more}")
+
     return all_articles
 
 
