@@ -11,6 +11,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
+    /* ── LIGHT (default) ── */
     :root {
       --paper: #f7f5f0;
       --paper-2: #efece5;
@@ -24,6 +25,32 @@
       --green: #166534;
       --blue: #1e40af;
       --mark: #fef3c7;
+      --tag-buy-bg: #dcfce7;
+      --tag-sell-bg: #fee2e2;
+      --map-bg: #e8e6e0;
+      --overlay: rgba(26,26,24,0.5);
+      --md-bg: #efece5;
+    }
+
+    /* ── DARK ── */
+    [data-theme="dark"] {
+      --paper: #12110f;
+      --paper-2: #1c1b18;
+      --ink: #f0ede6;
+      --ink-2: #c8c4ba;
+      --ink-3: #8a867c;
+      --rule: #2e2c28;
+      --rule-strong: #e8e4da;
+      --red: #f87171;
+      --amber: #fbbf24;
+      --green: #4ade80;
+      --blue: #60a5fa;
+      --mark: #3d3420;
+      --tag-buy-bg: #14532d;
+      --tag-sell-bg: #7f1d1d;
+      --map-bg: #1a1916;
+      --overlay: rgba(0,0,0,0.7);
+      --md-bg: #1c1b18;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,9 +62,9 @@
       font-size: 15px;
       line-height: 1.55;
       min-height: 100vh;
+      transition: background 0.25s, color 0.25s;
     }
 
-    /* ── MASTHEAD ── */
     .masthead {
       border-bottom: 3px solid var(--rule-strong);
       padding: 18px 28px 14px;
@@ -119,7 +146,6 @@
       color: var(--paper);
     }
 
-    /* ── PAGE ── */
     .page {
       max-width: 1100px;
       margin: 0 auto;
@@ -129,7 +155,6 @@
     body.simple .deep { display: none !important; }
     body:not(.simple) .lite { display: none !important; }
 
-    /* ── ALERT BANNER ── */
     .alert {
       display: grid;
       grid-template-columns: 48px 1fr;
@@ -166,10 +191,7 @@
     }
     .alert p { color: var(--ink-2); font-size: 14px; }
 
-    /* ── SECTION ── */
-    .section {
-      margin-bottom: 36px;
-    }
+    .section { margin-bottom: 36px; }
 
     .section-label {
       font-family: 'JetBrains Mono', monospace;
@@ -200,7 +222,6 @@
       color: var(--ink);
     }
 
-    /* ── KEY POINTS ── */
     .keypoints {
       display: grid;
       grid-template-columns: 1fr;
@@ -224,7 +245,6 @@
     }
     .kp .txt { font-size: 14.5px; color: var(--ink-2); }
 
-    /* ── FORECAST BOX ── */
     .forecast-box {
       background: var(--paper-2);
       border-left: 4px solid var(--ink);
@@ -249,7 +269,6 @@
       font-weight: 600;
     }
 
-    /* ── HISTORY ── */
     .hist-list { display: grid; gap: 0; border-top: 1px solid var(--rule); }
     .hist-item {
       padding: 14px 0;
@@ -261,10 +280,7 @@
       font-size: 15px;
       margin-bottom: 3px;
     }
-    .hist-item .analog {
-      font-size: 13.5px;
-      color: var(--ink-2);
-    }
+    .hist-item .analog { font-size: 13.5px; color: var(--ink-2); }
     .hist-item .take {
       font-family: 'JetBrains Mono', monospace;
       font-size: 12px;
@@ -272,7 +288,6 @@
       margin-top: 4px;
     }
 
-    /* ── METRICS ROW ── */
     .metrics {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -301,7 +316,6 @@
     }
     .metric .val.sm { font-size: 15px; font-weight: 600; }
 
-    /* ── REGION GRID ── */
     .regions {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -317,10 +331,7 @@
       align-items: center;
       margin-bottom: 6px;
     }
-    .region .name {
-      font-weight: 700;
-      font-size: 14px;
-    }
+    .region .name { font-weight: 700; font-size: 14px; }
     .stab {
       font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
@@ -330,12 +341,11 @@
     }
     .region .dyn { font-size: 13px; color: var(--ink-2); }
 
-    /* ── MAP / GRAPH ── */
     #hotspot-map, #knowledge-graph {
       height: 420px;
       width: 100%;
       border: 1px solid var(--rule-strong);
-      background: #e8e6e0;
+      background: var(--map-bg);
     }
 
     .legend {
@@ -348,7 +358,6 @@
       margin-bottom: 8px;
     }
 
-    /* ── TABLE ── */
     .table-wrap { overflow-x: auto; }
     table {
       width: 100%;
@@ -379,10 +388,9 @@
       font-weight: 500;
       padding: 2px 6px;
     }
-    .tag.buy { background: #dcfce7; color: var(--green); }
-    .tag.sell { background: #fee2e2; color: var(--red); }
+    .tag.buy { background: var(--tag-buy-bg); color: var(--green); }
+    .tag.sell { background: var(--tag-sell-bg); color: var(--red); }
 
-    /* ── MARKDOWN ── */
     .md {
       font-size: 13.5px;
       line-height: 1.6;
@@ -391,7 +399,7 @@
       overflow-y: auto;
       border: 1px solid var(--rule);
       padding: 16px;
-      background: var(--paper-2);
+      background: var(--md-bg);
     }
     .md table { width: 100%; border-collapse: collapse; margin: 10px 0; }
     .md th {
@@ -413,12 +421,11 @@
       padding: 8px 0;
     }
 
-    /* ── MODAL ── */
     .overlay {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(26,26,24,0.5);
+      background: var(--overlay);
       z-index: 300;
       justify-content: center;
       align-items: center;
@@ -443,7 +450,6 @@
     .dialog ul { margin-left: 18px; color: var(--ink-2); font-size: 14px; line-height: 1.8; }
     .dialog li strong { color: var(--ink); }
 
-    /* ── MAP ICONS ── */
     .ri {
       display: flex;
       align-items: center;
@@ -453,10 +459,15 @@
       width: 24px; height: 24px;
       border: 2px solid;
     }
-    .ri-c { background: #fee2e2; border-color: var(--red); }
-    .ri-f { background: #dbeafe; border-color: var(--blue); }
-    .ri-s { background: #fef3c7; border-color: var(--amber); }
+    .ri-c { background: #fee2e2; border-color: #b91c1c; }
+    .ri-f { background: #dbeafe; border-color: #1e40af; }
+    .ri-s { background: #fef3c7; border-color: #a16207; }
     .ri-r { background: #ede9fe; border-color: #6d28d9; }
+
+    [data-theme="dark"] .ri-c { background: #7f1d1d; border-color: #f87171; }
+    [data-theme="dark"] .ri-f { background: #1e3a8a; border-color: #60a5fa; }
+    [data-theme="dark"] .ri-s { background: #78350f; border-color: #fbbf24; }
+    [data-theme="dark"] .ri-r { background: #4c1d95; border-color: #a78bfa; }
 
     footer {
       max-width: 1100px;
@@ -490,6 +501,7 @@
   <div class="mast-right">
     <div class="health" id="health-badge">…</div>
     <button class="btn ghost" onclick="openModal()">Quellen</button>
+    <button class="btn ghost" id="theme-btn" onclick="toggleTheme()" title="Dark/Light Mode">☾</button>
     <div class="modes">
       <button id="btn-simple" class="active" onclick="setMode('simple')">Briefing</button>
       <button id="btn-detailed" onclick="setMode('detailed')">Analyse</button>
@@ -499,7 +511,6 @@
 
 <div class="page">
 
-  <!-- ALERT -->
   <div class="alert">
     <div class="lights">
       <div id="ampel-red" class="dot r"></div>
@@ -512,9 +523,7 @@
     </div>
   </div>
 
-  <!-- ══ BRIEFING ══ -->
   <div class="lite">
-
     <div class="section">
       <div class="section-label">Lagebild</div>
       <p class="lede" id="simple-summary-text"></p>
@@ -536,12 +545,9 @@
       <div class="section-label">Historische Parallelen</div>
       <div id="simple-historical-container" class="hist-list"></div>
     </div>
-
   </div>
 
-  <!-- ══ ANALYSE ══ -->
   <div class="deep">
-
     <div class="section">
       <div class="section-label">Executive Briefing</div>
       <p class="lede" id="exec-summary"></p>
@@ -580,11 +586,11 @@
       <div class="section-label">
         Kaskaden-Netzwerk
         <span class="legend" style="border:none;padding:0;margin:0">
-          <span style="color:#1e40af">● Staat</span>
-          <span style="color:#b91c1c">● Konflikt</span>
-          <span style="color:#166534">● Institution</span>
+          <span style="color:var(--blue)">● Staat</span>
+          <span style="color:var(--red)">● Konflikt</span>
+          <span style="color:var(--green)">● Institution</span>
           <span style="color:#6d28d9">● Tech</span>
-          <span style="color:#a16207">● Thema</span>
+          <span style="color:var(--amber)">● Thema</span>
         </span>
       </div>
       <div id="knowledge-graph"></div>
@@ -611,13 +617,11 @@
         </table>
       </div>
     </div>
-
   </div>
 </div>
 
 <footer>ARGUS GRID · Systemic Intelligence Engine · v3.0</footer>
 
-<!-- MODAL -->
 <div class="overlay" id="sources-modal" onclick="closeModal(event)">
   <div class="dialog" onclick="event.stopPropagation()">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
@@ -635,7 +639,33 @@
 </div>
 
 <script>
-let map=null, networkInstance=null, globalData=null;
+let map=null, networkInstance=null, globalData=null, mapLayer=null;
+
+/* ── Theme ── */
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('argus-theme', theme);
+  document.getElementById('theme-btn').textContent = theme === 'dark' ? '☀' : '☾';
+  // Karte neu laden mit passenden Tiles
+  if (map && mapLayer) {
+    map.removeLayer(mapLayer);
+    const tiles = theme === 'dark'
+      ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+      : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+    mapLayer = L.tileLayer(tiles, { maxZoom: 18, noWrap: true }).addTo(map);
+  }
+}
+
+function toggleTheme() {
+  const cur = document.documentElement.getAttribute('data-theme') || 'light';
+  applyTheme(cur === 'dark' ? 'light' : 'dark');
+}
+
+(function initTheme() {
+  const saved = localStorage.getItem('argus-theme');
+  const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(saved || (preferDark ? 'dark' : 'light'));
+})();
 
 function cleanText(v){
   if(v==null)return'';
@@ -803,6 +833,10 @@ function initKnowledgeGraph(gd){
   const re=Array.isArray(gd?.edges)?gd.edges:(gd?.links||[]);
   if(!rn.length){c.innerHTML='<div class="empty" style="padding:30px;text-align:center">Kein Netzwerk.</div>';return}
 
+  const isDark=document.documentElement.getAttribute('data-theme')==='dark';
+  const fontColor=isDark?'#f0ede6':'#1a1a18';
+  const strokeColor=isDark?'#12110f':'#f7f5f0';
+
   const nodes=new vis.DataSet(rn.map(n=>{
     const lbl=cleanText(n.label||n.name||n.id);
     const val=n.val||5;
@@ -811,7 +845,7 @@ function initKnowledgeGraph(gd){
       title:`<b>${lbl}</b><br>Gewicht: ${val}${n.first_seen?' · seit '+n.first_seen:''}${n.last_seen?' · zuletzt '+n.last_seen:''}`,
       shape:'dot',size:Math.max(14,val*2.5),
       color:getNodeColor(n.group,lbl),
-      font:{color:'#1a1a18',size:13,face:'Source Sans 3, system-ui',bold:true,strokeWidth:3,strokeColor:'#f7f5f0'},
+      font:{color:fontColor,size:13,face:'Source Sans 3, system-ui',bold:true,strokeWidth:3,strokeColor:strokeColor},
       borderWidth:2
     };
   }));
@@ -819,8 +853,8 @@ function initKnowledgeGraph(gd){
   const edges=new vis.DataSet(re.map(e=>({
     from:e.from||e.source,to:e.to||e.target,
     label:cleanText(e.label||''),
-    color:{color:'#a8a49a',highlight:'#6b6b63'},width:1.4,
-    font:{color:'#3d3d38',size:11,strokeWidth:2,strokeColor:'#f7f5f0',align:'middle'},
+    color:{color:isDark?'#4a4840':'#a8a49a',highlight:isDark?'#8a867c':'#6b6b63'},width:1.4,
+    font:{color:isDark?'#c8c4ba':'#3d3d38',size:11,strokeWidth:2,strokeColor:strokeColor,align:'middle'},
     smooth:{type:'continuous'}
   })));
 
@@ -837,7 +871,12 @@ function initMap(hotspots){
   const c=document.getElementById('hotspot-map');
   if(!c||map)return;
   map=L.map('hotspot-map',{minZoom:2}).setView([20,0],2);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:18,noWrap:true}).addTo(map);
+
+  const isDark=document.documentElement.getAttribute('data-theme')==='dark';
+  const tiles=isDark
+    ?'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+    :'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+  mapLayer=L.tileLayer(tiles,{maxZoom:18,noWrap:true}).addTo(map);
 
   (hotspots||[]).forEach(h=>{
     let lat=parseFloat(h.lat),lng=parseFloat(h.lng??h.lon);
@@ -853,7 +892,7 @@ function initMap(hotspots){
     L.marker([lat,lng],{
       icon:L.divIcon({className:`ri ${cls}`,html:`<span>${sym}</span>`,iconSize:[24,24],iconAnchor:[12,12]})
     }).addTo(map).bindPopup(
-      `<div style="font-family:Source Sans 3,sans-serif;font-size:13px;max-width:200px">
+      `<div style="font-family:Source Sans 3,sans-serif;font-size:13px;max-width:200px;color:#1a1a18">
         <b>${sym} ${cleanText(h.name||h.region)}</b><br>
         <span style="color:#3d3d38;font-size:12px">${cleanText(h.description||'')}</span>
         ${h.impact?`<div style="margin-top:4px;font-size:11px;color:#a16207;font-family:monospace">${cleanText(h.impact)}</div>`:''}
