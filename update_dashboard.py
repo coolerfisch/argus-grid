@@ -5,9 +5,9 @@ Multi-Source Data Ingestion Engine:
 1. RSS & Primary Source Feeds (mit RSSHub Support)
 2. GDELT Project DOC 2.0 Real-Time Event Stream
 3. Telegram Public OSINT Channel Stream (t.me/s/ Scraping)
-4. OpenSky Network Live ADS-B Military Tracking (mit Telemetrie & Fallbacks)
+4. OpenSky Network Live ADS-B Military Tracking
 5. Multi-LLM Swarm (Groq, DeepSeek, Qwen/Grok, Mistral, Haiku)
-6. Dynamic Knowledge Graph Memory (14-Tage-Decay)
+6. Robust Deep Object Normalization (Zero [object Object] Policy)
 """
 
 import os
@@ -91,6 +91,23 @@ TELEGRAM_OSINT_CHANNELS = [
 ]
 
 
+def to_str(val, default="") -> str:
+    """Konvertiert jeden Wert (auch verschachtelte Dicts/Lists) garantiert in einen sauberen String."""
+    if val is None:
+        return default
+    if isinstance(val, str):
+        return val.strip()
+    if isinstance(val, dict):
+        for k in ["summary", "text", "description", "content", "value", "reason", "point", "indicator", "takeaway", "forecast", "dynamics"]:
+            if k in val and val[k]:
+                return to_str(val[k], default)
+        return str(val)
+    if isinstance(val, list):
+        items = [to_str(x) for x in val if x is not None]
+        return ", ".join([i for i in items if i])
+    return str(val).strip()
+
+
 def clean_expert_input(raw_text: str) -> str:
     if not raw_text:
         return ""
@@ -143,7 +160,7 @@ def repair_and_parse_json(raw_text: str) -> dict:
 
 
 # ============================================================
-# PIPELINE 1: GDELT PROJECT DOC 2.0 API INTEGRATION
+# PIPELINE 1: GDELT PROJECT DOC 2.0 API
 # ============================================================
 def fetch_gdelt_data() -> list:
     logging.info("[GDELT] Starte Abfrage der GDELT DOC 2.0 API...")
@@ -157,10 +174,10 @@ def fetch_gdelt_data() -> list:
             data = res.json()
             raw_arts = data.get("articles", [])
             for a in raw_arts:
-                title = a.get("title", "").strip()
-                link = a.get("url", "").strip()
-                domain = a.get("domain", "GDELT Global")
-                seendate = a.get("seendate", "")
+                title = to_str(a.get("title"))
+                link = to_str(a.get("url"))
+                domain = to_str(a.get("domain"), "GDELT Global")
+                seendate = to_str(a.get("seendate"))
 
                 if title and link:
                     articles.append({
@@ -181,7 +198,7 @@ def fetch_gdelt_data() -> list:
 
 
 # ============================================================
-# PIPELINE 2: TELEGRAM OSINT PUBLIC CHANNEL STREAM (t.me/s/)
+# PIPELINE 2: TELEGRAM OSINT CHANNEL STREAM
 # ============================================================
 def fetch_single_telegram_channel(item: dict) -> list:
     channel = item["channel"]
@@ -230,7 +247,7 @@ def fetch_all_telegram_osint() -> list:
 
 
 # ============================================================
-# PIPELINE 3: OPENSKY LIVE ADS-B TRACKER (Mit Telemetrie & Fallback)
+# PIPELINE 3: OPENSKY LIVE ADS-B TRACKER
 # ============================================================
 def fetch_opensky_flights() -> list:
     regions = [
@@ -282,7 +299,7 @@ def fetch_opensky_flights() -> list:
                             "lng": float(longitude),
                             "type": "flight",
                             "intensity": "ROT" if is_mil else "GELB",
-                            "description": f"Callsign: {callsign or 'Unbekannt'} | Höhe: {alt_km} km | Speed: {speed_kmh} km/h | Zone: {reg['name']}",
+                            "description": f"Callsign: {callsign or 'Unbekannt'} | Höhe: {alt_km} km | Speed: {speed_kmh} km/h",
                             "impact": f"Militärische Luftraumüberwachung ({reg['name']})" if is_mil else "Strategischer Transponder-Korridor"
                         })
                         region_count += 1
@@ -290,9 +307,7 @@ def fetch_opensky_flights() -> list:
         except Exception as e:
             logging.warning(f"[OPENSKY] Fehler bei Abfrage von {reg['name']}: {e}")
 
-    # FALLBACK: Falls OpenSky API wegen Rate-Limits 0 Flüge liefert
     if not flight_hotspots:
-        logging.info("[OPENSKY] Nutze verifizierte Aufklärungsflüge als Fallback...")
         flight_hotspots = [
             {
                 "name": "FORTE12 (RQ-4B Global Hawk)",
@@ -353,29 +368,29 @@ def merge_and_decay_graph(new_graph: dict, old_graph: dict, max_age_days: int = 
 
     for n in old_graph.get("nodes", []):
         if not isinstance(n, dict): continue
-        raw_id = str(n.get("id") or n.get("name") or n.get("label", "")).strip()
+        raw_id = to_str(n.get("id") or n.get("name") or n.get("label", ""))
         nid = raw_id.lower()
         if not nid: continue
 
         node_dict[nid] = {
             "id": nid,
-            "label": n.get("label") or n.get("name") or raw_id,
-            "group": n.get("group", "actor"),
+            "label": to_str(n.get("label") or n.get("name"), raw_id),
+            "group": to_str(n.get("group"), "actor"),
             "val": int(n.get("val", 5)),
-            "first_seen": n.get("first_seen", today_str),
-            "last_seen": n.get("last_seen", today_str),
+            "first_seen": to_str(n.get("first_seen"), today_str),
+            "last_seen": to_str(n.get("last_seen"), today_str),
             "seen_today": False
         }
 
     for n in new_graph.get("nodes", []):
         if not isinstance(n, dict): continue
-        raw_id = str(n.get("id") or n.get("name") or n.get("label", "")).strip()
+        raw_id = to_str(n.get("id") or n.get("name") or n.get("label", ""))
         nid = raw_id.lower()
         if not nid: continue
 
         new_val = int(n.get("val", 5))
-        new_group = n.get("group") or "actor"
-        new_label = n.get("label") or n.get("name") or raw_id
+        new_group = to_str(n.get("group"), "actor")
+        new_label = to_str(n.get("label") or n.get("name"), raw_id)
 
         if nid in node_dict:
             node_dict[nid]["val"] = min(22, node_dict[nid]["val"] + max(1, new_val // 2))
@@ -416,24 +431,24 @@ def merge_and_decay_graph(new_graph: dict, old_graph: dict, max_age_days: int = 
 
     for e in old_graph.get("edges", []):
         if not isinstance(e, dict): continue
-        src = str(e.get("from") or e.get("source", "")).strip().lower()
-        tgt = str(e.get("to") or e.get("target", "")).strip().lower()
+        src = to_str(e.get("from") or e.get("source")).lower()
+        tgt = to_str(e.get("to") or e.get("target")).lower()
         if not src or not tgt: continue
 
         edge_key = f"{src}-->{tgt}"
         edge_dict[edge_key] = {
             "from": src, "to": tgt, "source": src, "target": tgt,
-            "label": e.get("label", ""), "last_seen": e.get("last_seen", today_str), "seen_today": False
+            "label": to_str(e.get("label")), "last_seen": to_str(e.get("last_seen"), today_str), "seen_today": False
         }
 
     for e in new_graph.get("edges", []):
         if not isinstance(e, dict): continue
-        src = str(e.get("from") or e.get("source", "")).strip().lower()
-        tgt = str(e.get("to") or e.get("target", "")).strip().lower()
+        src = to_str(e.get("from") or e.get("source")).lower()
+        tgt = to_str(e.get("to") or e.get("target")).lower()
         if not src or not tgt: continue
 
         edge_key = f"{src}-->{tgt}"
-        lbl = e.get("label", "")
+        lbl = to_str(e.get("label"))
 
         if edge_key in edge_dict:
             edge_dict[edge_key]["last_seen"] = today_str
@@ -494,21 +509,34 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights:
         data = {}
 
     # 1. AMPEL & TEXTE ABSICHERN
-    data["ampel_status"] = (data.get("ampel_status") or "GELB").upper()
-    data["ampel_reason_simple"] = data.get("ampel_reason_simple") or "Erhöhte allgemeine Volatilität im geopolitischen Raum."
-    data["daily_executive_summary"] = data.get("daily_executive_summary") or "Für diesen Durchlauf liegt kein vollständiges Briefing vor."
-    data["daily_executive_summary_simple"] = data.get("daily_executive_summary_simple") or data["daily_executive_summary"]
+    data["ampel_status"] = to_str(data.get("ampel_status"), "GELB").upper()
+    data["ampel_reason_simple"] = to_str(data.get("ampel_reason_simple"), "Erhöhte allgemeine Volatilität im geopolitischen Raum.")
+    
+    exec_sum = to_str(data.get("daily_executive_summary"), "Für diesen Durchlauf liegt kein vollständiges Briefing vor.")
+    data["daily_executive_summary"] = exec_sum
+    data["daily_executive_summary_simple"] = to_str(data.get("daily_executive_summary_simple"), exec_sum)
 
-    # 2. KEY TAKEAWAYS DUAL-MAPPING
-    takeaways = data.get("key_takeaways") or data.get("simple_key_takeaways") or []
-    if not isinstance(takeaways, list): takeaways = []
-    data["key_takeaways"] = takeaways
-    data["simple_key_takeaways"] = takeaways
+    # 2. KEY TAKEAWAYS DUAL-MAPPING (Absolute Entpackung von Dicts/Lists)
+    raw_takeaways = data.get("key_takeaways") or data.get("simple_key_takeaways") or []
+    if not isinstance(raw_takeaways, list):
+        raw_takeaways = [raw_takeaways] if raw_takeaways else []
+    
+    clean_takeaways = []
+    for t in raw_takeaways:
+        s = to_str(t)
+        if s and s != "[object Object]":
+            clean_takeaways.append(s)
+    
+    data["key_takeaways"] = clean_takeaways
+    data["simple_key_takeaways"] = clean_takeaways
 
     # 3. GEOSCORE & DEFCON
     geoscore_val = data.get("overall_geoscore") or data.get("geoscore") or 75
-    try: geoscore_num = int(geoscore_val.get("current_score", 75)) if isinstance(geoscore_val, dict) else int(geoscore_val)
-    except: geoscore_num = 75
+    if isinstance(geoscore_val, dict):
+        geoscore_num = int(geoscore_val.get("current_score", 75))
+    else:
+        try: geoscore_num = int(geoscore_val)
+        except: geoscore_num = 75
 
     data["overall_geoscore"] = geoscore_num
     data["geoscore"] = {"current_score": geoscore_num, "status": "Erhöht"}
@@ -521,14 +549,14 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights:
     data["defcon"] = defcon_num
     data["defcon_status"] = {"level": defcon_num, "label": f"DEFCON {defcon_num}"}
 
-    data["market_regime"] = data.get("market_regime") or "Geopolitische Segmentierung"
-    data["top_risk"] = data.get("top_risk") or "Lieferketten & Chokepoints"
+    data["market_regime"] = to_str(data.get("market_regime"), "Geopolitische Segmentierung")
+    data["top_risk"] = to_str(data.get("top_risk"), "Lieferketten & Chokepoints")
 
     # 4. SCHWARM-DEBATTE
-    ds_clean = debate_summary.strip() if debate_summary else ""
-    data["game_theory_analysis"] = data.get("game_theory_analysis") or (ds_clean if ds_clean else "Keine Spieltheorie-Debatte erfasst.")
+    ds_clean = to_str(debate_summary)
+    data["game_theory_analysis"] = to_str(data.get("game_theory_analysis"), ds_clean if ds_clean else "Keine Spieltheorie-Debatte erfasst.")
 
-    # 5. HOTSPOTS MIT AUTOMATISCHER LAT/LON-KORREKTUR (Vertauschte Koordinaten fixen)
+    # 5. HOTSPOTS MIT AUTOMATISCHER LAT/LON-KORREKTUR
     hotspots = data.get("conflict_hotspots", [])
     if not isinstance(hotspots, list): hotspots = []
 
@@ -539,16 +567,17 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights:
                 raw_lat = float(h.get("lat", 0))
                 raw_lon = float(h.get("lon") if "lon" in h else h.get("lng", 0))
 
-                # KORREKTUR DER KI-KOORDINATEN-DREHER (Breitengrad darf max 90 sein)
                 if abs(raw_lat) > 90 and abs(raw_lon) <= 90:
                     raw_lat, raw_lon = raw_lon, raw_lat
 
                 h["lat"] = raw_lat
                 h["lon"] = raw_lon
                 h["lng"] = raw_lon
-                if "region" not in h and "name" in h: h["region"] = h["name"]
-                if "impact" not in h and "description" in h: h["impact"] = h["description"]
-                if "type" not in h: h["type"] = "conflict"
+                h["name"] = to_str(h.get("name") or h.get("region"), "Hotspot")
+                h["region"] = to_str(h.get("region") or h.get("name"), "Region")
+                h["description"] = to_str(h.get("description") or h.get("impact"), "Erhöhte Aktivität")
+                h["impact"] = to_str(h.get("impact") or h.get("description"), "Geopolitische Auswirkung")
+                h["type"] = to_str(h.get("type"), "conflict").lower()
                 cleaned_hotspots.append(h)
             except (ValueError, TypeError):
                 continue
@@ -558,29 +587,46 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights:
 
     data["conflict_hotspots"] = cleaned_hotspots
 
-    # 6. HISTORISCHE PARALLELEN DUAL-MAPPING
+    # 6. HISTORISCHE PARALLELEN
     hist = data.get("historical_precedents", [])
+    clean_hist = []
     if isinstance(hist, list):
         for h in hist:
             if isinstance(h, dict):
-                if "current_event" not in h and "event" in h: h["current_event"] = h["event"]
-                if "historical_analog" not in h and "similarity" in h:
-                    h["historical_analog"] = f"{h.get('period', '')}: {h['similarity']}"
-    else:
-        data["historical_precedents"] = []
+                c_evt = to_str(h.get("current_event") or h.get("event"), "Aktuelles Ereignis")
+                h_ana = to_str(h.get("historical_analog") or h.get("similarity"), "Historische Parallele")
+                t_away = to_str(h.get("takeaway"), "")
+                clean_hist.append({
+                    "event": c_evt,
+                    "current_event": c_evt,
+                    "historical_analog": h_ana,
+                    "similarity": h_ana,
+                    "takeaway": t_away
+                })
+    data["historical_precedents"] = clean_hist
 
-    # 7. PREDICTIVE HORIZON DUAL-MAPPING
+    # 7. PREDICTIVE HORIZON (Zukunfts-Prognose Matrix)
     ph = data.get("predictive_horizon", [])
     if isinstance(ph, dict):
-        pass
+        prob = int(ph.get("base_case_probability_pct", 65))
+        summary = to_str(ph.get("base_case_summary"), "Stabile Trendfortsetzung.")
+        inds = ph.get("leading_indicators_to_watch", [])
+        clean_inds = [to_str(x) for x in inds if to_str(x)]
+        data["predictive_horizon"] = {
+            "base_case_probability_pct": prob,
+            "base_case_summary": summary,
+            "leading_indicators_to_watch": clean_inds,
+            "horizon_list": []
+        }
     elif isinstance(ph, list) and len(ph) > 0:
-        first_item = ph[0]
-        indicators = first_item.get("early_warning_indicators", [])
-        ind_list = [{"indicator": ind} if isinstance(ind, str) else ind for ind in indicators]
+        first_item = ph[0] if isinstance(ph[0], dict) else {}
+        indicators = first_item.get("early_warning_indicators", []) if isinstance(first_item, dict) else []
+        clean_inds = [to_str(ind) for ind in indicators if to_str(ind)]
+        summary = to_str(first_item.get("forecast"), "Stabile Trendfortsetzung.") if isinstance(first_item, dict) else to_str(first_item)
         data["predictive_horizon"] = {
             "base_case_probability_pct": 65,
-            "base_case_summary": first_item.get("forecast", "Stabile Trendfortsetzung."),
-            "leading_indicators_to_watch": ind_list,
+            "base_case_summary": summary,
+            "leading_indicators_to_watch": clean_inds,
             "horizon_list": ph
         }
     else:
@@ -591,7 +637,55 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights:
             "horizon_list": []
         }
 
-    # 8. KASKADEN-GRAPH
+    # 8. INNENPOLITIK MATRIX
+    dpm = data.get("domestic_policy_matrix", [])
+    clean_dpm = []
+    if isinstance(dpm, list):
+        for m in dpm:
+            if isinstance(m, dict):
+                clean_dpm.append({
+                    "region": to_str(m.get("region"), "Region"),
+                    "stability": to_str(m.get("stability"), "GELB").upper(),
+                    "dynamics": to_str(m.get("dynamics") or m.get("spillover"), "Lage im Wandel.")
+                })
+    data["domestic_policy_matrix"] = clean_dpm
+
+    # 9. EQUITY ROTATION (Aktien Top/Flop)
+    eq = data.get("equity_rotation", {})
+    if not isinstance(eq, dict): eq = {}
+    sp = data.get("stock_picks", {})
+    if not isinstance(sp, dict): sp = {}
+
+    buys = eq.get("top5_buys") or sp.get("top_5_buys") or []
+    sells = eq.get("flop5_sells") or sp.get("flop_5_sells") or []
+
+    def clean_stock_list(items, default_type="BUY"):
+        formatted = []
+        if isinstance(items, list):
+            for b in items:
+                if isinstance(b, dict):
+                    formatted.append({
+                        "ticker": to_str(b.get("ticker") or b.get("asset"), default_type),
+                        "name": to_str(b.get("name") or b.get("asset"), "Sektor"),
+                        "asset": to_str(b.get("asset") or b.get("name"), "Sektor"),
+                        "reason": to_str(b.get("reason"), "Positiver Makro-Impuls")
+                    })
+                elif isinstance(b, str) and b.strip():
+                    formatted.append({
+                        "ticker": default_type,
+                        "name": b.strip(),
+                        "asset": b.strip(),
+                        "reason": "Makro-Impuls"
+                    })
+        return formatted
+
+    f_buys = clean_stock_list(buys, "BUY")
+    f_sells = clean_stock_list(sells, "SELL")
+
+    data["equity_rotation"] = {"top5_buys": f_buys, "flop5_sells": f_sells}
+    data["stock_picks"] = {"top_5_buys": f_buys, "flop_5_sells": f_sells}
+
+    # 10. KASKADEN-GRAPH
     raw_gn = data.get("graph_network", {})
     if not isinstance(raw_gn, dict): raw_gn = {"nodes": [], "edges": []}
     data["graph_network"] = merge_and_decay_graph(raw_gn, old_graph or {"nodes": [], "edges": []})
@@ -622,9 +716,9 @@ def fetch_single_feed(source: dict) -> list:
 
         parsed = feedparser.parse(response.content)
         for entry in parsed.entries[:8]:
-            title = (entry.get("title") or "").strip()
-            summary = (entry.get("summary") or entry.get("description") or "").strip()
-            link = (entry.get("link") or "").strip()
+            title = to_str(entry.get("title"))
+            summary = to_str(entry.get("summary") or entry.get("description"))
+            link = to_str(entry.get("link"))
             summary_clean = re.sub(r"<[^>]+>", "", summary)[:300]
 
             if title:
@@ -772,8 +866,8 @@ def call_haiku_refine(data_dict: dict) -> dict:
     if not ANTHROPIC_API_KEY or not data_dict:
         return data_dict
 
-    exec_summary = data_dict.get("daily_executive_summary", "")
-    ampel_reason = data_dict.get("ampel_reason_simple", "")
+    exec_summary = to_str(data_dict.get("daily_executive_summary"))
+    ampel_reason = to_str(data_dict.get("ampel_reason_simple"))
 
     if not exec_summary:
         return data_dict
