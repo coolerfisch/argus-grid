@@ -11,7 +11,6 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-    /* ── LIGHT (default) ── */
     :root {
       --paper: #f7f5f0;
       --paper-2: #efece5;
@@ -29,10 +28,8 @@
       --tag-sell-bg: #fee2e2;
       --map-bg: #e8e6e0;
       --overlay: rgba(26,26,24,0.5);
-      --md-bg: #efece5;
     }
 
-    /* ── DARK ── */
     [data-theme="dark"] {
       --paper: #12110f;
       --paper-2: #1c1b18;
@@ -50,7 +47,6 @@
       --tag-sell-bg: #7f1d1d;
       --map-bg: #1a1916;
       --overlay: rgba(0,0,0,0.7);
-      --md-bg: #1c1b18;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -251,12 +247,6 @@
       padding: 16px 20px;
       margin-top: 8px;
     }
-    .forecast-box .prob {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      color: var(--ink-3);
-      margin-bottom: 6px;
-    }
     .forecast-box .warn-line {
       margin-top: 12px;
       padding-top: 10px;
@@ -355,7 +345,6 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
       color: var(--ink-3);
-      margin-bottom: 8px;
     }
 
     .table-wrap { overflow-x: auto; }
@@ -391,28 +380,137 @@
     .tag.buy { background: var(--tag-buy-bg); color: var(--green); }
     .tag.sell { background: var(--tag-sell-bg); color: var(--red); }
 
-    .md {
-      font-size: 13.5px;
-      line-height: 1.6;
-      color: var(--ink-2);
-      max-height: 440px;
-      overflow-y: auto;
-      border: 1px solid var(--rule);
-      padding: 16px;
-      background: var(--md-bg);
-    }
-    .md table { width: 100%; border-collapse: collapse; margin: 10px 0; }
-    .md th {
+    /* ── Schwarm-Debatte ── */
+    .debate-wrap {
+      border: 1px solid var(--rule-strong);
       background: var(--paper);
-      color: var(--ink);
-      padding: 5px 8px;
-      font-size: 10px;
-      border-bottom: 2px solid var(--rule-strong);
     }
-    .md td {
-      padding: 5px 8px;
+
+    .debate-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
       border-bottom: 1px solid var(--rule);
+      background: var(--paper-2);
+      gap: 12px;
+      flex-wrap: wrap;
     }
+
+    .debate-header .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--ink-3);
+    }
+
+    .debate-header .models {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--ink-2);
+    }
+
+    .debate-body {
+      padding: 20px 22px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--ink-2);
+      max-height: 520px;
+      overflow-y: auto;
+    }
+
+    .debate-body h1,
+    .debate-body h2,
+    .debate-body h3,
+    .debate-body h4 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      color: var(--ink);
+      margin: 20px 0 8px;
+      line-height: 1.3;
+    }
+
+    .debate-body h2 {
+      font-size: 18px;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 6px;
+    }
+    .debate-body h3 { font-size: 15px; }
+    .debate-body h4 { font-size: 14px; color: var(--ink-2); }
+
+    .debate-body p { margin-bottom: 10px; }
+
+    .debate-body ul,
+    .debate-body ol {
+      margin: 8px 0 12px 20px;
+    }
+
+    .debate-body li { margin-bottom: 4px; }
+
+    .debate-body strong { color: var(--ink); font-weight: 600; }
+
+    .debate-body blockquote {
+      border-left: 3px solid var(--amber);
+      margin: 12px 0;
+      padding: 8px 14px;
+      background: var(--paper-2);
+      color: var(--ink-2);
+      font-style: italic;
+    }
+
+    .debate-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 13px;
+    }
+
+    .debate-body th {
+      text-align: left;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--ink-3);
+      padding: 8px 10px;
+      border-bottom: 2px solid var(--rule-strong);
+      background: var(--paper-2);
+    }
+
+    .debate-body td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: top;
+    }
+
+    .debate-body tr:nth-child(even) td {
+      background: var(--paper-2);
+    }
+
+    .debate-body code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      background: var(--paper-2);
+      padding: 1px 5px;
+    }
+
+    .debate-body hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 18px 0;
+    }
+
+    .debate-body .verdict {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 8px;
+      margin-right: 4px;
+    }
+    .verdict-ok { background: var(--tag-buy-bg); color: var(--green); }
+    .verdict-warn { background: var(--mark); color: var(--amber); }
+    .verdict-no { background: var(--tag-sell-bg); color: var(--red); }
 
     .empty {
       color: var(--ink-3);
@@ -523,6 +621,7 @@
     </div>
   </div>
 
+  <!-- BRIEFING -->
   <div class="lite">
     <div class="section">
       <div class="section-label">Lagebild</div>
@@ -547,6 +646,7 @@
     </div>
   </div>
 
+  <!-- ANALYSE -->
   <div class="deep">
     <div class="section">
       <div class="section-label">Executive Briefing</div>
@@ -572,9 +672,16 @@
       </div>
     </div>
 
+    <!-- SCHWARM-DEBATTE -->
     <div class="section">
       <div class="section-label">Schwarm-Debatte</div>
-      <div id="swarm-visual-box" class="md">…</div>
+      <div class="debate-wrap">
+        <div class="debate-header">
+          <span class="label">Kreuzprüfung · Fingerklopfen</span>
+          <span class="models" id="debate-models">Multi-LLM</span>
+        </div>
+        <div id="swarm-visual-box" class="debate-body">…</div>
+      </div>
     </div>
 
     <div class="section">
@@ -585,7 +692,7 @@
     <div class="section">
       <div class="section-label">
         Kaskaden-Netzwerk
-        <span class="legend" style="border:none;padding:0;margin:0">
+        <span class="legend">
           <span style="color:var(--blue)">● Staat</span>
           <span style="color:var(--red)">● Konflikt</span>
           <span style="color:var(--green)">● Institution</span>
@@ -599,7 +706,7 @@
     <div class="section">
       <div class="section-label">
         Tactical Radar
-        <span class="legend" style="border:none;padding:0;margin:0">
+        <span class="legend">
           <span>💥 Konflikt</span><span>✈️ Flug</span><span>🚢 Schiff</span><span>🧳 Migration</span>
         </span>
       </div>
@@ -641,12 +748,10 @@
 <script>
 let map=null, networkInstance=null, globalData=null, mapLayer=null;
 
-/* ── Theme ── */
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('argus-theme', theme);
   document.getElementById('theme-btn').textContent = theme === 'dark' ? '☀' : '☾';
-  // Karte neu laden mit passenden Tiles
   if (map && mapLayer) {
     map.removeLayer(mapLayer);
     const tiles = theme === 'dark'
@@ -777,11 +882,27 @@ async function loadDashboard(){
     document.getElementById('simple-historical-container').innerHTML='<div class="empty">Keine historischen Parallelen in diesem Lauf.</div>';
   }
 
-  const debate=cleanText(globalData.game_theory_analysis||'');
-  if(debate.length>30){
-    document.getElementById('swarm-visual-box').innerHTML=(debate.includes('|')&&debate.includes('---'))?marked.parse(debate):debate;
-  }else{
-    document.getElementById('swarm-visual-box').innerHTML='<span class="empty">Keine Debatte verfügbar.</span>';
+  // Schwarm-Debatte
+  const debate = cleanText(globalData.game_theory_analysis || '');
+  const modelsEl = document.getElementById('debate-models');
+  if (globalData.pipeline_health?.bakers_active?.length) {
+    modelsEl.textContent = globalData.pipeline_health.bakers_active.join(' · ');
+  }
+
+  if (debate.length > 30) {
+    let html = (debate.includes('|') && debate.includes('---'))
+      ? marked.parse(debate)
+      : debate.replace(/\n/g, '<br>');
+
+    html = html
+      .replace(/\b(Bestätigt|BESTÄTIGT)\b/g, '<span class="verdict verdict-ok">Bestätigt</span>')
+      .replace(/\b(Unbestätigt|UNBESTÄTIGT)\b/g, '<span class="verdict verdict-warn">Unbestätigt</span>')
+      .replace(/\b(Widersprüchlich|Falsch|FALSCH)\b/g, '<span class="verdict verdict-no">Widerspruch</span>');
+
+    document.getElementById('swarm-visual-box').innerHTML = html;
+  } else {
+    document.getElementById('swarm-visual-box').innerHTML =
+      '<span class="empty">Keine Debatte verfügbar.</span>';
   }
 
   const dpm=globalData.domestic_policy_matrix;
