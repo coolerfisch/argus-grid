@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARGUS GRID // World Intelligence Engine</title>
+  <title>ARGUS GRID</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -12,880 +12,872 @@
 
   <style>
     :root {
-      --bg-main: #0b0f19;
-      --bg-card: #151d30;
-      --border-color: #23314d;
-      --text-main: #f1f5f9;
-      --text-muted: #94a3b8;
-      --accent-cyan: #38bdf8;
-      --accent-green: #22c55e;
-      --accent-red: #ef4444;
-      --accent-gold: #eab308;
-      --accent-purple: #a855f7;
+      --bg: #090b10;
+      --surface: #11151c;
+      --surface-2: #171c25;
+      --border: #1e2530;
+      --border-hover: #2a3344;
+      --text: #e8edf5;
+      --text-dim: #8b95a8;
+      --cyan: #3b9eff;
+      --green: #2dd4a0;
+      --red: #f04455;
+      --amber: #f5a623;
+      --purple: #a78bfa;
+      --radius: 10px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background-color: var(--bg-main);
-      color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.5;
-      padding: 16px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.55;
+      padding: 20px;
+      min-height: 100vh;
     }
 
-    .app-container { max-width: 1600px; margin: 0 auto; width: 100%; }
+    .wrap {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
 
+    /* ── Header ── */
     header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 16px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid var(--border-color);
-      gap: 14px;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .brand-title {
-      font-size: 1.55rem;
-      font-weight: 800;
-      letter-spacing: 1.2px;
-      color: var(--accent-cyan);
-    }
-
-    .timestamp { font-size: 0.82rem; color: var(--text-muted); margin-top: 3px; }
-
-    .header-actions {
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--cyan);
       display: flex;
+      align-items: center;
       gap: 10px;
+    }
+
+    .logo span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan);
+    }
+
+    .meta {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 4px;
+      letter-spacing: 0.3px;
+    }
+
+    .header-right {
+      display: flex;
       align-items: center;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
-    .view-toggle {
-      display: flex;
-      gap: 4px;
-      background: #0f172a;
-      padding: 4px;
-      border-radius: 22px;
-      border: 1px solid var(--border-color);
-    }
-
-    .toggle-btn, .action-btn {
-      background: transparent;
-      color: var(--text-muted);
-      border: none;
-      padding: 7px 16px;
-      border-radius: 18px;
-      font-weight: 600;
-      font-size: 0.82rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .toggle-btn.active {
-      background: var(--accent-cyan);
-      color: #000;
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
-    }
-
-    .action-btn {
-      background: #0f172a;
-      border: 1px solid var(--border-color);
-      color: var(--accent-cyan);
-    }
-
-    .health-badge {
-      font-size: 0.74rem;
+    .health {
+      font-size: 11px;
+      font-family: "SF Mono", "Fira Code", monospace;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
       padding: 6px 12px;
-      border-radius: 12px;
-      background: #0f172a;
-      border: 1px solid var(--border-color);
       display: flex;
+      gap: 8px;
       align-items: center;
-      gap: 7px;
       flex-wrap: wrap;
+      color: var(--text-dim);
     }
 
-    body.simple-mode .detailed-section { display: none !important; }
-    body:not(.simple-mode) .simple-only-section { display: none !important; }
+    .health strong { color: var(--text); font-weight: 600; }
 
-    .ampel-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 22px;
-      margin-bottom: 22px;
+    .btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn:hover { border-color: var(--border-hover); color: var(--text); }
+
+    .toggle {
+      display: flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .toggle button {
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      padding: 7px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .toggle button.active {
+      background: var(--cyan);
+      color: #000;
+    }
+
+    /* ── Ampel ── */
+    .status-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 24px;
       display: flex;
       align-items: center;
-      gap: 22px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+      gap: 20px;
     }
 
-    .ampel-box {
+    .lights {
       display: flex;
       flex-direction: column;
-      gap: 11px;
-      background: #070a12;
-      padding: 14px 13px;
-      border-radius: 36px;
-      border: 2px solid #1e293b;
+      gap: 8px;
+      background: var(--bg);
+      padding: 12px 10px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
     }
 
-    .ampel-light {
-      width: 30px;
-      height: 30px;
+    .light {
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
-      opacity: 0.15;
-      transition: all 0.35s ease;
+      opacity: 0.12;
+      transition: all 0.3s;
     }
 
-    .ampel-light.green.active { background: #22c55e; opacity: 1; box-shadow: 0 0 18px #22c55e; }
-    .ampel-light.yellow.active { background: #eab308; opacity: 1; box-shadow: 0 0 18px #eab308; }
-    .ampel-light.red.active { background: #ef4444; opacity: 1; box-shadow: 0 0 18px #ef4444; }
+    .light.red.active { background: var(--red); opacity: 1; box-shadow: 0 0 14px var(--red); }
+    .light.amber.active { background: var(--amber); opacity: 1; box-shadow: 0 0 14px var(--amber); }
+    .light.green.active { background: var(--green); opacity: 1; box-shadow: 0 0 14px var(--green); }
 
-    .takeaways-grid {
+    .status-text h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .status-text p {
+      color: var(--text-dim);
+      font-size: 13.5px;
+    }
+
+    /* ── Visibility ── */
+    body.simple-mode .detailed { display: none !important; }
+    body:not(.simple-mode) .simple { display: none !important; }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .card-title {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-title .badge {
+      font-family: monospace;
+      font-size: 11px;
+      background: var(--surface-2);
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: var(--cyan);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    /* ── Takeaways ── */
+    .takeaways {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .takeaway {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--cyan);
+      border-radius: 6px;
+      padding: 12px 14px;
+      font-size: 13px;
+    }
+
+    .takeaway strong {
+      color: var(--cyan);
+      font-size: 11px;
+      display: block;
+      margin-bottom: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── KPIs ── */
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 12px;
       margin-bottom: 16px;
     }
 
-    .takeaway-card {
-      background: #0f172a;
-      border: 1px solid var(--border-color);
-      border-left: 4px solid var(--accent-cyan);
-      padding: 14px;
-      border-radius: 10px;
-      font-size: 0.92rem;
-    }
-
-    .dashboard-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 18px;
-      overflow: hidden;
-    }
-
-    .card h2 {
-      font-size: 1.05rem;
-      color: var(--text-main);
-      margin-bottom: 12px;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      padding-bottom: 7px;
-    }
-
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .kpi-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      padding: 14px;
-      border-radius: 10px;
+    .kpi {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
       text-align: center;
     }
 
-    .kpi-label { font-size: 0.72rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.4px; }
-    .kpi-value { font-size: 1.45rem; font-weight: 800; margin: 5px 0; }
+    .kpi-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+    }
 
+    .kpi-value {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    /* ── Grid ── */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    /* ── Map / Graph ── */
     #hotspot-map, #knowledge-graph {
-      height: 480px;
+      height: 460px;
       width: 100%;
       border-radius: 8px;
-      border: 1px solid var(--border-color);
-      background: #070a12;
+      border: 1px solid var(--border);
+      background: var(--bg);
     }
 
-    .table-wrapper { width: 100%; overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.84rem; min-width: 480px; }
-    th, td { padding: 9px 8px; text-align: left; border-bottom: 1px solid #1e293b; }
-    th { color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; }
-
-    .ticker-badge {
-      background: #0f172a;
-      padding: 2px 6px;
-      border-radius: 4px;
+    .legend {
+      display: flex;
+      gap: 12px;
+      font-size: 11px;
       font-family: monospace;
-      color: var(--accent-cyan);
-      font-size: 0.8rem;
+      color: var(--text-dim);
+      flex-wrap: wrap;
     }
 
-    .empty-hint {
-      color: var(--text-muted);
+    /* ── Table ── */
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 460px; }
+    th {
+      text-align: left;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-dim);
+      padding: 8px 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 10px 6px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .tag {
+      font-family: monospace;
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--surface-2);
+    }
+    .tag.buy { color: var(--green); }
+    .tag.sell { color: var(--red); }
+
+    /* ── Region cards ── */
+    .region-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .region-card .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .region-card .name { font-weight: 600; font-size: 13px; }
+
+    .stab {
+      font-size: 10px;
+      font-family: monospace;
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid;
+    }
+
+    /* ── Markdown ── */
+    .md { color: #c0c8d6; font-size: 13px; line-height: 1.6; max-height: 460px; overflow-y: auto; }
+    .md table { width: 100%; border-collapse: collapse; margin: 10px 0; border: 1px solid var(--border); }
+    .md th { background: var(--surface-2); color: var(--cyan); padding: 6px 8px; font-size: 11px; text-transform: uppercase; }
+    .md td { padding: 6px 8px; border-bottom: 1px solid var(--border); }
+    .md tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+    .empty {
+      color: var(--text-dim);
       font-style: italic;
-      font-size: 0.9rem;
-      padding: 12px 0;
+      font-size: 13px;
+      padding: 8px 0;
     }
 
-    .modal-overlay {
+    /* ── Modal ── */
+    .modal {
       display: none;
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(11, 15, 25, 0.88);
-      backdrop-filter: blur(6px);
-      z-index: 9999;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
       justify-content: center;
       align-items: center;
       padding: 20px;
     }
-    .modal-overlay.active { display: flex; }
-    .modal-content {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      max-width: 720px;
+    .modal.open { display: flex; }
+    .modal-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      max-width: 560px;
       width: 100%;
+      padding: 24px;
       max-height: 80vh;
-      padding: 22px;
       overflow-y: auto;
     }
+    .modal-box h3 { color: var(--cyan); margin-bottom: 12px; font-size: 16px; }
+    .modal-box ul { margin: 12px 0 0 18px; color: var(--text-dim); font-size: 13px; line-height: 1.8; }
+    .modal-box li strong { color: var(--text); }
 
-    .radar-icon {
+    /* ── Map icons ── */
+    .radar {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
+      font-size: 13px;
       border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.7);
+      width: 26px;
+      height: 26px;
     }
-    .radar-conflict { background: rgba(239, 68, 68, 0.28); border: 2px solid #ef4444; animation: pulse 1.5s infinite; }
-    .radar-flight { background: rgba(56, 189, 248, 0.28); border: 2px solid #38bdf8; animation: pulse 2s infinite; }
-    .radar-ship { background: rgba(250, 204, 21, 0.28); border: 2px solid #facc15; }
-    .radar-refugee { background: rgba(168, 85, 247, 0.28); border: 2px solid #a855f7; animation: pulse 2s infinite; }
+    .r-conflict { background: rgba(240,68,85,0.25); border: 2px solid var(--red); animation: pulse 1.5s infinite; }
+    .r-flight { background: rgba(59,158,255,0.25); border: 2px solid var(--cyan); animation: pulse 2s infinite; }
+    .r-ship { background: rgba(245,166,35,0.25); border: 2px solid var(--amber); }
+    .r-refugee { background: rgba(167,139,250,0.25); border: 2px solid var(--purple); animation: pulse 2s infinite; }
 
     @keyframes pulse {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6); }
-      70% { transform: scale(1.08); box-shadow: 0 0 0 9px rgba(239, 68, 68, 0); }
-      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+      0% { transform: scale(0.95); }
+      70% { transform: scale(1.08); }
+      100% { transform: scale(0.95); }
     }
 
-    .markdown-body { color: #cbd5e1; font-size: 0.86rem; line-height: 1.55; }
-    .markdown-body table { width: 100%; border-collapse: collapse; margin: 10px 0; border: 1px solid var(--border-color); }
-    .markdown-body th { background: #0f172a; color: var(--accent-cyan); padding: 7px; border-bottom: 2px solid var(--border-color); text-transform: uppercase; font-size: 0.72rem; }
-    .markdown-body td { padding: 7px; border-bottom: 1px solid var(--border-color); }
-    .markdown-body tr:nth-child(even) td { background: rgba(15, 23, 42, 0.45); }
+    footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 0.5px;
+    }
 
-    @media (max-width: 768px) {
+    @media (max-width: 700px) {
+      body { padding: 12px; }
       header { flex-direction: column; align-items: flex-start; }
-      .ampel-card { flex-direction: column; text-align: center; }
-      .ampel-box { flex-direction: row; }
-      #hotspot-map, #knowledge-graph { height: 340px; }
-      .health-badge { font-size: 0.7rem; }
+      .status-bar { flex-direction: column; text-align: center; }
+      .lights { flex-direction: row; }
+      #hotspot-map, #knowledge-graph { height: 320px; }
     }
   </style>
 </head>
 <body class="simple-mode">
 
-  <div class="app-container">
-    <header>
-      <div>
-        <div class="brand-title">🌐 ARGUS GRID</div>
-        <div id="last-update" class="timestamp">Warte auf Synchronisation...</div>
-      </div>
+<div class="wrap">
 
-      <div class="header-actions">
-        <div id="health-badge" class="health-badge">
-          <span>🔄 Lade Status...</span>
-        </div>
-
-        <button class="action-btn" onclick="openSourcesModal()">📡 Quellen & Ingestion</button>
-
-        <div class="view-toggle">
-          <button id="btn-simple" class="toggle-btn active" onclick="setMode('simple')">⚡ Standard</button>
-          <button id="btn-detailed" class="toggle-btn" onclick="setMode('detailed')">🔬 Tiefenanalyse</button>
-        </div>
-      </div>
-    </header>
-
-    <!-- AMPEL -->
-    <div class="ampel-card">
-      <div class="ampel-box">
-        <div id="ampel-red" class="ampel-light red"></div>
-        <div id="ampel-yellow" class="ampel-light yellow"></div>
-        <div id="ampel-green" class="ampel-light green"></div>
-      </div>
-      <div>
-        <h3 id="ampel-title" style="font-size: 1.35rem; font-weight: 800; margin-bottom: 5px; color: var(--accent-gold);">Weltlage: Lade Daten...</h3>
-        <p id="ampel-reason" style="font-size: 1.02rem; color: #cbd5e1;">Analysiere weltweite Feeds & OSINT-Ströme...</p>
+  <header>
+    <div>
+      <div class="logo"><span></span> ARGUS GRID</div>
+      <div class="meta" id="last-update">Synchronisiere…</div>
+    </div>
+    <div class="header-right">
+      <div class="health" id="health-badge">Lade Status…</div>
+      <button class="btn" onclick="openModal()">Quellen</button>
+      <div class="toggle">
+        <button id="btn-simple" class="active" onclick="setMode('simple')">Standard</button>
+        <button id="btn-detailed" onclick="setMode('detailed')">Tiefenanalyse</button>
       </div>
     </div>
+  </header>
 
-    <!-- STANDARD MODUS -->
-    <div class="simple-only-section">
-      <div class="card" style="margin-bottom: 20px; border-left: 4px solid var(--accent-cyan);">
-        <h2 style="font-size: 1.15rem;">💬 Das Wichtigste auf einen Blick</h2>
-        <p id="simple-summary-text" style="font-size: 1.02rem; line-height: 1.55; color: #f1f5f9; margin-bottom: 16px;"></p>
-        <div id="takeaways-container" class="takeaways-grid"></div>
-      </div>
-
-      <div class="card" style="margin-bottom: 20px; border-left: 4px solid var(--accent-purple);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-          <h2>🔮 Zukunfts-Prognose</h2>
-          <span id="forecast-prob-badge" class="ticker-badge" style="color: var(--accent-purple);">--%</span>
-        </div>
-        <p id="forecast-simple-text" style="font-size: 1.02rem; line-height: 1.55; color: #f1f5f9; margin-bottom: 12px;"></p>
-        <div style="background: #0f172a; padding: 11px; border-radius: 8px; border: 1px solid var(--border-color); font-size: 0.86rem;">
-          <strong style="color: var(--accent-gold);">⚠️ Frühwarn-Signal:</strong>
-          <span id="forecast-indicator-text" style="color: #cbd5e1; margin-left: 5px;">--</span>
-        </div>
-      </div>
-
-      <div class="card" style="border-left: 4px solid var(--accent-gold);">
-        <h2>📜 Historische Parallelen</h2>
-        <div id="simple-historical-container" class="dashboard-grid" style="margin-top: 12px;"></div>
-      </div>
+  <!-- Status -->
+  <div class="status-bar">
+    <div class="lights">
+      <div id="ampel-red" class="light red"></div>
+      <div id="ampel-yellow" class="light amber"></div>
+      <div id="ampel-green" class="light green"></div>
     </div>
-
-    <!-- TIEFENANALYSE -->
-    <div class="detailed-section">
-      <div class="card" style="margin-bottom: 18px; border-left: 4px solid var(--accent-cyan);">
-        <h2>📋 Executive Briefing</h2>
-        <p id="exec-summary" style="font-size: 1.02rem; line-height: 1.55; color: #e2e8f0;"></p>
-      </div>
-
-      <div class="kpi-grid">
-        <div class="kpi-card">
-          <div class="kpi-label">Geopolitischer Score</div>
-          <div id="kpi-geoscore" class="kpi-value">--</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">DEFCON Status</div>
-          <div id="kpi-defcon" class="kpi-value" style="color: var(--accent-gold);">--</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Markt-Regime</div>
-          <div id="kpi-regime" class="kpi-value" style="font-size: 1.05rem; margin-top: 8px;">--</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Hauptrisiko</div>
-          <div id="kpi-risk" class="kpi-value" style="font-size: 0.95rem; color: var(--accent-red); margin-top: 8px;">--</div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-bottom: 20px; border-left: 4px solid var(--accent-cyan);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-          <h2>♟️ Schwarm-Debatte & Kreuzprüfung</h2>
-          <span class="ticker-badge">Multi-LLM Consensus</span>
-        </div>
-        <div id="swarm-visual-box" class="markdown-body" style="background: #070a12; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color); max-height: 480px; overflow-y: auto;">
-          Analysiere Lagedaten...
-        </div>
-      </div>
-
-      <div class="card" style="margin-bottom: 20px; border-left: 4px solid var(--accent-gold);">
-        <h2>🏛️ Innenpolitik & Regionale Stabilität</h2>
-        <div id="domestic-matrix-container" class="dashboard-grid" style="margin-top: 12px;"></div>
-      </div>
-
-      <div class="dashboard-grid">
-        <div class="card" style="grid-column: 1 / -1; border-left: 4px solid var(--accent-cyan);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
-            <h2>🕸️ Dynamisches Kaskaden-Netzwerk (Akkumulation + Decay)</h2>
-            <div style="display: flex; gap: 10px; font-size: 0.72rem; font-family: monospace;">
-              <span><strong style="color: #38bdf8;">●</strong> Staaten</span>
-              <span><strong style="color: #ef4444;">●</strong> Konflikt</span>
-              <span><strong style="color: #22c55e;">●</strong> Institutionen</span>
-              <span><strong style="color: #a855f7;">●</strong> Tech/Cyber</span>
-              <span><strong style="color: #eab308;">●</strong> Themen</span>
-            </div>
-          </div>
-          <div id="knowledge-graph"></div>
-        </div>
-
-        <div class="card" style="grid-column: 1 / -1;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
-            <h2>🗺️ Live Tactical Radar (OpenSky ADS-B + Hotspots)</h2>
-            <div style="display: flex; gap: 9px; font-size: 0.72rem; font-family: monospace;">
-              <span>💥 Konflikt</span>
-              <span>✈️ Militärflug</span>
-              <span>🚢 Schiff/Chokepoint</span>
-              <span>🧳 Migration</span>
-            </div>
-          </div>
-          <div id="hotspot-map"></div>
-        </div>
-
-        <div class="card" style="grid-column: 1 / -1;">
-          <h2>📈 Sektor-Rotation (Top Buys & Flop Sells)</h2>
-          <div class="table-wrapper">
-            <table>
-              <thead>
-                <tr><th>Typ</th><th>Ticker / Asset</th><th>Name</th><th>Begründung</th></tr>
-              </thead>
-              <tbody id="stocks-buys-sells"></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer style="margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.78rem; text-align: center;">
-      🌐 <strong>ARGUS GRID</strong> Systemic Intelligence Engine · Version 3.0 (2026)
-    </footer>
-  </div>
-
-  <!-- QUELLEN MODAL -->
-  <div id="sources-modal" class="modal-overlay" onclick="closeSourcesModal(event)">
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-        <h2 style="color: var(--accent-cyan);">📡 Multisource Ingestion</h2>
-        <button style="background:none; border:none; color:#fff; font-size: 1.4rem; cursor:pointer;" onclick="closeSourcesModal()">&times;</button>
-      </div>
-      <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.55; margin-bottom: 12px;">
-        ARGUS GRID kombiniert vier unabhängige Datenkanäle:
-      </p>
-      <ul style="margin: 0 0 0 18px; font-size: 0.86rem; color: #cbd5e1; line-height: 1.7;">
-        <li><strong>1. Primary RSS Feeds</strong> – Zentralbanken, Regierungen, Qualitätsmedien</li>
-        <li><strong>2. GDELT Project DOC 2.0</strong> – Globale Echtzeit-Event-Datenbank</li>
-        <li><strong>3. Telegram OSINT Stream</strong> – Feldberichte & Militärbeobachter</li>
-        <li><strong>4. OpenSky Network ADS-B</strong> – Live-Militär- und Aufklärungsflüge</li>
-      </ul>
+    <div class="status-text">
+      <h2 id="ampel-title">Weltlage wird geladen…</h2>
+      <p id="ampel-reason">Analysiere globale Signale…</p>
     </div>
   </div>
 
-  <script>
-    let map = null;
-    let networkInstance = null;
-    let globalData = null;
+  <!-- ════ STANDARD ════ -->
+  <div class="simple">
 
-    function cleanText(val) {
-      if (val === null || val === undefined) return '';
-      if (typeof val === 'object') {
-        if (Array.isArray(val)) return val.map(cleanText).filter(Boolean).join(', ');
-        return cleanText(
-          val.text || val.summary || val.description || val.indicator ||
-          val.takeaway || val.point || val.reason || val.name ||
-          val.ticker || val.label || val.value || val.content || ''
-        );
-      }
-      return String(val)
-        .replace(/\*{1,3}/g, '')
-        .replace(/#{1,6}\s?/g, '')
-        .replace(/`{1,3}/g, '')
-        .trim();
+    <div class="card">
+      <div class="card-title">Lagebild</div>
+      <p id="simple-summary-text" style="font-size:14px; line-height:1.6;"></p>
+      <div id="takeaways-container" class="takeaways"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        Prognose
+        <span class="badge" id="forecast-prob-badge">—</span>
+      </div>
+      <p id="forecast-simple-text" style="font-size:14px; line-height:1.6; margin-bottom:12px;"></p>
+      <div style="background:var(--surface-2); border:1px solid var(--border); border-radius:6px; padding:10px 14px; font-size:12.5px;">
+        <strong style="color:var(--amber);">Frühwarnung:</strong>
+        <span id="forecast-indicator-text" style="color:var(--text-dim); margin-left:6px;">—</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Historische Parallelen</div>
+      <div id="simple-historical-container" class="grid-2"></div>
+    </div>
+
+  </div>
+
+  <!-- ════ TIEFENANALYSE ════ -->
+  <div class="detailed">
+
+    <div class="card">
+      <div class="card-title">Executive Briefing</div>
+      <p id="exec-summary" style="font-size:14px; line-height:1.6;"></p>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <div class="kpi-label">Geoscore</div>
+        <div class="kpi-value" id="kpi-geoscore">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">DEFCON</div>
+        <div class="kpi-value" id="kpi-defcon" style="color:var(--amber);">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Markt-Regime</div>
+        <div class="kpi-value" id="kpi-regime" style="font-size:14px; margin-top:6px;">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Hauptrisiko</div>
+        <div class="kpi-value" id="kpi-risk" style="font-size:13px; color:var(--red); margin-top:6px;">—</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        Schwarm-Debatte
+        <span class="badge">Multi-LLM</span>
+      </div>
+      <div id="swarm-visual-box" class="md">Lade Debatte…</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Innenpolitik & Stabilität</div>
+      <div id="domestic-matrix-container" class="grid-2"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        Kaskaden-Netzwerk
+        <div class="legend">
+          <span style="color:#3b9eff;">● Staaten</span>
+          <span style="color:#f04455;">● Konflikt</span>
+          <span style="color:#2dd4a0;">● Institutionen</span>
+          <span style="color:#a78bfa;">● Tech</span>
+          <span style="color:#f5a623;">● Themen</span>
+        </div>
+      </div>
+      <div id="knowledge-graph"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        Tactical Radar
+        <div class="legend">
+          <span>💥 Konflikt</span>
+          <span>✈️ Militärflug</span>
+          <span>🚢 Schiff</span>
+          <span>🧳 Migration</span>
+        </div>
+      </div>
+      <div id="hotspot-map"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Sektor-Rotation</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Typ</th><th>Ticker</th><th>Name</th><th>Begründung</th></tr>
+          </thead>
+          <tbody id="stocks-buys-sells"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>ARGUS GRID · Systemic Intelligence Engine · v3.0</footer>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="sources-modal" onclick="closeModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h3>Datenquellen</h3>
+      <button class="btn" onclick="closeModal()" style="padding:4px 10px;">✕</button>
+    </div>
+    <p style="color:var(--text-dim); font-size:13px; margin-top:8px;">
+      ARGUS GRID kombiniert vier unabhängige Datenkanäle:
+    </p>
+    <ul>
+      <li><strong>RSS Feeds</strong> – Zentralbanken, Regierungen, Qualitätsmedien</li>
+      <li><strong>GDELT DOC 2.0</strong> – Globale Echtzeit-Event-Datenbank</li>
+      <li><strong>Telegram OSINT</strong> – Feldberichte & Militärbeobachter</li>
+      <li><strong>OpenSky ADS-B</strong> – Live-Militär- und Aufklärungsflüge</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  let map = null;
+  let networkInstance = null;
+  let globalData = null;
+
+  function cleanText(val) {
+    if (val === null || val === undefined) return '';
+    if (typeof val === 'object') {
+      if (Array.isArray(val)) return val.map(cleanText).filter(Boolean).join(', ');
+      return cleanText(val.text || val.summary || val.description || val.indicator ||
+        val.takeaway || val.point || val.reason || val.name || val.ticker ||
+        val.label || val.value || val.content || '');
     }
+    return String(val).replace(/\*{1,3}/g, '').replace(/#{1,6}\s?/g, '').replace(/`{1,3}/g, '').trim();
+  }
 
-    function openSourcesModal() {
-      document.getElementById('sources-modal').classList.add('active');
+  function openModal() { document.getElementById('sources-modal').classList.add('open'); }
+  function closeModal(e) {
+    if (!e || e.target === document.getElementById('sources-modal')) {
+      document.getElementById('sources-modal').classList.remove('open');
     }
-    function closeSourcesModal(e) {
-      if (!e || e.target === document.getElementById('sources-modal')) {
-        document.getElementById('sources-modal').classList.remove('active');
-      }
-    }
+  }
 
-    function setMode(mode) {
-      if (mode === 'simple') {
-        document.body.classList.add('simple-mode');
-        document.getElementById('btn-simple').classList.add('active');
-        document.getElementById('btn-detailed').classList.remove('active');
-      } else {
-        document.body.classList.remove('simple-mode');
-        document.getElementById('btn-detailed').classList.add('active');
-        document.getElementById('btn-simple').classList.remove('active');
-        setTimeout(() => {
-          if (globalData) {
-            if (!map) initMap(globalData.conflict_hotspots || []);
-            else map.invalidateSize();
-            if (globalData.graph_network) initKnowledgeGraph(globalData.graph_network);
-          }
-        }, 220);
-      }
-    }
-
-    async function loadDashboard() {
-      try {
-        const response = await fetch('./data.json?v=' + Date.now());
-        if (!response.ok) throw new Error("data.json nicht gefunden");
-        globalData = await response.json();
-      } catch (e) {
-        console.error(e);
-        document.getElementById('ampel-title').innerText = "⚠️ Daten konnten nicht geladen werden";
-        document.getElementById('ampel-reason').innerText = "Prüfe, ob data.json vorhanden ist und die Pipeline zuletzt erfolgreich gelaufen ist.";
-        document.getElementById('health-badge').innerHTML = `<span style="color:#ef4444">● Pipeline-Fehler</span>`;
-        return;
-      }
-
-      // Timestamp
-      document.getElementById('last-update').innerText =
-        "Stand: " + (globalData.timestamp ? new Date(globalData.timestamp).toLocaleString('de-DE') : "—");
-
-      // Health Badge
-      try {
-        if (globalData.pipeline_health) {
-          const ph = globalData.pipeline_health;
-          const success = ph.feeds_successful || 0;
-          const total = ph.feeds_total || 0;
-          const rate = total > 0 ? Math.round((success / total) * 100) : 0;
-
-          let color = "#22c55e";
-          if (rate < 40) color = "#ef4444";
-          else if (rate < 65) color = "#eab308";
-
-          const bakers = (ph.bakers_active || []).join(", ") || "—";
-          const gdelt = ph.gdelt_articles || 0;
-          const tg = ph.telegram_posts || 0;
-          const opensky = ph.opensky_status || "—";
-          const synth = ph.synthesizer_status || "—";
-
-          document.getElementById("health-badge").innerHTML = `
-            <span style="color:${color}; font-weight:700;">●</span>
-            <strong>Feeds</strong> ${success}/${total}
-            <span style="opacity:0.35">|</span>
-            <strong>GDELT</strong> ${gdelt}
-            <span style="opacity:0.35">|</span>
-            <strong>TG</strong> ${tg}
-            <span style="opacity:0.35">|</span>
-            <strong>ADS-B</strong> ${opensky}
-            <span style="opacity:0.35">|</span>
-            <strong>Synth</strong> ${synth}
-            <span style="opacity:0.35">|</span>
-            <span title="Aktive Modelle">${bakers}</span>
-          `;
+  function setMode(mode) {
+    if (mode === 'simple') {
+      document.body.classList.add('simple-mode');
+      document.getElementById('btn-simple').classList.add('active');
+      document.getElementById('btn-detailed').classList.remove('active');
+    } else {
+      document.body.classList.remove('simple-mode');
+      document.getElementById('btn-detailed').classList.add('active');
+      document.getElementById('btn-simple').classList.remove('active');
+      setTimeout(() => {
+        if (globalData) {
+          if (!map) initMap(globalData.conflict_hotspots || []);
+          else map.invalidateSize();
+          if (globalData.graph_network) initKnowledgeGraph(globalData.graph_network);
         }
-      } catch (e) {
-        console.warn("Health-Badge:", e);
-      }
+      }, 200);
+    }
+  }
 
-      // Ampel
-      const status = cleanText(globalData.ampel_status || 'GELB').toUpperCase();
-      document.getElementById('ampel-red').classList.toggle('active', status === 'ROT');
-      document.getElementById('ampel-yellow').classList.toggle('active', status === 'GELB');
-      document.getElementById('ampel-green').classList.toggle('active', status === 'GRÜN');
+  async function loadDashboard() {
+    try {
+      const res = await fetch('./data.json?v=' + Date.now());
+      if (!res.ok) throw new Error('data.json fehlt');
+      globalData = await res.json();
+    } catch (e) {
+      document.getElementById('ampel-title').textContent = 'Daten konnten nicht geladen werden';
+      document.getElementById('ampel-reason').textContent = 'Prüfe, ob data.json vorhanden ist und die Pipeline gelaufen ist.';
+      document.getElementById('health-badge').innerHTML = '<span style="color:var(--red)">● Pipeline-Fehler</span>';
+      return;
+    }
 
-      const titleEl = document.getElementById('ampel-title');
-      if (status === 'ROT') {
-        titleEl.innerText = "Weltlage: ROT (Höchste Warnstufe)";
-        titleEl.style.color = "var(--accent-red)";
-      } else if (status === 'GRÜN') {
-        titleEl.innerText = "Weltlage: GRÜN (Stabil)";
-        titleEl.style.color = "var(--accent-green)";
-      } else {
-        titleEl.innerText = "Weltlage: GELB (Spannungen & Konflikte)";
-        titleEl.style.color = "var(--accent-gold)";
-      }
+    document.getElementById('last-update').textContent =
+      'Stand: ' + (globalData.timestamp ? new Date(globalData.timestamp).toLocaleString('de-DE') : '—');
 
-      document.getElementById('ampel-reason').innerText = cleanText(globalData.ampel_reason_simple);
+    // Health
+    try {
+      const ph = globalData.pipeline_health || {};
+      const s = ph.feeds_successful || 0, t = ph.feeds_total || 0;
+      const rate = t > 0 ? Math.round(s / t * 100) : 0;
+      let c = 'var(--green)';
+      if (rate < 40) c = 'var(--red)';
+      else if (rate < 65) c = 'var(--amber)';
+      document.getElementById('health-badge').innerHTML = `
+        <span style="color:${c};font-weight:700">●</span>
+        <strong>Feeds</strong> ${s}/${t}
+        <span style="opacity:.3">|</span> <strong>GDELT</strong> ${ph.gdelt_articles||0}
+        <span style="opacity:.3">|</span> <strong>TG</strong> ${ph.telegram_posts||0}
+        <span style="opacity:.3">|</span> <strong>ADS-B</strong> ${ph.opensky_status||'—'}
+        <span style="opacity:.3">|</span> <strong>Synth</strong> ${ph.synthesizer_status||'—'}
+        <span style="opacity:.3">|</span> ${(ph.bakers_active||[]).join(', ')||'—'}
+      `;
+    } catch (_) {}
 
-      // Summary mit Fallback-Hinweis
-      const simpleSum = cleanText(globalData.daily_executive_summary_simple || globalData.daily_executive_summary);
-      if (!simpleSum || simpleSum.includes("kein vollständiges Briefing") || simpleSum.length < 40) {
-        document.getElementById('simple-summary-text').innerHTML =
-          `<span class="empty-hint">Kein vollständiges Briefing verfügbar. Wechsle in die <strong>Tiefenanalyse</strong>, um die Schwarm-Debatte zu lesen.</span>`;
-      } else {
-        document.getElementById('simple-summary-text').innerText = simpleSum;
-      }
+    // Ampel
+    const st = cleanText(globalData.ampel_status || 'GELB').toUpperCase();
+    document.getElementById('ampel-red').classList.toggle('active', st === 'ROT');
+    document.getElementById('ampel-yellow').classList.toggle('active', st === 'GELB');
+    document.getElementById('ampel-green').classList.toggle('active', st === 'GRÜN');
+    const title = document.getElementById('ampel-title');
+    if (st === 'ROT') { title.textContent = 'ROT — Höchste Warnstufe'; title.style.color = 'var(--red)'; }
+    else if (st === 'GRÜN') { title.textContent = 'GRÜN — Stabil'; title.style.color = 'var(--green)'; }
+    else { title.textContent = 'GELB — Spannungen & Konflikte'; title.style.color = 'var(--amber)'; }
+    document.getElementById('ampel-reason').textContent = cleanText(globalData.ampel_reason_simple);
 
-      document.getElementById('exec-summary').innerText =
-        cleanText(globalData.daily_executive_summary) || "Kein ausführliches Briefing verfügbar.";
+    // Summary
+    const sum = cleanText(globalData.daily_executive_summary_simple || globalData.daily_executive_summary);
+    if (!sum || sum.includes('kein vollständiges Briefing') || sum.length < 40) {
+      document.getElementById('simple-summary-text').innerHTML =
+        '<span class="empty">Kein vollständiges Briefing. Wechsle in die Tiefenanalyse für die Schwarm-Debatte.</span>';
+    } else {
+      document.getElementById('simple-summary-text').textContent = sum;
+    }
+    document.getElementById('exec-summary').textContent =
+      cleanText(globalData.daily_executive_summary) || 'Kein Briefing verfügbar.';
 
-      // Takeaways
-      const takeaways = globalData.simple_key_takeaways || globalData.key_takeaways || [];
-      if (Array.isArray(takeaways) && takeaways.length > 0) {
-        let html = "";
-        takeaways.forEach((t, i) => {
-          const txt = cleanText(t);
-          if (txt) html += `<div class="takeaway-card"><strong style="color:var(--accent-cyan);">PUNKT ${i+1}:</strong> ${txt}</div>`;
-        });
-        document.getElementById('takeaways-container').innerHTML =
-          html || '<div class="takeaway-card empty-hint">Keine Kernaussagen verfügbar.</div>';
-      } else {
-        document.getElementById('takeaways-container').innerHTML = `
-          <div class="takeaway-card" style="border-left-color: var(--accent-gold);">
-            <strong style="color:var(--accent-gold);">Hinweis:</strong>
-            Keine strukturierten Takeaways. In der <strong>Tiefenanalyse</strong> findest du die Schwarm-Debatte.
-          </div>`;
-      }
-
-      // Prognose
-      if (globalData.predictive_horizon && typeof globalData.predictive_horizon === 'object') {
-        const ph = globalData.predictive_horizon;
-        const prob = ph.base_case_probability_pct || 60;
-        document.getElementById('forecast-prob-badge').innerText = `${prob}%`;
-        const forecastText = cleanText(ph.base_case_summary);
-        document.getElementById('forecast-simple-text').innerText =
-          forecastText && !forecastText.includes("Lagedaten werden ausgewertet")
-            ? forecastText
-            : "Prognose wird aus den aktuellen Signalen abgeleitet.";
-
-        if (Array.isArray(ph.leading_indicators_to_watch) && ph.leading_indicators_to_watch.length > 0) {
-          document.getElementById('forecast-indicator-text').innerText = cleanText(ph.leading_indicators_to_watch[0]);
-        } else {
-          document.getElementById('forecast-indicator-text').innerText = "Geopolitische Volatilität & Sektor-Indikatoren beobachten.";
-        }
-      }
-
-      // Historische Parallelen
-      if (Array.isArray(globalData.historical_precedents) && globalData.historical_precedents.length > 0) {
-        let hHtml = "";
-        globalData.historical_precedents.forEach(hp => {
-          hHtml += `
-            <div class="card" style="background:#0f172a; border-left: 3px solid var(--accent-gold);">
-              <strong style="color:var(--accent-cyan);">${cleanText(hp.current_event || hp.event)}</strong>
-              <div style="font-size:0.86rem; margin-top:5px; color:#cbd5e1;">🏛️ Analog: ${cleanText(hp.historical_analog || hp.similarity)}</div>
-              ${hp.takeaway ? `<div style="font-size:0.78rem; margin-top:5px; color:var(--accent-gold); font-family:monospace;">${cleanText(hp.takeaway)}</div>` : ''}
-            </div>`;
-        });
-        document.getElementById('simple-historical-container').innerHTML = hHtml;
-      } else {
-        document.getElementById('simple-historical-container').innerHTML =
-          '<div class="empty-hint">Keine historischen Parallelen in diesem Lauf.</div>';
-      }
-
-      // Schwarm-Debatte
-      const debateText = cleanText(globalData.game_theory_analysis || '');
-      if (debateText && debateText.length > 30) {
-        if (debateText.includes('|') && debateText.includes('---')) {
-          document.getElementById('swarm-visual-box').innerHTML = marked.parse(debateText);
-        } else {
-          document.getElementById('swarm-visual-box').innerText = debateText;
-        }
-      } else {
-        document.getElementById('swarm-visual-box').innerHTML =
-          '<span class="empty-hint">Keine Schwarm-Debatte verfügbar.</span>';
-      }
-
-      // Innenpolitik
-      if (Array.isArray(globalData.domestic_policy_matrix) && globalData.domestic_policy_matrix.length > 0) {
-        let mHtml = "";
-        globalData.domestic_policy_matrix.forEach(m => {
-          const stab = cleanText(m.stability).toUpperCase();
-          const isRot = stab.includes('ROT');
-          const isGruen = stab.includes('GRÜN');
-          const color = isRot ? 'var(--accent-red)' : (isGruen ? 'var(--accent-green)' : 'var(--accent-gold)');
-          mHtml += `
-            <div class="card" style="background:#0f172a; padding: 13px;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                <strong style="color:#fff;">${cleanText(m.region)}</strong>
-                <span style="font-size:0.72rem; font-family:monospace; padding:2px 6px; border-radius:4px; border:1px solid ${color}; color:${color}">${stab || 'GELB'}</span>
-              </div>
-              <p style="font-size:0.84rem; color:#cbd5e1;">${cleanText(m.dynamics)}</p>
-            </div>`;
-        });
-        document.getElementById('domestic-matrix-container').innerHTML = mHtml;
-      } else {
-        document.getElementById('domestic-matrix-container').innerHTML =
-          '<div class="empty-hint">Keine Innenpolitik-Matrix in diesem Lauf.</div>';
-      }
-
-      // KPIs
-      const geoscore = globalData.overall_geoscore || (globalData.geoscore && globalData.geoscore.current_score) || 75;
-      document.getElementById('kpi-geoscore').innerText = geoscore + " / 100";
-
-      const defcon = (globalData.defcon_status && globalData.defcon_status.label)
-        ? cleanText(globalData.defcon_status.label)
-        : `DEFCON ${globalData.defcon_level || 3}`;
-      document.getElementById('kpi-defcon').innerText = defcon;
-
-      document.getElementById('kpi-regime').innerText = cleanText(globalData.market_regime || "Volatil");
-      document.getElementById('kpi-risk').innerText = cleanText(globalData.top_risk || "Lieferketten");
-
-      // Aktien-Rotation
-      const stockData = globalData.equity_rotation || globalData.stock_picks || {};
-      const buys = stockData.top5_buys || stockData.top_5_buys || [];
-      const sells = stockData.flop5_sells || stockData.flop_5_sells || [];
-
-      let stockRows = "";
-      buys.forEach(b => {
-        stockRows += `<tr>
-          <td><span class="ticker-badge" style="color:var(--accent-green)">BUY</span></td>
-          <td>${cleanText(b.ticker || b.asset)}</td>
-          <td>${cleanText(b.name || b.asset)}</td>
-          <td style="color:#cbd5e1">${cleanText(b.reason)}</td>
-        </tr>`;
+    // Takeaways
+    const tks = globalData.simple_key_takeaways || globalData.key_takeaways || [];
+    if (Array.isArray(tks) && tks.length) {
+      let h = '';
+      tks.forEach((t, i) => {
+        const txt = cleanText(t);
+        if (txt) h += `<div class="takeaway"><strong>PUNKT ${i+1}</strong>${txt}</div>`;
       });
-      sells.forEach(s => {
-        stockRows += `<tr>
-          <td><span class="ticker-badge" style="color:var(--accent-red)">SELL</span></td>
-          <td>${cleanText(s.ticker || s.asset)}</td>
-          <td>${cleanText(s.name || s.asset)}</td>
-          <td style="color:#cbd5e1">${cleanText(s.reason)}</td>
-        </tr>`;
+      document.getElementById('takeaways-container').innerHTML = h || '<div class="empty">Keine Takeaways.</div>';
+    } else {
+      document.getElementById('takeaways-container').innerHTML =
+        '<div class="takeaway" style="border-left-color:var(--amber)"><strong style="color:var(--amber)">HINWEIS</strong>Keine strukturierten Takeaways. Details in der Tiefenanalyse.</div>';
+    }
+
+    // Forecast
+    const ph = globalData.predictive_horizon;
+    if (ph && typeof ph === 'object') {
+      document.getElementById('forecast-prob-badge').textContent = (ph.base_case_probability_pct || 60) + '%';
+      const ft = cleanText(ph.base_case_summary);
+      document.getElementById('forecast-simple-text').textContent =
+        ft && !ft.includes('Lagedaten werden ausgewertet') ? ft : 'Prognose wird aus aktuellen Signalen abgeleitet.';
+      const inds = ph.leading_indicators_to_watch;
+      document.getElementById('forecast-indicator-text').textContent =
+        (Array.isArray(inds) && inds.length) ? cleanText(inds[0]) : 'Geopolitische Volatilität beobachten.';
+    }
+
+    // Historical
+    const hist = globalData.historical_precedents;
+    if (Array.isArray(hist) && hist.length) {
+      let h = '';
+      hist.forEach(hp => {
+        h += `<div class="region-card">
+          <div class="name" style="color:var(--cyan)">${cleanText(hp.current_event||hp.event)}</div>
+          <div style="font-size:12.5px;color:var(--text-dim);margin-top:4px">Analog: ${cleanText(hp.historical_analog||hp.similarity)}</div>
+          ${hp.takeaway?`<div style="font-size:11px;color:var(--amber);margin-top:4px;font-family:monospace">${cleanText(hp.takeaway)}</div>`:''}
+        </div>`;
       });
-      document.getElementById('stocks-buys-sells').innerHTML =
-        stockRows || '<tr><td colspan="4" class="empty-hint">Keine Sektor-Rotationen erfasst.</td></tr>';
+      document.getElementById('simple-historical-container').innerHTML = h;
+    } else {
+      document.getElementById('simple-historical-container').innerHTML = '<div class="empty">Keine Parallelen in diesem Lauf.</div>';
     }
 
-    function getNodeColor(group, label) {
-      const grp = cleanText(group).toLowerCase();
-      const lbl = cleanText(label).toLowerCase();
-
-      if (grp.includes('miliz') || grp.includes('non-state') || grp.includes('konflikt') ||
-          lbl.includes('huthi') || lbl.includes('iran') || lbl.includes('krieg')) {
-        return { background: '#ef4444', border: '#b91c1c' };
-      }
-      if (grp.includes('staat') || grp.includes('bündnis') ||
-          lbl.includes('usa') || lbl.includes('china') || lbl.includes('russland') || lbl.includes('israel')) {
-        return { background: '#38bdf8', border: '#0284c7' };
-      }
-      if (grp.includes('wirtschaft') || grp.includes('zentralbank') || grp.includes('institution') ||
-          lbl.includes('fed') || lbl.includes('eu') || lbl.includes('cisa')) {
-        return { background: '#22c55e', border: '#15803d' };
-      }
-      if (grp.includes('tech') || lbl.includes('cyber') || lbl.includes('tiktok')) {
-        return { background: '#a855f7', border: '#7e22ce' };
-      }
-      return { background: '#eab308', border: '#a16207' };
+    // Debate
+    const debate = cleanText(globalData.game_theory_analysis || '');
+    if (debate.length > 30) {
+      document.getElementById('swarm-visual-box').innerHTML =
+        (debate.includes('|') && debate.includes('---')) ? marked.parse(debate) : debate;
+    } else {
+      document.getElementById('swarm-visual-box').innerHTML = '<span class="empty">Keine Debatte verfügbar.</span>';
     }
 
-    function initKnowledgeGraph(graphData) {
-      const container = document.getElementById('knowledge-graph');
-      if (!container) return;
-
-      const rawNodes = Array.isArray(graphData?.nodes) ? graphData.nodes : [];
-      const rawEdges = Array.isArray(graphData?.edges) ? graphData.edges : (graphData?.links || []);
-
-      if (rawNodes.length === 0) {
-        container.innerHTML = '<div class="empty-hint" style="padding:24px;text-align:center;">Kein Netzwerk-Daten verfügbar.</div>';
-        return;
-      }
-
-      const nodes = new vis.DataSet(rawNodes.map(n => {
-        const lbl = cleanText(n.label || n.name || n.id);
-        const val = n.val || 5;
-        const lastSeen = n.last_seen ? ` · zuletzt ${n.last_seen}` : '';
-        const firstSeen = n.first_seen ? ` · seit ${n.first_seen}` : '';
-
-        return {
-          id: n.id || lbl,
-          label: lbl,
-          title: `<b>${lbl}</b><br>Gewicht: ${val}${firstSeen}${lastSeen}`,
-          shape: 'dot',
-          size: Math.max(16, val * 2.8),
-          color: getNodeColor(n.group, lbl),
-          font: {
-            color: '#ffffff',
-            size: 14,
-            face: 'Segoe UI, system-ui, sans-serif',
-            bold: true,
-            strokeWidth: 3,
-            strokeColor: '#0b0f19'
-          },
-          borderWidth: 2
-        };
-      }));
-
-      const edges = new vis.DataSet(rawEdges.map(e => ({
-        from: e.from || e.source,
-        to: e.to || e.target,
-        label: cleanText(e.label || ''),
-        color: { color: '#475569', highlight: '#94a3b8' },
-        width: 1.6,
-        font: {
-          color: '#e2e8f0',
-          size: 11,
-          face: 'Segoe UI, system-ui, sans-serif',
-          strokeWidth: 2,
-          strokeColor: '#0b0f19',
-          align: 'middle'
-        },
-        smooth: { type: 'continuous' }
-      })));
-
-      container.innerHTML = '';
-      networkInstance = new vis.Network(container, { nodes, edges }, {
-        physics: {
-          solver: 'forceAtlas2Based',
-          forceAtlas2Based: {
-            gravitationalConstant: -38,
-            springLength: 100,
-            springConstant: 0.07
-          },
-          stabilization: { iterations: 100 }
-        },
-        nodes: { borderWidth: 2, shadow: true },
-        edges: {
-          arrows: { to: { enabled: true, scaleFactor: 0.55 } },
-          selectionWidth: 2
-        },
-        interaction: { hover: true, zoomView: true, tooltipDelay: 100 }
+    // Domestic
+    const dpm = globalData.domestic_policy_matrix;
+    if (Array.isArray(dpm) && dpm.length) {
+      let h = '';
+      dpm.forEach(m => {
+        const stab = cleanText(m.stability).toUpperCase();
+        const col = stab.includes('ROT') ? 'var(--red)' : stab.includes('GRÜN') ? 'var(--green)' : 'var(--amber)';
+        h += `<div class="region-card">
+          <div class="top">
+            <span class="name">${cleanText(m.region)}</span>
+            <span class="stab" style="border-color:${col};color:${col}">${stab||'GELB'}</span>
+          </div>
+          <p style="font-size:12.5px;color:var(--text-dim)">${cleanText(m.dynamics)}</p>
+        </div>`;
       });
+      document.getElementById('domestic-matrix-container').innerHTML = h;
+    } else {
+      document.getElementById('domestic-matrix-container').innerHTML = '<div class="empty">Keine Innenpolitik-Daten.</div>';
     }
 
-    function initMap(hotspots) {
-      const container = document.getElementById('hotspot-map');
-      if (!container || map) return;
+    // KPIs
+    document.getElementById('kpi-geoscore').textContent =
+      (globalData.overall_geoscore || globalData.geoscore?.current_score || 75) + ' / 100';
+    document.getElementById('kpi-defcon').textContent =
+      cleanText(globalData.defcon_status?.label) || `DEFCON ${globalData.defcon_level||3}`;
+    document.getElementById('kpi-regime').textContent = cleanText(globalData.market_regime || 'Volatil');
+    document.getElementById('kpi-risk').textContent = cleanText(globalData.top_risk || 'Lieferketten');
 
-      map = L.map('hotspot-map', {
-        minZoom: 2,
-        maxBoundsViscosity: 1.0
-      }).setView([20, 0], 2);
+    // Stocks
+    const sd = globalData.equity_rotation || globalData.stock_picks || {};
+    const buys = sd.top5_buys || sd.top_5_buys || [];
+    const sells = sd.flop5_sells || sd.flop_5_sells || [];
+    let rows = '';
+    buys.forEach(b => {
+      rows += `<tr><td><span class="tag buy">BUY</span></td><td>${cleanText(b.ticker||b.asset)}</td><td>${cleanText(b.name||b.asset)}</td><td style="color:var(--text-dim)">${cleanText(b.reason)}</td></tr>`;
+    });
+    sells.forEach(s => {
+      rows += `<tr><td><span class="tag sell">SELL</span></td><td>${cleanText(s.ticker||s.asset)}</td><td>${cleanText(s.name||s.asset)}</td><td style="color:var(--text-dim)">${cleanText(s.reason)}</td></tr>`;
+    });
+    document.getElementById('stocks-buys-sells').innerHTML =
+      rows || '<tr><td colspan="4" class="empty">Keine Sektor-Rotationen.</td></tr>';
+  }
 
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-        maxZoom: 18,
-        noWrap: true
-      }).addTo(map);
+  function getNodeColor(group, label) {
+    const g = cleanText(group).toLowerCase(), l = cleanText(label).toLowerCase();
+    if (g.includes('miliz') || g.includes('konflikt') || l.includes('huthi') || l.includes('iran') || l.includes('krieg'))
+      return { background: '#f04455', border: '#b91c1c' };
+    if (g.includes('staat') || g.includes('bündnis') || l.includes('usa') || l.includes('china') || l.includes('russland') || l.includes('israel'))
+      return { background: '#3b9eff', border: '#1d6bb8' };
+    if (g.includes('wirtschaft') || g.includes('zentralbank') || g.includes('institution') || l.includes('fed') || l.includes('eu') || l.includes('cisa'))
+      return { background: '#2dd4a0', border: '#1a9e74' };
+    if (g.includes('tech') || l.includes('cyber'))
+      return { background: '#a78bfa', border: '#7c5cbf' };
+    return { background: '#f5a623', border: '#c4841a' };
+  }
 
-      (hotspots || []).forEach(h => {
-        let lat = parseFloat(h.lat);
-        let lng = parseFloat(h.lng ?? h.lon);
-
-        if (Math.abs(lat) > 90 && Math.abs(lng) <= 90) {
-          const tmp = lat; lat = lng; lng = tmp;
-        }
-        if (isNaN(lat) || isNaN(lng)) return;
-
-        const rawType = cleanText(h.type).toLowerCase();
-        const desc = cleanText(h.description || h.impact).toLowerCase();
-
-        let iconSymbol = '💥';
-        let cssClass = 'radar-conflict';
-
-        if (rawType.includes('flight') || desc.includes('flug') || desc.includes('callsign') || desc.includes('ads-b')) {
-          iconSymbol = '✈️'; cssClass = 'radar-flight';
-        } else if (rawType.includes('ship') || rawType.includes('maritime') || desc.includes('schiff')) {
-          iconSymbol = '🚢'; cssClass = 'radar-ship';
-        } else if (rawType.includes('refugee') || desc.includes('flüchtling')) {
-          iconSymbol = '🧳'; cssClass = 'radar-refugee';
-        }
-
-        const customIcon = L.divIcon({
-          className: `radar-icon ${cssClass}`,
-          html: `<span>${iconSymbol}</span>`,
-          iconSize: [26, 26],
-          iconAnchor: [13, 13]
-        });
-
-        L.marker([lat, lng], { icon: customIcon })
-          .addTo(map)
-          .bindPopup(`
-            <div style="background:#0f172a; color:#f8fafc; padding:9px; border-radius:7px; font-size:12px; border:1px solid #23314d; max-width:230px;">
-              <strong style="color:#38bdf8; font-size:13px;">${iconSymbol} ${cleanText(h.name || h.region)}</strong><br>
-              <div style="margin-top:5px; font-size:11px; color:#e2e8f0; line-height:1.35;">
-                ${cleanText(h.description || '')}
-              </div>
-              ${h.impact ? `<div style="margin-top:5px; font-size:10px; color:#eab308; font-family:monospace;">${cleanText(h.impact)}</div>` : ''}
-            </div>
-          `);
-      });
-
-      L.polyline([[12.5, 43.3], [15.0, 41.5], [27.8, 34.0]], {
-        color: '#eab308', weight: 2, dashArray: '5, 8', opacity: 0.75
-      }).addTo(map);
-
-      L.polyline([[32.8, 13.1], [35.8, 14.5], [37.5, 15.0]], {
-        color: '#a855f7', weight: 2, dashArray: '4, 6', opacity: 0.75
-      }).addTo(map);
-
-      setTimeout(() => { if (map) map.invalidateSize(); }, 200);
+  function initKnowledgeGraph(graphData) {
+    const container = document.getElementById('knowledge-graph');
+    if (!container) return;
+    const rawNodes = Array.isArray(graphData?.nodes) ? graphData.nodes : [];
+    const rawEdges = Array.isArray(graphData?.edges) ? graphData.edges : (graphData?.links || []);
+    if (!rawNodes.length) {
+      container.innerHTML = '<div class="empty" style="padding:30px;text-align:center">Kein Netzwerk verfügbar.</div>';
+      return;
     }
 
-    document.addEventListener("DOMContentLoaded", loadDashboard);
-  </script>
+    const nodes = new vis.DataSet(rawNodes.map(n => {
+      const lbl = cleanText(n.label || n.name || n.id);
+      const val = n.val || 5;
+      return {
+        id: n.id || lbl, label: lbl,
+        title: `<b>${lbl}</b><br>Gewicht: ${val}${n.first_seen ? ' · seit ' + n.first_seen : ''}${n.last_seen ? ' · zuletzt ' + n.last_seen : ''}`,
+        shape: 'dot', size: Math.max(14, val * 2.6),
+        color: getNodeColor(n.group, lbl),
+        font: { color: '#fff', size: 13, face: 'Inter, system-ui, sans-serif', bold: true, strokeWidth: 3, strokeColor: '#090b10' },
+        borderWidth: 2
+      };
+    }));
+
+    const edges = new vis.DataSet(rawEdges.map(e => ({
+      from: e.from || e.source, to: e.to || e.target,
+      label: cleanText(e.label || ''),
+      color: { color: '#2a3344', highlight: '#8b95a8' }, width: 1.4,
+      font: { color: '#c0c8d6', size: 10, strokeWidth: 2, strokeColor: '#090b10', align: 'middle' },
+      smooth: { type: 'continuous' }
+    })));
+
+    container.innerHTML = '';
+    networkInstance = new vis.Network(container, { nodes, edges }, {
+      physics: { solver: 'forceAtlas2Based', forceAtlas2Based: { gravitationalConstant: -36, springLength: 95, springConstant: 0.07 }, stabilization: { iterations: 90 } },
+      nodes: { borderWidth: 2, shadow: false },
+      edges: { arrows: { to: { enabled: true, scaleFactor: 0.5 } } },
+      interaction: { hover: true, zoomView: true, tooltipDelay: 80 }
+    });
+  }
+
+  function initMap(hotspots) {
+    const container = document.getElementById('hotspot-map');
+    if (!container || map) return;
+    map = L.map('hotspot-map', { minZoom: 2 }).setView([20, 0], 2);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18, noWrap: true }).addTo(map);
+
+    (hotspots || []).forEach(h => {
+      let lat = parseFloat(h.lat), lng = parseFloat(h.lng ?? h.lon);
+      if (Math.abs(lat) > 90 && Math.abs(lng) <= 90) { const t = lat; lat = lng; lng = t; }
+      if (isNaN(lat) || isNaN(lng)) return;
+
+      const type = cleanText(h.type).toLowerCase();
+      const desc = cleanText(h.description || h.impact).toLowerCase();
+      let sym = '💥', cls = 'r-conflict';
+      if (type.includes('flight') || desc.includes('flug') || desc.includes('callsign') || desc.includes('ads-b')) { sym = '✈️'; cls = 'r-flight'; }
+      else if (type.includes('ship') || type.includes('maritime') || desc.includes('schiff')) { sym = '🚢'; cls = 'r-ship'; }
+      else if (type.includes('refugee') || desc.includes('flüchtling')) { sym = '🧳'; cls = 'r-refugee'; }
+
+      L.marker([lat, lng], {
+        icon: L.divIcon({ className: `radar ${cls}`, html: `<span>${sym}</span>`, iconSize: [26, 26], iconAnchor: [13, 13] })
+      }).addTo(map).bindPopup(`
+        <div style="background:#11151c;color:#e8edf5;padding:8px;border-radius:6px;font-size:12px;border:1px solid #1e2530;max-width:220px">
+          <strong style="color:#3b9eff">${sym} ${cleanText(h.name||h.region)}</strong><br>
+          <div style="margin-top:4px;font-size:11px;color:#8b95a8">${cleanText(h.description||'')}</div>
+          ${h.impact ? `<div style="margin-top:4px;font-size:10px;color:#f5a623;font-family:monospace">${cleanText(h.impact)}</div>` : ''}
+        </div>`);
+    });
+
+    L.polyline([[12.5,43.3],[15,41.5],[27.8,34]], { color: '#f5a623', weight: 1.5, dashArray: '4,6', opacity: 0.7 }).addTo(map);
+    L.polyline([[32.8,13.1],[35.8,14.5],[37.5,15]], { color: '#a78bfa', weight: 1.5, dashArray: '4,6', opacity: 0.7 }).addTo(map);
+    setTimeout(() => { if (map) map.invalidateSize(); }, 200);
+  }
+
+  document.addEventListener('DOMContentLoaded', loadDashboard);
+</script>
 </body>
 </html>
