@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ARGUS GRID // World Intelligence Engine</title>
-  
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
@@ -14,7 +14,6 @@
     :root {
       --bg-main: #0b0f19;
       --bg-card: #151d30;
-      --bg-card-hover: #1c2742;
       --border-color: #23314d;
       --text-main: #f1f5f9;
       --text-muted: #94a3b8;
@@ -35,11 +34,7 @@
       padding: 16px;
     }
 
-    .app-container {
-      max-width: 1600px;
-      margin: 0 auto;
-      width: 100%;
-    }
+    .app-container { max-width: 1600px; margin: 0 auto; width: 100%; }
 
     header {
       display: flex;
@@ -102,7 +97,7 @@
     }
 
     .health-badge {
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       padding: 6px 12px;
       border-radius: 12px;
       background: #0f172a;
@@ -111,7 +106,6 @@
       align-items: center;
       gap: 7px;
       flex-wrap: wrap;
-      max-width: 100%;
     }
 
     body.simple-mode .detailed-section { display: none !important; }
@@ -155,7 +149,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .takeaway-card {
@@ -230,6 +224,13 @@
       font-size: 0.8rem;
     }
 
+    .empty-hint {
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 0.9rem;
+      padding: 12px 0;
+    }
+
     .modal-overlay {
       display: none;
       position: fixed;
@@ -296,7 +297,7 @@
         <div class="brand-title">🌐 ARGUS GRID</div>
         <div id="last-update" class="timestamp">Warte auf Synchronisation...</div>
       </div>
-      
+
       <div class="header-actions">
         <div id="health-badge" class="health-badge">
           <span>🔄 Lade Status...</span>
@@ -462,7 +463,6 @@
     let networkInstance = null;
     let globalData = null;
 
-    // Robuste Text-Bereinigung gegen [object Object] und verschachtelte Strukturen
     function cleanText(val) {
       if (val === null || val === undefined) return '';
       if (typeof val === 'object') {
@@ -473,8 +473,11 @@
           val.ticker || val.label || val.value || val.content || ''
         );
       }
-      let str = String(val);
-      return str.replace(/\*{1,3}/g, '').replace(/#{1,6}\s?/g, '').replace(/`{1,3}/g, '').trim();
+      return String(val)
+        .replace(/\*{1,3}/g, '')
+        .replace(/#{1,6}\s?/g, '')
+        .replace(/`{1,3}/g, '')
+        .trim();
     }
 
     function openSourcesModal() {
@@ -495,7 +498,6 @@
         document.body.classList.remove('simple-mode');
         document.getElementById('btn-detailed').classList.add('active');
         document.getElementById('btn-simple').classList.remove('active');
-        
         setTimeout(() => {
           if (globalData) {
             if (!map) initMap(globalData.conflict_hotspots || []);
@@ -539,7 +541,7 @@
           const gdelt = ph.gdelt_articles || 0;
           const tg = ph.telegram_posts || 0;
           const opensky = ph.opensky_status || "—";
-          const graph = ph.graph_merge_status || "—";
+          const synth = ph.synthesizer_status || "—";
 
           document.getElementById("health-badge").innerHTML = `
             <span style="color:${color}; font-weight:700;">●</span>
@@ -550,6 +552,8 @@
             <strong>TG</strong> ${tg}
             <span style="opacity:0.35">|</span>
             <strong>ADS-B</strong> ${opensky}
+            <span style="opacity:0.35">|</span>
+            <strong>Synth</strong> ${synth}
             <span style="opacity:0.35">|</span>
             <span title="Aktive Modelle">${bakers}</span>
           `;
@@ -577,36 +581,57 @@
       }
 
       document.getElementById('ampel-reason').innerText = cleanText(globalData.ampel_reason_simple);
-      document.getElementById('simple-summary-text').innerText = cleanText(globalData.daily_executive_summary_simple || globalData.daily_executive_summary);
-      document.getElementById('exec-summary').innerText = cleanText(globalData.daily_executive_summary);
+
+      // Summary mit Fallback-Hinweis
+      const simpleSum = cleanText(globalData.daily_executive_summary_simple || globalData.daily_executive_summary);
+      if (!simpleSum || simpleSum.includes("kein vollständiges Briefing") || simpleSum.length < 40) {
+        document.getElementById('simple-summary-text').innerHTML =
+          `<span class="empty-hint">Kein vollständiges Briefing verfügbar. Wechsle in die <strong>Tiefenanalyse</strong>, um die Schwarm-Debatte zu lesen.</span>`;
+      } else {
+        document.getElementById('simple-summary-text').innerText = simpleSum;
+      }
+
+      document.getElementById('exec-summary').innerText =
+        cleanText(globalData.daily_executive_summary) || "Kein ausführliches Briefing verfügbar.";
 
       // Takeaways
       const takeaways = globalData.simple_key_takeaways || globalData.key_takeaways || [];
-      if (Array.isArray(takeaways) && takeaways.length) {
+      if (Array.isArray(takeaways) && takeaways.length > 0) {
         let html = "";
         takeaways.forEach((t, i) => {
           const txt = cleanText(t);
           if (txt) html += `<div class="takeaway-card"><strong style="color:var(--accent-cyan);">PUNKT ${i+1}:</strong> ${txt}</div>`;
         });
-        document.getElementById('takeaways-container').innerHTML = html || '<div class="takeaway-card">Keine Kernaussagen verfügbar.</div>';
+        document.getElementById('takeaways-container').innerHTML =
+          html || '<div class="takeaway-card empty-hint">Keine Kernaussagen verfügbar.</div>';
+      } else {
+        document.getElementById('takeaways-container').innerHTML = `
+          <div class="takeaway-card" style="border-left-color: var(--accent-gold);">
+            <strong style="color:var(--accent-gold);">Hinweis:</strong>
+            Keine strukturierten Takeaways. In der <strong>Tiefenanalyse</strong> findest du die Schwarm-Debatte.
+          </div>`;
       }
 
       // Prognose
       if (globalData.predictive_horizon && typeof globalData.predictive_horizon === 'object') {
         const ph = globalData.predictive_horizon;
-        const prob = ph.base_case_probability_pct || 65;
+        const prob = ph.base_case_probability_pct || 60;
         document.getElementById('forecast-prob-badge').innerText = `${prob}%`;
-        document.getElementById('forecast-simple-text').innerText = cleanText(ph.base_case_summary || '—');
+        const forecastText = cleanText(ph.base_case_summary);
+        document.getElementById('forecast-simple-text').innerText =
+          forecastText && !forecastText.includes("Lagedaten werden ausgewertet")
+            ? forecastText
+            : "Prognose wird aus den aktuellen Signalen abgeleitet.";
 
         if (Array.isArray(ph.leading_indicators_to_watch) && ph.leading_indicators_to_watch.length > 0) {
           document.getElementById('forecast-indicator-text').innerText = cleanText(ph.leading_indicators_to_watch[0]);
         } else {
-          document.getElementById('forecast-indicator-text').innerText = "Geopolitische Volatilität beobachten.";
+          document.getElementById('forecast-indicator-text').innerText = "Geopolitische Volatilität & Sektor-Indikatoren beobachten.";
         }
       }
 
       // Historische Parallelen
-      if (Array.isArray(globalData.historical_precedents)) {
+      if (Array.isArray(globalData.historical_precedents) && globalData.historical_precedents.length > 0) {
         let hHtml = "";
         globalData.historical_precedents.forEach(hp => {
           hHtml += `
@@ -616,26 +641,33 @@
               ${hp.takeaway ? `<div style="font-size:0.78rem; margin-top:5px; color:var(--accent-gold); font-family:monospace;">${cleanText(hp.takeaway)}</div>` : ''}
             </div>`;
         });
-        document.getElementById('simple-historical-container').innerHTML = hHtml || '<div class="card">Keine Parallelen verfügbar.</div>';
+        document.getElementById('simple-historical-container').innerHTML = hHtml;
+      } else {
+        document.getElementById('simple-historical-container').innerHTML =
+          '<div class="empty-hint">Keine historischen Parallelen in diesem Lauf.</div>';
       }
 
       // Schwarm-Debatte
       const debateText = cleanText(globalData.game_theory_analysis || '');
-      if (debateText.includes('|') && debateText.includes('---')) {
-        document.getElementById('swarm-visual-box').innerHTML = marked.parse(debateText);
+      if (debateText && debateText.length > 30) {
+        if (debateText.includes('|') && debateText.includes('---')) {
+          document.getElementById('swarm-visual-box').innerHTML = marked.parse(debateText);
+        } else {
+          document.getElementById('swarm-visual-box').innerText = debateText;
+        }
       } else {
-        document.getElementById('swarm-visual-box').innerText = debateText || "Keine Debatte verfügbar.";
+        document.getElementById('swarm-visual-box').innerHTML =
+          '<span class="empty-hint">Keine Schwarm-Debatte verfügbar.</span>';
       }
 
       // Innenpolitik
-      if (Array.isArray(globalData.domestic_policy_matrix)) {
+      if (Array.isArray(globalData.domestic_policy_matrix) && globalData.domestic_policy_matrix.length > 0) {
         let mHtml = "";
         globalData.domestic_policy_matrix.forEach(m => {
           const stab = cleanText(m.stability).toUpperCase();
           const isRot = stab.includes('ROT');
           const isGruen = stab.includes('GRÜN');
           const color = isRot ? 'var(--accent-red)' : (isGruen ? 'var(--accent-green)' : 'var(--accent-gold)');
-
           mHtml += `
             <div class="card" style="background:#0f172a; padding: 13px;">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
@@ -646,14 +678,19 @@
             </div>`;
         });
         document.getElementById('domestic-matrix-container').innerHTML = mHtml;
+      } else {
+        document.getElementById('domestic-matrix-container').innerHTML =
+          '<div class="empty-hint">Keine Innenpolitik-Matrix in diesem Lauf.</div>';
       }
 
       // KPIs
-      const geoscore = globalData.overall_geoscore || (globalData.geoscore?.current_score) || 75;
+      const geoscore = globalData.overall_geoscore || (globalData.geoscore && globalData.geoscore.current_score) || 75;
       document.getElementById('kpi-geoscore').innerText = geoscore + " / 100";
 
-      const defcon = globalData.defcon_status?.label || `DEFCON ${globalData.defcon_level || 3}`;
-      document.getElementById('kpi-defcon').innerText = cleanText(defcon);
+      const defcon = (globalData.defcon_status && globalData.defcon_status.label)
+        ? cleanText(globalData.defcon_status.label)
+        : `DEFCON ${globalData.defcon_level || 3}`;
+      document.getElementById('kpi-defcon').innerText = defcon;
 
       document.getElementById('kpi-regime').innerText = cleanText(globalData.market_regime || "Volatil");
       document.getElementById('kpi-risk').innerText = cleanText(globalData.top_risk || "Lieferketten");
@@ -680,7 +717,8 @@
           <td style="color:#cbd5e1">${cleanText(s.reason)}</td>
         </tr>`;
       });
-      document.getElementById('stocks-buys-sells').innerHTML = stockRows || '<tr><td colspan="4">Keine Sektor-Rotationen erfasst.</td></tr>';
+      document.getElementById('stocks-buys-sells').innerHTML =
+        stockRows || '<tr><td colspan="4" class="empty-hint">Keine Sektor-Rotationen erfasst.</td></tr>';
     }
 
     function getNodeColor(group, label) {
@@ -696,7 +734,7 @@
         return { background: '#38bdf8', border: '#0284c7' };
       }
       if (grp.includes('wirtschaft') || grp.includes('zentralbank') || grp.includes('institution') ||
-          lbl.includes('fed') || lbl.includes('eu')) {
+          lbl.includes('fed') || lbl.includes('eu') || lbl.includes('cisa')) {
         return { background: '#22c55e', border: '#15803d' };
       }
       if (grp.includes('tech') || lbl.includes('cyber') || lbl.includes('tiktok')) {
@@ -713,7 +751,7 @@
       const rawEdges = Array.isArray(graphData?.edges) ? graphData.edges : (graphData?.links || []);
 
       if (rawNodes.length === 0) {
-        container.innerHTML = '<div style="padding:20px;color:#94a3b8;text-align:center;">Kein Netzwerk-Daten verfügbar.</div>';
+        container.innerHTML = '<div class="empty-hint" style="padding:24px;text-align:center;">Kein Netzwerk-Daten verfügbar.</div>';
         return;
       }
 
@@ -797,11 +835,9 @@
         let lat = parseFloat(h.lat);
         let lng = parseFloat(h.lng ?? h.lon);
 
-        // Automatische Korrektur vertauschter Koordinaten
         if (Math.abs(lat) > 90 && Math.abs(lng) <= 90) {
           const tmp = lat; lat = lng; lng = tmp;
         }
-
         if (isNaN(lat) || isNaN(lng)) return;
 
         const rawType = cleanText(h.type).toLowerCase();
@@ -838,7 +874,6 @@
           `);
       });
 
-      // Strategische Korridore
       L.polyline([[12.5, 43.3], [15.0, 41.5], [27.8, 34.0]], {
         color: '#eab308', weight: 2, dashArray: '5, 8', opacity: 0.75
       }).addTo(map);
