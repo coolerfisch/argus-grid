@@ -4,880 +4,708 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ARGUS GRID</title>
-
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
     :root {
-      --bg: #090b10;
-      --surface: #11151c;
-      --surface-2: #171c25;
-      --border: #1e2530;
-      --border-hover: #2a3344;
-      --text: #e8edf5;
-      --text-dim: #8b95a8;
-      --cyan: #3b9eff;
-      --green: #2dd4a0;
-      --red: #f04455;
-      --amber: #f5a623;
-      --purple: #a78bfa;
-      --radius: 10px;
+      --void: #0a0a0c;
+      --panel: #12121a;
+      --panel-2: #1a1a24;
+      --line: #2a2a38;
+      --line-soft: #1e1e2a;
+      --ink: #f0f0f5;
+      --ink-soft: #9a9ab0;
+      --ink-mute: #6a6a80;
+      --signal: #00e5a0;
+      --warn: #ffb020;
+      --danger: #ff4060;
+      --info: #40a0ff;
+      --accent: #c0a0ff;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--void);
+      color: var(--ink);
+      font-family: 'IBM Plex Sans', system-ui, sans-serif;
       font-size: 14px;
-      line-height: 1.55;
-      padding: 20px;
+      line-height: 1.5;
       min-height: 100vh;
     }
 
-    .wrap {
-      max-width: 1440px;
-      margin: 0 auto;
-    }
-
-    /* ── Header ── */
-    header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+    /* ── TOP BAR ── */
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,12,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      padding: 0 24px;
+      height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
       gap: 16px;
-      margin-bottom: 28px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border);
     }
 
-    .logo {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: var(--cyan);
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+      font-weight: 700; font-size: 15px; letter-spacing: 3px;
     }
 
-    .logo span {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--cyan);
-      box-shadow: 0 0 10px var(--cyan);
+    .brand-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--signal);
+      box-shadow: 0 0 12px var(--signal);
+      animation: breathe 3s ease-in-out infinite;
     }
 
-    .meta {
-      font-size: 12px;
-      color: var(--text-dim);
-      margin-top: 4px;
-      letter-spacing: 0.3px;
+    @keyframes breathe {
+      0%,100% { opacity: 1; } 50% { opacity: 0.4; }
     }
 
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
+    .topbar-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px; color: var(--ink-mute);
     }
 
-    .health {
-      font-size: 11px;
-      font-family: "SF Mono", "Fira Code", monospace;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 6px 12px;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-      color: var(--text-dim);
+    .topbar-actions {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
     }
 
-    .health strong { color: var(--text); font-weight: 600; }
+    .pill {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 5px 10px;
+      color: var(--ink-soft);
+      display: flex; gap: 6px; align-items: center; flex-wrap: wrap;
+    }
+
+    .pill b { color: var(--ink); font-weight: 500; }
 
     .btn {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text-dim);
-      padding: 7px 14px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.15s;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 12px; font-weight: 600;
+      background: var(--panel); border: 1px solid var(--line);
+      color: var(--ink-soft); padding: 6px 14px;
+      border-radius: 4px; cursor: pointer; transition: 0.15s;
+    }
+    .btn:hover { border-color: var(--ink-mute); color: var(--ink); }
+
+    .seg {
+      display: flex; border: 1px solid var(--line); border-radius: 4px; overflow: hidden;
+    }
+    .seg button {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 12px; font-weight: 600;
+      background: transparent; border: none;
+      color: var(--ink-mute); padding: 6px 14px; cursor: pointer; transition: 0.15s;
+    }
+    .seg button.on {
+      background: var(--signal); color: #000;
     }
 
-    .btn:hover { border-color: var(--border-hover); color: var(--text); }
+    /* ── LAYOUT ── */
+    .shell { max-width: 1400px; margin: 0 auto; padding: 28px 24px; }
 
-    .toggle {
-      display: flex;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      overflow: hidden;
-    }
+    body.simple .deep { display: none !important; }
+    body:not(.simple) .lite { display: none !important; }
 
-    .toggle button {
-      background: transparent;
-      border: none;
-      color: var(--text-dim);
-      padding: 7px 14px;
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-
-    .toggle button.active {
-      background: var(--cyan);
-      color: #000;
-    }
-
-    /* ── Ampel ── */
-    .status-bar {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+    /* ── STATUS STRIP ── */
+    .status-strip {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px; align-items: center;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
       padding: 20px 24px;
       margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
     }
 
-    .lights {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      background: var(--bg);
-      padding: 12px 10px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
+    .traffic {
+      display: flex; flex-direction: column; gap: 6px;
+      background: var(--void);
+      padding: 10px 8px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
     }
-
-    .light {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      opacity: 0.12;
-      transition: all 0.3s;
+    .t-light {
+      width: 18px; height: 18px; border-radius: 50%;
+      opacity: 0.1; transition: 0.3s;
     }
+    .t-light.r.on { background: var(--danger); opacity: 1; box-shadow: 0 0 12px var(--danger); }
+    .t-light.a.on { background: var(--warn); opacity: 1; box-shadow: 0 0 12px var(--warn); }
+    .t-light.g.on { background: var(--signal); opacity: 1; box-shadow: 0 0 12px var(--signal); }
 
-    .light.red.active { background: var(--red); opacity: 1; box-shadow: 0 0 14px var(--red); }
-    .light.amber.active { background: var(--amber); opacity: 1; box-shadow: 0 0 14px var(--amber); }
-    .light.green.active { background: var(--green); opacity: 1; box-shadow: 0 0 14px var(--green); }
-
-    .status-text h2 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 4px;
+    .status-body h1 {
+      font-size: 20px; font-weight: 700; margin-bottom: 4px;
     }
+    .status-body p { color: var(--ink-soft); font-size: 13.5px; }
 
-    .status-text p {
-      color: var(--text-dim);
-      font-size: 13.5px;
-    }
-
-    /* ── Visibility ── */
-    body.simple-mode .detailed { display: none !important; }
-    body:not(.simple-mode) .simple { display: none !important; }
-
-    /* ── Cards ── */
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+    /* ── BLOCKS ── */
+    .block {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
       padding: 20px;
       margin-bottom: 16px;
     }
 
-    .card-title {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-dim);
+    .block-head {
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--ink-mute);
       margin-bottom: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line-soft);
     }
 
-    .card-title .badge {
-      font-family: monospace;
-      font-size: 11px;
-      background: var(--surface-2);
-      padding: 2px 8px;
-      border-radius: 4px;
-      color: var(--cyan);
-      text-transform: none;
-      letter-spacing: 0;
+    .chip {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px; font-weight: 500;
+      background: var(--panel-2);
+      color: var(--info);
+      padding: 2px 8px; border-radius: 3px;
+      text-transform: none; letter-spacing: 0;
     }
 
-    /* ── Takeaways ── */
-    .takeaways {
+    /* ── POINTS ── */
+    .points {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 10px;
-      margin-top: 14px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 10px; margin-top: 12px;
     }
-
-    .takeaway {
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--cyan);
+    .point {
+      background: var(--panel-2);
+      border: 1px solid var(--line-soft);
       border-radius: 6px;
       padding: 12px 14px;
       font-size: 13px;
+      position: relative;
+      padding-left: 18px;
+    }
+    .point::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      background: var(--info); border-radius: 6px 0 0 6px;
+    }
+    .point .n {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px; color: var(--info);
+      display: block; margin-bottom: 3px;
     }
 
-    .takeaway strong {
-      color: var(--cyan);
-      font-size: 11px;
-      display: block;
-      margin-bottom: 4px;
-      letter-spacing: 0.5px;
-    }
-
-    /* ── KPIs ── */
-    .kpis {
+    /* ── METRICS ── */
+    .metrics {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px;
-      margin-bottom: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px; margin-bottom: 16px;
     }
-
-    .kpi {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px;
-      text-align: center;
-    }
-
-    .kpi-label {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--text-dim);
-      margin-bottom: 6px;
-    }
-
-    .kpi-value {
-      font-size: 22px;
-      font-weight: 700;
-    }
-
-    /* ── Grid ── */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 12px;
-    }
-
-    /* ── Map / Graph ── */
-    #hotspot-map, #knowledge-graph {
-      height: 460px;
-      width: 100%;
+    .metric {
+      background: var(--panel);
+      border: 1px solid var(--line);
       border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--bg);
+      padding: 16px; text-align: center;
+    }
+    .metric .lbl {
+      font-size: 10px; text-transform: uppercase;
+      letter-spacing: 1px; color: var(--ink-mute); margin-bottom: 6px;
+    }
+    .metric .val { font-size: 24px; font-weight: 700; }
+
+    /* ── TILES ── */
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 10px;
+    }
+    .tile {
+      background: var(--panel-2);
+      border: 1px solid var(--line-soft);
+      border-radius: 6px; padding: 14px;
+    }
+    .tile .t-title { font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+    .tile .t-body { font-size: 12.5px; color: var(--ink-soft); }
+    .tile .t-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px; color: var(--warn); margin-top: 6px;
     }
 
-    .legend {
-      display: flex;
-      gap: 12px;
-      font-size: 11px;
-      font-family: monospace;
-      color: var(--text-dim);
-      flex-wrap: wrap;
+    .stab-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px; padding: 1px 7px;
+      border-radius: 3px; border: 1px solid;
     }
 
-    /* ── Table ── */
-    .table-wrap { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 460px; }
+    /* ── MAP / GRAPH ── */
+    #hotspot-map, #knowledge-graph {
+      height: 440px; width: 100%;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: var(--void);
+    }
+
+    .keys {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px; color: var(--ink-mute);
+    }
+
+    /* ── TABLE ── */
+    .scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 440px; }
     th {
-      text-align: left;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      color: var(--text-dim);
-      padding: 8px 6px;
-      border-bottom: 1px solid var(--border);
+      text-align: left; font-size: 10px; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--ink-mute);
+      padding: 8px 6px; border-bottom: 1px solid var(--line);
+      font-weight: 600;
     }
-    td {
-      padding: 10px 6px;
-      border-bottom: 1px solid var(--border);
-      color: var(--text);
-    }
+    td { padding: 10px 6px; border-bottom: 1px solid var(--line-soft); }
 
     .tag {
-      font-family: monospace;
-      font-size: 11px;
-      padding: 2px 7px;
-      border-radius: 4px;
-      background: var(--surface-2);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px; font-weight: 500;
+      padding: 2px 7px; border-radius: 3px;
     }
-    .tag.buy { color: var(--green); }
-    .tag.sell { color: var(--red); }
+    .tag.b { background: rgba(0,229,160,0.12); color: var(--signal); }
+    .tag.s { background: rgba(255,64,96,0.12); color: var(--danger); }
 
-    /* ── Region cards ── */
-    .region-card {
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 14px;
+    /* ── MD ── */
+    .md-box {
+      background: var(--void); border: 1px solid var(--line-soft);
+      border-radius: 6px; padding: 16px;
+      max-height: 440px; overflow-y: auto;
+      font-size: 13px; color: var(--ink-soft); line-height: 1.6;
     }
+    .md-box table { width: 100%; border-collapse: collapse; margin: 8px 0; border: 1px solid var(--line); }
+    .md-box th { background: var(--panel-2); color: var(--info); padding: 5px 8px; font-size: 10px; }
+    .md-box td { padding: 5px 8px; border-bottom: 1px solid var(--line-soft); }
+    .md-box tr:nth-child(even) td { background: rgba(255,255,255,0.015); }
 
-    .region-card .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 8px;
+    .ghost { color: var(--ink-mute); font-style: italic; font-size: 13px; padding: 6px 0; }
+
+    /* ── MODAL ── */
+    .overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.75); backdrop-filter: blur(6px);
+      z-index: 200; justify-content: center; align-items: center; padding: 20px;
     }
-
-    .region-card .name { font-weight: 600; font-size: 13px; }
-
-    .stab {
-      font-size: 10px;
-      font-family: monospace;
-      padding: 2px 7px;
-      border-radius: 4px;
-      border: 1px solid;
+    .overlay.show { display: flex; }
+    .dialog {
+      background: var(--panel); border: 1px solid var(--line);
+      border-radius: 8px; max-width: 520px; width: 100%;
+      padding: 24px; max-height: 80vh; overflow-y: auto;
     }
+    .dialog h3 { font-size: 15px; margin-bottom: 10px; }
+    .dialog p { color: var(--ink-soft); font-size: 13px; margin-bottom: 10px; }
+    .dialog ul { margin-left: 18px; color: var(--ink-soft); font-size: 13px; line-height: 1.85; }
+    .dialog li b { color: var(--ink); }
 
-    /* ── Markdown ── */
-    .md { color: #c0c8d6; font-size: 13px; line-height: 1.6; max-height: 460px; overflow-y: auto; }
-    .md table { width: 100%; border-collapse: collapse; margin: 10px 0; border: 1px solid var(--border); }
-    .md th { background: var(--surface-2); color: var(--cyan); padding: 6px 8px; font-size: 11px; text-transform: uppercase; }
-    .md td { padding: 6px 8px; border-bottom: 1px solid var(--border); }
-    .md tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
-
-    .empty {
-      color: var(--text-dim);
-      font-style: italic;
-      font-size: 13px;
-      padding: 8px 0;
+    /* ── RADAR ── */
+    .ri {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; border-radius: 50%; width: 24px; height: 24px;
     }
-
-    /* ── Modal ── */
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(4px);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    .modal.open { display: flex; }
-    .modal-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      max-width: 560px;
-      width: 100%;
-      padding: 24px;
-      max-height: 80vh;
-      overflow-y: auto;
-    }
-    .modal-box h3 { color: var(--cyan); margin-bottom: 12px; font-size: 16px; }
-    .modal-box ul { margin: 12px 0 0 18px; color: var(--text-dim); font-size: 13px; line-height: 1.8; }
-    .modal-box li strong { color: var(--text); }
-
-    /* ── Map icons ── */
-    .radar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      border-radius: 50%;
-      width: 26px;
-      height: 26px;
-    }
-    .r-conflict { background: rgba(240,68,85,0.25); border: 2px solid var(--red); animation: pulse 1.5s infinite; }
-    .r-flight { background: rgba(59,158,255,0.25); border: 2px solid var(--cyan); animation: pulse 2s infinite; }
-    .r-ship { background: rgba(245,166,35,0.25); border: 2px solid var(--amber); }
-    .r-refugee { background: rgba(167,139,250,0.25); border: 2px solid var(--purple); animation: pulse 2s infinite; }
+    .ri-c { background: rgba(255,64,96,0.2); border: 1.5px solid var(--danger); animation: pulse 1.5s infinite; }
+    .ri-f { background: rgba(64,160,255,0.2); border: 1.5px solid var(--info); animation: pulse 2s infinite; }
+    .ri-s { background: rgba(255,176,32,0.2); border: 1.5px solid var(--warn); }
+    .ri-r { background: rgba(192,160,255,0.2); border: 1.5px solid var(--accent); animation: pulse 2s infinite; }
 
     @keyframes pulse {
-      0% { transform: scale(0.95); }
-      70% { transform: scale(1.08); }
-      100% { transform: scale(0.95); }
+      0% { transform: scale(0.92); } 70% { transform: scale(1.1); } 100% { transform: scale(0.92); }
     }
 
-    footer {
-      margin-top: 40px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
+    .foot {
+      margin-top: 40px; padding-top: 16px;
+      border-top: 1px solid var(--line);
       text-align: center;
-      font-size: 11px;
-      color: var(--text-dim);
-      letter-spacing: 0.5px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px; color: var(--ink-mute); letter-spacing: 1px;
     }
 
-    @media (max-width: 700px) {
-      body { padding: 12px; }
-      header { flex-direction: column; align-items: flex-start; }
-      .status-bar { flex-direction: column; text-align: center; }
-      .lights { flex-direction: row; }
-      #hotspot-map, #knowledge-graph { height: 320px; }
+    @media (max-width: 720px) {
+      .topbar { padding: 0 12px; height: auto; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+      .shell { padding: 16px 12px; }
+      .status-strip { grid-template-columns: 1fr; text-align: center; }
+      .traffic { flex-direction: row; margin: 0 auto; }
+      #hotspot-map, #knowledge-graph { height: 300px; }
     }
   </style>
 </head>
-<body class="simple-mode">
+<body class="simple">
 
-<div class="wrap">
+<!-- TOP BAR -->
+<div class="topbar">
+  <div style="display:flex;align-items:center;gap:16px">
+    <div class="brand"><div class="brand-dot"></div>ARGUS</div>
+    <div class="topbar-meta" id="last-update">—</div>
+  </div>
+  <div class="topbar-actions">
+    <div class="pill" id="health-badge">…</div>
+    <button class="btn" onclick="openModal()">Quellen</button>
+    <div class="seg">
+      <button id="btn-simple" class="on" onclick="setMode('simple')">Standard</button>
+      <button id="btn-detailed" onclick="setMode('detailed')">Analyse</button>
+    </div>
+  </div>
+</div>
 
-  <header>
-    <div>
-      <div class="logo"><span></span> ARGUS GRID</div>
-      <div class="meta" id="last-update">Synchronisiere…</div>
-    </div>
-    <div class="header-right">
-      <div class="health" id="health-badge">Lade Status…</div>
-      <button class="btn" onclick="openModal()">Quellen</button>
-      <div class="toggle">
-        <button id="btn-simple" class="active" onclick="setMode('simple')">Standard</button>
-        <button id="btn-detailed" onclick="setMode('detailed')">Tiefenanalyse</button>
-      </div>
-    </div>
-  </header>
+<div class="shell">
 
-  <!-- Status -->
-  <div class="status-bar">
-    <div class="lights">
-      <div id="ampel-red" class="light red"></div>
-      <div id="ampel-yellow" class="light amber"></div>
-      <div id="ampel-green" class="light green"></div>
+  <!-- STATUS -->
+  <div class="status-strip">
+    <div class="traffic">
+      <div id="ampel-red" class="t-light r"></div>
+      <div id="ampel-yellow" class="t-light a"></div>
+      <div id="ampel-green" class="t-light g"></div>
     </div>
-    <div class="status-text">
-      <h2 id="ampel-title">Weltlage wird geladen…</h2>
-      <p id="ampel-reason">Analysiere globale Signale…</p>
+    <div class="status-body">
+      <h1 id="ampel-title">Lade…</h1>
+      <p id="ampel-reason">—</p>
     </div>
   </div>
 
-  <!-- ════ STANDARD ════ -->
-  <div class="simple">
-
-    <div class="card">
-      <div class="card-title">Lagebild</div>
-      <p id="simple-summary-text" style="font-size:14px; line-height:1.6;"></p>
-      <div id="takeaways-container" class="takeaways"></div>
+  <!-- ══ STANDARD ══ -->
+  <div class="lite">
+    <div class="block">
+      <div class="block-head">Lagebild</div>
+      <p id="simple-summary-text" style="font-size:14px;line-height:1.65"></p>
+      <div id="takeaways-container" class="points"></div>
     </div>
 
-    <div class="card">
-      <div class="card-title">
-        Prognose
-        <span class="badge" id="forecast-prob-badge">—</span>
-      </div>
-      <p id="forecast-simple-text" style="font-size:14px; line-height:1.6; margin-bottom:12px;"></p>
-      <div style="background:var(--surface-2); border:1px solid var(--border); border-radius:6px; padding:10px 14px; font-size:12.5px;">
-        <strong style="color:var(--amber);">Frühwarnung:</strong>
-        <span id="forecast-indicator-text" style="color:var(--text-dim); margin-left:6px;">—</span>
+    <div class="block">
+      <div class="block-head">Prognose <span class="chip" id="forecast-prob-badge">—</span></div>
+      <p id="forecast-simple-text" style="font-size:14px;line-height:1.65;margin-bottom:12px"></p>
+      <div style="background:var(--panel-2);border:1px solid var(--line-soft);border-radius:6px;padding:10px 14px;font-size:12.5px">
+        <b style="color:var(--warn)">Frühwarnung</b>
+        <span id="forecast-indicator-text" style="color:var(--ink-soft);margin-left:8px">—</span>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-title">Historische Parallelen</div>
-      <div id="simple-historical-container" class="grid-2"></div>
+    <div class="block">
+      <div class="block-head">Historische Parallelen</div>
+      <div id="simple-historical-container" class="tiles"></div>
     </div>
-
   </div>
 
-  <!-- ════ TIEFENANALYSE ════ -->
-  <div class="detailed">
-
-    <div class="card">
-      <div class="card-title">Executive Briefing</div>
-      <p id="exec-summary" style="font-size:14px; line-height:1.6;"></p>
+  <!-- ══ ANALYSE ══ -->
+  <div class="deep">
+    <div class="block">
+      <div class="block-head">Executive Briefing</div>
+      <p id="exec-summary" style="font-size:14px;line-height:1.65"></p>
     </div>
 
-    <div class="kpis">
-      <div class="kpi">
-        <div class="kpi-label">Geoscore</div>
-        <div class="kpi-value" id="kpi-geoscore">—</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">DEFCON</div>
-        <div class="kpi-value" id="kpi-defcon" style="color:var(--amber);">—</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">Markt-Regime</div>
-        <div class="kpi-value" id="kpi-regime" style="font-size:14px; margin-top:6px;">—</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-label">Hauptrisiko</div>
-        <div class="kpi-value" id="kpi-risk" style="font-size:13px; color:var(--red); margin-top:6px;">—</div>
-      </div>
+    <div class="metrics">
+      <div class="metric"><div class="lbl">Geoscore</div><div class="val" id="kpi-geoscore">—</div></div>
+      <div class="metric"><div class="lbl">DEFCON</div><div class="val" id="kpi-defcon" style="color:var(--warn)">—</div></div>
+      <div class="metric"><div class="lbl">Markt</div><div class="val" id="kpi-regime" style="font-size:14px;margin-top:4px">—</div></div>
+      <div class="metric"><div class="lbl">Hauptrisiko</div><div class="val" id="kpi-risk" style="font-size:13px;color:var(--danger);margin-top:4px">—</div></div>
     </div>
 
-    <div class="card">
-      <div class="card-title">
-        Schwarm-Debatte
-        <span class="badge">Multi-LLM</span>
-      </div>
-      <div id="swarm-visual-box" class="md">Lade Debatte…</div>
+    <div class="block">
+      <div class="block-head">Schwarm-Debatte <span class="chip">Multi-LLM</span></div>
+      <div id="swarm-visual-box" class="md-box">…</div>
     </div>
 
-    <div class="card">
-      <div class="card-title">Innenpolitik & Stabilität</div>
-      <div id="domestic-matrix-container" class="grid-2"></div>
+    <div class="block">
+      <div class="block-head">Innenpolitik & Stabilität</div>
+      <div id="domestic-matrix-container" class="tiles"></div>
     </div>
 
-    <div class="card">
-      <div class="card-title">
+    <div class="block">
+      <div class="block-head">
         Kaskaden-Netzwerk
-        <div class="legend">
-          <span style="color:#3b9eff;">● Staaten</span>
-          <span style="color:#f04455;">● Konflikt</span>
-          <span style="color:#2dd4a0;">● Institutionen</span>
-          <span style="color:#a78bfa;">● Tech</span>
-          <span style="color:#f5a623;">● Themen</span>
+        <div class="keys">
+          <span style="color:#40a0ff">● Staat</span>
+          <span style="color:#ff4060">● Konflikt</span>
+          <span style="color:#00e5a0">● Institution</span>
+          <span style="color:#c0a0ff">● Tech</span>
+          <span style="color:#ffb020">● Thema</span>
         </div>
       </div>
       <div id="knowledge-graph"></div>
     </div>
 
-    <div class="card">
-      <div class="card-title">
+    <div class="block">
+      <div class="block-head">
         Tactical Radar
-        <div class="legend">
-          <span>💥 Konflikt</span>
-          <span>✈️ Militärflug</span>
-          <span>🚢 Schiff</span>
-          <span>🧳 Migration</span>
-        </div>
+        <div class="keys"><span>💥 Konflikt</span><span>✈️ Flug</span><span>🚢 Schiff</span><span>🧳 Migration</span></div>
       </div>
       <div id="hotspot-map"></div>
     </div>
 
-    <div class="card">
-      <div class="card-title">Sektor-Rotation</div>
-      <div class="table-wrap">
+    <div class="block">
+      <div class="block-head">Sektor-Rotation</div>
+      <div class="scroll">
         <table>
-          <thead>
-            <tr><th>Typ</th><th>Ticker</th><th>Name</th><th>Begründung</th></tr>
-          </thead>
+          <thead><tr><th>Typ</th><th>Ticker</th><th>Name</th><th>Begründung</th></tr></thead>
           <tbody id="stocks-buys-sells"></tbody>
         </table>
       </div>
     </div>
-
   </div>
 
-  <footer>ARGUS GRID · Systemic Intelligence Engine · v3.0</footer>
+  <div class="foot">ARGUS GRID · v3.0 · Systemic Intelligence</div>
 </div>
 
-<!-- Modal -->
-<div class="modal" id="sources-modal" onclick="closeModal(event)">
-  <div class="modal-box" onclick="event.stopPropagation()">
-    <div style="display:flex; justify-content:space-between; align-items:center;">
+<!-- MODAL -->
+<div class="overlay" id="sources-modal" onclick="closeModal(event)">
+  <div class="dialog" onclick="event.stopPropagation()">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
       <h3>Datenquellen</h3>
-      <button class="btn" onclick="closeModal()" style="padding:4px 10px;">✕</button>
+      <button class="btn" onclick="closeModal()" style="padding:3px 10px">✕</button>
     </div>
-    <p style="color:var(--text-dim); font-size:13px; margin-top:8px;">
-      ARGUS GRID kombiniert vier unabhängige Datenkanäle:
-    </p>
+    <p>Vier unabhängige Datenkanäle speisen das System:</p>
     <ul>
-      <li><strong>RSS Feeds</strong> – Zentralbanken, Regierungen, Qualitätsmedien</li>
-      <li><strong>GDELT DOC 2.0</strong> – Globale Echtzeit-Event-Datenbank</li>
-      <li><strong>Telegram OSINT</strong> – Feldberichte & Militärbeobachter</li>
-      <li><strong>OpenSky ADS-B</strong> – Live-Militär- und Aufklärungsflüge</li>
+      <li><b>RSS Feeds</b> — Zentralbanken, Regierungen, Medien</li>
+      <li><b>GDELT DOC 2.0</b> — Globale Event-Datenbank</li>
+      <li><b>Telegram OSINT</b> — Feldberichte & Militärkanäle</li>
+      <li><b>OpenSky ADS-B</b> — Live-Militär- & Aufklärungsflüge</li>
     </ul>
   </div>
 </div>
 
 <script>
-  let map = null;
-  let networkInstance = null;
-  let globalData = null;
+let map=null, networkInstance=null, globalData=null;
 
-  function cleanText(val) {
-    if (val === null || val === undefined) return '';
-    if (typeof val === 'object') {
-      if (Array.isArray(val)) return val.map(cleanText).filter(Boolean).join(', ');
-      return cleanText(val.text || val.summary || val.description || val.indicator ||
-        val.takeaway || val.point || val.reason || val.name || val.ticker ||
-        val.label || val.value || val.content || '');
-    }
-    return String(val).replace(/\*{1,3}/g, '').replace(/#{1,6}\s?/g, '').replace(/`{1,3}/g, '').trim();
+function cleanText(v){
+  if(v==null)return'';
+  if(typeof v==='object'){
+    if(Array.isArray(v))return v.map(cleanText).filter(Boolean).join(', ');
+    return cleanText(v.text||v.summary||v.description||v.indicator||v.takeaway||v.point||v.reason||v.name||v.ticker||v.label||v.value||v.content||'');
+  }
+  return String(v).replace(/\*{1,3}/g,'').replace(/#{1,6}\s?/g,'').replace(/`{1,3}/g,'').trim();
+}
+
+function openModal(){document.getElementById('sources-modal').classList.add('show')}
+function closeModal(e){if(!e||e.target===document.getElementById('sources-modal'))document.getElementById('sources-modal').classList.remove('show')}
+
+function setMode(m){
+  if(m==='simple'){
+    document.body.classList.add('simple');
+    document.getElementById('btn-simple').classList.add('on');
+    document.getElementById('btn-detailed').classList.remove('on');
+  }else{
+    document.body.classList.remove('simple');
+    document.getElementById('btn-detailed').classList.add('on');
+    document.getElementById('btn-simple').classList.remove('on');
+    setTimeout(()=>{
+      if(globalData){
+        if(!map)initMap(globalData.conflict_hotspots||[]);
+        else map.invalidateSize();
+        if(globalData.graph_network)initKnowledgeGraph(globalData.graph_network);
+      }
+    },200);
+  }
+}
+
+async function loadDashboard(){
+  try{
+    const r=await fetch('./data.json?v='+Date.now());
+    if(!r.ok)throw new Error('missing');
+    globalData=await r.json();
+  }catch(e){
+    document.getElementById('ampel-title').textContent='Daten fehlen';
+    document.getElementById('ampel-reason').textContent='data.json nicht gefunden oder Pipeline nicht gelaufen.';
+    document.getElementById('health-badge').innerHTML='<span style="color:var(--danger)">● Fehler</span>';
+    return;
   }
 
-  function openModal() { document.getElementById('sources-modal').classList.add('open'); }
-  function closeModal(e) {
-    if (!e || e.target === document.getElementById('sources-modal')) {
-      document.getElementById('sources-modal').classList.remove('open');
-    }
+  document.getElementById('last-update').textContent=
+    globalData.timestamp?new Date(globalData.timestamp).toLocaleString('de-DE'):'—';
+
+  try{
+    const ph=globalData.pipeline_health||{};
+    const s=ph.feeds_successful||0,t=ph.feeds_total||0;
+    const rate=t>0?Math.round(s/t*100):0;
+    let c='var(--signal)';
+    if(rate<40)c='var(--danger)';else if(rate<65)c='var(--warn)';
+    document.getElementById('health-badge').innerHTML=
+      `<span style="color:${c};font-weight:700">●</span> <b>Feeds</b> ${s}/${t}`+
+      ` <span style="opacity:.3">│</span> <b>GDELT</b> ${ph.gdelt_articles||0}`+
+      ` <span style="opacity:.3">│</span> <b>TG</b> ${ph.telegram_posts||0}`+
+      ` <span style="opacity:.3">│</span> <b>ADS-B</b> ${ph.opensky_status||'—'}`+
+      ` <span style="opacity:.3">│</span> <b>Synth</b> ${ph.synthesizer_status||'—'}`+
+      ` <span style="opacity:.3">│</span> ${(ph.bakers_active||[]).join(', ')||'—'}`;
+  }catch(_){}
+
+  const st=cleanText(globalData.ampel_status||'GELB').toUpperCase();
+  document.getElementById('ampel-red').classList.toggle('on',st==='ROT');
+  document.getElementById('ampel-yellow').classList.toggle('on',st==='GELB');
+  document.getElementById('ampel-green').classList.toggle('on',st==='GRÜN');
+  const tit=document.getElementById('ampel-title');
+  if(st==='ROT'){tit.textContent='ROT — Höchste Warnstufe';tit.style.color='var(--danger)'}
+  else if(st==='GRÜN'){tit.textContent='GRÜN — Stabil';tit.style.color='var(--signal)'}
+  else{tit.textContent='GELB — Spannungen';tit.style.color='var(--warn)'}
+  document.getElementById('ampel-reason').textContent=cleanText(globalData.ampel_reason_simple);
+
+  const sum=cleanText(globalData.daily_executive_summary_simple||globalData.daily_executive_summary);
+  if(!sum||sum.includes('kein vollständiges Briefing')||sum.length<40){
+    document.getElementById('simple-summary-text').innerHTML='<span class="ghost">Kein Briefing. Wechsle in die Analyse für die Schwarm-Debatte.</span>';
+  }else{
+    document.getElementById('simple-summary-text').textContent=sum;
+  }
+  document.getElementById('exec-summary').textContent=cleanText(globalData.daily_executive_summary)||'Kein Briefing.';
+
+  const tks=globalData.simple_key_takeaways||globalData.key_takeaways||[];
+  if(Array.isArray(tks)&&tks.length){
+    let h='';
+    tks.forEach((t,i)=>{const x=cleanText(t);if(x)h+=`<div class="point"><span class="n">0${i+1}</span>${x}</div>`});
+    document.getElementById('takeaways-container').innerHTML=h||'<div class="ghost">Keine Takeaways.</div>';
+  }else{
+    document.getElementById('takeaways-container').innerHTML='<div class="point" style="border-color:var(--warn)"><span class="n" style="color:var(--warn)">INFO</span>Keine strukturierten Takeaways — Details in der Analyse.</div>';
   }
 
-  function setMode(mode) {
-    if (mode === 'simple') {
-      document.body.classList.add('simple-mode');
-      document.getElementById('btn-simple').classList.add('active');
-      document.getElementById('btn-detailed').classList.remove('active');
-    } else {
-      document.body.classList.remove('simple-mode');
-      document.getElementById('btn-detailed').classList.add('active');
-      document.getElementById('btn-simple').classList.remove('active');
-      setTimeout(() => {
-        if (globalData) {
-          if (!map) initMap(globalData.conflict_hotspots || []);
-          else map.invalidateSize();
-          if (globalData.graph_network) initKnowledgeGraph(globalData.graph_network);
-        }
-      }, 200);
-    }
+  const ph2=globalData.predictive_horizon;
+  if(ph2&&typeof ph2==='object'){
+    document.getElementById('forecast-prob-badge').textContent=(ph2.base_case_probability_pct||60)+'%';
+    const ft=cleanText(ph2.base_case_summary);
+    document.getElementById('forecast-simple-text').textContent=ft&&!ft.includes('Lagedaten werden ausgewertet')?ft:'Prognose wird abgeleitet.';
+    const inds=ph2.leading_indicators_to_watch;
+    document.getElementById('forecast-indicator-text').textContent=(Array.isArray(inds)&&inds.length)?cleanText(inds[0]):'Volatilität beobachten.';
   }
 
-  async function loadDashboard() {
-    try {
-      const res = await fetch('./data.json?v=' + Date.now());
-      if (!res.ok) throw new Error('data.json fehlt');
-      globalData = await res.json();
-    } catch (e) {
-      document.getElementById('ampel-title').textContent = 'Daten konnten nicht geladen werden';
-      document.getElementById('ampel-reason').textContent = 'Prüfe, ob data.json vorhanden ist und die Pipeline gelaufen ist.';
-      document.getElementById('health-badge').innerHTML = '<span style="color:var(--red)">● Pipeline-Fehler</span>';
-      return;
-    }
-
-    document.getElementById('last-update').textContent =
-      'Stand: ' + (globalData.timestamp ? new Date(globalData.timestamp).toLocaleString('de-DE') : '—');
-
-    // Health
-    try {
-      const ph = globalData.pipeline_health || {};
-      const s = ph.feeds_successful || 0, t = ph.feeds_total || 0;
-      const rate = t > 0 ? Math.round(s / t * 100) : 0;
-      let c = 'var(--green)';
-      if (rate < 40) c = 'var(--red)';
-      else if (rate < 65) c = 'var(--amber)';
-      document.getElementById('health-badge').innerHTML = `
-        <span style="color:${c};font-weight:700">●</span>
-        <strong>Feeds</strong> ${s}/${t}
-        <span style="opacity:.3">|</span> <strong>GDELT</strong> ${ph.gdelt_articles||0}
-        <span style="opacity:.3">|</span> <strong>TG</strong> ${ph.telegram_posts||0}
-        <span style="opacity:.3">|</span> <strong>ADS-B</strong> ${ph.opensky_status||'—'}
-        <span style="opacity:.3">|</span> <strong>Synth</strong> ${ph.synthesizer_status||'—'}
-        <span style="opacity:.3">|</span> ${(ph.bakers_active||[]).join(', ')||'—'}
-      `;
-    } catch (_) {}
-
-    // Ampel
-    const st = cleanText(globalData.ampel_status || 'GELB').toUpperCase();
-    document.getElementById('ampel-red').classList.toggle('active', st === 'ROT');
-    document.getElementById('ampel-yellow').classList.toggle('active', st === 'GELB');
-    document.getElementById('ampel-green').classList.toggle('active', st === 'GRÜN');
-    const title = document.getElementById('ampel-title');
-    if (st === 'ROT') { title.textContent = 'ROT — Höchste Warnstufe'; title.style.color = 'var(--red)'; }
-    else if (st === 'GRÜN') { title.textContent = 'GRÜN — Stabil'; title.style.color = 'var(--green)'; }
-    else { title.textContent = 'GELB — Spannungen & Konflikte'; title.style.color = 'var(--amber)'; }
-    document.getElementById('ampel-reason').textContent = cleanText(globalData.ampel_reason_simple);
-
-    // Summary
-    const sum = cleanText(globalData.daily_executive_summary_simple || globalData.daily_executive_summary);
-    if (!sum || sum.includes('kein vollständiges Briefing') || sum.length < 40) {
-      document.getElementById('simple-summary-text').innerHTML =
-        '<span class="empty">Kein vollständiges Briefing. Wechsle in die Tiefenanalyse für die Schwarm-Debatte.</span>';
-    } else {
-      document.getElementById('simple-summary-text').textContent = sum;
-    }
-    document.getElementById('exec-summary').textContent =
-      cleanText(globalData.daily_executive_summary) || 'Kein Briefing verfügbar.';
-
-    // Takeaways
-    const tks = globalData.simple_key_takeaways || globalData.key_takeaways || [];
-    if (Array.isArray(tks) && tks.length) {
-      let h = '';
-      tks.forEach((t, i) => {
-        const txt = cleanText(t);
-        if (txt) h += `<div class="takeaway"><strong>PUNKT ${i+1}</strong>${txt}</div>`;
-      });
-      document.getElementById('takeaways-container').innerHTML = h || '<div class="empty">Keine Takeaways.</div>';
-    } else {
-      document.getElementById('takeaways-container').innerHTML =
-        '<div class="takeaway" style="border-left-color:var(--amber)"><strong style="color:var(--amber)">HINWEIS</strong>Keine strukturierten Takeaways. Details in der Tiefenanalyse.</div>';
-    }
-
-    // Forecast
-    const ph = globalData.predictive_horizon;
-    if (ph && typeof ph === 'object') {
-      document.getElementById('forecast-prob-badge').textContent = (ph.base_case_probability_pct || 60) + '%';
-      const ft = cleanText(ph.base_case_summary);
-      document.getElementById('forecast-simple-text').textContent =
-        ft && !ft.includes('Lagedaten werden ausgewertet') ? ft : 'Prognose wird aus aktuellen Signalen abgeleitet.';
-      const inds = ph.leading_indicators_to_watch;
-      document.getElementById('forecast-indicator-text').textContent =
-        (Array.isArray(inds) && inds.length) ? cleanText(inds[0]) : 'Geopolitische Volatilität beobachten.';
-    }
-
-    // Historical
-    const hist = globalData.historical_precedents;
-    if (Array.isArray(hist) && hist.length) {
-      let h = '';
-      hist.forEach(hp => {
-        h += `<div class="region-card">
-          <div class="name" style="color:var(--cyan)">${cleanText(hp.current_event||hp.event)}</div>
-          <div style="font-size:12.5px;color:var(--text-dim);margin-top:4px">Analog: ${cleanText(hp.historical_analog||hp.similarity)}</div>
-          ${hp.takeaway?`<div style="font-size:11px;color:var(--amber);margin-top:4px;font-family:monospace">${cleanText(hp.takeaway)}</div>`:''}
-        </div>`;
-      });
-      document.getElementById('simple-historical-container').innerHTML = h;
-    } else {
-      document.getElementById('simple-historical-container').innerHTML = '<div class="empty">Keine Parallelen in diesem Lauf.</div>';
-    }
-
-    // Debate
-    const debate = cleanText(globalData.game_theory_analysis || '');
-    if (debate.length > 30) {
-      document.getElementById('swarm-visual-box').innerHTML =
-        (debate.includes('|') && debate.includes('---')) ? marked.parse(debate) : debate;
-    } else {
-      document.getElementById('swarm-visual-box').innerHTML = '<span class="empty">Keine Debatte verfügbar.</span>';
-    }
-
-    // Domestic
-    const dpm = globalData.domestic_policy_matrix;
-    if (Array.isArray(dpm) && dpm.length) {
-      let h = '';
-      dpm.forEach(m => {
-        const stab = cleanText(m.stability).toUpperCase();
-        const col = stab.includes('ROT') ? 'var(--red)' : stab.includes('GRÜN') ? 'var(--green)' : 'var(--amber)';
-        h += `<div class="region-card">
-          <div class="top">
-            <span class="name">${cleanText(m.region)}</span>
-            <span class="stab" style="border-color:${col};color:${col}">${stab||'GELB'}</span>
-          </div>
-          <p style="font-size:12.5px;color:var(--text-dim)">${cleanText(m.dynamics)}</p>
-        </div>`;
-      });
-      document.getElementById('domestic-matrix-container').innerHTML = h;
-    } else {
-      document.getElementById('domestic-matrix-container').innerHTML = '<div class="empty">Keine Innenpolitik-Daten.</div>';
-    }
-
-    // KPIs
-    document.getElementById('kpi-geoscore').textContent =
-      (globalData.overall_geoscore || globalData.geoscore?.current_score || 75) + ' / 100';
-    document.getElementById('kpi-defcon').textContent =
-      cleanText(globalData.defcon_status?.label) || `DEFCON ${globalData.defcon_level||3}`;
-    document.getElementById('kpi-regime').textContent = cleanText(globalData.market_regime || 'Volatil');
-    document.getElementById('kpi-risk').textContent = cleanText(globalData.top_risk || 'Lieferketten');
-
-    // Stocks
-    const sd = globalData.equity_rotation || globalData.stock_picks || {};
-    const buys = sd.top5_buys || sd.top_5_buys || [];
-    const sells = sd.flop5_sells || sd.flop_5_sells || [];
-    let rows = '';
-    buys.forEach(b => {
-      rows += `<tr><td><span class="tag buy">BUY</span></td><td>${cleanText(b.ticker||b.asset)}</td><td>${cleanText(b.name||b.asset)}</td><td style="color:var(--text-dim)">${cleanText(b.reason)}</td></tr>`;
+  const hist=globalData.historical_precedents;
+  if(Array.isArray(hist)&&hist.length){
+    let h='';
+    hist.forEach(hp=>{
+      h+=`<div class="tile"><div class="t-title" style="color:var(--info)">${cleanText(hp.current_event||hp.event)}</div>
+        <div class="t-body">Analog: ${cleanText(hp.historical_analog||hp.similarity)}</div>
+        ${hp.takeaway?`<div class="t-note">${cleanText(hp.takeaway)}</div>`:''}</div>`;
     });
-    sells.forEach(s => {
-      rows += `<tr><td><span class="tag sell">SELL</span></td><td>${cleanText(s.ticker||s.asset)}</td><td>${cleanText(s.name||s.asset)}</td><td style="color:var(--text-dim)">${cleanText(s.reason)}</td></tr>`;
+    document.getElementById('simple-historical-container').innerHTML=h;
+  }else{
+    document.getElementById('simple-historical-container').innerHTML='<div class="ghost">Keine Parallelen.</div>';
+  }
+
+  const debate=cleanText(globalData.game_theory_analysis||'');
+  if(debate.length>30){
+    document.getElementById('swarm-visual-box').innerHTML=(debate.includes('|')&&debate.includes('---'))?marked.parse(debate):debate;
+  }else{
+    document.getElementById('swarm-visual-box').innerHTML='<span class="ghost">Keine Debatte.</span>';
+  }
+
+  const dpm=globalData.domestic_policy_matrix;
+  if(Array.isArray(dpm)&&dpm.length){
+    let h='';
+    dpm.forEach(m=>{
+      const stab=cleanText(m.stability).toUpperCase();
+      const col=stab.includes('ROT')?'var(--danger)':stab.includes('GRÜN')?'var(--signal)':'var(--warn)';
+      h+=`<div class="tile"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+        <span class="t-title">${cleanText(m.region)}</span>
+        <span class="stab-tag" style="border-color:${col};color:${col}">${stab||'GELB'}</span>
+      </div><div class="t-body">${cleanText(m.dynamics)}</div></div>`;
     });
-    document.getElementById('stocks-buys-sells').innerHTML =
-      rows || '<tr><td colspan="4" class="empty">Keine Sektor-Rotationen.</td></tr>';
+    document.getElementById('domestic-matrix-container').innerHTML=h;
+  }else{
+    document.getElementById('domestic-matrix-container').innerHTML='<div class="ghost">Keine Daten.</div>';
   }
 
-  function getNodeColor(group, label) {
-    const g = cleanText(group).toLowerCase(), l = cleanText(label).toLowerCase();
-    if (g.includes('miliz') || g.includes('konflikt') || l.includes('huthi') || l.includes('iran') || l.includes('krieg'))
-      return { background: '#f04455', border: '#b91c1c' };
-    if (g.includes('staat') || g.includes('bündnis') || l.includes('usa') || l.includes('china') || l.includes('russland') || l.includes('israel'))
-      return { background: '#3b9eff', border: '#1d6bb8' };
-    if (g.includes('wirtschaft') || g.includes('zentralbank') || g.includes('institution') || l.includes('fed') || l.includes('eu') || l.includes('cisa'))
-      return { background: '#2dd4a0', border: '#1a9e74' };
-    if (g.includes('tech') || l.includes('cyber'))
-      return { background: '#a78bfa', border: '#7c5cbf' };
-    return { background: '#f5a623', border: '#c4841a' };
-  }
+  document.getElementById('kpi-geoscore').textContent=(globalData.overall_geoscore||globalData.geoscore?.current_score||75)+' / 100';
+  document.getElementById('kpi-defcon').textContent=cleanText(globalData.defcon_status?.label)||`DEFCON ${globalData.defcon_level||3}`;
+  document.getElementById('kpi-regime').textContent=cleanText(globalData.market_regime||'Volatil');
+  document.getElementById('kpi-risk').textContent=cleanText(globalData.top_risk||'Lieferketten');
 
-  function initKnowledgeGraph(graphData) {
-    const container = document.getElementById('knowledge-graph');
-    if (!container) return;
-    const rawNodes = Array.isArray(graphData?.nodes) ? graphData.nodes : [];
-    const rawEdges = Array.isArray(graphData?.edges) ? graphData.edges : (graphData?.links || []);
-    if (!rawNodes.length) {
-      container.innerHTML = '<div class="empty" style="padding:30px;text-align:center">Kein Netzwerk verfügbar.</div>';
-      return;
-    }
+  const sd=globalData.equity_rotation||globalData.stock_picks||{};
+  const buys=sd.top5_buys||sd.top_5_buys||[];
+  const sells=sd.flop5_sells||sd.flop_5_sells||[];
+  let rows='';
+  buys.forEach(b=>{rows+=`<tr><td><span class="tag b">BUY</span></td><td>${cleanText(b.ticker||b.asset)}</td><td>${cleanText(b.name||b.asset)}</td><td style="color:var(--ink-soft)">${cleanText(b.reason)}</td></tr>`});
+  sells.forEach(s=>{rows+=`<tr><td><span class="tag s">SELL</span></td><td>${cleanText(s.ticker||s.asset)}</td><td>${cleanText(s.name||s.asset)}</td><td style="color:var(--ink-soft)">${cleanText(s.reason)}</td></tr>`});
+  document.getElementById('stocks-buys-sells').innerHTML=rows||'<tr><td colspan="4" class="ghost">Keine Rotationen.</td></tr>';
+}
 
-    const nodes = new vis.DataSet(rawNodes.map(n => {
-      const lbl = cleanText(n.label || n.name || n.id);
-      const val = n.val || 5;
-      return {
-        id: n.id || lbl, label: lbl,
-        title: `<b>${lbl}</b><br>Gewicht: ${val}${n.first_seen ? ' · seit ' + n.first_seen : ''}${n.last_seen ? ' · zuletzt ' + n.last_seen : ''}`,
-        shape: 'dot', size: Math.max(14, val * 2.6),
-        color: getNodeColor(n.group, lbl),
-        font: { color: '#fff', size: 13, face: 'Inter, system-ui, sans-serif', bold: true, strokeWidth: 3, strokeColor: '#090b10' },
-        borderWidth: 2
-      };
-    }));
+function getNodeColor(group,label){
+  const g=cleanText(group).toLowerCase(),l=cleanText(label).toLowerCase();
+  if(g.includes('miliz')||g.includes('konflikt')||l.includes('huthi')||l.includes('iran')||l.includes('krieg'))
+    return{background:'#ff4060',border:'#c02040'};
+  if(g.includes('staat')||g.includes('bündnis')||l.includes('usa')||l.includes('china')||l.includes('russland')||l.includes('israel'))
+    return{background:'#40a0ff',border:'#2080d0'};
+  if(g.includes('wirtschaft')||g.includes('zentralbank')||g.includes('institution')||l.includes('fed')||l.includes('eu')||l.includes('cisa'))
+    return{background:'#00e5a0',border:'#00b080'};
+  if(g.includes('tech')||l.includes('cyber'))
+    return{background:'#c0a0ff',border:'#9070d0'};
+  return{background:'#ffb020',border:'#d09010'};
+}
 
-    const edges = new vis.DataSet(rawEdges.map(e => ({
-      from: e.from || e.source, to: e.to || e.target,
-      label: cleanText(e.label || ''),
-      color: { color: '#2a3344', highlight: '#8b95a8' }, width: 1.4,
-      font: { color: '#c0c8d6', size: 10, strokeWidth: 2, strokeColor: '#090b10', align: 'middle' },
-      smooth: { type: 'continuous' }
-    })));
+function initKnowledgeGraph(gd){
+  const c=document.getElementById('knowledge-graph');
+  if(!c)return;
+  const rn=Array.isArray(gd?.nodes)?gd.nodes:[];
+  const re=Array.isArray(gd?.edges)?gd.edges:(gd?.links||[]);
+  if(!rn.length){c.innerHTML='<div class="ghost" style="padding:30px;text-align:center">Kein Netzwerk.</div>';return}
 
-    container.innerHTML = '';
-    networkInstance = new vis.Network(container, { nodes, edges }, {
-      physics: { solver: 'forceAtlas2Based', forceAtlas2Based: { gravitationalConstant: -36, springLength: 95, springConstant: 0.07 }, stabilization: { iterations: 90 } },
-      nodes: { borderWidth: 2, shadow: false },
-      edges: { arrows: { to: { enabled: true, scaleFactor: 0.5 } } },
-      interaction: { hover: true, zoomView: true, tooltipDelay: 80 }
-    });
-  }
+  const nodes=new vis.DataSet(rn.map(n=>{
+    const lbl=cleanText(n.label||n.name||n.id);
+    const val=n.val||5;
+    return{
+      id:n.id||lbl,label:lbl,
+      title:`<b>${lbl}</b><br>Gewicht: ${val}${n.first_seen?' · seit '+n.first_seen:''}${n.last_seen?' · zuletzt '+n.last_seen:''}`,
+      shape:'dot',size:Math.max(14,val*2.5),
+      color:getNodeColor(n.group,lbl),
+      font:{color:'#f0f0f5',size:12,face:'IBM Plex Sans, system-ui',bold:true,strokeWidth:3,strokeColor:'#0a0a0c'},
+      borderWidth:2
+    };
+  }));
 
-  function initMap(hotspots) {
-    const container = document.getElementById('hotspot-map');
-    if (!container || map) return;
-    map = L.map('hotspot-map', { minZoom: 2 }).setView([20, 0], 2);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18, noWrap: true }).addTo(map);
+  const edges=new vis.DataSet(re.map(e=>({
+    from:e.from||e.source,to:e.to||e.target,
+    label:cleanText(e.label||''),
+    color:{color:'#2a2a38',highlight:'#6a6a80'},width:1.3,
+    font:{color:'#9a9ab0',size:10,strokeWidth:2,strokeColor:'#0a0a0c',align:'middle'},
+    smooth:{type:'continuous'}
+  })));
 
-    (hotspots || []).forEach(h => {
-      let lat = parseFloat(h.lat), lng = parseFloat(h.lng ?? h.lon);
-      if (Math.abs(lat) > 90 && Math.abs(lng) <= 90) { const t = lat; lat = lng; lng = t; }
-      if (isNaN(lat) || isNaN(lng)) return;
+  c.innerHTML='';
+  networkInstance=new vis.Network(c,{nodes,edges},{
+    physics:{solver:'forceAtlas2Based',forceAtlas2Based:{gravitationalConstant:-34,springLength:90,springConstant:0.07},stabilization:{iterations:80}},
+    nodes:{borderWidth:2},
+    edges:{arrows:{to:{enabled:true,scaleFactor:0.45}}},
+    interaction:{hover:true,zoomView:true,tooltipDelay:80}
+  });
+}
 
-      const type = cleanText(h.type).toLowerCase();
-      const desc = cleanText(h.description || h.impact).toLowerCase();
-      let sym = '💥', cls = 'r-conflict';
-      if (type.includes('flight') || desc.includes('flug') || desc.includes('callsign') || desc.includes('ads-b')) { sym = '✈️'; cls = 'r-flight'; }
-      else if (type.includes('ship') || type.includes('maritime') || desc.includes('schiff')) { sym = '🚢'; cls = 'r-ship'; }
-      else if (type.includes('refugee') || desc.includes('flüchtling')) { sym = '🧳'; cls = 'r-refugee'; }
+function initMap(hotspots){
+  const c=document.getElementById('hotspot-map');
+  if(!c||map)return;
+  map=L.map('hotspot-map',{minZoom:2}).setView([20,0],2);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:18,noWrap:true}).addTo(map);
 
-      L.marker([lat, lng], {
-        icon: L.divIcon({ className: `radar ${cls}`, html: `<span>${sym}</span>`, iconSize: [26, 26], iconAnchor: [13, 13] })
-      }).addTo(map).bindPopup(`
-        <div style="background:#11151c;color:#e8edf5;padding:8px;border-radius:6px;font-size:12px;border:1px solid #1e2530;max-width:220px">
-          <strong style="color:#3b9eff">${sym} ${cleanText(h.name||h.region)}</strong><br>
-          <div style="margin-top:4px;font-size:11px;color:#8b95a8">${cleanText(h.description||'')}</div>
-          ${h.impact ? `<div style="margin-top:4px;font-size:10px;color:#f5a623;font-family:monospace">${cleanText(h.impact)}</div>` : ''}
-        </div>`);
-    });
+  (hotspots||[]).forEach(h=>{
+    let lat=parseFloat(h.lat),lng=parseFloat(h.lng??h.lon);
+    if(Math.abs(lat)>90&&Math.abs(lng)<=90){const t=lat;lat=lng;lng=t}
+    if(isNaN(lat)||isNaN(lng))return;
+    const type=cleanText(h.type).toLowerCase();
+    const desc=cleanText(h.description||h.impact).toLowerCase();
+    let sym='💥',cls='ri-c';
+    if(type.includes('flight')||desc.includes('flug')||desc.includes('callsign')||desc.includes('ads-b')){sym='✈️';cls='ri-f'}
+    else if(type.includes('ship')||type.includes('maritime')||desc.includes('schiff')){sym='🚢';cls='ri-s'}
+    else if(type.includes('refugee')||desc.includes('flüchtling')){sym='🧳';cls='ri-r'}
 
-    L.polyline([[12.5,43.3],[15,41.5],[27.8,34]], { color: '#f5a623', weight: 1.5, dashArray: '4,6', opacity: 0.7 }).addTo(map);
-    L.polyline([[32.8,13.1],[35.8,14.5],[37.5,15]], { color: '#a78bfa', weight: 1.5, dashArray: '4,6', opacity: 0.7 }).addTo(map);
-    setTimeout(() => { if (map) map.invalidateSize(); }, 200);
-  }
+    L.marker([lat,lng],{
+      icon:L.divIcon({className:`ri ${cls}`,html:`<span>${sym}</span>`,iconSize:[24,24],iconAnchor:[12,12]})
+    }).addTo(map).bindPopup(
+      `<div style="background:#12121a;color:#f0f0f5;padding:8px;border-radius:6px;font-size:12px;border:1px solid #2a2a38;max-width:210px">
+        <b style="color:#40a0ff">${sym} ${cleanText(h.name||h.region)}</b><br>
+        <div style="margin-top:4px;font-size:11px;color:#9a9ab0">${cleanText(h.description||'')}</div>
+        ${h.impact?`<div style="margin-top:4px;font-size:10px;color:#ffb020;font-family:monospace">${cleanText(h.impact)}</div>`:''}
+      </div>`
+    );
+  });
 
-  document.addEventListener('DOMContentLoaded', loadDashboard);
+  L.polyline([[12.5,43.3],[15,41.5],[27.8,34]],{color:'#ffb020',weight:1.5,dashArray:'4,6',opacity:0.6}).addTo(map);
+  L.polyline([[32.8,13.1],[35.8,14.5],[37.5,15]],{color:'#c0a0ff',weight:1.5,dashArray:'4,6',opacity:0.6}).addTo(map);
+  setTimeout(()=>{if(map)map.invalidateSize()},200);
+}
+
+document.addEventListener('DOMContentLoaded',loadDashboard);
 </script>
 </body>
 </html>
