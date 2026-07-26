@@ -158,7 +158,7 @@
       align-items: center;
       border: 2px solid var(--rule-strong);
       padding: 16px 20px;
-      margin-bottom: 32px;
+      margin-bottom: 20px;
       background: var(--paper);
     }
 
@@ -187,6 +187,30 @@
     }
     .alert p { color: var(--ink-2); font-size: 14px; }
 
+    /* Delta */
+    .delta-bar {
+      display: none;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      border: 1px solid var(--rule);
+      background: var(--paper-2);
+      padding: 12px 16px;
+      margin-bottom: 28px;
+      font-size: 13px;
+      color: var(--ink-2);
+    }
+    .delta-bar .delta-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--ink-3);
+    }
+    .delta-up { color: var(--green); font-weight: 600; }
+    .delta-down { color: var(--red); font-weight: 600; }
+    .delta-same { color: var(--ink-3); }
+
     .section { margin-bottom: 36px; }
 
     .section-label {
@@ -202,6 +226,8 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .section-label .num {
@@ -347,6 +373,27 @@
       color: var(--ink-3);
     }
 
+    .graph-filters {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .graph-filters button {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border: 1px solid var(--rule-strong);
+      background: transparent;
+      color: var(--ink-3);
+      cursor: pointer;
+    }
+    .graph-filters button.on {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
     .table-wrap { overflow-x: auto; }
     table {
       width: 100%;
@@ -380,7 +427,6 @@
     .tag.buy { background: var(--tag-buy-bg); color: var(--green); }
     .tag.sell { background: var(--tag-sell-bg); color: var(--red); }
 
-    /* ── Schwarm-Debatte ── */
     .debate-wrap {
       border: 1px solid var(--rule-strong);
       background: var(--paper);
@@ -439,14 +485,9 @@
     .debate-body h4 { font-size: 14px; color: var(--ink-2); }
 
     .debate-body p { margin-bottom: 10px; }
-
     .debate-body ul,
-    .debate-body ol {
-      margin: 8px 0 12px 20px;
-    }
-
+    .debate-body ol { margin: 8px 0 12px 20px; }
     .debate-body li { margin-bottom: 4px; }
-
     .debate-body strong { color: var(--ink); font-weight: 600; }
 
     .debate-body blockquote {
@@ -483,9 +524,7 @@
       vertical-align: top;
     }
 
-    .debate-body tr:nth-child(even) td {
-      background: var(--paper-2);
-    }
+    .debate-body tr:nth-child(even) td { background: var(--paper-2); }
 
     .debate-body code {
       font-family: 'JetBrains Mono', monospace;
@@ -599,6 +638,7 @@
   <div class="mast-right">
     <div class="health" id="health-badge">…</div>
     <button class="btn ghost" onclick="openModal()">Quellen</button>
+    <button class="btn ghost" onclick="exportBriefing()" id="export-btn">Export</button>
     <button class="btn ghost" id="theme-btn" onclick="toggleTheme()" title="Dark/Light Mode">☾</button>
     <div class="modes">
       <button id="btn-simple" class="active" onclick="setMode('simple')">Briefing</button>
@@ -619,6 +659,11 @@
       <h2 id="ampel-title">Lade…</h2>
       <p id="ampel-reason">—</p>
     </div>
+  </div>
+
+  <div class="delta-bar" id="delta-bar">
+    <span class="delta-label">Delta</span>
+    <span id="delta-text">—</span>
   </div>
 
   <!-- BRIEFING -->
@@ -672,7 +717,6 @@
       </div>
     </div>
 
-    <!-- SCHWARM-DEBATTE -->
     <div class="section">
       <div class="section-label">Schwarm-Debatte</div>
       <div class="debate-wrap">
@@ -699,6 +743,13 @@
           <span style="color:#6d28d9">● Tech</span>
           <span style="color:var(--amber)">● Thema</span>
         </span>
+      </div>
+      <div class="graph-filters" id="graph-filters">
+        <button class="on" data-filter="all" onclick="filterGraph('all')">Alle</button>
+        <button data-filter="staat" onclick="filterGraph('staat')">Staaten</button>
+        <button data-filter="konflikt" onclick="filterGraph('konflikt')">Konflikt</button>
+        <button data-filter="institution" onclick="filterGraph('institution')">Institutionen</button>
+        <button data-filter="tech" onclick="filterGraph('tech')">Tech</button>
       </div>
       <div id="knowledge-graph"></div>
     </div>
@@ -746,12 +797,20 @@
 </div>
 
 <script>
-let map=null, networkInstance=null, globalData=null, mapLayer=null;
+let map=null, networkInstance=null, globalData=null, mapLayer=null, graphRaw=null;
+
+function safeStorageGet(key) {
+  try { return localStorage.getItem(key); } catch (_) { return null; }
+}
+function safeStorageSet(key, value) {
+  try { localStorage.setItem(key, value); } catch (_) {}
+}
 
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('argus-theme', theme);
-  document.getElementById('theme-btn').textContent = theme === 'dark' ? '☀' : '☾';
+  safeStorageSet('argus-theme', theme);
+  const btn = document.getElementById('theme-btn');
+  if (btn) btn.textContent = theme === 'dark' ? '☀' : '☾';
   if (map && mapLayer) {
     map.removeLayer(mapLayer);
     const tiles = theme === 'dark'
@@ -767,9 +826,13 @@ function toggleTheme() {
 }
 
 (function initTheme() {
-  const saved = localStorage.getItem('argus-theme');
-  const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(saved || (preferDark ? 'dark' : 'light'));
+  let theme = 'light';
+  try {
+    const saved = safeStorageGet('argus-theme');
+    if (saved === 'dark' || saved === 'light') theme = saved;
+    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+  } catch (_) { theme = 'light'; }
+  applyTheme(theme);
 })();
 
 function cleanText(v){
@@ -797,9 +860,93 @@ function setMode(m){
       if(globalData){
         if(!map)initMap(globalData.conflict_hotspots||[]);
         else map.invalidateSize();
-        if(globalData.graph_network)initKnowledgeGraph(globalData.graph_network);
+        if(globalData.graph_network){
+          graphRaw = globalData.graph_network;
+          initKnowledgeGraph(graphRaw);
+        }
       }
     },200);
+  }
+}
+
+function filterGraph(kind) {
+  document.querySelectorAll('#graph-filters button').forEach(b => {
+    b.classList.toggle('on', b.dataset.filter === kind);
+  });
+  if (!graphRaw) return;
+  if (kind === 'all') {
+    initKnowledgeGraph(graphRaw);
+    return;
+  }
+  const keywords = {
+    staat: ['staat', 'bündnis'],
+    konflikt: ['miliz', 'konflikt', 'non-state', 'risiko'],
+    institution: ['institution', 'wirtschaft', 'zentralbank', 'organisation'],
+    tech: ['tech', 'cyber']
+  };
+  const keys = keywords[kind] || [];
+  const nodes = (graphRaw.nodes || []).filter(n => {
+    const g = cleanText(n.group).toLowerCase();
+    const l = cleanText(n.label || n.name).toLowerCase();
+    return keys.some(k => g.includes(k) || l.includes(k));
+  });
+  const ids = new Set(nodes.map(n => n.id));
+  const edges = (graphRaw.edges || graphRaw.links || []).filter(e =>
+    ids.has(e.from || e.source) && ids.has(e.to || e.target)
+  );
+  initKnowledgeGraph({ nodes, edges });
+}
+
+function exportBriefing() {
+  if (!globalData) return;
+  const d = globalData;
+  const lines = [
+    '# ARGUS GRID Briefing',
+    `Stand: ${d.timestamp ? new Date(d.timestamp).toLocaleString('de-DE') : '—'}`,
+    '',
+    `## Ampel: ${cleanText(d.ampel_status)}`,
+    cleanText(d.ampel_reason_simple),
+    '',
+    '## Lagebild',
+    cleanText(d.daily_executive_summary_simple || d.daily_executive_summary),
+    '',
+    '## Kernpunkte'
+  ];
+  (d.simple_key_takeaways || d.key_takeaways || []).forEach((t, i) => {
+    lines.push(`${i + 1}. ${cleanText(t)}`);
+  });
+  lines.push('', `## Geoscore: ${d.overall_geoscore || '—'} | DEFCON ${d.defcon_level || '—'}`);
+  lines.push('', '## Schwarm-Debatte', '', cleanText(d.game_theory_analysis || '—'));
+  if (d.delta && d.delta.has_previous) {
+    lines.push('', '## Delta zur Vortageslage', d.delta.summary);
+  }
+  lines.push('', '---', 'ARGUS GRID v3.0');
+
+  const md = lines.join('\n');
+  const btn = document.getElementById('export-btn');
+  const done = (msg) => {
+    if (btn) {
+      const old = btn.textContent;
+      btn.textContent = msg;
+      setTimeout(() => { btn.textContent = old; }, 1600);
+    }
+  };
+  const downloadFallback = () => {
+    try {
+      const blob = new Blob([md], { type: 'text/markdown' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `argus-briefing-${new Date().toISOString().slice(0,10)}.md`;
+      a.click();
+      done('Download ✓');
+    } catch (_) {
+      done('Export fehlgeschlagen');
+    }
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(md).then(() => done('Kopiert ✓')).catch(downloadFallback);
+  } else {
+    downloadFallback();
   }
 }
 
@@ -832,6 +979,18 @@ async function loadDashboard(){
       ` · <b>Synth</b> ${ph.synthesizer_status||'—'}`+
       ` · ${(ph.bakers_active||[]).join(', ')||'—'}`;
   }catch(_){}
+
+  // Delta
+  try {
+    const d = globalData.delta;
+    if (d && d.has_previous) {
+      document.getElementById('delta-bar').style.display = 'flex';
+      let extra = '';
+      if (d.geoscore_delta > 0) extra = ` · <span class="delta-up">Geoscore +${d.geoscore_delta}</span>`;
+      else if (d.geoscore_delta < 0) extra = ` · <span class="delta-down">Geoscore ${d.geoscore_delta}</span>`;
+      document.getElementById('delta-text').innerHTML = (d.summary || '—') + extra;
+    }
+  } catch (_) {}
 
   const st=cleanText(globalData.ampel_status||'GELB').toUpperCase();
   document.getElementById('ampel-red').classList.toggle('on',st==='ROT');
@@ -882,27 +1041,22 @@ async function loadDashboard(){
     document.getElementById('simple-historical-container').innerHTML='<div class="empty">Keine historischen Parallelen in diesem Lauf.</div>';
   }
 
-  // Schwarm-Debatte
   const debate = cleanText(globalData.game_theory_analysis || '');
   const modelsEl = document.getElementById('debate-models');
   if (globalData.pipeline_health?.bakers_active?.length) {
     modelsEl.textContent = globalData.pipeline_health.bakers_active.join(' · ');
   }
-
   if (debate.length > 30) {
     let html = (debate.includes('|') && debate.includes('---'))
       ? marked.parse(debate)
       : debate.replace(/\n/g, '<br>');
-
     html = html
       .replace(/\b(Bestätigt|BESTÄTIGT)\b/g, '<span class="verdict verdict-ok">Bestätigt</span>')
       .replace(/\b(Unbestätigt|UNBESTÄTIGT)\b/g, '<span class="verdict verdict-warn">Unbestätigt</span>')
       .replace(/\b(Widersprüchlich|Falsch|FALSCH)\b/g, '<span class="verdict verdict-no">Widerspruch</span>');
-
     document.getElementById('swarm-visual-box').innerHTML = html;
   } else {
-    document.getElementById('swarm-visual-box').innerHTML =
-      '<span class="empty">Keine Debatte verfügbar.</span>';
+    document.getElementById('swarm-visual-box').innerHTML = '<span class="empty">Keine Debatte verfügbar.</span>';
   }
 
   const dpm=globalData.domestic_policy_matrix;
@@ -932,6 +1086,8 @@ async function loadDashboard(){
   buys.forEach(b=>{rows+=`<tr><td><span class="tag buy">BUY</span></td><td>${cleanText(b.ticker||b.asset)}</td><td>${cleanText(b.name||b.asset)}</td><td style="color:var(--ink-2)">${cleanText(b.reason)}</td></tr>`});
   sells.forEach(s=>{rows+=`<tr><td><span class="tag sell">SELL</span></td><td>${cleanText(s.ticker||s.asset)}</td><td>${cleanText(s.name||s.asset)}</td><td style="color:var(--ink-2)">${cleanText(s.reason)}</td></tr>`});
   document.getElementById('stocks-buys-sells').innerHTML=rows||'<tr><td colspan="4" class="empty">Keine Sektor-Rotationen.</td></tr>';
+
+  graphRaw = globalData.graph_network || null;
 }
 
 function getNodeColor(group,label){
