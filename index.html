@@ -439,8 +439,14 @@
     let networkInstance = null;
     let globalData = null;
 
-    function cleanText(str) {
-      if (!str || typeof str !== 'string') return str || '';
+    // ABSOLUTE SCHUTZVORRICHTUNG GEGEN [object Object]
+    function cleanText(val) {
+      if (val === null || val === undefined) return '';
+      if (typeof val === 'object') {
+        if (Array.isArray(val)) return val.map(cleanText).join(', ');
+        return cleanText(val.text || val.summary || val.description || val.indicator || val.takeaway || val.point || val.reason || val.name || val.ticker || JSON.stringify(val));
+      }
+      let str = String(val);
       return str.replace(/\*{1,3}/g, '').replace(/#{1,6}\s?/g, '').replace(/`{1,3}/g, '').trim();
     }
 
@@ -521,7 +527,7 @@
       }
 
       // AMPEL
-      const status = (globalData.ampel_status || 'GELB').toUpperCase();
+      const status = cleanText(globalData.ampel_status || 'GELB').toUpperCase();
       document.getElementById('ampel-red').classList.toggle('active', status === 'ROT');
       document.getElementById('ampel-yellow').classList.toggle('active', status === 'GELB');
       document.getElementById('ampel-green').classList.toggle('active', status === 'GRÜN');
@@ -548,16 +554,15 @@
       // PROGNOSE
       if (globalData.predictive_horizon) {
         const ph = globalData.predictive_horizon;
-        if (typeof ph === 'object' && ph.base_case_summary) {
-          document.getElementById('forecast-prob-badge').innerText = `${ph.base_case_probability_pct || 65}% Wahrscheinlichkeit`;
-          document.getElementById('forecast-simple-text').innerText = cleanText(ph.base_case_summary);
+        if (typeof ph === 'object') {
+          const prob = ph.base_case_probability_pct || 65;
+          document.getElementById('forecast-prob-badge').innerText = `${prob}% Wahrscheinlichkeit`;
+          document.getElementById('forecast-simple-text').innerText = cleanText(ph.base_case_summary || 'Analysiere Prognosen...');
           
           if (Array.isArray(ph.leading_indicators_to_watch) && ph.leading_indicators_to_watch.length > 0) {
-            const firstInd = ph.leading_indicators_to_watch[0];
-            const textVal = typeof firstInd === 'object' ? (firstInd.indicator || firstInd.name || JSON.stringify(firstInd)) : firstInd;
-            document.getElementById('forecast-indicator-text').innerText = cleanText(textVal);
+            document.getElementById('forecast-indicator-text').innerText = cleanText(ph.leading_indicators_to_watch[0]);
           } else {
-            document.getElementById('forecast-indicator-text').innerText = "Sektor-Volatilität & Cyber-Advisories beobachten.";
+            document.getElementById('forecast-indicator-text').innerText = "Geopolitische Volatilität & Sektor-Indikatoren beachten.";
           }
         }
       }
@@ -577,26 +582,26 @@
       }
 
       // SCHWARM-DEBATTE
-      const debateText = globalData.game_theory_analysis || globalData.deepseek_analysis || '';
+      const debateText = cleanText(globalData.game_theory_analysis || globalData.deepseek_analysis || '');
       if (debateText.includes('|') && debateText.includes('---')) {
         document.getElementById('swarm-visual-box').innerHTML = marked.parse(debateText);
       } else {
-        document.getElementById('swarm-visual-box').innerText = cleanText(debateText);
+        document.getElementById('swarm-visual-box').innerText = debateText;
       }
 
       // INNENPOLITIK MATRIX
       if (Array.isArray(globalData.domestic_policy_matrix)) {
         let mHtml = "";
         globalData.domestic_policy_matrix.forEach(m => {
-          const isRot = (m.stability || '').toUpperCase().includes('ROT');
-          const isGruen = (m.stability || '').toUpperCase().includes('GRÜN');
+          const isRot = cleanText(m.stability).toUpperCase().includes('ROT');
+          const isGruen = cleanText(m.stability).toUpperCase().includes('GRÜN');
           const color = isRot ? 'var(--accent-red)' : (isGruen ? 'var(--accent-green)' : 'var(--accent-gold)');
 
           mHtml += `
             <div class="card" style="background:#0f172a; padding: 14px;">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
                 <strong style="color:#fff;">${cleanText(m.region)}</strong>
-                <span style="font-size:0.75rem; font-family:monospace; padding:2px 6px; border-radius:4px; border:1px solid ${color}; color:${color}">${m.stability || 'GELB'}</span>
+                <span style="font-size:0.75rem; font-family:monospace; padding:2px 6px; border-radius:4px; border:1px solid ${color}; color:${color}">${cleanText(m.stability) || 'GELB'}</span>
               </div>
               <p style="font-size:0.85rem; color:#cbd5e1;">${cleanText(m.dynamics)}</p>
             </div>`;
@@ -608,7 +613,7 @@
       const geoscore = globalData.overall_geoscore || (globalData.geoscore ? globalData.geoscore.current_score : 75);
       document.getElementById('kpi-geoscore').innerText = geoscore + " / 100";
 
-      const defcon = globalData.defcon_status ? globalData.defcon_status.label : `DEFCON ${globalData.defcon_level || 3}`;
+      const defcon = globalData.defcon_status ? cleanText(globalData.defcon_status.label) : `DEFCON ${globalData.defcon_level || 3}`;
       document.getElementById('kpi-defcon').innerText = defcon;
 
       document.getElementById('kpi-regime').innerText = cleanText(globalData.market_regime || "Volatil");
@@ -630,8 +635,8 @@
     }
 
     function getNodeColor(group, label) {
-      const grp = (group || '').toLowerCase();
-      const lbl = (label || '').toLowerCase();
+      const grp = cleanText(group).toLowerCase();
+      const lbl = cleanText(label).toLowerCase();
 
       if (grp.includes('miliz') || grp.includes('non-state') || grp.includes('konflikt') || lbl.includes('huthi') || lbl.includes('iran') || lbl.includes('krieg')) {
         return { background: '#ef4444', border: '#b91c1c' };
@@ -658,14 +663,14 @@
       if (rawNodes.length === 0) return;
 
       const nodes = new vis.DataSet(rawNodes.map(n => {
-        const lbl = n.label || n.name || n.id;
+        const lbl = cleanText(n.label || n.name || n.id);
         const val = n.val || 5;
         const lastSeen = n.last_seen ? ` (Zuletzt: ${n.last_seen})` : '';
 
         return {
           id: n.id || lbl,
-          label: cleanText(lbl),
-          title: `<strong>Akteur/Thema:</strong> ${cleanText(lbl)}<br><strong>Relevanz (Gewicht):</strong> ${val}${lastSeen}`,
+          label: lbl,
+          title: `<strong>Akteur/Thema:</strong> ${lbl}<br><strong>Relevanz (Gewicht):</strong> ${val}${lastSeen}`,
           shape: 'dot',
           size: Math.max(18, val * 3.2),
           color: getNodeColor(n.group, lbl),
@@ -722,14 +727,21 @@
       const container = document.getElementById('hotspot-map');
       if (!container || map) return;
 
-      map = L.map('hotspot-map').setView([20, 15], 2);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(map);
+      // FIX FÜR LEAFLET MULTI-WORLD WRAPPING
+      map = L.map('hotspot-map', {
+        minZoom: 2,
+        maxBoundsViscosity: 1.0
+      }).setView([20, 0], 2);
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        maxZoom: 18,
+        noWrap: true
+      }).addTo(map);
 
       hotspots.forEach(h => {
         let lat = parseFloat(h.lat);
         let lng = parseFloat(h.lng ?? h.lon);
 
-        // SCHUTZVORRICHTUNG GEGEN DRITTVAN-LAT/LON-VERTAUSCHUNGEN
         if (Math.abs(lat) > 90 && Math.abs(lng) <= 90) {
           const tmp = lat;
           lat = lng;
@@ -737,8 +749,8 @@
         }
 
         if (!isNaN(lat) && !isNaN(lng)) {
-          const rawType = (h.type || '').toLowerCase();
-          const desc = (h.description || h.impact || '').toLowerCase();
+          const rawType = cleanText(h.type).toLowerCase();
+          const desc = cleanText(h.description || h.impact).toLowerCase();
 
           let iconSymbol = '💥';
           let cssClass = 'radar-conflict';
