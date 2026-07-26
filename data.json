@@ -1,125 +1,193 @@
 {
-  "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte allgemeine Volatilität im geopolitischen Raum.",
-  "daily_executive_summary": "Für diesen Durchlauf liegt kein vollständiges Briefing vor.",
-  "daily_executive_summary_simple": "Für diesen Durchlauf liegt kein vollständiges Briefing vor.",
-  "key_takeaways": [],
-  "simple_key_takeaways": [],
   "overall_geoscore": 75,
-  "geoscore": {
-    "current_score": 75,
-    "status": "Erhöht"
-  },
   "defcon_level": 3,
-  "defcon": 3,
-  "defcon_status": {
-    "level": 3,
-    "label": "DEFCON 3"
+  "ampel_status": "GELB",
+  "ampel_reason_simple": "Erhöhte Terrorgefahr in Europa und verschärfte geopolitische Spannungen mit dem Iran, aber keine unmittelbare Eskalation zu einem großflächigen Konflikt.",
+  "daily_executive_summary": "Am 26.07.2026 steht die Weltlage im Zeichen zweier zentraler Ereignisse: Ein mutmaßlicher Terroranschlag während des CSD in Berlin, bei dem ein Täter mit einem Fahrzeug in die Menge raste, forderte ein Todesopfer und mehrere Verletzte. Die politische Einordnung als Terrorakt durch den deutschen Innenminister unterstreicht die anhaltende Bedrohungslage in Europa. Gleichzeitig verschärfen die USA ihre Sanktionen gegen den Iran, nachdem Hinweise auf Umgehungen des UN-Waffenembargos bekannt wurden. Dies deutet auf eine weitere Eskalation im Nahen Osten hin, insbesondere im Persischen Golf, wo militärische Präsenz und Spannungen zunehmen. Wirtschaftlich bleibt das Umfeld volatil, geprägt von Handelskonflikten und Lieferkettenrisiken, während Energieaktien aufgrund der geopolitischen Unsicherheiten an Attraktivität gewinnen.",
+  "daily_executive_summary_simple": "In Berlin gab es einen schweren Vorfall beim Christopher Street Day, bei dem ein Auto in die Menge fuhr und eine Person starb. Die Behörden sprechen von Terror. Gleichzeitig verschärfen die USA die Strafen gegen den Iran, weil dieser gegen Waffenlieferverbote verstoßen haben soll. Das führt zu mehr Spannungen im Nahen Osten. An den Märkten ist die Lage unsicher, aber Energieunternehmen könnten profitieren.",
+  "key_takeaways": [
+    "Terroranschlag in Berlin während des CSD bestätigt die anhaltende Bedrohung durch extremistische Gewalt in Europa.",
+    "Die USA erweitern Sanktionen gegen den Iran wegen Umgehung des UN-Waffenembargos – Risiko einer militärischen Eskalation im Persischen Golf steigt.",
+    "Geopolitische Spannungen und Lieferkettenrisiken dominieren das Marktumfeld, was zu erhöhter Volatilität führt.",
+    "Energieaktien (z. B. XLE) profitieren von Unsicherheiten, während Schwellenländer (z. B. EEM) unter Druck bleiben.",
+    "Cybersecurity-Risiken durch Schwachstellen in industriellen Steuerungssystemen (Weintek cMT3092X) erfordern erhöhte Aufmerksamkeit."
+  ],
+  "market_regime": "Fragmentiert / Volatil",
+  "top_risk": "Geopolitische Spannungen & Energieversorgung",
+  "equity_rotation": {
+    "top5_buys": [
+      {
+        "ticker": "XLE",
+        "name": "Energy Select Sector",
+        "asset": "Energie",
+        "reason": "Geopolitische Unsicherheiten und Sanktionen gegen den Iran erhöhen das Risiko von Lieferengpässen, was Energiepreise stützt."
+      }
+    ],
+    "flop5_sells": [
+      {
+        "ticker": "EEM",
+        "name": "Emerging Markets",
+        "asset": "Schwellenländer",
+        "reason": "Handelskonflikte, Sanktionen und politische Instabilität belasten die Wachstumsaussichten in Schwellenländern."
+      }
+    ]
   },
-  "market_regime": "Geopolitische Segmentierung",
-  "top_risk": "Lieferketten & Chokepoints",
-  "game_theory_analysis": "Hier ist die **Kreuzprüfung (\"Fingerklopfen\")** der von **GROQ** und **DEEPSEEK/MACRO** gelieferten Informationen für den **26.07.2026**, basierend auf Plausibilität, Konsistenz und bekannten globalen Trends. Die Analyse erfolgt nach Kategorien:\n\n---\n\n### **1. Anschlag auf CSD in Berlin (GROQ)**\n- **Plausibilität**:\n  - **Hoch**. Angriffe auf LGBTQ+-Events (z. B. Orlando 2016, Dresden 2020) sind leider realistisch, besonders in polarisierten Gesellschaften.\n  - **Fehlende Quellen**: Keine konkreten Medien (z. B. *Tagesschau*, *Spiegel*) oder Polizeiberichte genannt → **Risiko von Falschinformation**.\n  - **Kontext**: Falls wahr, wäre dies ein **internationaler Aufmacher** (ähnlich wie der Anschlag auf den Breitscheidplatz 2016). Die fehlende Nennung in MACRO/DEEPSEEK ist auffällig.\n- **Fazit**: **Unbestätigt**. Ohne offizielle Quellen oder Bestätigung durch deutsche Medien (z. B. *Bild*, *B.Z.*) ist Vorsicht geboten.\n\n---\n\n### **2. US-Iran-Konflikt (GROQ) vs. Iran-Artikel (MACRO/NYT)**\n- **GROQ**:\n  - Waffenruhe + weitere Angriffe → **Widersprüchlich**. Waffenruhen werden meist öffentlich verkündet (z. B. über UN oder Al Jazeera).\n  - **Fehlende Details**: Keine Nennung von Akteuren (z. B. IRGC, US-Drohnen) oder Orten (z. B. Hormusstraße).\n- **MACRO/NYT**:\n  - Artikel über **gesellschaftliche Resilienz** im Iran → **kein direkter Bezug zu Waffenruhe**.\n  - **Konsistenz**: NYT berichtet oft über innere Spannungen im Iran (z. B. Proteste 2022–2023), aber nicht über militärische Eskalationen.\n- **Fazit**:\n  - **Waffenruhe unwahrscheinlich** ohne Bestätigung durch *Reuters*, *AP* oder *Al Jazeera*.\n  - **Mögliche Verwechslung**: GROQ könnte sich auf **lokal begrenzte Gefechte** (z. B. im Irak/Syrien) beziehen, die nicht als \"Waffenruhe\" gelten.\n\n---\n\n### **3. Wirtschaft & Fed (GROQ + MACRO)**\n- **GROQ**:\n  - Fed senkt Prognose für Q2 2026 → **Plausibel**.\n  - Rezessionswarnungen → **Trend seit 2023** (z. B. Inversionskurve der Zinsstruktur).\n- **MACRO**:\n  - Rede von Fed-Chair **Jefferson** (fiktiv, aber realistisch: *Philip Jefferson* ist seit 2023 Fed-Vize).\n  - Thema: \"Navigating Economic Shocks\" → **passt zu Rezessionsängsten**.\n- **Konsistenz**:\n  - **Hoch**. Beide Quellen deuten auf **wirtschaftliche Unsicherheit** hin.\n  - **Quellen**: MACRO nennt konkrete Events (Stanford Speech), GROQ bleibt vage.\n- **Fazit**: **Bestätigt**. Wirtschaftliche Verlangsamung ist ein **globaler Megatrend** (China, EU, USA).\n\n---\n\n### **4. Umwelt: Waldbrände (GROQ) vs. Frankreich (MACRO/BBC)**\n- **GROQ**:\n  - Waldbrände in **Frankreich/Spanien** → **Plausibel** (Hitzewellen seit 2022, z. B. Gironde 2022).\n  - NOAA-Hurrikan-Warnung → **Unwahrscheinlich für Europa** (NOAA warnt primär für USA/Karibik).\n- **MACRO/BBC**:\n  - **Frankreich**: 340.000 Evakuierte, \"Feuerwirbel\" → **Extrem plausibel**.\n    - Vergleich: 2022 evakuierte Frankreich **60.000** (Gironde).\n    - 2026 könnte sich die Lage verschlimmern (Klimawandel).\n  - **Spanien**: Nicht erwähnt → **Widerspruch zu GROQ**.\n- **Fazit**:\n  - **Frankreich bestätigt** (BBC ist seriös).\n  - **Spanien unbestätigt** (keine spanischen Medien wie *El País* genannt).\n  - **NOAA-Hurrikan**: **Falsch** (vermutlich Verwechslung mit **Medicanes**, die aber selten sind).\n\n---\n\n### **5. Cyber-Sicherheit (GROQ + MACRO)**\n- **GROQ**:\n  - Angriff auf **Weintek cMT3092X** → **Vage** (keine Details zu Angreifern oder Folgen).\n- **MACRO**:\n  - **CISA-Warnung** zu Weintek cMT3092X → **Bestätigt**.\n    - **CVSS-Score fehlt**, aber CISA veröffentlicht regelmäßig solche Alerts (z. B. zu *Log4j*).\n    - **Betroffene Versionen** genannt → **hohe Glaubwürdigkeit**.\n- **Fazit**: **Bestätigt**. Die CISA-Warnung ist **realistisch** (Industrie-Software ist häufig Ziel von Angriffen).\n\n---\n\n### **6. Gesundheit: Cyclospora-Ausbruch (GROQ)**\n- **Plausibilität**:\n  - **Hoch**. Cyclospora-Ausbrüche treten regelmäßig auf (z. B. USA 2023 durch importierte Himbeeren).\n  - **Quellen**: CDC oder FDA würden dies melden → **keine Bestätigung in MACRO**.\n- **Fazit**: **Unbestätigt**, aber **nicht unwahrscheinlich**.\n\n---\n\n### **7. COVID-19 (GROQ)**\n- **Plausibilität**:\n  - **Niedrig**. Seit 2024 ist COVID-19 **kein dominantes Thema mehr** (WHO erklärte Ende 2023 das Ende der Pandemie).\n  - **Ausnahme**: Neue Varianten könnten lokal aufflammen, aber **keine globale Berichterstattung** zu erwarten.\n- **Fazit**: **Unwahrscheinlich**. Vermutlich **veraltete Information** oder Verwechslung mit anderen Atemwegserkrankungen (z. B. RSV).\n\n---\n\n### **Zusammenfassung der Kreuzprüfung**\n| **Thema**               | **GROQ**               | **MACRO/DEEPSEEK**     | **Fazit**                     | **Plausibilität** |\n|--------------------------|------------------------|------------------------|-------------------------------|-------------------|\n| **CSD-Anschlag Berlin**  | Auto rammt Menge       | Nicht erwähnt          | **Unbestätigt**               | ❌ (fehlende Quellen) |\n| **US-Iran-Konflikt**     | Waffenruhe + Angriffe  | NYT: Gesellschaftsreport | **Widersprüchlich**           | ⚠️ (keine Bestätigung) |\n| **Fed/Wirtschaft**       | Rezessionswarnung      | Jefferson-Rede         | **Bestätigt**                 | ✅                |\n| **Waldbrände**           | Frankreich/Spanien     | BBC: Frankreich (340k Evakuierte) | **Teilweise bestätigt** | ✅ (Frankreich) / ❌ (Spanien) |\n| **NOAA-Hurrikan**        | Warnung                | Nicht erwähnt          | **Falsch**                    | ❌                |\n| **Cyber-Angriff (Weintek)** | Vage Meldung       | CISA-Warnung           | **Bestätigt**                 | ✅                |\n| **Cyclospora-Ausbruch**  | USA                    | Nicht erwähnt          | **Unbestätigt**               | ⚠️ (möglich)     |\n| **COVID",
+  "domestic_policy_matrix": [
+    {
+      "region": "USA",
+      "stability": "GELB",
+      "dynamics": "Innenpolitische Spannungen durch antisemitische Vorfälle und Verbindungen zu extremistischen Gruppen (z. B. Muslimbruderschaft) nehmen zu. Wirtschaftspolitisch bleibt der Fokus auf Bankenregulierung und Cybersicherheit."
+    },
+    {
+      "region": "EU",
+      "stability": "GELB",
+      "dynamics": "Terroranschlag in Berlin führt zu verstärkten Sicherheitsdebatten. Wirtschaftlich belasten Handelskonflikte und Energieunsicherheiten die Stabilität."
+    }
+  ],
+  "historical_precedents": [
+    {
+      "event": "Fahrzeugattacke auf CSD in Berlin mit einem Todesopfer und mehreren Verletzten.",
+      "current_event": "Fahrzeugattacke auf CSD in Berlin mit einem Todesopfer und mehreren Verletzten.",
+      "historical_analog": "Anschlag auf den Berliner Breitscheidplatz (2016) mit einem LKW als Waffe.",
+      "similarity": "Anschlag auf den Berliner Breitscheidplatz (2016) mit einem LKW als Waffe.",
+      "takeaway": "Die Taktik bleibt eine anhaltende Bedrohung, da sie schwer zu verhindern ist und hohe mediale Aufmerksamkeit erzeugt."
+    },
+    {
+      "event": "Erweiterte Sanktionen der USA gegen den Iran wegen Umgehung des UN-Waffenembargos.",
+      "current_event": "Erweiterte Sanktionen der USA gegen den Iran wegen Umgehung des UN-Waffenembargos.",
+      "historical_analog": "US-Sanktionen gegen den Iran unter Trump (2018–2020) nach Austritt aus dem Atomabkommen.",
+      "similarity": "US-Sanktionen gegen den Iran unter Trump (2018–2020) nach Austritt aus dem Atomabkommen.",
+      "takeaway": "Sanktionen allein reichen selten aus, um das Verhalten des Iran zu ändern, erhöhen aber das Risiko militärischer Zwischenfälle."
+    }
+  ],
+  "predictive_horizon": {
+    "base_case_probability_pct": 65,
+    "base_case_summary": "Die Spannungen im Persischen Golf werden weiter zunehmen, mit erhöhter Wahrscheinlichkeit von Zwischenfällen zwischen iranischen und US-Streitkräften. In Europa könnte es zu weiteren Sicherheitsmaßnahmen nach dem Anschlag in Berlin kommen, was zu politischen Debatten über Überwachung und Prävention führt.",
+    "leading_indicators_to_watch": [
+      "Zunahme von Cyberangriffen auf kritische Infrastruktur im Nahen Osten.",
+      "Militärische Aufstockung im Persischen Golf (z. B. zusätzliche US-Kriegsschiffe).",
+      "Verstärkte Rhetorik zwischen den USA und dem Iran in internationalen Foren."
+    ],
+    "horizon_list": [
+      {
+        "timeframe": "30 Tage",
+        "forecast": "Die Spannungen im Persischen Golf werden weiter zunehmen, mit erhöhter Wahrscheinlichkeit von Zwischenfällen zwischen iranischen und US-Streitkräften. In Europa könnte es zu weiteren Sicherheitsmaßnahmen nach dem Anschlag in Berlin kommen, was zu politischen Debatten über Überwachung und Prävention führt.",
+        "probability": "Hoch",
+        "early_warning_indicators": [
+          "Zunahme von Cyberangriffen auf kritische Infrastruktur im Nahen Osten.",
+          "Militärische Aufstockung im Persischen Golf (z. B. zusätzliche US-Kriegsschiffe).",
+          "Verstärkte Rhetorik zwischen den USA und dem Iran in internationalen Foren."
+        ]
+      }
+    ]
+  },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT261",
+      "name": "Persischer Golf",
+      "region": "Persischer Golf",
+      "lat": 26.5,
+      "lon": 53.5,
+      "type": "chokepoint",
+      "intensity": "ROT",
+      "description": "Die Straße von Hormus bleibt ein zentraler Konfliktpunkt aufgrund der US-Sanktionen gegen den Iran und dessen Drohungen, die Schifffahrtsroute zu blockieren.",
+      "impact": "Eine Blockade oder militärische Zwischenfälle könnten die globalen Ölmärkte destabilisieren und zu Preisschocks führen.",
+      "lng": 53.5
+    },
+    {
+      "name": "Berlin (Terroranschlag)",
+      "region": "Berlin, Deutschland",
+      "lat": 52.52,
+      "lon": 13.405,
+      "type": "conflict",
+      "intensity": "GELB",
+      "description": "Nach dem Anschlag auf den CSD in Berlin besteht ein erhöhtes Risiko für Nachahmungstaten oder weitere extremistische Gewalt.",
+      "impact": "Politische Debatten über Sicherheit und Überwachung könnten zu gesellschaftlichen Spannungen führen.",
+      "lng": 13.405
+    },
+    {
+      "name": "Flug TVF77SB",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.924,
-      "lon": 26.9576,
-      "lng": 26.9576,
+      "lat": 42.1396,
+      "lon": 28.1246,
+      "lng": 28.1246,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT261 | Höhe: 10.4 km | Speed: 759 km/h",
+      "description": "Callsign: TVF77SB | Höhe: 11.6 km | Speed: 709 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT72UT",
+      "name": "Flug PGT380U",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.09,
-      "lon": 31.9805,
-      "lng": 31.9805,
+      "lat": 41.1266,
+      "lon": 29.8199,
+      "lng": 29.8199,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT72UT | Höhe: 11.0 km | Speed: 764 km/h",
+      "description": "Callsign: PGT380U | Höhe: 2.2 km | Speed: 480 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WMT29JS",
+      "name": "Flug T7MAHA",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.5754,
-      "lon": 32.2752,
-      "lng": 32.2752,
+      "lat": 23.0396,
+      "lon": 51.1526,
+      "lng": 51.1526,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WMT29JS | Höhe: 10.1 km | Speed: 816 km/h",
+      "description": "Callsign: T7MAHA | Höhe: 13.7 km | Speed: 860 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WMT6320",
+      "name": "ADS-B Signal 739261",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.2973,
-      "lon": 32.457,
-      "lng": 32.457,
+      "lat": 32.6121,
+      "lon": 34.8317,
+      "lng": 34.8317,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WMT6320 | Höhe: 5.4 km | Speed: 672 km/h",
+      "description": "Callsign: Unbekannt | Höhe: 0.2 km | Speed: 141 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA630",
+      "name": "Flug AMU861",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.5788,
-      "lon": 120.2946,
-      "lng": 120.2946,
+      "lat": 21.7294,
+      "lon": 116.0543,
+      "lng": 116.0543,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA630 | Höhe: 0.3 km | Speed: 272 km/h",
+      "description": "Callsign: AMU861 | Höhe: 10.0 km | Speed: 830 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CES827",
+      "name": "Flug CPA888",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.1801,
-      "lon": 117.3781,
-      "lng": 117.3781,
+      "lat": 22.3774,
+      "lon": 118.1759,
+      "lng": 118.1759,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CES827 | Höhe: 9.4 km | Speed: 833 km/h",
+      "description": "Callsign: CPA888 | Höhe: 9.4 km | Speed: 940 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
-  "historical_precedents": [],
-  "predictive_horizon": {
-    "base_case_probability_pct": 60,
-    "base_case_summary": "Lagedaten werden ausgewertet.",
-    "leading_indicators_to_watch": [],
-    "horizon_list": []
-  },
-  "domestic_policy_matrix": [],
-  "equity_rotation": {
-    "top5_buys": [],
-    "flop5_sells": []
-  },
-  "stock_picks": {
-    "top_5_buys": [],
-    "flop_5_sells": []
-  },
   "graph_network": {
     "nodes": [
       {
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 11,
+        "val": 15,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-25"
+        "last_seen": "2026-07-26"
       },
       {
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 9,
+        "val": 12,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-25"
+        "last_seen": "2026-07-26"
       },
       {
         "id": "saudi",
@@ -141,7 +209,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -157,7 +225,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -165,7 +233,7 @@
         "id": "eu",
         "label": "EU",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -197,7 +265,7 @@
         "id": "cisa",
         "label": "CISA",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -205,7 +273,7 @@
         "id": "fed",
         "label": "Fed",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
       },
@@ -216,6 +284,38 @@
         "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-25"
+      },
+      {
+        "id": "deutschland",
+        "label": "Deutschland",
+        "group": "staat",
+        "val": 6,
+        "first_seen": "2026-07-26",
+        "last_seen": "2026-07-26"
+      },
+      {
+        "id": "muslimbruderschaft",
+        "label": "Muslimbruderschaft",
+        "group": "organisation",
+        "val": 5,
+        "first_seen": "2026-07-26",
+        "last_seen": "2026-07-26"
+      },
+      {
+        "id": "xle",
+        "label": "XLE",
+        "group": "tech",
+        "val": 5,
+        "first_seen": "2026-07-26",
+        "last_seen": "2026-07-26"
+      },
+      {
+        "id": "eem",
+        "label": "EEM",
+        "group": "risiko",
+        "val": 5,
+        "first_seen": "2026-07-26",
+        "last_seen": "2026-07-26"
       }
     ],
     "edges": [
@@ -224,8 +324,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Sanktionen",
-        "last_seen": "2026-07-25"
+        "label": "Sanktionen & Konflikt",
+        "last_seen": "2026-07-26"
       },
       {
         "from": "usa",
@@ -378,6 +478,30 @@
         "target": "usa",
         "label": "",
         "last_seen": "2026-07-25"
+      },
+      {
+        "from": "deutschland",
+        "to": "muslimbruderschaft",
+        "source": "deutschland",
+        "target": "muslimbruderschaft",
+        "label": "Extremismus-Verdacht",
+        "last_seen": "2026-07-26"
+      },
+      {
+        "from": "usa",
+        "to": "xle",
+        "source": "usa",
+        "target": "xle",
+        "label": "Energie-Nachfrage",
+        "last_seen": "2026-07-26"
+      },
+      {
+        "from": "iran",
+        "to": "eem",
+        "source": "iran",
+        "target": "eem",
+        "label": "Handelsrisiko",
+        "last_seen": "2026-07-26"
       }
     ],
     "links": [
@@ -386,8 +510,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Sanktionen",
-        "last_seen": "2026-07-25"
+        "label": "Sanktionen & Konflikt",
+        "last_seen": "2026-07-26"
       },
       {
         "from": "usa",
@@ -540,26 +664,85 @@
         "target": "usa",
         "label": "",
         "last_seen": "2026-07-25"
+      },
+      {
+        "from": "deutschland",
+        "to": "muslimbruderschaft",
+        "source": "deutschland",
+        "target": "muslimbruderschaft",
+        "label": "Extremismus-Verdacht",
+        "last_seen": "2026-07-26"
+      },
+      {
+        "from": "usa",
+        "to": "xle",
+        "source": "usa",
+        "target": "xle",
+        "label": "Energie-Nachfrage",
+        "last_seen": "2026-07-26"
+      },
+      {
+        "from": "iran",
+        "to": "eem",
+        "source": "iran",
+        "target": "eem",
+        "label": "Handelsrisiko",
+        "last_seen": "2026-07-26"
       }
     ]
   },
-  "timestamp": "2026-07-26T08:14:34.283368+00:00",
+  "simple_key_takeaways": [
+    "Terroranschlag in Berlin während des CSD bestätigt die anhaltende Bedrohung durch extremistische Gewalt in Europa.",
+    "Die USA erweitern Sanktionen gegen den Iran wegen Umgehung des UN-Waffenembargos – Risiko einer militärischen Eskalation im Persischen Golf steigt.",
+    "Geopolitische Spannungen und Lieferkettenrisiken dominieren das Marktumfeld, was zu erhöhter Volatilität führt.",
+    "Energieaktien (z. B. XLE) profitieren von Unsicherheiten, während Schwellenländer (z. B. EEM) unter Druck bleiben.",
+    "Cybersecurity-Risiken durch Schwachstellen in industriellen Steuerungssystemen (Weintek cMT3092X) erfordern erhöhte Aufmerksamkeit."
+  ],
+  "geoscore": {
+    "current_score": 75,
+    "status": "Erhöht"
+  },
+  "defcon": 3,
+  "defcon_status": {
+    "level": 3,
+    "label": "DEFCON 3"
+  },
+  "game_theory_analysis": "Hier folgt die **Kreuzprüfung (\"Fingerklopfen\")** der beiden KI-Antworten (GROQ vs. DEEPSEEK) für den **26.07.2026** – mit Fokus auf **Konsistenz, Plausibilität und mögliche Diskrepanzen**:\n\n---\n\n### **1. Terroranschlag in Berlin (CSD)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Ereignis**             | Anschlag auf CSD in Berlin, 1 Toter, viele Verletzte.                   | Fahrzeugattacke auf CSD, 1 Tote, mehrere Verletzte.                         | **Konsistent**. Beide nennen identische Opferzahlen und Modus Operandi.      |\n| **Täter**                | \"Mutmaßlicher Täter\" (Name nicht genannt).                              | \"Abdul B.\" (Name genannt), bei Polizeieinsatz erschossen.                   | **Diskrepanz**: DEEPSEEK nennt einen konkreten Namen – ungewöhnlich für Echtzeit-Berichte (mögliche Falschinformation oder Testdaten). |\n| **Reaktion**             | Keine Details.                                                          | Innenminister Dobrindt spricht von \"Terroranschlag\".                        | **Ergänzend**: DEEPSEEK liefert politische Einordnung.                       |\n| **Quellen**              | Keine spezifischen Quellen.                                             | NZZ (CH), BBC (UK).                                                         | **Plausibel**: Internationale Medien würden über einen solchen Vorfall berichten. |\n\n**Fazit**:\n- **Kernereignis** ist konsistent, aber DEEPSEEKs Namensnennung des Täters ist **kritisch zu hinterfragen** (Datenschutz, Vorverurteilung).\n- **Hinweis**: Bei realen Ereignissen werden Täternamen oft erst nach offizieller Bestätigung veröffentlicht.\n\n---\n\n### **2. Geopolitik (Sanktionen gegen Iran)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Thema**                | \"Entscheidungen der Zentralbanken\" und \"Handelskriege\" (allgemein).     | USA erweitern Sanktionslisten gegen Iran (UN-Waffenembargo-Umgehung).       | **Teilweise überlappend**: GROQ erwähnt Wirtschaft allgemein, DEEPSEEK spezifisch Iran. |\n| **Details**              | Keine konkreten Sanktionen genannt.                                     | Konkrete Begründung: \"Umgehung des UN-Waffenembargos\".                      | **DEEPSEEK präziser**, aber GROQs \"Handelskriege\" könnte sich darauf beziehen. |\n| **Quellen**              | Keine.                                                                   | Keine (nur \"Feeds\").                                                         | **Schwach**: Beide KIs nennen keine offiziellen Quellen (z. B. US Treasury). |\n\n**Fazit**:\n- DEEPSEEK liefert **konkretere Informationen**, aber ohne Quellenangabe.\n- **Plausibilität**: Sanktionen gegen Iran sind ein wiederkehrendes Thema (vgl. historische Muster wie JCPOA-Krise 2018/2020).\n\n---\n\n### **3. Umwelt (Waldbrände in Europa)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Ereignis**             | Schwere Waldbrände in Frankreich/Spanien, Tausende Evakuierungen.        | Keine Erwähnung.                                                             | **Diskrepanz**: GROQ nennt ein zentrales Ereignis, das DEEPSEEK ignoriert.   |\n| **Klimawandel**          | Erwähnt als Hintergrund.                                                 | –                                                                            | **GROQ umfassender**.                                                        |\n\n**Fazit**:\n- **GROQs Bericht ist plausibel**: Waldbrände in Südeuropa sind im Juli 2026 realistisch (Klimawandel-Trend).\n- **DEEPSEEKs Auslassung** ist auffällig – möglicherweise **Filterung nach \"Prioritäten\"** (Terror > Umwelt).\n\n---\n\n### **4. Wirtschaft (IRAs & Steuern)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Thema**                | \"Sollte man traditionelle IRAs auflösen, um ein Haus zu kaufen?\"        | Keine Erwähnung.                                                             | **GROQ spezifisch**, aber Nischenthema für globale Feeds.                   |\n| **Steuern**              | \"Steuerschlag in Kauf nehmen\".                                           | –                                                                            | **Plausibel**: US-Steuerdebatten zu IRAs sind wiederkehrend (vgl. 2023/24). |\n\n**Fazit**:\n- **GROQs Beispiel** wirkt **konstruiert** – ein solches Thema wäre eher in Finanzforen als in globalen News-Feeds zu erwarten.\n- **Hinweis**: Möglicherweise **Testdaten** oder **generierte Beispiele**.\n\n---\n\n### **5. Cyber-Sicherheit (Shahed-136-Drohnen in Mali)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Thema**                | \"Bedrohung durch Shahed-136-Drohnen in Mali\".                            | Keine Erwähnung.                                                             | **GROQ einzigartig**.                                                        |\n| **Kontext**              | Keine Details.                                                          | –                                                                            | **Plausibilität fraglich**: Shahed-Drohnen (iranische Bauart) wurden 2022–24 primär in der Ukraine eingesetzt. Mali als Einsatzort wäre **neu**. |\n\n**Fazit**:\n- **GROQs Meldung** ist **spekulativ**:\n  - **Möglich**: Iran liefert Drohnen an Wagner-Gruppe in Mali (vgl. Berichte über russische Waffenlieferungen 2023).\n  - **Unwahrscheinlich**: Keine bekannten Vorfälle dieser Art bis 2024.\n- **DEEPSEEK ignoriert** das Thema – möglicherweise wegen **geringer Relevanz** oder **Fehlinformation**.\n\n---\n\n### **6. Gesundheit (Krankheiten & Impfungen)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Thema**                | \"Ausbreitung von Krankheiten und Impfbemühungen\".                        | Keine Erwähnung.                                                             | **GROQ allgemein**, aber plausibel (z. B. neue COVID-Varianten oder Mpox).   |\n\n**Fazit**:\n- **Keine konkreten Daten** – schwer zu verifizieren.\n\n---\n\n### **Zusammenfassung der Kreuzprüfung**\n| **Kriterium**            | **Bewertung**                                                                 |\n|--------------------------|------------------------------------------------------------------------------|\n| **Konsistenz**           | **Teilweise**: Kernereignisse (Berlin-Anschlag, Iran-Sanktionen) stimmen überein, aber Details (Tätername, Waldbrände) divergieren. |\n| **Plausibilität**        | **Hoch für Terror/Geopolitik**, **niedrig für Wirtschaft/Cyber** (mögliche Testdaten). |\n| **Quellen**              | **Schwach**: Beide KIs nennen keine konkreten Quellen (z. B. Reuters, AP).   |\n| **Priorisierung**        | **DEEPSEEK** fokussiert auf **Sicherheit/Geopolitik**, **GROQ** breiter (Umwelt, Wirtschaft). |\n| **Risiken**              | - **Tätername in DEEPSEEK**: Potenzielle F",
+  "stock_picks": {
+    "top_5_buys": [
+      {
+        "ticker": "XLE",
+        "name": "Energy Select Sector",
+        "asset": "Energie",
+        "reason": "Geopolitische Unsicherheiten und Sanktionen gegen den Iran erhöhen das Risiko von Lieferengpässen, was Energiepreise stützt."
+      }
+    ],
+    "flop_5_sells": [
+      {
+        "ticker": "EEM",
+        "name": "Emerging Markets",
+        "asset": "Schwellenländer",
+        "reason": "Handelskonflikte, Sanktionen und politische Instabilität belasten die Wachstumsaussichten in Schwellenländern."
+      }
+    ]
+  },
+  "timestamp": "2026-07-26T17:56:18.616859+00:00",
   "pipeline_health": {
-    "timestamp": "2026-07-26T08:11:25.595001+00:00",
+    "timestamp": "2026-07-26T17:54:36.672593+00:00",
     "feeds_total": 224,
     "feeds_successful": 120,
     "feeds_failed": 104,
-    "gdelt_articles": 0,
+    "gdelt_articles": 35,
     "telegram_posts": 0,
     "bakers_active": [
       "Groq (Llama-3.3)",
-      "qwen-2.5-72b-instruct"
+      "DeepSeek"
     ],
     "swarm_debate_status": "SUCCESS",
-    "synthesizer_status": "PENDING",
-    "haiku_status": "PENDING",
+    "synthesizer_status": "SUCCESS",
+    "haiku_status": "HTTP_404",
     "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (14 Nodes)",
+    "graph_merge_status": "SUCCESS (18 Nodes)",
     "errors": []
   }
 }
