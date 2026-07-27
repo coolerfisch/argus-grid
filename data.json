@@ -2,25 +2,25 @@
   "overall_geoscore": 75,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Temporäre Entspannung im Iran-Konflikt, aber anhaltende Risiken durch Sanktionen, Cyberbedrohungen und regionale Instabilität. Schwere Waldbrände und ein Terroranschlag in Berlin erhöhen die Unsicherheit.",
-  "daily_executive_summary": "Am 26.07.2026 zeigt sich eine gemischte globale Lage mit temporärer Deeskalation im Konflikt zwischen den USA und dem Iran, insbesondere an der Straße von Hormus. Dennoch verschärfen die USA ihre Sanktionen gegen den Iran aufgrund von Vorwürfen der Umgehung des UN-Waffenembargos. In Europa kämpfen Frankreich und Spanien mit schweren Waldbränden, die durch extreme Hitze und starke Winde angefacht werden. In Berlin eskalierte ein Angriff auf eine Pride-Veranstaltung, bei dem eine Person getötet und mehrere verletzt wurden; der mutmaßliche Täter wurde von der Polizei erschossen. Cyber-Sicherheitsbehörden warnen vor kritischen Sicherheitslücken in industriellen Steuerungssystemen, die zu Privilegieneskalation führen könnten. Die Finanzmärkte reagieren volatil auf die geopolitischen Entwicklungen, mit sinkenden Ölpreisen und steigenden Aktienfutures.",
-  "daily_executive_summary_simple": "Die Weltlage ist aktuell angespannt, aber nicht akut gefährlich. Der Konflikt zwischen den USA und dem Iran hat sich kurzzeitig beruhigt, doch die USA verschärfen ihre Strafmaßnahmen. In Europa brennen Wälder, und in Berlin gab es einen schweren Angriff auf eine Pride-Veranstaltung. Gleichzeitig warnen Experten vor gefährlichen Sicherheitslücken in Computersystemen. Die Börsen reagieren nervös auf diese Entwicklungen.",
+  "ampel_reason_simple": "Geopolitische Spannungen zwischen Iran und USA deeskalieren kurzfristig, aber Risiken für Lieferketten und Energiepreise bleiben hoch. Lokale Konflikte wie in der Ukraine und Cyberangriffe erhöhen die Volatilität.",
+  "daily_executive_summary": "Die Lage am Persischen Golf zeigt eine vorübergehende Deeskalation zwischen Iran und den USA, nachdem die EU und die USA die Sanktionen gegen Teheran ausgeweitet haben. Dies führte zu einem Rückgang der Ölpreise um 8 % unter die 100-Dollar-Marke. Dennoch bleiben maritime Sicherheitsrisiken im Mittelmeer und Persischen Golf bestehen, insbesondere durch unklare Bedrohungen für Schiffsrouten. Der Ukraine-Krieg eskaliert weiter, mit gezielten Angriffen auf russische Infrastruktur in der Krim und systematischer Zerstörung von Nachschublinien durch Drohnen. Cyberangriffe auf industrielle Steuerungssysteme (Weintek cMT3092X) stellen ein wachsendes Risiko für kritische Infrastrukturen dar. Die USA und Japan vertiefen ihre militärische Zusammenarbeit, was als Gegengewicht zu Chinas Einfluss in der Region interpretiert wird.",
+  "daily_executive_summary_simple": "Die Spannungen zwischen Iran und den USA haben sich etwas beruhigt, aber der Konflikt ist nicht vorbei. Die Ölpreise sind gesunken, aber es gibt weiterhin Risiken für Schiffe im Persischen Golf. In der Ukraine greift die Armee russische Nachschublinien an, um Druck auf Moskau auszuüben. Gleichzeitig gibt es Warnungen vor Cyberangriffen auf Fabriken und Kraftwerke. Die USA und Japan arbeiten enger zusammen, um China in Schach zu halten.",
   "key_takeaways": [
-    "Temporäre Entspannung im Iran-Konflikt, aber anhaltende Sanktionen und Risiken an der Straße von Hormus.",
-    "Schwere Waldbrände in Südeuropa mit Evakuierungen und neuen Hitzeprognosen.",
-    "Terroranschlag in Berlin auf eine Pride-Veranstaltung mit einem Toten und mehreren Verletzten.",
-    "Kritische Cyber-Sicherheitslücken in industriellen Systemen erfordern sofortige Maßnahmen.",
-    "Finanzmärkte zeigen volatile Reaktionen auf geopolitische und klimatische Entwicklungen."
+    "Deeskalation im Iran-USA-Konflikt führt zu sinkenden Ölpreisen, aber maritime Risiken bleiben bestehen.",
+    "Ukraine intensiviert Angriffe auf russische Infrastruktur in der Krim und unterbricht Nachschublinien.",
+    "Cybersecurity-Warnungen vor Schwachstellen in industriellen Steuerungssystemen (Weintek cMT3092X).",
+    "USA und Japan stärken ihre militärische Allianz als Gegengewicht zu China.",
+    "Lokale Konflikte und Cyberbedrohungen erhöhen die globale Unsicherheit."
   ],
   "market_regime": "Volatil",
-  "top_risk": "Geopolitische Spannungen & Energieversorgung",
+  "top_risk": "Lieferketten & Energie",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Sinkende Ölpreise durch temporäre Entspannung im Iran-Konflikt könnten Energieaktien kurzfristig attraktiv machen, da die Nachfrage stabil bleibt."
+        "reason": "Kurzfristige Entspannung im Nahen Osten und sinkende Ölpreise könnten Energieaktien stützen, da die Nachfrage stabil bleibt."
       }
     ],
     "flop5_sells": [
@@ -28,7 +28,7 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Erhöhte geopolitische Risiken und Sanktionen gegen den Iran belasten die Stabilität in Schwellenländern, insbesondere im Nahen Osten."
+        "reason": "Geopolitische Unsicherheiten und mögliche Lieferkettenstörungen belasten die Wachstumsaussichten."
       }
     ]
   },
@@ -36,52 +36,35 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Temporäre Deeskalation im Iran-Konflikt, aber verschärfte Sanktionen und Cyber-Sicherheitswarnungen erhöhen die innere und äußere Anspannung."
-    },
-    {
-      "region": "EU",
-      "stability": "GELB",
-      "dynamics": "21. Sanktionspaket gegen Russland und schwere Waldbrände in Südeuropa belasten die politische und wirtschaftliche Stabilität."
-    },
-    {
-      "region": "Deutschland",
-      "stability": "GELB",
-      "dynamics": "Terroranschlag in Berlin erhöht die Sicherheitsbedenken und könnte zu verschärften Maßnahmen führen."
+      "dynamics": "Politische Spannungen durch anstehende Wahlen, aber wirtschaftliche Indikatoren bleiben stabil. Fokus auf militärische Allianzen (Japan) und Sanktionen gegen Iran."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Fahrzeugattacke auf eine Pride-Veranstaltung in Berlin mit einem Toten und mehreren Verletzten.",
-      "current_event": "Fahrzeugattacke auf eine Pride-Veranstaltung in Berlin mit einem Toten und mehreren Verletzten.",
-      "historical_analog": "Breitscheidplatz-Attacke (2016) in Berlin, bei der ein Attentäter mit einem LKW in eine Menschenmenge fuhr.",
-      "similarity": "Breitscheidplatz-Attacke (2016) in Berlin, bei der ein Attentäter mit einem LKW in eine Menschenmenge fuhr.",
-      "takeaway": "Solche Anschläge können zu einer Verschärfung der Sicherheitsgesetze und einer erhöhten Überwachung öffentlicher Veranstaltungen führen."
-    },
-    {
-      "event": "Schwere Waldbrände in Frankreich und Spanien mit Evakuierungen und neuen Hitzeprognosen.",
-      "current_event": "Schwere Waldbrände in Frankreich und Spanien mit Evakuierungen und neuen Hitzeprognosen.",
-      "historical_analog": "Waldbrände in Griechenland (2023) und Australien (2019-2020), die durch extreme Hitze und Trockenheit ausgelöst wurden.",
-      "similarity": "Waldbrände in Griechenland (2023) und Australien (2019-2020), die durch extreme Hitze und Trockenheit ausgelöst wurden.",
-      "takeaway": "Langfristige Klimaschutzmaßnahmen und verbesserte Katastrophenprävention sind notwendig, um zukünftige Krisen zu mildern."
+      "event": "Vorübergehende Entspannung nach Sanktionen und militärischen Drohungen",
+      "current_event": "Vorübergehende Entspannung nach Sanktionen und militärischen Drohungen",
+      "historical_analog": "Tankerkrieg im Persischen Golf (1980er)",
+      "similarity": "Tankerkrieg im Persischen Golf (1980er)",
+      "takeaway": "Kurzfristige Entspannung ist möglich, aber strukturelle Konflikte bleiben ungelöst und können schnell wieder eskalieren."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Die temporäre Entspannung im Iran-Konflikt könnte anhalten, sofern keine neuen Provokationen erfolgen. Die Waldbrandsaison in Europa wird sich voraussichtlich verschärfen, und die Cyber-Sicherheitslage bleibt angespannt. Die Finanzmärkte werden weiterhin volatil auf geopolitische und klimatische Entwicklungen reagieren.",
+    "base_case_summary": "Die Deeskalation zwischen Iran und den USA hält vorerst an, aber neue Vorfälle (z. B. Schiffsangriffe) könnten die Lage schnell verschärfen. Die Ukraine wird ihre Angriffe auf russische Nachschublinien fortsetzen, was zu Gegenreaktionen Moskaus führen könnte. Cyberangriffe auf kritische Infrastrukturen könnten zunehmen.",
     "leading_indicators_to_watch": [
-      "Neue militärische Aktivitäten an der Straße von Hormus",
-      "Anstieg der globalen Durchschnittstemperaturen und Extremwetterereignisse",
-      "Zunahme von Cyber-Angriffen auf kritische Infrastruktur"
+      "Zunahme von Schiffsangriffen im Persischen Golf",
+      "Erhöhte Cyberaktivitäten gegen industrielle Steuerungssysteme",
+      "Russische Gegenoffensiven in der Ukraine"
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Die temporäre Entspannung im Iran-Konflikt könnte anhalten, sofern keine neuen Provokationen erfolgen. Die Waldbrandsaison in Europa wird sich voraussichtlich verschärfen, und die Cyber-Sicherheitslage bleibt angespannt. Die Finanzmärkte werden weiterhin volatil auf geopolitische und klimatische Entwicklungen reagieren.",
+        "forecast": "Die Deeskalation zwischen Iran und den USA hält vorerst an, aber neue Vorfälle (z. B. Schiffsangriffe) könnten die Lage schnell verschärfen. Die Ukraine wird ihre Angriffe auf russische Nachschublinien fortsetzen, was zu Gegenreaktionen Moskaus führen könnte. Cyberangriffe auf kritische Infrastrukturen könnten zunehmen.",
         "probability": "Mittel",
         "early_warning_indicators": [
-          "Neue militärische Aktivitäten an der Straße von Hormus",
-          "Anstieg der globalen Durchschnittstemperaturen und Extremwetterereignisse",
-          "Zunahme von Cyber-Angriffen auf kritische Infrastruktur"
+          "Zunahme von Schiffsangriffen im Persischen Golf",
+          "Erhöhte Cyberaktivitäten gegen industrielle Steuerungssysteme",
+          "Russische Gegenoffensiven in der Ukraine"
         ]
       }
     ]
@@ -94,85 +77,107 @@
       "lon": 53.5,
       "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Die Straße von Hormus bleibt ein kritischer Engpass für den globalen Öltransport. Trotz temporärer Entspannung besteht weiterhin ein hohes Risiko für militärische Eskalationen oder Blockaden.",
-      "impact": "Eine Blockade oder militärische Auseinandersetzung könnte zu einem starken Anstieg der Ölpreise und globalen Lieferkettenstörungen führen.",
+      "description": "Kritische Schifffahrtsroute für globale Öllieferungen, aktuell durch Deeskalation zwischen Iran und USA beruhigt, aber weiterhin hohe Risiken für maritime Sicherheit.",
+      "impact": "Störungen könnten zu erneuten Ölpreisschocks und globalen Lieferkettenproblemen führen.",
       "lng": 53.5
     },
     {
-      "name": "Berlin",
-      "region": "Deutschland",
-      "lat": 52.52,
-      "lon": 13.405,
+      "name": "Krim",
+      "region": "Ukraine (Krim)",
+      "lat": 45.0,
+      "lon": 34.5,
       "type": "conflict",
-      "intensity": "GELB",
-      "description": "Nach dem Terroranschlag auf eine Pride-Veranstaltung in Berlin besteht ein erhöhtes Risiko für weitere Anschläge oder gewalttätige Auseinandersetzungen.",
-      "impact": "Verschärfte Sicherheitsmaßnahmen und mögliche Einschränkungen für öffentliche Veranstaltungen könnten die Folge sein.",
-      "lng": 13.405
+      "intensity": "ROT",
+      "description": "Ukrainische Angriffe auf russische Infrastruktur (Strom, Wasser) zur Schwächung der Besatzungsmacht.",
+      "impact": "Eskalation des Konflikts mit möglichen russischen Vergeltungsmaßnahmen.",
+      "lng": 34.5
     },
     {
-      "name": "Flug PGT4073",
+      "name": "Flug PGT77FD",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.0484,
-      "lon": 29.7281,
-      "lng": 29.7281,
+      "lat": 41.2016,
+      "lon": 38.4198,
+      "lng": 38.4198,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT4073 | Höhe: 1.7 km | Speed: 436 km/h",
+      "description": "Callsign: PGT77FD | Höhe: 9.5 km | Speed: 711 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT658",
+      "name": "Flug PGT96LK",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.6236,
-      "lon": 29.8196,
-      "lng": 29.8196,
+      "lat": 40.7988,
+      "lon": 28.5712,
+      "lng": 28.5712,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT658 | Höhe: 5.0 km | Speed: 755 km/h",
+      "description": "Callsign: PGT96LK | Höhe: 2.9 km | Speed: 510 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT14T",
+      "name": "Flug GAF202",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 41.9753,
+      "lon": 30.0849,
+      "lng": 30.0849,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: GAF202 | Höhe: 9.4 km | Speed: 811 km/h",
+      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
+    },
+    {
+      "name": "Flug AEE912",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 29.7655,
-      "lon": 32.516,
-      "lng": 32.516,
+      "lat": 34.8908,
+      "lon": 33.7911,
+      "lng": 33.7911,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT14T | Höhe: 10.1 km | Speed: 859 km/h",
+      "description": "Callsign: AEE912 | Höhe: 0.8 km | Speed: 385 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AEE528",
+      "name": "Flug ELY573",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.2244,
-      "lon": 34.4702,
-      "lng": 34.4702,
+      "lat": 34.7182,
+      "lon": 34.2533,
+      "lng": 34.2533,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AEE528 | Höhe: 2.1 km | Speed: 502 km/h",
+      "description": "Callsign: ELY573 | Höhe: 9.8 km | Speed: 910 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CPA449",
+      "name": "Flug RRR9966",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 34.8691,
+      "lon": 34.3984,
+      "lng": 34.3984,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: RRR9966 | Höhe: 5.9 km | Speed: 736 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug THA631",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.1795,
-      "lon": 119.606,
-      "lng": 119.606,
+      "lat": 21.3624,
+      "lon": 118.3309,
+      "lng": 118.3309,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CPA449 | Höhe: 7.5 km | Speed: 735 km/h",
+      "description": "Callsign: THA631 | Höhe: 11.6 km | Speed: 844 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THY124",
+      "name": "Flug CPA472",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.3831,
-      "lon": 120.4464,
-      "lng": 120.4464,
+      "lat": 24.9081,
+      "lon": 120.7256,
+      "lng": 120.7256,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THY124 | Höhe: 5.8 km | Speed: 715 km/h",
+      "description": "Callsign: CPA472 | Höhe: 2.2 km | Speed: 510 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -182,17 +187,17 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 19,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-26"
+        "last_seen": "2026-07-27"
       },
       {
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 15,
+        "val": 18,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-26"
+        "last_seen": "2026-07-27"
       },
       {
         "id": "saudi",
@@ -214,9 +219,9 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 4,
+        "val": 8,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-25"
+        "last_seen": "2026-07-27"
       },
       {
         "id": "taiwan",
@@ -230,15 +235,15 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 6,
+        "val": 9,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-26"
+        "last_seen": "2026-07-27"
       },
       {
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 8,
+        "val": 7,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-26"
       },
@@ -262,9 +267,9 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 3,
+        "val": 6,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-25"
+        "last_seen": "2026-07-27"
       },
       {
         "id": "cisa",
@@ -294,7 +299,7 @@
         "id": "deutschland",
         "label": "Deutschland",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-26",
         "last_seen": "2026-07-26"
       },
@@ -302,7 +307,7 @@
         "id": "muslimbruderschaft",
         "label": "Muslimbruderschaft",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-26",
         "last_seen": "2026-07-26"
       },
@@ -310,7 +315,7 @@
         "id": "xle",
         "label": "XLE",
         "group": "tech",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-26",
         "last_seen": "2026-07-26"
       },
@@ -318,7 +323,7 @@
         "id": "eem",
         "label": "EEM",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-26",
         "last_seen": "2026-07-26"
       },
@@ -326,7 +331,7 @@
         "id": "berlin_anschlag",
         "label": "Berlin-Attacke",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-26",
         "last_seen": "2026-07-26"
       },
@@ -334,25 +339,41 @@
         "id": "waldbraende",
         "label": "Waldbrände",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-26",
         "last_seen": "2026-07-26"
       },
       {
         "id": "cyber_risiko",
         "label": "Cyber-Sicherheit",
-        "group": "tech",
-        "val": 5,
+        "group": "risiko",
+        "val": 7,
         "first_seen": "2026-07-26",
-        "last_seen": "2026-07-26"
+        "last_seen": "2026-07-27"
       },
       {
         "id": "strabe_von_hormus",
         "label": "Hormus",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-26",
         "last_seen": "2026-07-26"
+      },
+      {
+        "id": "japan",
+        "label": "Japan",
+        "group": "staat",
+        "val": 6,
+        "first_seen": "2026-07-27",
+        "last_seen": "2026-07-27"
+      },
+      {
+        "id": "oelpreis",
+        "label": "Ölmarkt",
+        "group": "risiko",
+        "val": 6,
+        "first_seen": "2026-07-27",
+        "last_seen": "2026-07-27"
       }
     ],
     "edges": [
@@ -361,8 +382,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Konflikt & Sanktionen",
-        "last_seen": "2026-07-26"
+        "label": "Konflikt",
+        "last_seen": "2026-07-27"
       },
       {
         "from": "usa",
@@ -593,8 +614,8 @@
         "to": "usa",
         "source": "cyber_risiko",
         "target": "usa",
-        "label": "Sicherheitswarnung",
-        "last_seen": "2026-07-26"
+        "label": "Bedrohung",
+        "last_seen": "2026-07-27"
       },
       {
         "from": "cyber_risiko",
@@ -603,6 +624,46 @@
         "target": "eu",
         "label": "Sicherheitswarnung",
         "last_seen": "2026-07-26"
+      },
+      {
+        "from": "iran",
+        "to": "oelpreis",
+        "source": "iran",
+        "target": "oelpreis",
+        "label": "Einfluss",
+        "last_seen": "2026-07-27"
+      },
+      {
+        "from": "ukraine",
+        "to": "russland",
+        "source": "ukraine",
+        "target": "russland",
+        "label": "Krieg",
+        "last_seen": "2026-07-27"
+      },
+      {
+        "from": "usa",
+        "to": "japan",
+        "source": "usa",
+        "target": "japan",
+        "label": "Allianz",
+        "last_seen": "2026-07-27"
+      },
+      {
+        "from": "china",
+        "to": "usa",
+        "source": "china",
+        "target": "usa",
+        "label": "Rivalität",
+        "last_seen": "2026-07-27"
+      },
+      {
+        "from": "cyber_risiko",
+        "to": "russland",
+        "source": "cyber_risiko",
+        "target": "russland",
+        "label": "Bedrohung",
+        "last_seen": "2026-07-27"
       }
     ],
     "links": [
@@ -611,8 +672,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Konflikt & Sanktionen",
-        "last_seen": "2026-07-26"
+        "label": "Konflikt",
+        "last_seen": "2026-07-27"
       },
       {
         "from": "usa",
@@ -843,8 +904,8 @@
         "to": "usa",
         "source": "cyber_risiko",
         "target": "usa",
-        "label": "Sicherheitswarnung",
-        "last_seen": "2026-07-26"
+        "label": "Bedrohung",
+        "last_seen": "2026-07-27"
       },
       {
         "from": "cyber_risiko",
@@ -853,15 +914,55 @@
         "target": "eu",
         "label": "Sicherheitswarnung",
         "last_seen": "2026-07-26"
+      },
+      {
+        "from": "iran",
+        "to": "oelpreis",
+        "source": "iran",
+        "target": "oelpreis",
+        "label": "Einfluss",
+        "last_seen": "2026-07-27"
+      },
+      {
+        "from": "ukraine",
+        "to": "russland",
+        "source": "ukraine",
+        "target": "russland",
+        "label": "Krieg",
+        "last_seen": "2026-07-27"
+      },
+      {
+        "from": "usa",
+        "to": "japan",
+        "source": "usa",
+        "target": "japan",
+        "label": "Allianz",
+        "last_seen": "2026-07-27"
+      },
+      {
+        "from": "china",
+        "to": "usa",
+        "source": "china",
+        "target": "usa",
+        "label": "Rivalität",
+        "last_seen": "2026-07-27"
+      },
+      {
+        "from": "cyber_risiko",
+        "to": "russland",
+        "source": "cyber_risiko",
+        "target": "russland",
+        "label": "Bedrohung",
+        "last_seen": "2026-07-27"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Temporäre Entspannung im Iran-Konflikt, aber anhaltende Sanktionen und Risiken an der Straße von Hormus.",
-    "Schwere Waldbrände in Südeuropa mit Evakuierungen und neuen Hitzeprognosen.",
-    "Terroranschlag in Berlin auf eine Pride-Veranstaltung mit einem Toten und mehreren Verletzten.",
-    "Kritische Cyber-Sicherheitslücken in industriellen Systemen erfordern sofortige Maßnahmen.",
-    "Finanzmärkte zeigen volatile Reaktionen auf geopolitische und klimatische Entwicklungen."
+    "Deeskalation im Iran-USA-Konflikt führt zu sinkenden Ölpreisen, aber maritime Risiken bleiben bestehen.",
+    "Ukraine intensiviert Angriffe auf russische Infrastruktur in der Krim und unterbricht Nachschublinien.",
+    "Cybersecurity-Warnungen vor Schwachstellen in industriellen Steuerungssystemen (Weintek cMT3092X).",
+    "USA und Japan stärken ihre militärische Allianz als Gegengewicht zu China.",
+    "Lokale Konflikte und Cyberbedrohungen erhöhen die globale Unsicherheit."
   ],
   "geoscore": {
     "current_score": 75,
@@ -872,14 +973,14 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "Die **Kreuzprüfung (\"Fingerklopfen\")** der beiden KI-Antworten (GROQ vs. DEEPSEEK) zum **26.07.2026** zeigt **Übereinstimmungen, Widersprüche und Ergänzungen**. Hier die Analyse:\n\n---\n\n### **1. Übereinstimmungen (Konsistente Meldungen)**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Iran-Konflikt**       | \"Pause im Konflikt USA-Iran\", Spekulationen über Verhandlungen.          | \"Entspannung an der Straße von Hormus\" (implizit: Deeskalation).            | **Konsistent**: Beide deuten auf eine temporäre Entspannung hin.              |\n| **USA-Iran-Sanktionen** | –                                                                        | \"USA verschärfen Sanktionen gegen Iran\" (UN-Waffenembargo-Umgehung).         | **Ergänzend**: DEEPSEEK liefert Details zu US-Maßnahmen, GROQ erwähnt keine.  |\n| **Straße von Hormus**   | \"Bedenken über Situation in der Straße von Hormus\".                      | \"Entspannung an der Straße von Hormus\".                                      | **Widersprüchlich**: GROQ warnt, DEEPSEEK meldet Entspannung.                 |\n| **EU-Sanktionen**       | \"21. Sanktionspaket der EU gegen Russland\" (Energiemaßnahmen).            | –                                                                            | **Einseitig**: Nur GROQ erwähnt dies.                                         |\n| **Waldbrände**          | \"Schwere Waldbrände in Frankreich/Spanien\" (Evakuierungen).               | –                                                                            | **Einseitig**: Nur GROQ berichtet.                                            |\n| **Cyber-Sicherheit**    | \"Warnungen vor Sicherheitslücken\", US-Regierung ergreift Maßnahmen.      | –                                                                            | **Einseitig**: Nur GROQ erwähnt dies.                                         |\n| **Gesundheit**          | \"Cyclospora-Ausbruch in den USA\" (Eisbergsalat).                         | –                                                                            | **Einseitig**: Nur GROQ berichtet.                                            |\n| **Berlin-Attacke**      | \"Angriff auf Pride-Veranstaltung\" (1 Toter, mehrere Verletzte).           | –                                                                            | **Einseitig**: Nur GROQ erwähnt dies.                                         |\n\n---\n\n### **2. Widersprüche (Diskrepanzen)**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Mögliche Erklärung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|\n| **Straße von Hormus**   | \"Bedenken über die Situation\" (implizit: Eskalation).                    | \"Entspannung\" (Deeskalation).                                                | **Zeitliche Differenz?** DEEPSEEK könnte eine spätere Meldung referenzieren.           |\n| **Iran-Sanktionen**     | Keine Erwähnung.                                                         | \"USA verschärfen Sanktionen\".                                                | **Quellenunterschied**: DEEPSEEK nutzt GDELT/zn.ua, GROQ möglicherweise andere Feeds.  |\n\n---\n\n### **3. Ergänzungen (Einseitige Informationen)**\n- **DEEPSEEK**:\n  - **Ukraine-Krieg**: \"Ukraine meldet Erfolge bei Gegenoffensive\" (GROQ erwähnt dies nicht).\n  - **China**: \"China beschleunigt Militärübungen im Südchinesischen Meer\" (GROQ: keine Erwähnung).\n  - **Wirtschaft**: \"Bundesbank warnt vor Rezessionsrisiko in Deutschland\" (GROQ: nur Fed-Wachstumskorrektur).\n\n- **GROQ**:\n  - **Naturkatastrophen**: Erdbeben in den USA, Waldbrände in Südeuropa.\n  - **Gesundheit**: Cyclospora-Ausbruch.\n  - **Politik**: Pride-Angriff in Berlin.\n\n---\n\n### **4. Plausibilitätscheck (Faktencheck)**\n- **Iran/USA**:\n  - Eine **gleichzeitige Entspannung** (DEEPSEEK) und **Sanktionsverschärfung** (GROQ) ist **theoretisch möglich**, aber ungewöhnlich. Mögliche Szenarien:\n    1. **Taktische Deeskalation** (z. B. Freilassung von Geiseln) bei gleichzeitiger **wirtschaftlicher Druckerhöhung**.\n    2. **Quellenkonflikt**: DEEPSEEK bezieht sich auf militärische Entspannung, GROQ auf wirtschaftliche Spannungen.\n  - **Empfehlung**: Überprüfung der **Originalquellen** (z. B. GDELT vs. andere Nachrichtenticker).\n\n- **Straße von Hormus**:\n  - Die **Widersprüchlichkeit** ist auffällig. Mögliche Ursachen:\n    - **Zeitliche Verzögerung**: GROQ könnte ältere Meldungen referenzieren.\n    - **Regionale Unterschiede**: DEEPSEEK bezieht sich auf die **Schifffahrtsroute**, GROQ auf **militärische Präsenz**.\n\n- **EU-Sanktionen gegen Russland**:\n  - GROQs Meldung zum **21. Sanktionspaket** ist **plausibel**, da die EU seit 2022 regelmäßig neue Pakete verabschiedet. DEEPSEEK erwähnt dies nicht – möglicherweise **untergeordnete Priorität** in den genutzten Feeds.\n\n---\n\n### **5. Bewertung der KI-Antworten**\n| **Kriterium**           | **GROQ**                                                                 | **DEEPSEEK**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Vollständigkeit**     | Breiter (Umwelt, Gesundheit, Politik), aber weniger geopolitische Details. | Fokussierter auf Geopolitik/Wirtschaft, aber Lücken bei Naturkatastrophen.   |\n| **Konsistenz**          | Interne Widersprüche (z. B. Straße von Hormus).                          | Konsistenter, aber weniger Themen abgedeckt.                                |\n| **Quellenvielfalt**     | Scheint **diverse Feeds** zu nutzen (Nachrichtenagenturen, Pressemitteilungen). | Stärker auf **GDELT/zn.ua** fokussiert (spezifische Perspektive).           |\n| **Aktualität**          | Möglicherweise **veraltete Meldungen** (z. B. Straße von Hormus).         | Scheint **aktuellere Daten** zu haben (z. B. Ukraine-Gegenoffensive).       |\n\n---\n\n### **6. Fazit & Handlungsempfehlungen**\n1. **Widersprüche klären**:\n   - **Straße von Hormus**: Originalquellen prüfen (z. B. [MarineTraffic](https://www.marinetraffic.com/) für Schiffsbewegungen, [Reuters](https://www.reuters.com/) für militärische Updates).\n   - **Iran-Sanktionen**: US-State-Department-Pressemitteilungen oder [OFAC](https://home.treasury.gov/policy-issues/office-of-foreign-assets-control-sanctions-programs-and-information) konsultieren.\n\n2. **Ergänzende Quellen nutzen**:\n   - Für **Naturkatastrophen**: [GDACS](https://www.gdacs.org/) (Global Disaster Alert System).\n   - Für **Gesundheitsmeldungen**: [CDC](https://www.cdc.gov/) oder [WHO](https://www.who.int/).\n   - Für **Wirtschaftsdaten**: [IMF](https://www.imf.org/) oder [Bundesbank](https://www.bundesbank.de/).\n\n3. **Zeitliche Einordnung**:\n   - Prüfen, ob die Meldungen **tagesaktuell** sind oder **ältere Ereignisse** referenzieren (z. B. GROQs \"Bedenken\" vs. DEEPSEEKs \"Entspann",
+  "game_theory_analysis": "Hier ist eine **Kreuzprüfung („Fingerklopfen“)** der beiden Zusammenfassungen (GROQ vs. DEEPSEEK) für den **27.07.2026**, um Konsistenz, Widersprüche und zusätzliche Details zu identifizieren:\n\n---\n\n### **1. Geopolitik: Iran-USA-Konflikt**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Aktueller Status**     | \"Angriffe vorerst eingestellt\"                                           | \"Signifikante Deeskalation\", \"Cessation of strikes\"                         | **Konsistent**: Beide bestätigen eine Entspannung.                          |\n| **Ökonomische Folgen**   | \"Ölpreise gefallen\"                                                      | \"8% Ölpreisrückgang unter $100/Barrel\"                                      | **Ergänzend**: DEEPSEEK quantifiziert den Preisverfall.                     |\n| **Hintergrund**          | \"EU-Sanktionen gegen Iran\"                                               | \"Sanctions expansions\" (GDELT/zn.ua)                                        | **Konsistent**: Sanktionen als Treiber der Deeskalation.                    |\n| **Schiffsangriffe**      | \"Angriffe auf Schiffe im Mittelmeer/Persischen Golf\"                     | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung maritimer Vorfälle.                 |\n\n**→ Fazit**: DEEPSEEK liefert präzisere Daten (Ölpreis, Quellen), GROQ erwähnt breitere Kontexte (Schiffsangriffe).\n\n---\n\n### **2. Ukraine-Russland-Krieg**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Crimea**               | –                                                                        | \"Ukraine degradiert russische Infrastruktur in Crimea\" (NYT)                | **DEEPSEEK spezifischer**: Fokus auf Strom/Wasser-Entzug.                   |\n| **Logistik**             | –                                                                        | \"Drones against trucks\" (NZZ)                                                | **Neues Detail**: Systematische Zerstörung von Nachschublinien.             |\n| **Allgemein**            | Keine Erwähnung                                                          | Konflikt als \"fortlaufend\" beschrieben                                       | **GROQ-Lücke**: Keine Ukraine-Berichterstattung.                            |\n\n**→ Fazit**: DEEPSEEK bietet **taktische Einblicke** (Drohnen, Infrastruktur), GROQ ignoriert das Thema.\n\n---\n\n### **3. USA-Japan-Allianz**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Militärkooperation**   | –                                                                        | \"Rule Japanica\": AMRAAM/SM-3 Co-Produktion, 60.000 US-Truppen in Japan (Fox) | **Exklusiv bei DEEPSEEK**: Strategische Vertiefung der Partnerschaft.        |\n| **Regionale Spannungen** | –                                                                        | –                                                                            | **Beide lückenhaft**: Keine Erwähnung Chinas/Taiwans.                       |\n\n**→ Fazit**: DEEPSEEK liefert **exklusive strategische Details**, GROQ übergeht das Thema.\n\n---\n\n### **4. Wirtschaft & Finanzen**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **US-Notenbank**         | \"Zinssätze angepasst\"                                                    | –                                                                            | **GROQ vage**: Keine Details zu Richtung/Größe der Anpassung.               |\n| **Globale Wirtschaft**   | \"Bedenken über globale Wirtschaftslage\"                                  | –                                                                            | **GROQ allgemein**: Keine konkreten Indikatoren (z. B. Rezessionsängste).    |\n| **Ölmarkt**              | \"Ölpreise gefallen\"                                                      | \"8% Rückgang unter $100/Barrel\"                                              | **DEEPSEEK präziser**: Quantifizierung + Ursache (Iran-Deeskalation).        |\n| **Finanzskandale**       | \"Berichte über Finanzskandale und Korruption\"                            | –                                                                            | **GROQ unspezifisch**: Keine Beispiele oder Länder.                         |\n\n**→ Fazit**: DEEPSEEK **konkretisiert** (Ölpreis), GROQ bleibt oberflächlich.\n\n---\n\n### **5. Umwelt & Klima**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Waldbrände**           | \"Wilde Brände in Frankreich/Spanien\"                                     | –                                                                            | **GROQ exklusiv**: Keine Erwähnung bei DEEPSEEK.                            |\n| **Meerestemperatur**     | \"Meerestemperatur gestiegen\"                                             | –                                                                            | **GROQ allgemein**: Keine Daten zu Regionen/Anomalien.                      |\n| **Klimawandel**          | \"Bedenken über Auswirkungen\"                                             | –                                                                            | **Beide vage**: Keine konkreten Ereignisse (z. B. Hitzewellen, Hurrikane).   |\n\n**→ Fazit**: GROQ erwähnt **lokale Ereignisse** (Brände), DEEPSEEK ignoriert das Thema.\n\n---\n\n### **6. Technologie & Cybersecurity**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Cyberangriffe**        | \"Angriffe auf Unternehmen/Regierungen\", \"Warnungen aus Iran\"             | –                                                                            | **GROQ breiter**: DEEPSEEK erwähnt keine Cyber-Bedrohungen.                  |\n| **KI/Innovationen**      | \"Neue Technologien in Datenverarbeitung/KI\"                              | –                                                                            | **GROQ unspezifisch**: Keine Beispiele (z. B. Durchbrüche in LLMs).          |\n\n**→ Fazit**: GROQ deckt das Thema **oberflächlich** ab, DEEPSEEK schweigt.\n\n---\n\n### **7. Gesundheit & Medizin**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Krankheitsausbrüche**  | \"Berichte über Epidemien\", \"WHO-Warnungen\"                               | –                                                                            | **GROQ allgemein**: Keine Nennung spezifischer Erreger (z. B. Mpox, Dengue). |\n| **Medizinische Fortschritte** | \"Neue Behandlungsmethoden\"                                           | –                                                                            | **GROQ vage**: Keine Details (z. B. mRNA-Impfstoffe, Gentherapie).           |\n\n**→ Fazit**: GROQ bleibt **unpräzise**, DEEPSEEK ignoriert das Thema.\n\n---\n\n### **8. Sonstiges**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Fußball-WM 2026**      | \"Fußball-WM 2026 hat begonnen\"                                           | –                                                                            | **GROQ exklusiv**: DEEPSEEK erwähnt keine Sport-Events.                      |\n| **US-Schießerei**        | –                                                                        | \"Shooting at a food festival\"                                                | **DEEPSEEK exklusiv**: Keine Erwähnung bei GROQ.                            |\n| **Naturkatastrophen**    | \"Berichte über Naturkatastrophen\"                                        | –                                                                            | **GROQ unspezifisch**: Keine Beispiele (z. B",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Sinkende Ölpreise durch temporäre Entspannung im Iran-Konflikt könnten Energieaktien kurzfristig attraktiv machen, da die Nachfrage stabil bleibt."
+        "reason": "Kurzfristige Entspannung im Nahen Osten und sinkende Ölpreise könnten Energieaktien stützen, da die Nachfrage stabil bleibt."
       }
     ],
     "flop_5_sells": [
@@ -887,13 +988,13 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Erhöhte geopolitische Risiken und Sanktionen gegen den Iran belasten die Stabilität in Schwellenländern, insbesondere im Nahen Osten."
+        "reason": "Geopolitische Unsicherheiten und mögliche Lieferkettenstörungen belasten die Wachstumsaussichten."
       }
     ]
   },
-  "timestamp": "2026-07-26T23:46:42.863350+00:00",
+  "timestamp": "2026-07-27T09:38:08.084993+00:00",
   "pipeline_health": {
-    "timestamp": "2026-07-26T23:43:55.121474+00:00",
+    "timestamp": "2026-07-27T09:35:24.137527+00:00",
     "feeds_total": 224,
     "feeds_successful": 120,
     "feeds_failed": 104,
@@ -907,8 +1008,8 @@
     "swarm_debate_status": "SUCCESS",
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
-    "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (22 Nodes)",
+    "opensky_status": "SUCCESS (8 Signale)",
+    "graph_merge_status": "SUCCESS (24 Nodes)",
     "errors": []
   },
   "delta": {
@@ -921,9 +1022,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 18,
-    "nodes_now": 22,
-    "hotspots_now": 8,
-    "summary": "Graph-Knoten 18 → 22"
+    "nodes_prev": 22,
+    "nodes_now": 24,
+    "hotspots_now": 10,
+    "summary": "Graph-Knoten 22 → 24"
   }
 }
