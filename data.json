@@ -1,121 +1,281 @@
 {
-  "ampel_status": "GELB",
-  "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\nDie Informationen, die du bereitgestellt hast, umfassen eine breite Palette von Themen, darunter Wirtschaft, Politik, Umwelt, Technologie, Gesundheit und internationale Beziehungen. Hier ist eine kurze Zusammenfassung einiger der wichtigsten Punkte:\n\n1. **Wirtschaft und Finanzen**: \n   - Die Federal Reserve hat eine gemeinsame Erklärung zu sensiblen Informationen während Bankprüfungen herausgegeben.\n   - Nvidia könnte einen neuen Deal mit OpenAI eingehen, was Bedenken hinsichtlich einer Rückkehr zu Tech-Blasen aufwertet.\n   - Die Commerzbank-Übernahme durch die UniCredit ist in trockenen...",
-  "daily_executive_summary_simple": "GROQ:\nDie Informationen, die du bereitgestellt hast, umfassen eine breite Palette von Themen, darunter Wirtschaft, Politik, Umwelt, Technologie, Gesundheit und internationale Beziehungen. Hier ist eine kurze Zusammenfassung einiger der wichtigsten Punkte:\n\n1. **Wirtschaft und Finanzen**: \n   - Die Federal Reserve hat eine gemeinsame Erklärung zu se...",
-  "key_takeaways": [
-    "Die Federal Reserve hat eine gemeinsame Erklärung zu sensiblen Informationen während Bankprüfungen herausgegeben.",
-    "Nvidia könnte einen neuen Deal mit OpenAI eingehen, was Bedenken hinsichtlich einer Rückkehr zu Tech-Blasen aufwertet.",
-    "Die Commerzbank-Übernahme durch die UniCredit ist in trockenen Tüchern.",
-    "Es gab Berichte über Spannungen und Konflikte zwischen verschiedenen Ländern, einschließlich der USA, Iran, Israel und Russland.",
-    "Netanyahu trifft sich mit Trump im Weißen Haus, während die Beziehungen zwischen den USA und dem Iran angespannt sind."
-  ],
   "overall_geoscore": 72,
   "defcon_level": 3,
-  "market_regime": "Unsicher / Fragmentiert",
-  "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\nDie Informationen, die du bereitgestellt hast, umfassen eine breite Palette von Themen, darunter Wirtschaft, Politik, Umwelt, Technologie, Gesundheit und internationale Beziehungen. Hier ist eine kurze Zusammenfassung einiger der wichtigsten Punkte:\n\n1. **Wirtschaft und Finanzen**: \n   - Die Federal Reserve hat eine gemeinsame Erklärung zu sensiblen Informationen während Bankprüfungen herausgegeben.\n   - Nvidia könnte einen neuen Deal mit OpenAI eingehen, was Bedenken hinsichtlich einer Rückkehr zu Tech-Blasen aufwertet.\n   - Die Commerzbank-Übernahme durch die UniCredit ist in trockenen Tüchern.\n\n2. **Politik und internationale Beziehungen**:\n   - Es gab Berichte über Spannungen und Konflikte zwischen verschiedenen Ländern, einschließlich der USA, Iran, Israel und Russland.\n   - Netanyahu trifft sich mit Trump im Weißen Haus, während die Beziehungen zwischen den USA und dem Iran angespannt sind.\n   - In Europa gibt es Bemühungen, die Waldbrände in Ländern wie Spanien und Frankreich zu bekämpfen.\n\n3. **Umwelt**:\n   - Waldbrände in der Nähe von Madrid und in anderen Teilen Europas sind eine große Herausforderung.\n   - Es gibt Berichte über Erdbeben in Japan und anderen Teilen der Welt.\n\n4. **Technologie und Cyber-Sicherheit**:\n   - Es gibt Bedenken hinsichtlich der Cyber-Sicherheit, einschließlich der Ausnutzung von Schwachstellen in Softwares und der Bedrohung durch Spionagesoftware.\n   - CISA hat zwei neue Schwachstellen in seinem Katalog bekannt geführt.\n\n5. **Gesundheit**:\n   - Es gibt Berichte über den Ausbruch von Cyclospora, der mit Eisbergsalat in Verbindung gebracht wird.\n   - Die WHO und andere Gesundheitsorganisationen arbeiten daran, die Ausbreitung von Krankheiten zu verhindern und zu behandeln.\n\n6. **Internationale Nachrichten**:\n   - Es gibt eine breite Palette von internationalen Nachrichten, einschließlich politischer Entwicklungen, wirtschaftlicher Trends und humanitärer Krisen in verschiedenen Teilen der Welt.\n\nDiese Zusammenfassung deckt nur einen kleinen Teil der vielen Themen und Ereignisse ab, die in den bereitgestellten Informationen behandelt werden. Für eine detailliertere Analyse oder spezifische Fragen zu einem dieser Themen stehe ich gerne zur Verfügung.\n\nDEEPSEEK:\nDies ist eine Zusammenfassung der Weltlage zum **28. Juli 2026** basierend auf den von Ihnen bereitgestellten Feeds. Die Lage ist geprägt durch militärische Eskalation im Nahen Osten, Naturkatastrophen in Europa, wirtschaftliche Unsicherheit durch Tech-Investments und anhaltende Cybersicherheitsrisiken.\n\nHier die Analyse der einzelnen Themen:\n\n**1. Geopolitik & Sicherheit (Krisenherde)**\n- **Iran-Krieg (LIVE-TICKER NZZ):** Der Konflikt zwischen den USA und Iran ist hochdynamisch. Nach einer verkündeten Waffenruhe im Februar 2026 hat US-Präsident Trump diese Anfang Juli für beendet erklärt. Der Ölpreis fällt deutlich, nachdem die USA eine Angriffspause eingelegt haben, was auf einen möglichen, wenn auch fragilen, Deeskalationsversuch hindeutet. Die Drohung Irans, den Konflikt auszuweiten, hält die Spannungen jedoch aufrecht.\n- **Ecuador (BBC):** Der Drogenkrieg in Ecuador eskaliert weiter. Die Polizei kämpft an vorderster Front gegen Banden, Waffengewalt und interne Korruption. Dies deutet auf eine tiefgreifende Sicherheitskrise in einem Land hin, das zunehmend zum Transit- und Produktionsstandort für Drogen wird.\n\n**2. Wirtschaft & Finanzen**\n- **Tech-Blase (WSJ/MarketWatch):** Analysten warnen vor einem Wiederaufleben alter \"Tech-Bubble\"-Gewohnheiten. Berichte über eine mögliche riesige Leasing-Backstop von Nvidia für ein OpenAI-Rechenzentrum verunsichern Anleger. Dies deutet auf extrem hohe Kapitalkosten und Risikobereitschaft im KI-Sektor hin, die an die Dotcom-Blase erinnert.\n- **Prüfungsversagen (FT):** Die Wirtschaftsprüfungsgesellschaft EY wurde mit einer Geldstrafe von 1,2 Mio. £ belegt, weil sie bei der Prüfung des Möbelhändlers Made.com mangelhafte Arbeit geleistet hat. Dies unterstreicht die anhaltende Debatte über die Qualität und Unabhängigkeit von Wirtschaftsprüfern in Großbritannien.\n\n**3. Cybersicherheit & Infrastruktur**\n- **CISA KEV-Update:** Zwei neue Schwachstellen wurden aktiv ausgenutzt und in den Katalog aufgenommen:\n    - **CVE-2025-68686:** Fortinet FortiOS – Offenlegung sensibler Informationen.\n    - **CVE-2026-16812:** Arista VeloCloud Orchestrator – Schwere Schwachstelle (weiterer spezifischer Code/OS-Kompromittierung).\n    - **Bedeutung:** Beide Systeme sind in Unternehmensnetzwerken und Cloud-Infrastrukturen weit verbreitet. Administratoren müssen sofort patchen.\n- **Bankenregulierung (Fed):** Die US-Notenbank und andere Aufsichtsbehörden haben eine gemeinsame Erklärung zum Umgang mit hochsensiblen Informationen während Bankprüfungen abgegeben. Dies könnte eine Reaktion auf Data-Leaks oder erhöhte Sicherheitsbedenken im Finanzsektor sein.\n\n**4. Umwelt & Katastrophen**\n- **Waldbrände bei Madrid (NYT):** Massive Waldbrände bedrohen die spanische Hauptstadt Madrid. Dies ist ein alarmierender Realitätscheck für eine boomende Metropole und verdeutlicht die unmittelbare Bedrohung durch die Klimakrise in Südeuropa.\n- **Hurrikan-Saison (NOAA):** Der Atlantik ist ruhig (0320 UTC Outlook), es besteht keine unmittelbare tropische Bedrohung am 28. Juli.\n\n**5. Innenpolitik (USA)**\n- **Senatsdebatte Michigan (Fox News):** Schlammschlacht unter den Demokraten. Die Debatte dreht sich um AIPAC-Gelder, persönliche Beleidigungen, unveröffentlichte Steuererklärungen und hohe Nebeneinkünfte. Dies zeigt tiefe interne Risse in der Demokratischen Partei vor den Wahlen.\n\n**Fazit für den 28. Juli 2026:**\nDie Weltlage ist multipolar und von hohen Spannungen geprägt. Der Iran-Konflikt überschattet die Ölmärkte und die globale Sicherheit. Gleichzeitig bedrohen die Folgen des Klimawandels (Brände in Spanien) direkt urbane Zentren. In der Tech-Branche brodelt es erneut, während die Cybersicherheit durch gezielte Angriffe auf Netzwerkinfrastruktur (Fortinet, Arista) unter Druck steht.\n\nMACRO:\nEs scheint, dass der Medizin-Artikel abgeschnitten wurde. Hier ist eine Zusammenfassung der verfügbaren Feeds:\n\n1. **Zentralbank**:\n   - **Federal Reserve Press**: Die Behörden geben eine gemeinsame Erklärung über die Handhabung hoch sensibler Informationen während Bankinspektionen heraus.\n\n2. **Cyber / Infrastruktur**:\n   - **CISA Cyber Alerts**: CISA hat zwei neue Schwachstellen (CVE-2025-68686 und CVE-2026-16812) zu seinem Katalog von bekannten ausgenutzten Schwachstellen hinzugefügt, basierend auf Beweisen für aktive Exploitation.\n\n3. **US/Finanzen**:\n   - **Wall Street Journal (MarketWatch Alt)**: Ein Analyst warnt vor einem potentiellen neuen Deal von Nvidia mit OpenAI, der das Verhalten von Tech-Blasen wiederbeleben könnte.\n\n4. **US/Politik**:\n   - **Fox News Latest**: Demokraten streiten sich über AIPAC-Gelder, Angriffe auf \"Oger\" und Wählbarkeit während einer wichtigen Senatsdebatte.\n\n5. **US/Presse**:\n   - **New York Times World**: Massive Brandkatastrophen nähern sich Madrid und werfen einen Schatten auf die kulturelle und wirtschaftliche Blüte der Stadt.\n\n6. **CH/Presse**:\n   - **NZZ International**: Der Ölpreis fällt nach einer US-Angriffspause in Iran deutlich, während Iran droht, den Konflikt auszuweiten. Die USA und Iran befinden sich seit Februar 2026 im Kriegszustand, aber eine Waffenruhe wurde Anfang Juli von Donald Trump für beendet erklärt.\n\n7. **UK/Medien**:\n   - **BBC World News**: Der BBC stellt die Situation vor Ort in Ecuadors Drogenkrieg dar, bei dem die Polizei gegen Gangs, Waffen und Korruption kämpft.\n\n8. **UK/Finanzen**:\n   - **Financial Times**: EY wird mit 1,2 Millionen Pfund wegen Verstößen gegen Standards bei der Prüfung von Made.com bestraft.\n\n9. **Wetter/Extreme**:\n   - **NOAA National Hurricane Center**: Der Atlantische tropische Wettermeldung gibt an, dass sich derzeit keine tropischen Zyklone bilden.\n\n10. **Investigativ Net**:\n    - **ICIJ (Panama/Pandora Papers)**: Eine investigative Reportage enthüllt, wie Modelle, Influencer und Engagement-Quoten das Dating-Imperium der Social Discovery Group und dessen globale Gewinne antreiben.\n\n11. **Medizin**:\n    - [Hier scheint der Artikel abgeschnitten zu sein. Weitere Informationen fehlen.]\n\nFalls Sie weitere Informationen zu einem spezifischen Punkt benötigen oder der vollständige Medizin-Artikel zur Verfügung steht, lassen Sie es mich wissen!",
-  "predictive_horizon": {
-    "base_case_probability_pct": 55,
-    "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
-    "leading_indicators_to_watch": [
-      "Weitere Eskalationssignale in den Feeds",
-      "Zentralbank-Kommunikation",
-      "Militärische Bewegungen"
+  "ampel_status": "GELB",
+  "ampel_reason_simple": "Erhöhte geopolitische Spannungen im Nahen Osten und Unsicherheiten in den USA durch Wahlrechtsstreitigkeiten, kombiniert mit Naturkatastrophen in Japan, belasten die globale Stabilität.",
+  "daily_executive_summary": "Am 29. Juli 2026 verschärft sich die geopolitische Lage durch die Eskalation zwischen den USA und dem Iran, insbesondere nach US-Luftangriffen auf iranische Milizen in Syrien und erweiterten Sanktionen wegen der Umgehung des UN-Waffenembargos. Gleichzeitig bestätigt der US-Senat Jay Clayton als neuen Geheimdienstchef, während Präsident Trump den Supreme Court in einem Streit um Wahlregeln anruft, was innenpolitische Spannungen verstärkt. In Japan fordert ein schweres Erdbeben mindestens 13 Tote und löst eine Rettungsaktion aus, die die Infrastruktur belastet. Die Märkte reagieren volatil auf die Kombination aus geopolitischen Risiken, Lieferkettenstörungen durch das Erdbeben und Saudi-Arabiens teurere Öl-Exportstrategie.",
+  "daily_executive_summary_simple": "Die Welt ist aktuell angespannt: Die USA und der Iran streiten sich stärker, was zu Militärschlägen und neuen Strafmaßnahmen führt. In den USA gibt es zudem Streit über Wahlregeln, was für Unsicherheit sorgt. In Japan hat ein schweres Erdbeben viele Gebäude zerstört, und die Rettungsarbeiten laufen auf Hochtouren. Die Wirtschaft leidet unter diesen Krisen, besonders bei Energie und Lieferketten.",
+  "key_takeaways": [
+    "USA verschärfen Sanktionen gegen den Iran wegen Umgehung des UN-Waffenembargos und führen Luftangriffe auf iranische Milizen in Syrien durch.",
+    "Trump ruft den Supreme Court im Streit um US-Wahlregeln an, was innenpolitische Spannungen erhöht.",
+    "Schweres Erdbeben in Japan (Magnitude 6,8) fordert mindestens 13 Tote und belastet die Infrastruktur.",
+    "Saudi-Arabien nutzt teurere Umgehungsrouten für Ölexporte, was die Energiepreise beeinflussen könnte.",
+    "NATO entwickelt neue Strategien gegen Drohnenangriffe, während die Anklage gegen Telegram-Gründer Durov die Debatte über digitale Sicherheit verschärft."
+  ],
+  "market_regime": "Volatil",
+  "top_risk": "Geopolitische Spannungen & Lieferkettenstörungen",
+  "equity_rotation": {
+    "top5_buys": [
+      {
+        "ticker": "XLE",
+        "name": "Energy Select Sector",
+        "asset": "Energie",
+        "reason": "Erhöhte Nachfrage durch geopolitische Risiken im Nahen Osten und Saudi-Arabiens alternative Exportrouten."
+      },
+      {
+        "ticker": "GLD",
+        "name": "Gold",
+        "asset": "Sicherer Hafen",
+        "reason": "Investoren suchen Schutz vor geopolitischen Unsicherheiten und Marktvolatilität."
+      },
+      {
+        "ticker": "LMT",
+        "name": "Lockheed Martin",
+        "asset": "Rüstung",
+        "reason": "NATO-Strategie gegen Drohnenangriffe und erhöhte Militärausgaben in den USA."
+      },
+      {
+        "ticker": "CAT",
+        "name": "Caterpillar",
+        "asset": "Infrastruktur/Bau",
+        "reason": "Wiederaufbau nach Naturkatastrophen in Japan und globale Infrastrukturprojekte."
+      },
+      {
+        "ticker": "SIEMENS.DE",
+        "name": "Siemens",
+        "asset": "Industrie/Technologie",
+        "reason": "Cybersecurity-Lücken in Siemens-Software könnten zu verstärkten Investitionen in IT-Sicherheit führen."
+      }
     ],
-    "horizon_list": []
+    "flop5_sells": [
+      {
+        "ticker": "EEM",
+        "name": "Emerging Markets",
+        "asset": "Schwellenländer",
+        "reason": "Geopolitische Risiken und Sanktionen belasten die Wirtschaft in Regionen wie dem Nahen Osten und Russland."
+      },
+      {
+        "ticker": "AAL",
+        "name": "American Airlines",
+        "asset": "Luftfahrt",
+        "reason": "Erhöhte Treibstoffkosten durch Ölpreisschwankungen und geopolitische Unsicherheiten."
+      },
+      {
+        "ticker": "TSLA",
+        "name": "Tesla",
+        "asset": "Elektrofahrzeuge",
+        "reason": "Lieferkettenstörungen durch das Erdbeben in Japan und volatile Rohstoffpreise."
+      },
+      {
+        "ticker": "META",
+        "name": "Meta Platforms",
+        "asset": "Soziale Medien/Tech",
+        "reason": "Regulatorische Risiken durch Anklagen gegen Tech-Führer (z. B. Durov) und Datenschutzdebatten."
+      },
+      {
+        "ticker": "BABA",
+        "name": "Alibaba",
+        "asset": "E-Commerce/Tech",
+        "reason": "Handelskonflikte und geopolitische Spannungen zwischen den USA und China belasten den Sektor."
+      }
+    ]
+  },
+  "domestic_policy_matrix": [
+    {
+      "region": "USA",
+      "stability": "GELB",
+      "dynamics": "Innenpolitische Spannungen durch Wahlrechtsstreitigkeiten und Bestätigung eines neuen Geheimdienstchefs. Militärische Eskalation mit dem Iran und NATO-Strategieanpassungen belasten die Außenpolitik."
+    },
+    {
+      "region": "EU",
+      "stability": "GRÜN",
+      "dynamics": "Keine akuten Krisen, aber erhöhte Wachsamkeit wegen NATO-Drohnenstrategie und Sanktionen gegen den Iran. Wirtschaftliche Auswirkungen durch Ölpreisschwankungen."
+    },
+    {
+      "region": "Japan",
+      "stability": "ROT",
+      "dynamics": "Schweres Erdbeben in Kumamoto führt zu Todesopfern, Zerstörung und Rettungseinsätzen. Infrastruktur und Wirtschaft sind kurzfristig stark belastet."
+    },
+    {
+      "region": "Saudi-Arabien",
+      "stability": "GELB",
+      "dynamics": "Teurere Öl-Exportrouten als Reaktion auf Marktbedingungen und geopolitische Spannungen. Wirtschaftliche Anpassungen könnten langfristig die Preise beeinflussen."
+    }
+  ],
+  "historical_precedents": [
+    {
+      "event": "Luftangriffe der USA auf iranische Milizen in Syrien als Reaktion auf Angriffe auf US-Stützpunkte.",
+      "current_event": "Luftangriffe der USA auf iranische Milizen in Syrien als Reaktion auf Angriffe auf US-Stützpunkte.",
+      "historical_analog": "US-Luftangriffe auf iranische Ziele im Irak und Syrien (2020) nach Angriffen auf US-Botschaften.",
+      "similarity": "US-Luftangriffe auf iranische Ziele im Irak und Syrien (2020) nach Angriffen auf US-Botschaften.",
+      "takeaway": "Historisch führen solche Eskalationen zu einer Spirale der Gewalt, die diplomatische Lösungen erschwert und regionale Stabilität gefährdet."
+    },
+    {
+      "event": "Schweres Erdbeben in Kumamoto mit Magnitude 6,8 und mindestens 13 Toten.",
+      "current_event": "Schweres Erdbeben in Kumamoto mit Magnitude 6,8 und mindestens 13 Toten.",
+      "historical_analog": "Erdbeben in Kumamoto (2016) mit Magnitude 7,0 und über 200 Toten.",
+      "similarity": "Erdbeben in Kumamoto (2016) mit Magnitude 7,0 und über 200 Toten.",
+      "takeaway": "Wiederkehrende Erdbeben in Japan zeigen die Notwendigkeit verbesserter Bauvorschriften und schnellerer Rettungseinsätze, um Opferzahlen zu minimieren."
+    },
+    {
+      "event": "Präsident Trump ruft den Supreme Court an, um Streitigkeiten über Wahlregeln zu klären.",
+      "current_event": "Präsident Trump ruft den Supreme Court an, um Streitigkeiten über Wahlregeln zu klären.",
+      "historical_analog": "Bush vs. Gore (2000), bei dem der Supreme Court über die Auszählung der Stimmen in Florida entschied.",
+      "similarity": "Bush vs. Gore (2000), bei dem der Supreme Court über die Auszählung der Stimmen in Florida entschied.",
+      "takeaway": "Solche Entscheidungen können das Vertrauen in demokratische Institutionen langfristig untergraben und zu sozialen Unruhen führen."
+    }
+  ],
+  "predictive_horizon": {
+    "base_case_probability_pct": 65,
+    "base_case_summary": "Die Spannungen zwischen den USA und dem Iran werden wahrscheinlich weiter eskalieren, mit möglichen weiteren Militärschlägen oder Cyberangriffen. Die Rettungs- und Wiederaufbaumaßnahmen in Japan werden die Infrastruktur belasten, während die Märkte auf Ölpreisschwankungen und geopolitische Risiken reagieren.",
+    "leading_indicators_to_watch": [
+      "Zunahme von Cyberangriffen auf kritische Infrastruktur im Nahen Osten.",
+      "Weitere militärische Bewegungen der USA oder Irans in Syrien oder im Irak.",
+      "Verzögerungen bei Rettungseinsätzen in Japan oder Nachbeben mit schweren Schäden.",
+      "Anstieg der Ölpreise über 90 USD/Barrel aufgrund von Lieferkettenstörungen."
+    ],
+    "horizon_list": [
+      {
+        "timeframe": "30 Tage",
+        "forecast": "Die Spannungen zwischen den USA und dem Iran werden wahrscheinlich weiter eskalieren, mit möglichen weiteren Militärschlägen oder Cyberangriffen. Die Rettungs- und Wiederaufbaumaßnahmen in Japan werden die Infrastruktur belasten, während die Märkte auf Ölpreisschwankungen und geopolitische Risiken reagieren.",
+        "probability": "Hoch",
+        "early_warning_indicators": [
+          "Zunahme von Cyberangriffen auf kritische Infrastruktur im Nahen Osten.",
+          "Weitere militärische Bewegungen der USA oder Irans in Syrien oder im Irak.",
+          "Verzögerungen bei Rettungseinsätzen in Japan oder Nachbeben mit schweren Schäden.",
+          "Anstieg der Ölpreise über 90 USD/Barrel aufgrund von Lieferkettenstörungen."
+        ]
+      },
+      {
+        "timeframe": "90 Tage",
+        "forecast": "Die innenpolitischen Spannungen in den USA könnten sich verschärfen, falls der Supreme Court im Wahlrechtsstreit entscheidet. Saudi-Arabien könnte seine Öl-Exportstrategie weiter anpassen, was langfristig die Energiepreise beeinflusst. In Japan wird der Wiederaufbau beginnen, aber wirtschaftliche Auswirkungen könnten noch Monate spürbar sein.",
+        "probability": "Mittel",
+        "early_warning_indicators": [
+          "Proteste oder Unruhen in den USA nach einer Supreme-Court-Entscheidung.",
+          "Saudi-Arabien kündigt weitere Änderungen in der Öl-Exportstrategie an.",
+          "Verzögerungen bei Infrastrukturprojekten in Japan aufgrund von Materialknappheit."
+        ]
+      }
+    ]
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT54XN",
+      "name": "Persischer Golf",
+      "region": "Persischer Golf",
+      "lat": 26.5,
+      "lon": 53.5,
+      "type": "chokepoint",
+      "intensity": "ROT",
+      "description": "Der Persische Golf ist ein kritischer Knotenpunkt für den globalen Öltransport. Aktuelle Spannungen zwischen den USA und dem Iran erhöhen das Risiko von Blockaden oder Angriffen auf Öltanker.",
+      "impact": "Eine Eskalation könnte zu Lieferengpässen führen, die Ölpreise in die Höhe treiben und globale Märkte destabilisieren.",
+      "lng": 53.5
+    },
+    {
+      "name": "Syrien (iranische Milizen)",
+      "region": "Syrien",
+      "lat": 34.5,
+      "lon": 38.5,
+      "type": "conflict",
+      "intensity": "ROT",
+      "description": "US-Luftangriffe auf iranische Milizen in Syrien als Reaktion auf Angriffe auf US-Stützpunkte. Die Situation könnte sich zu einem Stellvertreterkrieg ausweiten.",
+      "impact": "Eine weitere Eskalation könnte die Region destabilisieren und zu einer direkten Konfrontation zwischen den USA und dem Iran führen.",
+      "lng": 38.5
+    },
+    {
+      "name": "Kumamoto, Japan",
+      "region": "Japan",
+      "lat": 32.8,
+      "lon": 130.7,
+      "type": "risiko",
+      "intensity": "ROT",
+      "description": "Schweres Erdbeben mit Magnitude 6,8 führt zu Todesopfern, Zerstörung und Rettungseinsätzen. Nachbeben und Infrastrukturprobleme belasten die Region.",
+      "impact": "Wirtschaftliche Verluste durch Zerstörung, Lieferkettenstörungen und erhöhte Kosten für Wiederaufbau.",
+      "lng": 130.7
+    },
+    {
+      "name": "Flug PGT96LK",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.6968,
-      "lon": 26.8608,
-      "lng": 26.8608,
+      "lat": 42.7729,
+      "lon": 26.7325,
+      "lng": 26.7325,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT54XN | Höhe: 11.0 km | Speed: 785 km/h",
+      "description": "Callsign: PGT96LK | Höhe: 11.0 km | Speed: 789 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug EWG55P",
+      "name": "Flug ENT4491",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 43.1552,
-      "lon": 27.4042,
-      "lng": 27.4042,
+      "lat": 43.62,
+      "lon": 25.4228,
+      "lng": 25.4228,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: EWG55P | Höhe: 6.0 km | Speed: 685 km/h",
+      "description": "Callsign: ENT4491 | Höhe: 11.3 km | Speed: 899 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug ADZ4093",
+      "name": "Flug TVF48BB",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.9396,
-      "lon": 33.7045,
-      "lng": 33.7045,
+      "lat": 34.8969,
+      "lon": 32.1368,
+      "lng": 32.1368,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ADZ4093 | Höhe: 0.5 km | Speed: 322 km/h",
+      "description": "Callsign: TVF48BB | Höhe: 7.2 km | Speed: 733 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AXB771",
+      "name": "Flug VAJ95A",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 24.8678,
-      "lon": 51.7781,
-      "lng": 51.7781,
+      "lat": 23.8146,
+      "lon": 51.4529,
+      "lng": 51.4529,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AXB771 | Höhe: 2.2 km | Speed: 585 km/h",
+      "description": "Callsign: VAJ95A | Höhe: 5.5 km | Speed: 763 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug RBA452",
+      "name": "Flug CRK615",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 16.5192,
-      "lon": 120.9612,
-      "lng": 120.9612,
+      "lat": 24.4813,
+      "lon": 120.6378,
+      "lng": 120.6378,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: RBA452 | Höhe: 11.0 km | Speed: 889 km/h",
+      "description": "Callsign: CRK615 | Höhe: 9.8 km | Speed: 821 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CRK630",
+      "name": "Flug CRK255",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.8584,
-      "lon": 121.6359,
-      "lng": 121.6359,
+      "lat": 24.1489,
+      "lon": 120.063,
+      "lng": 120.063,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CRK630 | Höhe: 10.7 km | Speed: 822 km/h",
+      "description": "Callsign: CRK255 | Höhe: 8.6 km | Speed: 847 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
-  "historical_precedents": [],
-  "domestic_policy_matrix": [],
-  "equity_rotation": {
-    "top5_buys": [],
-    "flop5_sells": []
-  },
   "graph_network": {
     "nodes": [
       {
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 21,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-27"
+        "last_seen": "2026-07-29"
       },
       {
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 17,
+        "val": 21,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-27"
+        "last_seen": "2026-07-29"
       },
       {
         "id": "saudi",
@@ -137,7 +297,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-27"
       },
@@ -153,15 +313,15 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 8,
+        "val": 10,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-27"
+        "last_seen": "2026-07-29"
       },
       {
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-26"
       },
@@ -185,7 +345,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-27"
       },
@@ -265,7 +425,7 @@
         "id": "cyber_risiko",
         "label": "Cyber-Sicherheit",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-26",
         "last_seen": "2026-07-27"
       },
@@ -273,7 +433,7 @@
         "id": "strabe_von_hormus",
         "label": "Hormus",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-26",
         "last_seen": "2026-07-26"
       },
@@ -281,17 +441,65 @@
         "id": "japan",
         "label": "Japan",
         "group": "staat",
-        "val": 5,
+        "val": 8,
         "first_seen": "2026-07-27",
-        "last_seen": "2026-07-27"
+        "last_seen": "2026-07-29"
       },
       {
         "id": "oelpreis",
         "label": "Ölmarkt",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-27",
         "last_seen": "2026-07-27"
+      },
+      {
+        "id": "syrien",
+        "label": "Syrien",
+        "group": "staat",
+        "val": 7,
+        "first_seen": "2026-07-29",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "id": "nato",
+        "label": "NATO",
+        "group": "organisation",
+        "val": 6,
+        "first_seen": "2026-07-29",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "id": "telegram",
+        "label": "Telegram",
+        "group": "tech",
+        "val": 5,
+        "first_seen": "2026-07-29",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "id": "saudi_arabien",
+        "label": "Saudi-Arabien",
+        "group": "staat",
+        "val": 5,
+        "first_seen": "2026-07-29",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "id": "supreme_court",
+        "label": "Supreme Court",
+        "group": "organisation",
+        "val": 5,
+        "first_seen": "2026-07-29",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "id": "siemens",
+        "label": "Siemens",
+        "group": "tech",
+        "val": 5,
+        "first_seen": "2026-07-29",
+        "last_seen": "2026-07-29"
       }
     ],
     "edges": [
@@ -301,7 +509,7 @@
         "source": "usa",
         "target": "iran",
         "label": "Konflikt",
-        "last_seen": "2026-07-27"
+        "last_seen": "2026-07-29"
       },
       {
         "from": "usa",
@@ -582,6 +790,62 @@
         "target": "russland",
         "label": "Bedrohung",
         "last_seen": "2026-07-27"
+      },
+      {
+        "from": "usa",
+        "to": "syrien",
+        "source": "usa",
+        "target": "syrien",
+        "label": "Militäroperation",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "iran",
+        "to": "syrien",
+        "source": "iran",
+        "target": "syrien",
+        "label": "Unterstützung Milizen",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "usa",
+        "to": "nato",
+        "source": "usa",
+        "target": "nato",
+        "label": "Allianz",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "nato",
+        "to": "russland",
+        "source": "nato",
+        "target": "russland",
+        "label": "Spannung",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "russland",
+        "to": "telegram",
+        "source": "russland",
+        "target": "telegram",
+        "label": "Anklage",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "usa",
+        "to": "supreme_court",
+        "source": "usa",
+        "target": "supreme_court",
+        "label": "Wahlrechtsstreit",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "japan",
+        "to": "usa",
+        "source": "japan",
+        "target": "usa",
+        "label": "Handel",
+        "last_seen": "2026-07-29"
       }
     ],
     "links": [
@@ -591,7 +855,7 @@
         "source": "usa",
         "target": "iran",
         "label": "Konflikt",
-        "last_seen": "2026-07-27"
+        "last_seen": "2026-07-29"
       },
       {
         "from": "usa",
@@ -872,15 +1136,71 @@
         "target": "russland",
         "label": "Bedrohung",
         "last_seen": "2026-07-27"
+      },
+      {
+        "from": "usa",
+        "to": "syrien",
+        "source": "usa",
+        "target": "syrien",
+        "label": "Militäroperation",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "iran",
+        "to": "syrien",
+        "source": "iran",
+        "target": "syrien",
+        "label": "Unterstützung Milizen",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "usa",
+        "to": "nato",
+        "source": "usa",
+        "target": "nato",
+        "label": "Allianz",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "nato",
+        "to": "russland",
+        "source": "nato",
+        "target": "russland",
+        "label": "Spannung",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "russland",
+        "to": "telegram",
+        "source": "russland",
+        "target": "telegram",
+        "label": "Anklage",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "usa",
+        "to": "supreme_court",
+        "source": "usa",
+        "target": "supreme_court",
+        "label": "Wahlrechtsstreit",
+        "last_seen": "2026-07-29"
+      },
+      {
+        "from": "japan",
+        "to": "usa",
+        "source": "japan",
+        "target": "usa",
+        "label": "Handel",
+        "last_seen": "2026-07-29"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Die Federal Reserve hat eine gemeinsame Erklärung zu sensiblen Informationen während Bankprüfungen herausgegeben.",
-    "Nvidia könnte einen neuen Deal mit OpenAI eingehen, was Bedenken hinsichtlich einer Rückkehr zu Tech-Blasen aufwertet.",
-    "Die Commerzbank-Übernahme durch die UniCredit ist in trockenen Tüchern.",
-    "Es gab Berichte über Spannungen und Konflikte zwischen verschiedenen Ländern, einschließlich der USA, Iran, Israel und Russland.",
-    "Netanyahu trifft sich mit Trump im Weißen Haus, während die Beziehungen zwischen den USA und dem Iran angespannt sind."
+    "USA verschärfen Sanktionen gegen den Iran wegen Umgehung des UN-Waffenembargos und führen Luftangriffe auf iranische Milizen in Syrien durch.",
+    "Trump ruft den Supreme Court im Streit um US-Wahlregeln an, was innenpolitische Spannungen erhöht.",
+    "Schweres Erdbeben in Japan (Magnitude 6,8) fordert mindestens 13 Tote und belastet die Infrastruktur.",
+    "Saudi-Arabien nutzt teurere Umgehungsrouten für Ölexporte, was die Energiepreise beeinflussen könnte.",
+    "NATO entwickelt neue Strategien gegen Drohnenangriffe, während die Anklage gegen Telegram-Gründer Durov die Debatte über digitale Sicherheit verschärft."
   ],
   "geoscore": {
     "current_score": 72,
@@ -891,45 +1211,106 @@
     "level": 3,
     "label": "DEFCON 3"
   },
+  "game_theory_analysis": "Hier ist die **Kreuzprüfung (\"Fingerklopfen\")** der beiden KI-Zusammenfassungen (GROQ vs. DEEPSEEK) für den **29. Juli 2026**, inklusive Bewertung der Konsistenz, Lücken und potenzieller Widersprüche:\n\n---\n\n### **1. Geopolitik & Sicherheit**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Iran-Sanktionen**     | USA verschärft Sanktionen wegen Umgehung des UN-Waffenembargos.          | USA erweitert Sanktionslisten wegen Umgehung des UN-Waffenembargos.         | **Konsistent** – Beide nennen denselben Auslöser (UN-Embargo-Umgehung).      |\n| **USA-Iran-Konflikt**   | Luftangriffe auf iranische Milizen in Syrien nach Angriffen auf US-Stützpunkte. | –                                                                            | **Lücke bei DEEPSEEK** – Keine Erwähnung der Milizen-Angriffe.               |\n| **Israel/USA**          | Netanyahu trifft Trump, Thema: Iran.                                    | –                                                                            | **Lücke bei DEEPSEEK** – Kein Hinweis auf das Treffen.                       |\n| **NATO-Drohnenstrategie** | Neue NATO-Strategie gegen Drohnenangriffe.                              | –                                                                            | **Lücke bei DEEPSEEK** – Keine Erwähnung.                                    |\n| **Russland/Telegram**   | Anklage gegen Pavel Durov (Terrorismus-Förderung).                       | –                                                                            | **Lücke bei DEEPSEEK** – Kein Hinweis auf die Anklage.                       |\n| **US-Geheimdienst**     | –                                                                        | Jay Clayton als neuer Geheimdienstchef bestätigt (Trump-Amtszeit).           | **Neues Thema bei DEEPSEEK** – GROQ erwähnt dies nicht.                      |\n| **US-Wahlregeln**       | –                                                                        | Trump ruft Supreme Court im Streit um Wahlregeln an.                         | **Neues Thema bei DEEPSEEK** – GROQ erwähnt dies nicht.                      |\n\n**Fazit:**\n- **GROQ** fokussiert stärker auf **militärische Konflikte** (Iran, Syrien, NATO).\n- **DEEPSEEK** ergänzt **innenpolitische US-Themen** (Geheimdienst, Supreme Court).\n- **Widerspruch:** Keiner – die Schwerpunkte ergänzen sich.\n\n---\n\n### **2. Naturkatastrophen & Umwelt**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Hitzewelle Europa**   | Temperaturen >40°C, hohe Waldbrandgefahr in Bayern.                     | –                                                                            | **Lücke bei DEEPSEEK** – Keine Erwähnung der Hitzewelle.                     |\n| **Dürre in Uganda**     | Nahrungsmittelhilfe für hungernde Bevölkerung.                          | –                                                                            | **Lücke bei DEEPSEEK** – Kein Hinweis auf Uganda.                            |\n| **Erdbeben Japan**      | –                                                                        | Erdbeben (6,8) in Kumamoto, 13 Tote, Rettungseinsatz.                        | **Neues Thema bei DEEPSEEK** – GROQ erwähnt dies nicht.                      |\n\n**Fazit:**\n- **GROQ** berichtet über **Klimaextreme** (Hitze, Dürre).\n- **DEEPSEEK** ergänzt eine **akute Naturkatastrophe** (Erdbeben).\n- **Widerspruch:** Keiner – die Themen sind komplementär.\n\n---\n\n### **3. Wirtschaft & Finanzen**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **US-Wachstumsprognose** | Fed korrigiert Prognose für Q2 2026 auf 1,4% Wachstum.                   | –                                                                            | **Lücke bei DEEPSEEK** – Keine Erwähnung.                                    |\n| **Deutsche Bank**       | Rekordgewinn Q2 2026, Aktienrückkauf angekündigt.                       | –                                                                            | **Lücke bei DEEPSEEK** – Kein Hinweis.                                       |\n| **BMW-Jobabbau**        | 8.000 Stellen weltweit gestrichen.                                       | –                                                                            | **Lücke bei DEEPSEEK** – Keine Erwähnung.                                    |\n| **Saudi-Arabien/Öl**    | –                                                                        | Saudi-Arabien nutzt teureren Öl-Transportweg (Umweg).                        | **Neues Thema bei DEEPSEEK** – GROQ erwähnt dies nicht.                      |\n\n**Fazit:**\n- **GROQ** berichtet über **Unternehmensnachrichten** (Deutsche Bank, BMW) und **US-Wirtschaft**.\n- **DEEPSEEK** ergänzt **geopolitische Ökonomie** (Saudi-Arabien/Öl).\n- **Widerspruch:** Keiner – unterschiedliche Schwerpunkte.\n\n---\n\n### **4. Sonstige Themen**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **EU-Ukraine-Hilfen**   | EU-Kommission genehmigt Hilfspaket für Ukraine.                          | –                                                                            | **Lücke bei DEEPSEEK** – Keine Erwähnung.                                    |\n\n---\n\n### **Gesamtbewertung der Kreuzprüfung**\n1. **Konsistenz:**\n   - Beide KIs decken **unterschiedliche Schwerpunkte** ab, ohne direkte Widersprüche.\n   - **GROQ** ist **breiter aufgestellt** (mehr Themen), während **DEEPSEEK** **vertiefende Details** liefert (z. B. Erdbeben, US-Innenpolitik).\n\n2. **Lücken:**\n   - **DEEPSEEK** fehlen:\n     - Hitzewelle/Dürre (Umwelt),\n     - NATO-Drohnenstrategie,\n     - Iran-Milizen-Angriffe,\n     - EU-Ukraine-Hilfen.\n   - **GROQ** fehlen:\n     - Erdbeben in Japan,\n     - Jay Clayton (Geheimdienstchef),\n     - Supreme-Court-Streit (Wahlregeln),\n     - Saudi-Arabien/Öl-Transport.\n\n3. **Potenzielle Fiktionalität (2026!):**\n   - **Jay Clayton als Geheimdienstchef:** Clayton war 2017–2020 SEC-Chef – eine Ernennung zum Geheimdienstchef wäre ungewöhnlich (aber nicht unmöglich).\n   - **Trump vs. Supreme Court:** Plausibel, da Trump bereits 2020/2024 ähnliche Konflikte hatte.\n   - **Erdbeben in Kumamoto:** Kumamoto wurde 2016 von einem schweren Beben getroffen – ein weiteres Beben 2026 ist geologisch möglich.\n   - **Saudi-Arabien/Öl-Umweg:** Könnte auf Spannungen mit Iran oder Blockaden in der Straße von Hormus hindeuten (realistisch).\n\n4. **Empfehlung für Nutzer:**\n   - **Für globale Übersicht:** GROQ nutzen (mehr Themen).\n   - **Für vertiefte Analysen:** DEEPSEEK ergänzen (z. B. Erdbeben, US-Politik).\n   - **Kritische Prüfung:**\n     - Die **Iran-Sanktionen** und **NATO-Strategie** sind plausibel (Fortsetzung aktueller Trends).\n     - Die **Hitzewelle in Europa** passt zum Klimawandel-Szenario.\n     - **BMW-Jobabbau** könnte auf Elektroauto-Umstellung hindeuten (realistisch).\n\n---\n\n### **Zusammenfassung der wichtigsten Übereinstimmungen & Ergänzungen**\n| **Kategorie**          | **Ü",
   "stock_picks": {
-    "top_5_buys": [],
-    "flop_5_sells": []
+    "top_5_buys": [
+      {
+        "ticker": "XLE",
+        "name": "Energy Select Sector",
+        "asset": "Energie",
+        "reason": "Erhöhte Nachfrage durch geopolitische Risiken im Nahen Osten und Saudi-Arabiens alternative Exportrouten."
+      },
+      {
+        "ticker": "GLD",
+        "name": "Gold",
+        "asset": "Sicherer Hafen",
+        "reason": "Investoren suchen Schutz vor geopolitischen Unsicherheiten und Marktvolatilität."
+      },
+      {
+        "ticker": "LMT",
+        "name": "Lockheed Martin",
+        "asset": "Rüstung",
+        "reason": "NATO-Strategie gegen Drohnenangriffe und erhöhte Militärausgaben in den USA."
+      },
+      {
+        "ticker": "CAT",
+        "name": "Caterpillar",
+        "asset": "Infrastruktur/Bau",
+        "reason": "Wiederaufbau nach Naturkatastrophen in Japan und globale Infrastrukturprojekte."
+      },
+      {
+        "ticker": "SIEMENS.DE",
+        "name": "Siemens",
+        "asset": "Industrie/Technologie",
+        "reason": "Cybersecurity-Lücken in Siemens-Software könnten zu verstärkten Investitionen in IT-Sicherheit führen."
+      }
+    ],
+    "flop_5_sells": [
+      {
+        "ticker": "EEM",
+        "name": "Emerging Markets",
+        "asset": "Schwellenländer",
+        "reason": "Geopolitische Risiken und Sanktionen belasten die Wirtschaft in Regionen wie dem Nahen Osten und Russland."
+      },
+      {
+        "ticker": "AAL",
+        "name": "American Airlines",
+        "asset": "Luftfahrt",
+        "reason": "Erhöhte Treibstoffkosten durch Ölpreisschwankungen und geopolitische Unsicherheiten."
+      },
+      {
+        "ticker": "TSLA",
+        "name": "Tesla",
+        "asset": "Elektrofahrzeuge",
+        "reason": "Lieferkettenstörungen durch das Erdbeben in Japan und volatile Rohstoffpreise."
+      },
+      {
+        "ticker": "META",
+        "name": "Meta Platforms",
+        "asset": "Soziale Medien/Tech",
+        "reason": "Regulatorische Risiken durch Anklagen gegen Tech-Führer (z. B. Durov) und Datenschutzdebatten."
+      },
+      {
+        "ticker": "BABA",
+        "name": "Alibaba",
+        "asset": "E-Commerce/Tech",
+        "reason": "Handelskonflikte und geopolitische Spannungen zwischen den USA und China belasten den Sektor."
+      }
+    ]
   },
-  "timestamp": "2026-07-28T08:22:32.346894+00:00",
+  "timestamp": "2026-07-29T08:27:33.057155+00:00",
   "pipeline_health": {
-    "timestamp": "2026-07-28T08:18:37.812021+00:00",
+    "timestamp": "2026-07-29T08:24:54.158453+00:00",
     "feeds_total": 224,
-    "feeds_successful": 113,
-    "feeds_failed": 111,
-    "gdelt_articles": 0,
+    "feeds_successful": 121,
+    "feeds_failed": 103,
+    "gdelt_articles": 35,
     "telegram_posts": 0,
     "bakers_active": [
       "Groq (Llama-3.3)",
       "DeepSeek",
       "qwen-2.5-72b-instruct"
     ],
-    "swarm_debate_status": "ERROR (HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=35))",
-    "synthesizer_status": "ERROR (ReadTimeout)",
+    "swarm_debate_status": "SUCCESS",
+    "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
     "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (24 Nodes)",
-    "errors": [
-      "Synthesizer Exception: HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=70)"
-    ]
+    "graph_merge_status": "SUCCESS (30 Nodes)",
+    "errors": []
   },
   "delta": {
     "has_previous": true,
     "ampel_prev": "GELB",
     "ampel_now": "GELB",
     "ampel_changed": false,
-    "geoscore_prev": 75,
+    "geoscore_prev": 72,
     "geoscore_now": 72,
-    "geoscore_delta": -3,
+    "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
     "nodes_prev": 24,
-    "nodes_now": 24,
-    "hotspots_now": 6,
-    "summary": "Geoscore 75 → 72 (-3)"
+    "nodes_now": 30,
+    "hotspots_now": 9,
+    "summary": "Graph-Knoten 24 → 30"
   }
 }
