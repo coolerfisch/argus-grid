@@ -1,50 +1,26 @@
 {
-  "overall_geoscore": 72,
+  "overall_geoscore": 75,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte geopolitische Spannungen in der Ukraine und im Nahen Osten, kombiniert mit volatilen Märkten und extremen Wetterereignissen in Europa, erfordern erhöhte Wachsamkeit.",
-  "daily_executive_summary": "Am 30.07.2026 zeigt sich die globale Lage als angespannt, aber stabil. Die Federal Reserve bleibt ein zentraler Akteur mit unterschiedlichen Schwerpunkten in der Kommunikation: Während die FOMC-Erklärung einen allgemeinen Wirtschaftsausblick liefert, rückt ein internes Dokument zur Bankenaufsicht in den Fokus. Die deutsche Wirtschaft verzeichnet ein leichtes Wachstum, doch Proteste gegen politische Führungspersonen deuten auf gesellschaftliche Unruhen hin. In den USA sorgt eine Personalentscheidung von Donald Trump für Kontroversen, während JPMorgan den Gesundheitssektor als vielversprechende Anlage empfiehlt. Extremwetterereignisse in Europa, insbesondere Waldbrände in Schottland, verschärfen die Klimakrise. Der Ukraine-Krieg eskaliert weiter mit massiven russischen Angriffen. Cyber-Sicherheitsrichtlinien werden aktualisiert, was auf zunehmende digitale Bedrohungen hindeutet.",
-  "daily_executive_summary_simple": "Die Weltlage ist aktuell angespannt. In den USA und Europa gibt es wirtschaftliche und politische Herausforderungen. Die Federal Reserve beobachtet die Wirtschaft genau, während in Deutschland Proteste stattfinden. In der Ukraine tobt weiter der Krieg, und in Europa brennen Wälder. Banken wie JPMorgan empfehlen Investitionen in Gesundheitsaktien. Gleichzeitig gibt es neue Regeln für die Cybersicherheit, um digitale Angriffe zu verhindern.",
+  "ampel_reason_simple": "Erhöhte geopolitische Spannungen im Persischen Golf und Ukraine-Krieg, kombiniert mit wirtschaftlicher Unsicherheit durch Insider-Warnungen und Marktvolatilität.",
+  "daily_executive_summary": "Die globale Lage ist geprägt von einer Eskalation der Spannungen im Persischen Golf, wo Saudi-Arabien eine militärische Allianz zur Sicherung der Schifffahrtsrouten im Roten Meer gebildet hat. Dies erfolgt vor dem Hintergrund eines sich ausweitenden Konflikts zwischen den USA und dem Iran. Gleichzeitig intensiviert sich der Ukraine-Krieg mit Angriffen auf russische Lagerhäuser und dem Einsatz nordkoreanischer Raketen durch Russland. Wirtschaftlich sendet die Wall Street Warnsignale durch Corporate Insider, während die Federal Reserve Enforcement-Actions gegen ehemalige Bankmitarbeiter verhängt. Die Apple-Aktie verzeichnet nach einem Rekordquartal einen deutlichen Rückgang, was auf Marktvolatilität hindeutet. Die Commerzbank-Übernahmegerüchte bleiben spekulativ, könnten jedoch die europäische Bankenlandschaft verändern.",
+  "daily_executive_summary_simple": "Die Welt ist aktuell unsicher: Im Nahen Osten gibt es neue militärische Bündnisse, um Schiffe zu schützen. In der Ukraine kämpfen Russland und die Ukraine weiter, wobei Russland Waffen aus Nordkorea einsetzt. An den Börsen gibt es Warnsignale, und große Unternehmen wie Apple verlieren an Wert. Gleichzeitig gibt es Gerüchte über eine mögliche Übernahme der Commerzbank, was die Bankenbranche verunsichert.",
   "key_takeaways": [
-    "Die Federal Reserve bleibt ein zentraler wirtschaftlicher Akteur, wobei interne Dokumente zur Bankenaufsicht und die FOMC-Erklärung unterschiedliche Schwerpunkte setzen.",
-    "Die deutsche Wirtschaft wächst leicht, doch gesellschaftliche Proteste gegen politische Führungspersonen deuten auf innere Spannungen hin.",
-    "Der Ukraine-Krieg eskaliert weiter mit massiven russischen Angriffen, was globale Lieferketten und Energiepreise beeinflusst.",
-    "Extremwetterereignisse in Europa, insbesondere Waldbrände in Schottland, verschärfen die Klimakrise und könnten langfristige wirtschaftliche Folgen haben.",
-    "Cyber-Sicherheitsrichtlinien werden aktualisiert, was auf zunehmende digitale Bedrohungen und die Notwendigkeit verbesserter IT-Sicherheit hinweist."
+    "Saudi-Arabien führt eine militärische Allianz zur Sicherung der Schifffahrt im Roten Meer an, was die Spannungen mit dem Iran verschärft.",
+    "Der Ukraine-Krieg eskaliert weiter, mit Angriffen auf russische Lagerhäuser und dem Einsatz nordkoreanischer Raketen.",
+    "Corporate Insider senden Warnsignale für die US-Börsen, was auf wirtschaftliche Unsicherheit hindeutet.",
+    "Die Apple-Aktie fällt nach einem Rekordquartal um 8%, was die Marktvolatilität unterstreicht.",
+    "Gerüchte über eine Übernahme der Commerzbank durch Unicredit bleiben spekulativ, könnten aber die europäische Bankenlandschaft beeinflussen."
   ],
   "market_regime": "Volatil",
-  "top_risk": "Geopolitische Spannungen & Energieversorgung",
+  "top_risk": "Geopolitische Spannungen & Lieferketten",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Energieaktien profitieren von anhaltenden geopolitischen Spannungen und der Unsicherheit in der Ölversorgung, insbesondere durch den Ukraine-Krieg."
-      },
-      {
-        "ticker": "LLY",
-        "name": "Eli Lilly",
-        "asset": "Gesundheitssektor",
-        "reason": "JPMorgan empfiehlt den Gesundheitssektor als stabilen Wachstumsbereich mit hoher Nachfrage nach Medikamenten und medizinischen Innovationen."
-      },
-      {
-        "ticker": "NVO",
-        "name": "Novo Nordisk",
-        "asset": "Gesundheitssektor",
-        "reason": "Starke Position im Diabetes- und Adipositas-Markt mit langfristigem Wachstumspotenzial."
-      },
-      {
-        "ticker": "DHR",
-        "name": "Danaher Corporation",
-        "asset": "Gesundheits- und Diagnostiktechnologie",
-        "reason": "Breit diversifiziertes Portfolio mit starker Nachfrage nach Diagnostiklösungen und Labortechnik."
-      },
-      {
-        "ticker": "LLOY.L",
-        "name": "Lloyds Banking Group",
-        "asset": "Finanzsektor",
-        "reason": "Kostensenkungsstrategie und Fokus auf digitale Transformation könnten die Profitabilität steigern."
+        "reason": "Erhöhte Nachfrage durch geopolitische Risiken im Persischen Golf und mögliche Lieferengpässe."
       }
     ],
     "flop5_sells": [
@@ -52,31 +28,7 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Hohe Volatilität durch geopolitische Risiken, schwache Währungen und Abhängigkeit von Rohstoffexporten."
-      },
-      {
-        "ticker": "F",
-        "name": "Ford",
-        "asset": "Automobilsektor",
-        "reason": "Trotz Gewinnsteigerung im Q2 bleibt der Sektor durch hohe Investitionskosten in die E-Mobilität und regulatorische Unsicherheiten belastet."
-      },
-      {
-        "ticker": "EWG",
-        "name": "iShares MSCI Germany ETF",
-        "asset": "Deutsche Wirtschaft",
-        "reason": "Leichtes Wachstum reicht nicht aus, um strukturelle Probleme wie Fachkräftemangel und Energiekosten zu kompensieren."
-      },
-      {
-        "ticker": "XOP",
-        "name": "SPDR S&P Oil & Gas Exploration & Production ETF",
-        "asset": "Öl- und Gasförderung",
-        "reason": "Kurzfristige Gewinne durch hohe Ölpreise, aber langfristig durch Energiewende und Klimapolitik bedroht."
-      },
-      {
-        "ticker": "BABA",
-        "name": "Alibaba",
-        "asset": "Technologie/China",
-        "reason": "Regulatorische Risiken in China und schwache Binnennachfrage belasten das Wachstum."
+        "reason": "Instabilität durch geopolitische Konflikte und wirtschaftliche Unsicherheit in Schlüsselmärkten."
       }
     ]
   },
@@ -84,190 +36,143 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Politische Spannungen durch Personalentscheidungen von Donald Trump und gesellschaftliche Polarisierung. Wirtschaftlich bleibt der Fokus auf der Fed-Politik und Gesundheitssektor-Investitionen."
+      "dynamics": "Wirtschaftliche Warnsignale durch Corporate Insider und regulatorische Maßnahmen der Federal Reserve gegen Bankmitarbeiter."
     },
     {
-      "region": "Deutschland",
+      "region": "EU",
       "stability": "GELB",
-      "dynamics": "Leichtes Wirtschaftswachstum, aber Proteste gegen politische Führungspersonen und strukturelle Herausforderungen wie Energiekosten und Fachkräftemangel."
+      "dynamics": "Spekulative Übernahmegerüchte in der Bankenbranche und anhaltende Unsicherheit durch den Ukraine-Krieg."
     },
     {
-      "region": "Ukraine",
+      "region": "Naher Osten",
       "stability": "ROT",
-      "dynamics": "Massive russische Angriffswelle mit hohen zivilen und militärischen Verlusten. Internationale Unterstützung bleibt entscheidend, aber die Lage ist extrem angespannt."
-    },
-    {
-      "region": "Schottland/UK",
-      "stability": "GELB",
-      "dynamics": "Extremwetterereignisse wie Waldbrände bedrohen nationale Parks und Infrastruktur. Klimawandel wird zur akuten Herausforderung."
+      "dynamics": "Militärische Allianz zur Sicherung der Schifffahrt im Roten Meer, erhöhte Spannungen mit dem Iran."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Anhaltende russische Angriffswellen mit hohen Verlusten und internationaler Involvierung.",
-      "current_event": "Anhaltende russische Angriffswellen mit hohen Verlusten und internationaler Involvierung.",
-      "historical_analog": "Koreakrieg (1950-1953)",
-      "similarity": "Koreakrieg (1950-1953)",
-      "takeaway": "Historische Präzedenzfälle zeigen, dass solche Konflikte oft in langfristigen Verhandlungen oder Waffenstillständen enden, ohne klare Sieger. Internationale Diplomatie wird entscheidend sein."
+      "event": "Saudi-Arabien bildet eine Koalition zur Sicherung der Schifffahrt im Roten Meer.",
+      "current_event": "Saudi-Arabien bildet eine Koalition zur Sicherung der Schifffahrt im Roten Meer.",
+      "historical_analog": "Operation Earnest Will (1987-1988): US-geführte Koalition zur Sicherung der Schifffahrt im Persischen Golf während des Iran-Irak-Kriegs.",
+      "similarity": "Operation Earnest Will (1987-1988): US-geführte Koalition zur Sicherung der Schifffahrt im Persischen Golf während des Iran-Irak-Kriegs.",
+      "takeaway": "Historisch führten solche Allianzen zu einer vorübergehenden Stabilisierung, aber auch zu einer erhöhten Militarisierung der Region."
     },
     {
-      "event": "Extremwetterbedingte Waldbrände in bisher weniger betroffenen Regionen wie den schottischen Highlands.",
-      "current_event": "Extremwetterbedingte Waldbrände in bisher weniger betroffenen Regionen wie den schottischen Highlands.",
-      "historical_analog": "Waldbrände in Australien 2019/2020",
-      "similarity": "Waldbrände in Australien 2019/2020",
-      "takeaway": "Langfristige Anpassungsstrategien und Investitionen in Klimaresilienz sind notwendig, um ähnliche Katastrophen in Zukunft zu mildern."
-    },
-    {
-      "event": "Aktualisierung der Mindestanforderungen für Software Bill of Materials (SBOM) durch CISA und internationale Partner.",
-      "current_event": "Aktualisierung der Mindestanforderungen für Software Bill of Materials (SBOM) durch CISA und internationale Partner.",
-      "historical_analog": "Einführung des Sarbanes-Oxley Act (2002) nach den Enron- und WorldCom-Skandalen",
-      "similarity": "Einführung des Sarbanes-Oxley Act (2002) nach den Enron- und WorldCom-Skandalen",
-      "takeaway": "Solche Maßnahmen können kurzfristig zu höheren Compliance-Kosten führen, langfristig aber die Systemstabilität stärken."
+      "event": "Russland setzt nordkoreanische Raketen im Ukraine-Krieg ein.",
+      "current_event": "Russland setzt nordkoreanische Raketen im Ukraine-Krieg ein.",
+      "historical_analog": "Einsatz sowjetischer Waffen durch Nordvietnam während des Vietnamkriegs (1960er-1970er).",
+      "similarity": "Einsatz sowjetischer Waffen durch Nordvietnam während des Vietnamkriegs (1960er-1970er).",
+      "takeaway": "Solche Lieferungen verlängern Kriege und erhöhen das Risiko einer direkten Konfrontation zwischen Großmächten."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Die geopolitischen Spannungen in der Ukraine und im Nahen Osten werden weiter eskalieren, was zu kurzfristigen Preisschwankungen bei Energie und Rohstoffen führen könnte. Die Federal Reserve könnte eine vorsichtige Zinspolitik verfolgen, um die Wirtschaft nicht zusätzlich zu belasten. In Europa könnten Extremwetterereignisse die Diskussion über Klimapolitik beschleunigen.",
+    "base_case_summary": "Die Spannungen im Persischen Golf werden weiter steigen, mit möglichen Zwischenfällen zwischen der saudischen Allianz und iranischen Kräften. Der Ukraine-Krieg wird sich durch weitere Angriffe auf logistische Ziele intensivieren. Wirtschaftlich ist mit anhaltender Volatilität an den Märkten zu rechnen, insbesondere in den Sektoren Energie und Technologie.",
     "leading_indicators_to_watch": [
-      "Zunahme militärischer Aktivitäten in der Ukraine und im Persischen Golf",
-      "Anstieg der Öl- und Gaspreise um mehr als 10%",
-      "Verstärkte Proteste in europäischen Hauptstädten gegen Klimapolitik",
-      "Abweichungen in den Fed-Kommunikationsstrategien"
+      "Zunahme von Angriffen auf Schiffe im Roten Meer",
+      "Erhöhte militärische Aktivitäten im Persischen Golf",
+      "Weitere Insider-Verkäufe an den US-Börsen"
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Die geopolitischen Spannungen in der Ukraine und im Nahen Osten werden weiter eskalieren, was zu kurzfristigen Preisschwankungen bei Energie und Rohstoffen führen könnte. Die Federal Reserve könnte eine vorsichtige Zinspolitik verfolgen, um die Wirtschaft nicht zusätzlich zu belasten. In Europa könnten Extremwetterereignisse die Diskussion über Klimapolitik beschleunigen.",
+        "forecast": "Die Spannungen im Persischen Golf werden weiter steigen, mit möglichen Zwischenfällen zwischen der saudischen Allianz und iranischen Kräften. Der Ukraine-Krieg wird sich durch weitere Angriffe auf logistische Ziele intensivieren. Wirtschaftlich ist mit anhaltender Volatilität an den Märkten zu rechnen, insbesondere in den Sektoren Energie und Technologie.",
         "probability": "Hoch",
         "early_warning_indicators": [
-          "Zunahme militärischer Aktivitäten in der Ukraine und im Persischen Golf",
-          "Anstieg der Öl- und Gaspreise um mehr als 10%",
-          "Verstärkte Proteste in europäischen Hauptstädten gegen Klimapolitik",
-          "Abweichungen in den Fed-Kommunikationsstrategien"
-        ]
-      },
-      {
-        "timeframe": "90 Tage",
-        "forecast": "Langfristig könnte sich die wirtschaftliche Lage stabilisieren, sofern keine weiteren Eskalationen in den Konfliktregionen auftreten. Der Gesundheitssektor bleibt ein sicherer Hafen für Investoren, während Schwellenländer weiterhin unter Volatilität leiden. Die Klimapolitik könnte in Europa an Fahrt aufnehmen, mit möglichen Subventionen für grüne Technologien.",
-        "probability": "Mittel",
-        "early_warning_indicators": [
-          "Stabilisierung der Ölpreise unter 90 USD/Barrel",
-          "Rückgang der Arbeitslosenzahlen in den USA und der EU",
-          "Verabschiedung neuer Klimagesetze in der EU",
-          "Zunahme von Cyberangriffen auf kritische Infrastruktur"
+          "Zunahme von Angriffen auf Schiffe im Roten Meer",
+          "Erhöhte militärische Aktivitäten im Persischen Golf",
+          "Weitere Insider-Verkäufe an den US-Börsen"
         ]
       }
     ]
   },
   "conflict_hotspots": [
     {
-      "name": "Ukraine",
-      "region": "Osteuropa",
-      "lat": 49.0,
-      "lon": 32.0,
-      "type": "conflict",
-      "intensity": "ROT",
-      "description": "Anhaltende massive russische Angriffswellen mit hohen zivilen und militärischen Verlusten. Die internationale Unterstützung für die Ukraine bleibt entscheidend, aber die Lage ist extrem angespannt.",
-      "impact": "Gefährdung der globalen Getreide- und Energieversorgung, hohe Flüchtlingszahlen und wirtschaftliche Instabilität in der Region.",
-      "lng": 32.0
-    },
-    {
       "name": "Persischer Golf",
-      "region": "Naher Osten",
+      "region": "Persischer Golf",
       "lat": 26.5,
       "lon": 53.5,
       "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Hohe Spannungen durch iranische Drohungen und mögliche Blockaden der Straße von Hormus. Die USA und Verbündete verstärken ihre Militärpräsenz in der Region.",
-      "impact": "Risiko für die globale Ölversorgung mit möglichen Preisschocks und Lieferengpässen.",
+      "description": "Kritische Schifffahrtsroute mit hoher militärischer Präsenz und Spannungen zwischen Saudi-Arabien, dem Iran und den USA.",
+      "impact": "Gefahr von Lieferkettenunterbrechungen, insbesondere für Öl- und Gastransporte, was zu Preisschocks führen könnte.",
       "lng": 53.5
     },
     {
-      "name": "Schottische Highlands",
-      "region": "Europa",
-      "lat": 57.0,
-      "lon": -4.0,
-      "type": "risiko",
-      "intensity": "GELB",
-      "description": "Extremwetterbedingte Waldbrände bedrohen nationale Parks und Infrastruktur. Klimawandel führt zu häufigeren und intensiveren Naturkatastrophen.",
-      "impact": "Ökologische Schäden, wirtschaftliche Verluste durch zerstörte Infrastruktur und mögliche langfristige Auswirkungen auf den Tourismus.",
-      "lng": -4.0
+      "name": "Ukraine (Ostfront)",
+      "region": "Ukraine",
+      "lat": 48.3,
+      "lon": 35.0,
+      "type": "conflict",
+      "intensity": "ROT",
+      "description": "Anhaltende Kämpfe mit Angriffen auf russische Lagerhäuser und Einsatz nordkoreanischer Raketen.",
+      "impact": "Verlängerung des Krieges, erhöhte Flüchtlingsbewegungen und wirtschaftliche Belastungen für Europa.",
+      "lng": 35.0
     },
     {
-      "name": "Flug NSZ4545",
+      "name": "Flug PGT44AN",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 45.75,
-      "lon": 25.4989,
-      "lng": 25.4989,
+      "lat": 41.5698,
+      "lon": 28.9523,
+      "lng": 28.9523,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: NSZ4545 | Höhe: 8.9 km | Speed: 825 km/h",
+      "description": "Callsign: PGT44AN | Höhe: 6.8 km | Speed: 780 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT21PC",
+      "name": "Flug PGT261",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.8197,
-      "lon": 28.6085,
-      "lng": 28.6085,
+      "lat": 40.7601,
+      "lon": 29.3984,
+      "lng": 29.3984,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT21PC | Höhe: 8.2 km | Speed: 835 km/h",
+      "description": "Callsign: PGT261 | Höhe: 2.6 km | Speed: 568 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug AXB375",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 23.4893,
+      "lon": 51.1742,
+      "lng": 51.1742,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: AXB375 | Höhe: 11.2 km | Speed: 858 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug ADZ4093",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.7891,
-      "lon": 33.5206,
-      "lng": 33.5206,
+      "lat": 34.9983,
+      "lon": 33.6167,
+      "lng": 33.6167,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ADZ4093 | Höhe: 0.7 km | Speed: 296 km/h",
+      "description": "Callsign: ADZ4093 | Höhe: 1.0 km | Speed: 504 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WMT6320",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 34.7195,
-      "lon": 33.2977,
-      "lng": 33.2977,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: WMT6320 | Höhe: 1.5 km | Speed: 463 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug RRR9958",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 34.4495,
-      "lon": 33.2744,
-      "lng": 33.2744,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR9958 | Höhe: 2.2 km | Speed: 548 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug UAE366",
+      "name": "Flug CSN3798",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.034,
-      "lon": 115.0392,
-      "lng": 115.0392,
+      "lat": 23.3169,
+      "lon": 116.6649,
+      "lng": 116.6649,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAE366 | Höhe: 12.5 km | Speed: 941 km/h",
+      "description": "Callsign: CSN3798 | Höhe: 8.4 km | Speed: 857 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AMU821",
+      "name": "Flug CQH8882",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.5523,
-      "lon": 117.867,
-      "lng": 117.867,
+      "lat": 26.0483,
+      "lon": 119.7959,
+      "lng": 119.7959,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AMU821 | Höhe: 10.4 km | Speed: 844 km/h",
+      "description": "Callsign: CQH8882 | Höhe: 10.7 km | Speed: 845 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -279,7 +184,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-30"
+        "last_seen": "2026-07-31"
       },
       {
         "id": "iran",
@@ -287,15 +192,15 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-30"
+        "last_seen": "2026-07-31"
       },
       {
         "id": "saudi",
         "label": "Saudi-Arabien",
         "group": "staat",
-        "val": 3,
+        "val": 6,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-25"
+        "last_seen": "2026-07-31"
       },
       {
         "id": "israel",
@@ -309,7 +214,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-27"
       },
@@ -325,15 +230,15 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 13,
+        "val": 16,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-30"
+        "last_seen": "2026-07-31"
       },
       {
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-26"
       },
@@ -357,9 +262,9 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 7,
+        "val": 9,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-07-30"
+        "last_seen": "2026-07-31"
       },
       {
         "id": "cisa",
@@ -373,7 +278,7 @@
         "id": "fed",
         "label": "Fed",
         "group": "organisation",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-07-30"
       },
@@ -389,7 +294,7 @@
         "id": "deutschland",
         "label": "Deutschland",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-26",
         "last_seen": "2026-07-30"
       },
@@ -437,7 +342,7 @@
         "id": "cyber_risiko",
         "label": "Cyber-Sicherheit",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-26",
         "last_seen": "2026-07-27"
       },
@@ -453,7 +358,7 @@
         "id": "japan",
         "label": "Japan",
         "group": "staat",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-07-27",
         "last_seen": "2026-07-29"
       },
@@ -469,7 +374,7 @@
         "id": "syrien",
         "label": "Syrien",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-29",
         "last_seen": "2026-07-29"
       },
@@ -477,7 +382,7 @@
         "id": "nato",
         "label": "NATO",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-29",
         "last_seen": "2026-07-29"
       },
@@ -485,7 +390,7 @@
         "id": "telegram",
         "label": "Telegram",
         "group": "tech",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-29",
         "last_seen": "2026-07-29"
       },
@@ -493,7 +398,7 @@
         "id": "saudi_arabien",
         "label": "Saudi-Arabien",
         "group": "staat",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-29",
         "last_seen": "2026-07-29"
       },
@@ -501,7 +406,7 @@
         "id": "supreme_court",
         "label": "Supreme Court",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-29",
         "last_seen": "2026-07-29"
       },
@@ -509,7 +414,7 @@
         "id": "siemens",
         "label": "Siemens",
         "group": "tech",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-29",
         "last_seen": "2026-07-29"
       },
@@ -517,7 +422,7 @@
         "id": "jpmorgan",
         "label": "JPMorgan",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-30",
         "last_seen": "2026-07-30"
       },
@@ -525,7 +430,7 @@
         "id": "ford",
         "label": "Ford",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-30",
         "last_seen": "2026-07-30"
       },
@@ -533,7 +438,7 @@
         "id": "klimawandel",
         "label": "Klimawandel",
         "group": "risiko",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-07-30",
         "last_seen": "2026-07-30"
       },
@@ -541,9 +446,41 @@
         "id": "cyberbedrohung",
         "label": "Cyberbedrohung",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-30",
         "last_seen": "2026-07-30"
+      },
+      {
+        "id": "nordkorea",
+        "label": "Nordkorea",
+        "group": "staat",
+        "val": 5,
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-07-31"
+      },
+      {
+        "id": "rot_meer_allianz",
+        "label": "Rotes Meer-Allianz",
+        "group": "organisation",
+        "val": 5,
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-07-31"
+      },
+      {
+        "id": "wall_street",
+        "label": "Wall Street",
+        "group": "risiko",
+        "val": 6,
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-07-31"
+      },
+      {
+        "id": "apple",
+        "label": "Apple",
+        "group": "tech",
+        "val": 5,
+        "first_seen": "2026-07-31",
+        "last_seen": "2026-07-31"
       }
     ],
     "edges": [
@@ -553,7 +490,7 @@
         "source": "usa",
         "target": "iran",
         "label": "Konflikt",
-        "last_seen": "2026-07-30"
+        "last_seen": "2026-07-31"
       },
       {
         "from": "usa",
@@ -657,7 +594,7 @@
         "source": "russland",
         "target": "ukraine",
         "label": "Krieg",
-        "last_seen": "2026-07-30"
+        "last_seen": "2026-07-31"
       },
       {
         "from": "eu",
@@ -938,6 +875,46 @@
         "target": "deutschland",
         "label": "Risiko",
         "last_seen": "2026-07-30"
+      },
+      {
+        "from": "saudi",
+        "to": "iran",
+        "source": "saudi",
+        "target": "iran",
+        "label": "Spannungen",
+        "last_seen": "2026-07-31"
+      },
+      {
+        "from": "saudi",
+        "to": "rot_meer_allianz",
+        "source": "saudi",
+        "target": "rot_meer_allianz",
+        "label": "Führung",
+        "last_seen": "2026-07-31"
+      },
+      {
+        "from": "nordkorea",
+        "to": "russland",
+        "source": "nordkorea",
+        "target": "russland",
+        "label": "Waffenlieferungen",
+        "last_seen": "2026-07-31"
+      },
+      {
+        "from": "usa",
+        "to": "wall_street",
+        "source": "usa",
+        "target": "wall_street",
+        "label": "Regulierung",
+        "last_seen": "2026-07-31"
+      },
+      {
+        "from": "wall_street",
+        "to": "apple",
+        "source": "wall_street",
+        "target": "apple",
+        "label": "Volatilität",
+        "last_seen": "2026-07-31"
       }
     ],
     "links": [
@@ -947,7 +924,7 @@
         "source": "usa",
         "target": "iran",
         "label": "Konflikt",
-        "last_seen": "2026-07-30"
+        "last_seen": "2026-07-31"
       },
       {
         "from": "usa",
@@ -1051,7 +1028,7 @@
         "source": "russland",
         "target": "ukraine",
         "label": "Krieg",
-        "last_seen": "2026-07-30"
+        "last_seen": "2026-07-31"
       },
       {
         "from": "eu",
@@ -1332,18 +1309,58 @@
         "target": "deutschland",
         "label": "Risiko",
         "last_seen": "2026-07-30"
+      },
+      {
+        "from": "saudi",
+        "to": "iran",
+        "source": "saudi",
+        "target": "iran",
+        "label": "Spannungen",
+        "last_seen": "2026-07-31"
+      },
+      {
+        "from": "saudi",
+        "to": "rot_meer_allianz",
+        "source": "saudi",
+        "target": "rot_meer_allianz",
+        "label": "Führung",
+        "last_seen": "2026-07-31"
+      },
+      {
+        "from": "nordkorea",
+        "to": "russland",
+        "source": "nordkorea",
+        "target": "russland",
+        "label": "Waffenlieferungen",
+        "last_seen": "2026-07-31"
+      },
+      {
+        "from": "usa",
+        "to": "wall_street",
+        "source": "usa",
+        "target": "wall_street",
+        "label": "Regulierung",
+        "last_seen": "2026-07-31"
+      },
+      {
+        "from": "wall_street",
+        "to": "apple",
+        "source": "wall_street",
+        "target": "apple",
+        "label": "Volatilität",
+        "last_seen": "2026-07-31"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Die Federal Reserve bleibt ein zentraler wirtschaftlicher Akteur, wobei interne Dokumente zur Bankenaufsicht und die FOMC-Erklärung unterschiedliche Schwerpunkte setzen.",
-    "Die deutsche Wirtschaft wächst leicht, doch gesellschaftliche Proteste gegen politische Führungspersonen deuten auf innere Spannungen hin.",
-    "Der Ukraine-Krieg eskaliert weiter mit massiven russischen Angriffen, was globale Lieferketten und Energiepreise beeinflusst.",
-    "Extremwetterereignisse in Europa, insbesondere Waldbrände in Schottland, verschärfen die Klimakrise und könnten langfristige wirtschaftliche Folgen haben.",
-    "Cyber-Sicherheitsrichtlinien werden aktualisiert, was auf zunehmende digitale Bedrohungen und die Notwendigkeit verbesserter IT-Sicherheit hinweist."
+    "Saudi-Arabien führt eine militärische Allianz zur Sicherung der Schifffahrt im Roten Meer an, was die Spannungen mit dem Iran verschärft.",
+    "Der Ukraine-Krieg eskaliert weiter, mit Angriffen auf russische Lagerhäuser und dem Einsatz nordkoreanischer Raketen.",
+    "Corporate Insider senden Warnsignale für die US-Börsen, was auf wirtschaftliche Unsicherheit hindeutet.",
+    "Die Apple-Aktie fällt nach einem Rekordquartal um 8%, was die Marktvolatilität unterstreicht.",
+    "Gerüchte über eine Übernahme der Commerzbank durch Unicredit bleiben spekulativ, könnten aber die europäische Bankenlandschaft beeinflussen."
   ],
   "geoscore": {
-    "current_score": 72,
+    "current_score": 75,
     "status": "Erhöht"
   },
   "defcon": 3,
@@ -1351,38 +1368,14 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "Hier ist die **Kreuzprüfung (\"Fingerklopfen\")** der beiden KI-Antworten (GROQ vs. DEEPSEEK) für den **30.07.2026**, basierend auf den genannten Themen. Ziel ist es, **Übereinstimmungen, Widersprüche und Lücken** zu identifizieren:\n\n---\n\n### **1. Wirtschaft & Finanzen**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|\n| **Federal Reserve**     | Stellungnahme zu *\"Handling of Highly Sensitive Information during Bank Examinations\"* | FOMC-Erklärung (Leitzinsen/Wirtschaftsausblick)                             | **Widerspruch**: GROQ nennt ein spezifisches Dokument zur Bankenaufsicht, DEEPSEEK eine allgemeine FOMC-Erklärung. Beide könnten parallel existieren, aber der Fokus ist unterschiedlich. |\n| **Ford**                | Gewinnsteigerung im Q2 durch E-Auto-Strategie                            | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung von Ford, obwohl es ein relevantes Wirtschaftsthema ist. |\n| **Deutsche Wirtschaft** | Leichtes Wachstum im Q2                                                  | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung der deutschen Konjunktur.                |\n| **JPMorgan**            | –                                                                        | Empfehlung für Gesundheitssektor (Eli Lilly, Novo Nordisk)                  | **Lücke bei GROQ**: Keine Erwähnung von Börsenempfehlungen.                      |\n\n**Fazit**:\n- **Übereinstimmung**: Beide KIs nennen die Fed als zentrales Thema, aber mit unterschiedlichen Schwerpunkten.\n- **Widerspruch**: Die spezifischen Fed-Dokumente passen nicht zusammen.\n- **Lücken**: DEEPSEEK ignoriert Ford und die deutsche Wirtschaft; GROQ ignoriert JPMorgan.\n\n---\n\n### **2. Politik & Gesellschaft**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|\n| **Donald Trump**        | Ernennung eines neuen Geheimdienstkoordinators (Kontroverse um Wahl 2020) | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung von Trumps Personalentscheidungen.       |\n| **Deutschland**         | Proteste gegen Friedrich Merz (\"Rechtsradikaler\"-Vorwürfe)               | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung der deutschen Innenpolitik.              |\n| **Frankreich**          | Schwere Waldbrände                                                       | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung von Umweltkatastrophen.                  |\n| **USA/China**           | –                                                                        | Eskalation im Südchinesischen Meer (Militärmanöver)                          | **Lücke bei GROQ**: Keine Erwähnung der geopolitischen Spannungen.               |\n| **Ukraine-Krieg**       | –                                                                        | Neue Waffenlieferungen der USA an die Ukraine                               | **Lücke bei GROQ**: Keine Erwähnung des Krieges.                                |\n\n**Fazit**:\n- **Keine Überschneidungen**: Die KIs decken unterschiedliche politische Themen ab.\n- **DEEPSEEK** fokussiert sich auf **internationale Konflikte** (USA/China, Ukraine), während **GROQ** **innenpolitische Themen** (Trump, Merz, Frankreich) priorisiert.\n\n---\n\n### **3. Umwelt & Wissenschaft**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|\n| **Klimawandel**         | Hitzewellen, Überschwemmungen, Diskussionen zu Gesundheitsfolgen        | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung von Extremwetter.                        |\n| **NASA**                | Neue Mars-Mission                                                       | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung von Raumfahrt.                           |\n| **WHO**                 | Warnung vor neuer Pandemie                                               | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung von Gesundheitsrisiken.                  |\n| **EU-Klimapolitik**     | –                                                                        | EU-Kommission plant strengere CO₂-Grenzausgleichsmechanismen (CBAM)         | **Lücke bei GROQ**: Keine Erwähnung der EU-Klimapolitik.                         |\n\n**Fazit**:\n- **GROQ** betont **globale Umweltphänomene** (Wetter, NASA, WHO).\n- **DEEPSEEK** konzentriert sich auf **politische Maßnahmen** (EU-Klimapolitik).\n- **Keine Überschneidungen**.\n\n---\n\n### **4. Technologie & Internet**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|\n| **Cyberangriffe**       | Bedrohungen durch Iran/USA                                               | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung von Cybersecurity.                       |\n| **KI (EU)**             | Stellungnahme der EU-Kommission zu KI                                   | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung von KI-Regulierung.                      |\n| **Soziale Medien**      | Diskussion über Zukunft des Internets                                    | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung digitaler Themen.                        |\n| **Tech-Unternehmen**    | –                                                                        | Microsoft und Nvidia melden Rekordgewinne (KI-Boom)                          | **Lücke bei GROQ**: Keine Erwähnung von Tech-Finanzdaten.                        |\n\n**Fazit**:\n- **GROQ** deckt **regulatorische und gesellschaftliche Aspekte** (KI, Cyberangriffe) ab.\n- **DEEPSEEK** fokussiert sich auf **wirtschaftliche Auswirkungen** (Microsoft, Nvidia).\n- **Keine Überschneidungen**.\n\n---\n\n### **5. Weitere Themen**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|\n| **Flüchtlinge**         | Menschenrechtsverletzungen, Flüchtlingsströme                           | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung von Migration.                           |\n| **UNO**                 | Diskussion über internationale Beziehungen                               | –                                                                            | **Lücke bei DEEPSEEK**: Keine Erwähnung globaler Institutionen.                  |\n| **Olympia 2026**        | –                                                                        | Vorbereitungen für Winterspiele in Mailand/Cortina                           | **Lücke bei GROQ**: Keine Erwähnung von Sport-Events.                            |\n\n**Fazit**:\n- **GROQ** hat einen **globalen, humanitären Fokus** (Flüchtlinge, UNO).\n- **DEEPSEEK** erwähnt **sportliche Großereignisse** (Olympia).\n- **Keine Überschneidungen**.\n\n---\n\n### **Zusammenfassung der Kreuzprüfung**\n1. **Übereinstimmungen**:\n   - Beide KIs nennen die **Federal Reserve** als zentrales Wirtschaftsthema, aber mit unterschiedlichen Dokumenten.\n   - Beide ignorieren **teilweise dieselben Themen** (z. B. keine Erwähnung von **Klimaprotesten** oder **KI-Startups**).\n\n2. **Widersprüche**:\n   - **Fed-Dokumente**: GROQ (Bankenaufsicht) vs. DEEPSEEK (FOMC-Erklärung).\n   - **Politik**: GROQ (Innenpolitik) vs. DEEPSEEK (Außenpolitik).\n\n3. **Lücken**:\n   - **GROQ** ignoriert:\n     - Ge",
+  "game_theory_analysis": "Hier ist die **Kreuzprüfung (\"Fingerklopfen\")** der beiden Quellen (GROQ vs. DEEPSEEK) für den **31.07.2026**, inklusive Bewertung der Konsistenz, Plausibilität und potenzieller Widersprüche oder Ergänzungen:\n\n---\n\n### **1. Wirtschaft & Finanzen**\n| **Thema**                          | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Federal Reserve & Banken**        | Enforcement-Actions gegen ehemalige Mitarbeiter von Regions Bank/First Interstate. | *Keine Erwähnung.*                                                          | **Teilweise bestätigt**: GROQ liefert spezifische Details, DEEPSEEK ignoriert. |\n| **Wall Street Insider-Warnungen**   | Corporate-Insider senden Warnsignale (WSJ).                             | *Keine Erwähnung.*                                                          | **Unbestätigt**: Nur GROQ berichtet; WSJ als Quelle plausibel, aber kein Abgleich. |\n| **Apple-Aktie**                     | 8% Rückgang nach Rekordquartal.                                         | *Keine Erwähnung.*                                                          | **Plausibel**: Typische Volatilität nach Quartalsberichten.                   |\n| **Commerzbank-Übernahme**           | Vorbereitung auf Übernahme durch Unicredit.                             | *Keine Erwähnung.*                                                          | **Spekulativ**: Gerüchte über Unicredit-Expansion in DE/EU sind nicht neu, aber keine Bestätigung. |\n\n**Fazit**: GROQ liefert mehr Details, aber keine Widersprüche zu DEEPSEEK. Die Commerzbank-Meldung ist **hochspekulativ** (Stand 2024: Unicredit hat keine konkreten Pläne).\n\n---\n\n### **2. Politik & Konflikte**\n| **Thema**                          | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Saudi-Arabien & Rotes Meer**      | Militärische Allianz zur Sicherung der Schifffahrt.                     | **Bestätigt**: Koalition mit Ägypten, Türkei etc. gegen Iran/USA-Konflikt.  | **Konsistent**: Beide Quellen nennen die Allianz, DEEPSEEK präzisiert Mitglieder. |\n| **Ukraine-Krieg**                   | Angriff auf russisches Lagerhaus in Ukraine.                            | **Ergänzt**: Russland setzt nordkoreanische Raketen ein; weitere Lagerhaus-Angriffe. | **Konsistent & erweitert**: DEEPSEEK liefert zusätzliche Kontext (Nordkorea). |\n| **Hamas-Entwaffnung**               | Hamas stimmt angeblich Trumps Plan zur Entwaffnung zu.                  | *Keine Erwähnung.*                                                          | **Unbestätigt**: Hochgradig spekulativ; Hamas hat 2024 keine solchen Signale gesendet. |\n| **Iran-USA-Spannungen**             | Angriffe auf militärische Ziele.                                        | **Bestätigt & erweitert**: Krieg zwischen USA/Iran eskaliert.               | **Konsistent**: DEEPSEEK liefert Eskalationsnarrativ.                         |\n\n**Fazit**:\n- **Bestätigt**: Saudi-Allianz, Ukraine-Krieg (mit Ergänzungen).\n- **Fragwürdig**: Hamas-Entwaffnung (keine unabhängige Quelle; Trump 2026 nicht im Amt).\n- **Eskalationsrisiko**: DEEPSEEK betont einen **direkten USA-Iran-Krieg** – dies wäre eine **historische Zäsur** (Stand 2024: Proxy-Kriege, aber keine direkte Konfrontation).\n\n---\n\n### **3. Umwelt & Naturkatastrophen**\n| **Thema**                          | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Erdbeben Peru**                   | 5,6 Mw mit schweren Schäden.                                             | *Keine Erwähnung.*                                                          | **Plausibel**: Peru liegt in einer seismisch aktiven Zone.                    |\n| **Unwetterwarnungen**               | Sturmböen in Deutschland/Kanada.                                         | *Keine Erwähnung.*                                                          | **Typisch**: Kein Widerspruch, aber keine Bestätigung.                        |\n| **Biogas/e-LNG**                    | Dekarbonisierung im maritimen Sektor.                                   | *Keine Erwähnung.*                                                          | **Trendbestätigt**: EU fördert seit 2023 LNG/e-LNG für Schifffahrt.           |\n\n**Fazit**: GROQ liefert Standardmeldungen; keine Widersprüche.\n\n---\n\n### **4. Technologie & Cyber-Sicherheit**\n| **Thema**                          | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **NASA-Schwachstelle**              | DoS-Risiko im Core Flight System.                                       | *Keine Erwähnung.*                                                          | **Plausibel**: NASA-Systeme sind regelmäßig Ziel von Schwachstellen-Scans.    |\n| **KI in der Landwirtschaft**        | Steigerung der Produktion/Wassereffizienz.                              | *Keine Erwähnung.*                                                          | **Trendbestätigt**: KI in AgTech ist ein wachsender Sektor.                   |\n\n**Fazit**: Keine Widersprüche, aber DEEPSEEK ignoriert das Thema.\n\n---\n\n### **5. Gesundheit**\n| **Thema**                          | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Cyclospora-Ausbruch**             | Eisbergsalat in 4 Bundesstaaten.                                        | *Keine Erwähnung.*                                                          | **Plausibel**: Cyclospora-Ausbrüche durch kontaminierte Lebensmittel sind bekannt. |\n| **Ebola-Impfstoffe**                | Einsatz in DR Kongo.                                                    | *Keine Erwähnung.*                                                          | **Bestätigt**: DR Kongo hat seit 2018 wiederholt Ebola-Impfkampagnen durchgeführt. |\n\n**Fazit**: Keine Widersprüche.\n\n---\n\n### **6. Sport**\n| **Thema**                          | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **San Francisco 49ers**             | Vertrag mit Deebo Samuel nach Pearsall-Verletzung.                      | *Keine Erwähnung.*                                                          | **Plausibel**: NFL-Teams reagieren oft kurzfristig auf Verletzungen.          |\n| **Olympia 2026**                    | Vorbereitungen.                                                         | *Keine Erwähnung.*                                                          | **Bestätigt**: Olympia 2026 in Mailand/Cortina ist offiziell.                 |\n\n**Fazit**: Keine Widersprüche.\n\n---\n\n### **7. Andere Themen**\n| **Thema**                          | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Kabelschiff**                     | Bau eines neuen Schiffs für Unterseekabel.                              | *Keine Erwähnung.*                                                          | **Trendbestätigt**: Steigende Nachfrage nach Datenkabeln (z.B. Google, Meta). |\n| **Ethik in der Politik**            | Artikel über Korruptionsbekämpfung.                                     | *Keine Erwähnung.*                                                          | **Generisch**: Kein spezifischer Bezug zu 2026.                               |\n\n---\n\n### **Kritische Bewertung & Plausibilitätscheck**\n1. **Geopolitische Eskalation (USA-Iran-Krieg)**\n   - **DEEPSEEK** behauptet einen **direkten Krieg** zwischen USA und Iran – dies wäre eine **globale Zäsur**.\n   - **Plausibilität**:\n     - **Niedrig**: Stand 2024",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Energieaktien profitieren von anhaltenden geopolitischen Spannungen und der Unsicherheit in der Ölversorgung, insbesondere durch den Ukraine-Krieg."
-      },
-      {
-        "ticker": "LLY",
-        "name": "Eli Lilly",
-        "asset": "Gesundheitssektor",
-        "reason": "JPMorgan empfiehlt den Gesundheitssektor als stabilen Wachstumsbereich mit hoher Nachfrage nach Medikamenten und medizinischen Innovationen."
-      },
-      {
-        "ticker": "NVO",
-        "name": "Novo Nordisk",
-        "asset": "Gesundheitssektor",
-        "reason": "Starke Position im Diabetes- und Adipositas-Markt mit langfristigem Wachstumspotenzial."
-      },
-      {
-        "ticker": "DHR",
-        "name": "Danaher Corporation",
-        "asset": "Gesundheits- und Diagnostiktechnologie",
-        "reason": "Breit diversifiziertes Portfolio mit starker Nachfrage nach Diagnostiklösungen und Labortechnik."
-      },
-      {
-        "ticker": "LLOY.L",
-        "name": "Lloyds Banking Group",
-        "asset": "Finanzsektor",
-        "reason": "Kostensenkungsstrategie und Fokus auf digitale Transformation könnten die Profitabilität steigern."
+        "reason": "Erhöhte Nachfrage durch geopolitische Risiken im Persischen Golf und mögliche Lieferengpässe."
       }
     ],
     "flop_5_sells": [
@@ -1390,52 +1383,28 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Hohe Volatilität durch geopolitische Risiken, schwache Währungen und Abhängigkeit von Rohstoffexporten."
-      },
-      {
-        "ticker": "F",
-        "name": "Ford",
-        "asset": "Automobilsektor",
-        "reason": "Trotz Gewinnsteigerung im Q2 bleibt der Sektor durch hohe Investitionskosten in die E-Mobilität und regulatorische Unsicherheiten belastet."
-      },
-      {
-        "ticker": "EWG",
-        "name": "iShares MSCI Germany ETF",
-        "asset": "Deutsche Wirtschaft",
-        "reason": "Leichtes Wachstum reicht nicht aus, um strukturelle Probleme wie Fachkräftemangel und Energiekosten zu kompensieren."
-      },
-      {
-        "ticker": "XOP",
-        "name": "SPDR S&P Oil & Gas Exploration & Production ETF",
-        "asset": "Öl- und Gasförderung",
-        "reason": "Kurzfristige Gewinne durch hohe Ölpreise, aber langfristig durch Energiewende und Klimapolitik bedroht."
-      },
-      {
-        "ticker": "BABA",
-        "name": "Alibaba",
-        "asset": "Technologie/China",
-        "reason": "Regulatorische Risiken in China und schwache Binnennachfrage belasten das Wachstum."
+        "reason": "Instabilität durch geopolitische Konflikte und wirtschaftliche Unsicherheit in Schlüsselmärkten."
       }
     ]
   },
-  "timestamp": "2026-07-30T08:13:04.642889+00:00",
+  "timestamp": "2026-07-31T08:39:00.400452+00:00",
   "pipeline_health": {
-    "timestamp": "2026-07-30T08:10:23.220735+00:00",
+    "timestamp": "2026-07-31T08:37:28.489069+00:00",
     "feeds_total": 224,
-    "feeds_successful": 119,
-    "feeds_failed": 105,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
       "Groq (Llama-3.3)",
-      "DeepSeek",
-      "qwen-2.5-72b-instruct"
+      "qwen-2.5-72b-instruct",
+      "DeepSeek"
     ],
     "swarm_debate_status": "SUCCESS",
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
-    "opensky_status": "SUCCESS (7 Signale)",
-    "graph_merge_status": "SUCCESS (34 Nodes)",
+    "opensky_status": "SUCCESS (6 Signale)",
+    "graph_merge_status": "SUCCESS (38 Nodes)",
     "errors": []
   },
   "delta": {
@@ -1444,13 +1413,13 @@
     "ampel_now": "GELB",
     "ampel_changed": false,
     "geoscore_prev": 72,
-    "geoscore_now": 72,
-    "geoscore_delta": 0,
+    "geoscore_now": 75,
+    "geoscore_delta": 3,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 30,
-    "nodes_now": 34,
-    "hotspots_now": 10,
-    "summary": "Graph-Knoten 30 → 34"
+    "nodes_prev": 34,
+    "nodes_now": 38,
+    "hotspots_now": 8,
+    "summary": "Geoscore 72 → 75 (+3) · Graph-Knoten 34 → 38"
   }
 }
