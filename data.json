@@ -2,18 +2,18 @@
   "overall_geoscore": 72,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte geopolitische Spannungen (Iran, Ukraine) und wirtschaftliche Unsicherheiten (Zinspolitik, Marktvolatilität) erfordern erhöhte Wachsamkeit, ohne akute Krisenlage.",
-  "daily_executive_summary": "Die globale Lage ist geprägt von einer Mischung aus wirtschaftlichen Anpassungen und anhaltenden geopolitischen Spannungen. Die US-Notenbank Federal Reserve plant eine Modernisierung der Regeln für Kredite an Bank-Insider, was potenzielle Interessenkonflikte entschärfen soll. Gleichzeitig sorgt eine kontroverse These des Wall Street Journal für Diskussionen, wonach die Fed durch Zinspausen stärker strafft als durch Zinserhöhungen. An den Märkten zeigt sich der DAX mit einem Rekordstand über 26.000 Punkten, während die Volatilität in Schwellenländern zunimmt. Geopolitisch bleibt der Iran-Konflikt im Fokus, wobei die USA und Iran unterschiedliche Signale senden. In Europa eskaliert die Migrationskrise in Ceuta, und der Ukraine-Krieg hält mit neuen Angriffen auf russische Infrastruktur an. Cyber-Sicherheitslücken in kritischen Systemen der NASA unterstreichen zudem die Verwundbarkeit globaler Infrastruktur.",
-  "daily_executive_summary_simple": "Die Weltwirtschaft ist unsicher, weil die USA ihre Bankregeln ändern und die Zinspolitik diskutiert wird. Der DAX ist stark, aber Schwellenländer haben Probleme. Gleichzeitig gibt es Spannungen zwischen den USA und dem Iran, und in Europa wird die Migration zum Streitpunkt. Der Krieg in der Ukraine geht weiter, und es gibt Sicherheitslücken in wichtigen Computersystemen der NASA.",
+  "ampel_reason_simple": "Erhöhte geopolitische Spannungen, wirtschaftliche Unsicherheiten und akute Krisenherde erfordern erhöhte Wachsamkeit, ohne dass eine unmittelbare Eskalation zu erwarten ist.",
+  "daily_executive_summary": "Die globale Lage am 03.08.2026 ist geprägt von einer Mischung aus geopolitischen Spannungen, wirtschaftlichen Anpassungen und akuten humanitären Krisen. Im Persischen Golf bleibt die Situation zwischen den USA und dem Iran angespannt, nachdem ein US-Angriff abgebrochen wurde, was auf eine fragile Deeskalationsbereitschaft hindeutet. Die EU steht unter Druck, ihre Außengrenzen zu stärken, nachdem in Ceuta ein Massenansturm von Migranten verzeichnet wurde, der die Verzweiflung nordafrikanischer Jugendlicher offenbart. Wirtschaftlich zeigt sich eine Fragmentierung: Während die US-Notenbank ihre Kreditvergaberegeln modernisiert, steigen die Cyberrisiken für Unternehmen und Regierungen. Naturkatastrophen wie Brände in Griechenland und ein schweres Erdbeben in Venezuela verschärfen die humanitären Herausforderungen. Die Lebenserwartung in den USA sinkt weiter, während die Armutsquote leicht zurückgeht. Technologische Fortschritte wie neue Tools zur Geldflussanalyse stehen im Kontrast zu wachsenden Cyberbedrohungen.",
+  "daily_executive_summary_simple": "Die Welt ist aktuell unsicher, aber nicht im Krieg. Die USA und der Iran streiten sich, ohne direkt zu kämpfen. In Europa gibt es Probleme mit Flüchtlingen, und die Wirtschaft ist unruhig. In Griechenland brennt es, und in Venezuela gab es ein schweres Erdbeben. In den USA leben weniger Menschen in Armut, aber die Lebenserwartung sinkt. Gleichzeitig gibt es mehr Cyberangriffe auf Firmen und Regierungen. Die Lage ist angespannt, aber nicht hoffnungslos.",
   "key_takeaways": [
-    "Die Federal Reserve modernisiert Regeln für Kredite an Bank-Insider, um Interessenkonflikte zu reduzieren.",
-    "Die These, dass Zinspausen straffender wirken als Zinserhöhungen, sorgt für Debatten in der Finanzwelt.",
-    "Der DAX erreicht mit über 26.000 Punkten ein Rekordhoch, während Schwellenländer unter Druck stehen.",
-    "Geopolitische Spannungen zwischen den USA und dem Iran bleiben hoch, ohne akute Eskalation.",
-    "Cyber-Sicherheitslücken in der NASA-Infrastruktur zeigen globale Verwundbarkeiten auf."
+    "Die USA und der Iran vermeiden eine direkte militärische Eskalation, aber die Spannungen im Persischen Golf bleiben hoch.",
+    "Die EU steht vor einer Migrationskrise, die durch wirtschaftliche Verzweiflung in Nordafrika ausgelöst wird.",
+    "Die US-Notenbank modernisiert ihre Regeln zur Kreditvergabe an Bank-Insider, um Missbrauch zu verhindern.",
+    "Naturkatastrophen wie Brände in Griechenland und das Erdbeben in Venezuela fordern tausende Opfer und belasten die humanitäre Hilfe.",
+    "Cyberangriffe auf Unternehmen und Regierungen nehmen zu, während neue Tools zur Bekämpfung von Geldwäsche entwickelt werden."
   ],
   "market_regime": "Fragmentiert / Volatil",
-  "top_risk": "Geopolitische Spannungen & Energieversorgung",
+  "top_risk": "Geopolitische Spannungen & Cyberbedrohungen",
   "equity_rotation": {
     "top5_buys": [
       {
@@ -28,7 +28,7 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Zinspolitische Unsicherheiten und wirtschaftliche Instabilität belasten die Performance."
+        "reason": "Instabilität durch Naturkatastrophen, politische Unsicherheiten und wirtschaftliche Schwäche in Schlüsselregionen wie Venezuela und Nordafrika."
       }
     ]
   },
@@ -36,52 +36,62 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Politische Polarisierung und wirtschaftliche Unsicherheiten durch Zinspolitik und Insider-Regulierung."
+      "dynamics": "Politische Polarisierung, sinkende Lebenserwartung und Debatten über Sozialleistungen belasten die innere Stabilität. Gleichzeitig modernisiert die Federal Reserve ihre Bankenregulierung."
     },
     {
       "region": "EU",
       "stability": "GELB",
-      "dynamics": "Migrationskrise in Ceuta und anhaltende Ukraine-Unterstützung belasten die politische Stabilität."
+      "dynamics": "Migrationsdruck an den Außengrenzen und Forderungen nach stärkerer Grenzsicherung führen zu politischen Spannungen. Die EU-Kommission drängt auf schnelle Lösungen."
     },
     {
-      "region": "Iran",
-      "stability": "ROT",
-      "dynamics": "Konflikt mit den USA und regionale Machtkämpfe erhöhen das Eskalationsrisiko."
+      "region": "Japan",
+      "stability": "GRÜN",
+      "dynamics": "Historische Yen-Intervention mit den USA zur Stabilisierung der Währung. Wirtschaftliche Erholung bleibt fragil, aber koordinierte Maßnahmen zeigen Wirkung."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Vorschlag der Federal Reserve zur Modernisierung der Kreditregeln für Bank-Insider.",
-      "current_event": "Vorschlag der Federal Reserve zur Modernisierung der Kreditregeln für Bank-Insider.",
-      "historical_analog": "Sarbanes-Oxley Act (2002) nach den Enron- und WorldCom-Skandalen.",
-      "similarity": "Sarbanes-Oxley Act (2002) nach den Enron- und WorldCom-Skandalen.",
-      "takeaway": "Regulatorische Anpassungen nach Krisen oder Skandalen können langfristig das Vertrauen in die Märkte stärken, bergen aber kurzfristig Umsetzungsrisiken."
+      "event": "Massenansturm von Migranten in der spanischen Enklave Ceuta durch wirtschaftliche Verzweiflung in Marokko.",
+      "current_event": "Massenansturm von Migranten in der spanischen Enklave Ceuta durch wirtschaftliche Verzweiflung in Marokko.",
+      "historical_analog": "Flüchtlingskrise 2015 in Europa",
+      "similarity": "Flüchtlingskrise 2015 in Europa",
+      "takeaway": "Die EU muss langfristige Lösungen für die Ursachen von Migration entwickeln, um wiederholte Krisen zu vermeiden."
     },
     {
-      "event": "These, dass Zinspausen straffender wirken als Zinserhöhungen.",
-      "current_event": "These, dass Zinspausen straffender wirken als Zinserhöhungen.",
-      "historical_analog": "Japanische Zinspolitik in den 1990er-Jahren („Lost Decade“).",
-      "similarity": "Japanische Zinspolitik in den 1990er-Jahren („Lost Decade“).",
-      "takeaway": "Geldpolitik muss flexibel und kontextabhängig gestaltet werden, um unerwünschte Nebenwirkungen zu vermeiden."
+      "event": "Abbruch eines US-Angriffs auf den Iran, aber anhaltende Spannungen im Persischen Golf.",
+      "current_event": "Abbruch eines US-Angriffs auf den Iran, aber anhaltende Spannungen im Persischen Golf.",
+      "historical_analog": "US-Iran-Spannungen 2019-2020 nach der Tötung von Qasem Soleimani",
+      "similarity": "US-Iran-Spannungen 2019-2020 nach der Tötung von Qasem Soleimani",
+      "takeaway": "Diplomatische Kanäle müssen offen gehalten werden, um eine unkontrollierte Eskalation zu verhindern."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Die geopolitischen Spannungen im Persischen Golf könnten sich weiter verschärfen, falls der Iran auf US-Avancen nicht reagiert. Wirtschaftlich ist mit erhöhter Volatilität an den Märkten zu rechnen, insbesondere in Schwellenländern und im Energiesektor.",
+    "base_case_summary": "Die Spannungen im Persischen Golf könnten sich weiter verschärfen, falls es zu weiteren Zwischenfällen kommt. Die EU wird voraussichtlich Maßnahmen zur Grenzsicherung beschließen, was zu Protesten in Nordafrika führen könnte. Die US-Notenbank wird ihre neuen Kreditvergaberegeln finalisieren, was zu kurzfristigen Marktvolatilitäten führen könnte.",
     "leading_indicators_to_watch": [
-      "Zunahme militärischer Aktivitäten im Persischen Golf",
-      "Rückgang der Ölpreise trotz Lieferrisiken (Anzeichen für Nachfrageschwäche)",
-      "Erhöhte Volatilität im DAX und US-Aktienmärkten"
+      "Zunahme von Cyberangriffen auf kritische Infrastruktur im Persischen Golf",
+      "Anstieg der Migrationszahlen an den EU-Außengrenzen",
+      "Volatilität an den Finanzmärkten nach Ankündigungen der Federal Reserve"
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Die geopolitischen Spannungen im Persischen Golf könnten sich weiter verschärfen, falls der Iran auf US-Avancen nicht reagiert. Wirtschaftlich ist mit erhöhter Volatilität an den Märkten zu rechnen, insbesondere in Schwellenländern und im Energiesektor.",
+        "forecast": "Die Spannungen im Persischen Golf könnten sich weiter verschärfen, falls es zu weiteren Zwischenfällen kommt. Die EU wird voraussichtlich Maßnahmen zur Grenzsicherung beschließen, was zu Protesten in Nordafrika führen könnte. Die US-Notenbank wird ihre neuen Kreditvergaberegeln finalisieren, was zu kurzfristigen Marktvolatilitäten führen könnte.",
         "probability": "Mittel",
         "early_warning_indicators": [
-          "Zunahme militärischer Aktivitäten im Persischen Golf",
-          "Rückgang der Ölpreise trotz Lieferrisiken (Anzeichen für Nachfrageschwäche)",
-          "Erhöhte Volatilität im DAX und US-Aktienmärkten"
+          "Zunahme von Cyberangriffen auf kritische Infrastruktur im Persischen Golf",
+          "Anstieg der Migrationszahlen an den EU-Außengrenzen",
+          "Volatilität an den Finanzmärkten nach Ankündigungen der Federal Reserve"
+        ]
+      },
+      {
+        "timeframe": "90 Tage",
+        "forecast": "Falls keine diplomatischen Fortschritte erzielt werden, könnte der Iran seine Urananreicherung beschleunigen, was zu neuen Sanktionen führen würde. Die EU könnte eine gemeinsame Asylpolitik beschließen, die zu internen Spannungen führt. Die US-Wahlen könnten die wirtschaftliche Unsicherheit erhöhen.",
+        "probability": "Niedrig bis Mittel",
+        "early_warning_indicators": [
+          "IAEO-Berichte über erhöhte Urananreicherung im Iran",
+          "Zunahme von Protesten in EU-Mitgliedstaaten gegen Migrationspolitik",
+          "Umfragewerte in den USA zeigen starke Polarisierung vor den Wahlen"
         ]
       }
     ]
@@ -94,96 +104,96 @@
       "lon": 53.5,
       "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Aktuelle Spannungen zwischen den USA und dem Iran um regionale Einflussnahme und militärische Präsenz.",
-      "impact": "Gefahr von Lieferengpässen bei Öl und Gas, was globale Energiepreise beeinflussen könnte.",
+      "description": "Aktuell hohe Spannungen zwischen den USA und dem Iran nach abgebrochenem Militärschlag. Die Straße von Hormus bleibt ein kritischer Engpass für den globalen Öltransport.",
+      "impact": "Mögliche Unterbrechungen der Ölversorgung und Anstieg der Energiepreise. Erhöhtes Risiko von Cyberangriffen auf kritische Infrastruktur.",
       "lng": 53.5
     },
     {
-      "name": "Ukraine (Saporischja)",
-      "region": "Ukraine",
-      "lat": 47.8,
-      "lon": 35.2,
-      "type": "conflict",
-      "intensity": "ROT",
-      "description": "Anhaltende Angriffe auf russische Infrastruktur und zivile Ziele in der Ukraine.",
-      "impact": "Humanitäre Krise und mögliche Eskalation durch russische Gegenmaßnahmen.",
-      "lng": 35.2
-    },
-    {
-      "name": "Ceuta (Migration)",
-      "region": "Spanien/Marokko",
-      "lat": 35.9,
-      "lon": -5.3,
+      "name": "Ceuta/Melilla",
+      "region": "Nordafrika/EU",
+      "lat": 35.89,
+      "lon": -5.32,
       "type": "refugee",
       "intensity": "GELB",
-      "description": "Große Anzahl an Migranten in der spanischen Exklave Ceuta führt zu politischen Kontroversen.",
-      "impact": "Belastung der EU-Migrationspolitik und mögliche Verschärfung der Grenzkontrollen.",
-      "lng": -5.3
+      "description": "Massenansturm von Migranten in der spanischen Enklave Ceuta durch wirtschaftliche Verzweiflung in Marokko.",
+      "impact": "Politische Spannungen in der EU über Asylpolitik. Humanitäre Krise in Nordafrika könnte sich verschärfen.",
+      "lng": -5.32
     },
     {
-      "name": "Flug EZY94BK",
+      "name": "Schwarzes Meer",
+      "region": "Ukraine/Russland",
+      "lat": 44.0,
+      "lon": 35.0,
+      "type": "conflict",
+      "intensity": "ROT",
+      "description": "Ukrainischer Drohnenangriff auf einen russischen Strandresort tötet sieben Menschen, darunter drei Kinder. Russland droht mit Vergeltung.",
+      "impact": "Erhöhtes Risiko einer weiteren Eskalation des Ukraine-Konflikts. Mögliche Auswirkungen auf Getreideexporte aus der Region.",
+      "lng": 35.0
+    },
+    {
+      "name": "Flug AEE896",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.425,
-      "lon": 25.3628,
-      "lng": 25.3628,
+      "lat": 40.7812,
+      "lon": 32.6006,
+      "lng": 32.6006,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: EZY94BK | Höhe: 11.3 km | Speed: 912 km/h",
+      "description": "Callsign: AEE896 | Höhe: 10.7 km | Speed: 981 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT1185",
+      "name": "Flug WZZ527D",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.5563,
-      "lon": 28.757,
-      "lng": 28.757,
+      "lat": 41.799,
+      "lon": 29.2869,
+      "lng": 29.2869,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT1185 | Höhe: 8.2 km | Speed: 776 km/h",
+      "description": "Callsign: WZZ527D | Höhe: 10.4 km | Speed: 863 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AXB375",
+      "name": "Flug AEE91L",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 25.3724,
-      "lon": 51.5539,
-      "lng": 51.5539,
+      "lat": 34.9051,
+      "lon": 33.7197,
+      "lng": 33.7197,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AXB375 | Höhe: 0.6 km | Speed: 323 km/h",
+      "description": "Callsign: AEE91L | Höhe: 0.9 km | Speed: 429 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug GJR50",
+      "name": "Flug WZZ8ZD",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.073,
-      "lon": 34.6299,
-      "lng": 34.6299,
+      "lat": 35.5009,
+      "lon": 32.0416,
+      "lng": 32.0416,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: GJR50 | Höhe: 12.0 km | Speed: 862 km/h",
+      "description": "Callsign: WZZ8ZD | Höhe: 8.6 km | Speed: 859 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA631",
+      "name": "Flug UPS71",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.1307,
-      "lon": 120.1862,
-      "lng": 120.1862,
+      "lat": 21.734,
+      "lon": 116.7161,
+      "lng": 116.7161,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA631 | Höhe: 4.6 km | Speed: 700 km/h",
+      "description": "Callsign: UPS71 | Höhe: 9.2 km | Speed: 965 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DKH1087",
+      "name": "Flug XAX532",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.3632,
-      "lon": 117.6943,
-      "lng": 117.6943,
+      "lat": 20.9649,
+      "lon": 122.4596,
+      "lng": 122.4596,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: DKH1087 | Höhe: 11.0 km | Speed: 806 km/h",
+      "description": "Callsign: XAX532 | Höhe: 12.5 km | Speed: 935 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -225,7 +235,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-01"
       },
@@ -249,7 +259,7 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 12,
+        "val": 15,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-03"
       },
@@ -257,7 +267,7 @@
         "id": "cyber",
         "label": "Cyberangriffe",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-02"
       },
@@ -273,7 +283,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 16,
+        "val": 18,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-03"
       },
@@ -289,7 +299,7 @@
         "id": "fed",
         "label": "Fed",
         "group": "organisation",
-        "val": 8,
+        "val": 7,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-03"
       },
@@ -393,7 +403,7 @@
         "id": "nato",
         "label": "NATO",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-29",
         "last_seen": "2026-08-01"
       },
@@ -497,9 +507,9 @@
         "id": "marokko",
         "label": "Marokko",
         "group": "staat",
-        "val": 3,
+        "val": 5,
         "first_seen": "2026-08-01",
-        "last_seen": "2026-08-01"
+        "last_seen": "2026-08-03"
       },
       {
         "id": "spanien",
@@ -513,7 +523,7 @@
         "id": "energie",
         "label": "Energie",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-01"
       },
@@ -521,7 +531,7 @@
         "id": "migration",
         "label": "Migration",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-01"
       },
@@ -537,7 +547,7 @@
         "id": "ceuta",
         "label": "Ceuta",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-02",
         "last_seen": "2026-08-02"
       },
@@ -545,7 +555,7 @@
         "id": "nasa",
         "label": "NASA",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-02",
         "last_seen": "2026-08-02"
       },
@@ -553,7 +563,7 @@
         "id": "nasa_cfs",
         "label": "NASA cFS",
         "group": "tech",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-03",
         "last_seen": "2026-08-03"
       },
@@ -561,6 +571,22 @@
         "id": "dax",
         "label": "DAX",
         "group": "risiko",
+        "val": 4,
+        "first_seen": "2026-08-03",
+        "last_seen": "2026-08-03"
+      },
+      {
+        "id": "cyberrisiko",
+        "label": "Cyberrisiko",
+        "group": "risiko",
+        "val": 5,
+        "first_seen": "2026-08-03",
+        "last_seen": "2026-08-03"
+      },
+      {
+        "id": "federal_reserve",
+        "label": "Fed",
+        "group": "organisation",
         "val": 5,
         "first_seen": "2026-08-03",
         "last_seen": "2026-08-03"
@@ -1078,6 +1104,38 @@
         "target": "dax",
         "label": "Markteinfluss",
         "last_seen": "2026-08-03"
+      },
+      {
+        "from": "usa",
+        "to": "federal_reserve",
+        "source": "usa",
+        "target": "federal_reserve",
+        "label": "Regulierung",
+        "last_seen": "2026-08-03"
+      },
+      {
+        "from": "eu",
+        "to": "marokko",
+        "source": "eu",
+        "target": "marokko",
+        "label": "Migration",
+        "last_seen": "2026-08-03"
+      },
+      {
+        "from": "usa",
+        "to": "cyberrisiko",
+        "source": "usa",
+        "target": "cyberrisiko",
+        "label": "Bedrohung",
+        "last_seen": "2026-08-03"
+      },
+      {
+        "from": "iran",
+        "to": "cyberrisiko",
+        "source": "iran",
+        "target": "cyberrisiko",
+        "label": "Bedrohung",
+        "last_seen": "2026-08-03"
       }
     ],
     "links": [
@@ -1592,15 +1650,47 @@
         "target": "dax",
         "label": "Markteinfluss",
         "last_seen": "2026-08-03"
+      },
+      {
+        "from": "usa",
+        "to": "federal_reserve",
+        "source": "usa",
+        "target": "federal_reserve",
+        "label": "Regulierung",
+        "last_seen": "2026-08-03"
+      },
+      {
+        "from": "eu",
+        "to": "marokko",
+        "source": "eu",
+        "target": "marokko",
+        "label": "Migration",
+        "last_seen": "2026-08-03"
+      },
+      {
+        "from": "usa",
+        "to": "cyberrisiko",
+        "source": "usa",
+        "target": "cyberrisiko",
+        "label": "Bedrohung",
+        "last_seen": "2026-08-03"
+      },
+      {
+        "from": "iran",
+        "to": "cyberrisiko",
+        "source": "iran",
+        "target": "cyberrisiko",
+        "label": "Bedrohung",
+        "last_seen": "2026-08-03"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Die Federal Reserve modernisiert Regeln für Kredite an Bank-Insider, um Interessenkonflikte zu reduzieren.",
-    "Die These, dass Zinspausen straffender wirken als Zinserhöhungen, sorgt für Debatten in der Finanzwelt.",
-    "Der DAX erreicht mit über 26.000 Punkten ein Rekordhoch, während Schwellenländer unter Druck stehen.",
-    "Geopolitische Spannungen zwischen den USA und dem Iran bleiben hoch, ohne akute Eskalation.",
-    "Cyber-Sicherheitslücken in der NASA-Infrastruktur zeigen globale Verwundbarkeiten auf."
+    "Die USA und der Iran vermeiden eine direkte militärische Eskalation, aber die Spannungen im Persischen Golf bleiben hoch.",
+    "Die EU steht vor einer Migrationskrise, die durch wirtschaftliche Verzweiflung in Nordafrika ausgelöst wird.",
+    "Die US-Notenbank modernisiert ihre Regeln zur Kreditvergabe an Bank-Insider, um Missbrauch zu verhindern.",
+    "Naturkatastrophen wie Brände in Griechenland und das Erdbeben in Venezuela fordern tausende Opfer und belasten die humanitäre Hilfe.",
+    "Cyberangriffe auf Unternehmen und Regierungen nehmen zu, während neue Tools zur Bekämpfung von Geldwäsche entwickelt werden."
   ],
   "geoscore": {
     "current_score": 72,
@@ -1611,7 +1701,7 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "**Kreuzprüfung ('Fingerklopfen') der Meldungen vom 03.08.2026 – GROQ vs. DEEPSEEK**\n*Ziel: Konsistenz, Plausibilität und mögliche Diskrepanzen identifizieren.*\n\n---\n\n### **1. Wirtschaft & Finanzen**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Fed-Insider-Regeln**  | \"Vorschlag zur Modernisierung der Regelung für Kreditvergabe an Insider\" | \"Vorschlag zur Modernisierung der Regeln für Kredite an Bank-Insider\"        | **Konsistent**: Beide nennen den Kernpunkt (Modernisierung der Insider-Kreditregeln). DEEPSEEK präzisiert die Zielgruppe (Führungskräfte, Vorstand, Großaktionäre). |\n| **DAX-Rekord**          | \"DAX übersteigt 26.000 Punkte\"                                           | *Nicht erwähnt*                                                              | **Diskrepanz**: GROQ nennt ein konkretes Börsenhoch, DEEPSEEK ignoriert es. Plausibel, da DEEPSEEK sich auf US-Themen konzentriert. |\n| **Zinspolitik**         | *Nicht erwähnt*                                                          | \"WSJ-Artikel: Warsh strafft durch *Nichtstun*\" (Zinspausen als Straffung)    | **Neu bei DEEPSEEK**: Interessante These, aber nicht bei GROQ. Kein Widerspruch, aber Ergänzung. |\n\n**Fazit**:\n- **Übereinstimmung** bei Fed-Insider-Regeln.\n- **Ergänzung** durch DEEPSEEK (Zinspolitik-These).\n- **Lücke** bei GROQ (DAX-Hoch fehlt bei DEEPSEEK).\n\n---\n\n### **2. Politik & Internationales**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Iran-Konflikt**       | \"Spannungen zwischen USA und Iran\"                                       | \"Iran-Konflikt\" (NYT-Bericht)                                                | **Konsistent**: Beide nennen den Konflikt, DEEPSEEK verweist auf NYT als Quelle. |\n| **Ukraine**             | \"Situation in der Ukraine\"                                               | *Nicht erwähnt*                                                              | **Lücke bei DEEPSEEK**: GROQ nennt die Ukraine explizit, DEEPSEEK nicht.       |\n| **Ceuta-Migration**     | \"Große Anzahl Migranten in Ceuta → Kontroversen\"                         | *Nicht erwähnt*                                                              | **Lücke bei DEEPSEEK**: GROQ nennt das Ereignis, DEEPSEEK ignoriert es.        |\n| **EU-AI-Gesetz**        | \"EU-Kommission kündigt Umsetzung des AI-Gesetzes ab 2.8.2026 an\"         | *Nicht erwähnt*                                                              | **Lücke bei DEEPSEEK**: Wichtige regulatorische Meldung fehlt.                |\n\n**Fazit**:\n- **Übereinstimmung** nur beim Iran-Konflikt.\n- **DEEPSEEK fokussiert stärker auf US-Themen** (Fed, WSJ) und lässt EU/globale Politik (Ukraine, Ceuta, AI-Gesetz) aus.\n- **GROQ breiter aufgestellt**, aber weniger detailliert.\n\n---\n\n### **3. Gesundheit & Umwelt**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Cyclospora-Ausbruch** | \"Ausbruch durch Eisbergsalat\"                                            | *Nicht erwähnt*                                                              | **Lücke bei DEEPSEEK**: GROQ nennt ein konkretes Gesundheitsrisiko.           |\n| **Hitzewellen**         | \"Hitzewellen in verschiedenen Teilen der Welt\"                           | *Nicht erwähnt*                                                              | **Lücke bei DEEPSEEK**: Klimathema fehlt.                                     |\n\n**Fazit**:\n- **GROQ deckt Gesundheits- und Umweltthemen ab**, DEEPSEEK nicht.\n\n---\n\n### **4. Technologie & Cyber-Sicherheit**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Cyber-Angriffe**      | \"Berichte über Cyber-Angriffe und Vulnerabilitäten (z. B. NASA-System)\"  | *Nicht erwähnt*                                                              | **Lücke bei DEEPSEEK**: GROQ nennt konkrete Beispiele (NASA), DEEPSEEK nicht.  |\n| **KI-Regulierung**      | \"EU-Kommission kündigt AI-Gesetz an\"                                     | *Nicht erwähnt*                                                              | **Lücke bei DEEPSEEK**: Wichtige KI-Meldung fehlt.                            |\n\n**Fazit**:\n- **GROQ dominiert** bei Tech/Cyber-Themen, DEEPSEEK ignoriert sie.\n\n---\n\n### **5. Globale Ereignisse**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Naturkatastrophen**   | \"Erdbeben, Hurrikane und ihre Auswirkungen\"                              | *Nicht erwähnt*                                                              | **Lücke bei DEEPSEEK**: GROQ nennt globale Krisen, DEEPSEEK nicht.             |\n\n**Fazit**:\n- **GROQ breiter**, DEEPSEEK **selektiver** (US-Fokus).\n\n---\n\n### **Zusammenfassung der Kreuzprüfung**\n| **Kriterium**           | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Gesamtbewertung**                                                          |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------|\n| **Themenbreite**        | ✅ Sehr breit (Wirtschaft, Politik, Gesundheit, Tech, Global)            | ❌ Enger Fokus (Wirtschaft, Politik – v. a. USA)                             | **GROQ gewinnt** in Vollständigkeit.                                        |\n| **Detailliertheit**     | ⚠️ Oberflächlich (z. B. \"Spannungen USA-Iran\")                           | ✅ Präziser (z. B. WSJ-Artikel zu Warsh, NYT zu Iran)                        | **DEEPSEEK punktet** bei Tiefe, aber nur in ausgewählten Themen.             |\n| **Konsistenz**          | ✅ Alle Meldungen plausibel, keine Widersprüche                           | ✅ Alle Meldungen plausibel, keine Widersprüche                              | **Beide konsistent**, aber unterschiedliche Schwerpunkte.                   |\n| **Lücken**              | ❌ Keine großen Lücken, aber wenig Tiefe                                  | ❌ Fehlen wichtige Themen (EU, Gesundheit, Tech, Global)                     | **GROQ verlässlicher** für Überblick, DEEPSEEK für US-spezifische Analysen.  |\n\n---\n\n### **Empfehlungen für Nutzer**\n1. **Für globale Übersicht**:\n   - **GROQ** nutzen, da breiter aufgestellt (inkl. EU, Gesundheit, Tech).\n   - *Aber*: Bei US-Wirtschaft/Politik **DEEPSEEK ergänzen** (z. B. für Fed-Analysen).\n\n2. **Für US-spezifische Tiefe**:\n   - **DEEPSEEK** bevorzugen (z. B. WSJ-Artikel zu Zinspolitik).\n   - *Aber*: **GROQ für Kontext** (z. B. wie US-Politik globale Märkte beeinflusst).\n\n3. **Kritische Themen prüfen**:\n   - **AI-Gesetz (EU)**: Nur bei GROQ – hier **DEEPSEEK nicht vertrauen**.\n   - **Cyber-Sicherheit/NASA**: Nur bei G",
+  "game_theory_analysis": "GROQ:\nDas ist eine umfangreiche Liste von Nachrichtenartikeln aus verschiedenen Quellen und Ländern. Ich werde versuchen, die verschiedenen Themen und Inhalte zusammenzufassen:\n\n**Politik und internationale Beziehungen**:\n\n* Die USA und Iran befinden sich im Konflikt, nachdem die USA einen Angriff auf Iran abgebrochen haben.\n* Der Federal Reserve Board will seine Regeln für die Kreditvergabe an Bank-\"Insider\" modernisieren.\n* Die EU-Kommission will ihre Grenzen stärken, nachdem es in der spanischen Enklave Ceuta zu einem Massenansturm von Migranten kam.\n* Der Präsident der Europäischen Kommission, Ursula von der Leyen, fordert eine Stärkung der EU-Grenzen.\n\n**Wirtschaft und Finanzen**:\n\n* Die US-Notenbank will ihre Regeln für die Kreditvergabe an Banken modernisieren.\n* Die EU-Kommission hat eine Liste von Gesetzen veröffentlicht, die in den nächsten Monaten in Kraft treten werden.\n* Der Umsatz von Palantir, einer Datenanalysefirma, ist um 93% gestiegen.\n\n**Umwelt und Naturkatastrophen**:\n\n* Es gibt wilde Brände in Griechenland und andere Ländern, die durch die anhaltende Hitze ausgelöst wurden.\n* Ein Erdbeben in Venezuela hat über 6.000 Tote gefordert.\n\n**Gesundheit und Medizin**:\n\n* Die CDC hat eine Warnung vor einer Cyclospora-Ausbreitung in den USA herausgegeben.\n* Ein neuer Bericht zeigt, dass die Lebenserwartung in den USA sinkt.\n\n**Technologie und Cyber-Sicherheit**:\n\n* Ein neuer Bericht zeigt, dass die Zahl der Cyber-Angriffe auf Unternehmen und Regierungen steigt.\n* Ein neues Tool ermöglicht es Analysten, Follow-the-Money-Daten in Neo4j zu importieren.\n\n**Andere Themen**:\n\n* Der Präsident der USA, Donald Trump, hat einen Vorstoß zur Rente mit 63 Jahren vorgeschlagen.\n* Die UEFA hat eine Liste von Gesetzen veröffentlicht, die in den nächsten Monaten in Kraft treten werden.\n* Ein neuer Bericht zeigt, dass die Zahl der Menschen, die in Armut leben, in den USA sinkt.\n\nIch hoffe, das hilft! Wenn du spezifische Fragen hast oder mehr Informationen zu einem bestimmten Thema benötigst, stehe ich gerne zur Verfügung.\n\nDEEPSEEK:\n**DATUM: 03.08.2026 (2026). FEEDS:**\n\n**[Zentralbank]** Federal Reserve Press: Die Federal Reserve bittet um Kommentare zu einem Vorschlag zur Modernisierung ihrer Regelung für die Kreditvergabe an Bank-„Insider“ – also Bankvorstände, Board-Mitglieder und Großaktionäre, die möglicherweise Einfluss auf die Kreditentscheidungen einer Bank nehmen könnten.\n\n**[Cyber / Infrastruktur]** CISA Cyber Alerts: CISA hat eine neue bekannte ausgenutzte Schwachstelle in ihren Katalog aufgenommen, basierend auf Nachweisen aktiver Ausnutzung.\nCVE-2026-18577: N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability. Diese Art von Schwachstelle ist ein häufiger Angriffsvektor.\n\n**[US/Finanzen]** Wall Street Journal (MarketWatch Alt): Sollten wohlhabendere Amerikaner auf ihre Social-Security-Leistungen als wohltätige Geste verzichten? – Ein Leser schreibt: „Ich werde wahrscheinlich in der Lage sein, meine Leistungen abzulehnen.“\n\n**[US/Presse]** New York Times World: Die Migrationskrise in Ceuta legt die Verzweiflung unter Marokkos Jugend offen – Marokkanische Migranten beschrieben ihre Verzweiflung über ihre wirtschaftliche Zukunft und erklärten, was sie dazu trieb, die Grenze zu Spanien zu überqueren.\n\n**[US/Politik]** Fox News Latest: Clay Travis verpflichtet sich zu 10 Millionen Dollar für ein „Battle of the Sexes“-Match, während die Transgender-Debatte in der WNBA intensiver wird – Clay Travis bietet 10 Millionen Dollar für ein Spiel zwischen einem Highschool-Jungen-Team und den WNBA-Champion Las Vegas Aces in einem Pay-per-View-„Battle of the Sexes“-Spiel.\n\n**[UK/Medien]** BBC World News: Russland meldet sieben Tote und 40 Verletzte durch ukrainische Drohne, die einen belebten Strand trifft – Drei Kinder wurden getötet, als die Drohne an einem beliebten Ferienort am Schwarzen Meer einschlug.\n\n**[UK/Finanzen]** Financial Times: FirstFT: Japan bestätigt historische gemeinsame Yen-Intervention mit den USA – Auch im heutigen Newsletter: Myanmar veröffentlicht Fotos von Aung San Suu Kyi angesichts gesundheitlicher Bedenken, und AstraZeneca-Investoren äußern Bedenken über Mega-Fusionsgespräche.\n\n**[CH/Presse]** NZZ International: LIVE-TICKER – Iran-Krieg: Trump spricht von „letzter Chance“ für Teheran – Die USA und der Iran befinden sich seit Februar 2026 im Kriegszustand. Zwar haben die beiden Länder eine Waffenruhe vereinbart, doch Donald Trump hat diese Anfang Juli für beendet erklärt. Die neuesten Entwicklungen im Ticker.\n\n**[Wetter/Extreme]** NOAA National Hurricane Center: Atlantik\n\nMACRO:\n### Summary of Key News on 03.08.2026\n\n#### **Finance and Banking**\n- **Federal Reserve**: Requests public comment on a proposal to modernize its rule regarding the extension of credit to bank insiders, including executives, board members, and major shareholders. This aims to mitigate potential conflicts of interest and influence on lending decisions.\n- **Wall Street Journal**: Discusses a controversial idea where wealthier Americans might forgo their Social Security benefits as a charitable gesture, with one reader considering declining his benefits.\n\n#### **Cybersecurity and Infrastructure**\n- **CISA**: Adds CVE-2026-18577, an authentication bypass vulnerability in N-able N-central, to its Known Exploited Vulnerabilities (KEV) Catalog. This vulnerability is a common attack vector and organizations are advised to patch immediately.\n\n#### **International Affairs**\n- **Ceuta Migration Crisis**: The New York Times reports on the migration crisis in Ceuta, exposing the economic despair among young Moroccans and the factors driving them to cross the border into Spain.\n- **Russia-Ukraine Conflict**: BBC World News reports that a Ukrainian drone hit a busy beach in Russia, killing three children and injuring 40 people at a popular resort on the Black Sea.\n\n#### **Politics**\n- **Clay Travis and WNBA Trans Debate**: Fox News reports that Clay Travis has pledged $10 million for a \"battle of the sexes\" matchup, pitting a high school boys' team against the WNBA champion Las Vegas Aces in a pay-per-view event, intensifying the debate around transgender inclusion in sports.\n\n#### **Economy and Markets**\n- **Japan-U.S. Joint Yen Intervention**: The Financial Times reports that Japan has confirmed a historic joint yen intervention with the U.S., aiming to stabilize the currency. The newsletter also covers Myanmar's release of photos of Aung San Suu Kyi amid health concerns and investor concerns over AstraZeneca's mega-merger talks.\n\n#### **International Relations and Conflict**\n- **Iran-U.S. Conflict**: NZZ International provides a live ticker update on the ongoing conflict between the U.S. and Iran. The two countries have been in a state of war since February 2026, with a recent Waffenruhe (ceasefire) declared by the U.S. being terminated by Donald Trump in early July.\n\n#### **Weather and Natural Disasters**\n- **NOAA National Hurricane Center**: The Atlantic Tropical Weather Outlook indicates no expected tropical cyclone formation over the next seven days, providing a brief respite from storm activity.\n\n#### **Investigative Reporting**\n- **ICJ (Panama/Pandora Papers)**: Reports on a Europe-sanctioned crypto exchange HTX, which is deploying tactics that could blunt the impact of the sanctions. The exchange is rapidly generating new accounts, raising concerns about its continued operations.\n\n### Key Takeaways\n- **Regulatory Changes**: The Federal Reserve's proposal to modernize insider credit rules reflects ongoing efforts to enhance financial governance.\n- **Cybersecurity Concerns**: The addition of a new vulnerability to CISA's KEV Catalog underscores the persistent threat of cyber attacks.\n- **International Crises**: The migration crisis in Ceuta and the Russia-Ukraine conflict highlight ongoing geopolitical tensions and humanitarian issues.\n- **Political and Social Debates**: The WNBA trans debate and Clay Travis's offer reflect ongoing discussions around gender and sports.\n- **Economic Interventions**: Japan and the U.S.'s joint yen intervention marks a significant step in international monetary policy.\n- **Conflict Dynamics**: The U.S.-Iran conflict remains a critical area of international tension, with potential implications for global stability.\n- **Weather Outlook**: The absence of expected tropical cyclones in the Atlantic provides temporary relief but requires continued monitoring.\n- **Investigative Insights**: The ICIJ's report on HTX raises questions about the effectiveness of sanctions in the crypto sector.",
   "stock_picks": {
     "top_5_buys": [
       {
@@ -1626,28 +1716,28 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Zinspolitische Unsicherheiten und wirtschaftliche Instabilität belasten die Performance."
+        "reason": "Instabilität durch Naturkatastrophen, politische Unsicherheiten und wirtschaftliche Schwäche in Schlüsselregionen wie Venezuela und Nordafrika."
       }
     ]
   },
-  "timestamp": "2026-08-03T09:28:44.014954+00:00",
+  "timestamp": "2026-08-03T22:37:21.475160+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-03T09:27:01.835413+00:00",
+    "timestamp": "2026-08-03T22:34:38.339237+00:00",
     "feeds_total": 224,
-    "feeds_successful": 119,
-    "feeds_failed": 105,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
       "Groq (Llama-3.3)",
-      "qwen-2.5-72b-instruct",
-      "DeepSeek"
+      "DeepSeek",
+      "qwen-2.5-72b-instruct"
     ],
-    "swarm_debate_status": "SUCCESS",
+    "swarm_debate_status": "ERROR (HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=35))",
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
     "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (47 Nodes)",
+    "graph_merge_status": "SUCCESS (49 Nodes)",
     "errors": []
   },
   "delta": {
@@ -1655,14 +1745,14 @@
     "ampel_prev": "GELB",
     "ampel_now": "GELB",
     "ampel_changed": false,
-    "geoscore_prev": 75,
+    "geoscore_prev": 72,
     "geoscore_now": 72,
-    "geoscore_delta": -3,
+    "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 45,
-    "nodes_now": 47,
+    "nodes_prev": 47,
+    "nodes_now": 49,
     "hotspots_now": 9,
-    "summary": "Geoscore 75 → 72 (-3) · Graph-Knoten 45 → 47"
+    "summary": "Graph-Knoten 47 → 49"
   }
 }
