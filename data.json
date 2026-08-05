@@ -2,25 +2,25 @@
   "overall_geoscore": 75,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte geopolitische Spannungen in Nordafrika/Europa (Ceuta) und anhaltende Cybersicherheitsrisiken, kombiniert mit Extremwetterereignissen, belasten die globale Stabilität, ohne akute Eskalation.",
-  "daily_executive_summary": "Die globale Lage am 04.08.2026 ist geprägt von einer Mischung aus regulatorischen Anpassungen, geopolitischen Spannungen und akuten Krisenherden. Die US-Notenbank Federal Reserve modernisiert ihre Regeln zur Kreditvergabe an Bank-Insider, um Interessenkonflikte zu minimieren – ein Schritt, der langfristig das Vertrauen in das Finanzsystem stärken könnte. Gleichzeitig eskaliert die Migrationskrise in der spanischen Exklave Ceuta, wo tausende Marokkaner aus wirtschaftlicher Verzweiflung die Grenze überqueren, was die EU zu dringenden Sicherheitsmaßnahmen zwingt. Im Immobiliensektor sorgt die Übernahme des britischen Logistikriesen Segro durch den US-Konkurrenten Prologis für Milliardenumsätze, während Extremwetterereignisse wie Waldbrände in den USA und globale Naturkatastrophen die Infrastruktur belasten. Cybersicherheitswarnungen vor akut ausgenutzten Schwachstellen unterstreichen die anhaltende Bedrohung kritischer Systeme. Geopolitisch bleibt der Fokus auf Nordafrika und Europa gerichtet, während die USA sich auf die Midterm-Wahlen vorbereiten.",
-  "daily_executive_summary_simple": "Heute gibt es mehrere wichtige Entwicklungen: In den USA werden Bankregeln verschärft, um Missbrauch zu verhindern. In Europa spitzt sich die Lage in Ceuta zu, wo viele Menschen aus Marokko fliehen. Ein großer Immobilien-Deal zwischen Großbritannien und den USA zeigt, wie eng die Wirtschaft verbunden ist. Gleichzeitig warnen Experten vor Cyberangriffen und Naturkatastrophen. Die Welt ist aktuell angespannt, aber es gibt keine akute Kriegsgefahr.",
+  "ampel_reason_simple": "Geopolitische Spannungen (Ukraine, Persischer Golf) und wirtschaftliche Volatilität (Ölpreise, Cybersicherheit) erfordern erhöhte Wachsamkeit, ohne akute Eskalation.",
+  "daily_executive_summary": "Die globale Lage am 05.08.2026 ist geprägt von einer Mischung aus wirtschaftlicher Erholung und geopolitischen Spannungen. Die US-Notenbank genehmigte die Übernahme von Coastal Bend Bancshares, während die Aktienmärkte mit dem 25. Rekordhoch des Jahres eine Phase der Stabilisierung signalisieren. Gleichzeitig eskaliert der Ukraine-Krieg mit gezielten russischen Raketenangriffen auf zivile Infrastruktur, darunter Tankstellen. Im Persischen Golf verhandeln die USA mit dem Iran über die Öffnung der Hormus-Straße, was die Ölpreise vorübergehend entspannt. Cybersicherheitswarnungen zu Schwachstellen in genetischen Analysegeräten von Thermo Fisher unterstreichen die anhaltenden Risiken für kritische Infrastruktur. Die Migrationskrise in Ceuta und die diplomatischen Aktivitäten der USA (Trump-Treffen) runden ein komplexes Bild ab.",
+  "daily_executive_summary_simple": "Die Weltwirtschaft zeigt sich stabil, aber Kriege und politische Konflikte sorgen für Unsicherheit. Die USA und der Iran verhandeln über sichere Schifffahrtsrouten, während Russland die Ukraine weiter angreift. Gleichzeitig warnen Behörden vor Hackerangriffen auf medizinische Geräte. Die Börsen feiern neue Rekorde, aber die Lage bleibt angespannt.",
   "key_takeaways": [
-    "Die Federal Reserve reformiert Insider-Kreditregeln – ein Schritt zur Stabilisierung des US-Finanzsektors.",
-    "Ceuta wird zum Brennpunkt der europäischen Migrationskrise mit tausenden Grenzübertritten aus Marokko.",
-    "Prologis übernimmt Segro für 14 Mrd. Pfund – ein Zeichen für Konsolidierung im europäischen Immobiliensektor.",
-    "Cybersicherheitsbehörden warnen vor einer aktiv ausgenutzten Schwachstelle in N-able N-central (CVE-2026-18577).",
-    "Extremwetterereignisse wie Waldbrände in den USA und globale Erdbeben belasten Infrastruktur und Lieferketten."
+    "US-Aktienmärkte erreichen 25. Rekordhoch 2026 – wirtschaftliche Erholung trotz geopolitischer Risiken.",
+    "Russland intensiviert Raketenangriffe auf die Ukraine, zivile Ziele im Fokus.",
+    "USA und Iran verhandeln über die Hormus-Straße – Ölpreise reagieren mit leichten Verlusten.",
+    "Schwere Cybersicherheitslücke in Thermo Fisher-Geräten könnte DNA-Analysedaten verfälschen.",
+    "Migrationsdruck in Ceuta eskaliert – EU steht unter Handlungsdruck."
   ],
-  "market_regime": "Volatil",
-  "top_risk": "Cybersicherheit & Lieferkettenstörungen",
+  "market_regime": "Fragmentiert / Volatil",
+  "top_risk": "Geopolitische Spannungen & Cybersicherheit",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Erhöhte Nachfrage durch Extremwetter und geopolitische Unsicherheiten in Schlüsselregionen wie dem Persischen Golf."
+        "reason": "Stabilisierung der Ölpreise durch US-Iran-Verhandlungen und anhaltende Nachfrage."
       }
     ],
     "flop5_sells": [
@@ -28,7 +28,7 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Politische Instabilität in Nordafrika und anhaltende Migrationskrisen belasten die Wachstumsaussichten."
+        "reason": "Geopolitische Risiken (Ukraine-Krieg, Hormus-Straße) belasten exportabhängige Volkswirtschaften."
       }
     ]
   },
@@ -36,138 +36,126 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Vorbereitungen auf Midterm-Wahlen, regulatorische Anpassungen im Bankensektor und Extremwettermanagement dominieren die Agenda."
-    },
-    {
-      "region": "EU",
-      "stability": "GELB",
-      "dynamics": "Migrationskrise in Ceuta und Reaktion auf russische Angriffe in der Ukraine bestimmen die politische Diskussion."
+      "dynamics": "Wirtschaftliche Erholung (Rekordbörsen), aber innenpolitische Spannungen (Polizeigewalt, Wahlkampf) und außenpolitische Herausforderungen (Ukraine, Iran)."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Tausende Marokkaner überqueren die Grenze nach Ceuta aus wirtschaftlicher Verzweiflung.",
-      "current_event": "Tausende Marokkaner überqueren die Grenze nach Ceuta aus wirtschaftlicher Verzweiflung.",
-      "historical_analog": "Flüchtlingskrise 2015 in Europa (Syrien, Afghanistan)",
-      "similarity": "Flüchtlingskrise 2015 in Europa (Syrien, Afghanistan)",
-      "takeaway": "Historische Muster zeigen, dass solche Krisen langfristige politische und soziale Folgen haben, einschließlich der Stärkung rechtspopulistischer Parteien und verschärfter Asylpolitik."
-    },
-    {
-      "event": "Aktive Ausnutzung einer Schwachstelle in N-able N-central.",
-      "current_event": "Aktive Ausnutzung einer Schwachstelle in N-able N-central.",
-      "historical_analog": "SolarWinds-Hack 2020",
-      "similarity": "SolarWinds-Hack 2020",
-      "takeaway": "Unternehmen und Behörden müssen ihre Cybersicherheitsmaßnahmen kontinuierlich aktualisieren, um ähnliche großflächige Angriffe zu verhindern."
+      "event": "Verhandlungen zwischen USA und Iran zur Sicherung der Hormus-Straße.",
+      "current_event": "Verhandlungen zwischen USA und Iran zur Sicherung der Hormus-Straße.",
+      "historical_analog": "Tankerkrieg im Persischen Golf (1980er) und US-Iran-Spannungen 2019–2020.",
+      "similarity": "Tankerkrieg im Persischen Golf (1980er) und US-Iran-Spannungen 2019–2020.",
+      "takeaway": "Kurzfristige Entspannung möglich, aber langfristige Stabilität unwahrscheinlich ohne diplomatische Lösung."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Die Migrationskrise in Ceuta wird sich voraussichtlich verschärfen, mit möglichen Grenzschließungen und diplomatischen Spannungen zwischen Spanien und Marokko. Die Cybersicherheitslage bleibt angespannt, mit weiteren Warnungen vor ausgenutzten Schwachstellen. Im Finanzsektor könnten die neuen Fed-Regeln zu kurzfristigen Marktvolatilitäten führen, während die Übernahme von Segro durch Prologis den europäischen Immobilienmarkt konsolidiert.",
+    "base_case_summary": "Die Ölpreise werden volatil bleiben, abhängig von Fortschritten in den US-Iran-Verhandlungen. Die Ukraine wird weiter unter russischen Angriffen leiden, mit möglichen Gegenoffensiven. Cybersicherheitswarnungen könnten zu verstärkten Regulierungen führen.",
     "leading_indicators_to_watch": [
-      "Zunahme der Grenzübertritte in Ceuta um mehr als 20% innerhalb einer Woche.",
-      "Weitere Meldungen über ausgenutzte Schwachstellen in kritischer Infrastruktur-Software.",
-      "Volatilität im Bankensektor nach Inkrafttreten der Fed-Regeln."
+      "Militärische Bewegungen im Persischen Golf",
+      "Anstieg der Cyberangriffe auf kritische Infrastruktur",
+      "Verzögerungen in US-Iran-Gesprächen"
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Die Migrationskrise in Ceuta wird sich voraussichtlich verschärfen, mit möglichen Grenzschließungen und diplomatischen Spannungen zwischen Spanien und Marokko. Die Cybersicherheitslage bleibt angespannt, mit weiteren Warnungen vor ausgenutzten Schwachstellen. Im Finanzsektor könnten die neuen Fed-Regeln zu kurzfristigen Marktvolatilitäten führen, während die Übernahme von Segro durch Prologis den europäischen Immobilienmarkt konsolidiert.",
-        "probability": "Hoch",
+        "forecast": "Die Ölpreise werden volatil bleiben, abhängig von Fortschritten in den US-Iran-Verhandlungen. Die Ukraine wird weiter unter russischen Angriffen leiden, mit möglichen Gegenoffensiven. Cybersicherheitswarnungen könnten zu verstärkten Regulierungen führen.",
+        "probability": "Mittel",
         "early_warning_indicators": [
-          "Zunahme der Grenzübertritte in Ceuta um mehr als 20% innerhalb einer Woche.",
-          "Weitere Meldungen über ausgenutzte Schwachstellen in kritischer Infrastruktur-Software.",
-          "Volatilität im Bankensektor nach Inkrafttreten der Fed-Regeln."
+          "Militärische Bewegungen im Persischen Golf",
+          "Anstieg der Cyberangriffe auf kritische Infrastruktur",
+          "Verzögerungen in US-Iran-Gesprächen"
         ]
       }
     ]
   },
   "conflict_hotspots": [
     {
-      "name": "Ceuta (Spanien/Marokko)",
-      "region": "Nordafrika/Europa",
-      "lat": 35.89,
-      "lon": -5.32,
-      "type": "refugee",
-      "intensity": "ROT",
-      "description": "Tausende Migranten aus Marokko überqueren die Grenze nach Ceuta, ausgelöst durch wirtschaftliche Verzweiflung und politische Instabilität. Die EU bereitet eine Krisensitzung vor.",
-      "impact": "Mögliche Grenzschließungen, diplomatische Spannungen zwischen Spanien und Marokko, und politische Debatten über Asylpolitik in der EU.",
-      "lng": -5.32
-    },
-    {
       "name": "Persischer Golf",
-      "region": "Naher Osten",
+      "region": "Persischer Golf",
       "lat": 26.5,
       "lon": 53.5,
       "type": "chokepoint",
-      "intensity": "GELB",
-      "description": "Anhaltende Spannungen zwischen Iran und westlichen Staaten, mit regelmäßigen Drohnenangriffen und Patrouillen in der Straße von Hormus.",
-      "impact": "Risiko für Unterbrechungen der Öltransporte, was zu Preisschwankungen und Lieferkettenstörungen führen könnte.",
+      "intensity": "ROT",
+      "description": "Verhandlungen zwischen USA und Iran über die Öffnung der Hormus-Straße, einer der wichtigsten Ölhandelsrouten. Militärische Präsenz beider Seiten erhöht Eskalationsrisiko.",
+      "impact": "Störungen könnten globale Ölpreise um 10–20% steigen lassen und Lieferketten belasten.",
       "lng": 53.5
     },
     {
-      "name": "Flug FDX5030",
+      "name": "Ukraine (Kiew & Ostukraine)",
+      "region": "Ukraine",
+      "lat": 50.45,
+      "lon": 30.52,
+      "type": "conflict",
+      "intensity": "ROT",
+      "description": "Russland setzt vermehrt Raketenangriffe auf zivile Infrastruktur ein, darunter Tankstellen und Energieanlagen. Ukraine bereitet Gegenoffensiven vor.",
+      "impact": "Humanitäre Krise verschärft sich, europäische Energieversorgung unter Druck.",
+      "lng": 30.52
+    },
+    {
+      "name": "Flug PGT21PC",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.6093,
-      "lon": 29.5762,
-      "lng": 29.5762,
+      "lat": 42.8413,
+      "lon": 27.2887,
+      "lng": 27.2887,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: FDX5030 | Höhe: 4.1 km | Speed: 673 km/h",
+      "description": "Callsign: PGT21PC | Höhe: 9.8 km | Speed: 868 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT2571",
+      "name": "Flug PGT22QP",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.1472,
-      "lon": 31.679,
-      "lng": 31.679,
+      "lat": 40.762,
+      "lon": 29.5638,
+      "lng": 29.5638,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT2571 | Höhe: 11.0 km | Speed: 770 km/h",
+      "description": "Callsign: PGT22QP | Höhe: 2.1 km | Speed: 514 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ3853",
+      "name": "Flug ADZ4093",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.3683,
-      "lon": 32.3042,
-      "lng": 32.3042,
+      "lat": 34.9156,
+      "lon": 33.4948,
+      "lng": 33.4948,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ3853 | Höhe: 6.4 km | Speed: 741 km/h",
+      "description": "Callsign: ADZ4093 | Höhe: 2.3 km | Speed: 518 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug SQY8311",
+      "name": "ADS-B Signal 742824",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 28.4141,
-      "lon": 32.7955,
-      "lng": 32.7955,
+      "lat": 35.288,
+      "lon": 37.2342,
+      "lng": 37.2342,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: SQY8311 | Höhe: 11.3 km | Speed: 819 km/h",
+      "description": "Callsign: Unbekannt | Höhe: 10.1 km | Speed: 835 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug THA634",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.0975,
-      "lon": 117.3072,
-      "lng": 117.3072,
+      "lat": 21.2175,
+      "lon": 117.7137,
+      "lng": 117.7137,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA634 | Höhe: 12.5 km | Speed: 925 km/h",
+      "description": "Callsign: THA634 | Höhe: 12.5 km | Speed: 921 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CPA357",
+      "name": "Flug UAE366",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.3834,
-      "lon": 115.3684,
-      "lng": 115.3684,
+      "lat": 22.2869,
+      "lon": 118.0215,
+      "lng": 118.0215,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CPA357 | Höhe: 5.8 km | Speed: 797 km/h",
+      "description": "Callsign: UAE366 | Höhe: 12.5 km | Speed: 910 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -179,7 +167,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-04"
+        "last_seen": "2026-08-05"
       },
       {
         "id": "iran",
@@ -187,7 +175,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-04"
+        "last_seen": "2026-08-05"
       },
       {
         "id": "saudi",
@@ -209,7 +197,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-01"
       },
@@ -225,15 +213,15 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 21,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-03"
+        "last_seen": "2026-08-05"
       },
       {
         "id": "eu",
         "label": "EU",
         "group": "staat",
-        "val": 18,
+        "val": 17,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-04"
       },
@@ -257,9 +245,9 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 17,
+        "val": 20,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-03"
+        "last_seen": "2026-08-05"
       },
       {
         "id": "cisa",
@@ -273,7 +261,7 @@
         "id": "fed",
         "label": "Fed",
         "group": "organisation",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-03"
       },
@@ -337,7 +325,7 @@
         "id": "cyber_risiko",
         "label": "Cyber-Sicherheit",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-26",
         "last_seen": "2026-08-04"
       },
@@ -481,7 +469,7 @@
         "id": "marokko",
         "label": "Marokko",
         "group": "staat",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-04"
       },
@@ -489,7 +477,7 @@
         "id": "spanien",
         "label": "Spanien",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-04"
       },
@@ -497,7 +485,7 @@
         "id": "energie",
         "label": "Energie",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-01"
       },
@@ -521,9 +509,9 @@
         "id": "ceuta",
         "label": "Ceuta",
         "group": "risiko",
-        "val": 3,
+        "val": 5,
         "first_seen": "2026-08-02",
-        "last_seen": "2026-08-02"
+        "last_seen": "2026-08-05"
       },
       {
         "id": "nasa",
@@ -553,7 +541,7 @@
         "id": "cyberrisiko",
         "label": "Cyberrisiko",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-03",
         "last_seen": "2026-08-03"
       },
@@ -561,7 +549,7 @@
         "id": "federal_reserve",
         "label": "Fed",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-03",
         "last_seen": "2026-08-03"
       },
@@ -569,7 +557,7 @@
         "id": "ceuta_krise",
         "label": "Ceuta-Krise",
         "group": "risiko",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-08-04",
         "last_seen": "2026-08-04"
       },
@@ -577,9 +565,25 @@
         "id": "prologis_segro",
         "label": "Prologis-Segro",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-04",
         "last_seen": "2026-08-04"
+      },
+      {
+        "id": "thermo_fisher",
+        "label": "Thermo Fisher",
+        "group": "tech",
+        "val": 5,
+        "first_seen": "2026-08-05",
+        "last_seen": "2026-08-05"
+      },
+      {
+        "id": "hormus",
+        "label": "Hormus-Straße",
+        "group": "risiko",
+        "val": 6,
+        "first_seen": "2026-08-05",
+        "last_seen": "2026-08-05"
       }
     ],
     "edges": [
@@ -588,8 +592,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Konflikt",
-        "last_seen": "2026-08-04"
+        "label": "Verhandlungen",
+        "last_seen": "2026-08-05"
       },
       {
         "from": "usa",
@@ -644,8 +648,8 @@
         "to": "russland",
         "source": "usa",
         "target": "russland",
-        "label": "Spannung",
-        "last_seen": "2026-08-01"
+        "label": "Konflikt (Ukraine)",
+        "last_seen": "2026-08-05"
       },
       {
         "from": "iran",
@@ -693,7 +697,7 @@
         "source": "russland",
         "target": "ukraine",
         "label": "Krieg",
-        "last_seen": "2026-08-03"
+        "last_seen": "2026-08-05"
       },
       {
         "from": "eu",
@@ -1166,6 +1170,38 @@
         "target": "eu",
         "label": "Wirtschaftliche Konsolidierung",
         "last_seen": "2026-08-04"
+      },
+      {
+        "from": "usa",
+        "to": "thermo_fisher",
+        "source": "usa",
+        "target": "thermo_fisher",
+        "label": "Cybersicherheit",
+        "last_seen": "2026-08-05"
+      },
+      {
+        "from": "iran",
+        "to": "hormus",
+        "source": "iran",
+        "target": "hormus",
+        "label": "Blockadeandrohung",
+        "last_seen": "2026-08-05"
+      },
+      {
+        "from": "usa",
+        "to": "hormus",
+        "source": "usa",
+        "target": "hormus",
+        "label": "Militärpräsenz",
+        "last_seen": "2026-08-05"
+      },
+      {
+        "from": "ceuta",
+        "to": "eu",
+        "source": "ceuta",
+        "target": "eu",
+        "label": "Migrationsdruck",
+        "last_seen": "2026-08-05"
       }
     ],
     "links": [
@@ -1174,8 +1210,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Konflikt",
-        "last_seen": "2026-08-04"
+        "label": "Verhandlungen",
+        "last_seen": "2026-08-05"
       },
       {
         "from": "usa",
@@ -1230,8 +1266,8 @@
         "to": "russland",
         "source": "usa",
         "target": "russland",
-        "label": "Spannung",
-        "last_seen": "2026-08-01"
+        "label": "Konflikt (Ukraine)",
+        "last_seen": "2026-08-05"
       },
       {
         "from": "iran",
@@ -1279,7 +1315,7 @@
         "source": "russland",
         "target": "ukraine",
         "label": "Krieg",
-        "last_seen": "2026-08-03"
+        "last_seen": "2026-08-05"
       },
       {
         "from": "eu",
@@ -1752,15 +1788,47 @@
         "target": "eu",
         "label": "Wirtschaftliche Konsolidierung",
         "last_seen": "2026-08-04"
+      },
+      {
+        "from": "usa",
+        "to": "thermo_fisher",
+        "source": "usa",
+        "target": "thermo_fisher",
+        "label": "Cybersicherheit",
+        "last_seen": "2026-08-05"
+      },
+      {
+        "from": "iran",
+        "to": "hormus",
+        "source": "iran",
+        "target": "hormus",
+        "label": "Blockadeandrohung",
+        "last_seen": "2026-08-05"
+      },
+      {
+        "from": "usa",
+        "to": "hormus",
+        "source": "usa",
+        "target": "hormus",
+        "label": "Militärpräsenz",
+        "last_seen": "2026-08-05"
+      },
+      {
+        "from": "ceuta",
+        "to": "eu",
+        "source": "ceuta",
+        "target": "eu",
+        "label": "Migrationsdruck",
+        "last_seen": "2026-08-05"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Die Federal Reserve reformiert Insider-Kreditregeln – ein Schritt zur Stabilisierung des US-Finanzsektors.",
-    "Ceuta wird zum Brennpunkt der europäischen Migrationskrise mit tausenden Grenzübertritten aus Marokko.",
-    "Prologis übernimmt Segro für 14 Mrd. Pfund – ein Zeichen für Konsolidierung im europäischen Immobiliensektor.",
-    "Cybersicherheitsbehörden warnen vor einer aktiv ausgenutzten Schwachstelle in N-able N-central (CVE-2026-18577).",
-    "Extremwetterereignisse wie Waldbrände in den USA und globale Erdbeben belasten Infrastruktur und Lieferketten."
+    "US-Aktienmärkte erreichen 25. Rekordhoch 2026 – wirtschaftliche Erholung trotz geopolitischer Risiken.",
+    "Russland intensiviert Raketenangriffe auf die Ukraine, zivile Ziele im Fokus.",
+    "USA und Iran verhandeln über die Hormus-Straße – Ölpreise reagieren mit leichten Verlusten.",
+    "Schwere Cybersicherheitslücke in Thermo Fisher-Geräten könnte DNA-Analysedaten verfälschen.",
+    "Migrationsdruck in Ceuta eskaliert – EU steht unter Handlungsdruck."
   ],
   "geoscore": {
     "current_score": 75,
@@ -1771,14 +1839,14 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "Hier ist die **Kreuzprüfung (\"Fingerklopfen\")** der beiden Zusammenfassungen (GROQ vs. DEEPSEEK) für den **04.08.2026**, basierend auf inhaltlicher Übereinstimmung, Abweichungen und Plausibilität:\n\n---\n\n### **1. Übereinstimmungen (Konsistente Themen)**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Bankenregulierung**   | Federal Reserve modernisiert Regeln für Kreditvergabe an \"Insider\".     | \"Wirtschaftliche Regulierung im US-Bankensektor\" (konkret: Insider-Kredite). | **Vollständige Übereinstimmung** – Beide nennen die Fed als Akteur und Insider-Kredite als Fokus. |\n| **Firmenübernahmen**    | Übernahme von Segro durch Prologis (Immobiliensektor).                  | \"Milliardenschweres Übernahmeangebot im europäischen Immobiliensektor\".      | **Hohe Übereinstimmung** – DEEPSEEK nennt keine Namen, aber der Sektor passt. |\n| **Migration/Krise**     | Ceuta als Brennpunkt (spanische Exklave, Tausende Migranten).           | \"Sicherheitspolitische Spannungen in Europa und Nordafrika\" (implizit Ceuta). | **Teilweise Übereinstimmung** – DEEPSEEK ist vager, aber der geografische Fokus passt. |\n| **Cybersicherheit**     | Warnungen vor Sicherheitslücken und Cyberangriffen.                     | \"Cybersicherheit bleibt kritisches Thema\".                                  | **Übereinstimmung** – Beide betonen die Relevanz des Themas.                 |\n| **Extremwetter**        | Waldbrände, Erdbeben, Naturkatastrophen (global).                       | \"Schwere Extremwettervorfälle im Inland der USA\".                           | **Teilweise Übereinstimmung** – DEEPSEEK fokussiert auf die USA, GROQ global. |\n\n---\n\n### **2. Abweichungen (Unterschiede in Fokus oder Details)**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|\n| **Geopolitik**          | Breites Spektrum (USA, EU, China, Naher Osten, Russland).               | Keine explizite Nennung von China/Russland; Fokus auf USA/Europa.           | **DEEPSEEK ist selektiver** – GROQ bietet globalere Perspektive.             |\n| **Wahlen**              | Midterm-Wahlen in den USA als Thema.                                    | Keine Erwähnung.                                                            | **GROQ spezifischer** – DEEPSEEK ignoriert das Thema.                        |\n| **Gesundheit**          | Gesundheitskrisen (Krankheitsausbreitung).                              | Keine Erwähnung.                                                            | **GROQ detaillierter** – DEEPSEEK lässt Gesundheit aus.                      |\n| **Energie/Ressourcen**  | Diskussionen über erneuerbare Energien und fossile Brennstoffe.          | Keine Erwähnung.                                                            | **GROQ breiter aufgestellt**.                                                |\n| **Soziale Themen**      | Rechte von Minderheiten, soziale Bewegungen.                            | Keine Erwähnung.                                                            | **GROQ inklusiver**.                                                         |\n| **Unternehmensnews**    | Toyota als Beispiel für Unternehmensleistung.                           | Keine Erwähnung.                                                            | **GROQ konkreter**.                                                          |\n\n---\n\n### **3. Plausibilitätscheck (Zeitliche und logische Konsistenz)**\n- **Bankenregulierung (Fed):**\n  - **Plausibel**: Die Fed überarbeitet regelmäßig Regeln (z. B. nach der Finanzkrise 2008 oder SVB-Kollaps 2023). Eine Modernisierung der Insider-Kreditregeln wäre ein typischer Schritt.\n  - **Quellenhinweis**: Keine konkreten Dokumente genannt, aber das Thema ist realistisch.\n\n- **Übernahme Segro/Prologis:**\n  - **Plausibel**: Prologis ist ein globaler Logistikimmobilien-Riese und hat in der Vergangenheit Übernahmen getätigt (z. B. Duke Realty 2022). Segro wäre ein passendes Ziel.\n  - **Marktkontext**: Der europäische Immobilienmarkt war 2026 möglicherweise von Konsolidierung geprägt (Zinsumfeld, Nachfrage nach Logistikflächen).\n\n- **Ceuta-Migrationskrise:**\n  - **Plausibel**: Ceuta und Melilla sind seit Jahren Brennpunkte (z. B. 2021: 8.000 Migranten in Ceuta). Eine erneute Krise 2026 wäre denkbar.\n  - **EU-Reaktion**: Verstärkte Grenzkontrollen passen zur aktuellen Politik (z. B. Frontex-Einsätze).\n\n- **Cybersicherheit:**\n  - **Plausibel**: Dauerbrenner-Thema (z. B. Ransomware-Angriffe auf kritische Infrastruktur). 2026 könnten neue Schwachstellen (z. B. in KI-Systemen) aufgedeckt werden.\n\n- **Extremwetter (USA):**\n  - **Plausibel**: Klimawandel führt zu häufigeren Extremereignissen. 2026 könnten Hurrikans, Waldbrände (z. B. Kalifornien) oder Hitzewellen dominieren.\n\n---\n\n### **4. Kritische Punkte (Rote Flaggen)**\n- **Fehlende Quellenangaben**:\n  - Beide Zusammenfassungen nennen keine konkreten Artikel, Pressemitteilungen oder Daten. Ohne Verifizierung ist die Glaubwürdigkeit eingeschränkt.\n  - **Beispiel**: Die Übernahme von Segro durch Prologis wäre ein Milliarden-Deal – warum gibt es keine offiziellen Statements?\n\n- **Vage Formulierungen (DEEPSEEK):**\n  - \"Sicherheitspolitische Spannungen in Europa\" ist zu unspezifisch. Welche Länder? Welche Art von Spannungen (Militär, Migration, Cyber)?\n  - \"Schwere Extremwettervorfälle im Inland der USA\" – welche Regionen? Welche Schäden?\n\n- **Zeitliche Inkonsistenzen:**\n  - **Midterm-Wahlen in den USA**: 2026 wären die nächsten regulären Wahlen erst 2026 (November), aber die Vorwahlen beginnen bereits 2025. GROQs Erwähnung ist **früh**, aber nicht unmöglich (z. B. Vorwahlkampf-Debatten).\n  - **EU-Grenzkontrollen**: Die EU diskutiert seit Jahren über Reformen (z. B. Asylpaket 2024). Eine Umsetzung 2026 wäre realistisch.\n\n---\n\n### **5. Fazit: Kreuzprüfungsergebnis**\n| **Kriterium**           | **Bewertung**                                                                 |\n|-------------------------|------------------------------------------------------------------------------|\n| **Inhaltliche Übereinstimmung** | **80%**: Kernpunkte (Banken, Migration, Cybersicherheit, Extremwetter) stimmen überein. GROQ ist detaillierter. |\n| **Plausibilität**       | **Hoch**: Alle genannten Themen sind realistisch für 2026, basierend auf aktuellen Trends. |\n| **Quellenbedarf**       | **Kritisch**: Ohne konkrete Quellen (z. B. Reuters, Bloomberg, offizielle Dokumente) ist die Validität nicht abschließend prüfbar. |\n| **Vollständigkeit**     | **GROQ überlegen**: DEEPSEEK lässt wichtige Themen (Wahlen, Gesundheit, Energie) aus und ist weniger präzise. |\n| **Neutralität**         | **Gegeben**: Beide Zusammenfassungen wirken sachlich, ohne offensichtliche Bias. |\n\n---\n\n### **6. Empfehlungen für weitere Prüfung**\n1. **Quellenrecherche**:",
+  "game_theory_analysis": "Hier ist die **Kreuzprüfung (\"Fingerklopfen\")** der beiden KI-Zusammenfassungen (GROQ vs. DEEPSEEK) für den **05.08.2026**, inklusive Bewertung der Konsistenz, Ergänzungen und potenzieller Widersprüche:\n\n---\n\n### **1. Übereinstimmungen (hohe Konsistenz)**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Fed-Entscheidung**    | Genehmigung der Übernahme durch *Coastal Bend Bancshares, Inc.*         | Übernahme durch *Coastal Bend Bancshares, Inc.* genehmigt                   | **Identisch** – Faktisch korrekt, Quelle wahrscheinlich identisch (Fed-Pressemitteilung). |\n| **Aktienmärkte**        | \"Aktienmärkte erholten sich, neue Rekorde\"                              | S&P 500: **25. Rekordabschluss 2026**, nach 42-tägiger Pause                | **Konsistent**, aber DEEPSEEK präzisiert mit konkreten Zahlen.                |\n| **Ukraine-Krieg**       | Russland greift Ukraine mit Raketen an (17 Tote), Angriffe auf Kiew     | *(Nicht explizit erwähnt)*                                                   | **Lücke bei DEEPSEEK** – GROQ liefert hier kritische Details.                |\n| **Ceuta-Krise**         | Eskalation durch Migrantenstrom in spanische Enklave                    | *(Nicht erwähnt)*                                                            | **Lücke bei DEEPSEEK** – GROQ betont die EU-Perspektive.                     |\n| **Cybersicherheit**     | Schwachstellen in *Thermo Fisher Genetic Analyzers*                     | CISA-Warnung zu Schwachstelle in *Thermo Fisher Applied Biosystems*         | **Konsistent**, aber DEEPSEEK nennt die Behörde (CISA) und technische Details (.fsa/.hid). |\n| **Öl/Geopolitik**       | *(Nicht erwähnt)*                                                       | Ölpreise fallen, USA verhandeln mit Iran über Hormus-Straße                 | **Ergänzung durch DEEPSEEK** – Wichtiger Kontext für Wirtschaft.             |\n| **Trump-Treffen**       | Treffen mit paraguayischem Vizepräsidenten                              | *(Nicht erwähnt)*                                                            | **Lücke bei DEEPSEEK** – GROQ liefert diplomatische Details.                 |\n\n---\n\n### **2. Ergänzungen (DEEPSEEK liefert mehr Tiefe)**\n- **Aktienmarkt**:\n  DEEPSEEK nennt **konkrete Zahlen** (25. Rekord 2026, 42-tägige Pause) – vermutlich aus Finanzdatenquellen wie Bloomberg oder Reuters.\n  *→ GROQ bleibt vage (\"neue Rekorde\").*\n\n- **Cybersicherheit**:\n  DEEPSEEK spezifiziert die **CISA-Warnung** und die betroffenen Dateiformate (.fsa/.hid), was für IT-Sicherheitsexperten relevant ist.\n  *→ GROQ erwähnt nur die Geräteklasse.*\n\n- **Öl/Geopolitik**:\n  DEEPSEEK verbindet **Ölpreise mit US-Iran-Verhandlungen** (Außenminister Rubio, Finanzminister Bessent) – ein zentraler Wirtschaftsfaktor.\n  *→ GROQ übersieht diesen Zusammenhang.*\n\n---\n\n### **3. Widersprüche oder Lücken**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Mögliche Erklärung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|\n| **HTX-Sanktionen**      | US-Regierung sanktioniert Crypto-Exchange *HTX*                         | *(Nicht erwähnt)*                                                            | **Widerspruch**: DEEPSEEK ignoriert das Thema, obwohl es für Tech/Finanzsektor relevant ist. |\n| **Hitzewelle Europa**   | Hitzewelle in Frankreich/Europa                                         | *(Nicht erwähnt)*                                                            | **Lücke bei DEEPSEEK** – Klimathemen werden vernachlässigt.                           |\n| **Japan/Yen-Sicherheit**| Pressemitteilung zur Yen-Sicherheit                                     | *(Nicht erwähnt)*                                                            | **Lücke bei DEEPSEEK** – GROQ liefert Nischen-News.                                  |\n| **Alex Eala (Tennis)**  | Sieg in Toronto                                                         | *(Nicht erwähnt)*                                                            | **Lücke bei DEEPSEEK** – Sport wird ignoriert.                                        |\n\n---\n\n### **4. Bewertung der Quellenqualität**\n- **GROQ**:\n  - **Stärken**: Breiter Überblick (Politik, Krieg, Klima, Sport), gute internationale Abdeckung (Ceuta, Ukraine, Japan).\n  - **Schwächen**: Oberflächlich bei Wirtschaft (keine Zahlen zu Aktien/Rekorden) und Cybersicherheit (keine CISA-Erwähnung).\n\n- **DEEPSEEK**:\n  - **Stärken**: **Tiefere Analyse** in Finanzen (Aktien, Öl, Geopolitik) und Cybersicherheit (technische Details).\n  - **Schwächen**: **Ignoriert wichtige Themen** wie Ukraine-Krieg, Ceuta-Krise, Klimawandel und Sport – obwohl diese in den Rohdaten enthalten sein dürften.\n\n---\n\n### **5. Empfehlung für Nutzer**\n- **Für Finanz- und Tech-Interessierte**: **DEEPSEEK** liefert präzisere Daten (z. B. CISA-Warnung, Ölpreise).\n- **Für politische/globale Übersicht**: **GROQ** ist breiter aufgestellt (Krieg, Migration, Klima).\n- **Kritische Lücken**:\n  - Beide KIs verpassen die **HTX-Sanktionen** (wichtig für Krypto-Investoren).\n  - **Ukraine-Krieg** wird von DEEPSEEK komplett ignoriert – obwohl es sich um eine der wichtigsten Nachrichten handelt.\n\n---\n\n### **6. \"Fingerklopfen\"-Ergebnis**\n- **Konsistenz**: ~70% (Übereinstimmung bei Fed, Aktien, Cybersicherheit).\n- **Ergänzungen**: DEEPSEEK liefert **mehr Tiefe in Finanzen/Tech**, GROQ **mehr Breite in Politik/Krieg**.\n- **Widersprüche/Lücken**: ~30% (HTX, Ukraine, Klima, Sport).\n- **Fazit**: **Kombination beider KIs** wäre ideal – DEEPSEEK für harte Daten, GROQ für globale Kontexte. Einzelne Themen (z. B. Ukraine) sollten **manuell verifiziert** werden (z. B. über Reuters oder AP).\n\n---\n**Hinweis**: Da beide KIs auf denselben Rohdaten basieren, deuten die Lücken darauf hin, dass die **Priorisierung der Themen** unterschiedlich erfolgt. DEEPSEEK scheint **wirtschafts- und techlastiger** zu filtern, während GROQ **politische und humanitäre Themen** bevorzugt.",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Erhöhte Nachfrage durch Extremwetter und geopolitische Unsicherheiten in Schlüsselregionen wie dem Persischen Golf."
+        "reason": "Stabilisierung der Ölpreise durch US-Iran-Verhandlungen und anhaltende Nachfrage."
       }
     ],
     "flop_5_sells": [
@@ -1786,16 +1854,16 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Politische Instabilität in Nordafrika und anhaltende Migrationskrisen belasten die Wachstumsaussichten."
+        "reason": "Geopolitische Risiken (Ukraine-Krieg, Hormus-Straße) belasten exportabhängige Volkswirtschaften."
       }
     ]
   },
-  "timestamp": "2026-08-04T08:26:39.769757+00:00",
+  "timestamp": "2026-08-05T08:23:59.082756+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-04T08:24:41.122074+00:00",
+    "timestamp": "2026-08-05T08:22:02.412457+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
+    "feeds_successful": 114,
+    "feeds_failed": 110,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -1807,7 +1875,7 @@
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
     "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (51 Nodes)",
+    "graph_merge_status": "SUCCESS (53 Nodes)",
     "errors": []
   },
   "delta": {
@@ -1815,14 +1883,14 @@
     "ampel_prev": "GELB",
     "ampel_now": "GELB",
     "ampel_changed": false,
-    "geoscore_prev": 72,
+    "geoscore_prev": 75,
     "geoscore_now": 75,
-    "geoscore_delta": 3,
+    "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 49,
-    "nodes_now": 51,
+    "nodes_prev": 51,
+    "nodes_now": 53,
     "hotspots_now": 8,
-    "summary": "Geoscore 72 → 75 (+3) · Graph-Knoten 49 → 51"
+    "summary": "Graph-Knoten 51 → 53"
   }
 }
