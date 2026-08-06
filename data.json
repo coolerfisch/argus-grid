@@ -1,171 +1,122 @@
 {
-  "overall_geoscore": 75,
-  "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Geopolitische Spannungen (Ukraine, Persischer Golf) und wirtschaftliche Volatilität (Ölpreise, Cybersicherheit) erfordern erhöhte Wachsamkeit, ohne akute Eskalation.",
-  "daily_executive_summary": "Die globale Lage am 05.08.2026 ist geprägt von einer Mischung aus wirtschaftlicher Erholung und geopolitischen Spannungen. Die US-Notenbank genehmigte die Übernahme von Coastal Bend Bancshares, während die Aktienmärkte mit dem 25. Rekordhoch des Jahres eine Phase der Stabilisierung signalisieren. Gleichzeitig eskaliert der Ukraine-Krieg mit gezielten russischen Raketenangriffen auf zivile Infrastruktur, darunter Tankstellen. Im Persischen Golf verhandeln die USA mit dem Iran über die Öffnung der Hormus-Straße, was die Ölpreise vorübergehend entspannt. Cybersicherheitswarnungen zu Schwachstellen in genetischen Analysegeräten von Thermo Fisher unterstreichen die anhaltenden Risiken für kritische Infrastruktur. Die Migrationskrise in Ceuta und die diplomatischen Aktivitäten der USA (Trump-Treffen) runden ein komplexes Bild ab.",
-  "daily_executive_summary_simple": "Die Weltwirtschaft zeigt sich stabil, aber Kriege und politische Konflikte sorgen für Unsicherheit. Die USA und der Iran verhandeln über sichere Schifffahrtsrouten, während Russland die Ukraine weiter angreift. Gleichzeitig warnen Behörden vor Hackerangriffen auf medizinische Geräte. Die Börsen feiern neue Rekorde, aber die Lage bleibt angespannt.",
+  "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
+  "daily_executive_summary": "Hier ist die **Kreuzprüfung („Fingerklopfen“)** der von GROQ und DEEPSEEK bereitgestellten Nachrichten für den **06.08.2026** – mit Fokus auf **Konsistenz, Plausibilität und strategische Relevanz**. Die Analyse erfolgt nach Themenblöcken und bewertet mögliche Widersprüche, Auslassungen oder übersehene Zusammenhänge.\n\n---\n\n### **1. Politik & Wirtschaft**\n#### **a) US-Wirtschaftsprognose (Fed)**\n- **GROQ**: Fed prognostiziert **1,2 % BIP-Wachstum im Q2 2026**.\n  - *Plausibilität*: Niedriges Wachstum passt zu Szenarien einer **„Stagnationsfalle“** (hohe Zinsen, schwache Investitionen, Schuldenlas...",
+  "daily_executive_summary_simple": "Hier ist die **Kreuzprüfung („Fingerklopfen“)** der von GROQ und DEEPSEEK bereitgestellten Nachrichten für den **06.08.2026** – mit Fokus auf **Konsistenz, Plausibilität und strategische Relevanz**. Die Analyse erfolgt nach Themenblöcken und bewertet mögliche Widersprüche, Auslassungen oder übersehene Zusammenhänge.\n\n---\n\n### **1. Politik & Wirtsch...",
   "key_takeaways": [
-    "US-Aktienmärkte erreichen 25. Rekordhoch 2026 – wirtschaftliche Erholung trotz geopolitischer Risiken.",
-    "Russland intensiviert Raketenangriffe auf die Ukraine, zivile Ziele im Fokus.",
-    "USA und Iran verhandeln über die Hormus-Straße – Ölpreise reagieren mit leichten Verlusten.",
-    "Schwere Cybersicherheitslücke in Thermo Fisher-Geräten könnte DNA-Analysedaten verfälschen.",
-    "Migrationsdruck in Ceuta eskaliert – EU steht unter Handlungsdruck."
+    "GROQ**: Fed prognostiziert **1,2 % BIP-Wachstum im Q2 2026**.",
+    "Plausibilität*: Niedriges Wachstum passt zu Szenarien einer **„Stagnationsfalle“** (hohe Zinsen, schwache Investitionen, Schuldenlast). Konsistent mit früheren Fed-Signalen (z. B. Powell-Reden 2025).",
+    "Fehlende Kontextualisierung*: Keine Erwähnung von **Inflationstrends** oder Arbeitsmarktdaten. DEEPSEEK erwähnt dies nicht – **Lücke**.",
+    "Strategische Relevanz*: **Hoch** – Signal für globale Konjunkturabkühlung (Risiko für EU/Asien).",
+    "GROQ**: Gouverneur Blakeman fordert, Bürgermeister Mamdani bei **9/11-Gedenkfeier zu ignorieren**."
   ],
-  "market_regime": "Fragmentiert / Volatil",
-  "top_risk": "Geopolitische Spannungen & Cybersicherheit",
-  "equity_rotation": {
-    "top5_buys": [
-      {
-        "ticker": "XLE",
-        "name": "Energy Select Sector",
-        "asset": "Energie",
-        "reason": "Stabilisierung der Ölpreise durch US-Iran-Verhandlungen und anhaltende Nachfrage."
-      }
-    ],
-    "flop5_sells": [
-      {
-        "ticker": "EEM",
-        "name": "Emerging Markets",
-        "asset": "Schwellenländer",
-        "reason": "Geopolitische Risiken (Ukraine-Krieg, Hormus-Straße) belasten exportabhängige Volkswirtschaften."
-      }
-    ]
-  },
-  "domestic_policy_matrix": [
-    {
-      "region": "USA",
-      "stability": "GELB",
-      "dynamics": "Wirtschaftliche Erholung (Rekordbörsen), aber innenpolitische Spannungen (Polizeigewalt, Wahlkampf) und außenpolitische Herausforderungen (Ukraine, Iran)."
-    }
-  ],
-  "historical_precedents": [
-    {
-      "event": "Verhandlungen zwischen USA und Iran zur Sicherung der Hormus-Straße.",
-      "current_event": "Verhandlungen zwischen USA und Iran zur Sicherung der Hormus-Straße.",
-      "historical_analog": "Tankerkrieg im Persischen Golf (1980er) und US-Iran-Spannungen 2019–2020.",
-      "similarity": "Tankerkrieg im Persischen Golf (1980er) und US-Iran-Spannungen 2019–2020.",
-      "takeaway": "Kurzfristige Entspannung möglich, aber langfristige Stabilität unwahrscheinlich ohne diplomatische Lösung."
-    }
-  ],
+  "overall_geoscore": 72,
+  "defcon_level": 3,
+  "market_regime": "Unsicher / Fragmentiert",
+  "top_risk": "Geopolitische Volatilität",
+  "game_theory_analysis": "Hier ist die **Kreuzprüfung („Fingerklopfen“)** der von GROQ und DEEPSEEK bereitgestellten Nachrichten für den **06.08.2026** – mit Fokus auf **Konsistenz, Plausibilität und strategische Relevanz**. Die Analyse erfolgt nach Themenblöcken und bewertet mögliche Widersprüche, Auslassungen oder übersehene Zusammenhänge.\n\n---\n\n### **1. Politik & Wirtschaft**\n#### **a) US-Wirtschaftsprognose (Fed)**\n- **GROQ**: Fed prognostiziert **1,2 % BIP-Wachstum im Q2 2026**.\n  - *Plausibilität*: Niedriges Wachstum passt zu Szenarien einer **„Stagnationsfalle“** (hohe Zinsen, schwache Investitionen, Schuldenlast). Konsistent mit früheren Fed-Signalen (z. B. Powell-Reden 2025).\n  - *Fehlende Kontextualisierung*: Keine Erwähnung von **Inflationstrends** oder Arbeitsmarktdaten. DEEPSEEK erwähnt dies nicht – **Lücke**.\n  - *Strategische Relevanz*: **Hoch** – Signal für globale Konjunkturabkühlung (Risiko für EU/Asien).\n\n#### **b) New York: Konflikt Blakeman vs. Mamdani**\n- **GROQ**: Gouverneur Blakeman fordert, Bürgermeister Mamdani bei **9/11-Gedenkfeier zu ignorieren**.\n  - *Plausibilität*: Politisch brisant, aber **keine Quellenangabe** (welche Medien berichten?). DEEPSEEK erwähnt dies nicht – **mögliche Übertreibung oder lokale Meldung**.\n  - *Hintergrundcheck*: Mamdani (Sozialist, Kritiker der Polizei) und Blakeman (Republikaner) haben **historische Konflikte** (z. B. Budgetstreit 2025). **Konsistent**, aber **keine internationale Relevanz**.\n  - *Bewertung*: **Niedrig** – Lokale US-Politik, kein globaler Impact.\n\n#### **c) EU: Eingefrorene russische Vermögen**\n- **GROQ**: EU erhält **1,4 Mrd. €** aus russischen Vermögen für Ukraine.\n  - *Plausibilität*: **Konsistent** mit EU-Beschlüssen (Juni 2024: Nutzung von Zinserträgen russischer Zentralbankgelder). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Hoch** – Signal an Russland, aber **rechtliche Grauzone** (Sanktionsumgehung?).\n\n---\n\n### **2. Sicherheit & Verteidigung**\n#### **a) US-Konsulatsschließungen**\n- **GROQ**: USA schließen **5 Konsulate** (Kosteneinsparung).\n  - *Plausibilität*: **Konsistent** mit US-Diplomatie-Trends (z. B. Schließungen in Russland 2023, Irak 2024). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Mittel** – Schwächung der Soft Power, aber kein akutes Sicherheitsrisiko.\n  - *Frage*: Welche Standorte? (Nicht genannt – **Transparenzmangel**).\n\n#### **b) Russische Drohnen-Umstrukturierung**\n- **GROQ**: Russland restrukturiert Drohnenstreitkräfte, neuer Kommandeur.\n  - *Plausibilität*: **Konsistent** mit russischen Militärreformen (z. B. Gründung der **„Drohnenarmee“** 2025). DEEPSEEK erwähnt **Schwarzes Meer-Eskalation** – **Zusammenhang möglich** (Drohnen als Antwort auf NATO-Präsenz?).\n  - *Strategische Relevanz*: **Hoch** – Drohnen sind Russlands **Kernwaffe** in der Ukraine (vgl. Angriffe auf Odessa 2026).\n\n#### **c) NATO-Osterweiterung**\n- **GROQ**: NATO erhöht Militärpräsenz in Osteuropa.\n  - *Plausibilität*: **Konsistent** mit **NATO-Gipfel 2026** (Verstärkung der **„Eastern Flank“** nach russischen Drohungen gegen Polen/Baltikum). DEEPSEEK bestätigt dies indirekt durch **Schwarzes Meer-Eskalation**.\n  - *Strategische Relevanz*: **Sehr hoch** – **Risiko einer direkten NATO-Russland-Konfrontation** steigt.\n\n---\n\n### **3. Technologie & Umwelt**\n#### **a) KI-Risikobericht**\n- **GROQ**: Neuer Bericht warnt vor **KI-Risiken für die Gesellschaft**.\n  - *Plausibilität*: **Konsistent** mit **UN-KI-Gipfel 2026** (Debatte über Regulierung). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Mittel** – Keine konkreten Maßnahmen genannt.\n\n#### **b) EU: Bio-LNG/e-LNG für Schifffahrt**\n- **GROQ**: EU-Strategie für **klimaneutrale Schifffahrt**.\n  - *Plausibilität*: **Konsistent** mit **EU-Green Deal 2030** (Fokus auf alternative Kraftstoffe). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Niedrig** – Langfristige Planung, keine akuten Auswirkungen.\n\n#### **c) UN-Klimabericht: Nahrungsmittelkrise**\n- **GROQ**: Klimawandel bedroht **globale Nahrungsmittelproduktion**.\n  - *Plausibilität*: **Konsistent** mit **IPCC-Bericht 2026** (Prognose: Ernteausfälle in Afrika/Asien). DEEPSEEK bestätigt dies durch **Hungerstatistiken**.\n  - *Strategische Relevanz*: **Sehr hoch** – **Migrationsdruck, Konflikte um Ressourcen**.\n\n---\n\n### **4. Gesundheit**\n#### **a) Neue Coronavirus-Variante (WHO)**\n- **GROQ**: WHO warnt vor **neuer Variante in Asien**.\n  - *Plausibilität*: **Konsistent** mit **endemischen Wellen** (vgl. JN.1 2024). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Mittel** – Keine Pandemie-Warnung, aber **Reisebeschränkungen möglich**.\n\n#### **b) Salmonellen in den USA**\n- **GROQ**: Zunahme von **Salmonellen-Infektionen**.\n  - *Plausibilität*: **Konsistent** mit **CDC-Daten** (häufige Ausbrüche durch Lebensmittelkontamination). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Niedrig** – Lokales Gesundheitsproblem.\n\n#### **c) EU: Seltene Krankheiten**\n- **GROQ**: EU-Strategie für **Medikamente gegen seltene Krankheiten**.\n  - *Plausibilität*: **Konsistent** mit **EU-Pharmastrategie 2025**. DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Niedrig** – Langfristige Forschung.\n\n---\n\n### **5. Sonstiges**\n#### **a) Hunger durch Klimawandel/Konflikte**\n- **GROQ**: Zunahme von **akutem Hunger**.\n  - *Plausibilität*: **Konsistent** mit **WFP-Bericht 2026** (Somalia, Sudan, Jemen). DEEPSEEK bestätigt dies.\n  - *Strategische Relevanz*: **Sehr hoch** – **Humanitäre Katastrophe, Instabilität**.\n\n#### **b) EM 2028 in Deutschland/Dänemark",
   "predictive_horizon": {
-    "base_case_probability_pct": 65,
-    "base_case_summary": "Die Ölpreise werden volatil bleiben, abhängig von Fortschritten in den US-Iran-Verhandlungen. Die Ukraine wird weiter unter russischen Angriffen leiden, mit möglichen Gegenoffensiven. Cybersicherheitswarnungen könnten zu verstärkten Regulierungen führen.",
+    "base_case_probability_pct": 55,
+    "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
     "leading_indicators_to_watch": [
-      "Militärische Bewegungen im Persischen Golf",
-      "Anstieg der Cyberangriffe auf kritische Infrastruktur",
-      "Verzögerungen in US-Iran-Gesprächen"
+      "Weitere Eskalationssignale in den Feeds",
+      "Zentralbank-Kommunikation",
+      "Militärische Bewegungen"
     ],
-    "horizon_list": [
-      {
-        "timeframe": "30 Tage",
-        "forecast": "Die Ölpreise werden volatil bleiben, abhängig von Fortschritten in den US-Iran-Verhandlungen. Die Ukraine wird weiter unter russischen Angriffen leiden, mit möglichen Gegenoffensiven. Cybersicherheitswarnungen könnten zu verstärkten Regulierungen führen.",
-        "probability": "Mittel",
-        "early_warning_indicators": [
-          "Militärische Bewegungen im Persischen Golf",
-          "Anstieg der Cyberangriffe auf kritische Infrastruktur",
-          "Verzögerungen in US-Iran-Gesprächen"
-        ]
-      }
-    ]
+    "horizon_list": []
   },
   "conflict_hotspots": [
     {
-      "name": "Persischer Golf",
-      "region": "Persischer Golf",
-      "lat": 26.5,
-      "lon": 53.5,
-      "type": "chokepoint",
-      "intensity": "ROT",
-      "description": "Verhandlungen zwischen USA und Iran über die Öffnung der Hormus-Straße, einer der wichtigsten Ölhandelsrouten. Militärische Präsenz beider Seiten erhöht Eskalationsrisiko.",
-      "impact": "Störungen könnten globale Ölpreise um 10–20% steigen lassen und Lieferketten belasten.",
-      "lng": 53.5
-    },
-    {
-      "name": "Ukraine (Kiew & Ostukraine)",
-      "region": "Ukraine",
-      "lat": 50.45,
-      "lon": 30.52,
-      "type": "conflict",
-      "intensity": "ROT",
-      "description": "Russland setzt vermehrt Raketenangriffe auf zivile Infrastruktur ein, darunter Tankstellen und Energieanlagen. Ukraine bereitet Gegenoffensiven vor.",
-      "impact": "Humanitäre Krise verschärft sich, europäische Energieversorgung unter Druck.",
-      "lng": 30.52
-    },
-    {
-      "name": "Flug PGT21PC",
+      "name": "Flug NSZ2125",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.8413,
-      "lon": 27.2887,
-      "lng": 27.2887,
+      "lat": 43.7366,
+      "lon": 27.2304,
+      "lng": 27.2304,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT21PC | Höhe: 9.8 km | Speed: 868 km/h",
+      "description": "Callsign: NSZ2125 | Höhe: 11.6 km | Speed: 815 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT22QP",
+      "name": "Flug PGT353Z",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.762,
-      "lon": 29.5638,
-      "lng": 29.5638,
+      "lat": 41.5637,
+      "lon": 28.9312,
+      "lng": 28.9312,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT22QP | Höhe: 2.1 km | Speed: 514 km/h",
+      "description": "Callsign: PGT353Z | Höhe: 8.0 km | Speed: 714 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug ADZ4093",
+      "name": "Flug MBU6238",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.9156,
-      "lon": 33.4948,
-      "lng": 33.4948,
+      "lat": 28.8703,
+      "lon": 32.4187,
+      "lng": 32.4187,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ADZ4093 | Höhe: 2.3 km | Speed: 518 km/h",
+      "description": "Callsign: MBU6238 | Höhe: 11.3 km | Speed: 812 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "ADS-B Signal 742824",
+      "name": "Flug 4XCDE",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.288,
-      "lon": 37.2342,
-      "lng": 37.2342,
+      "lat": 32.8118,
+      "lon": 34.9498,
+      "lng": 34.9498,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: Unbekannt | Höhe: 10.1 km | Speed: 835 km/h",
+      "description": "Callsign: 4XCDE | Höhe: 0.7 km | Speed: 183 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA634",
+      "name": "Flug GAF151",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 30.9132,
+      "lon": 35.8159,
+      "lng": 35.8159,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: GAF151 | Höhe: 7.2 km | Speed: 578 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug T7333",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.2175,
-      "lon": 117.7137,
-      "lng": 117.7137,
+      "lat": 23.3068,
+      "lon": 116.5698,
+      "lng": 116.5698,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA634 | Höhe: 12.5 km | Speed: 921 km/h",
+      "description": "Callsign: T7333 | Höhe: 9.5 km | Speed: 949 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug UAE366",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.2869,
-      "lon": 118.0215,
-      "lng": 118.0215,
+      "lat": 23.7889,
+      "lon": 119.9946,
+      "lng": 119.9946,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAE366 | Höhe: 12.5 km | Speed: 910 km/h",
+      "description": "Callsign: UAE366 | Höhe: 7.4 km | Speed: 680 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
+  "historical_precedents": [],
+  "domestic_policy_matrix": [],
+  "equity_rotation": {
+    "top5_buys": [],
+    "flop5_sells": []
+  },
   "graph_network": {
     "nodes": [
       {
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-05"
       },
@@ -173,7 +124,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-05"
       },
@@ -213,7 +164,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-05"
       },
@@ -221,7 +172,7 @@
         "id": "eu",
         "label": "EU",
         "group": "staat",
-        "val": 17,
+        "val": 16,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-04"
       },
@@ -245,7 +196,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 20,
+        "val": 19,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-05"
       },
@@ -261,7 +212,7 @@
         "id": "fed",
         "label": "Fed",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-03"
       },
@@ -325,7 +276,7 @@
         "id": "cyber_risiko",
         "label": "Cyber-Sicherheit",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-26",
         "last_seen": "2026-08-04"
       },
@@ -469,7 +420,7 @@
         "id": "marokko",
         "label": "Marokko",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-04"
       },
@@ -477,7 +428,7 @@
         "id": "spanien",
         "label": "Spanien",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-04"
       },
@@ -509,7 +460,7 @@
         "id": "ceuta",
         "label": "Ceuta",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-02",
         "last_seen": "2026-08-05"
       },
@@ -557,7 +508,7 @@
         "id": "ceuta_krise",
         "label": "Ceuta-Krise",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-04",
         "last_seen": "2026-08-04"
       },
@@ -565,7 +516,7 @@
         "id": "prologis_segro",
         "label": "Prologis-Segro",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-04",
         "last_seen": "2026-08-04"
       },
@@ -573,7 +524,7 @@
         "id": "thermo_fisher",
         "label": "Thermo Fisher",
         "group": "tech",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-05",
         "last_seen": "2026-08-05"
       },
@@ -581,7 +532,7 @@
         "id": "hormus",
         "label": "Hormus-Straße",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-05",
         "last_seen": "2026-08-05"
       }
@@ -1824,14 +1775,14 @@
     ]
   },
   "simple_key_takeaways": [
-    "US-Aktienmärkte erreichen 25. Rekordhoch 2026 – wirtschaftliche Erholung trotz geopolitischer Risiken.",
-    "Russland intensiviert Raketenangriffe auf die Ukraine, zivile Ziele im Fokus.",
-    "USA und Iran verhandeln über die Hormus-Straße – Ölpreise reagieren mit leichten Verlusten.",
-    "Schwere Cybersicherheitslücke in Thermo Fisher-Geräten könnte DNA-Analysedaten verfälschen.",
-    "Migrationsdruck in Ceuta eskaliert – EU steht unter Handlungsdruck."
+    "GROQ**: Fed prognostiziert **1,2 % BIP-Wachstum im Q2 2026**.",
+    "Plausibilität*: Niedriges Wachstum passt zu Szenarien einer **„Stagnationsfalle“** (hohe Zinsen, schwache Investitionen, Schuldenlast). Konsistent mit früheren Fed-Signalen (z. B. Powell-Reden 2025).",
+    "Fehlende Kontextualisierung*: Keine Erwähnung von **Inflationstrends** oder Arbeitsmarktdaten. DEEPSEEK erwähnt dies nicht – **Lücke**.",
+    "Strategische Relevanz*: **Hoch** – Signal für globale Konjunkturabkühlung (Risiko für EU/Asien).",
+    "GROQ**: Gouverneur Blakeman fordert, Bürgermeister Mamdani bei **9/11-Gedenkfeier zu ignorieren**."
   ],
   "geoscore": {
-    "current_score": 75,
+    "current_score": 72,
     "status": "Erhöht"
   },
   "defcon": 3,
@@ -1839,31 +1790,16 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "Hier ist die **Kreuzprüfung (\"Fingerklopfen\")** der beiden KI-Zusammenfassungen (GROQ vs. DEEPSEEK) für den **05.08.2026**, inklusive Bewertung der Konsistenz, Ergänzungen und potenzieller Widersprüche:\n\n---\n\n### **1. Übereinstimmungen (hohe Konsistenz)**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Fed-Entscheidung**    | Genehmigung der Übernahme durch *Coastal Bend Bancshares, Inc.*         | Übernahme durch *Coastal Bend Bancshares, Inc.* genehmigt                   | **Identisch** – Faktisch korrekt, Quelle wahrscheinlich identisch (Fed-Pressemitteilung). |\n| **Aktienmärkte**        | \"Aktienmärkte erholten sich, neue Rekorde\"                              | S&P 500: **25. Rekordabschluss 2026**, nach 42-tägiger Pause                | **Konsistent**, aber DEEPSEEK präzisiert mit konkreten Zahlen.                |\n| **Ukraine-Krieg**       | Russland greift Ukraine mit Raketen an (17 Tote), Angriffe auf Kiew     | *(Nicht explizit erwähnt)*                                                   | **Lücke bei DEEPSEEK** – GROQ liefert hier kritische Details.                |\n| **Ceuta-Krise**         | Eskalation durch Migrantenstrom in spanische Enklave                    | *(Nicht erwähnt)*                                                            | **Lücke bei DEEPSEEK** – GROQ betont die EU-Perspektive.                     |\n| **Cybersicherheit**     | Schwachstellen in *Thermo Fisher Genetic Analyzers*                     | CISA-Warnung zu Schwachstelle in *Thermo Fisher Applied Biosystems*         | **Konsistent**, aber DEEPSEEK nennt die Behörde (CISA) und technische Details (.fsa/.hid). |\n| **Öl/Geopolitik**       | *(Nicht erwähnt)*                                                       | Ölpreise fallen, USA verhandeln mit Iran über Hormus-Straße                 | **Ergänzung durch DEEPSEEK** – Wichtiger Kontext für Wirtschaft.             |\n| **Trump-Treffen**       | Treffen mit paraguayischem Vizepräsidenten                              | *(Nicht erwähnt)*                                                            | **Lücke bei DEEPSEEK** – GROQ liefert diplomatische Details.                 |\n\n---\n\n### **2. Ergänzungen (DEEPSEEK liefert mehr Tiefe)**\n- **Aktienmarkt**:\n  DEEPSEEK nennt **konkrete Zahlen** (25. Rekord 2026, 42-tägige Pause) – vermutlich aus Finanzdatenquellen wie Bloomberg oder Reuters.\n  *→ GROQ bleibt vage (\"neue Rekorde\").*\n\n- **Cybersicherheit**:\n  DEEPSEEK spezifiziert die **CISA-Warnung** und die betroffenen Dateiformate (.fsa/.hid), was für IT-Sicherheitsexperten relevant ist.\n  *→ GROQ erwähnt nur die Geräteklasse.*\n\n- **Öl/Geopolitik**:\n  DEEPSEEK verbindet **Ölpreise mit US-Iran-Verhandlungen** (Außenminister Rubio, Finanzminister Bessent) – ein zentraler Wirtschaftsfaktor.\n  *→ GROQ übersieht diesen Zusammenhang.*\n\n---\n\n### **3. Widersprüche oder Lücken**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Mögliche Erklärung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|\n| **HTX-Sanktionen**      | US-Regierung sanktioniert Crypto-Exchange *HTX*                         | *(Nicht erwähnt)*                                                            | **Widerspruch**: DEEPSEEK ignoriert das Thema, obwohl es für Tech/Finanzsektor relevant ist. |\n| **Hitzewelle Europa**   | Hitzewelle in Frankreich/Europa                                         | *(Nicht erwähnt)*                                                            | **Lücke bei DEEPSEEK** – Klimathemen werden vernachlässigt.                           |\n| **Japan/Yen-Sicherheit**| Pressemitteilung zur Yen-Sicherheit                                     | *(Nicht erwähnt)*                                                            | **Lücke bei DEEPSEEK** – GROQ liefert Nischen-News.                                  |\n| **Alex Eala (Tennis)**  | Sieg in Toronto                                                         | *(Nicht erwähnt)*                                                            | **Lücke bei DEEPSEEK** – Sport wird ignoriert.                                        |\n\n---\n\n### **4. Bewertung der Quellenqualität**\n- **GROQ**:\n  - **Stärken**: Breiter Überblick (Politik, Krieg, Klima, Sport), gute internationale Abdeckung (Ceuta, Ukraine, Japan).\n  - **Schwächen**: Oberflächlich bei Wirtschaft (keine Zahlen zu Aktien/Rekorden) und Cybersicherheit (keine CISA-Erwähnung).\n\n- **DEEPSEEK**:\n  - **Stärken**: **Tiefere Analyse** in Finanzen (Aktien, Öl, Geopolitik) und Cybersicherheit (technische Details).\n  - **Schwächen**: **Ignoriert wichtige Themen** wie Ukraine-Krieg, Ceuta-Krise, Klimawandel und Sport – obwohl diese in den Rohdaten enthalten sein dürften.\n\n---\n\n### **5. Empfehlung für Nutzer**\n- **Für Finanz- und Tech-Interessierte**: **DEEPSEEK** liefert präzisere Daten (z. B. CISA-Warnung, Ölpreise).\n- **Für politische/globale Übersicht**: **GROQ** ist breiter aufgestellt (Krieg, Migration, Klima).\n- **Kritische Lücken**:\n  - Beide KIs verpassen die **HTX-Sanktionen** (wichtig für Krypto-Investoren).\n  - **Ukraine-Krieg** wird von DEEPSEEK komplett ignoriert – obwohl es sich um eine der wichtigsten Nachrichten handelt.\n\n---\n\n### **6. \"Fingerklopfen\"-Ergebnis**\n- **Konsistenz**: ~70% (Übereinstimmung bei Fed, Aktien, Cybersicherheit).\n- **Ergänzungen**: DEEPSEEK liefert **mehr Tiefe in Finanzen/Tech**, GROQ **mehr Breite in Politik/Krieg**.\n- **Widersprüche/Lücken**: ~30% (HTX, Ukraine, Klima, Sport).\n- **Fazit**: **Kombination beider KIs** wäre ideal – DEEPSEEK für harte Daten, GROQ für globale Kontexte. Einzelne Themen (z. B. Ukraine) sollten **manuell verifiziert** werden (z. B. über Reuters oder AP).\n\n---\n**Hinweis**: Da beide KIs auf denselben Rohdaten basieren, deuten die Lücken darauf hin, dass die **Priorisierung der Themen** unterschiedlich erfolgt. DEEPSEEK scheint **wirtschafts- und techlastiger** zu filtern, während GROQ **politische und humanitäre Themen** bevorzugt.",
   "stock_picks": {
-    "top_5_buys": [
-      {
-        "ticker": "XLE",
-        "name": "Energy Select Sector",
-        "asset": "Energie",
-        "reason": "Stabilisierung der Ölpreise durch US-Iran-Verhandlungen und anhaltende Nachfrage."
-      }
-    ],
-    "flop_5_sells": [
-      {
-        "ticker": "EEM",
-        "name": "Emerging Markets",
-        "asset": "Schwellenländer",
-        "reason": "Geopolitische Risiken (Ukraine-Krieg, Hormus-Straße) belasten exportabhängige Volkswirtschaften."
-      }
-    ]
+    "top_5_buys": [],
+    "flop_5_sells": []
   },
-  "timestamp": "2026-08-05T08:23:59.082756+00:00",
+  "timestamp": "2026-08-06T08:21:44.674326+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-05T08:22:02.412457+00:00",
+    "timestamp": "2026-08-06T08:19:01.951552+00:00",
     "feeds_total": 224,
-    "feeds_successful": 114,
-    "feeds_failed": 110,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -1872,11 +1808,13 @@
       "qwen-2.5-72b-instruct"
     ],
     "swarm_debate_status": "SUCCESS",
-    "synthesizer_status": "SUCCESS",
+    "synthesizer_status": "ERROR (ReadTimeout)",
     "haiku_status": "HTTP_404",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (7 Signale)",
     "graph_merge_status": "SUCCESS (53 Nodes)",
-    "errors": []
+    "errors": [
+      "Synthesizer Exception: HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=70)"
+    ]
   },
   "delta": {
     "has_previous": true,
@@ -1884,13 +1822,13 @@
     "ampel_now": "GELB",
     "ampel_changed": false,
     "geoscore_prev": 75,
-    "geoscore_now": 75,
-    "geoscore_delta": 0,
+    "geoscore_now": 72,
+    "geoscore_delta": -3,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 51,
+    "nodes_prev": 53,
     "nodes_now": 53,
-    "hotspots_now": 8,
-    "summary": "Graph-Knoten 51 → 53"
+    "hotspots_now": 7,
+    "summary": "Geoscore 75 → 72 (-3)"
   }
 }
