@@ -1,132 +1,198 @@
 {
-  "ampel_status": "GELB",
-  "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "Hier ist die **Kreuzprüfung („Fingerklopfen“)** der von GROQ und DEEPSEEK bereitgestellten Nachrichten für den **06.08.2026** – mit Fokus auf **Konsistenz, Plausibilität und strategische Relevanz**. Die Analyse erfolgt nach Themenblöcken und bewertet mögliche Widersprüche, Auslassungen oder übersehene Zusammenhänge.\n\n---\n\n### **1. Politik & Wirtschaft**\n#### **a) US-Wirtschaftsprognose (Fed)**\n- **GROQ**: Fed prognostiziert **1,2 % BIP-Wachstum im Q2 2026**.\n  - *Plausibilität*: Niedriges Wachstum passt zu Szenarien einer **„Stagnationsfalle“** (hohe Zinsen, schwache Investitionen, Schuldenlas...",
-  "daily_executive_summary_simple": "Hier ist die **Kreuzprüfung („Fingerklopfen“)** der von GROQ und DEEPSEEK bereitgestellten Nachrichten für den **06.08.2026** – mit Fokus auf **Konsistenz, Plausibilität und strategische Relevanz**. Die Analyse erfolgt nach Themenblöcken und bewertet mögliche Widersprüche, Auslassungen oder übersehene Zusammenhänge.\n\n---\n\n### **1. Politik & Wirtsch...",
-  "key_takeaways": [
-    "GROQ**: Fed prognostiziert **1,2 % BIP-Wachstum im Q2 2026**.",
-    "Plausibilität*: Niedriges Wachstum passt zu Szenarien einer **„Stagnationsfalle“** (hohe Zinsen, schwache Investitionen, Schuldenlast). Konsistent mit früheren Fed-Signalen (z. B. Powell-Reden 2025).",
-    "Fehlende Kontextualisierung*: Keine Erwähnung von **Inflationstrends** oder Arbeitsmarktdaten. DEEPSEEK erwähnt dies nicht – **Lücke**.",
-    "Strategische Relevanz*: **Hoch** – Signal für globale Konjunkturabkühlung (Risiko für EU/Asien).",
-    "GROQ**: Gouverneur Blakeman fordert, Bürgermeister Mamdani bei **9/11-Gedenkfeier zu ignorieren**."
-  ],
   "overall_geoscore": 72,
   "defcon_level": 3,
-  "market_regime": "Unsicher / Fragmentiert",
-  "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "Hier ist die **Kreuzprüfung („Fingerklopfen“)** der von GROQ und DEEPSEEK bereitgestellten Nachrichten für den **06.08.2026** – mit Fokus auf **Konsistenz, Plausibilität und strategische Relevanz**. Die Analyse erfolgt nach Themenblöcken und bewertet mögliche Widersprüche, Auslassungen oder übersehene Zusammenhänge.\n\n---\n\n### **1. Politik & Wirtschaft**\n#### **a) US-Wirtschaftsprognose (Fed)**\n- **GROQ**: Fed prognostiziert **1,2 % BIP-Wachstum im Q2 2026**.\n  - *Plausibilität*: Niedriges Wachstum passt zu Szenarien einer **„Stagnationsfalle“** (hohe Zinsen, schwache Investitionen, Schuldenlast). Konsistent mit früheren Fed-Signalen (z. B. Powell-Reden 2025).\n  - *Fehlende Kontextualisierung*: Keine Erwähnung von **Inflationstrends** oder Arbeitsmarktdaten. DEEPSEEK erwähnt dies nicht – **Lücke**.\n  - *Strategische Relevanz*: **Hoch** – Signal für globale Konjunkturabkühlung (Risiko für EU/Asien).\n\n#### **b) New York: Konflikt Blakeman vs. Mamdani**\n- **GROQ**: Gouverneur Blakeman fordert, Bürgermeister Mamdani bei **9/11-Gedenkfeier zu ignorieren**.\n  - *Plausibilität*: Politisch brisant, aber **keine Quellenangabe** (welche Medien berichten?). DEEPSEEK erwähnt dies nicht – **mögliche Übertreibung oder lokale Meldung**.\n  - *Hintergrundcheck*: Mamdani (Sozialist, Kritiker der Polizei) und Blakeman (Republikaner) haben **historische Konflikte** (z. B. Budgetstreit 2025). **Konsistent**, aber **keine internationale Relevanz**.\n  - *Bewertung*: **Niedrig** – Lokale US-Politik, kein globaler Impact.\n\n#### **c) EU: Eingefrorene russische Vermögen**\n- **GROQ**: EU erhält **1,4 Mrd. €** aus russischen Vermögen für Ukraine.\n  - *Plausibilität*: **Konsistent** mit EU-Beschlüssen (Juni 2024: Nutzung von Zinserträgen russischer Zentralbankgelder). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Hoch** – Signal an Russland, aber **rechtliche Grauzone** (Sanktionsumgehung?).\n\n---\n\n### **2. Sicherheit & Verteidigung**\n#### **a) US-Konsulatsschließungen**\n- **GROQ**: USA schließen **5 Konsulate** (Kosteneinsparung).\n  - *Plausibilität*: **Konsistent** mit US-Diplomatie-Trends (z. B. Schließungen in Russland 2023, Irak 2024). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Mittel** – Schwächung der Soft Power, aber kein akutes Sicherheitsrisiko.\n  - *Frage*: Welche Standorte? (Nicht genannt – **Transparenzmangel**).\n\n#### **b) Russische Drohnen-Umstrukturierung**\n- **GROQ**: Russland restrukturiert Drohnenstreitkräfte, neuer Kommandeur.\n  - *Plausibilität*: **Konsistent** mit russischen Militärreformen (z. B. Gründung der **„Drohnenarmee“** 2025). DEEPSEEK erwähnt **Schwarzes Meer-Eskalation** – **Zusammenhang möglich** (Drohnen als Antwort auf NATO-Präsenz?).\n  - *Strategische Relevanz*: **Hoch** – Drohnen sind Russlands **Kernwaffe** in der Ukraine (vgl. Angriffe auf Odessa 2026).\n\n#### **c) NATO-Osterweiterung**\n- **GROQ**: NATO erhöht Militärpräsenz in Osteuropa.\n  - *Plausibilität*: **Konsistent** mit **NATO-Gipfel 2026** (Verstärkung der **„Eastern Flank“** nach russischen Drohungen gegen Polen/Baltikum). DEEPSEEK bestätigt dies indirekt durch **Schwarzes Meer-Eskalation**.\n  - *Strategische Relevanz*: **Sehr hoch** – **Risiko einer direkten NATO-Russland-Konfrontation** steigt.\n\n---\n\n### **3. Technologie & Umwelt**\n#### **a) KI-Risikobericht**\n- **GROQ**: Neuer Bericht warnt vor **KI-Risiken für die Gesellschaft**.\n  - *Plausibilität*: **Konsistent** mit **UN-KI-Gipfel 2026** (Debatte über Regulierung). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Mittel** – Keine konkreten Maßnahmen genannt.\n\n#### **b) EU: Bio-LNG/e-LNG für Schifffahrt**\n- **GROQ**: EU-Strategie für **klimaneutrale Schifffahrt**.\n  - *Plausibilität*: **Konsistent** mit **EU-Green Deal 2030** (Fokus auf alternative Kraftstoffe). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Niedrig** – Langfristige Planung, keine akuten Auswirkungen.\n\n#### **c) UN-Klimabericht: Nahrungsmittelkrise**\n- **GROQ**: Klimawandel bedroht **globale Nahrungsmittelproduktion**.\n  - *Plausibilität*: **Konsistent** mit **IPCC-Bericht 2026** (Prognose: Ernteausfälle in Afrika/Asien). DEEPSEEK bestätigt dies durch **Hungerstatistiken**.\n  - *Strategische Relevanz*: **Sehr hoch** – **Migrationsdruck, Konflikte um Ressourcen**.\n\n---\n\n### **4. Gesundheit**\n#### **a) Neue Coronavirus-Variante (WHO)**\n- **GROQ**: WHO warnt vor **neuer Variante in Asien**.\n  - *Plausibilität*: **Konsistent** mit **endemischen Wellen** (vgl. JN.1 2024). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Mittel** – Keine Pandemie-Warnung, aber **Reisebeschränkungen möglich**.\n\n#### **b) Salmonellen in den USA**\n- **GROQ**: Zunahme von **Salmonellen-Infektionen**.\n  - *Plausibilität*: **Konsistent** mit **CDC-Daten** (häufige Ausbrüche durch Lebensmittelkontamination). DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Niedrig** – Lokales Gesundheitsproblem.\n\n#### **c) EU: Seltene Krankheiten**\n- **GROQ**: EU-Strategie für **Medikamente gegen seltene Krankheiten**.\n  - *Plausibilität*: **Konsistent** mit **EU-Pharmastrategie 2025**. DEEPSEEK erwähnt dies nicht – **Auslassung**.\n  - *Strategische Relevanz*: **Niedrig** – Langfristige Forschung.\n\n---\n\n### **5. Sonstiges**\n#### **a) Hunger durch Klimawandel/Konflikte**\n- **GROQ**: Zunahme von **akutem Hunger**.\n  - *Plausibilität*: **Konsistent** mit **WFP-Bericht 2026** (Somalia, Sudan, Jemen). DEEPSEEK bestätigt dies.\n  - *Strategische Relevanz*: **Sehr hoch** – **Humanitäre Katastrophe, Instabilität**.\n\n#### **b) EM 2028 in Deutschland/Dänemark",
-  "predictive_horizon": {
-    "base_case_probability_pct": 55,
-    "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
-    "leading_indicators_to_watch": [
-      "Weitere Eskalationssignale in den Feeds",
-      "Zentralbank-Kommunikation",
-      "Militärische Bewegungen"
+  "ampel_status": "GELB",
+  "ampel_reason_simple": "Erhöhte geopolitische Spannungen, regulatorische Eskalationen und spezifische Cyberrisiken erfordern erhöhte Wachsamkeit, ohne akute Systemkrise.",
+  "daily_executive_summary": "Die globale Lage am 07.08.2026 ist geprägt von einer Mischung aus finanzieller Volatilität, regulatorischen Verschärfungen und anhaltenden geopolitischen Konflikten. Die Halbleiterbranche verzeichnet eine Korrektur nach enttäuschenden Quartalszahlen von Micron, Sandisk und Western Digital, während die Federal Reserve mit der Genehmigung von Coastal Bend Bancshares weiterhin eine vorsichtige Geldpolitik signalisiert. Die EU verschärft den Druck auf Tech-Konzerne mit einer Rekordstrafe von 567 Mio. USD gegen Meta wegen Verstößen gegen Kinder- und Jugendschutz. Im Cyberbereich stellt eine kritische Schwachstelle in der Medizintechnik-Software RadiAnt DICOM ein akutes Risiko dar. Geopolitisch eskaliert der Ukraine-Krieg mit gezielten Angriffen auf die russische Rüstungsindustrie und einem russischen Angriff auf Getreidefrachter im Schwarzen Meer, was die globale Nahrungsmittelversorgung bedroht. Naturkatastrophen bleiben vorerst begrenzt, da die NOAA keine Hurrikans in den nächsten sieben Tagen prognostiziert.",
+  "daily_executive_summary_simple": "Die Welt ist aktuell etwas unruhiger als normal. An den Börsen gibt es Turbulenzen, besonders bei Computerchips-Herstellern. Die EU hat Meta (Facebook) eine hohe Strafe auferlegt, weil das Unternehmen zu wenig für den Schutz von Kindern tut. In der Ukraine geht der Krieg weiter, mit Angriffen auf Fabriken und Schiffe. Gleichzeitig gibt es eine gefährliche Sicherheitslücke in einer Software, die Ärzte nutzen. Zum Glück sind vorerst keine schweren Stürme in Sicht.",
+  "key_takeaways": [
+    "Halbleiterbranche unter Druck: Quartalszahlen von Micron, Sandisk und Western Digital führen zu Kursverlusten.",
+    "EU verschärft Regulierung: Meta muss 567 Mio. USD Strafe wegen Verstößen gegen Kinder- und Jugendschutz zahlen (kumuliert 942 Mio. USD).",
+    "Kritische Cyber-Schwachstelle in RadiAnt DICOM (Medizintechnik) ermöglicht potenzielle Angriffe auf Gesundheitssysteme.",
+    "Ukraine-Krieg eskaliert: Gezielte Angriffe auf russische Rüstungsindustrie und Getreidefrachter im Schwarzen Meer.",
+    "Geldpolitik bleibt vorsichtig: Federal Reserve genehmigt Bankenfusion, während die Halbleiterkorrektur auf makroökonomische Unsicherheiten hindeutet."
+  ],
+  "market_regime": "Volatil",
+  "top_risk": "Geopolitische Spannungen & Lieferketten",
+  "equity_rotation": {
+    "top5_buys": [
+      {
+        "ticker": "XLE",
+        "name": "Energy Select Sector",
+        "asset": "Energie",
+        "reason": "Energieaktien profitieren von anhaltenden geopolitischen Risiken und stabilen Ölpreisen trotz Halbleiterkorrektur."
+      }
     ],
-    "horizon_list": []
+    "flop5_sells": [
+      {
+        "ticker": "EEM",
+        "name": "Emerging Markets",
+        "asset": "Schwellenländer",
+        "reason": "Schwellenländer leiden unter globaler Unsicherheit, regulatorischen Risiken und schwacher Nachfrage nach Halbleitern."
+      }
+    ]
+  },
+  "domestic_policy_matrix": [
+    {
+      "region": "USA",
+      "stability": "GELB",
+      "dynamics": "Vorsichtige Geldpolitik der Federal Reserve, aber erhöhte regulatorische und geopolitische Risiken belasten die Stabilität."
+    },
+    {
+      "region": "EU",
+      "stability": "GELB",
+      "dynamics": "Verschärfte Tech-Regulierung (Meta-Strafe) und anhaltende Ukraine-Krise erhöhen den Druck auf die politische Stabilität."
+    },
+    {
+      "region": "Ukraine",
+      "stability": "ROT",
+      "dynamics": "Militärische Eskalation mit gezielten Angriffen auf russische Infrastruktur und Getreideexporte."
+    }
+  ],
+  "historical_precedents": [
+    {
+      "event": "Meta wird von der EU mit einer Rekordstrafe belegt, nachdem Verstöße gegen Kinder- und Jugendschutz festgestellt wurden.",
+      "current_event": "Meta wird von der EU mit einer Rekordstrafe belegt, nachdem Verstöße gegen Kinder- und Jugendschutz festgestellt wurden.",
+      "historical_analog": "EU-Datenschutzstrafen gegen Google (2019: 50 Mio. EUR) und Amazon (2021: 746 Mio. EUR) wegen Verstößen gegen die DSGVO.",
+      "similarity": "EU-Datenschutzstrafen gegen Google (2019: 50 Mio. EUR) und Amazon (2021: 746 Mio. EUR) wegen Verstößen gegen die DSGVO.",
+      "takeaway": "Die EU setzt ihre harte Linie gegen Tech-Giganten fort, was langfristig zu strengeren Compliance-Anforderungen führen könnte."
+    },
+    {
+      "event": "Micron, Sandisk und Western Digital verzeichnen Kursverluste nach schwachen Quartalszahlen.",
+      "current_event": "Micron, Sandisk und Western Digital verzeichnen Kursverluste nach schwachen Quartalszahlen.",
+      "historical_analog": "Halbleiter-Crash 2022/2023 nach Überproduktion und sinkender Nachfrage (z. B. bei Nvidia und AMD).",
+      "similarity": "Halbleiter-Crash 2022/2023 nach Überproduktion und sinkender Nachfrage (z. B. bei Nvidia und AMD).",
+      "takeaway": "Investoren sollten sich auf anhaltende Volatilität im Halbleitersektor einstellen, da die Branche zyklisch bleibt."
+    }
+  ],
+  "predictive_horizon": {
+    "base_case_probability_pct": 65,
+    "base_case_summary": "Die geopolitischen Spannungen im Schwarzen Meer und die regulatorischen Maßnahmen gegen Tech-Konzerne werden anhalten. Die Halbleiterbranche könnte sich stabilisieren, sofern keine weiteren negativen Quartalszahlen folgen. Cyberrisiken bleiben hoch, insbesondere im Gesundheitssektor.",
+    "leading_indicators_to_watch": [
+      "Weitere militärische Eskalationen im Schwarzen Meer oder Angriffe auf kritische Infrastruktur in der Ukraine.",
+      "Neue Quartalszahlen von Halbleiterunternehmen, die auf eine anhaltende Nachfrageschwäche hindeuten.",
+      "Offizielle Stellungnahmen der Federal Reserve oder der EZB zur Geldpolitik, die auf eine Zinswende hindeuten."
+    ],
+    "horizon_list": [
+      {
+        "timeframe": "30 Tage",
+        "forecast": "Die geopolitischen Spannungen im Schwarzen Meer und die regulatorischen Maßnahmen gegen Tech-Konzerne werden anhalten. Die Halbleiterbranche könnte sich stabilisieren, sofern keine weiteren negativen Quartalszahlen folgen. Cyberrisiken bleiben hoch, insbesondere im Gesundheitssektor.",
+        "probability": "Hoch",
+        "early_warning_indicators": [
+          "Weitere militärische Eskalationen im Schwarzen Meer oder Angriffe auf kritische Infrastruktur in der Ukraine.",
+          "Neue Quartalszahlen von Halbleiterunternehmen, die auf eine anhaltende Nachfrageschwäche hindeuten.",
+          "Offizielle Stellungnahmen der Federal Reserve oder der EZB zur Geldpolitik, die auf eine Zinswende hindeuten."
+        ]
+      }
+    ]
   },
   "conflict_hotspots": [
     {
-      "name": "Flug NSZ2125",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 43.7366,
-      "lon": 27.2304,
-      "lng": 27.2304,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: NSZ2125 | Höhe: 11.6 km | Speed: 815 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug PGT353Z",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.5637,
-      "lon": 28.9312,
-      "lng": 28.9312,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: PGT353Z | Höhe: 8.0 km | Speed: 714 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug MBU6238",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 28.8703,
-      "lon": 32.4187,
-      "lng": 32.4187,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: MBU6238 | Höhe: 11.3 km | Speed: 812 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug 4XCDE",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 32.8118,
-      "lon": 34.9498,
-      "lng": 34.9498,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: 4XCDE | Höhe: 0.7 km | Speed: 183 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug GAF151",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 30.9132,
-      "lon": 35.8159,
-      "lng": 35.8159,
-      "type": "flight",
+      "name": "Schwarzes Meer (Ukraine-Konflikt)",
+      "region": "Schwarzes Meer",
+      "lat": 44.0,
+      "lon": 35.0,
+      "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Callsign: GAF151 | Höhe: 7.2 km | Speed: 578 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+      "description": "Russische Angriffe auf ukrainische Getreidefrachter und gezielte Operationen der Ukraine gegen russische Rüstungsindustrie.",
+      "impact": "Bedrohung der globalen Nahrungsmittelversorgung und Eskalation des Krieges mit potenziellen Auswirkungen auf Energie- und Handelsrouten.",
+      "lng": 35.0
     },
     {
-      "name": "Flug T7333",
-      "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.3068,
-      "lon": 116.5698,
-      "lng": 116.5698,
+      "name": "Persischer Golf",
+      "region": "Persischer Golf",
+      "lat": 26.5,
+      "lon": 53.5,
+      "type": "chokepoint",
+      "intensity": "GELB",
+      "description": "Anhaltende Spannungen zwischen Iran und westlichen Staaten, aber keine akuten militärischen Auseinandersetzungen.",
+      "impact": "Potenzielle Unterbrechung der Öl- und Gaslieferungen, falls sich die Lage verschärft.",
+      "lng": 53.5
+    },
+    {
+      "name": "Flug PGT41LW",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 40.9276,
+      "lon": 32.1658,
+      "lng": 32.1658,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: T7333 | Höhe: 9.5 km | Speed: 949 km/h",
+      "description": "Callsign: PGT41LW | Höhe: 10.4 km | Speed: 782 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UAE366",
-      "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.7889,
-      "lon": 119.9946,
-      "lng": 119.9946,
+      "name": "Flug PGT82MC",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 42.6313,
+      "lon": 26.0357,
+      "lng": 26.0357,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAE366 | Höhe: 7.4 km | Speed: 680 km/h",
+      "description": "Callsign: PGT82MC | Höhe: 11.6 km | Speed: 814 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug PGT749",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 35.497,
+      "lon": 34.9972,
+      "lng": 34.9972,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: PGT749 | Höhe: 11.6 km | Speed: 802 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug FCA1MA",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 35.1518,
+      "lon": 32.6457,
+      "lng": 32.6457,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: FCA1MA | Höhe: 7.9 km | Speed: 630 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug THA671",
+      "region": "Taiwan-Straße / Ostasien",
+      "lat": 21.1594,
+      "lon": 117.1829,
+      "lng": 117.1829,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: THA671 | Höhe: 12.2 km | Speed: 941 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug UAL852",
+      "region": "Taiwan-Straße / Ostasien",
+      "lat": 24.8415,
+      "lon": 122.68,
+      "lng": 122.68,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: UAL852 | Höhe: 7.0 km | Speed: 902 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
-  "historical_precedents": [],
-  "domestic_policy_matrix": [],
-  "equity_rotation": {
-    "top5_buys": [],
-    "flop5_sells": []
-  },
   "graph_network": {
     "nodes": [
       {
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 21,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-05"
+        "last_seen": "2026-08-07"
       },
       {
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 21,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-05"
+        "last_seen": "2026-08-07"
       },
       {
         "id": "saudi",
@@ -164,17 +230,17 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 21,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-05"
+        "last_seen": "2026-08-07"
       },
       {
         "id": "eu",
         "label": "EU",
         "group": "staat",
-        "val": 16,
+        "val": 19,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-04"
+        "last_seen": "2026-08-07"
       },
       {
         "id": "cyber",
@@ -196,9 +262,9 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 19,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-05"
+        "last_seen": "2026-08-07"
       },
       {
         "id": "cisa",
@@ -212,7 +278,7 @@
         "id": "fed",
         "label": "Fed",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-03"
       },
@@ -276,7 +342,7 @@
         "id": "cyber_risiko",
         "label": "Cyber-Sicherheit",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-26",
         "last_seen": "2026-08-04"
       },
@@ -420,7 +486,7 @@
         "id": "marokko",
         "label": "Marokko",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-04"
       },
@@ -428,7 +494,7 @@
         "id": "spanien",
         "label": "Spanien",
         "group": "staat",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-04"
       },
@@ -460,7 +526,7 @@
         "id": "ceuta",
         "label": "Ceuta",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-02",
         "last_seen": "2026-08-05"
       },
@@ -492,9 +558,9 @@
         "id": "cyberrisiko",
         "label": "Cyberrisiko",
         "group": "risiko",
-        "val": 3,
+        "val": 6,
         "first_seen": "2026-08-03",
-        "last_seen": "2026-08-03"
+        "last_seen": "2026-08-07"
       },
       {
         "id": "federal_reserve",
@@ -508,7 +574,7 @@
         "id": "ceuta_krise",
         "label": "Ceuta-Krise",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-04",
         "last_seen": "2026-08-04"
       },
@@ -524,7 +590,7 @@
         "id": "thermo_fisher",
         "label": "Thermo Fisher",
         "group": "tech",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-05",
         "last_seen": "2026-08-05"
       },
@@ -532,9 +598,25 @@
         "id": "hormus",
         "label": "Hormus-Straße",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-05",
         "last_seen": "2026-08-05"
+      },
+      {
+        "id": "meta",
+        "label": "Meta",
+        "group": "organisation",
+        "val": 6,
+        "first_seen": "2026-08-07",
+        "last_seen": "2026-08-07"
+      },
+      {
+        "id": "halbleiter",
+        "label": "Halbleiter",
+        "group": "tech",
+        "val": 7,
+        "first_seen": "2026-08-07",
+        "last_seen": "2026-08-07"
       }
     ],
     "edges": [
@@ -543,8 +625,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Verhandlungen",
-        "last_seen": "2026-08-05"
+        "label": "Konflikt",
+        "last_seen": "2026-08-07"
       },
       {
         "from": "usa",
@@ -799,8 +881,8 @@
         "to": "russland",
         "source": "ukraine",
         "target": "russland",
-        "label": "Militärische Angriffe",
-        "last_seen": "2026-08-02"
+        "label": "Krieg",
+        "last_seen": "2026-08-07"
       },
       {
         "from": "usa",
@@ -1153,6 +1235,38 @@
         "target": "eu",
         "label": "Migrationsdruck",
         "last_seen": "2026-08-05"
+      },
+      {
+        "from": "eu",
+        "to": "meta",
+        "source": "eu",
+        "target": "meta",
+        "label": "Regulierung",
+        "last_seen": "2026-08-07"
+      },
+      {
+        "from": "usa",
+        "to": "halbleiter",
+        "source": "usa",
+        "target": "halbleiter",
+        "label": "Wirtschaft",
+        "last_seen": "2026-08-07"
+      },
+      {
+        "from": "cyberrisiko",
+        "to": "usa",
+        "source": "cyberrisiko",
+        "target": "usa",
+        "label": "Bedrohung",
+        "last_seen": "2026-08-07"
+      },
+      {
+        "from": "cyberrisiko",
+        "to": "eu",
+        "source": "cyberrisiko",
+        "target": "eu",
+        "label": "Bedrohung",
+        "last_seen": "2026-08-07"
       }
     ],
     "links": [
@@ -1161,8 +1275,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Verhandlungen",
-        "last_seen": "2026-08-05"
+        "label": "Konflikt",
+        "last_seen": "2026-08-07"
       },
       {
         "from": "usa",
@@ -1417,8 +1531,8 @@
         "to": "russland",
         "source": "ukraine",
         "target": "russland",
-        "label": "Militärische Angriffe",
-        "last_seen": "2026-08-02"
+        "label": "Krieg",
+        "last_seen": "2026-08-07"
       },
       {
         "from": "usa",
@@ -1771,15 +1885,47 @@
         "target": "eu",
         "label": "Migrationsdruck",
         "last_seen": "2026-08-05"
+      },
+      {
+        "from": "eu",
+        "to": "meta",
+        "source": "eu",
+        "target": "meta",
+        "label": "Regulierung",
+        "last_seen": "2026-08-07"
+      },
+      {
+        "from": "usa",
+        "to": "halbleiter",
+        "source": "usa",
+        "target": "halbleiter",
+        "label": "Wirtschaft",
+        "last_seen": "2026-08-07"
+      },
+      {
+        "from": "cyberrisiko",
+        "to": "usa",
+        "source": "cyberrisiko",
+        "target": "usa",
+        "label": "Bedrohung",
+        "last_seen": "2026-08-07"
+      },
+      {
+        "from": "cyberrisiko",
+        "to": "eu",
+        "source": "cyberrisiko",
+        "target": "eu",
+        "label": "Bedrohung",
+        "last_seen": "2026-08-07"
       }
     ]
   },
   "simple_key_takeaways": [
-    "GROQ**: Fed prognostiziert **1,2 % BIP-Wachstum im Q2 2026**.",
-    "Plausibilität*: Niedriges Wachstum passt zu Szenarien einer **„Stagnationsfalle“** (hohe Zinsen, schwache Investitionen, Schuldenlast). Konsistent mit früheren Fed-Signalen (z. B. Powell-Reden 2025).",
-    "Fehlende Kontextualisierung*: Keine Erwähnung von **Inflationstrends** oder Arbeitsmarktdaten. DEEPSEEK erwähnt dies nicht – **Lücke**.",
-    "Strategische Relevanz*: **Hoch** – Signal für globale Konjunkturabkühlung (Risiko für EU/Asien).",
-    "GROQ**: Gouverneur Blakeman fordert, Bürgermeister Mamdani bei **9/11-Gedenkfeier zu ignorieren**."
+    "Halbleiterbranche unter Druck: Quartalszahlen von Micron, Sandisk und Western Digital führen zu Kursverlusten.",
+    "EU verschärft Regulierung: Meta muss 567 Mio. USD Strafe wegen Verstößen gegen Kinder- und Jugendschutz zahlen (kumuliert 942 Mio. USD).",
+    "Kritische Cyber-Schwachstelle in RadiAnt DICOM (Medizintechnik) ermöglicht potenzielle Angriffe auf Gesundheitssysteme.",
+    "Ukraine-Krieg eskaliert: Gezielte Angriffe auf russische Rüstungsindustrie und Getreidefrachter im Schwarzen Meer.",
+    "Geldpolitik bleibt vorsichtig: Federal Reserve genehmigt Bankenfusion, während die Halbleiterkorrektur auf makroökonomische Unsicherheiten hindeutet."
   ],
   "geoscore": {
     "current_score": 72,
@@ -1790,45 +1936,58 @@
     "level": 3,
     "label": "DEFCON 3"
   },
+  "game_theory_analysis": "Hier ist eine **Kreuzprüfung („Fingerklopfen“)** der beiden Datensätze (GROQ vs. DEEPSEEK) für den **07.08.2026**, um Konsistenz, Widersprüche oder Ergänzungen zu identifizieren:\n\n---\n\n### **1. Finanzmärkte & Konjunktur**\n- **GROQ**: Keine spezifischen Meldungen zu Halbleitern oder Geldpolitik, aber allgemeine Wirtschaftsthemen (Siemens, VW, Porsche).\n- **DEEPSEEK**:\n  - **Halbleiter-Korrektur** (Micron, Sandisk, Western Digital) → **Konsistenzcheck**:\n    - *Frage*: Gab es am 07.08.2026 tatsächlich Quartalszahlen dieser Unternehmen?\n    - *Hinweis*: Falls ja, wäre dies ein **neues, nicht in GROQ erfasstes Thema** (mögliche Lücke in GROQ).\n  - **Geldpolitik („After the great deleveraging“)** → **Konsistenzcheck**:\n    - *Frage*: Wurde die FT-Analyse in anderen Quellen aufgegriffen?\n    - *Hinweis*: GROQ erwähnt keine geldpolitischen Signale – **mögliche Ergänzung durch DEEPSEEK**.\n\n**Fazit**: DEEPSEEK liefert **spezifischere Finanzmarkt-Insights**, die in GROQ fehlen.\n\n---\n\n### **2. Regulierung & Recht (Meta-Strafzahlung)**\n- **GROQ**: Keine Erwähnung von Meta oder EU-Regulierung.\n- **DEEPSEEK**: **567 Mio. USD Strafe für Meta** (Kinder-/Jugendschutz) + kumuliert 942 Mio. USD.\n  - **Konsistenzcheck**:\n    - *Frage*: Gab es am 07.08.2026 eine offizielle EU-Entscheidung?\n    - *Hinweis*: Falls ja, wäre dies ein **wichtiges regulatorisches Ereignis**, das in GROQ fehlt.\n    - *Vergleich*: GROQ erwähnt zwar „Datenschutz“, aber keine konkreten Strafen.\n\n**Fazit**: DEEPSEEK liefert **konkrete rechtliche Entwicklungen**, die in GROQ nicht abgebildet sind.\n\n---\n\n### **3. Cyber-Sicherheit (Medizintechnik)**\n- **GROQ**: Allgemeine Erwähnung von „Cyberangriffen“ und „Datenschutz“, aber keine Details.\n- **DEEPSEEK**: **Kritische Lücke in RadiAnt DICOM** (Medizintechnik-Software).\n  - **Konsistenzcheck**:\n    - *Frage*: Wurde die Schwachstelle am 07.08.2026 öffentlich bekannt?\n    - *Hinweis*: Falls ja, wäre dies ein **kritisches Sicherheitsrisiko**, das in GROQ fehlt.\n\n**Fazit**: DEEPSEEK identifiziert eine **spezifische, hochrelevante Bedrohung**, die in GROQ nicht auftaucht.\n\n---\n\n### **4. Geopolitik & Ukraine-Krieg**\n- **GROQ**: Allgemeine Erwähnung von „internationalen Konflikten“ (USA, China, Russland, Ukraine).\n- **DEEPSEEK**:\n  - **Selenskyjs Operation gegen russische Rüstungsindustrie**.\n  - **Angriff auf Getreidefrachter im Schwarzen Meer**.\n  - **Konsistenzcheck**:\n    - *Frage*: Wurden diese Ereignisse in anderen Quellen bestätigt?\n    - *Hinweis*: GROQ erwähnt zwar die Ukraine, aber keine **konkreten militärischen Aktionen** oder Eskalationen.\n\n**Fazit**: DEEPSEEK liefert **taktische Details**, während GROQ nur generische Konfliktthemen nennt.\n\n---\n\n### **5. Naturkatastrophen & Wetter**\n- **GROQ**: Allgemeine Erwähnung von „Waldbränden, Dürre, Erderwärmung“.\n- **DEEPSEEK**: **NOAA-Prognose: Keine Hurrikans in den nächsten 7 Tagen**.\n  - **Konsistenzcheck**:\n    - *Frage*: Gab es am 07.08.2026 eine offizielle NOAA-Warnung?\n    - *Hinweis*: GROQ erwähnt keine **konkreten Wettervorhersagen**.\n\n**Fazit**: DEEPSEEK liefert **präzise Wetterdaten**, während GROQ nur allgemeine Klimathemen abdeckt.\n\n---\n\n### **Zusammenfassung der Kreuzprüfung**\n| **Thema**               | **GROQ**                          | **DEEPSEEK**                          | **Bewertung**                                                                 |\n|-------------------------|-----------------------------------|---------------------------------------|------------------------------------------------------------------------------|\n| **Finanzmärkte**        | Allgemein (Siemens, VW)           | Spezifisch (Halbleiter, Geldpolitik)  | **DEEPSEEK detaillierter** (mögliche Lücke in GROQ).                        |\n| **Regulierung (Meta)**  | Keine Erwähnung                   | 567 Mio. USD Strafe                   | **DEEPSEEK liefert konkrete Rechtsnews**.                                   |\n| **Cyber-Sicherheit**    | Allgemein (Cyberangriffe)         | Kritische Lücke in Medizintechnik     | **DEEPSEEK identifiziert spezifische Bedrohung**.                           |\n| **Ukraine-Krieg**       | Allgemein (Konflikte)             | Taktische Operationen & Angriffe      | **DEEPSEEK liefert militärische Details**.                                  |\n| **Wetter**              | Klimathemen (Dürre, Waldbrände)   | NOAA-Prognose (keine Hurrikans)       | **DEEPSEEK präziser**.                                                      |\n\n---\n\n### **Mögliche Schlussfolgerungen**\n1. **GROQ** bietet eine **breite, aber oberflächliche Übersicht** (viele Themen, wenig Tiefe).\n2. **DEEPSEEK** liefert **spezifische, handlungsrelevante Informationen** (Finanzmärkte, Recht, Sicherheit, Geopolitik, Wetter).\n3. **Lücken in GROQ**:\n   - Keine konkreten Finanzmarkt- oder Regulierungsmeldungen.\n   - Keine taktischen Details zum Ukraine-Krieg.\n   - Keine spezifischen Cyber-Sicherheitswarnungen.\n4. **Empfehlung**:\n   - Für **strategische Analysen** (z. B. Investitionen, Sicherheit) ist **DEEPSEEK überlegen**.\n   - Für **allgemeine Nachrichtenübersichten** reicht **GROQ** aus.\n   - **Kombination beider Quellen** würde die beste Abdeckung bieten.\n\n---\n\n### **Offene Fragen für weitere Prüfung**\n- **Quellenvalidierung**:\n  - Sind die DEEPSEEK-Meldungen (z. B. Meta-Strafe, DICOM-Lücke) in anderen offiziellen Quellen (Reuters, Bloomberg, EU-Pressemitteilungen) bestätigt?\n- **Zeitliche Konsistenz**:\n  - Handelt es sich bei den DEEPSEEK-Daten um **Echtzeit-Meldungen** oder **retrospektive Analysen**?\n- **Thematische Priorisierung**:\n  - Warum fehlen in GROQ so viele **wirtschafts- und sicherheitsrelevante Themen**?\n\nFalls du Zugang zu weiteren Quellen hast (z. B. Reuters, Bloomberg, offizielle Regierungsmeldungen), könnte eine **dritte Validierungsebene** die Genauigkeit erhöhen.",
   "stock_picks": {
-    "top_5_buys": [],
-    "flop_5_sells": []
+    "top_5_buys": [
+      {
+        "ticker": "XLE",
+        "name": "Energy Select Sector",
+        "asset": "Energie",
+        "reason": "Energieaktien profitieren von anhaltenden geopolitischen Risiken und stabilen Ölpreisen trotz Halbleiterkorrektur."
+      }
+    ],
+    "flop_5_sells": [
+      {
+        "ticker": "EEM",
+        "name": "Emerging Markets",
+        "asset": "Schwellenländer",
+        "reason": "Schwellenländer leiden unter globaler Unsicherheit, regulatorischen Risiken und schwacher Nachfrage nach Halbleitern."
+      }
+    ]
   },
-  "timestamp": "2026-08-06T08:21:44.674326+00:00",
+  "timestamp": "2026-08-07T07:03:38.973531+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-06T08:19:01.951552+00:00",
+    "timestamp": "2026-08-07T07:01:57.326553+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 112,
+    "feeds_failed": 112,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
       "Groq (Llama-3.3)",
-      "DeepSeek",
-      "qwen-2.5-72b-instruct"
+      "qwen-2.5-72b-instruct",
+      "DeepSeek"
     ],
     "swarm_debate_status": "SUCCESS",
-    "synthesizer_status": "ERROR (ReadTimeout)",
+    "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
-    "opensky_status": "SUCCESS (7 Signale)",
-    "graph_merge_status": "SUCCESS (53 Nodes)",
-    "errors": [
-      "Synthesizer Exception: HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=70)"
-    ]
+    "opensky_status": "SUCCESS (6 Signale)",
+    "graph_merge_status": "SUCCESS (55 Nodes)",
+    "errors": []
   },
   "delta": {
     "has_previous": true,
     "ampel_prev": "GELB",
     "ampel_now": "GELB",
     "ampel_changed": false,
-    "geoscore_prev": 75,
+    "geoscore_prev": 72,
     "geoscore_now": 72,
-    "geoscore_delta": -3,
+    "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
     "nodes_prev": 53,
-    "nodes_now": 53,
-    "hotspots_now": 7,
-    "summary": "Geoscore 75 → 72 (-3)"
+    "nodes_now": 55,
+    "hotspots_now": 8,
+    "summary": "Graph-Knoten 53 → 55"
   }
 }
