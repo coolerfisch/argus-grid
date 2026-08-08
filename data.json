@@ -2,33 +2,81 @@
   "overall_geoscore": 72,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte geopolitische Spannungen, regulatorische Eskalationen und spezifische Cyberrisiken erfordern erhöhte Wachsamkeit, ohne akute Systemkrise.",
-  "daily_executive_summary": "Die globale Lage am 07.08.2026 ist geprägt von einer Mischung aus finanzieller Volatilität, regulatorischen Verschärfungen und anhaltenden geopolitischen Konflikten. Die Halbleiterbranche verzeichnet eine Korrektur nach enttäuschenden Quartalszahlen von Micron, Sandisk und Western Digital, während die Federal Reserve mit der Genehmigung von Coastal Bend Bancshares weiterhin eine vorsichtige Geldpolitik signalisiert. Die EU verschärft den Druck auf Tech-Konzerne mit einer Rekordstrafe von 567 Mio. USD gegen Meta wegen Verstößen gegen Kinder- und Jugendschutz. Im Cyberbereich stellt eine kritische Schwachstelle in der Medizintechnik-Software RadiAnt DICOM ein akutes Risiko dar. Geopolitisch eskaliert der Ukraine-Krieg mit gezielten Angriffen auf die russische Rüstungsindustrie und einem russischen Angriff auf Getreidefrachter im Schwarzen Meer, was die globale Nahrungsmittelversorgung bedroht. Naturkatastrophen bleiben vorerst begrenzt, da die NOAA keine Hurrikans in den nächsten sieben Tagen prognostiziert.",
-  "daily_executive_summary_simple": "Die Welt ist aktuell etwas unruhiger als normal. An den Börsen gibt es Turbulenzen, besonders bei Computerchips-Herstellern. Die EU hat Meta (Facebook) eine hohe Strafe auferlegt, weil das Unternehmen zu wenig für den Schutz von Kindern tut. In der Ukraine geht der Krieg weiter, mit Angriffen auf Fabriken und Schiffe. Gleichzeitig gibt es eine gefährliche Sicherheitslücke in einer Software, die Ärzte nutzen. Zum Glück sind vorerst keine schweren Stürme in Sicht.",
+  "ampel_reason_simple": "Geopolitische Spannungen, wirtschaftliche Unsicherheit und akute Sicherheitsrisiken erfordern erhöhte Wachsamkeit, ohne unmittelbare Eskalation zu einem globalen Konflikt.",
+  "daily_executive_summary": "Die globale Lage am 08.08.2026 ist geprägt von einer Mischung aus wirtschaftlichen Herausforderungen, geopolitischen Spannungen und akuten Sicherheitsrisiken. In den USA eskaliert der politische Druck auf die Federal Reserve, während gleichzeitig eine neue Cyber-Schwachstelle in kritischer Infrastruktur ausgenutzt wird. Die Beziehungen zwischen den USA und dem Iran bleiben angespannt, und in Europa verschärft sich die Migrationskrise, insbesondere in der spanischen Exklave Ceuta. Wirtschaftlich zeigt sich eine Fragmentierung, wobei Handelskonflikte zwischen den USA und China sowie eine Verlangsamung des globalen Wachstums dominieren. Klimabedingte Extremwetterereignisse und technologische Entwicklungen wie KI und Quantencomputing bleiben zentrale Themen, die langfristige Auswirkungen auf Sicherheit und Wirtschaft haben.",
+  "daily_executive_summary_simple": "Die Welt ist aktuell unsicher, aber nicht in einem akuten Krisenzustand. Es gibt viele Konflikte, wie zwischen den USA und dem Iran, und wirtschaftliche Probleme, etwa durch Handelsstreitigkeiten. Gleichzeitig gibt es neue Cyber-Gefahren und eine wachsende Migrationskrise in Europa. Die Wirtschaft wächst langsamer, und der Klimawandel sorgt für mehr Naturkatastrophen. Technologien wie KI entwickeln sich schnell, was Chancen und Risiken mit sich bringt.",
   "key_takeaways": [
-    "Halbleiterbranche unter Druck: Quartalszahlen von Micron, Sandisk und Western Digital führen zu Kursverlusten.",
-    "EU verschärft Regulierung: Meta muss 567 Mio. USD Strafe wegen Verstößen gegen Kinder- und Jugendschutz zahlen (kumuliert 942 Mio. USD).",
-    "Kritische Cyber-Schwachstelle in RadiAnt DICOM (Medizintechnik) ermöglicht potenzielle Angriffe auf Gesundheitssysteme.",
-    "Ukraine-Krieg eskaliert: Gezielte Angriffe auf russische Rüstungsindustrie und Getreidefrachter im Schwarzen Meer.",
-    "Geldpolitik bleibt vorsichtig: Federal Reserve genehmigt Bankenfusion, während die Halbleiterkorrektur auf makroökonomische Unsicherheiten hindeutet."
+    "Politische Einflussnahme auf die US-Notenbank (Fed) nimmt zu, was die Unabhängigkeit der Geldpolitik gefährdet.",
+    "Aktive Ausnutzung einer kritischen Schwachstelle in Progress LoadMaster erhöht das Risiko von Cyberangriffen auf Infrastruktur.",
+    "Geopolitische Spannungen im Persischen Golf und zwischen den USA und China bleiben hoch, mit potenziellen Auswirkungen auf globale Lieferketten.",
+    "Migrationsdruck in Europa verschärft sich, insbesondere an den Außengrenzen wie in Ceuta.",
+    "Klimakrise und technologische Entwicklungen (KI, Quantencomputing) dominieren langfristige Risikodiskussionen."
   ],
-  "market_regime": "Volatil",
-  "top_risk": "Geopolitische Spannungen & Lieferketten",
+  "market_regime": "Fragmentiert / Volatil",
+  "top_risk": "Cyberangriffe & politische Einflussnahme auf Finanzsysteme",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Energieaktien profitieren von anhaltenden geopolitischen Risiken und stabilen Ölpreisen trotz Halbleiterkorrektur."
+        "reason": "Geopolitische Spannungen im Persischen Golf und Unsicherheiten in globalen Lieferketten stützen die Ölpreise und begünstigen Energieaktien."
+      },
+      {
+        "ticker": "GLD",
+        "name": "SPDR Gold Trust",
+        "asset": "Edelmetalle",
+        "reason": "Gold profitiert von Unsicherheit in der Geldpolitik und geopolitischen Risiken als sicherer Hafen."
+      },
+      {
+        "ticker": "BNDX",
+        "name": "Vanguard Total International Bond ETF",
+        "asset": "Internationale Anleihen",
+        "reason": "Diversifikation in stabile Währungen und Anleihenmärkte als Absicherung gegen US-Dollar-Schwäche."
+      },
+      {
+        "ticker": "CYBR",
+        "name": "First Trust NASDAQ Cybersecurity ETF",
+        "asset": "Cybersicherheit",
+        "reason": "Zunehmende Cyberbedrohungen treiben die Nachfrage nach Sicherheitslösungen an."
+      },
+      {
+        "ticker": "ICLN",
+        "name": "iShares Global Clean Energy ETF",
+        "asset": "Erneuerbare Energien",
+        "reason": "Langfristige Klimaziele und staatliche Förderprogramme unterstützen den Sektor."
       }
     ],
     "flop5_sells": [
       {
         "ticker": "EEM",
-        "name": "Emerging Markets",
+        "name": "iShares MSCI Emerging Markets ETF",
         "asset": "Schwellenländer",
-        "reason": "Schwellenländer leiden unter globaler Unsicherheit, regulatorischen Risiken und schwacher Nachfrage nach Halbleitern."
+        "reason": "Handelskonflikte, politische Instabilität und schwache Wachstumsaussichten belasten die Performance."
+      },
+      {
+        "ticker": "EWG",
+        "name": "iShares MSCI Germany ETF",
+        "asset": "Deutschland",
+        "reason": "Wirtschaftliche Schwäche in der EU, Energiekrise und politische Unsicherheit drücken auf den Markt."
+      },
+      {
+        "ticker": "FXI",
+        "name": "iShares China Large-Cap ETF",
+        "asset": "China",
+        "reason": "Handelskonflikte mit den USA, regulatorische Risiken und schwache Binnenkonjunktur belasten chinesische Aktien."
+      },
+      {
+        "ticker": "XLU",
+        "name": "Utilities Select Sector SPDR Fund",
+        "asset": "Versorger",
+        "reason": "Zinsrisiken und regulatorische Unsicherheiten machen den Sektor unattraktiv."
+      },
+      {
+        "ticker": "ARKK",
+        "name": "ARK Innovation ETF",
+        "asset": "Innovation/Technologie",
+        "reason": "Hohe Bewertungen und makroökonomische Unsicherheit führen zu erhöhter Volatilität."
       }
     ]
   },
@@ -36,143 +84,197 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Vorsichtige Geldpolitik der Federal Reserve, aber erhöhte regulatorische und geopolitische Risiken belasten die Stabilität."
+      "dynamics": "Politische Polarisierung und Versuche, die Fed zu instrumentalisieren, untergraben das Vertrauen in Institutionen. Gleichzeitig belasten Cyberrisiken und soziale Spannungen die innere Sicherheit."
     },
     {
       "region": "EU",
       "stability": "GELB",
-      "dynamics": "Verschärfte Tech-Regulierung (Meta-Strafe) und anhaltende Ukraine-Krise erhöhen den Druck auf die politische Stabilität."
+      "dynamics": "Migrationskrise und wirtschaftliche Fragmentierung setzen die EU unter Druck. Klimapolitik und Sicherheitsfragen dominieren die Agenda, während die Beziehungen zu Großbritannien angespannt bleiben."
     },
     {
-      "region": "Ukraine",
+      "region": "China",
+      "stability": "GELB",
+      "dynamics": "Handelskonflikte mit den USA und schwache Binnenkonjunktur belasten die Wirtschaft. Technologische Eigenständigkeit und geopolitische Spannungen prägen die Politik."
+    },
+    {
+      "region": "Russland/Ukraine",
       "stability": "ROT",
-      "dynamics": "Militärische Eskalation mit gezielten Angriffen auf russische Infrastruktur und Getreideexporte."
+      "dynamics": "Anhaltende militärische Auseinandersetzungen, insbesondere Raketenangriffe auf die Ukraine, verschärfen die humanitäre Krise und destabilisieren die Region."
+    },
+    {
+      "region": "Iran",
+      "stability": "ROT",
+      "dynamics": "Konflikte mit den USA und regionalen Akteuren, kombiniert mit wirtschaftlicher Isolation, führen zu innerer Instabilität und externen Spannungen."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Meta wird von der EU mit einer Rekordstrafe belegt, nachdem Verstöße gegen Kinder- und Jugendschutz festgestellt wurden.",
-      "current_event": "Meta wird von der EU mit einer Rekordstrafe belegt, nachdem Verstöße gegen Kinder- und Jugendschutz festgestellt wurden.",
-      "historical_analog": "EU-Datenschutzstrafen gegen Google (2019: 50 Mio. EUR) und Amazon (2021: 746 Mio. EUR) wegen Verstößen gegen die DSGVO.",
-      "similarity": "EU-Datenschutzstrafen gegen Google (2019: 50 Mio. EUR) und Amazon (2021: 746 Mio. EUR) wegen Verstößen gegen die DSGVO.",
-      "takeaway": "Die EU setzt ihre harte Linie gegen Tech-Giganten fort, was langfristig zu strengeren Compliance-Anforderungen führen könnte."
+      "event": "Präsident Trump versucht erneut, die Fed-Gouverneurin Lisa Cook zu entlassen, um die Zentralbank mit politischen Verbündeten zu besetzen.",
+      "current_event": "Präsident Trump versucht erneut, die Fed-Gouverneurin Lisa Cook zu entlassen, um die Zentralbank mit politischen Verbündeten zu besetzen.",
+      "historical_analog": "Präsident Andrew Jackson vs. die Second Bank of the United States (1830er Jahre)",
+      "similarity": "Präsident Andrew Jackson vs. die Second Bank of the United States (1830er Jahre)",
+      "takeaway": "Historisch führte politische Einflussnahme auf Zentralbanken zu wirtschaftlicher Instabilität und Vertrauensverlust in Institutionen. Dies könnte sich wiederholen, falls die Fed ihre Unabhängigkeit verliert."
     },
     {
-      "event": "Micron, Sandisk und Western Digital verzeichnen Kursverluste nach schwachen Quartalszahlen.",
-      "current_event": "Micron, Sandisk und Western Digital verzeichnen Kursverluste nach schwachen Quartalszahlen.",
-      "historical_analog": "Halbleiter-Crash 2022/2023 nach Überproduktion und sinkender Nachfrage (z. B. bei Nvidia und AMD).",
-      "similarity": "Halbleiter-Crash 2022/2023 nach Überproduktion und sinkender Nachfrage (z. B. bei Nvidia und AMD).",
-      "takeaway": "Investoren sollten sich auf anhaltende Volatilität im Halbleitersektor einstellen, da die Branche zyklisch bleibt."
+      "event": "Aktive Ausnutzung der Schwachstelle CVE-2026-8037 in Progress LoadMaster durch Cyberkriminelle.",
+      "current_event": "Aktive Ausnutzung der Schwachstelle CVE-2026-8037 in Progress LoadMaster durch Cyberkriminelle.",
+      "historical_analog": "Stuxnet-Angriff auf iranische Nuklearanlagen (2010)",
+      "similarity": "Stuxnet-Angriff auf iranische Nuklearanlagen (2010)",
+      "takeaway": "Cyberangriffe auf Infrastruktur können zu erheblichen Störungen führen und erfordern verstärkte Investitionen in Cybersicherheit sowie internationale Absprachen zur Eindämmung."
+    },
+    {
+      "event": "Spanien führt Grenzkontrollen für Reisende aus Italien ein, nachdem Tausende Migranten in Ceuta ankamen.",
+      "current_event": "Spanien führt Grenzkontrollen für Reisende aus Italien ein, nachdem Tausende Migranten in Ceuta ankamen.",
+      "historical_analog": "Europäische Migrationskrise (2015/2016)",
+      "similarity": "Europäische Migrationskrise (2015/2016)",
+      "takeaway": "Migrationsbewegungen können zu politischen Spaltungen führen und erfordern langfristige Lösungen, um humanitäre Krisen und innereuropäische Konflikte zu vermeiden."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Die geopolitischen Spannungen im Schwarzen Meer und die regulatorischen Maßnahmen gegen Tech-Konzerne werden anhalten. Die Halbleiterbranche könnte sich stabilisieren, sofern keine weiteren negativen Quartalszahlen folgen. Cyberrisiken bleiben hoch, insbesondere im Gesundheitssektor.",
+    "base_case_summary": "Die geopolitischen Spannungen im Persischen Golf könnten zu einer Eskalation führen, insbesondere wenn weitere Angriffe auf Schiffe oder Infrastruktur erfolgen. Gleichzeitig könnte die politische Einflussnahme auf die Fed zu erhöhter Volatilität an den Finanzmärkten führen. Die Migrationskrise in Europa wird sich voraussichtlich verschärfen, mit möglichen Auswirkungen auf die politische Stabilität in Schlüsselstaaten wie Deutschland und Frankreich.",
     "leading_indicators_to_watch": [
-      "Weitere militärische Eskalationen im Schwarzen Meer oder Angriffe auf kritische Infrastruktur in der Ukraine.",
-      "Neue Quartalszahlen von Halbleiterunternehmen, die auf eine anhaltende Nachfrageschwäche hindeuten.",
-      "Offizielle Stellungnahmen der Federal Reserve oder der EZB zur Geldpolitik, die auf eine Zinswende hindeuten."
+      "Zunahme von Cyberangriffen auf kritische Infrastruktur",
+      "Weitere Versuche der politischen Einflussnahme auf die Fed oder andere Zentralbanken",
+      "Anstieg der Migrationszahlen an den EU-Außengrenzen",
+      "Militärische Zwischenfälle im Persischen Golf oder Südchinesischen Meer",
+      "Verschärfung der Handelskonflikte zwischen den USA und China"
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Die geopolitischen Spannungen im Schwarzen Meer und die regulatorischen Maßnahmen gegen Tech-Konzerne werden anhalten. Die Halbleiterbranche könnte sich stabilisieren, sofern keine weiteren negativen Quartalszahlen folgen. Cyberrisiken bleiben hoch, insbesondere im Gesundheitssektor.",
+        "forecast": "Die geopolitischen Spannungen im Persischen Golf könnten zu einer Eskalation führen, insbesondere wenn weitere Angriffe auf Schiffe oder Infrastruktur erfolgen. Gleichzeitig könnte die politische Einflussnahme auf die Fed zu erhöhter Volatilität an den Finanzmärkten führen. Die Migrationskrise in Europa wird sich voraussichtlich verschärfen, mit möglichen Auswirkungen auf die politische Stabilität in Schlüsselstaaten wie Deutschland und Frankreich.",
         "probability": "Hoch",
         "early_warning_indicators": [
-          "Weitere militärische Eskalationen im Schwarzen Meer oder Angriffe auf kritische Infrastruktur in der Ukraine.",
-          "Neue Quartalszahlen von Halbleiterunternehmen, die auf eine anhaltende Nachfrageschwäche hindeuten.",
-          "Offizielle Stellungnahmen der Federal Reserve oder der EZB zur Geldpolitik, die auf eine Zinswende hindeuten."
+          "Zunahme von Cyberangriffen auf kritische Infrastruktur",
+          "Weitere Versuche der politischen Einflussnahme auf die Fed oder andere Zentralbanken",
+          "Anstieg der Migrationszahlen an den EU-Außengrenzen",
+          "Militärische Zwischenfälle im Persischen Golf oder Südchinesischen Meer",
+          "Verschärfung der Handelskonflikte zwischen den USA und China"
+        ]
+      },
+      {
+        "timeframe": "90 Tage",
+        "forecast": "Falls die politische Einflussnahme auf die Fed anhält, könnte dies zu einer Vertrauenskrise in den US-Dollar und globale Finanzmärkte führen. Die Klimakrise könnte zu weiteren Extremwetterereignissen führen, die Lieferketten und Nahrungsmittelversorgung beeinträchtigen. Technologische Fortschritte in KI und Quantencomputing könnten neue Sicherheitsrisiken schaffen, insbesondere im Bereich Cyberkriegführung.",
+        "probability": "Mittel",
+        "early_warning_indicators": [
+          "Signifikante Schwankungen an den Devisenmärkten, insbesondere beim US-Dollar",
+          "Zunahme von Klimakatastrophen mit globalen Auswirkungen",
+          "Berichte über Durchbrüche in Quantencomputing oder KI, die Sicherheitslücken schaffen",
+          "Politische Unruhen in Schwellenländern aufgrund wirtschaftlicher Instabilität"
         ]
       }
     ]
   },
   "conflict_hotspots": [
     {
-      "name": "Schwarzes Meer (Ukraine-Konflikt)",
-      "region": "Schwarzes Meer",
-      "lat": 44.0,
-      "lon": 35.0,
-      "type": "chokepoint",
-      "intensity": "ROT",
-      "description": "Russische Angriffe auf ukrainische Getreidefrachter und gezielte Operationen der Ukraine gegen russische Rüstungsindustrie.",
-      "impact": "Bedrohung der globalen Nahrungsmittelversorgung und Eskalation des Krieges mit potenziellen Auswirkungen auf Energie- und Handelsrouten.",
-      "lng": 35.0
-    },
-    {
       "name": "Persischer Golf",
       "region": "Persischer Golf",
       "lat": 26.5,
       "lon": 53.5,
       "type": "chokepoint",
-      "intensity": "GELB",
-      "description": "Anhaltende Spannungen zwischen Iran und westlichen Staaten, aber keine akuten militärischen Auseinandersetzungen.",
-      "impact": "Potenzielle Unterbrechung der Öl- und Gaslieferungen, falls sich die Lage verschärft.",
+      "intensity": "ROT",
+      "description": "Anhaltende Spannungen zwischen den USA und dem Iran, kombiniert mit Angriffen auf Schiffe und Infrastruktur, gefährden die globale Ölversorgung. Die Straße von Hormus bleibt ein kritischer Engpass für den Welthandel.",
+      "impact": "Eine Eskalation könnte zu einem sprunghaften Anstieg der Ölpreise führen, was globale Lieferketten und die Wirtschaft belastet. Zudem besteht das Risiko einer direkten militärischen Konfrontation.",
       "lng": 53.5
     },
     {
-      "name": "Flug PGT41LW",
+      "name": "Ukraine",
+      "region": "Osteuropa",
+      "lat": 49.0,
+      "lon": 32.0,
+      "type": "conflict",
+      "intensity": "ROT",
+      "description": "Russland setzt seine Raketenangriffe auf die Ukraine fort, während die ukrainischen Streitkräfte mit schwindenden Ressourcen kämpfen. Die humanitäre Lage verschlechtert sich weiter.",
+      "impact": "Eine weitere Eskalation könnte zu einer direkten NATO-Beteiligung führen, was das Risiko eines größeren europäischen Konflikts erhöht. Zudem drohen Nahrungsmittelknappheiten durch gestörte Getreideexporte.",
+      "lng": 32.0
+    },
+    {
+      "name": "Südchinesisches Meer",
+      "region": "Südostasien",
+      "lat": 12.0,
+      "lon": 114.0,
+      "type": "chokepoint",
+      "intensity": "GELB",
+      "description": "China verstärkt seine militärischen Aktivitäten im Südchinesischen Meer, während die USA und Verbündete mit Freiheit der Schifffahrt-Operationen reagieren. Die Spannungen um territoriale Ansprüche bleiben hoch.",
+      "impact": "Eine militärische Konfrontation könnte den globalen Handel beeinträchtigen, da ein Drittel des Welthandels durch diese Region verläuft. Zudem könnte dies zu einer weiteren Militarisierung der Region führen.",
+      "lng": 114.0
+    },
+    {
+      "name": "Ceuta/Melilla",
+      "region": "Nordafrika/Europa",
+      "lat": 35.9,
+      "lon": -5.3,
+      "type": "refugee",
+      "intensity": "GELB",
+      "description": "Tausende Migranten versuchen, über die spanischen Exklaven Ceuta und Melilla nach Europa zu gelangen. Spanien hat Grenzkontrollen eingeführt, um den Zustrom zu begrenzen.",
+      "impact": "Die Migrationskrise könnte zu politischen Spannungen innerhalb der EU führen, insbesondere zwischen Ländern mit unterschiedlichen Ansätzen zur Migrationspolitik. Zudem besteht das Risiko humanitärer Katastrophen.",
+      "lng": -5.3
+    },
+    {
+      "name": "Flug PGT142G",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.9276,
-      "lon": 32.1658,
-      "lng": 32.1658,
+      "lat": 41.4554,
+      "lon": 29.1154,
+      "lng": 29.1154,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT41LW | Höhe: 10.4 km | Speed: 782 km/h",
+      "description": "Callsign: PGT142G | Höhe: 6.6 km | Speed: 753 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT82MC",
+      "name": "Flug PGT809M",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.6313,
-      "lon": 26.0357,
-      "lng": 26.0357,
+      "lat": 40.4008,
+      "lon": 29.2307,
+      "lng": 29.2307,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT82MC | Höhe: 11.6 km | Speed: 814 km/h",
+      "description": "Callsign: PGT809M | Höhe: 3.1 km | Speed: 507 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug PGT749",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.497,
-      "lon": 34.9972,
-      "lng": 34.9972,
+      "lat": 34.7264,
+      "lon": 37.5549,
+      "lng": 37.5549,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT749 | Höhe: 11.6 km | Speed: 802 km/h",
+      "description": "Callsign: PGT749 | Höhe: 10.4 km | Speed: 818 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug FCA1MA",
+      "name": "Flug WZZ45NR",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.1518,
-      "lon": 32.6457,
-      "lng": 32.6457,
+      "lat": 34.7179,
+      "lon": 32.4942,
+      "lng": 32.4942,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: FCA1MA | Höhe: 7.9 km | Speed: 630 km/h",
+      "description": "Callsign: WZZ45NR | Höhe: 2.1 km | Speed: 461 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA671",
+      "name": "Flug CDC8199",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.1594,
-      "lon": 117.1829,
-      "lng": 117.1829,
+      "lat": 23.685,
+      "lon": 116.6455,
+      "lng": 116.6455,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA671 | Höhe: 12.2 km | Speed: 941 km/h",
+      "description": "Callsign: CDC8199 | Höhe: 9.2 km | Speed: 880 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UAL852",
+      "name": "Flug CRK246",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.8415,
-      "lon": 122.68,
-      "lng": 122.68,
+      "lat": 24.6118,
+      "lon": 118.0679,
+      "lng": 118.0679,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAL852 | Höhe: 7.0 km | Speed: 902 km/h",
+      "description": "Callsign: CRK246 | Höhe: 10.1 km | Speed: 825 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -184,7 +286,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-07"
+        "last_seen": "2026-08-08"
       },
       {
         "id": "iran",
@@ -192,7 +294,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-07"
+        "last_seen": "2026-08-08"
       },
       {
         "id": "saudi",
@@ -214,9 +316,9 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 3,
+        "val": 7,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-01"
+        "last_seen": "2026-08-08"
       },
       {
         "id": "taiwan",
@@ -232,15 +334,15 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-07"
+        "last_seen": "2026-08-08"
       },
       {
         "id": "eu",
         "label": "EU",
-        "group": "staat",
-        "val": 19,
+        "group": "organisation",
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-07"
+        "last_seen": "2026-08-08"
       },
       {
         "id": "cyber",
@@ -264,7 +366,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-07"
+        "last_seen": "2026-08-08"
       },
       {
         "id": "cisa",
@@ -278,9 +380,9 @@
         "id": "fed",
         "label": "Fed",
         "group": "organisation",
-        "val": 3,
+        "val": 6,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-03"
+        "last_seen": "2026-08-08"
       },
       {
         "id": "europa",
@@ -486,7 +588,7 @@
         "id": "marokko",
         "label": "Marokko",
         "group": "staat",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-04"
       },
@@ -510,9 +612,9 @@
         "id": "migration",
         "label": "Migration",
         "group": "risiko",
-        "val": 3,
+        "val": 5,
         "first_seen": "2026-08-01",
-        "last_seen": "2026-08-01"
+        "last_seen": "2026-08-08"
       },
       {
         "id": "ai_act",
@@ -558,9 +660,9 @@
         "id": "cyberrisiko",
         "label": "Cyberrisiko",
         "group": "risiko",
-        "val": 6,
+        "val": 8,
         "first_seen": "2026-08-03",
-        "last_seen": "2026-08-07"
+        "last_seen": "2026-08-08"
       },
       {
         "id": "federal_reserve",
@@ -574,7 +676,7 @@
         "id": "ceuta_krise",
         "label": "Ceuta-Krise",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-04",
         "last_seen": "2026-08-04"
       },
@@ -598,7 +700,7 @@
         "id": "hormus",
         "label": "Hormus-Straße",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-05",
         "last_seen": "2026-08-05"
       },
@@ -606,7 +708,7 @@
         "id": "meta",
         "label": "Meta",
         "group": "organisation",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-07",
         "last_seen": "2026-08-07"
       },
@@ -614,7 +716,7 @@
         "id": "halbleiter",
         "label": "Halbleiter",
         "group": "tech",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-08-07",
         "last_seen": "2026-08-07"
       }
@@ -1921,11 +2023,11 @@
     ]
   },
   "simple_key_takeaways": [
-    "Halbleiterbranche unter Druck: Quartalszahlen von Micron, Sandisk und Western Digital führen zu Kursverlusten.",
-    "EU verschärft Regulierung: Meta muss 567 Mio. USD Strafe wegen Verstößen gegen Kinder- und Jugendschutz zahlen (kumuliert 942 Mio. USD).",
-    "Kritische Cyber-Schwachstelle in RadiAnt DICOM (Medizintechnik) ermöglicht potenzielle Angriffe auf Gesundheitssysteme.",
-    "Ukraine-Krieg eskaliert: Gezielte Angriffe auf russische Rüstungsindustrie und Getreidefrachter im Schwarzen Meer.",
-    "Geldpolitik bleibt vorsichtig: Federal Reserve genehmigt Bankenfusion, während die Halbleiterkorrektur auf makroökonomische Unsicherheiten hindeutet."
+    "Politische Einflussnahme auf die US-Notenbank (Fed) nimmt zu, was die Unabhängigkeit der Geldpolitik gefährdet.",
+    "Aktive Ausnutzung einer kritischen Schwachstelle in Progress LoadMaster erhöht das Risiko von Cyberangriffen auf Infrastruktur.",
+    "Geopolitische Spannungen im Persischen Golf und zwischen den USA und China bleiben hoch, mit potenziellen Auswirkungen auf globale Lieferketten.",
+    "Migrationsdruck in Europa verschärft sich, insbesondere an den Außengrenzen wie in Ceuta.",
+    "Klimakrise und technologische Entwicklungen (KI, Quantencomputing) dominieren langfristige Risikodiskussionen."
   ],
   "geoscore": {
     "current_score": 72,
@@ -1936,39 +2038,87 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "Hier ist eine **Kreuzprüfung („Fingerklopfen“)** der beiden Datensätze (GROQ vs. DEEPSEEK) für den **07.08.2026**, um Konsistenz, Widersprüche oder Ergänzungen zu identifizieren:\n\n---\n\n### **1. Finanzmärkte & Konjunktur**\n- **GROQ**: Keine spezifischen Meldungen zu Halbleitern oder Geldpolitik, aber allgemeine Wirtschaftsthemen (Siemens, VW, Porsche).\n- **DEEPSEEK**:\n  - **Halbleiter-Korrektur** (Micron, Sandisk, Western Digital) → **Konsistenzcheck**:\n    - *Frage*: Gab es am 07.08.2026 tatsächlich Quartalszahlen dieser Unternehmen?\n    - *Hinweis*: Falls ja, wäre dies ein **neues, nicht in GROQ erfasstes Thema** (mögliche Lücke in GROQ).\n  - **Geldpolitik („After the great deleveraging“)** → **Konsistenzcheck**:\n    - *Frage*: Wurde die FT-Analyse in anderen Quellen aufgegriffen?\n    - *Hinweis*: GROQ erwähnt keine geldpolitischen Signale – **mögliche Ergänzung durch DEEPSEEK**.\n\n**Fazit**: DEEPSEEK liefert **spezifischere Finanzmarkt-Insights**, die in GROQ fehlen.\n\n---\n\n### **2. Regulierung & Recht (Meta-Strafzahlung)**\n- **GROQ**: Keine Erwähnung von Meta oder EU-Regulierung.\n- **DEEPSEEK**: **567 Mio. USD Strafe für Meta** (Kinder-/Jugendschutz) + kumuliert 942 Mio. USD.\n  - **Konsistenzcheck**:\n    - *Frage*: Gab es am 07.08.2026 eine offizielle EU-Entscheidung?\n    - *Hinweis*: Falls ja, wäre dies ein **wichtiges regulatorisches Ereignis**, das in GROQ fehlt.\n    - *Vergleich*: GROQ erwähnt zwar „Datenschutz“, aber keine konkreten Strafen.\n\n**Fazit**: DEEPSEEK liefert **konkrete rechtliche Entwicklungen**, die in GROQ nicht abgebildet sind.\n\n---\n\n### **3. Cyber-Sicherheit (Medizintechnik)**\n- **GROQ**: Allgemeine Erwähnung von „Cyberangriffen“ und „Datenschutz“, aber keine Details.\n- **DEEPSEEK**: **Kritische Lücke in RadiAnt DICOM** (Medizintechnik-Software).\n  - **Konsistenzcheck**:\n    - *Frage*: Wurde die Schwachstelle am 07.08.2026 öffentlich bekannt?\n    - *Hinweis*: Falls ja, wäre dies ein **kritisches Sicherheitsrisiko**, das in GROQ fehlt.\n\n**Fazit**: DEEPSEEK identifiziert eine **spezifische, hochrelevante Bedrohung**, die in GROQ nicht auftaucht.\n\n---\n\n### **4. Geopolitik & Ukraine-Krieg**\n- **GROQ**: Allgemeine Erwähnung von „internationalen Konflikten“ (USA, China, Russland, Ukraine).\n- **DEEPSEEK**:\n  - **Selenskyjs Operation gegen russische Rüstungsindustrie**.\n  - **Angriff auf Getreidefrachter im Schwarzen Meer**.\n  - **Konsistenzcheck**:\n    - *Frage*: Wurden diese Ereignisse in anderen Quellen bestätigt?\n    - *Hinweis*: GROQ erwähnt zwar die Ukraine, aber keine **konkreten militärischen Aktionen** oder Eskalationen.\n\n**Fazit**: DEEPSEEK liefert **taktische Details**, während GROQ nur generische Konfliktthemen nennt.\n\n---\n\n### **5. Naturkatastrophen & Wetter**\n- **GROQ**: Allgemeine Erwähnung von „Waldbränden, Dürre, Erderwärmung“.\n- **DEEPSEEK**: **NOAA-Prognose: Keine Hurrikans in den nächsten 7 Tagen**.\n  - **Konsistenzcheck**:\n    - *Frage*: Gab es am 07.08.2026 eine offizielle NOAA-Warnung?\n    - *Hinweis*: GROQ erwähnt keine **konkreten Wettervorhersagen**.\n\n**Fazit**: DEEPSEEK liefert **präzise Wetterdaten**, während GROQ nur allgemeine Klimathemen abdeckt.\n\n---\n\n### **Zusammenfassung der Kreuzprüfung**\n| **Thema**               | **GROQ**                          | **DEEPSEEK**                          | **Bewertung**                                                                 |\n|-------------------------|-----------------------------------|---------------------------------------|------------------------------------------------------------------------------|\n| **Finanzmärkte**        | Allgemein (Siemens, VW)           | Spezifisch (Halbleiter, Geldpolitik)  | **DEEPSEEK detaillierter** (mögliche Lücke in GROQ).                        |\n| **Regulierung (Meta)**  | Keine Erwähnung                   | 567 Mio. USD Strafe                   | **DEEPSEEK liefert konkrete Rechtsnews**.                                   |\n| **Cyber-Sicherheit**    | Allgemein (Cyberangriffe)         | Kritische Lücke in Medizintechnik     | **DEEPSEEK identifiziert spezifische Bedrohung**.                           |\n| **Ukraine-Krieg**       | Allgemein (Konflikte)             | Taktische Operationen & Angriffe      | **DEEPSEEK liefert militärische Details**.                                  |\n| **Wetter**              | Klimathemen (Dürre, Waldbrände)   | NOAA-Prognose (keine Hurrikans)       | **DEEPSEEK präziser**.                                                      |\n\n---\n\n### **Mögliche Schlussfolgerungen**\n1. **GROQ** bietet eine **breite, aber oberflächliche Übersicht** (viele Themen, wenig Tiefe).\n2. **DEEPSEEK** liefert **spezifische, handlungsrelevante Informationen** (Finanzmärkte, Recht, Sicherheit, Geopolitik, Wetter).\n3. **Lücken in GROQ**:\n   - Keine konkreten Finanzmarkt- oder Regulierungsmeldungen.\n   - Keine taktischen Details zum Ukraine-Krieg.\n   - Keine spezifischen Cyber-Sicherheitswarnungen.\n4. **Empfehlung**:\n   - Für **strategische Analysen** (z. B. Investitionen, Sicherheit) ist **DEEPSEEK überlegen**.\n   - Für **allgemeine Nachrichtenübersichten** reicht **GROQ** aus.\n   - **Kombination beider Quellen** würde die beste Abdeckung bieten.\n\n---\n\n### **Offene Fragen für weitere Prüfung**\n- **Quellenvalidierung**:\n  - Sind die DEEPSEEK-Meldungen (z. B. Meta-Strafe, DICOM-Lücke) in anderen offiziellen Quellen (Reuters, Bloomberg, EU-Pressemitteilungen) bestätigt?\n- **Zeitliche Konsistenz**:\n  - Handelt es sich bei den DEEPSEEK-Daten um **Echtzeit-Meldungen** oder **retrospektive Analysen**?\n- **Thematische Priorisierung**:\n  - Warum fehlen in GROQ so viele **wirtschafts- und sicherheitsrelevante Themen**?\n\nFalls du Zugang zu weiteren Quellen hast (z. B. Reuters, Bloomberg, offizielle Regierungsmeldungen), könnte eine **dritte Validierungsebene** die Genauigkeit erhöhen.",
+  "game_theory_analysis": "GROQ:\nDas ist eine umfangreiche Sammlung von Nachrichtenartikeln aus verschiedenen Quellen und Ländern. Da es viele verschiedene Themen und Bereiche gibt, werde ich versuchen, eine Übersicht über die wichtigsten Themen und Trends zu geben:\n\n**Politik und Geopolitik**\n\n* Die USA und Iran stehen weiterhin im Konflikt, mit Berichten über Angriffe und Gegenangriffe.\n* Der Brexit und die Beziehungen zwischen der EU und dem Vereinigten Königreich bleiben ein wichtiges Thema.\n* In Südamerika gibt es Spannungen zwischen Venezuela und den USA, sowie zwischen Argentinien und dem Vereinigten Königreich wegen der Falkland-Inseln.\n\n**Wirtschaft und Finanzen**\n\n* Die Weltwirtschaft zeigt Anzeichen einer Verlangsamung, mit sinkenden Wachstumsraten in vielen Ländern.\n* Die USA und China stehen im Handelskrieg, mit wechselseitigen Zöllen und Einschränkungen.\n* Die Federal Reserve in den USA hat die Zinssätze gesenkt, um die Wirtschaft zu stimulieren.\n\n**Umwelt und Klima**\n\n* Die Klimakrise bleibt ein wichtiges Thema, mit Berichten über Hitzewellen, Dürren und Naturkatastrophen.\n* Die EU hat Pläne vorgestellt, um den CO2-Ausstoß zu reduzieren und die Umwelt zu schützen.\n* In Australien gibt es eine Debatte über den Klimawandel und die Politik der Regierung.\n\n**Technologie und Gesellschaft**\n\n* Die Entwicklung von künstlicher Intelligenz (KI) und ihrer Anwendung in verschiedenen Bereichen wie Gesundheit, Verkehr und Bildung ist ein wichtiges Thema.\n* Die sozialen Medien und ihre Auswirkungen auf die Gesellschaft werden diskutiert, einschließlich der Fragen nach Privatsphäre, Sicherheit und Meinungsfreiheit.\n* Es gibt Berichte über neue Technologien wie 5G, Blockchain und Quantencomputer.\n\n**Sicherheit und Verteidigung**\n\n* Die Welt steht vor neuen Sicherheitsbedrohungen, einschließlich Terrorismus, Cyberangriffen und pandemischen Krankheiten.\n* Die NATO und die EU diskutieren über die Sicherheitsstrategie und die Verteidigungspolitik.\n* Es gibt Berichte über militärische Konflikte und Spannungen in verschiedenen Regionen der Welt.\n\nDas sind nur einige der wichtigsten Themen und Trends, die in dieser umfangreichen Sammlung von Nachrichtenartikeln zu finden sind. Es gibt viele weitere Themen und Bereiche, die behandelt werden, und es lohnt sich, die Artikel genauer zu lesen, um mehr über die aktuellen Ereignisse und Entwicklungen zu erfahren.\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 08.08.2026**\n\n**1. WIRTSCHAFT & FINANZEN**\nDie US-Notenbank hat die Übernahme durch **Coastal Bend Bancshares, Inc.** genehmigt. Parallel dazu hat **Präsident Trump** erneut versucht, die Fed-Gouverneurin **Lisa Cook** zu entlassen, nachdem der Oberste Gerichtshof dies vor zwei Monaten blockiert hatte. Dieser Schritt ist Teil eines anhaltenden Bestrebens, die Zentralbank mit politischen Verbündeten zu besetzen. Diese Entwicklungen deuten auf eine zunehmende politische Einflussnahme auf die Geldpolitik hin.\n\n**2. CYBER-SICHERHEIT**\nDas **CISA** hat eine neue, aktiv ausgenutzte Schwachstelle (CVE-2026-8037) im **Progress LoadMaster** im Katalog der bekannten Sicherheitslücken aufgenommen. Es handelt sich um eine Command Injection-Schwachstelle, die als häufiger Angriffsvektor für Cyberkriminelle gilt. Betroffene Organisationen sollten umgehend Patches einspielen, um Kompromittierungen zu verhindern.\n\n**3. INTERNATIONALES & SICHERHEIT**\nDie Sicherheitslage bleibt angespannt: Bei russischen Raketenangriffen nahe **Kiew** wurden mindestens drei Menschen getötet, darunter ein Kind. Die Ukraine warnt vor schwindenden Abwehrkapazitäten. In **Israel** berichten Aktivisten über Misshandlungen während ihrer Gefangenschaft nach einem Versuch, die Gaza-Blockade zu durchbrechen; Israel weist die Vorwürfe zurück. In **Ceuta** spitzt sich die Migrationslage nach der Ankunft Tausender zu, Spanien führt Grenzkontrollen für Reisende aus Italien ein. Zudem wurde in Washington ein 85-Jähriger in einem Goldbetrug um 200.000 Dollar gebracht, zwei Tatverdächtige wurden festgenommen.\n\n**4. WETTER & EXTREMEREIGNISSE**\nDer **National Hurricane Center** überwacht den Atlantik. Eine Tropische Wetterlage wird beobachtet, die aktuelle Ausgabe des Tropical Weather Outlook (Stand: früher Morgen) liefert weitere Details zur Entwicklung im Nordatlantik, der Karibik und dem Golf von Amerika.\n\n*(Hinweis: Der Fokus der internationalen Presse liegt derzeit auf Unterhaltung; das FT Weekend Magazine hat eine Spezialausgabe mit Spielen und Rätseln veröffentlicht.)*\n\nMACRO:\n### Kurzübersicht der aktuellen Ereignisse (Stand: 08.08.2026)\n\n1. **Zentralbank (Federal Reserve)**\n   - **Antrag von Coastal Bend Bancshares**: Die Federal Reserve hat die Antragstellung von Coastal Bend Bancshares, Inc. genehmigt.\n\n2. **Cyber / Infrastruktur (CISA)**\n   - **Neue Exploitierte Schwachstelle**: CISA hat CVE-2026-8037, eine Progress LoadMaster Command Injection Schwachstelle, zu seiner Liste bekannt explotierter Schwachstellen hinzugefügt. Diese Schwachstelle wird häufig von bösartigen Schauspielern genutzt.\n\n3. **US-Finanzen (Wall Street Journal)**\n   - **Trump und Lisa Cook**: Präsident Donald Trump versucht erneut, Federal Reserve Governor Lisa Cook zu entlassen, um die Führungsriege der Federal Reserve mit seinen Verbündeten zu besetzen.\n\n4. **US-Politik (Fox News)**\n   - **Falsche Bundesagenten in Goldbetrug**: Zwei Männer, die sich als Bundesagenten ausgaben, wurden verhaftet, nachdem sie einen 85-jährigen Mann in Washington, D.C., um über 200.000 Dollar in Goldbaren betrogen hatten.\n\n5. **US-Presse (New York Times)**\n   - **Mißhandlung von Aktivisten**: Über 20 Aktivisten, die versucht hatten, den israelischen Blockade gegen Gaza zu durchbrechen, berichteten von Misshandlungen in israelischer Haft. Israel lehnt diese Anschuldigungen ab.\n\n6. **CH-Presse (NZZ International)**\n   - **Grenzkontrollen in Ceuta**: Spanien führt Grenzkontrollen für Reisende aus Italien ein, nachdem Tausende Migranten in die spanische Exklave Ceuta in Nordafrika eingetroffen sind.\n\n7. **UK-Finanzen (Financial Times)**\n   - **Sonderspielraitung**: Die Financial Times veröffentlicht ein besonderes Sommerheft mit Rätseln, Quizfragen, Philosophie und Zauberei.\n\n8. **UK-Medien (BBC World News)**\n   - **Kind getötet durch russische Raketenangriffe**: Mindestens drei Menschen, darunter ein Kind, wurden in der Nähe von Kyiv durch russische Raketenangriffe getötet. Ukrainischer Präsident Volodymyr Zelensky warnte vor knapp werdenden Abfangraketen.\n\n9. **Wetter / Extremereignisse (NOAA National Hurricane Center)**\n   - **Tropisches Wettermeldung**: Keine erwarteten Tropenstürme oder Hurrikane in den kommenden sieben Tagen im Atlantik, Karibischen Meer oder Golf von Mexiko.\n\n10. **Investigativ Journalistik (ICIJ)**\n    - **Tether: Das geheime Milliardenunternehmen**: Das Kryptowährungsunternehmen Tether, dessen USDT-Token einen Billionen-Dollar-Markt unterfüttert, weigert sich, Fragen zu seiner Besitzstruktur zu beantworten.\n\n11. **Cyber-Espionage (Citizen Lab)**\n    - **Falsche Urheberrechtsansprüche gegen News Outlets**: Journalisten und Zivilgesellschaftsorganisationen werden durch vorgebliche Urheberrechtsansprüche zum Schweigen gebracht.\n\nDiese Zusammenfassung bietet einen schnellen Überblick über die aktuellen Ereignisse in verschiedenen Bereichen wie Finanzen, Politik, Medien, Sicherheit und mehr.",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Energieaktien profitieren von anhaltenden geopolitischen Risiken und stabilen Ölpreisen trotz Halbleiterkorrektur."
+        "reason": "Geopolitische Spannungen im Persischen Golf und Unsicherheiten in globalen Lieferketten stützen die Ölpreise und begünstigen Energieaktien."
+      },
+      {
+        "ticker": "GLD",
+        "name": "SPDR Gold Trust",
+        "asset": "Edelmetalle",
+        "reason": "Gold profitiert von Unsicherheit in der Geldpolitik und geopolitischen Risiken als sicherer Hafen."
+      },
+      {
+        "ticker": "BNDX",
+        "name": "Vanguard Total International Bond ETF",
+        "asset": "Internationale Anleihen",
+        "reason": "Diversifikation in stabile Währungen und Anleihenmärkte als Absicherung gegen US-Dollar-Schwäche."
+      },
+      {
+        "ticker": "CYBR",
+        "name": "First Trust NASDAQ Cybersecurity ETF",
+        "asset": "Cybersicherheit",
+        "reason": "Zunehmende Cyberbedrohungen treiben die Nachfrage nach Sicherheitslösungen an."
+      },
+      {
+        "ticker": "ICLN",
+        "name": "iShares Global Clean Energy ETF",
+        "asset": "Erneuerbare Energien",
+        "reason": "Langfristige Klimaziele und staatliche Förderprogramme unterstützen den Sektor."
       }
     ],
     "flop_5_sells": [
       {
         "ticker": "EEM",
-        "name": "Emerging Markets",
+        "name": "iShares MSCI Emerging Markets ETF",
         "asset": "Schwellenländer",
-        "reason": "Schwellenländer leiden unter globaler Unsicherheit, regulatorischen Risiken und schwacher Nachfrage nach Halbleitern."
+        "reason": "Handelskonflikte, politische Instabilität und schwache Wachstumsaussichten belasten die Performance."
+      },
+      {
+        "ticker": "EWG",
+        "name": "iShares MSCI Germany ETF",
+        "asset": "Deutschland",
+        "reason": "Wirtschaftliche Schwäche in der EU, Energiekrise und politische Unsicherheit drücken auf den Markt."
+      },
+      {
+        "ticker": "FXI",
+        "name": "iShares China Large-Cap ETF",
+        "asset": "China",
+        "reason": "Handelskonflikte mit den USA, regulatorische Risiken und schwache Binnenkonjunktur belasten chinesische Aktien."
+      },
+      {
+        "ticker": "XLU",
+        "name": "Utilities Select Sector SPDR Fund",
+        "asset": "Versorger",
+        "reason": "Zinsrisiken und regulatorische Unsicherheiten machen den Sektor unattraktiv."
+      },
+      {
+        "ticker": "ARKK",
+        "name": "ARK Innovation ETF",
+        "asset": "Innovation/Technologie",
+        "reason": "Hohe Bewertungen und makroökonomische Unsicherheit führen zu erhöhter Volatilität."
       }
     ]
   },
-  "timestamp": "2026-08-07T07:03:38.973531+00:00",
+  "timestamp": "2026-08-08T06:39:22.794524+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-07T07:01:57.326553+00:00",
+    "timestamp": "2026-08-08T06:36:48.664219+00:00",
     "feeds_total": 224,
-    "feeds_successful": 112,
-    "feeds_failed": 112,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
       "Groq (Llama-3.3)",
-      "qwen-2.5-72b-instruct",
-      "DeepSeek"
+      "DeepSeek",
+      "qwen-2.5-72b-instruct"
     ],
-    "swarm_debate_status": "SUCCESS",
+    "swarm_debate_status": "ERROR (HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=35))",
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
     "opensky_status": "SUCCESS (6 Signale)",
@@ -1985,9 +2135,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 53,
+    "nodes_prev": 55,
     "nodes_now": 55,
-    "hotspots_now": 8,
-    "summary": "Graph-Knoten 53 → 55"
+    "hotspots_now": 10,
+    "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
