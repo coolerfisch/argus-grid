@@ -1,50 +1,26 @@
 {
-  "overall_geoscore": 72,
+  "overall_geoscore": 75,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Geopolitische Spannungen und unbestätigte, aber potenziell destabilisierende Meldungen zur US-Politik erhöhen die Unsicherheit, während technische Schwachstellen und Wetterrisiken zusätzliche operative Risiken darstellen.",
-  "daily_executive_summary": "Die globale Lage am 09.08.2026 ist geprägt von einer Mischung aus politischen Unsicherheiten, technischen Bedrohungen und regionalen Konflikten. Die unbestätigte Meldung zur Ernennung von Todd Blanche als US-Justizminister wirft Fragen nach der Stabilität der US-Innenpolitik auf, insbesondere angesichts möglicher Kontroversen um einen Entschädigungsfonds für Jan. 6-Angeklagte. Gleichzeitig bleibt die Gesundheitslage von Joe Biden unklar, was zusätzliche Spekulationen über die politische Zukunft der USA nährt. Auf internationaler Ebene wird das IRIS²-Satellitensystem der EU beschleunigt, was als Reaktion auf wachsende Bedrohungen im Cyber- und Weltraumsegment interpretiert werden kann. Die CISA warnt vor einer kritischen Schwachstelle in Progress LoadMaster, die aktiv ausgenutzt wird und Unternehmen weltweit gefährdet. Im Nahen Osten eskalieren Spannungen durch israelische Landenteignungen im Westjordanland, während Taiwan seine Drohnenabwehr gegen eine mögliche chinesische Invasion verstärkt. Wetterrisiken im Atlantik und finanzielle Instabilitäten in Schwellenländern runden das Bild ab.",
-  "daily_executive_summary_simple": "Die Weltlage ist aktuell angespannt, aber nicht akut gefährlich. In den USA gibt es unbestätigte Meldungen über einen neuen Justizminister, der für Streit sorgen könnte. Gleichzeitig warnt die US-Behörde CISA vor einer gefährlichen Sicherheitslücke in einer weit verbreiteten Software. In Europa wird ein Satellitensystem schneller aufgebaut, um sich gegen Cyberangriffe zu wappnen. Im Nahen Osten und in Asien gibt es Konflikte, die sich verschärfen könnten. Zudem könnte das Wetter in den nächsten Tagen für Probleme sorgen.",
+  "ampel_reason_simple": "Erhöhte geopolitische Spannungen im Persischen Golf und unbestätigte Konflikteskalationen, aber keine unmittelbare Kriegsgefahr. Wirtschaftliche Unsicherheit durch Inflationsdaten und Energiepreise.",
+  "daily_executive_summary": "Die USA haben die Sanktionen gegen den Iran verschärft, nachdem Hinweise auf Umgehungen des UN-Waffenembargos aufkamen. Dies verschärft die Spannungen im Persischen Golf, insbesondere um die Straße von Hormus, die für globale Öllieferungen kritisch ist. Unbestätigte Berichte deuten auf eine mögliche israelische Besetzung des Gazastreifens hin, während die Ukraine-Krise weiterhin latent eskaliert. Wirtschaftlich bleibt die Lage volatil: Die US-Notenbank genehmigte eine Bankenübernahme, doch die Aktienmärkte zeigen sich stabil, aber unsicher angesichts bevorstehender Inflationsdaten. Cyber-Sicherheitsrisiken durch eine neu entdeckte Schwachstelle in Progress LoadMaster-Systemen erfordern erhöhte Aufmerksamkeit.",
+  "daily_executive_summary_simple": "Die USA verschärfen den Druck auf den Iran wegen Waffenlieferungen, was die Lage im Nahen Osten angespannt hält. Israel könnte im Gazastreifen militärisch aktiv werden, aber das ist noch nicht sicher. Die Wirtschaft bleibt unsicher, weil bald wichtige Inflationszahlen veröffentlicht werden. Gleichzeitig gibt es eine neue Sicherheitslücke in Computersystemen, die Unternehmen und Behörden bedroht.",
   "key_takeaways": [
-    "Unbestätigte Meldungen zur US-Justizminister-Ernennung erhöhen politische Unsicherheit.",
-    "Kritische Sicherheitslücke in Progress LoadMaster wird aktiv ausgenutzt – Unternehmen müssen handeln.",
-    "EU beschleunigt IRIS²-Satellitensystem als Reaktion auf wachsende Cyber- und Weltraumbedrohungen.",
-    "Taiwan setzt auf Drohnenabwehr, um einer möglichen chinesischen Invasion zu begegnen.",
-    "Wetterrisiken im Atlantik und finanzielle Instabilitäten in Schwellenländern belasten die globale Stabilität."
+    "USA erweitern Sanktionen gegen den Iran wegen Umgehung des UN-Waffenembargos – Bestätigt durch unabhängige Quellen.",
+    "Unbestätigte Berichte über israelische Besetzung des Gazastreifens – Keine unabhängige Verifizierung, aber plausibel.",
+    "Fehlerhafte Erwähnung der Straße von Hormus im Ukraine-Kontext – Korrektur: Gemeint ist vermutlich die Straße von Kertsch oder Energiekonflikte.",
+    "Aktienmärkte stabil, aber unsicher wegen Inflationsdaten und Nahost-Konflikt – Volatilität bleibt hoch.",
+    "Neue kritische Sicherheitslücke (CVE-2026-8037) in Progress LoadMaster-Systemen – Sofortige Patch-Empfehlung für Unternehmen."
   ],
   "market_regime": "Volatil",
-  "top_risk": "Cybersecurity & Geopolitik",
+  "top_risk": "Energieversorgung & Lieferketten",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen im Persischen Golf und Wetterrisiken treiben Energiepreise voraussichtlich an."
-      },
-      {
-        "ticker": "LMT",
-        "name": "Lockheed Martin",
-        "asset": "Rüstung",
-        "reason": "Erhöhte Nachfrage nach Drohnen und Verteidigungstechnologie, insbesondere durch Taiwan und Europa."
-      },
-      {
-        "ticker": "CSCO",
-        "name": "Cisco Systems",
-        "asset": "Cybersicherheit",
-        "reason": "CISA-Warnung vor kritischen Schwachstellen erhöht die Investitionen in IT-Sicherheit."
-      },
-      {
-        "ticker": "GLD",
-        "name": "Gold",
-        "asset": "Rohstoff",
-        "reason": "Sicherer Hafen bei politischer Unsicherheit und Marktvolatilität."
-      },
-      {
-        "ticker": "NOC",
-        "name": "Northrop Grumman",
-        "asset": "Rüstung",
-        "reason": "Beschleunigung von IRIS² und globale Aufrüstungstrends stützen den Sektor."
+        "reason": "Erhöhte Spannungen im Persischen Golf und Sanktionen gegen den Iran treiben Energiepreise voraussichtlich nach oben."
       }
     ],
     "flop5_sells": [
@@ -52,31 +28,7 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Finanzielle Instabilitäten, politische Unsicherheiten und Abhängigkeit von globalen Lieferketten belasten die Performance."
-      },
-      {
-        "ticker": "TSLA",
-        "name": "Tesla",
-        "asset": "Automobil",
-        "reason": "Lieferkettenrisiken und sinkende Nachfrage in China aufgrund geopolitischer Spannungen."
-      },
-      {
-        "ticker": "BTC-USD",
-        "name": "Bitcoin",
-        "asset": "Kryptowährung",
-        "reason": "Regulatorische Unsicherheiten und Risikoaversion der Anleger drücken den Kurs."
-      },
-      {
-        "ticker": "IYT",
-        "name": "Transportation Average",
-        "asset": "Logistik",
-        "reason": "Chokepoint-Risiken im Persischen Golf und Wetterextreme gefährden globale Lieferketten."
-      },
-      {
-        "ticker": "XHB",
-        "name": "Homebuilders",
-        "asset": "Immobilien",
-        "reason": "Zinsunsicherheit und wirtschaftliche Instabilität dämpfen die Bauaktivitäten."
+        "reason": "Geopolitische Unsicherheiten und mögliche Energiepreisschocks belasten exportabhängige Schwellenländer."
       }
     ]
   },
@@ -84,195 +36,142 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Unbestätigte Meldungen zur Ernennung von Todd Blanche als Justizminister und mögliche Kontroversen um einen Entschädigungsfonds für Jan. 6-Angeklagte erhöhen die politische Unsicherheit. Die Gesundheitslage von Joe Biden bleibt unklar und könnte zusätzliche Spekulationen auslösen."
+      "dynamics": "Verschärfte Sanktionen gegen den Iran und unklare Nahost-Politik erhöhen geopolitische Risiken. Wirtschaftlich bleibt die Lage angespannt durch Inflationsunsicherheit und Bankenkonsolidierung."
     },
     {
       "region": "EU",
       "stability": "GELB",
-      "dynamics": "Beschleunigung des IRIS²-Satellitensystems als Reaktion auf Cyber- und Weltraumbedrohungen. Wirtschaftliche Herausforderungen durch Energiepreise und Lieferkettenrisiken."
-    },
-    {
-      "region": "Taiwan",
-      "stability": "ROT",
-      "dynamics": "Aufrüstung der Drohnenabwehr als Reaktion auf die Bedrohung durch eine mögliche chinesische Invasion. Militärische Spannungen dominieren die Innenpolitik."
-    },
-    {
-      "region": "Israel/Palästina",
-      "stability": "ROT",
-      "dynamics": "Israelische Landenteignungen im Westjordanland eskalieren den Konflikt. Internationale Verurteilung und lokale Proteste verschärfen die Lage."
-    },
-    {
-      "region": "Hawaii (USA)",
-      "stability": "GRÜN",
-      "dynamics": "Republikanischer Kandidat für das Gouverneursamt nominiert – mögliche politische Wende nach zwei Jahrzehnten demokratischer Dominanz."
+      "dynamics": "Beschleunigung des IRIS²-Satellitennetzwerks als Reaktion auf Sicherheitsbedrohungen, aber keine akute Krisenlage."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Mögliche Ernennung eines Strafverteidigers mit umstrittenen Zusagen zum Justizminister",
-      "current_event": "Mögliche Ernennung eines Strafverteidigers mit umstrittenen Zusagen zum Justizminister",
-      "historical_analog": "Ernennung von Alberto Gonzales zum US-Justizminister (2005)",
-      "similarity": "Ernennung von Alberto Gonzales zum US-Justizminister (2005)",
-      "takeaway": "Historisch führen solche Ernennungen zu politischen Turbulenzen, Amtsenthebungsverfahren und langfristiger Erosion des Vertrauens in die Justiz."
-    },
-    {
-      "event": "EU reagiert auf Cyber- und Weltraumbedrohungen mit beschleunigtem Aufbau eines Satellitennetzwerks",
-      "current_event": "EU reagiert auf Cyber- und Weltraumbedrohungen mit beschleunigtem Aufbau eines Satellitennetzwerks",
-      "historical_analog": "Aufbau des GPS-Systems durch die USA während des Kalten Krieges (1970er–1990er)",
-      "similarity": "Aufbau des GPS-Systems durch die USA während des Kalten Krieges (1970er–1990er)",
-      "takeaway": "Solche Projekte stärken langfristig die Souveränität, sind aber kurzfristig mit hohen Kosten und politischen Spannungen verbunden."
-    },
-    {
-      "event": "Taiwan setzt auf Drohnen zur Abschreckung einer möglichen chinesischen Invasion",
-      "current_event": "Taiwan setzt auf Drohnen zur Abschreckung einer möglichen chinesischen Invasion",
-      "historical_analog": "Ukraines Drohnenkrieg gegen Russland (ab 2022)",
-      "similarity": "Ukraines Drohnenkrieg gegen Russland (ab 2022)",
-      "takeaway": "Drohnen können kurzfristig abschrecken, führen aber langfristig zu einer Eskalation der Rüstungsspirale."
+      "event": "USA erweitern Sanktionslisten gegen den Iran wegen Umgehung des UN-Waffenembargos.",
+      "current_event": "USA erweitern Sanktionslisten gegen den Iran wegen Umgehung des UN-Waffenembargos.",
+      "historical_analog": "US-Sanktionen gegen den Iran 2018–2020 (Trump-Ära)",
+      "similarity": "US-Sanktionen gegen den Iran 2018–2020 (Trump-Ära)",
+      "takeaway": "Historisch führten solche Sanktionen zu kurzfristigen Energiepreisschocks und erhöhten die Spannungen im Persischen Golf, ohne das Regime zu stürzen."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Die politische Unsicherheit in den USA wird zunehmen, insbesondere wenn sich die Meldungen zu Todd Blanche bestätigen. Cyberangriffe auf kritische Infrastrukturen könnten sich häufen, da die CISA-Schwachstelle weiterhin ausgenutzt wird. Im Nahen Osten ist mit einer Zunahme von Protesten und gewaltsamen Zusammenstößen im Westjordanland zu rechnen. Taiwan wird seine militärische Vorbereitung weiter intensivieren, was zu chinesischen Gegenmaßnahmen führen könnte.",
+    "base_case_summary": "Die Spannungen im Persischen Golf werden voraussichtlich anhalten, mit möglichen kurzfristigen Unterbrechungen der Öltransporte durch die Straße von Hormus. Die Aktienmärkte bleiben volatil, abhängig von den Inflationsdaten und der Reaktion der Zentralbanken.",
     "leading_indicators_to_watch": [
-      "Offizielle Bestätigung oder Dementi der Ernennung von Todd Blanche",
-      "Zunahme von Cyberangriffen auf LoadMaster-Systeme",
-      "Militärische Manöver Chinas in der Taiwanstraße",
-      "Eskalation der Gewalt im Westjordanland"
+      "Militärische Bewegungen im Persischen Golf (z. B. US-Marineaktivitäten)",
+      "Veränderungen der Ölpreise (Brent/WTI) um mehr als 5 % innerhalb einer Woche",
+      "Offizielle Stellungnahmen der OPEC+ zu Produktionsanpassungen"
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Die politische Unsicherheit in den USA wird zunehmen, insbesondere wenn sich die Meldungen zu Todd Blanche bestätigen. Cyberangriffe auf kritische Infrastrukturen könnten sich häufen, da die CISA-Schwachstelle weiterhin ausgenutzt wird. Im Nahen Osten ist mit einer Zunahme von Protesten und gewaltsamen Zusammenstößen im Westjordanland zu rechnen. Taiwan wird seine militärische Vorbereitung weiter intensivieren, was zu chinesischen Gegenmaßnahmen führen könnte.",
+        "forecast": "Die Spannungen im Persischen Golf werden voraussichtlich anhalten, mit möglichen kurzfristigen Unterbrechungen der Öltransporte durch die Straße von Hormus. Die Aktienmärkte bleiben volatil, abhängig von den Inflationsdaten und der Reaktion der Zentralbanken.",
         "probability": "Hoch",
         "early_warning_indicators": [
-          "Offizielle Bestätigung oder Dementi der Ernennung von Todd Blanche",
-          "Zunahme von Cyberangriffen auf LoadMaster-Systeme",
-          "Militärische Manöver Chinas in der Taiwanstraße",
-          "Eskalation der Gewalt im Westjordanland"
-        ]
-      },
-      {
-        "timeframe": "90 Tage",
-        "forecast": "Falls sich die politische Lage in den USA stabilisiert, könnte der Fokus auf die US-Wahlen 2026 rücken. Die EU wird erste Erfolge des IRIS²-Systems präsentieren, was zu Spannungen mit Russland und China führen könnte. Im Persischen Golf könnten sich die Spannungen verschärfen, falls Iran auf westliche Sanktionen mit weiteren Provokationen reagiert. Wetterextreme könnten Lieferketten zusätzlich belasten.",
-        "probability": "Mittel",
-        "early_warning_indicators": [
-          "Umfragewerte und Kandidatenankündigungen für die US-Wahlen 2026",
-          "Erste operative Erfolge oder Pannen des IRIS²-Systems",
-          "Iranische Militärmanöver im Persischen Golf",
-          "Hurrikan-Aktivitäten im Atlantik"
+          "Militärische Bewegungen im Persischen Golf (z. B. US-Marineaktivitäten)",
+          "Veränderungen der Ölpreise (Brent/WTI) um mehr als 5 % innerhalb einer Woche",
+          "Offizielle Stellungnahmen der OPEC+ zu Produktionsanpassungen"
         ]
       }
     ]
   },
   "conflict_hotspots": [
     {
-      "name": "Persischer Golf",
+      "name": "Persischer Golf / Straße von Hormus",
       "region": "Persischer Golf",
       "lat": 26.5,
       "lon": 53.5,
       "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Der Persische Golf bleibt ein zentraler Konfliktpunkt aufgrund der strategischen Bedeutung für den globalen Öltransport. Iranische Drohnenangriffe auf Tanker und westliche Militärpräsenz erhöhen das Eskalationsrisiko.",
-      "impact": "Eine Blockade der Straße von Hormus würde die globalen Ölpreise stark ansteigen lassen und Lieferketten weltweit gefährden.",
+      "description": "Die Straße von Hormus ist ein kritischer Engpass für globale Öllieferungen. Aktuelle US-Sanktionen gegen den Iran erhöhen das Risiko von Blockaden oder militärischen Zwischenfällen.",
+      "impact": "Eine Unterbrechung der Durchfahrt könnte zu einem globalen Ölpreisschock führen, mit direkten Auswirkungen auf die Weltwirtschaft und Aktienmärkte.",
       "lng": 53.5
     },
     {
-      "name": "Taiwanstraße",
-      "region": "Taiwanstraße",
-      "lat": 23.5,
-      "lon": 121.0,
-      "type": "conflict",
-      "intensity": "ROT",
-      "description": "Taiwan rüstet seine Drohnenabwehr auf, um einer möglichen chinesischen Invasion zu begegnen. China führt regelmäßig Militärmanöver in der Region durch und erhöht den Druck.",
-      "impact": "Eine militärische Eskalation würde globale Technologielieferketten (Halbleiter) unterbrechen und zu einem Handelskrieg führen.",
-      "lng": 121.0
-    },
-    {
-      "name": "Westjordanland",
-      "region": "Westjordanland",
-      "lat": 32.0,
-      "lon": 35.2,
-      "type": "conflict",
-      "intensity": "ROT",
-      "description": "Israel plant großflächige Landenteignungen in historischen palästinensischen Gebieten, was zu Protesten und gewaltsamen Zusammenstößen führt. Internationale Verurteilung bleibt wirkungslos.",
-      "impact": "Langfristige Destabilisierung der Region, mögliche Ausweitung auf Gaza und Israel.",
-      "lng": 35.2
-    },
-    {
-      "name": "Ukraine",
-      "region": "Ostukraine",
-      "lat": 48.3,
-      "lon": 39.5,
+      "name": "Gazastreifen",
+      "region": "Naher Osten",
+      "lat": 31.5,
+      "lon": 34.5,
       "type": "conflict",
       "intensity": "GELB",
-      "description": "Der Krieg in der Ukraine bleibt in einer Pattsituation, mit sporadischen russischen Offensiven und ukrainischen Gegenangriffen. Beide Seiten setzen vermehrt auf Drohnen und Langstreckenwaffen.",
-      "impact": "Keine kurzfristige Lösung in Sicht, aber das Risiko einer weiteren Eskalation bleibt hoch.",
-      "lng": 39.5
-    },
-    {
-      "name": "Flug PGT274C",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.6133,
-      "lon": 28.7202,
-      "lng": 28.7202,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: PGT274C | Höhe: 7.4 km | Speed: 787 km/h",
-      "impact": "Strategischer Transponder-Korridor"
+      "description": "Unbestätigte Berichte deuten auf eine mögliche israelische Militäroperation im Gazastreifen hin, mit Forderungen nach Entwaffnung der Hamas.",
+      "impact": "Eine Eskalation könnte zu regionaler Instabilität führen und die Ölpreise beeinflussen, bleibt aber aktuell unbestätigt.",
+      "lng": 34.5
     },
     {
       "name": "Flug PGT84R",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8025,
-      "lon": 41.3842,
-      "lng": 41.3842,
+      "lat": 40.9439,
+      "lon": 39.5903,
+      "lng": 39.5903,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT84R | Höhe: 9.1 km | Speed: 760 km/h",
+      "description": "Callsign: PGT84R | Höhe: 11.0 km | Speed: 748 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT74X",
+      "name": "Flug PGT89N",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 40.436,
+      "lon": 31.6201,
+      "lng": 31.6201,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: PGT89N | Höhe: 9.2 km | Speed: 944 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug WMT9801",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 28.7484,
-      "lon": 33.8734,
-      "lng": 33.8734,
+      "lat": 33.1398,
+      "lon": 32.3524,
+      "lng": 32.3524,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT74X | Höhe: 8.2 km | Speed: 819 km/h",
+      "description": "Callsign: WMT9801 | Höhe: 9.0 km | Speed: 842 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AIZ301",
+      "name": "ADS-B Signal 739261",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.0096,
-      "lon": 34.6904,
-      "lng": 34.6904,
+      "lat": 33.0,
+      "lon": 34.6935,
+      "lng": 34.6935,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIZ301 | Höhe: 2.1 km | Speed: 518 km/h",
+      "description": "Callsign: Unbekannt | Höhe: 0.4 km | Speed: 260 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA641",
+      "name": "Flug RRR6226",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 30.3177,
+      "lon": 33.7982,
+      "lng": 33.7982,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: RRR6226 | Höhe: 8.2 km | Speed: 872 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug UAL852",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.0331,
-      "lon": 124.0993,
-      "lng": 124.0993,
+      "lat": 25.2175,
+      "lon": 122.3507,
+      "lng": 122.3507,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA641 | Höhe: 11.6 km | Speed: 915 km/h",
+      "description": "Callsign: UAL852 | Höhe: 7.1 km | Speed: 846 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug ANA965",
+      "name": "Flug CDG4086",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.1202,
-      "lon": 121.3614,
-      "lng": 121.3614,
+      "lat": 25.7074,
+      "lon": 121.6899,
+      "lng": 121.6899,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ANA965 | Höhe: 12.2 km | Speed: 968 km/h",
+      "description": "Callsign: CDG4086 | Höhe: 6.7 km | Speed: 808 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -284,7 +183,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-09"
+        "last_seen": "2026-08-10"
       },
       {
         "id": "iran",
@@ -292,7 +191,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-09"
+        "last_seen": "2026-08-10"
       },
       {
         "id": "saudi",
@@ -306,15 +205,15 @@
         "id": "israel",
         "label": "Israel",
         "group": "staat",
-        "val": 6,
+        "val": 9,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-09"
+        "last_seen": "2026-08-10"
       },
       {
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 11,
+        "val": 10,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -322,7 +221,7 @@
         "id": "taiwan",
         "label": "Taiwan",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -330,7 +229,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -338,7 +237,7 @@
         "id": "eu",
         "label": "EU",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -354,7 +253,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 21,
+        "val": 20,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-08"
       },
@@ -362,7 +261,7 @@
         "id": "fed",
         "label": "Fed",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-08"
       },
@@ -375,60 +274,12 @@
         "last_seen": "2026-07-30"
       },
       {
-        "id": "muslimbruderschaft",
-        "label": "Muslimbruderschaft",
-        "group": "organisation",
-        "val": 3,
-        "first_seen": "2026-07-26",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "id": "xle",
-        "label": "XLE",
-        "group": "tech",
-        "val": 3,
-        "first_seen": "2026-07-26",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "id": "eem",
-        "label": "EEM",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-07-26",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "id": "berlin_anschlag",
-        "label": "Berlin-Attacke",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-07-26",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "id": "waldbraende",
-        "label": "Waldbrände",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-07-26",
-        "last_seen": "2026-07-26"
-      },
-      {
         "id": "cyber_risiko",
         "label": "Cyber-Sicherheit",
         "group": "risiko",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-07-26",
         "last_seen": "2026-08-09"
-      },
-      {
-        "id": "strabe_von_hormus",
-        "label": "Hormus",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-07-26",
-        "last_seen": "2026-07-26"
       },
       {
         "id": "japan",
@@ -586,7 +437,7 @@
         "id": "migration",
         "label": "Migration",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-08"
       },
@@ -634,7 +485,7 @@
         "id": "cyberrisiko",
         "label": "Cyberrisiko",
         "group": "risiko",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-08-03",
         "last_seen": "2026-08-08"
       },
@@ -682,7 +533,7 @@
         "id": "meta",
         "label": "Meta",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-07",
         "last_seen": "2026-08-07"
       },
@@ -690,7 +541,7 @@
         "id": "halbleiter",
         "label": "Halbleiter",
         "group": "tech",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-07",
         "last_seen": "2026-08-07"
       },
@@ -698,9 +549,33 @@
         "id": "palästina",
         "label": "Palästina",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-09",
         "last_seen": "2026-08-09"
+      },
+      {
+        "id": "hamas",
+        "label": "Hamas",
+        "group": "miliz",
+        "val": 5,
+        "first_seen": "2026-08-10",
+        "last_seen": "2026-08-10"
+      },
+      {
+        "id": "oelpreise",
+        "label": "Ölpreise",
+        "group": "risiko",
+        "val": 7,
+        "first_seen": "2026-08-10",
+        "last_seen": "2026-08-10"
+      },
+      {
+        "id": "straits_of_hormuz",
+        "label": "Straße von Hormus",
+        "group": "chokepoint",
+        "val": 8,
+        "first_seen": "2026-08-10",
+        "last_seen": "2026-08-10"
       }
     ],
     "edges": [
@@ -709,8 +584,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Konflikt",
-        "last_seen": "2026-08-07"
+        "label": "Sanktionen & Konflikt",
+        "last_seen": "2026-08-10"
       },
       {
         "from": "usa",
@@ -753,30 +628,6 @@
         "last_seen": "2026-08-02"
       },
       {
-        "from": "deutschland",
-        "to": "muslimbruderschaft",
-        "source": "deutschland",
-        "target": "muslimbruderschaft",
-        "label": "Extremismus-Verdacht",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "usa",
-        "to": "xle",
-        "source": "usa",
-        "target": "xle",
-        "label": "Energie-Nachfrage",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "iran",
-        "to": "eem",
-        "source": "iran",
-        "target": "eem",
-        "label": "Handelsrisiko",
-        "last_seen": "2026-07-26"
-      },
-      {
         "from": "usa",
         "to": "eu",
         "source": "usa",
@@ -785,60 +636,12 @@
         "last_seen": "2026-08-04"
       },
       {
-        "from": "eu",
-        "to": "russland",
-        "source": "eu",
-        "target": "russland",
-        "label": "Sanktionen",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "iran",
-        "to": "strabe_von_hormus",
-        "source": "iran",
-        "target": "strabe_von_hormus",
-        "label": "Geopolitische Spannung",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "usa",
-        "to": "strabe_von_hormus",
-        "source": "usa",
-        "target": "strabe_von_hormus",
-        "label": "Militärische Präsenz",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "berlin_anschlag",
-        "to": "eu",
-        "source": "berlin_anschlag",
-        "target": "eu",
-        "label": "Sicherheitsrisiko",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "waldbraende",
-        "to": "eu",
-        "source": "waldbraende",
-        "target": "eu",
-        "label": "Klimakrise",
-        "last_seen": "2026-07-26"
-      },
-      {
         "from": "cyber_risiko",
         "to": "usa",
         "source": "cyber_risiko",
         "target": "usa",
         "label": "Bedrohung",
         "last_seen": "2026-07-27"
-      },
-      {
-        "from": "cyber_risiko",
-        "to": "eu",
-        "source": "cyber_risiko",
-        "target": "eu",
-        "label": "Sicherheitswarnung",
-        "last_seen": "2026-07-26"
       },
       {
         "from": "iran",
@@ -1239,6 +1042,38 @@
         "target": "eu",
         "label": "Bedrohung",
         "last_seen": "2026-08-07"
+      },
+      {
+        "from": "iran",
+        "to": "straits_of_hormuz",
+        "source": "iran",
+        "target": "straits_of_hormuz",
+        "label": "Bedrohung",
+        "last_seen": "2026-08-10"
+      },
+      {
+        "from": "straits_of_hormuz",
+        "to": "oelpreise",
+        "source": "straits_of_hormuz",
+        "target": "oelpreise",
+        "label": "Einfluss",
+        "last_seen": "2026-08-10"
+      },
+      {
+        "from": "israel",
+        "to": "hamas",
+        "source": "israel",
+        "target": "hamas",
+        "label": "Konflikt (unbestätigt)",
+        "last_seen": "2026-08-10"
+      },
+      {
+        "from": "hamas",
+        "to": "oelpreise",
+        "source": "hamas",
+        "target": "oelpreise",
+        "label": "Potenzielle Eskalation",
+        "last_seen": "2026-08-10"
       }
     ],
     "links": [
@@ -1247,8 +1082,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Konflikt",
-        "last_seen": "2026-08-07"
+        "label": "Sanktionen & Konflikt",
+        "last_seen": "2026-08-10"
       },
       {
         "from": "usa",
@@ -1291,30 +1126,6 @@
         "last_seen": "2026-08-02"
       },
       {
-        "from": "deutschland",
-        "to": "muslimbruderschaft",
-        "source": "deutschland",
-        "target": "muslimbruderschaft",
-        "label": "Extremismus-Verdacht",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "usa",
-        "to": "xle",
-        "source": "usa",
-        "target": "xle",
-        "label": "Energie-Nachfrage",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "iran",
-        "to": "eem",
-        "source": "iran",
-        "target": "eem",
-        "label": "Handelsrisiko",
-        "last_seen": "2026-07-26"
-      },
-      {
         "from": "usa",
         "to": "eu",
         "source": "usa",
@@ -1323,60 +1134,12 @@
         "last_seen": "2026-08-04"
       },
       {
-        "from": "eu",
-        "to": "russland",
-        "source": "eu",
-        "target": "russland",
-        "label": "Sanktionen",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "iran",
-        "to": "strabe_von_hormus",
-        "source": "iran",
-        "target": "strabe_von_hormus",
-        "label": "Geopolitische Spannung",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "usa",
-        "to": "strabe_von_hormus",
-        "source": "usa",
-        "target": "strabe_von_hormus",
-        "label": "Militärische Präsenz",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "berlin_anschlag",
-        "to": "eu",
-        "source": "berlin_anschlag",
-        "target": "eu",
-        "label": "Sicherheitsrisiko",
-        "last_seen": "2026-07-26"
-      },
-      {
-        "from": "waldbraende",
-        "to": "eu",
-        "source": "waldbraende",
-        "target": "eu",
-        "label": "Klimakrise",
-        "last_seen": "2026-07-26"
-      },
-      {
         "from": "cyber_risiko",
         "to": "usa",
         "source": "cyber_risiko",
         "target": "usa",
         "label": "Bedrohung",
         "last_seen": "2026-07-27"
-      },
-      {
-        "from": "cyber_risiko",
-        "to": "eu",
-        "source": "cyber_risiko",
-        "target": "eu",
-        "label": "Sicherheitswarnung",
-        "last_seen": "2026-07-26"
       },
       {
         "from": "iran",
@@ -1777,18 +1540,50 @@
         "target": "eu",
         "label": "Bedrohung",
         "last_seen": "2026-08-07"
+      },
+      {
+        "from": "iran",
+        "to": "straits_of_hormuz",
+        "source": "iran",
+        "target": "straits_of_hormuz",
+        "label": "Bedrohung",
+        "last_seen": "2026-08-10"
+      },
+      {
+        "from": "straits_of_hormuz",
+        "to": "oelpreise",
+        "source": "straits_of_hormuz",
+        "target": "oelpreise",
+        "label": "Einfluss",
+        "last_seen": "2026-08-10"
+      },
+      {
+        "from": "israel",
+        "to": "hamas",
+        "source": "israel",
+        "target": "hamas",
+        "label": "Konflikt (unbestätigt)",
+        "last_seen": "2026-08-10"
+      },
+      {
+        "from": "hamas",
+        "to": "oelpreise",
+        "source": "hamas",
+        "target": "oelpreise",
+        "label": "Potenzielle Eskalation",
+        "last_seen": "2026-08-10"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Unbestätigte Meldungen zur US-Justizminister-Ernennung erhöhen politische Unsicherheit.",
-    "Kritische Sicherheitslücke in Progress LoadMaster wird aktiv ausgenutzt – Unternehmen müssen handeln.",
-    "EU beschleunigt IRIS²-Satellitensystem als Reaktion auf wachsende Cyber- und Weltraumbedrohungen.",
-    "Taiwan setzt auf Drohnenabwehr, um einer möglichen chinesischen Invasion zu begegnen.",
-    "Wetterrisiken im Atlantik und finanzielle Instabilitäten in Schwellenländern belasten die globale Stabilität."
+    "USA erweitern Sanktionen gegen den Iran wegen Umgehung des UN-Waffenembargos – Bestätigt durch unabhängige Quellen.",
+    "Unbestätigte Berichte über israelische Besetzung des Gazastreifens – Keine unabhängige Verifizierung, aber plausibel.",
+    "Fehlerhafte Erwähnung der Straße von Hormus im Ukraine-Kontext – Korrektur: Gemeint ist vermutlich die Straße von Kertsch oder Energiekonflikte.",
+    "Aktienmärkte stabil, aber unsicher wegen Inflationsdaten und Nahost-Konflikt – Volatilität bleibt hoch.",
+    "Neue kritische Sicherheitslücke (CVE-2026-8037) in Progress LoadMaster-Systemen – Sofortige Patch-Empfehlung für Unternehmen."
   ],
   "geoscore": {
-    "current_score": 72,
+    "current_score": 75,
     "status": "Erhöht"
   },
   "defcon": 3,
@@ -1796,38 +1591,14 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "Hier ist die **Kreuzprüfung (\"Fingerklopfen\")** der von **GROQ** und **DEEPSEEK** genannten Ereignisse für den **09.08.2026** – mit Fokus auf Plausibilität, Widersprüche und fehlende Kontextvalidierung. Die Analyse erfolgt nach Kategorien:\n\n---\n\n### **1. US-Politik / Justiz (Todd Blanche als Justizminister)**\n- **GROQ**: *\"Todd Blanche wurde als neuer US-Justizminister bestätigt.\"*\n- **DEEPSEEK**: *\"Todd Blanche ist als neuer US-Justizminister bestätigt worden. [...] Zusagen zu einem ‚Entschädigungsfonds‘ (vermutlich für Jan. 6-Angeklagte) stehen auf dünnem Eis.\"*\n  - **Kreuzprüfung**:\n    - **Plausibilität**: **Niedrig bis mittel**.\n      - Todd Blanche ist ein bekannter Strafverteidiger (u.a. für Donald Trump in dessen Prozessen), aber seine Ernennung zum *Justizminister* wäre ein **beispielloser Bruch mit der Tradition** (bisherige Minister kamen aus der Justiz, Politik oder Verwaltung).\n      - Die NZZ (Neue Zürcher Zeitung) als Quelle für die \"Zusagen\" ist glaubwürdig, aber der Kontext fehlt: Warum sollte ein Justizminister einen Fonds für Jan. 6-Angeklagte einrichten? Das wäre **hochgradig politisch kontrovers** und würde wahrscheinlich zu einem Amtsenthebungsverfahren führen.\n    - **Fehlende Validierung**:\n      - Keine Bestätigung durch offizielle Quellen (White House, DOJ, Kongressprotokolle).\n      - Keine Erwähnung in US-Medien (NYT, WaPo, AP) – ungewöhnlich für eine so brisante Personalie.\n    - **Mögliche Erklärung**:\n      - **Verwechslung mit einer anderen Rolle** (z.B. Sonderermittler oder Berater) oder **Falschmeldung**.\n      - Alternativ: **Satire/Parodie** (z.B. *The Onion*), die von KI nicht erkannt wurde.\n\n---\n\n### **2. Gesundheit (Joe Biden – Prostatakrebs)**\n- **GROQ**: *\"Der ehemalige US-Präsident Joe Biden leidet an Prostatakrebs.\"*\n- **DEEPSEEK**: *\"Ein neuer Krebsfall wurde bei Joe Biden diagnostiziert.\"*\n  - **Kreuzprüfung**:\n    - **Plausibilität**: **Mittel**.\n      - Biden hatte 2022 bereits eine **nicht-melanome Hautkrebs-OP** (Basalzellkarzinom). Prostatakrebs wäre bei seinem Alter (83 in 2026) statistisch wahrscheinlich, aber:\n      - **Keine offizielle Bestätigung** durch Bidens Ärzte oder das White House.\n      - **Medienberichte fehlen**: Selbst bei einer Diagnose würde dies in US-Medien breit diskutiert werden (vgl. Reagans Alzheimer-Diagnose 1994).\n    - **Mögliche Erklärung**:\n      - **Gerücht**, das sich aus Bidens Alter und früheren Gesundheitsproblemen speist.\n      - **Falsche Zuordnung**: Vielleicht bezieht sich die Meldung auf einen anderen Politiker (z.B. Jimmy Carter, der 2023 mit 98 Jahren noch lebt).\n\n---\n\n### **3. Internationale Sicherheit (IRIS²-Satellitensystem)**\n- **GROQ**: *\"Die Europäische Kommission hat den Einsatz des IRIS²-Satellitensystems beschleunigt.\"*\n  - **Kreuzprüfung**:\n    - **Plausibilität**: **Hoch**.\n      - IRIS² (Infrastructure for Resilience, Interconnectivity and Security by Satellite) ist ein **real existierendes EU-Projekt** (Beschluss 2022, geplante Inbetriebnahme 2027).\n      - Eine Beschleunigung wäre nachvollziehbar, z.B. als Reaktion auf **russische Cyberangriffe** oder **chinesische Spionagesatelliten**.\n    - **Validierung**:\n      - **Offizielle Quellen**: EU-Kommission hat 2023 eine **Mittelaufstockung** für IRIS² angekündigt ([EU-Pressemitteilung](https://digital-strategy.ec.europa.eu/en/policies/iris2)).\n      - **Medienberichte**: *Politico Europe* und *Defense News* berichteten 2024 über Verzögerungen – eine Beschleunigung 2026 wäre eine **Kehrtwende**, aber nicht unmöglich.\n\n---\n\n### **4. Iran / Straße von Hormus**\n- **GROQ**: *\"Der Iran hat eine Liste von Forderungen veröffentlicht, um die Straße von Hormus wieder zu öffnen.\"*\n  - **Kreuzprüfung**:\n    - **Plausibilität**: **Mittel bis niedrig**.\n      - Die Straße von Hormus ist **bereits offen** (wichtigster Öl-Transitweg der Welt). Eine \"Schließung\" wäre ein **Kriegsakt** mit globalen Konsequenzen.\n      - **Mögliche Szenarien**:\n        1. **Falschmeldung**: Verwechslung mit der **Bab al-Mandab-Straße** (Jemen/Konflikt mit den Huthis).\n        2. **Drohgebärde**: Der Iran könnte **symbolische \"Forderungen\"** stellen (z.B. Aufhebung von Sanktionen), aber eine tatsächliche Blockade wäre **selbstmörderisch** (USA würden militärisch reagieren).\n      - **Fehlende Quellen**: Keine Bestätigung durch *Reuters*, *Al Jazeera* oder iranische Staatsmedien.\n\n---\n\n### **5. Technologie / Cyber-Sicherheit (Progress LoadMaster-Schwachstelle)**\n- **GROQ**: *\"Ein neuer Schwachpunkt in der Progress LoadMaster-Software wurde entdeckt.\"*\n  - **Kreuzprüfung**:\n    - **Plausibilität**: **Hoch**.\n      - Progress Software (Hersteller von LoadMaster) hatte 2023 eine **kritische Zero-Day-Lücke** in MOVEit (CVE-2023-34362), die zu massiven Datendiebstählen führte.\n      - Eine neue Schwachstelle 2026 wäre **kein Einzelfall**, aber:\n      - **Fehlende Details**: Keine CVE-Nummer, kein Advisory von Progress oder CISA (US-Cybersicherheitsbehörde).\n      - **Mögliche Quelle**: *BleepingComputer* oder *The Hacker News* hätten darüber berichtet.\n\n---\n\n### **6. Umwelt (Taifun in China / Erdbeben in Japan)**\n- **GROQ**:\n  - *\"Ein Taifun bedroht die Ostküste Chinas, Flüge wurden gestrichen.\"*\n  - *\"Ein Erdbeben der Stärke 5,6 hat Japan getroffen.\"*\n- **Kreuzprüfung**:\n  - **Plausibilität**: **Sehr hoch**.\n    - **Taifune in China**: Häufig (z.B. Taifun \"Doksuri\" 2023 mit 100+ Toten).\n    - **Erdbeben in Japan**: Durchschnittlich **1.500 Beben/Jahr**, Stärke 5,6 ist **moderat** (keine Tsunami-Gefahr).\n  - **Validierung**:\n    - **Japan Meteorological Agency (JMA)** und **China Meteorological Administration (CMA)** hätten Warnungen herausgegeben.\n    - **Medien**: *NHK* (Japan) und *South China Morning Post* würden berichten.\n\n---\n\n### **7. Widersprüche / Auffälligkeiten**\n| **Thema**               | **GROQ**                          | **DEEPSEEK**                     | **Bewertung**                     |\n|-------------------------|-----------------------------------|----------------------------------|-----------------------------------|\n| **Todd Blanche**        | Justizminister bestätigt          | Knappe Mehrheit, \"Entschädigungsfonds\" | **Widerspruch**: Keine offizielle Quelle, Rolle unrealistisch. |\n| **Joe Biden (Krebs)**   | Prostatakrebs                     | \"Neuer",
+  "game_theory_analysis": "Hier ist die **Kreuzprüfung (\"Fingerklopfen\")** der beiden Zusammenfassungen (GROQ vs. DEEPSEEK) für den **10.08.2026**, inklusive Bewertung der Konsistenz, Plausibilität und möglicher Widersprüche:\n\n---\n\n### **1. Politik & Konflikte**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Iran-Sanktionen**     | USA verschärft Sanktionen wegen Umgehung des UN-Waffenembargos.          | USA erweitert Sanktionslisten gegen Iran (Umgehung UN-Embargo).             | **Konsistent**: Beide Quellen bestätigen die Verschärfung, DEEPSEEK nennt konkreter \"Sanktionslisten\". |\n| **Israel/Gazastreifen** | Israel besetzt Gazastreifen, fordert Entwaffnung der Hamas vor Rückzug. | –                                                                            | **Einseitig (GROQ)**: Keine Bestätigung durch DEEPSEEK. Plausibel, aber unbestätigt. |\n| **Ukraine/Russland**    | Konflikt um Straße von Hormus (falsch: Hormus liegt im Persischen Golf!). | –                                                                            | **Fehler (GROQ)**: Vermutlich Verwechslung mit *Straße von Kertsch* (Schwarzmeer) oder *Hormus* als Metapher für Energiekonflikte. **Unplausibel**. |\n| **EU-Sicherheit**       | IRIS²-Satellitennetzwerk wird beschleunigt.                              | –                                                                            | **Einseitig (GROQ)**: Keine Erwähnung bei DEEPSEEK, aber technisch plausibel. |\n\n**Fazit**:\n- **Iran-Sanktionen** sind **bestätigt**.\n- **Israel/Gazastreifen** und **Ukraine/Russland** sind **unbestätigt** (letzteres sogar fehlerhaft).\n- **IRIS²** ist ein EU-Projekt (seit 2022 geplant), aber **keine unabhängige Bestätigung** in den Feeds.\n\n---\n\n### **2. Wirtschaft & Finanzen**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **US-Bankenübernahme**  | Fed genehmigt Übernahme von *Coastal Bend Bancshares*.                   | –                                                                            | **Einseitig (GROQ)**: Keine Bestätigung. Plausibel, aber unklar, warum relevant. |\n| **Aktienmärkte**        | Stabil trotz Inflationsunsicherheit und Nahost-Konflikt.                 | –                                                                            | **Einseitig (GROQ)**: Keine Erwähnung bei DEEPSEEK.                           |\n| **IRIS² (Wiederholung)**| EU beschleunigt Satellitennetzwerk.                                      | –                                                                            | Siehe oben.                                                                  |\n\n**Fazit**:\n- **Keine Überschneidungen** zwischen den Quellen.\n- **Coastal Bend Bancshares** ist eine reale Bank (Texas), aber die Übernahme wäre **kein globales Top-Thema** – möglicherweise **Füllmeldung**.\n\n---\n\n### **3. Umwelt & Klima**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Hitzewellen (EU)**    | Juni/Juli in Westeuropa extrem (Rekordtemperaturen, Waldbrände).          | –                                                                            | **Einseitig (GROQ)**: Keine Bestätigung, aber **plausibel** (Trend seit 2022). |\n| **Pakistan**            | Hitzewelle beeinträchtigt Landwirtschaft/Infrastruktur.                  | –                                                                            | **Einseitig (GROQ)**: Plausibel, aber keine unabhängige Quelle.               |\n\n**Fazit**:\n- **Keine Widersprüche**, aber **keine Bestätigung** durch DEEPSEEK.\n- **Klimadaten** (z. B. Copernicus) sind real, aber die konkreten Meldungen **nicht verifiziert**.\n\n---\n\n### **4. Sicherheit & Technologie**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Cyberangriffe**       | US-Warnung vor Angriffen auf maritime Infrastruktur.                     | –                                                                            | **Einseitig (GROQ)**: Plausibel (z. B. Ransomware auf Häfen), aber unbestätigt. |\n| **IRIS² (Wiederholung)**| EU beschleunigt Satellitennetzwerk.                                      | –                                                                            | Siehe oben.                                                                  |\n| **Netzwerksicherheit**  | Neue Sicherheitslücke in Infrastruktur.                                  | –                                                                            | **Einseitig (GROQ)**: Keine Details, aber **typische Meldung** (z. B. Log4j-Nachfolger). |\n\n**Fazit**:\n- **Keine Überschneidungen**.\n- **Cyberrisiken** sind real, aber die Meldungen **nicht spezifisch genug** für eine Bewertung.\n\n---\n\n### **5. Gesundheit**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Grippe-Welle (WHO)**  | Warnung vor neuer Grippe-Welle in den nächsten Monaten.                  | –                                                                            | **Einseitig (GROQ)**: Plausibel (saisonale Warnungen), aber unbestätigt.      |\n| **Neues Coronavirus**   | Berichte über neue Coronavirus-Variante in China.                        | –                                                                            | **Einseitig (GROQ)**: **Hochplausibel** (China als Hotspot für Varianten), aber keine Details. |\n\n**Fazit**:\n- **Keine Widersprüche**, aber **keine Bestätigung**.\n- **Coronavirus-Meldungen** sind **erwartbar**, aber ohne Sequenzdaten **nicht verifizierbar**.\n\n---\n\n### **6. Migration (nur DEEPSEEK)**\n| **Thema**               | **GROQ** | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|----------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Libyen/Migration**    | –        | Unmut in Libyen über Migranten; Schlüsselrolle für EU-Politik.              | **Einseitig (DEEPSEEK)**: **Plausibel** (Libyen als Transitland), aber keine Bestätigung durch GROQ. |\n\n**Fazit**:\n- **Wichtiges Thema**, das bei GROQ **fehlt**.\n- **Kein Widerspruch**, aber **Lücke in der GROQ-Zusammenfassung**.\n\n---\n\n### **Zusammenfassung der Kreuzprüfung**\n1. **Bestätigte Meldungen**:\n   - **Iran-Sanktionen** (beide Quellen).\n   - **IRIS²-Satellitennetzwerk** (nur GROQ, aber real existierendes EU-Projekt).\n\n2. **Unbestätigte, aber plausible Meldungen**:\n   - Israel/Gazastreifen, Hitzewellen, Cyberangriffe, neues Coronavirus, Libyen-Migration.\n\n3. **Fehlerhafte/Unplausible Meldungen**:\n   - **Ukraine/Russland-Konflikt um \"Straße von Hormus\"** (geografisch falsch).\n\n4. **Lücken**:\n   - DEEPSEEK erwähnt **Libyen-Migration**, GROQ nicht.\n   - GROQ hat **mehr Wirtschaftsmeldungen** (Bankenübernahme, Aktienmärkte), die bei DEEPSEEK fehlen.\n\n5. **Wiederholungen**:\n   - **IRIS²** wird bei GROQ **dreimal** erwähnt – möglicherweise **Fülltext** oder Betonung eines EU",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen im Persischen Golf und Wetterrisiken treiben Energiepreise voraussichtlich an."
-      },
-      {
-        "ticker": "LMT",
-        "name": "Lockheed Martin",
-        "asset": "Rüstung",
-        "reason": "Erhöhte Nachfrage nach Drohnen und Verteidigungstechnologie, insbesondere durch Taiwan und Europa."
-      },
-      {
-        "ticker": "CSCO",
-        "name": "Cisco Systems",
-        "asset": "Cybersicherheit",
-        "reason": "CISA-Warnung vor kritischen Schwachstellen erhöht die Investitionen in IT-Sicherheit."
-      },
-      {
-        "ticker": "GLD",
-        "name": "Gold",
-        "asset": "Rohstoff",
-        "reason": "Sicherer Hafen bei politischer Unsicherheit und Marktvolatilität."
-      },
-      {
-        "ticker": "NOC",
-        "name": "Northrop Grumman",
-        "asset": "Rüstung",
-        "reason": "Beschleunigung von IRIS² und globale Aufrüstungstrends stützen den Sektor."
+        "reason": "Erhöhte Spannungen im Persischen Golf und Sanktionen gegen den Iran treiben Energiepreise voraussichtlich nach oben."
       }
     ],
     "flop_5_sells": [
@@ -1835,52 +1606,28 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Finanzielle Instabilitäten, politische Unsicherheiten und Abhängigkeit von globalen Lieferketten belasten die Performance."
-      },
-      {
-        "ticker": "TSLA",
-        "name": "Tesla",
-        "asset": "Automobil",
-        "reason": "Lieferkettenrisiken und sinkende Nachfrage in China aufgrund geopolitischer Spannungen."
-      },
-      {
-        "ticker": "BTC-USD",
-        "name": "Bitcoin",
-        "asset": "Kryptowährung",
-        "reason": "Regulatorische Unsicherheiten und Risikoaversion der Anleger drücken den Kurs."
-      },
-      {
-        "ticker": "IYT",
-        "name": "Transportation Average",
-        "asset": "Logistik",
-        "reason": "Chokepoint-Risiken im Persischen Golf und Wetterextreme gefährden globale Lieferketten."
-      },
-      {
-        "ticker": "XHB",
-        "name": "Homebuilders",
-        "asset": "Immobilien",
-        "reason": "Zinsunsicherheit und wirtschaftliche Instabilität dämpfen die Bauaktivitäten."
+        "reason": "Geopolitische Unsicherheiten und mögliche Energiepreisschocks belasten exportabhängige Schwellenländer."
       }
     ]
   },
-  "timestamp": "2026-08-09T06:43:06.555526+00:00",
+  "timestamp": "2026-08-10T07:16:58.075910+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-09T06:40:44.896651+00:00",
+    "timestamp": "2026-08-10T07:14:24.557366+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
-    "gdelt_articles": 0,
+    "feeds_successful": 118,
+    "feeds_failed": 106,
+    "gdelt_articles": 35,
     "telegram_posts": 0,
     "bakers_active": [
       "Groq (Llama-3.3)",
-      "qwen-2.5-72b-instruct",
-      "DeepSeek"
+      "DeepSeek",
+      "qwen-2.5-72b-instruct"
     ],
     "swarm_debate_status": "SUCCESS",
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
-    "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (53 Nodes)",
+    "opensky_status": "SUCCESS (7 Signale)",
+    "graph_merge_status": "SUCCESS (50 Nodes)",
     "errors": []
   },
   "delta": {
@@ -1889,13 +1636,13 @@
     "ampel_now": "GELB",
     "ampel_changed": false,
     "geoscore_prev": 72,
-    "geoscore_now": 72,
-    "geoscore_delta": 0,
+    "geoscore_now": 75,
+    "geoscore_delta": 3,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 55,
-    "nodes_now": 53,
-    "hotspots_now": 10,
-    "summary": "Graph-Knoten 55 → 53"
+    "nodes_prev": 53,
+    "nodes_now": 50,
+    "hotspots_now": 9,
+    "summary": "Geoscore 72 → 75 (+3) · Graph-Knoten 53 → 50"
   }
 }
