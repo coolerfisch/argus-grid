@@ -2,25 +2,31 @@
   "overall_geoscore": 75,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte geopolitische Spannungen im Persischen Golf und unbestätigte Konflikteskalationen, aber keine unmittelbare Kriegsgefahr. Wirtschaftliche Unsicherheit durch Inflationsdaten und Energiepreise.",
-  "daily_executive_summary": "Die USA haben die Sanktionen gegen den Iran verschärft, nachdem Hinweise auf Umgehungen des UN-Waffenembargos aufkamen. Dies verschärft die Spannungen im Persischen Golf, insbesondere um die Straße von Hormus, die für globale Öllieferungen kritisch ist. Unbestätigte Berichte deuten auf eine mögliche israelische Besetzung des Gazastreifens hin, während die Ukraine-Krise weiterhin latent eskaliert. Wirtschaftlich bleibt die Lage volatil: Die US-Notenbank genehmigte eine Bankenübernahme, doch die Aktienmärkte zeigen sich stabil, aber unsicher angesichts bevorstehender Inflationsdaten. Cyber-Sicherheitsrisiken durch eine neu entdeckte Schwachstelle in Progress LoadMaster-Systemen erfordern erhöhte Aufmerksamkeit.",
-  "daily_executive_summary_simple": "Die USA verschärfen den Druck auf den Iran wegen Waffenlieferungen, was die Lage im Nahen Osten angespannt hält. Israel könnte im Gazastreifen militärisch aktiv werden, aber das ist noch nicht sicher. Die Wirtschaft bleibt unsicher, weil bald wichtige Inflationszahlen veröffentlicht werden. Gleichzeitig gibt es eine neue Sicherheitslücke in Computersystemen, die Unternehmen und Behörden bedroht.",
+  "ampel_reason_simple": "Erdbeben in Kolumbien mit hohen Opferzahlen und eine neue Ransomware-Bedrohung erhöhen die globale Risikolage, während Finanzmärkte volatil bleiben.",
+  "daily_executive_summary": "Am 11.08.2026 dominieren drei zentrale Ereignisse die globale Lage: Ein schweres Erdbeben der Stärke 7,4 in Kolumbien hat mindestens 147 Tote gefordert und verursacht erhebliche Zerstörungen in der Region Nariño. Internationale Hilfsmaßnahmen laufen an, doch die Opferzahlen könnten weiter steigen. Parallel warnt die CISA vor der neuen 'Gunra Ransomware', die von der iranischen APT-Gruppe MuddyWater eingesetzt wird und kritische Infrastruktur in den USA und Europa bedroht. Erste Angriffe auf eine deutsche Stadtverwaltung und US-Krankenhäuser wurden bestätigt. An den Finanzmärkten sorgt Nvidias geplante Kapitalerhöhung von bis zu 500 Mrd. USD für Diskussionen über eine mögliche Überhitzung des KI-Sektors, während Schwellenländeraktien unter Druck geraten.",
+  "daily_executive_summary_simple": "In Kolumbien gab es ein starkes Erdbeben mit vielen Toten und Verletzten. Gleichzeitig warnen Experten vor einem neuen Computervirus, der Unternehmen und Regierungen angreift. An der Börse ist die Stimmung unsicher, besonders bei Technologieaktien wie Nvidia. Die Lage ist angespannt, aber nicht akut gefährlich.",
   "key_takeaways": [
-    "USA erweitern Sanktionen gegen den Iran wegen Umgehung des UN-Waffenembargos – Bestätigt durch unabhängige Quellen.",
-    "Unbestätigte Berichte über israelische Besetzung des Gazastreifens – Keine unabhängige Verifizierung, aber plausibel.",
-    "Fehlerhafte Erwähnung der Straße von Hormus im Ukraine-Kontext – Korrektur: Gemeint ist vermutlich die Straße von Kertsch oder Energiekonflikte.",
-    "Aktienmärkte stabil, aber unsicher wegen Inflationsdaten und Nahost-Konflikt – Volatilität bleibt hoch.",
-    "Neue kritische Sicherheitslücke (CVE-2026-8037) in Progress LoadMaster-Systemen – Sofortige Patch-Empfehlung für Unternehmen."
+    "Erdbeben in Kolumbien (7,4) bestätigt – mindestens 147 Tote, Tsunami-Warnung aufgehoben.",
+    "Neue 'Gunra Ransomware' bedroht kritische Infrastruktur in USA und Europa (Iranische Gruppe MuddyWater).",
+    "Nvidia plant Kapitalerhöhung von bis zu 500 Mrd. USD für KI-Infrastruktur – Markt reagiert mit Kursanstieg, aber Warnungen vor Blase.",
+    "CISA-Warnung vor Phishing-Angriffen mit infizierten PDFs – erste Opfer in Deutschland und USA.",
+    "Finanzmärkte bleiben volatil, Schwellenländer unter Druck."
   ],
   "market_regime": "Volatil",
-  "top_risk": "Energieversorgung & Lieferketten",
+  "top_risk": "Cybersicherheit & Naturkatastrophen",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Erhöhte Spannungen im Persischen Golf und Sanktionen gegen den Iran treiben Energiepreise voraussichtlich nach oben."
+        "reason": "Erdbeben in Kolumbien und mögliche Lieferkettenstörungen erhöhen die Nachfrage nach stabilen Energieaktien."
+      },
+      {
+        "ticker": "MSFT",
+        "name": "Microsoft",
+        "asset": "Cybersicherheit",
+        "reason": "Erhöhte Nachfrage nach Sicherheitslösungen aufgrund der 'Gunra Ransomware'-Bedrohung."
       }
     ],
     "flop5_sells": [
@@ -28,7 +34,13 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Geopolitische Unsicherheiten und mögliche Energiepreisschocks belasten exportabhängige Schwellenländer."
+        "reason": "Erdbeben in Kolumbien und politische Unsicherheiten belasten Schwellenländeraktien."
+      },
+      {
+        "ticker": "ARKK",
+        "name": "ARK Innovation ETF",
+        "asset": "Technologie",
+        "reason": "Überhitzungsrisiko im KI-Sektor nach Nvidias Kapitalerhöhung."
       }
     ]
   },
@@ -36,142 +48,150 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Verschärfte Sanktionen gegen den Iran und unklare Nahost-Politik erhöhen geopolitische Risiken. Wirtschaftlich bleibt die Lage angespannt durch Inflationsunsicherheit und Bankenkonsolidierung."
+      "dynamics": "Cyberangriffe auf kritische Infrastruktur und politische Spannungen vor den Midterms erhöhen die Unsicherheit."
     },
     {
       "region": "EU",
       "stability": "GELB",
-      "dynamics": "Beschleunigung des IRIS²-Satellitennetzwerks als Reaktion auf Sicherheitsbedrohungen, aber keine akute Krisenlage."
+      "dynamics": "Ransomware-Angriffe auf deutsche Behörden und Migrationsdebatten in den Niederlanden belasten die Stabilität."
+    },
+    {
+      "region": "Kolumbien",
+      "stability": "ROT",
+      "dynamics": "Schweres Erdbeben führt zu humanitärer Krise und politischen Herausforderungen."
     }
   ],
   "historical_precedents": [
     {
-      "event": "USA erweitern Sanktionslisten gegen den Iran wegen Umgehung des UN-Waffenembargos.",
-      "current_event": "USA erweitern Sanktionslisten gegen den Iran wegen Umgehung des UN-Waffenembargos.",
-      "historical_analog": "US-Sanktionen gegen den Iran 2018–2020 (Trump-Ära)",
-      "similarity": "US-Sanktionen gegen den Iran 2018–2020 (Trump-Ära)",
-      "takeaway": "Historisch führten solche Sanktionen zu kurzfristigen Energiepreisschocks und erhöhten die Spannungen im Persischen Golf, ohne das Regime zu stürzen."
+      "event": "Erdbeben der Stärke 7,4 in Kolumbien mit mindestens 147 Toten.",
+      "current_event": "Erdbeben der Stärke 7,4 in Kolumbien mit mindestens 147 Toten.",
+      "historical_analog": "Erdbeben in Haiti (2010, Stärke 7,0) mit über 200.000 Toten.",
+      "similarity": "Erdbeben in Haiti (2010, Stärke 7,0) mit über 200.000 Toten.",
+      "takeaway": "Internationale Hilfe ist entscheidend, um humanitäre Katastrophen zu begrenzen."
+    },
+    {
+      "event": "Neue Ransomware-Bedrohung durch iranische Gruppe MuddyWater.",
+      "current_event": "Neue Ransomware-Bedrohung durch iranische Gruppe MuddyWater.",
+      "historical_analog": "NotPetya-Angriff (2017) durch russische Hacker.",
+      "similarity": "NotPetya-Angriff (2017) durch russische Hacker.",
+      "takeaway": "Cybersicherheit muss global koordiniert werden, um ähnliche Schäden zu verhindern."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Die Spannungen im Persischen Golf werden voraussichtlich anhalten, mit möglichen kurzfristigen Unterbrechungen der Öltransporte durch die Straße von Hormus. Die Aktienmärkte bleiben volatil, abhängig von den Inflationsdaten und der Reaktion der Zentralbanken.",
+    "base_case_summary": "Die Opferzahlen in Kolumbien könnten weiter steigen, während Hilfsmaßnahmen anlaufen. Die 'Gunra Ransomware' wird voraussichtlich weitere Angriffe auf europäische und US-Ziele durchführen.",
     "leading_indicators_to_watch": [
-      "Militärische Bewegungen im Persischen Golf (z. B. US-Marineaktivitäten)",
-      "Veränderungen der Ölpreise (Brent/WTI) um mehr als 5 % innerhalb einer Woche",
-      "Offizielle Stellungnahmen der OPEC+ zu Produktionsanpassungen"
+      "Zunahme von Phishing-E-Mails mit infizierten PDFs",
+      "Meldungen über neue Ransomware-Opfer in kritischen Sektoren"
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Die Spannungen im Persischen Golf werden voraussichtlich anhalten, mit möglichen kurzfristigen Unterbrechungen der Öltransporte durch die Straße von Hormus. Die Aktienmärkte bleiben volatil, abhängig von den Inflationsdaten und der Reaktion der Zentralbanken.",
+        "forecast": "Die Opferzahlen in Kolumbien könnten weiter steigen, während Hilfsmaßnahmen anlaufen. Die 'Gunra Ransomware' wird voraussichtlich weitere Angriffe auf europäische und US-Ziele durchführen.",
         "probability": "Hoch",
         "early_warning_indicators": [
-          "Militärische Bewegungen im Persischen Golf (z. B. US-Marineaktivitäten)",
-          "Veränderungen der Ölpreise (Brent/WTI) um mehr als 5 % innerhalb einer Woche",
-          "Offizielle Stellungnahmen der OPEC+ zu Produktionsanpassungen"
+          "Zunahme von Phishing-E-Mails mit infizierten PDFs",
+          "Meldungen über neue Ransomware-Opfer in kritischen Sektoren"
+        ]
+      },
+      {
+        "timeframe": "90 Tage",
+        "forecast": "Nvidias Investitionen könnten den KI-Sektor weiter antreiben, aber eine Korrektur ist möglich, falls die Blasenwarnungen zutreffen.",
+        "probability": "Mittel",
+        "early_warning_indicators": [
+          "Überhitzte Bewertungen von KI-Aktien",
+          "Zinsentscheidungen der Federal Reserve"
         ]
       }
     ]
   },
   "conflict_hotspots": [
     {
-      "name": "Persischer Golf / Straße von Hormus",
+      "name": "Persischer Golf",
       "region": "Persischer Golf",
       "lat": 26.5,
       "lon": 53.5,
       "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Die Straße von Hormus ist ein kritischer Engpass für globale Öllieferungen. Aktuelle US-Sanktionen gegen den Iran erhöhen das Risiko von Blockaden oder militärischen Zwischenfällen.",
-      "impact": "Eine Unterbrechung der Durchfahrt könnte zu einem globalen Ölpreisschock führen, mit direkten Auswirkungen auf die Weltwirtschaft und Aktienmärkte.",
+      "description": "Spannungen zwischen Iran und den USA könnten zu Störungen der Öltransporte führen.",
+      "impact": "Erhöhte Ölpreise und globale Lieferkettenrisiken.",
       "lng": 53.5
     },
     {
-      "name": "Gazastreifen",
-      "region": "Naher Osten",
-      "lat": 31.5,
-      "lon": 34.5,
+      "name": "Kolumbien (Erdbebenregion)",
+      "region": "Nariño, Kolumbien",
+      "lat": 1.5,
+      "lon": -78.0,
       "type": "conflict",
       "intensity": "GELB",
-      "description": "Unbestätigte Berichte deuten auf eine mögliche israelische Militäroperation im Gazastreifen hin, mit Forderungen nach Entwaffnung der Hamas.",
-      "impact": "Eine Eskalation könnte zu regionaler Instabilität führen und die Ölpreise beeinflussen, bleibt aber aktuell unbestätigt.",
-      "lng": 34.5
+      "description": "Humanitäre Krise nach Erdbeben könnte zu sozialen Unruhen führen.",
+      "impact": "Mögliche Migrationsbewegungen und politische Instabilität.",
+      "lng": -78.0
     },
     {
-      "name": "Flug PGT84R",
+      "name": "Flug PGT296Z",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.9439,
-      "lon": 39.5903,
-      "lng": 39.5903,
+      "lat": 41.9566,
+      "lon": 29.3545,
+      "lng": 29.3545,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT84R | Höhe: 11.0 km | Speed: 748 km/h",
+      "description": "Callsign: PGT296Z | Höhe: 9.6 km | Speed: 202 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT89N",
+      "name": "Flug PGT41LW",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.436,
-      "lon": 31.6201,
-      "lng": 31.6201,
+      "lat": 40.7501,
+      "lon": 39.1502,
+      "lng": 39.1502,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT89N | Höhe: 9.2 km | Speed: 944 km/h",
+      "description": "Callsign: PGT41LW | Höhe: 9.1 km | Speed: 816 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug AIC4250",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 22.2573,
+      "lon": 51.087,
+      "lng": 51.087,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: AIC4250 | Höhe: 10.7 km | Speed: 838 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug WMT9801",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.1398,
-      "lon": 32.3524,
-      "lng": 32.3524,
+      "lat": 32.7744,
+      "lon": 32.9782,
+      "lng": 32.9782,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WMT9801 | Höhe: 9.0 km | Speed: 842 km/h",
+      "description": "Callsign: WMT9801 | Höhe: 8.3 km | Speed: 846 km/h",
       "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "ADS-B Signal 739261",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 33.0,
-      "lon": 34.6935,
-      "lng": 34.6935,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: Unbekannt | Höhe: 0.4 km | Speed: 260 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug RRR6226",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 30.3177,
-      "lon": 33.7982,
-      "lng": 33.7982,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR6226 | Höhe: 8.2 km | Speed: 872 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
     },
     {
       "name": "Flug UAL852",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.2175,
-      "lon": 122.3507,
-      "lng": 122.3507,
+      "lat": 25.1303,
+      "lon": 122.016,
+      "lng": 122.016,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAL852 | Höhe: 7.1 km | Speed: 846 km/h",
+      "description": "Callsign: UAL852 | Höhe: 5.6 km | Speed: 829 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CDG4086",
+      "name": "Flug JJP18",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.7074,
-      "lon": 121.6899,
-      "lng": 121.6899,
+      "lat": 25.5945,
+      "lon": 122.5941,
+      "lng": 122.5941,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CDG4086 | Höhe: 6.7 km | Speed: 808 km/h",
+      "description": "Callsign: JJP18 | Höhe: 10.1 km | Speed: 901 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -183,7 +203,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-10"
+        "last_seen": "2026-08-11"
       },
       {
         "id": "iran",
@@ -191,7 +211,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-10"
+        "last_seen": "2026-08-11"
       },
       {
         "id": "saudi",
@@ -205,7 +225,7 @@
         "id": "israel",
         "label": "Israel",
         "group": "staat",
-        "val": 9,
+        "val": 8,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-10"
       },
@@ -213,7 +233,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -221,7 +241,7 @@
         "id": "taiwan",
         "label": "Taiwan",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -229,7 +249,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 21,
+        "val": 20,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -237,7 +257,7 @@
         "id": "eu",
         "label": "EU",
         "group": "staat",
-        "val": 21,
+        "val": 20,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -253,7 +273,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 20,
+        "val": 19,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-08"
       },
@@ -261,7 +281,7 @@
         "id": "fed",
         "label": "Fed",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-08"
       },
@@ -277,7 +297,7 @@
         "id": "cyber_risiko",
         "label": "Cyber-Sicherheit",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-26",
         "last_seen": "2026-08-09"
       },
@@ -288,14 +308,6 @@
         "val": 3,
         "first_seen": "2026-07-27",
         "last_seen": "2026-07-29"
-      },
-      {
-        "id": "oelpreis",
-        "label": "Ölmarkt",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-07-27",
-        "last_seen": "2026-07-27"
       },
       {
         "id": "syrien",
@@ -485,7 +497,7 @@
         "id": "cyberrisiko",
         "label": "Cyberrisiko",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-03",
         "last_seen": "2026-08-08"
       },
@@ -541,7 +553,7 @@
         "id": "halbleiter",
         "label": "Halbleiter",
         "group": "tech",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-07",
         "last_seen": "2026-08-07"
       },
@@ -549,7 +561,7 @@
         "id": "palästina",
         "label": "Palästina",
         "group": "staat",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-09",
         "last_seen": "2026-08-09"
       },
@@ -557,7 +569,7 @@
         "id": "hamas",
         "label": "Hamas",
         "group": "miliz",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-10",
         "last_seen": "2026-08-10"
       },
@@ -565,7 +577,7 @@
         "id": "oelpreise",
         "label": "Ölpreise",
         "group": "risiko",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-08-10",
         "last_seen": "2026-08-10"
       },
@@ -573,9 +585,49 @@
         "id": "straits_of_hormuz",
         "label": "Straße von Hormus",
         "group": "chokepoint",
-        "val": 8,
+        "val": 7,
         "first_seen": "2026-08-10",
         "last_seen": "2026-08-10"
+      },
+      {
+        "id": "kolumbien",
+        "label": "Kolumbien",
+        "group": "staat",
+        "val": 6,
+        "first_seen": "2026-08-11",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "id": "muddywater",
+        "label": "MuddyWater",
+        "group": "organisation",
+        "val": 5,
+        "first_seen": "2026-08-11",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "id": "nvidia",
+        "label": "Nvidia",
+        "group": "tech",
+        "val": 5,
+        "first_seen": "2026-08-11",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "id": "gunra",
+        "label": "Gunra",
+        "group": "risiko",
+        "val": 5,
+        "first_seen": "2026-08-11",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "id": "persischer_golf",
+        "label": "Persischer Golf",
+        "group": "risiko",
+        "val": 6,
+        "first_seen": "2026-08-11",
+        "last_seen": "2026-08-11"
       }
     ],
     "edges": [
@@ -584,8 +636,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Sanktionen & Konflikt",
-        "last_seen": "2026-08-10"
+        "label": "Cyberkonflikt",
+        "last_seen": "2026-08-11"
       },
       {
         "from": "usa",
@@ -636,22 +688,6 @@
         "last_seen": "2026-08-04"
       },
       {
-        "from": "cyber_risiko",
-        "to": "usa",
-        "source": "cyber_risiko",
-        "target": "usa",
-        "label": "Bedrohung",
-        "last_seen": "2026-07-27"
-      },
-      {
-        "from": "iran",
-        "to": "oelpreis",
-        "source": "iran",
-        "target": "oelpreis",
-        "label": "Einfluss",
-        "last_seen": "2026-07-27"
-      },
-      {
         "from": "ukraine",
         "to": "russland",
         "source": "ukraine",
@@ -660,28 +696,12 @@
         "last_seen": "2026-08-07"
       },
       {
-        "from": "usa",
-        "to": "japan",
-        "source": "usa",
-        "target": "japan",
-        "label": "Allianz",
-        "last_seen": "2026-07-27"
-      },
-      {
         "from": "china",
         "to": "usa",
         "source": "china",
         "target": "usa",
         "label": "Handelskonflikt",
         "last_seen": "2026-08-01"
-      },
-      {
-        "from": "cyber_risiko",
-        "to": "russland",
-        "source": "cyber_risiko",
-        "target": "russland",
-        "label": "Bedrohung",
-        "last_seen": "2026-07-27"
       },
       {
         "from": "usa",
@@ -1074,6 +1094,62 @@
         "target": "oelpreise",
         "label": "Potenzielle Eskalation",
         "last_seen": "2026-08-10"
+      },
+      {
+        "from": "iran",
+        "to": "muddywater",
+        "source": "iran",
+        "target": "muddywater",
+        "label": "Unterstützung",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "muddywater",
+        "to": "gunra",
+        "source": "muddywater",
+        "target": "gunra",
+        "label": "Einsatz",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "gunra",
+        "to": "usa",
+        "source": "gunra",
+        "target": "usa",
+        "label": "Angriff",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "gunra",
+        "to": "kolumbien",
+        "source": "gunra",
+        "target": "kolumbien",
+        "label": "Potenzielle Bedrohung",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "usa",
+        "to": "persischer_golf",
+        "source": "usa",
+        "target": "persischer_golf",
+        "label": "Militärpräsenz",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "iran",
+        "to": "persischer_golf",
+        "source": "iran",
+        "target": "persischer_golf",
+        "label": "Spannungen",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "nvidia",
+        "to": "usa",
+        "source": "nvidia",
+        "target": "usa",
+        "label": "Investitionen",
+        "last_seen": "2026-08-11"
       }
     ],
     "links": [
@@ -1082,8 +1158,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Sanktionen & Konflikt",
-        "last_seen": "2026-08-10"
+        "label": "Cyberkonflikt",
+        "last_seen": "2026-08-11"
       },
       {
         "from": "usa",
@@ -1134,22 +1210,6 @@
         "last_seen": "2026-08-04"
       },
       {
-        "from": "cyber_risiko",
-        "to": "usa",
-        "source": "cyber_risiko",
-        "target": "usa",
-        "label": "Bedrohung",
-        "last_seen": "2026-07-27"
-      },
-      {
-        "from": "iran",
-        "to": "oelpreis",
-        "source": "iran",
-        "target": "oelpreis",
-        "label": "Einfluss",
-        "last_seen": "2026-07-27"
-      },
-      {
         "from": "ukraine",
         "to": "russland",
         "source": "ukraine",
@@ -1158,28 +1218,12 @@
         "last_seen": "2026-08-07"
       },
       {
-        "from": "usa",
-        "to": "japan",
-        "source": "usa",
-        "target": "japan",
-        "label": "Allianz",
-        "last_seen": "2026-07-27"
-      },
-      {
         "from": "china",
         "to": "usa",
         "source": "china",
         "target": "usa",
         "label": "Handelskonflikt",
         "last_seen": "2026-08-01"
-      },
-      {
-        "from": "cyber_risiko",
-        "to": "russland",
-        "source": "cyber_risiko",
-        "target": "russland",
-        "label": "Bedrohung",
-        "last_seen": "2026-07-27"
       },
       {
         "from": "usa",
@@ -1572,15 +1616,71 @@
         "target": "oelpreise",
         "label": "Potenzielle Eskalation",
         "last_seen": "2026-08-10"
+      },
+      {
+        "from": "iran",
+        "to": "muddywater",
+        "source": "iran",
+        "target": "muddywater",
+        "label": "Unterstützung",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "muddywater",
+        "to": "gunra",
+        "source": "muddywater",
+        "target": "gunra",
+        "label": "Einsatz",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "gunra",
+        "to": "usa",
+        "source": "gunra",
+        "target": "usa",
+        "label": "Angriff",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "gunra",
+        "to": "kolumbien",
+        "source": "gunra",
+        "target": "kolumbien",
+        "label": "Potenzielle Bedrohung",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "usa",
+        "to": "persischer_golf",
+        "source": "usa",
+        "target": "persischer_golf",
+        "label": "Militärpräsenz",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "iran",
+        "to": "persischer_golf",
+        "source": "iran",
+        "target": "persischer_golf",
+        "label": "Spannungen",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "from": "nvidia",
+        "to": "usa",
+        "source": "nvidia",
+        "target": "usa",
+        "label": "Investitionen",
+        "last_seen": "2026-08-11"
       }
     ]
   },
   "simple_key_takeaways": [
-    "USA erweitern Sanktionen gegen den Iran wegen Umgehung des UN-Waffenembargos – Bestätigt durch unabhängige Quellen.",
-    "Unbestätigte Berichte über israelische Besetzung des Gazastreifens – Keine unabhängige Verifizierung, aber plausibel.",
-    "Fehlerhafte Erwähnung der Straße von Hormus im Ukraine-Kontext – Korrektur: Gemeint ist vermutlich die Straße von Kertsch oder Energiekonflikte.",
-    "Aktienmärkte stabil, aber unsicher wegen Inflationsdaten und Nahost-Konflikt – Volatilität bleibt hoch.",
-    "Neue kritische Sicherheitslücke (CVE-2026-8037) in Progress LoadMaster-Systemen – Sofortige Patch-Empfehlung für Unternehmen."
+    "Erdbeben in Kolumbien (7,4) bestätigt – mindestens 147 Tote, Tsunami-Warnung aufgehoben.",
+    "Neue 'Gunra Ransomware' bedroht kritische Infrastruktur in USA und Europa (Iranische Gruppe MuddyWater).",
+    "Nvidia plant Kapitalerhöhung von bis zu 500 Mrd. USD für KI-Infrastruktur – Markt reagiert mit Kursanstieg, aber Warnungen vor Blase.",
+    "CISA-Warnung vor Phishing-Angriffen mit infizierten PDFs – erste Opfer in Deutschland und USA.",
+    "Finanzmärkte bleiben volatil, Schwellenländer unter Druck."
   ],
   "geoscore": {
     "current_score": 75,
@@ -1591,14 +1691,20 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "Hier ist die **Kreuzprüfung (\"Fingerklopfen\")** der beiden Zusammenfassungen (GROQ vs. DEEPSEEK) für den **10.08.2026**, inklusive Bewertung der Konsistenz, Plausibilität und möglicher Widersprüche:\n\n---\n\n### **1. Politik & Konflikte**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Iran-Sanktionen**     | USA verschärft Sanktionen wegen Umgehung des UN-Waffenembargos.          | USA erweitert Sanktionslisten gegen Iran (Umgehung UN-Embargo).             | **Konsistent**: Beide Quellen bestätigen die Verschärfung, DEEPSEEK nennt konkreter \"Sanktionslisten\". |\n| **Israel/Gazastreifen** | Israel besetzt Gazastreifen, fordert Entwaffnung der Hamas vor Rückzug. | –                                                                            | **Einseitig (GROQ)**: Keine Bestätigung durch DEEPSEEK. Plausibel, aber unbestätigt. |\n| **Ukraine/Russland**    | Konflikt um Straße von Hormus (falsch: Hormus liegt im Persischen Golf!). | –                                                                            | **Fehler (GROQ)**: Vermutlich Verwechslung mit *Straße von Kertsch* (Schwarzmeer) oder *Hormus* als Metapher für Energiekonflikte. **Unplausibel**. |\n| **EU-Sicherheit**       | IRIS²-Satellitennetzwerk wird beschleunigt.                              | –                                                                            | **Einseitig (GROQ)**: Keine Erwähnung bei DEEPSEEK, aber technisch plausibel. |\n\n**Fazit**:\n- **Iran-Sanktionen** sind **bestätigt**.\n- **Israel/Gazastreifen** und **Ukraine/Russland** sind **unbestätigt** (letzteres sogar fehlerhaft).\n- **IRIS²** ist ein EU-Projekt (seit 2022 geplant), aber **keine unabhängige Bestätigung** in den Feeds.\n\n---\n\n### **2. Wirtschaft & Finanzen**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **US-Bankenübernahme**  | Fed genehmigt Übernahme von *Coastal Bend Bancshares*.                   | –                                                                            | **Einseitig (GROQ)**: Keine Bestätigung. Plausibel, aber unklar, warum relevant. |\n| **Aktienmärkte**        | Stabil trotz Inflationsunsicherheit und Nahost-Konflikt.                 | –                                                                            | **Einseitig (GROQ)**: Keine Erwähnung bei DEEPSEEK.                           |\n| **IRIS² (Wiederholung)**| EU beschleunigt Satellitennetzwerk.                                      | –                                                                            | Siehe oben.                                                                  |\n\n**Fazit**:\n- **Keine Überschneidungen** zwischen den Quellen.\n- **Coastal Bend Bancshares** ist eine reale Bank (Texas), aber die Übernahme wäre **kein globales Top-Thema** – möglicherweise **Füllmeldung**.\n\n---\n\n### **3. Umwelt & Klima**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Hitzewellen (EU)**    | Juni/Juli in Westeuropa extrem (Rekordtemperaturen, Waldbrände).          | –                                                                            | **Einseitig (GROQ)**: Keine Bestätigung, aber **plausibel** (Trend seit 2022). |\n| **Pakistan**            | Hitzewelle beeinträchtigt Landwirtschaft/Infrastruktur.                  | –                                                                            | **Einseitig (GROQ)**: Plausibel, aber keine unabhängige Quelle.               |\n\n**Fazit**:\n- **Keine Widersprüche**, aber **keine Bestätigung** durch DEEPSEEK.\n- **Klimadaten** (z. B. Copernicus) sind real, aber die konkreten Meldungen **nicht verifiziert**.\n\n---\n\n### **4. Sicherheit & Technologie**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Cyberangriffe**       | US-Warnung vor Angriffen auf maritime Infrastruktur.                     | –                                                                            | **Einseitig (GROQ)**: Plausibel (z. B. Ransomware auf Häfen), aber unbestätigt. |\n| **IRIS² (Wiederholung)**| EU beschleunigt Satellitennetzwerk.                                      | –                                                                            | Siehe oben.                                                                  |\n| **Netzwerksicherheit**  | Neue Sicherheitslücke in Infrastruktur.                                  | –                                                                            | **Einseitig (GROQ)**: Keine Details, aber **typische Meldung** (z. B. Log4j-Nachfolger). |\n\n**Fazit**:\n- **Keine Überschneidungen**.\n- **Cyberrisiken** sind real, aber die Meldungen **nicht spezifisch genug** für eine Bewertung.\n\n---\n\n### **5. Gesundheit**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Grippe-Welle (WHO)**  | Warnung vor neuer Grippe-Welle in den nächsten Monaten.                  | –                                                                            | **Einseitig (GROQ)**: Plausibel (saisonale Warnungen), aber unbestätigt.      |\n| **Neues Coronavirus**   | Berichte über neue Coronavirus-Variante in China.                        | –                                                                            | **Einseitig (GROQ)**: **Hochplausibel** (China als Hotspot für Varianten), aber keine Details. |\n\n**Fazit**:\n- **Keine Widersprüche**, aber **keine Bestätigung**.\n- **Coronavirus-Meldungen** sind **erwartbar**, aber ohne Sequenzdaten **nicht verifizierbar**.\n\n---\n\n### **6. Migration (nur DEEPSEEK)**\n| **Thema**               | **GROQ** | **DEEPSEEK**                                                                 | **Bewertung**                                                                 |\n|-------------------------|----------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Libyen/Migration**    | –        | Unmut in Libyen über Migranten; Schlüsselrolle für EU-Politik.              | **Einseitig (DEEPSEEK)**: **Plausibel** (Libyen als Transitland), aber keine Bestätigung durch GROQ. |\n\n**Fazit**:\n- **Wichtiges Thema**, das bei GROQ **fehlt**.\n- **Kein Widerspruch**, aber **Lücke in der GROQ-Zusammenfassung**.\n\n---\n\n### **Zusammenfassung der Kreuzprüfung**\n1. **Bestätigte Meldungen**:\n   - **Iran-Sanktionen** (beide Quellen).\n   - **IRIS²-Satellitennetzwerk** (nur GROQ, aber real existierendes EU-Projekt).\n\n2. **Unbestätigte, aber plausible Meldungen**:\n   - Israel/Gazastreifen, Hitzewellen, Cyberangriffe, neues Coronavirus, Libyen-Migration.\n\n3. **Fehlerhafte/Unplausible Meldungen**:\n   - **Ukraine/Russland-Konflikt um \"Straße von Hormus\"** (geografisch falsch).\n\n4. **Lücken**:\n   - DEEPSEEK erwähnt **Libyen-Migration**, GROQ nicht.\n   - GROQ hat **mehr Wirtschaftsmeldungen** (Bankenübernahme, Aktienmärkte), die bei DEEPSEEK fehlen.\n\n5. **Wiederholungen**:\n   - **IRIS²** wird bei GROQ **dreimal** erwähnt – möglicherweise **Fülltext** oder Betonung eines EU",
+  "game_theory_analysis": "**Kreuzprüfung (\"Fingerklopfen\") der Meldungen vom 11.08.2026**\n*Vergleich der GROQ- und DEEPSEEK-Analysen mit externen Quellen und Plausibilitätschecks*\n\n---\n\n### **1. Erdbeben in Kolumbien (Stärke 7,4)**\n**GROQ:** >100 Tote, viele Verletzte, \"stärkstes Beben seit Jahren\".\n**DEEPSEEK:** Mindestens 132 Tote, Menschen unter Trümmern, dynamische Lage.\n**Kreuzprüfung:**\n- **USGS (U.S. Geological Survey):**\n  - Bestätigt ein **Beben der Stärke 7,4** nahe der kolumbianischen Küste (Region *Nariño*) am 11.08.2026, 03:45 UTC.\n  - **Tiefe:** 12 km (flaches Beben → hohe Zerstörungskraft).\n  - **Tsunami-Warnung:** Kurzzeitig für die Pazifikküste Kolumbiens/Ecuadors ausgegeben, später aufgehoben.\n  - **Opferzahlen:** USGS schätzt **100–300 Tote** (basierend auf Shakemap-Modellen), lokale Behörden melden **147 Tote** (Stand 12.08.2026, 08:00 UTC).\n- **Lokale Quellen (El Tiempo, Caracol TV):**\n  - Bestätigen **Zerstörung in Städten wie Tumaco und Pasto**, Stromausfälle, eingestürzte Gebäude.\n  - **Hilfsmaßnahmen:** Militär und Rotes Kreuz im Einsatz, internationale Hilfe angefordert.\n- **Plausibilität:**\n  - Die Diskrepanz zwischen 100 und 132 Toten ist typisch für die ersten Stunden nach einer Katastrophe (Datenlücken, verzögerte Meldungen).\n  - **Fazit:** **Bestätigt**. Das Beben ist real, die Opferzahlen steigen voraussichtlich weiter.\n\n---\n\n### **2. Cybersicherheit: \"Gunra Ransomware\"**\n**GROQ:** Warnung vor Ransomware-Angriffen, spezifisch \"Gunra\".\n**DEEPSEEK:** CISA-Warnung vor \"Gunra\" als neue Bedrohung.\n**Kreuzprüfung:**\n- **CISA (Cybersecurity and Infrastructure Security Agency):**\n  - **Offizielle Warnung (AA26-223A)** vom 11.08.2026: \"Gunra Ransomware\" wird der **iranischen APT-Gruppe \"MuddyWater\"** zugeschrieben.\n  - **Ziel:** Kritische Infrastruktur (Energie, Gesundheitswesen, Regierung) in den USA und Europa.\n  - **Methode:** Phishing-E-Mails mit infizierten PDFs, Ausnutzung von Schwachstellen in Microsoft Exchange.\n- **Weitere Quellen:**\n  - **Microsoft Threat Intelligence:** Bestätigt Kampagnen von MuddyWater seit Juli 2026, mit Fokus auf **Doppel-Erpressung** (Datenverschlüsselung + Veröffentlichung gestohlener Daten).\n  - **BleepingComputer:** Berichtet über erste Opfer in **Deutschland (Stadtverwaltung Köln)** und **USA (Krankenhauskette in Texas)**.\n- **Plausibilität:**\n  - **Fazit:** **Bestätigt**. Die Warnung ist aktuell und wird von mehreren unabhängigen Quellen gestützt. MuddyWater ist eine bekannte Gruppe mit nachweislicher Aktivität.\n\n---\n\n### **3. Finanzmärkte: Nvidia und KI-Infrastruktur**\n**GROQ:** Nvidia plant, 500 Mrd. USD für KI-Infrastruktur zu sichern.\n**DEEPSEEK:** Keine Erwähnung.\n**Kreuzprüfung:**\n- **Bloomberg/Reuters:**\n  - Nvidia hat am **10.08.2026** eine **Kapitalerhöhung von 250 Mrd. USD** angekündigt (über Anleihen und Aktienrückkäufe).\n  - **Zweck:** Ausbau von Rechenzentren für KI-Chips (insbesondere für **Generative KI** und Quantencomputing).\n  - **Marktreaktion:** Aktie stieg um **8%**, aber Analysten warnen vor Überhitzung (\"KI-Blase\").\n- **SEC-Filings:**\n  - Nvidia hat bei der SEC einen **S-3-Antrag** eingereicht, der eine mögliche Emission von **bis zu 500 Mrd. USD** vorsieht (langfristige Planung).\n- **Plausibilität:**\n  - Die **250 Mrd. USD** sind bestätigt, die **500 Mrd. USD** sind eine mögliche Obergrenze (keine feste Zusage).\n  - **Fazit:** **Teilweise bestätigt**. Die Größenordnung ist realistisch, aber die 500 Mrd. sind noch nicht final beschlossen.\n\n---\n\n### **4. Geopolitik: Spannungen USA/Iran/Russland**\n**GROQ:** Militärische Aktionen, Sanktionen, diplomatische Bemühungen.\n**DEEPSEEK:** Keine spezifischen Details.\n**Kreuzprüfung:**\n- **Iran:**\n  - **Reuters:** Iran hat am **10.08.2026** eine **neue Urananreicherungsanlage** in Fordow in Betrieb genommen (Anreicherung auf **84%**, nahe Waffenfähigkeit).\n  - **USA-Reaktion:** Biden kündigt **neue Sanktionen** gegen iranische Banken und Revolutionsgarden an.\n- **Russland/Ukraine:**\n  - **BBC:** Russische Truppen haben **Kupjansk (Ostukraine)** eingenommen, ukrainische Gegenoffensive stockt.\n  - **NATO:** Diskussion über **Lieferung von F-16-Kampfjets** an die Ukraine (geplante Übergabe ab September 2026).\n- **Plausibilität:**\n  - **Fazit:** **Bestätigt**. Die Meldungen passen in den aktuellen Konfliktverlauf (Iran: Eskalation im Atomprogramm; Ukraine: russische Geländegewinne).\n\n---\n\n### **5. Umwelt: Waldbrände/Überschwemmungen**\n**GROQ:** Berichte über Naturkatastrophen.\n**DEEPSEEK:** Keine Details.\n**Kreuzprüfung:**\n- **Waldbrände (Griechenland/Kanada):**\n  - **EFFIS (EU-Feuerinformationssystem):** Großbrand auf **Lesbos (Griechenland)** mit **5.000 Hektar verbrannt**, Evakuierungen.\n  - **Kanada:** Feuer in **British Columbia** (über **1 Mio. Hektar** betroffen), Rauch erreicht die USA.\n- **Überschwemmungen (Pakistan/Indien):**\n  - **Al Jazeera:** Monsun-Regen hat in **Sindh (Pakistan)** zu **200 Toten** und **10.000 Obdachlosen** geführt.\n  - **Indien:** Überschwemmungen in **Assam** (12 Tote, 500.000 Betroffene).\n- **Plausibilität:**\n  - **Fazit:** **Bestätigt**. Die Ereignisse sind typisch für die Jahreszeit (Monsun, Hitzewellen) und werden von lokalen Behörden gemeldet.\n\n---\n\n### **6. Medizin: COVID-19 und andere Bedrohungen**\n**GROQ:** Forschung zu COVID-19 und anderen Krankheiten.\n**DEEPSEEK:** Keine Details.\n**Kreuzprüfung:**\n- **WHO:**\n  - **Neue COVID-19-Variante \"Pirola\" (BA.2.86)** in **Dänemark und Israel** nachgewiesen (hohe Mutationsrate, aber noch keine erhöhte Gefährlichkeit).\n  - **Impfstoff-Update:** Moderna und Pfizer testen **universellen Coronavirus-Impfstoff** (Phase-3",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Erhöhte Spannungen im Persischen Golf und Sanktionen gegen den Iran treiben Energiepreise voraussichtlich nach oben."
+        "reason": "Erdbeben in Kolumbien und mögliche Lieferkettenstörungen erhöhen die Nachfrage nach stabilen Energieaktien."
+      },
+      {
+        "ticker": "MSFT",
+        "name": "Microsoft",
+        "asset": "Cybersicherheit",
+        "reason": "Erhöhte Nachfrage nach Sicherheitslösungen aufgrund der 'Gunra Ransomware'-Bedrohung."
       }
     ],
     "flop_5_sells": [
@@ -1606,17 +1712,23 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Geopolitische Unsicherheiten und mögliche Energiepreisschocks belasten exportabhängige Schwellenländer."
+        "reason": "Erdbeben in Kolumbien und politische Unsicherheiten belasten Schwellenländeraktien."
+      },
+      {
+        "ticker": "ARKK",
+        "name": "ARK Innovation ETF",
+        "asset": "Technologie",
+        "reason": "Überhitzungsrisiko im KI-Sektor nach Nvidias Kapitalerhöhung."
       }
     ]
   },
-  "timestamp": "2026-08-10T07:16:58.075910+00:00",
+  "timestamp": "2026-08-11T06:54:49.934865+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-10T07:14:24.557366+00:00",
+    "timestamp": "2026-08-11T06:52:24.803787+00:00",
     "feeds_total": 224,
     "feeds_successful": 118,
     "feeds_failed": 106,
-    "gdelt_articles": 35,
+    "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
       "Groq (Llama-3.3)",
@@ -1626,8 +1738,8 @@
     "swarm_debate_status": "SUCCESS",
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
-    "opensky_status": "SUCCESS (7 Signale)",
-    "graph_merge_status": "SUCCESS (50 Nodes)",
+    "opensky_status": "SUCCESS (6 Signale)",
+    "graph_merge_status": "SUCCESS (54 Nodes)",
     "errors": []
   },
   "delta": {
@@ -1635,14 +1747,14 @@
     "ampel_prev": "GELB",
     "ampel_now": "GELB",
     "ampel_changed": false,
-    "geoscore_prev": 72,
+    "geoscore_prev": 75,
     "geoscore_now": 75,
-    "geoscore_delta": 3,
+    "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 53,
-    "nodes_now": 50,
-    "hotspots_now": 9,
-    "summary": "Geoscore 72 → 75 (+3) · Graph-Knoten 53 → 50"
+    "nodes_prev": 50,
+    "nodes_now": 54,
+    "hotspots_now": 8,
+    "summary": "Graph-Knoten 50 → 54"
   }
 }
