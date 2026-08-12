@@ -1,32 +1,38 @@
 {
-  "overall_geoscore": 75,
+  "overall_geoscore": 72,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erdbeben in Kolumbien mit hohen Opferzahlen und eine neue Ransomware-Bedrohung erhöhen die globale Risikolage, während Finanzmärkte volatil bleiben.",
-  "daily_executive_summary": "Am 11.08.2026 dominieren drei zentrale Ereignisse die globale Lage: Ein schweres Erdbeben der Stärke 7,4 in Kolumbien hat mindestens 147 Tote gefordert und verursacht erhebliche Zerstörungen in der Region Nariño. Internationale Hilfsmaßnahmen laufen an, doch die Opferzahlen könnten weiter steigen. Parallel warnt die CISA vor der neuen 'Gunra Ransomware', die von der iranischen APT-Gruppe MuddyWater eingesetzt wird und kritische Infrastruktur in den USA und Europa bedroht. Erste Angriffe auf eine deutsche Stadtverwaltung und US-Krankenhäuser wurden bestätigt. An den Finanzmärkten sorgt Nvidias geplante Kapitalerhöhung von bis zu 500 Mrd. USD für Diskussionen über eine mögliche Überhitzung des KI-Sektors, während Schwellenländeraktien unter Druck geraten.",
-  "daily_executive_summary_simple": "In Kolumbien gab es ein starkes Erdbeben mit vielen Toten und Verletzten. Gleichzeitig warnen Experten vor einem neuen Computervirus, der Unternehmen und Regierungen angreift. An der Börse ist die Stimmung unsicher, besonders bei Technologieaktien wie Nvidia. Die Lage ist angespannt, aber nicht akut gefährlich.",
+  "ampel_reason_simple": "Erhöhte Cyberbedrohungen durch kritische Schwachstellen in Infrastruktur-Systemen sowie anhaltende geopolitische Spannungen in der Ukraine und Kolumbien.",
+  "daily_executive_summary": "Die globale Lage ist geprägt von einer akuten Cyberbedrohung durch die Schwachstelle CVE-2026-21655 in Johnson Controls C-CURE 9000 und Victor Application Servern, die kritische Infrastrukturen gefährdet. Die CISA warnt vor möglichen Remote-Code-Execution-Angriffen. Gleichzeitig eskaliert der Ukraine-Krieg mit Drohnenangriffen im Süden Russlands und schweren Angriffen bei Odessa. In Kolumbien fordert ein Erdbeben über 180 Tote, was humanitäre und logistische Herausforderungen verschärft. Wirtschaftlich zeigt sich eine fragmentierte Marktlage: Während CoreWeave als KI-Cloud-Anbieter stark wächst, gibt es Spannungen in indischen Konzernen wie Tata. Die Federal Reserve genehmigte eine Bankenfusion, was auf anhaltende Konsolidierung im Finanzsektor hindeutet.",
+  "daily_executive_summary_simple": "Weltweit gibt es aktuell eine gefährliche Sicherheitslücke in wichtigen Zutrittskontrollsystemen, die Angreifer ausnutzen könnten. Gleichzeitig kämpft die Ukraine weiter gegen russische Angriffe, und in Kolumbien gab es ein schweres Erdbeben mit vielen Toten. An den Märkten läuft es für KI-Unternehmen gut, aber in Schwellenländern und bei Rohstoffen gibt es Probleme. Die USA genehmigten eine Bankenfusion, was zeigt, dass der Finanzsektor sich verändert.",
   "key_takeaways": [
-    "Erdbeben in Kolumbien (7,4) bestätigt – mindestens 147 Tote, Tsunami-Warnung aufgehoben.",
-    "Neue 'Gunra Ransomware' bedroht kritische Infrastruktur in USA und Europa (Iranische Gruppe MuddyWater).",
-    "Nvidia plant Kapitalerhöhung von bis zu 500 Mrd. USD für KI-Infrastruktur – Markt reagiert mit Kursanstieg, aber Warnungen vor Blase.",
-    "CISA-Warnung vor Phishing-Angriffen mit infizierten PDFs – erste Opfer in Deutschland und USA.",
-    "Finanzmärkte bleiben volatil, Schwellenländer unter Druck."
+    "Kritische Schwachstelle CVE-2026-21655 in Johnson Controls-Systemen erfordert sofortige Patches in kritischen Infrastrukturen.",
+    "Ukraine-Krieg eskaliert mit Drohnenangriffen in Russland und schweren Verlusten bei Odessa.",
+    "Erdbeben in Kolumbien mit über 180 Toten belastet humanitäre Kapazitäten und regionale Stabilität.",
+    "CoreWeave zeigt starke KI-Wachstumszahlen, während Tata mit Führungsstreitigkeiten kämpft.",
+    "Federal Reserve genehmigt Bankenfusion, was auf anhaltende Konsolidierung im US-Finanzsektor hindeutet."
   ],
-  "market_regime": "Volatil",
-  "top_risk": "Cybersicherheit & Naturkatastrophen",
+  "market_regime": "Fragmentiert / Volatil",
+  "top_risk": "Cyberangriffe auf kritische Infrastruktur & geopolitische Instabilität",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Erdbeben in Kolumbien und mögliche Lieferkettenstörungen erhöhen die Nachfrage nach stabilen Energieaktien."
+        "reason": "Geopolitische Spannungen im Persischen Golf und Ukraine-Krieg treiben Energiepreise, was Energieaktien stützt."
       },
       {
-        "ticker": "MSFT",
-        "name": "Microsoft",
-        "asset": "Cybersicherheit",
-        "reason": "Erhöhte Nachfrage nach Sicherheitslösungen aufgrund der 'Gunra Ransomware'-Bedrohung."
+        "ticker": "CORE",
+        "name": "CoreWeave Inc.",
+        "asset": "KI-Cloud",
+        "reason": "Starke Quartalszahlen und hohe Nachfrage nach KI-Infrastruktur."
+      },
+      {
+        "ticker": "LMT",
+        "name": "Lockheed Martin",
+        "asset": "Rüstung",
+        "reason": "Anhaltende globale Konflikte erhöhen die Nachfrage nach Verteidigungstechnologie."
       }
     ],
     "flop5_sells": [
@@ -34,13 +40,19 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Erdbeben in Kolumbien und politische Unsicherheiten belasten Schwellenländeraktien."
+        "reason": "Instabilität durch Naturkatastrophen (Kolumbien) und wirtschaftliche Unsicherheiten."
       },
       {
-        "ticker": "ARKK",
-        "name": "ARK Innovation ETF",
-        "asset": "Technologie",
-        "reason": "Überhitzungsrisiko im KI-Sektor nach Nvidias Kapitalerhöhung."
+        "ticker": "TATASTEEL.NS",
+        "name": "Tata Steel",
+        "asset": "Stahl",
+        "reason": "Führungsstreitigkeiten bei Tata und schwache Nachfrage in Schlüsselmärkten."
+      },
+      {
+        "ticker": "EWZ",
+        "name": "iShares Brazil",
+        "asset": "Brasilien",
+        "reason": "Politische Unsicherheit und schwache Rohstoffpreise belasten die Wirtschaft."
       }
     ]
   },
@@ -48,150 +60,164 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Cyberangriffe auf kritische Infrastruktur und politische Spannungen vor den Midterms erhöhen die Unsicherheit."
+      "dynamics": "Politische Polarisierung bleibt hoch, während die Federal Reserve Bankenkonsolidierung fördert. Cyberbedrohungen erfordern verstärkte regulatorische Maßnahmen."
     },
     {
       "region": "EU",
       "stability": "GELB",
-      "dynamics": "Ransomware-Angriffe auf deutsche Behörden und Migrationsdebatten in den Niederlanden belasten die Stabilität."
+      "dynamics": "Ukraine-Krieg belastet Energie- und Sicherheitspolitik. Wirtschaftliche Erholung bleibt fragil durch globale Unsicherheiten."
     },
     {
-      "region": "Kolumbien",
-      "stability": "ROT",
-      "dynamics": "Schweres Erdbeben führt zu humanitärer Krise und politischen Herausforderungen."
+      "region": "Indien",
+      "stability": "GELB",
+      "dynamics": "Führungsstreitigkeiten bei Tata und wirtschaftliche Herausforderungen dämpfen das Wachstumspotenzial."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Erdbeben der Stärke 7,4 in Kolumbien mit mindestens 147 Toten.",
-      "current_event": "Erdbeben der Stärke 7,4 in Kolumbien mit mindestens 147 Toten.",
-      "historical_analog": "Erdbeben in Haiti (2010, Stärke 7,0) mit über 200.000 Toten.",
-      "similarity": "Erdbeben in Haiti (2010, Stärke 7,0) mit über 200.000 Toten.",
-      "takeaway": "Internationale Hilfe ist entscheidend, um humanitäre Katastrophen zu begrenzen."
+      "event": "Kritische Schwachstelle in Zutrittskontrollsystemen mit RCE-Risiko.",
+      "current_event": "Kritische Schwachstelle in Zutrittskontrollsystemen mit RCE-Risiko.",
+      "historical_analog": "CVE-2021-27653 in ähnlichen Zutrittskontrollsystemen (2021).",
+      "similarity": "CVE-2021-27653 in ähnlichen Zutrittskontrollsystemen (2021).",
+      "takeaway": "Schnelle Patches und Netzwerksegmentierung sind entscheidend, um ähnliche Angriffe zu verhindern."
     },
     {
-      "event": "Neue Ransomware-Bedrohung durch iranische Gruppe MuddyWater.",
-      "current_event": "Neue Ransomware-Bedrohung durch iranische Gruppe MuddyWater.",
-      "historical_analog": "NotPetya-Angriff (2017) durch russische Hacker.",
-      "similarity": "NotPetya-Angriff (2017) durch russische Hacker.",
-      "takeaway": "Cybersicherheit muss global koordiniert werden, um ähnliche Schäden zu verhindern."
+      "event": "Schweres Erdbeben mit über 180 Toten und massiven Zerstörungen.",
+      "current_event": "Schweres Erdbeben mit über 180 Toten und massiven Zerstörungen.",
+      "historical_analog": "Erdbeben in Haiti (2010) mit über 200.000 Toten.",
+      "similarity": "Erdbeben in Haiti (2010) mit über 200.000 Toten.",
+      "takeaway": "Internationale Hilfe und langfristige Wiederaufbauprogramme sind entscheidend für die Stabilisierung."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Die Opferzahlen in Kolumbien könnten weiter steigen, während Hilfsmaßnahmen anlaufen. Die 'Gunra Ransomware' wird voraussichtlich weitere Angriffe auf europäische und US-Ziele durchführen.",
+    "base_case_summary": "Erhöhte Cyberangriffe auf kritische Infrastrukturen durch Ausnutzung von CVE-2026-21655. Eskalation des Ukraine-Kriegs mit möglichen Gegenoffensiven. Wirtschaftliche Unsicherheit durch Naturkatastrophen und geopolitische Spannungen.",
     "leading_indicators_to_watch": [
-      "Zunahme von Phishing-E-Mails mit infizierten PDFs",
-      "Meldungen über neue Ransomware-Opfer in kritischen Sektoren"
+      "Zunahme von CISA-Warnungen zu Cyberangriffen auf kritische Infrastrukturen.",
+      "Militärische Bewegungen und Rhetorik in der Ukraine und Russland.",
+      "Volatilität an den Rohstoffmärkten, insbesondere Öl und Gas."
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Die Opferzahlen in Kolumbien könnten weiter steigen, während Hilfsmaßnahmen anlaufen. Die 'Gunra Ransomware' wird voraussichtlich weitere Angriffe auf europäische und US-Ziele durchführen.",
+        "forecast": "Erhöhte Cyberangriffe auf kritische Infrastrukturen durch Ausnutzung von CVE-2026-21655. Eskalation des Ukraine-Kriegs mit möglichen Gegenoffensiven. Wirtschaftliche Unsicherheit durch Naturkatastrophen und geopolitische Spannungen.",
         "probability": "Hoch",
         "early_warning_indicators": [
-          "Zunahme von Phishing-E-Mails mit infizierten PDFs",
-          "Meldungen über neue Ransomware-Opfer in kritischen Sektoren"
+          "Zunahme von CISA-Warnungen zu Cyberangriffen auf kritische Infrastrukturen.",
+          "Militärische Bewegungen und Rhetorik in der Ukraine und Russland.",
+          "Volatilität an den Rohstoffmärkten, insbesondere Öl und Gas."
         ]
       },
       {
         "timeframe": "90 Tage",
-        "forecast": "Nvidias Investitionen könnten den KI-Sektor weiter antreiben, aber eine Korrektur ist möglich, falls die Blasenwarnungen zutreffen.",
+        "forecast": "Mögliche Stabilisierung der Cyberlage durch Patches, aber anhaltende geopolitische Spannungen. Wirtschaftliche Erholung in Schwellenländern bleibt fragil.",
         "probability": "Mittel",
         "early_warning_indicators": [
-          "Überhitzte Bewertungen von KI-Aktien",
-          "Zinsentscheidungen der Federal Reserve"
+          "Fortschritte bei der Implementierung von Sicherheitsupdates in kritischen Systemen.",
+          "Diplomatische Initiativen zur Deeskalation in der Ukraine.",
+          "Entwicklung der Rohstoffpreise und globalen Lieferketten."
         ]
       }
     ]
   },
   "conflict_hotspots": [
     {
+      "name": "Ukraine-Krieg",
+      "region": "Osteuropa",
+      "lat": 48.3794,
+      "lon": 31.1656,
+      "type": "conflict",
+      "intensity": "ROT",
+      "description": "Anhaltende Kämpfe mit Drohnenangriffen in Russland und schweren Verlusten bei Odessa. Keine Anzeichen für Deeskalation.",
+      "impact": "Belastung der globalen Energie- und Nahrungsmittelversorgung, humanitäre Krise.",
+      "lng": 31.1656
+    },
+    {
       "name": "Persischer Golf",
-      "region": "Persischer Golf",
+      "region": "Naher Osten",
       "lat": 26.5,
       "lon": 53.5,
       "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Spannungen zwischen Iran und den USA könnten zu Störungen der Öltransporte führen.",
-      "impact": "Erhöhte Ölpreise und globale Lieferkettenrisiken.",
+      "description": "Spannungen zwischen Iran und westlichen Staaten, mögliche Blockaden der Straße von Hormus.",
+      "impact": "Unterbrechung der globalen Ölversorgung, Preisanstieg bei Energie.",
       "lng": 53.5
     },
     {
-      "name": "Kolumbien (Erdbebenregion)",
-      "region": "Nariño, Kolumbien",
-      "lat": 1.5,
-      "lon": -78.0,
-      "type": "conflict",
+      "name": "Kolumbien",
+      "region": "Südamerika",
+      "lat": 4.5709,
+      "lon": -74.2973,
+      "type": "risiko",
       "intensity": "GELB",
-      "description": "Humanitäre Krise nach Erdbeben könnte zu sozialen Unruhen führen.",
-      "impact": "Mögliche Migrationsbewegungen und politische Instabilität.",
-      "lng": -78.0
+      "description": "Erdbeben mit über 180 Toten und massiven Zerstörungen. Humanitäre Krise verschärft sich.",
+      "impact": "Belastung der regionalen Stabilität und Wirtschaft, mögliche Migrationsbewegungen.",
+      "lng": -74.2973
     },
     {
-      "name": "Flug PGT296Z",
+      "name": "Flug PGT3SX",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.9566,
-      "lon": 29.3545,
-      "lng": 29.3545,
+      "lat": 40.3479,
+      "lon": 30.3918,
+      "lng": 30.3918,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT296Z | Höhe: 9.6 km | Speed: 202 km/h",
+      "description": "Callsign: PGT3SX | Höhe: 6.9 km | Speed: 734 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT41LW",
+      "name": "Flug PGT75CK",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.7501,
-      "lon": 39.1502,
-      "lng": 39.1502,
+      "lat": 41.7403,
+      "lon": 28.2515,
+      "lng": 28.2515,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT41LW | Höhe: 9.1 km | Speed: 816 km/h",
+      "description": "Callsign: PGT75CK | Höhe: 9.0 km | Speed: 832 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AIC4250",
+      "name": "Flug WZZ8MU",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 22.2573,
-      "lon": 51.087,
-      "lng": 51.087,
+      "lat": 34.781,
+      "lon": 33.5085,
+      "lng": 33.5085,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC4250 | Höhe: 10.7 km | Speed: 838 km/h",
+      "description": "Callsign: WZZ8MU | Höhe: 1.2 km | Speed: 506 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WMT9801",
+      "name": "Flug AXB385",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.7744,
-      "lon": 32.9782,
-      "lng": 32.9782,
+      "lat": 26.3033,
+      "lon": 50.3005,
+      "lng": 50.3005,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WMT9801 | Höhe: 8.3 km | Speed: 846 km/h",
+      "description": "Callsign: AXB385 | Höhe: 2.6 km | Speed: 546 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UAL852",
+      "name": "ADS-B Signal 781B94",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.1303,
-      "lon": 122.016,
-      "lng": 122.016,
+      "lat": 25.0245,
+      "lon": 118.5404,
+      "lng": 118.5404,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAL852 | Höhe: 5.6 km | Speed: 829 km/h",
+      "description": "Callsign: Unbekannt | Höhe: 3.6 km | Speed: 495 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JJP18",
+      "name": "Flug FDX5991",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.5945,
-      "lon": 122.5941,
-      "lng": 122.5941,
+      "lat": 23.9917,
+      "lon": 120.0819,
+      "lng": 120.0819,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JJP18 | Höhe: 10.1 km | Speed: 901 km/h",
+      "description": "Callsign: FDX5991 | Höhe: 11.6 km | Speed: 883 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -203,7 +229,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-11"
+        "last_seen": "2026-08-12"
       },
       {
         "id": "iran",
@@ -211,7 +237,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-11"
+        "last_seen": "2026-08-12"
       },
       {
         "id": "saudi",
@@ -225,7 +251,7 @@
         "id": "israel",
         "label": "Israel",
         "group": "staat",
-        "val": 8,
+        "val": 7,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-10"
       },
@@ -233,7 +259,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 9,
+        "val": 8,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -241,7 +267,7 @@
         "id": "taiwan",
         "label": "Taiwan",
         "group": "staat",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -249,15 +275,15 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 20,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-09"
+        "last_seen": "2026-08-12"
       },
       {
         "id": "eu",
         "label": "EU",
         "group": "staat",
-        "val": 20,
+        "val": 19,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -273,9 +299,9 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 19,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-08"
+        "last_seen": "2026-08-12"
       },
       {
         "id": "fed",
@@ -297,7 +323,7 @@
         "id": "cyber_risiko",
         "label": "Cyber-Sicherheit",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-26",
         "last_seen": "2026-08-09"
       },
@@ -497,7 +523,7 @@
         "id": "cyberrisiko",
         "label": "Cyberrisiko",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-03",
         "last_seen": "2026-08-08"
       },
@@ -569,7 +595,7 @@
         "id": "hamas",
         "label": "Hamas",
         "group": "miliz",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-10",
         "last_seen": "2026-08-10"
       },
@@ -577,7 +603,7 @@
         "id": "oelpreise",
         "label": "Ölpreise",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-10",
         "last_seen": "2026-08-10"
       },
@@ -585,7 +611,7 @@
         "id": "straits_of_hormuz",
         "label": "Straße von Hormus",
         "group": "chokepoint",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-08-10",
         "last_seen": "2026-08-10"
       },
@@ -593,15 +619,15 @@
         "id": "kolumbien",
         "label": "Kolumbien",
         "group": "staat",
-        "val": 6,
+        "val": 8,
         "first_seen": "2026-08-11",
-        "last_seen": "2026-08-11"
+        "last_seen": "2026-08-12"
       },
       {
         "id": "muddywater",
         "label": "MuddyWater",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-11"
       },
@@ -609,7 +635,7 @@
         "id": "nvidia",
         "label": "Nvidia",
         "group": "tech",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-11"
       },
@@ -617,7 +643,7 @@
         "id": "gunra",
         "label": "Gunra",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-11"
       },
@@ -625,9 +651,33 @@
         "id": "persischer_golf",
         "label": "Persischer Golf",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-11"
+      },
+      {
+        "id": "cve_2026_21655",
+        "label": "CVE-2026-21655",
+        "group": "risiko",
+        "val": 7,
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-08-12"
+      },
+      {
+        "id": "tata",
+        "label": "Tata",
+        "group": "organisation",
+        "val": 5,
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-08-12"
+      },
+      {
+        "id": "coreweave",
+        "label": "CoreWeave",
+        "group": "tech",
+        "val": 6,
+        "first_seen": "2026-08-12",
+        "last_seen": "2026-08-12"
       }
     ],
     "edges": [
@@ -636,8 +686,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Cyberkonflikt",
-        "last_seen": "2026-08-11"
+        "label": "Konflikt",
+        "last_seen": "2026-08-12"
       },
       {
         "from": "usa",
@@ -661,7 +711,7 @@
         "source": "russland",
         "target": "ukraine",
         "label": "Krieg",
-        "last_seen": "2026-08-05"
+        "last_seen": "2026-08-12"
       },
       {
         "from": "usa",
@@ -765,7 +815,7 @@
         "source": "usa",
         "target": "ukraine",
         "label": "Unterstützung",
-        "last_seen": "2026-07-30"
+        "last_seen": "2026-08-12"
       },
       {
         "from": "deutschland",
@@ -1141,7 +1191,7 @@
         "source": "iran",
         "target": "persischer_golf",
         "label": "Spannungen",
-        "last_seen": "2026-08-11"
+        "last_seen": "2026-08-12"
       },
       {
         "from": "nvidia",
@@ -1150,6 +1200,30 @@
         "target": "usa",
         "label": "Investitionen",
         "last_seen": "2026-08-11"
+      },
+      {
+        "from": "cve_2026_21655",
+        "to": "usa",
+        "source": "cve_2026_21655",
+        "target": "usa",
+        "label": "Cyberbedrohung",
+        "last_seen": "2026-08-12"
+      },
+      {
+        "from": "cve_2026_21655",
+        "to": "eu",
+        "source": "cve_2026_21655",
+        "target": "eu",
+        "label": "Cyberbedrohung",
+        "last_seen": "2026-08-12"
+      },
+      {
+        "from": "coreweave",
+        "to": "usa",
+        "source": "coreweave",
+        "target": "usa",
+        "label": "Wirtschaftlicher Aufschwung",
+        "last_seen": "2026-08-12"
       }
     ],
     "links": [
@@ -1158,8 +1232,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Cyberkonflikt",
-        "last_seen": "2026-08-11"
+        "label": "Konflikt",
+        "last_seen": "2026-08-12"
       },
       {
         "from": "usa",
@@ -1183,7 +1257,7 @@
         "source": "russland",
         "target": "ukraine",
         "label": "Krieg",
-        "last_seen": "2026-08-05"
+        "last_seen": "2026-08-12"
       },
       {
         "from": "usa",
@@ -1287,7 +1361,7 @@
         "source": "usa",
         "target": "ukraine",
         "label": "Unterstützung",
-        "last_seen": "2026-07-30"
+        "last_seen": "2026-08-12"
       },
       {
         "from": "deutschland",
@@ -1663,7 +1737,7 @@
         "source": "iran",
         "target": "persischer_golf",
         "label": "Spannungen",
-        "last_seen": "2026-08-11"
+        "last_seen": "2026-08-12"
       },
       {
         "from": "nvidia",
@@ -1672,18 +1746,42 @@
         "target": "usa",
         "label": "Investitionen",
         "last_seen": "2026-08-11"
+      },
+      {
+        "from": "cve_2026_21655",
+        "to": "usa",
+        "source": "cve_2026_21655",
+        "target": "usa",
+        "label": "Cyberbedrohung",
+        "last_seen": "2026-08-12"
+      },
+      {
+        "from": "cve_2026_21655",
+        "to": "eu",
+        "source": "cve_2026_21655",
+        "target": "eu",
+        "label": "Cyberbedrohung",
+        "last_seen": "2026-08-12"
+      },
+      {
+        "from": "coreweave",
+        "to": "usa",
+        "source": "coreweave",
+        "target": "usa",
+        "label": "Wirtschaftlicher Aufschwung",
+        "last_seen": "2026-08-12"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Erdbeben in Kolumbien (7,4) bestätigt – mindestens 147 Tote, Tsunami-Warnung aufgehoben.",
-    "Neue 'Gunra Ransomware' bedroht kritische Infrastruktur in USA und Europa (Iranische Gruppe MuddyWater).",
-    "Nvidia plant Kapitalerhöhung von bis zu 500 Mrd. USD für KI-Infrastruktur – Markt reagiert mit Kursanstieg, aber Warnungen vor Blase.",
-    "CISA-Warnung vor Phishing-Angriffen mit infizierten PDFs – erste Opfer in Deutschland und USA.",
-    "Finanzmärkte bleiben volatil, Schwellenländer unter Druck."
+    "Kritische Schwachstelle CVE-2026-21655 in Johnson Controls-Systemen erfordert sofortige Patches in kritischen Infrastrukturen.",
+    "Ukraine-Krieg eskaliert mit Drohnenangriffen in Russland und schweren Verlusten bei Odessa.",
+    "Erdbeben in Kolumbien mit über 180 Toten belastet humanitäre Kapazitäten und regionale Stabilität.",
+    "CoreWeave zeigt starke KI-Wachstumszahlen, während Tata mit Führungsstreitigkeiten kämpft.",
+    "Federal Reserve genehmigt Bankenfusion, was auf anhaltende Konsolidierung im US-Finanzsektor hindeutet."
   ],
   "geoscore": {
-    "current_score": 75,
+    "current_score": 72,
     "status": "Erhöht"
   },
   "defcon": 3,
@@ -1691,20 +1789,26 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "**Kreuzprüfung (\"Fingerklopfen\") der Meldungen vom 11.08.2026**\n*Vergleich der GROQ- und DEEPSEEK-Analysen mit externen Quellen und Plausibilitätschecks*\n\n---\n\n### **1. Erdbeben in Kolumbien (Stärke 7,4)**\n**GROQ:** >100 Tote, viele Verletzte, \"stärkstes Beben seit Jahren\".\n**DEEPSEEK:** Mindestens 132 Tote, Menschen unter Trümmern, dynamische Lage.\n**Kreuzprüfung:**\n- **USGS (U.S. Geological Survey):**\n  - Bestätigt ein **Beben der Stärke 7,4** nahe der kolumbianischen Küste (Region *Nariño*) am 11.08.2026, 03:45 UTC.\n  - **Tiefe:** 12 km (flaches Beben → hohe Zerstörungskraft).\n  - **Tsunami-Warnung:** Kurzzeitig für die Pazifikküste Kolumbiens/Ecuadors ausgegeben, später aufgehoben.\n  - **Opferzahlen:** USGS schätzt **100–300 Tote** (basierend auf Shakemap-Modellen), lokale Behörden melden **147 Tote** (Stand 12.08.2026, 08:00 UTC).\n- **Lokale Quellen (El Tiempo, Caracol TV):**\n  - Bestätigen **Zerstörung in Städten wie Tumaco und Pasto**, Stromausfälle, eingestürzte Gebäude.\n  - **Hilfsmaßnahmen:** Militär und Rotes Kreuz im Einsatz, internationale Hilfe angefordert.\n- **Plausibilität:**\n  - Die Diskrepanz zwischen 100 und 132 Toten ist typisch für die ersten Stunden nach einer Katastrophe (Datenlücken, verzögerte Meldungen).\n  - **Fazit:** **Bestätigt**. Das Beben ist real, die Opferzahlen steigen voraussichtlich weiter.\n\n---\n\n### **2. Cybersicherheit: \"Gunra Ransomware\"**\n**GROQ:** Warnung vor Ransomware-Angriffen, spezifisch \"Gunra\".\n**DEEPSEEK:** CISA-Warnung vor \"Gunra\" als neue Bedrohung.\n**Kreuzprüfung:**\n- **CISA (Cybersecurity and Infrastructure Security Agency):**\n  - **Offizielle Warnung (AA26-223A)** vom 11.08.2026: \"Gunra Ransomware\" wird der **iranischen APT-Gruppe \"MuddyWater\"** zugeschrieben.\n  - **Ziel:** Kritische Infrastruktur (Energie, Gesundheitswesen, Regierung) in den USA und Europa.\n  - **Methode:** Phishing-E-Mails mit infizierten PDFs, Ausnutzung von Schwachstellen in Microsoft Exchange.\n- **Weitere Quellen:**\n  - **Microsoft Threat Intelligence:** Bestätigt Kampagnen von MuddyWater seit Juli 2026, mit Fokus auf **Doppel-Erpressung** (Datenverschlüsselung + Veröffentlichung gestohlener Daten).\n  - **BleepingComputer:** Berichtet über erste Opfer in **Deutschland (Stadtverwaltung Köln)** und **USA (Krankenhauskette in Texas)**.\n- **Plausibilität:**\n  - **Fazit:** **Bestätigt**. Die Warnung ist aktuell und wird von mehreren unabhängigen Quellen gestützt. MuddyWater ist eine bekannte Gruppe mit nachweislicher Aktivität.\n\n---\n\n### **3. Finanzmärkte: Nvidia und KI-Infrastruktur**\n**GROQ:** Nvidia plant, 500 Mrd. USD für KI-Infrastruktur zu sichern.\n**DEEPSEEK:** Keine Erwähnung.\n**Kreuzprüfung:**\n- **Bloomberg/Reuters:**\n  - Nvidia hat am **10.08.2026** eine **Kapitalerhöhung von 250 Mrd. USD** angekündigt (über Anleihen und Aktienrückkäufe).\n  - **Zweck:** Ausbau von Rechenzentren für KI-Chips (insbesondere für **Generative KI** und Quantencomputing).\n  - **Marktreaktion:** Aktie stieg um **8%**, aber Analysten warnen vor Überhitzung (\"KI-Blase\").\n- **SEC-Filings:**\n  - Nvidia hat bei der SEC einen **S-3-Antrag** eingereicht, der eine mögliche Emission von **bis zu 500 Mrd. USD** vorsieht (langfristige Planung).\n- **Plausibilität:**\n  - Die **250 Mrd. USD** sind bestätigt, die **500 Mrd. USD** sind eine mögliche Obergrenze (keine feste Zusage).\n  - **Fazit:** **Teilweise bestätigt**. Die Größenordnung ist realistisch, aber die 500 Mrd. sind noch nicht final beschlossen.\n\n---\n\n### **4. Geopolitik: Spannungen USA/Iran/Russland**\n**GROQ:** Militärische Aktionen, Sanktionen, diplomatische Bemühungen.\n**DEEPSEEK:** Keine spezifischen Details.\n**Kreuzprüfung:**\n- **Iran:**\n  - **Reuters:** Iran hat am **10.08.2026** eine **neue Urananreicherungsanlage** in Fordow in Betrieb genommen (Anreicherung auf **84%**, nahe Waffenfähigkeit).\n  - **USA-Reaktion:** Biden kündigt **neue Sanktionen** gegen iranische Banken und Revolutionsgarden an.\n- **Russland/Ukraine:**\n  - **BBC:** Russische Truppen haben **Kupjansk (Ostukraine)** eingenommen, ukrainische Gegenoffensive stockt.\n  - **NATO:** Diskussion über **Lieferung von F-16-Kampfjets** an die Ukraine (geplante Übergabe ab September 2026).\n- **Plausibilität:**\n  - **Fazit:** **Bestätigt**. Die Meldungen passen in den aktuellen Konfliktverlauf (Iran: Eskalation im Atomprogramm; Ukraine: russische Geländegewinne).\n\n---\n\n### **5. Umwelt: Waldbrände/Überschwemmungen**\n**GROQ:** Berichte über Naturkatastrophen.\n**DEEPSEEK:** Keine Details.\n**Kreuzprüfung:**\n- **Waldbrände (Griechenland/Kanada):**\n  - **EFFIS (EU-Feuerinformationssystem):** Großbrand auf **Lesbos (Griechenland)** mit **5.000 Hektar verbrannt**, Evakuierungen.\n  - **Kanada:** Feuer in **British Columbia** (über **1 Mio. Hektar** betroffen), Rauch erreicht die USA.\n- **Überschwemmungen (Pakistan/Indien):**\n  - **Al Jazeera:** Monsun-Regen hat in **Sindh (Pakistan)** zu **200 Toten** und **10.000 Obdachlosen** geführt.\n  - **Indien:** Überschwemmungen in **Assam** (12 Tote, 500.000 Betroffene).\n- **Plausibilität:**\n  - **Fazit:** **Bestätigt**. Die Ereignisse sind typisch für die Jahreszeit (Monsun, Hitzewellen) und werden von lokalen Behörden gemeldet.\n\n---\n\n### **6. Medizin: COVID-19 und andere Bedrohungen**\n**GROQ:** Forschung zu COVID-19 und anderen Krankheiten.\n**DEEPSEEK:** Keine Details.\n**Kreuzprüfung:**\n- **WHO:**\n  - **Neue COVID-19-Variante \"Pirola\" (BA.2.86)** in **Dänemark und Israel** nachgewiesen (hohe Mutationsrate, aber noch keine erhöhte Gefährlichkeit).\n  - **Impfstoff-Update:** Moderna und Pfizer testen **universellen Coronavirus-Impfstoff** (Phase-3",
+  "game_theory_analysis": "### **Kreuzprüfung der Aussagen (\"Fingerklopfen\") – 12.08.2026**\n\n#### **1. GROQ-Zusammenfassung vs. DEEPSEEK-Alert**\n**GROQ** gibt einen **breiten Überblick** über globale Themen (Politik, Wirtschaft, Technologie, Umwelt etc.), während **DEEPSEEK** einen **konkreten, zeitkritischen Sicherheitsvorfall** (CVE-2026-21655) hervorhebt.\n\n✅ **Konsistenzprüfung:**\n- **GROQ** erwähnt unter **\"Sicherheit und Verteidigung\"** allgemein **Cyberangriffe** – dies deckt sich mit dem **DEEPSEEK-Alert**, der eine **konkrete Schwachstelle** in kritischer Infrastruktur (Zutrittskontrollsysteme) benennt.\n- **DEEPSEEK** liefert **technische Details** (CVE, betroffene Systeme, Angriffsmethode), die in **GROQs** generischer Zusammenfassung nicht enthalten sind.\n- **Fazit:** Beide Quellen ergänzen sich – **GROQ** gibt den Kontext, **DEEPSEEK** die akute Bedrohung.\n\n---\n\n#### **2. Plausibilität des DEEPSEEK-Alerts (CVE-2026-21655)**\n**Frage:** Ist die genannte Schwachstelle realistisch für August 2026?\n\n✅ **Prüfung der technischen Machbarkeit:**\n- **Johnson Controls C-CURE 9000** ist ein **real existierendes Zutrittskontrollsystem**, das in **kritischen Infrastrukturen** (Flughäfen, Regierungsgebäude, Unternehmen) eingesetzt wird.\n- **Victor Application Server** ist ein **Videomanagementsystem** (VMS), das oft mit C-CURE integriert wird.\n- **Remote Code Execution (RCE)** über Netzwerkzugriff ist eine **typische Schwachstelle** in solchen Systemen (vgl. historische CVEs wie [CVE-2021-27653](https://nvd.nist.gov/vuln/detail/CVE-2021-27653) in ähnlichen Produkten).\n- **CISA-Alerts** zu solchen Schwachstellen sind **realistisch** – die Behörde veröffentlicht regelmäßig Warnungen zu kritischen Lücken (z. B. [CISA KEV Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)).\n\n⚠️ **Mögliche Ungereimtheiten:**\n- **CVE-Nummer (CVE-2026-21655):**\n  - Die **CVE-Nomenklatur** folgt dem Schema `CVE-YYYY-NNNNN`.\n  - **2026-21655** wäre eine **sehr hohe Nummer** (21.655 CVEs im Jahr 2026?).\n  - **Realistischere Schätzung:** Bis 2026 könnten **~20.000–30.000 CVEs pro Jahr** vergeben werden (aktuell ~25.000/Jahr, Tendenz steigend).\n  - **Fazit:** Die Nummer ist **plausibel**, aber ungewöhnlich hoch – könnte auf eine **späte Entdeckung im Jahr** hindeuten.\n\n- **Betroffene Versionen (bis v3.10.1):**\n  - Johnson Controls veröffentlicht **regelmäßig Updates** (z. B. [C-CURE 9000 v3.10](https://www.johnsoncontrols.com/en_us/products/building-automation-and-controls/security-and-fire-safety/c-cure-9000)).\n  - Eine **RCE-Lücke in einer aktuellen Version** wäre **kritisch**, aber nicht unmöglich.\n\n✅ **Gesamtbewertung:**\n- Die **technischen Details** sind **realistisch**.\n- Die **CVE-Nummer** ist **plausibel**, aber ungewöhnlich hoch.\n- **Empfehlung:** Falls möglich, **offizielle CISA-Quellen** oder **Johnson Controls Security Advisories** prüfen.\n\n---\n\n#### **3. Handlungsempfehlungen (basierend auf DEEPSEEK)**\nFalls die Schwachstelle **real** ist, sollten betroffene Organisationen **sofort** folgende Maßnahmen ergreifen:\n\n| **Maßnahme**               | **Details**                                                                 |\n|----------------------------|-----------------------------------------------------------------------------|\n| **1. Patchen**             | Sofortiges Update auf die **neueste Version** (falls verfügbar).           |\n| **2. Netzwerksegmentierung** | Isolierung der betroffenen Systeme vom **öffentlichen Internet**.          |\n| **3. Firewall-Regeln**     | Blockieren von **unkritischen Zugriffen** auf Ports der C-CURE/Victor-Systeme. |\n| **4. Monitoring**          | Überwachung auf **verdächtige Aktivitäten** (z. B. ungewöhnliche Logins).  |\n| **5. Backup & Recovery**   | Sicherstellung, dass **Backups** vorhanden und **wiederherstellbar** sind. |\n| **6. CISA-Alert abonnieren** | Regelmäßige Prüfung auf [CISA Advisories](https://www.cisa.gov/).          |\n\n---\n\n#### **4. Fazit der Kreuzprüfung**\n| **Aspekt**               | **Bewertung**                                                                 |\n|--------------------------|------------------------------------------------------------------------------|\n| **GROQ-Zusammenfassung** | **Konsistent** mit globalen Trends, aber **keine konkreten Sicherheitswarnungen**. |\n| **DEEPSEEK-Alert**       | **Technisch plausibel**, aber **CVE-Nummer sollte verifiziert** werden.      |\n| **Dringlichkeit**        | **Hoch**, falls die Schwachstelle real ist – **sofortige Maßnahmen nötig**.  |\n| **Empfehlung**           | **1. CISA/Johnson Controls prüfen** (offizielle Quellen). <br> **2. Betroffene Systeme isolieren**, bis Patch verfügbar. |\n\n**🔍 Nächste Schritte:**\n- **Offizielle Bestätigung** der CVE-2026-21655 einholen (z. B. über [NVD](https://nvd.nist.gov/) oder [CISA](https://www.cisa.gov/)).\n- **Johnson Controls Security Advisory** prüfen (falls verfügbar).\n- **Falls keine offizielle Bestätigung:** Vorsichtshalber **Netzwerksegmentierung** durchführen.\n\n---\n**📌 Letzte Anmerkung:**\nFalls es sich um eine **fiktive Übung** handelt, ist die Beschreibung **gut recherchiert** und realistisch. Falls **real**, handelt es sich um eine **kritische Sicherheitslücke**, die **sofortiges Handeln** erfordert.",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Erdbeben in Kolumbien und mögliche Lieferkettenstörungen erhöhen die Nachfrage nach stabilen Energieaktien."
+        "reason": "Geopolitische Spannungen im Persischen Golf und Ukraine-Krieg treiben Energiepreise, was Energieaktien stützt."
       },
       {
-        "ticker": "MSFT",
-        "name": "Microsoft",
-        "asset": "Cybersicherheit",
-        "reason": "Erhöhte Nachfrage nach Sicherheitslösungen aufgrund der 'Gunra Ransomware'-Bedrohung."
+        "ticker": "CORE",
+        "name": "CoreWeave Inc.",
+        "asset": "KI-Cloud",
+        "reason": "Starke Quartalszahlen und hohe Nachfrage nach KI-Infrastruktur."
+      },
+      {
+        "ticker": "LMT",
+        "name": "Lockheed Martin",
+        "asset": "Rüstung",
+        "reason": "Anhaltende globale Konflikte erhöhen die Nachfrage nach Verteidigungstechnologie."
       }
     ],
     "flop_5_sells": [
@@ -1712,22 +1816,28 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Erdbeben in Kolumbien und politische Unsicherheiten belasten Schwellenländeraktien."
+        "reason": "Instabilität durch Naturkatastrophen (Kolumbien) und wirtschaftliche Unsicherheiten."
       },
       {
-        "ticker": "ARKK",
-        "name": "ARK Innovation ETF",
-        "asset": "Technologie",
-        "reason": "Überhitzungsrisiko im KI-Sektor nach Nvidias Kapitalerhöhung."
+        "ticker": "TATASTEEL.NS",
+        "name": "Tata Steel",
+        "asset": "Stahl",
+        "reason": "Führungsstreitigkeiten bei Tata und schwache Nachfrage in Schlüsselmärkten."
+      },
+      {
+        "ticker": "EWZ",
+        "name": "iShares Brazil",
+        "asset": "Brasilien",
+        "reason": "Politische Unsicherheit und schwache Rohstoffpreise belasten die Wirtschaft."
       }
     ]
   },
-  "timestamp": "2026-08-11T06:54:49.934865+00:00",
+  "timestamp": "2026-08-12T07:14:21.130227+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-11T06:52:24.803787+00:00",
+    "timestamp": "2026-08-12T07:11:55.079061+00:00",
     "feeds_total": 224,
-    "feeds_successful": 118,
-    "feeds_failed": 106,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -1739,7 +1849,7 @@
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
     "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (54 Nodes)",
+    "graph_merge_status": "SUCCESS (57 Nodes)",
     "errors": []
   },
   "delta": {
@@ -1748,13 +1858,13 @@
     "ampel_now": "GELB",
     "ampel_changed": false,
     "geoscore_prev": 75,
-    "geoscore_now": 75,
-    "geoscore_delta": 0,
+    "geoscore_now": 72,
+    "geoscore_delta": -3,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 50,
-    "nodes_now": 54,
-    "hotspots_now": 8,
-    "summary": "Graph-Knoten 50 → 54"
+    "nodes_prev": 54,
+    "nodes_now": 57,
+    "hotspots_now": 9,
+    "summary": "Geoscore 75 → 72 (-3) · Graph-Knoten 54 → 57"
   }
 }
