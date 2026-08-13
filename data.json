@@ -2,37 +2,49 @@
   "overall_geoscore": 72,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Erhöhte Cyberbedrohungen durch kritische Schwachstellen in Infrastruktur-Systemen sowie anhaltende geopolitische Spannungen in der Ukraine und Kolumbien.",
-  "daily_executive_summary": "Die globale Lage ist geprägt von einer akuten Cyberbedrohung durch die Schwachstelle CVE-2026-21655 in Johnson Controls C-CURE 9000 und Victor Application Servern, die kritische Infrastrukturen gefährdet. Die CISA warnt vor möglichen Remote-Code-Execution-Angriffen. Gleichzeitig eskaliert der Ukraine-Krieg mit Drohnenangriffen im Süden Russlands und schweren Angriffen bei Odessa. In Kolumbien fordert ein Erdbeben über 180 Tote, was humanitäre und logistische Herausforderungen verschärft. Wirtschaftlich zeigt sich eine fragmentierte Marktlage: Während CoreWeave als KI-Cloud-Anbieter stark wächst, gibt es Spannungen in indischen Konzernen wie Tata. Die Federal Reserve genehmigte eine Bankenfusion, was auf anhaltende Konsolidierung im Finanzsektor hindeutet.",
-  "daily_executive_summary_simple": "Weltweit gibt es aktuell eine gefährliche Sicherheitslücke in wichtigen Zutrittskontrollsystemen, die Angreifer ausnutzen könnten. Gleichzeitig kämpft die Ukraine weiter gegen russische Angriffe, und in Kolumbien gab es ein schweres Erdbeben mit vielen Toten. An den Märkten läuft es für KI-Unternehmen gut, aber in Schwellenländern und bei Rohstoffen gibt es Probleme. Die USA genehmigten eine Bankenfusion, was zeigt, dass der Finanzsektor sich verändert.",
+  "ampel_reason_simple": "Erhöhte geopolitische Spannungen durch Iran-Sanktionen und Ukraine-Krieg, kombiniert mit wirtschaftlicher Unsicherheit durch Fed-Prognosen und Marktvolatilität.",
+  "daily_executive_summary": "Die USA verschärfen die Sanktionen gegen den Iran, um die Umgehung des UN-Waffenembargos zu unterbinden, was die Spannungen im Persischen Golf weiter anheizt. Im Ukraine-Krieg eskaliert die Lage mit Drohnenangriffen im Schwarzen Meer und US-Warnungen an Kiew, während Friedensnobelpreisträger Muratow Putins militärische Niederlage als unausweichlich bezeichnet. Wirtschaftlich zeigt sich ein gemischtes Bild: Die US-Notenbank senkt ihre Wachstumsprognose, während Cisco trotz Rekordgewinnen durch KI-Nachfrage mit Aktienrückgängen kämpft. Cyber-Sicherheitsrisiken durch Schwachstellen in Johnson Controls-Systemen unterstreichen die anhaltende Bedrohung kritischer Infrastrukturen.",
+  "daily_executive_summary_simple": "Die Weltlage ist angespannt: Die USA bestrafen den Iran härter, und der Krieg in der Ukraine geht weiter, ohne dass Russland gewinnen kann. Die Wirtschaft wächst langsamer als erwartet, und Tech-Firmen wie Cisco profitieren zwar von KI, aber die Börsen reagieren nervös. Gleichzeitig gibt es Sicherheitslücken in wichtigen Computersystemen, die Angriffe ermöglichen könnten.",
   "key_takeaways": [
-    "Kritische Schwachstelle CVE-2026-21655 in Johnson Controls-Systemen erfordert sofortige Patches in kritischen Infrastrukturen.",
-    "Ukraine-Krieg eskaliert mit Drohnenangriffen in Russland und schweren Verlusten bei Odessa.",
-    "Erdbeben in Kolumbien mit über 180 Toten belastet humanitäre Kapazitäten und regionale Stabilität.",
-    "CoreWeave zeigt starke KI-Wachstumszahlen, während Tata mit Führungsstreitigkeiten kämpft.",
-    "Federal Reserve genehmigt Bankenfusion, was auf anhaltende Konsolidierung im US-Finanzsektor hindeutet."
+    "USA weiten Sanktionen gegen Iran aus – Risiko von Gegenmaßnahmen im Persischen Golf steigt.",
+    "Ukraine-Krieg: Putin kann militärisch nicht mehr gewinnen, aber die Zerstörung geht weiter (Muratow).",
+    "US-Notenbank senkt Wirtschaftsprognose – Wachstum schwächelt, aber keine Rezession in Sicht.",
+    "Cisco verzeichnet Rekordgewinne durch KI, doch Aktien fallen – Markt reagiert skeptisch auf Bewertung.",
+    "Kritische Sicherheitslücken in Johnson Controls-Systemen gefährden Infrastruktur (CISA-Warnung)."
   ],
-  "market_regime": "Fragmentiert / Volatil",
-  "top_risk": "Cyberangriffe auf kritische Infrastruktur & geopolitische Instabilität",
+  "market_regime": "Volatil",
+  "top_risk": "Geopolitische Eskalation & Energieversorgung",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen im Persischen Golf und Ukraine-Krieg treiben Energiepreise, was Energieaktien stützt."
-      },
-      {
-        "ticker": "CORE",
-        "name": "CoreWeave Inc.",
-        "asset": "KI-Cloud",
-        "reason": "Starke Quartalszahlen und hohe Nachfrage nach KI-Infrastruktur."
+        "reason": "Erhöhte Spannungen im Persischen Golf und Sanktionen gegen Iran treiben Ölpreise, was Energieaktien stützt."
       },
       {
         "ticker": "LMT",
         "name": "Lockheed Martin",
         "asset": "Rüstung",
-        "reason": "Anhaltende globale Konflikte erhöhen die Nachfrage nach Verteidigungstechnologie."
+        "reason": "Anhaltende Nachfrage durch Ukraine-Krieg und globale Aufrüstung."
+      },
+      {
+        "ticker": "NVDA",
+        "name": "NVIDIA",
+        "asset": "KI-Halbleiter",
+        "reason": "KI-„Superzyklus“ treibt Nachfrage nach Hochleistungs-Chips weiter an."
+      },
+      {
+        "ticker": "GLD",
+        "name": "Gold",
+        "asset": "Rohstoff",
+        "reason": "Sicherer Hafen bei geopolitischen Unsicherheiten und schwächerem US-Dollar."
+      },
+      {
+        "ticker": "SOXX",
+        "name": "iShares Semiconductor ETF",
+        "asset": "Halbleiter",
+        "reason": "TSMC/Sony-Kooperation und KI-Boom stärken Halbleitersektor."
       }
     ],
     "flop5_sells": [
@@ -40,19 +52,31 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Instabilität durch Naturkatastrophen (Kolumbien) und wirtschaftliche Unsicherheiten."
+        "reason": "Geopolitische Risiken und schwächere globale Nachfrage belasten Exportländer."
       },
       {
-        "ticker": "TATASTEEL.NS",
-        "name": "Tata Steel",
-        "asset": "Stahl",
-        "reason": "Führungsstreitigkeiten bei Tata und schwache Nachfrage in Schlüsselmärkten."
+        "ticker": "FXI",
+        "name": "iShares China Large-Cap",
+        "asset": "China",
+        "reason": "Regulatorische Unsicherheit und schwache Binnenkonjunktur dämpfen Aktien."
       },
       {
-        "ticker": "EWZ",
-        "name": "iShares Brazil",
-        "asset": "Brasilien",
-        "reason": "Politische Unsicherheit und schwache Rohstoffpreise belasten die Wirtschaft."
+        "ticker": "XLU",
+        "name": "Utilities Select Sector",
+        "asset": "Versorger",
+        "reason": "Zinsrisiko und schwache Industriestimmung belasten defensive Sektoren."
+      },
+      {
+        "ticker": "TLT",
+        "name": "iShares 20+ Year Treasury Bond",
+        "asset": "Staatsanleihen",
+        "reason": "Fed-Signale für anhaltend hohe Zinsen drücken Anleihenkurse."
+      },
+      {
+        "ticker": "IYT",
+        "name": "iShares Transportation Average",
+        "asset": "Transport",
+        "reason": "Schwache globale Handelsdaten und hohe Energiekosten belasten Logistiksektor."
       }
     ]
   },
@@ -60,164 +84,192 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Politische Polarisierung bleibt hoch, während die Federal Reserve Bankenkonsolidierung fördert. Cyberbedrohungen erfordern verstärkte regulatorische Maßnahmen."
+      "dynamics": "Politische Polarisierung bleibt hoch, aber keine akute Krise. Fed signalisiert vorsichtige Zinspolitik, während Infrastruktur- und Cybersicherheitsrisiken zunehmen."
     },
     {
       "region": "EU",
       "stability": "GELB",
-      "dynamics": "Ukraine-Krieg belastet Energie- und Sicherheitspolitik. Wirtschaftliche Erholung bleibt fragil durch globale Unsicherheiten."
+      "dynamics": "Energieabhängigkeit und Ukraine-Krieg belasten Wirtschaft. TSMC/Sony-Kooperation zeigt technologische Abhängigkeit von Asien."
+    },
+    {
+      "region": "China",
+      "stability": "GELB",
+      "dynamics": "Wirtschaftliche Erholung stockt, regulatorische Eingriffe verunsichern Märkte. KI-Aktien schwanken stark."
+    },
+    {
+      "region": "Russland",
+      "stability": "ROT",
+      "dynamics": "Kriegswirtschaft und internationale Isolation führen zu langfristiger Schwächung. Muratow warnt vor Putins destruktiver Strategie."
     },
     {
       "region": "Indien",
-      "stability": "GELB",
-      "dynamics": "Führungsstreitigkeiten bei Tata und wirtschaftliche Herausforderungen dämpfen das Wachstumspotenzial."
+      "stability": "GRÜN",
+      "dynamics": "Wirtschaftswachstum und Infrastrukturprojekte (z. B. Andhra Pradesh) stärken Position als aufstrebende Großmacht."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Kritische Schwachstelle in Zutrittskontrollsystemen mit RCE-Risiko.",
-      "current_event": "Kritische Schwachstelle in Zutrittskontrollsystemen mit RCE-Risiko.",
-      "historical_analog": "CVE-2021-27653 in ähnlichen Zutrittskontrollsystemen (2021).",
-      "similarity": "CVE-2021-27653 in ähnlichen Zutrittskontrollsystemen (2021).",
-      "takeaway": "Schnelle Patches und Netzwerksegmentierung sind entscheidend, um ähnliche Angriffe zu verhindern."
+      "event": "Ausweitung der US-Sanktionen gegen Iran zur Verhinderung von Waffenlieferungen.",
+      "current_event": "Ausweitung der US-Sanktionen gegen Iran zur Verhinderung von Waffenlieferungen.",
+      "historical_analog": "US-Sanktionen gegen Iran 2012–2015 (vor Atomabkommen)",
+      "similarity": "US-Sanktionen gegen Iran 2012–2015 (vor Atomabkommen)",
+      "takeaway": "Historisch führten solche Sanktionen zu iranischen Gegenmaßnahmen (z. B. Tankerangriffe), was die Ölpreise und regionale Stabilität gefährdete."
     },
     {
-      "event": "Schweres Erdbeben mit über 180 Toten und massiven Zerstörungen.",
-      "current_event": "Schweres Erdbeben mit über 180 Toten und massiven Zerstörungen.",
-      "historical_analog": "Erdbeben in Haiti (2010) mit über 200.000 Toten.",
-      "similarity": "Erdbeben in Haiti (2010) mit über 200.000 Toten.",
-      "takeaway": "Internationale Hilfe und langfristige Wiederaufbauprogramme sind entscheidend für die Stabilisierung."
+      "event": "Muratow bezeichnet Putins Krieg als „ungewinnbar“ und warnt vor weiterer Zerstörung.",
+      "current_event": "Muratow bezeichnet Putins Krieg als „ungewinnbar“ und warnt vor weiterer Zerstörung.",
+      "historical_analog": "Sowjetischer Krieg in Afghanistan (1979–1989)",
+      "similarity": "Sowjetischer Krieg in Afghanistan (1979–1989)",
+      "takeaway": "Putins Strategie könnte zu langfristiger Isolation Russlands und wirtschaftlichem Niedergang führen, ähnlich wie nach dem Afghanistan-Krieg."
+    },
+    {
+      "event": "Cisco verzeichnet Rekordgewinne durch KI, aber Aktien fallen.",
+      "current_event": "Cisco verzeichnet Rekordgewinne durch KI, aber Aktien fallen.",
+      "historical_analog": "IBM in den 1990ern: Technologieführerschaft, aber Überbewertung und Marktkorrektur",
+      "similarity": "IBM in den 1990ern: Technologieführerschaft, aber Überbewertung und Marktkorrektur",
+      "takeaway": "Kurzfristige Gewinnmitnahmen und Bewertungsskepsis können selbst starke Unternehmen treffen – langfristig bleibt KI jedoch ein Wachstumstreiber."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Erhöhte Cyberangriffe auf kritische Infrastrukturen durch Ausnutzung von CVE-2026-21655. Eskalation des Ukraine-Kriegs mit möglichen Gegenoffensiven. Wirtschaftliche Unsicherheit durch Naturkatastrophen und geopolitische Spannungen.",
+    "base_case_summary": "Iran wird wahrscheinlich mit begrenzten Gegenmaßnahmen auf US-Sanktionen reagieren (z. B. Tanker-Belästigungen im Persischen Golf). Der Ukraine-Krieg eskaliert weiter mit Drohnenangriffen auf russische Schiffe, während die USA Kiew zu Zurückhaltung drängen. Die Fed wird ihre vorsichtige Zinspolitik fortsetzen, was die Märkte stabilisiert, aber keine starke Rally auslöst.",
     "leading_indicators_to_watch": [
-      "Zunahme von CISA-Warnungen zu Cyberangriffen auf kritische Infrastrukturen.",
-      "Militärische Bewegungen und Rhetorik in der Ukraine und Russland.",
-      "Volatilität an den Rohstoffmärkten, insbesondere Öl und Gas."
+      "Zunahme von Zwischenfällen im Persischen Golf (z. B. Tankerangriffe)",
+      "Erhöhte Drohnenaktivität im Schwarzen Meer",
+      "Fed-Signale für Zinssenkungen (oder -erhöhungen) in Reden"
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Erhöhte Cyberangriffe auf kritische Infrastrukturen durch Ausnutzung von CVE-2026-21655. Eskalation des Ukraine-Kriegs mit möglichen Gegenoffensiven. Wirtschaftliche Unsicherheit durch Naturkatastrophen und geopolitische Spannungen.",
+        "forecast": "Iran wird wahrscheinlich mit begrenzten Gegenmaßnahmen auf US-Sanktionen reagieren (z. B. Tanker-Belästigungen im Persischen Golf). Der Ukraine-Krieg eskaliert weiter mit Drohnenangriffen auf russische Schiffe, während die USA Kiew zu Zurückhaltung drängen. Die Fed wird ihre vorsichtige Zinspolitik fortsetzen, was die Märkte stabilisiert, aber keine starke Rally auslöst.",
         "probability": "Hoch",
         "early_warning_indicators": [
-          "Zunahme von CISA-Warnungen zu Cyberangriffen auf kritische Infrastrukturen.",
-          "Militärische Bewegungen und Rhetorik in der Ukraine und Russland.",
-          "Volatilität an den Rohstoffmärkten, insbesondere Öl und Gas."
+          "Zunahme von Zwischenfällen im Persischen Golf (z. B. Tankerangriffe)",
+          "Erhöhte Drohnenaktivität im Schwarzen Meer",
+          "Fed-Signale für Zinssenkungen (oder -erhöhungen) in Reden"
         ]
       },
       {
         "timeframe": "90 Tage",
-        "forecast": "Mögliche Stabilisierung der Cyberlage durch Patches, aber anhaltende geopolitische Spannungen. Wirtschaftliche Erholung in Schwellenländern bleibt fragil.",
+        "forecast": "Russland könnte versuchen, durch gezielte Eskalation (z. B. Cyberangriffe auf westliche Infrastruktur) Druck auf die Ukraine-Unterstützer auszuüben. Die US-Wahlen im November 2026 könnten zu einer Verschärfung der Iran-Politik führen, falls Republikaner gewinnen. Wirtschaftlich könnte sich eine leichte Erholung in den USA abzeichnen, während China mit strukturellen Problemen kämpft.",
         "probability": "Mittel",
         "early_warning_indicators": [
-          "Fortschritte bei der Implementierung von Sicherheitsupdates in kritischen Systemen.",
-          "Diplomatische Initiativen zur Deeskalation in der Ukraine.",
-          "Entwicklung der Rohstoffpreise und globalen Lieferketten."
+          "Zunahme von Cyberangriffen auf westliche Energie- und Finanzinfrastruktur",
+          "Wahlumfragen in den USA (Republikaner vs. Demokraten)",
+          "Chinesische Konjunkturdaten (BIP, Immobilienkrise)"
         ]
       }
     ]
   },
   "conflict_hotspots": [
     {
-      "name": "Ukraine-Krieg",
-      "region": "Osteuropa",
-      "lat": 48.3794,
-      "lon": 31.1656,
-      "type": "conflict",
-      "intensity": "ROT",
-      "description": "Anhaltende Kämpfe mit Drohnenangriffen in Russland und schweren Verlusten bei Odessa. Keine Anzeichen für Deeskalation.",
-      "impact": "Belastung der globalen Energie- und Nahrungsmittelversorgung, humanitäre Krise.",
-      "lng": 31.1656
-    },
-    {
       "name": "Persischer Golf",
-      "region": "Naher Osten",
+      "region": "Persischer Golf",
       "lat": 26.5,
       "lon": 53.5,
       "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Spannungen zwischen Iran und westlichen Staaten, mögliche Blockaden der Straße von Hormus.",
-      "impact": "Unterbrechung der globalen Ölversorgung, Preisanstieg bei Energie.",
+      "description": "US-Sanktionen gegen Iran erhöhen das Risiko von iranischen Gegenmaßnahmen, z. B. Angriffen auf Öltanker oder Blockaden der Straße von Hormus.",
+      "impact": "Unterbrechung der globalen Ölversorgung, Preisschocks und wirtschaftliche Verwerfungen.",
       "lng": 53.5
     },
     {
-      "name": "Kolumbien",
-      "region": "Südamerika",
-      "lat": 4.5709,
-      "lon": -74.2973,
+      "name": "Schwarzes Meer",
+      "region": "Schwarzes Meer / Ukraine",
+      "lat": 44.0,
+      "lon": 34.0,
+      "type": "conflict",
+      "intensity": "ROT",
+      "description": "Ukrainische Drohnenangriffe auf russische Schiffe und Häfen eskalieren, während die USA Kiew zu Zurückhaltung auffordern.",
+      "impact": "Risiko einer direkten Konfrontation zwischen Russland und NATO-Staaten, Unterbrechung des Getreideexports.",
+      "lng": 34.0
+    },
+    {
+      "name": "Taiwan-Straße",
+      "region": "Ostasien",
+      "lat": 23.5,
+      "lon": 121.0,
+      "type": "conflict",
+      "intensity": "GELB",
+      "description": "TSMC/Sony-Kooperation und Chinas KI-Aktien zeigen technologische Rivalität, aber keine akute militärische Eskalation.",
+      "impact": "Handelskonflikte und Lieferkettenunterbrechungen, aber kein Krieg in Sicht.",
+      "lng": 121.0
+    },
+    {
+      "name": "Johnson Controls-Schwachstellen",
+      "region": "Global (Cyber)",
+      "lat": 0.0,
+      "lon": 0.0,
       "type": "risiko",
       "intensity": "GELB",
-      "description": "Erdbeben mit über 180 Toten und massiven Zerstörungen. Humanitäre Krise verschärft sich.",
-      "impact": "Belastung der regionalen Stabilität und Wirtschaft, mögliche Migrationsbewegungen.",
-      "lng": -74.2973
+      "description": "Kritische Sicherheitslücken in Johnson Controls-Systemen (C-CURE 9000) ermöglichen Remote-Code-Execution durch Angreifer.",
+      "impact": "Gefahr von Cyberangriffen auf kritische Infrastrukturen (z. B. Energie, Sicherheitssysteme).",
+      "lng": 0.0
     },
     {
-      "name": "Flug PGT3SX",
+      "name": "Flug PGT84R",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.3479,
-      "lon": 30.3918,
-      "lng": 30.3918,
+      "lat": 41.179,
+      "lon": 37.7169,
+      "lng": 37.7169,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT3SX | Höhe: 6.9 km | Speed: 734 km/h",
+      "description": "Callsign: PGT84R | Höhe: 9.1 km | Speed: 811 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT75CK",
+      "name": "Flug PGT4VH",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.7403,
-      "lon": 28.2515,
-      "lng": 28.2515,
+      "lat": 40.8714,
+      "lon": 29.2663,
+      "lng": 29.2663,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT75CK | Höhe: 9.0 km | Speed: 832 km/h",
+      "description": "Callsign: PGT4VH | Höhe: 0.2 km | Speed: 239 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ8MU",
+      "name": "Flug N805XA",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.781,
-      "lon": 33.5085,
-      "lng": 33.5085,
+      "lat": 23.3043,
+      "lon": 51.2435,
+      "lng": 51.2435,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ8MU | Höhe: 1.2 km | Speed: 506 km/h",
+      "description": "Callsign: N805XA | Höhe: 5.2 km | Speed: 801 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AXB385",
+      "name": "Flug IGO49F",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 26.3033,
-      "lon": 50.3005,
-      "lng": 50.3005,
+      "lat": 29.6541,
+      "lon": 32.0591,
+      "lng": 32.0591,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AXB385 | Höhe: 2.6 km | Speed: 546 km/h",
+      "description": "Callsign: IGO49F | Höhe: 11.0 km | Speed: 919 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "ADS-B Signal 781B94",
+      "name": "Flug CSN3825",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.0245,
-      "lon": 118.5404,
-      "lng": 118.5404,
+      "lat": 22.8886,
+      "lon": 115.6063,
+      "lng": 115.6063,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: Unbekannt | Höhe: 3.6 km | Speed: 495 km/h",
+      "description": "Callsign: CSN3825 | Höhe: 6.6 km | Speed: 765 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug FDX5991",
+      "name": "Flug JJP18",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.9917,
-      "lon": 120.0819,
-      "lng": 120.0819,
+      "lat": 24.7752,
+      "lon": 121.9734,
+      "lng": 121.9734,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: FDX5991 | Höhe: 11.6 km | Speed: 883 km/h",
+      "description": "Callsign: JJP18 | Höhe: 10.7 km | Speed: 859 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -229,7 +281,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-12"
+        "last_seen": "2026-08-13"
       },
       {
         "id": "iran",
@@ -237,7 +289,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-12"
+        "last_seen": "2026-08-13"
       },
       {
         "id": "saudi",
@@ -251,7 +303,7 @@
         "id": "israel",
         "label": "Israel",
         "group": "staat",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-10"
       },
@@ -259,9 +311,9 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 8,
+        "val": 12,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-09"
+        "last_seen": "2026-08-13"
       },
       {
         "id": "taiwan",
@@ -277,13 +329,13 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-12"
+        "last_seen": "2026-08-13"
       },
       {
         "id": "eu",
         "label": "EU",
         "group": "staat",
-        "val": 19,
+        "val": 18,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-09"
       },
@@ -301,7 +353,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-12"
+        "last_seen": "2026-08-13"
       },
       {
         "id": "fed",
@@ -323,25 +375,9 @@
         "id": "cyber_risiko",
         "label": "Cyber-Sicherheit",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-26",
         "last_seen": "2026-08-09"
-      },
-      {
-        "id": "japan",
-        "label": "Japan",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-07-27",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "id": "syrien",
-        "label": "Syrien",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-07-29",
-        "last_seen": "2026-07-29"
       },
       {
         "id": "nato",
@@ -350,38 +386,6 @@
         "val": 3,
         "first_seen": "2026-07-29",
         "last_seen": "2026-08-01"
-      },
-      {
-        "id": "telegram",
-        "label": "Telegram",
-        "group": "tech",
-        "val": 3,
-        "first_seen": "2026-07-29",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "id": "saudi_arabien",
-        "label": "Saudi-Arabien",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-07-29",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "id": "supreme_court",
-        "label": "Supreme Court",
-        "group": "organisation",
-        "val": 3,
-        "first_seen": "2026-07-29",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "id": "siemens",
-        "label": "Siemens",
-        "group": "tech",
-        "val": 3,
-        "first_seen": "2026-07-29",
-        "last_seen": "2026-07-29"
       },
       {
         "id": "jpmorgan",
@@ -523,7 +527,7 @@
         "id": "cyberrisiko",
         "label": "Cyberrisiko",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-03",
         "last_seen": "2026-08-08"
       },
@@ -603,7 +607,7 @@
         "id": "oelpreise",
         "label": "Ölpreise",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-10",
         "last_seen": "2026-08-10"
       },
@@ -611,7 +615,7 @@
         "id": "straits_of_hormuz",
         "label": "Straße von Hormus",
         "group": "chokepoint",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-10",
         "last_seen": "2026-08-10"
       },
@@ -619,7 +623,7 @@
         "id": "kolumbien",
         "label": "Kolumbien",
         "group": "staat",
-        "val": 8,
+        "val": 7,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-12"
       },
@@ -627,7 +631,7 @@
         "id": "muddywater",
         "label": "MuddyWater",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-11"
       },
@@ -635,7 +639,7 @@
         "id": "nvidia",
         "label": "Nvidia",
         "group": "tech",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-11"
       },
@@ -643,7 +647,7 @@
         "id": "gunra",
         "label": "Gunra",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-11"
       },
@@ -651,15 +655,15 @@
         "id": "persischer_golf",
         "label": "Persischer Golf",
         "group": "risiko",
-        "val": 5,
+        "val": 9,
         "first_seen": "2026-08-11",
-        "last_seen": "2026-08-11"
+        "last_seen": "2026-08-13"
       },
       {
         "id": "cve_2026_21655",
         "label": "CVE-2026-21655",
         "group": "risiko",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-08-12",
         "last_seen": "2026-08-12"
       },
@@ -667,7 +671,7 @@
         "id": "tata",
         "label": "Tata",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-12",
         "last_seen": "2026-08-12"
       },
@@ -675,9 +679,41 @@
         "id": "coreweave",
         "label": "CoreWeave",
         "group": "tech",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-12",
         "last_seen": "2026-08-12"
+      },
+      {
+        "id": "cisco",
+        "label": "Cisco",
+        "group": "tech",
+        "val": 5,
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      },
+      {
+        "id": "tsmc",
+        "label": "TSMC",
+        "group": "tech",
+        "val": 5,
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      },
+      {
+        "id": "johnson_controls",
+        "label": "Johnson Controls",
+        "group": "tech",
+        "val": 5,
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
+      },
+      {
+        "id": "schwarzes_meer",
+        "label": "Schwarzes Meer",
+        "group": "risiko",
+        "val": 7,
+        "first_seen": "2026-08-13",
+        "last_seen": "2026-08-13"
       }
     ],
     "edges": [
@@ -686,16 +722,16 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Konflikt",
-        "last_seen": "2026-08-12"
+        "label": "Sanktionen & Konflikt",
+        "last_seen": "2026-08-13"
       },
       {
         "from": "usa",
         "to": "russland",
         "source": "usa",
         "target": "russland",
-        "label": "Konflikt (Ukraine)",
-        "last_seen": "2026-08-05"
+        "label": "Spannungen",
+        "last_seen": "2026-08-13"
       },
       {
         "from": "usa",
@@ -711,7 +747,7 @@
         "source": "russland",
         "target": "ukraine",
         "label": "Krieg",
-        "last_seen": "2026-08-12"
+        "last_seen": "2026-08-13"
       },
       {
         "from": "usa",
@@ -755,22 +791,6 @@
       },
       {
         "from": "usa",
-        "to": "syrien",
-        "source": "usa",
-        "target": "syrien",
-        "label": "Militäroperation",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "from": "iran",
-        "to": "syrien",
-        "source": "iran",
-        "target": "syrien",
-        "label": "Unterstützung Milizen",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "from": "usa",
         "to": "nato",
         "source": "usa",
         "target": "nato",
@@ -786,36 +806,12 @@
         "last_seen": "2026-08-01"
       },
       {
-        "from": "russland",
-        "to": "telegram",
-        "source": "russland",
-        "target": "telegram",
-        "label": "Anklage",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "from": "usa",
-        "to": "supreme_court",
-        "source": "usa",
-        "target": "supreme_court",
-        "label": "Wahlrechtsstreit",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "from": "japan",
-        "to": "usa",
-        "source": "japan",
-        "target": "usa",
-        "label": "Handel",
-        "last_seen": "2026-07-29"
-      },
-      {
         "from": "usa",
         "to": "ukraine",
         "source": "usa",
         "target": "ukraine",
-        "label": "Unterstützung",
-        "last_seen": "2026-08-12"
+        "label": "Militärhilfe & Warnungen",
+        "last_seen": "2026-08-13"
       },
       {
         "from": "deutschland",
@@ -1190,8 +1186,8 @@
         "to": "persischer_golf",
         "source": "iran",
         "target": "persischer_golf",
-        "label": "Spannungen",
-        "last_seen": "2026-08-12"
+        "label": "Risiko",
+        "last_seen": "2026-08-13"
       },
       {
         "from": "nvidia",
@@ -1224,6 +1220,14 @@
         "target": "usa",
         "label": "Wirtschaftlicher Aufschwung",
         "last_seen": "2026-08-12"
+      },
+      {
+        "from": "russland",
+        "to": "schwarzes_meer",
+        "source": "russland",
+        "target": "schwarzes_meer",
+        "label": "Eskalation",
+        "last_seen": "2026-08-13"
       }
     ],
     "links": [
@@ -1232,16 +1236,16 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Konflikt",
-        "last_seen": "2026-08-12"
+        "label": "Sanktionen & Konflikt",
+        "last_seen": "2026-08-13"
       },
       {
         "from": "usa",
         "to": "russland",
         "source": "usa",
         "target": "russland",
-        "label": "Konflikt (Ukraine)",
-        "last_seen": "2026-08-05"
+        "label": "Spannungen",
+        "last_seen": "2026-08-13"
       },
       {
         "from": "usa",
@@ -1257,7 +1261,7 @@
         "source": "russland",
         "target": "ukraine",
         "label": "Krieg",
-        "last_seen": "2026-08-12"
+        "last_seen": "2026-08-13"
       },
       {
         "from": "usa",
@@ -1301,22 +1305,6 @@
       },
       {
         "from": "usa",
-        "to": "syrien",
-        "source": "usa",
-        "target": "syrien",
-        "label": "Militäroperation",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "from": "iran",
-        "to": "syrien",
-        "source": "iran",
-        "target": "syrien",
-        "label": "Unterstützung Milizen",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "from": "usa",
         "to": "nato",
         "source": "usa",
         "target": "nato",
@@ -1332,36 +1320,12 @@
         "last_seen": "2026-08-01"
       },
       {
-        "from": "russland",
-        "to": "telegram",
-        "source": "russland",
-        "target": "telegram",
-        "label": "Anklage",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "from": "usa",
-        "to": "supreme_court",
-        "source": "usa",
-        "target": "supreme_court",
-        "label": "Wahlrechtsstreit",
-        "last_seen": "2026-07-29"
-      },
-      {
-        "from": "japan",
-        "to": "usa",
-        "source": "japan",
-        "target": "usa",
-        "label": "Handel",
-        "last_seen": "2026-07-29"
-      },
-      {
         "from": "usa",
         "to": "ukraine",
         "source": "usa",
         "target": "ukraine",
-        "label": "Unterstützung",
-        "last_seen": "2026-08-12"
+        "label": "Militärhilfe & Warnungen",
+        "last_seen": "2026-08-13"
       },
       {
         "from": "deutschland",
@@ -1736,8 +1700,8 @@
         "to": "persischer_golf",
         "source": "iran",
         "target": "persischer_golf",
-        "label": "Spannungen",
-        "last_seen": "2026-08-12"
+        "label": "Risiko",
+        "last_seen": "2026-08-13"
       },
       {
         "from": "nvidia",
@@ -1770,15 +1734,23 @@
         "target": "usa",
         "label": "Wirtschaftlicher Aufschwung",
         "last_seen": "2026-08-12"
+      },
+      {
+        "from": "russland",
+        "to": "schwarzes_meer",
+        "source": "russland",
+        "target": "schwarzes_meer",
+        "label": "Eskalation",
+        "last_seen": "2026-08-13"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Kritische Schwachstelle CVE-2026-21655 in Johnson Controls-Systemen erfordert sofortige Patches in kritischen Infrastrukturen.",
-    "Ukraine-Krieg eskaliert mit Drohnenangriffen in Russland und schweren Verlusten bei Odessa.",
-    "Erdbeben in Kolumbien mit über 180 Toten belastet humanitäre Kapazitäten und regionale Stabilität.",
-    "CoreWeave zeigt starke KI-Wachstumszahlen, während Tata mit Führungsstreitigkeiten kämpft.",
-    "Federal Reserve genehmigt Bankenfusion, was auf anhaltende Konsolidierung im US-Finanzsektor hindeutet."
+    "USA weiten Sanktionen gegen Iran aus – Risiko von Gegenmaßnahmen im Persischen Golf steigt.",
+    "Ukraine-Krieg: Putin kann militärisch nicht mehr gewinnen, aber die Zerstörung geht weiter (Muratow).",
+    "US-Notenbank senkt Wirtschaftsprognose – Wachstum schwächelt, aber keine Rezession in Sicht.",
+    "Cisco verzeichnet Rekordgewinne durch KI, doch Aktien fallen – Markt reagiert skeptisch auf Bewertung.",
+    "Kritische Sicherheitslücken in Johnson Controls-Systemen gefährden Infrastruktur (CISA-Warnung)."
   ],
   "geoscore": {
     "current_score": 72,
@@ -1789,26 +1761,38 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "### **Kreuzprüfung der Aussagen (\"Fingerklopfen\") – 12.08.2026**\n\n#### **1. GROQ-Zusammenfassung vs. DEEPSEEK-Alert**\n**GROQ** gibt einen **breiten Überblick** über globale Themen (Politik, Wirtschaft, Technologie, Umwelt etc.), während **DEEPSEEK** einen **konkreten, zeitkritischen Sicherheitsvorfall** (CVE-2026-21655) hervorhebt.\n\n✅ **Konsistenzprüfung:**\n- **GROQ** erwähnt unter **\"Sicherheit und Verteidigung\"** allgemein **Cyberangriffe** – dies deckt sich mit dem **DEEPSEEK-Alert**, der eine **konkrete Schwachstelle** in kritischer Infrastruktur (Zutrittskontrollsysteme) benennt.\n- **DEEPSEEK** liefert **technische Details** (CVE, betroffene Systeme, Angriffsmethode), die in **GROQs** generischer Zusammenfassung nicht enthalten sind.\n- **Fazit:** Beide Quellen ergänzen sich – **GROQ** gibt den Kontext, **DEEPSEEK** die akute Bedrohung.\n\n---\n\n#### **2. Plausibilität des DEEPSEEK-Alerts (CVE-2026-21655)**\n**Frage:** Ist die genannte Schwachstelle realistisch für August 2026?\n\n✅ **Prüfung der technischen Machbarkeit:**\n- **Johnson Controls C-CURE 9000** ist ein **real existierendes Zutrittskontrollsystem**, das in **kritischen Infrastrukturen** (Flughäfen, Regierungsgebäude, Unternehmen) eingesetzt wird.\n- **Victor Application Server** ist ein **Videomanagementsystem** (VMS), das oft mit C-CURE integriert wird.\n- **Remote Code Execution (RCE)** über Netzwerkzugriff ist eine **typische Schwachstelle** in solchen Systemen (vgl. historische CVEs wie [CVE-2021-27653](https://nvd.nist.gov/vuln/detail/CVE-2021-27653) in ähnlichen Produkten).\n- **CISA-Alerts** zu solchen Schwachstellen sind **realistisch** – die Behörde veröffentlicht regelmäßig Warnungen zu kritischen Lücken (z. B. [CISA KEV Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)).\n\n⚠️ **Mögliche Ungereimtheiten:**\n- **CVE-Nummer (CVE-2026-21655):**\n  - Die **CVE-Nomenklatur** folgt dem Schema `CVE-YYYY-NNNNN`.\n  - **2026-21655** wäre eine **sehr hohe Nummer** (21.655 CVEs im Jahr 2026?).\n  - **Realistischere Schätzung:** Bis 2026 könnten **~20.000–30.000 CVEs pro Jahr** vergeben werden (aktuell ~25.000/Jahr, Tendenz steigend).\n  - **Fazit:** Die Nummer ist **plausibel**, aber ungewöhnlich hoch – könnte auf eine **späte Entdeckung im Jahr** hindeuten.\n\n- **Betroffene Versionen (bis v3.10.1):**\n  - Johnson Controls veröffentlicht **regelmäßig Updates** (z. B. [C-CURE 9000 v3.10](https://www.johnsoncontrols.com/en_us/products/building-automation-and-controls/security-and-fire-safety/c-cure-9000)).\n  - Eine **RCE-Lücke in einer aktuellen Version** wäre **kritisch**, aber nicht unmöglich.\n\n✅ **Gesamtbewertung:**\n- Die **technischen Details** sind **realistisch**.\n- Die **CVE-Nummer** ist **plausibel**, aber ungewöhnlich hoch.\n- **Empfehlung:** Falls möglich, **offizielle CISA-Quellen** oder **Johnson Controls Security Advisories** prüfen.\n\n---\n\n#### **3. Handlungsempfehlungen (basierend auf DEEPSEEK)**\nFalls die Schwachstelle **real** ist, sollten betroffene Organisationen **sofort** folgende Maßnahmen ergreifen:\n\n| **Maßnahme**               | **Details**                                                                 |\n|----------------------------|-----------------------------------------------------------------------------|\n| **1. Patchen**             | Sofortiges Update auf die **neueste Version** (falls verfügbar).           |\n| **2. Netzwerksegmentierung** | Isolierung der betroffenen Systeme vom **öffentlichen Internet**.          |\n| **3. Firewall-Regeln**     | Blockieren von **unkritischen Zugriffen** auf Ports der C-CURE/Victor-Systeme. |\n| **4. Monitoring**          | Überwachung auf **verdächtige Aktivitäten** (z. B. ungewöhnliche Logins).  |\n| **5. Backup & Recovery**   | Sicherstellung, dass **Backups** vorhanden und **wiederherstellbar** sind. |\n| **6. CISA-Alert abonnieren** | Regelmäßige Prüfung auf [CISA Advisories](https://www.cisa.gov/).          |\n\n---\n\n#### **4. Fazit der Kreuzprüfung**\n| **Aspekt**               | **Bewertung**                                                                 |\n|--------------------------|------------------------------------------------------------------------------|\n| **GROQ-Zusammenfassung** | **Konsistent** mit globalen Trends, aber **keine konkreten Sicherheitswarnungen**. |\n| **DEEPSEEK-Alert**       | **Technisch plausibel**, aber **CVE-Nummer sollte verifiziert** werden.      |\n| **Dringlichkeit**        | **Hoch**, falls die Schwachstelle real ist – **sofortige Maßnahmen nötig**.  |\n| **Empfehlung**           | **1. CISA/Johnson Controls prüfen** (offizielle Quellen). <br> **2. Betroffene Systeme isolieren**, bis Patch verfügbar. |\n\n**🔍 Nächste Schritte:**\n- **Offizielle Bestätigung** der CVE-2026-21655 einholen (z. B. über [NVD](https://nvd.nist.gov/) oder [CISA](https://www.cisa.gov/)).\n- **Johnson Controls Security Advisory** prüfen (falls verfügbar).\n- **Falls keine offizielle Bestätigung:** Vorsichtshalber **Netzwerksegmentierung** durchführen.\n\n---\n**📌 Letzte Anmerkung:**\nFalls es sich um eine **fiktive Übung** handelt, ist die Beschreibung **gut recherchiert** und realistisch. Falls **real**, handelt es sich um eine **kritische Sicherheitslücke**, die **sofortiges Handeln** erfordert.",
+  "game_theory_analysis": "Hier ist die **Kreuzprüfung (\"Fingerklopfen\")** der beiden Quellen (GROQ und DEEPSEEK) für den **13.08.2026**, inklusive Bewertung der Konsistenz, Plausibilität und möglicher Widersprüche:\n\n---\n\n### **1. Geopolitik & Sicherheit**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Iran-Sanktionen**     | USA weitet Sanktionen aus, um Umgehung des UN-Waffenembargos zu stoppen. | USA erweitern Sanktionslisten gegen Iran (GDELT/zn.ua).                     | **Konsistent**: Beide Quellen bestätigen verschärfte US-Sanktionen gegen Iran. Keine Widersprüche. |\n| **Russland/Ukraine**    | Putin droht mit Vergeltung bei Sanktionen gegen russische Schiffe.      | Muratow (Friedensnobelpreisträger) sagt, Putin könne Krieg nicht mehr gewinnen, nur \"zerstören\". NZZ berichtet über Drohnenangriffe im Schwarzen Meer mit US-Warnungen an Kiew. | **Teilweise konsistent**: GROQ erwähnt Putins Drohungen, DEEPSEEK liefert Kontext (Militärstrategie, US-Einbindung). **Neue Info**: Muratows Aussage und US-Warnungen an Kiew fehlen bei GROQ. |\n| **Ukraine-Hafenbrand**  | Brand in ukrainischem Hafen mit Toten.                                   | –                                                                           | **Einseitig**: Nur GROQ berichtet. Keine Bestätigung durch DEEPSEEK. Plausibel, aber unbestätigt. |\n\n**Fazit**:\n- **Iran-Sanktionen**: Gesichert.\n- **Russland/Ukraine**: DEEPSEEK liefert **tiefere Analyse** (Muratow, US-Warnungen), während GROQ oberflächlicher bleibt.\n- **Hafenbrand**: Unbestätigt, aber nicht unwahrscheinlich.\n\n---\n\n### **2. Wirtschaft & Technologie**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **US-Notenbank (Fed)**  | Fed senkt Wirtschaftsprognose für Q2 2026 leicht.                        | –                                                                           | **Einseitig**: Nur GROQ. Keine Bestätigung durch DEEPSEEK. Plausibel, aber unbestätigt. |\n| **Cisco**               | Rekordgewinne, aber Aktienrückgang.                                      | Cisco verzeichnet Rekordergebnisse dank KI-\"Superzyklus\".                   | **Konsistent, aber nuanciert**: Beide bestätigen Rekordgewinne. GROQ erwähnt Aktienrückgang (möglicher Grund: Überbewertung trotz KI-Hype). DEEPSEEK erklärt den **KI-Bezug** (fehlt bei GROQ). |\n| **Cybersecurity**       | Warnung vor Sicherheitslücken (Johnson Controls, Victor) und Cyberangriffen auf US-Infrastruktur. | –                                                                           | **Einseitig**: Nur GROQ. Keine Bestätigung durch DEEPSEEK. Plausibel, aber unbestätigt. |\n\n**Fazit**:\n- **Cisco**: **Gesichert**, aber DEEPSEEK liefert **wichtigere Kontextinformation** (KI als Treiber).\n- **Fed & Cybersecurity**: Unbestätigt, aber nicht unwahrscheinlich.\n\n---\n\n### **3. Umwelt & Natur**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Sonnenfinsternis**    | Partielle Sonnenfinsternis in einigen Teilen der Welt.                   | –                                                                           | **Einseitig**: Nur GROQ. Keine Bestätigung durch DEEPSEEK. **Plausibilität**: Eine partielle Sonnenfinsternis ist für 2026 astronomisch möglich (z. B. [NASA-Prognose](https://eclipse.gsfc.nasa.gov/SEdecade/SEdecade2021.html)), aber kein globales Ereignis. |\n| **Tropensturm (NOAA)**  | Warnung vor tropischem Sturm im Atlantik.                                | –                                                                           | **Einseitig**: Nur GROQ. Keine Bestätigung durch DEEPSEEK. **Plausibilität**: Hoch (Atlantik-Hurrikansaison läuft typischerweise bis November). |\n| **Klimawandel**         | Bedenken über Auswirkungen auf Umwelt und Gesundheit.                   | –                                                                           | **Einseitig**: Nur GROQ. Keine neuen Erkenntnisse.                              |\n\n**Fazit**:\n- **Sonnenfinsternis/Tropensturm**: Unbestätigt, aber **astronomisch/meteorologisch plausibel**.\n- **Klimawandel**: Allgemeinplatz, keine konkreten Ereignisse.\n\n---\n\n### **4. Technologie & KI**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **KI-Diskussion**       | Diskussionen über Zukunft der KI und gesellschaftliche Auswirkungen.    | Cisco profitiert von KI-\"Superzyklus\".                                      | **Komplementär**: GROQ bleibt vage, DEEPSEEK liefert **konkreten Anwendungsfall** (Cisco). Beide bestätigen die Bedeutung von KI. |\n| **Cyberangriffe**       | Warnung vor Angriffen auf US-Infrastruktur.                              | –                                                                           | **Einseitig**: Nur GROQ. Keine Bestätigung durch DEEPSEEK.                      |\n\n**Fazit**:\n- **KI**: **Gesichert**, aber DEEPSEEK liefert **handfeste Daten** (Cisco).\n- **Cyberangriffe**: Unbestätigt, aber nicht unwahrscheinlich.\n\n---\n\n### **5. Andere Themen**\n| **Thema**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|-------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Polizeigewalt (USA)** | Mann in Minnesota erschossen (Luftgewehr-Diebstahl).                     | –                                                                           | **Einseitig**: Nur GROQ. Keine Bestätigung durch DEEPSEEK. **Plausibilität**: Solche Vorfälle sind in den USA leider häufig (vgl. [Mapping Police Violence](https://mappingpoliceviolence.org/)). |\n| **EU/Brexit**           | Diskussionen über Zukunft der europäischen Integration.                  | –                                                                           | **Einseitig**: Nur GROQ. Keine neuen Erkenntnisse.                              |\n\n**Fazit**:\n- **Polizeigewalt**: Unbestätigt, aber **statistisch plausibel**.\n- **EU/Brexit**: Allgemeinplatz, keine konkreten Entwicklungen.\n\n---\n\n### **Gesamtbewertung der Quellen**\n| **Kriterium**           | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Fazit**                                                                       |\n|-------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Tiefe**               | Oberflächlich, viele Themen angerissen.                                 | **Tiefere Analyse** (z. B. Muratow-Interview, KI-Superzyklus bei Cisco).    | DEEPSEEK liefert **mehr Kontext und Expertise**.                                |\n| **Aktualität**          | Enthält einige **unbestätigte Meldungen** (Hafenbrand, Polizeigewalt).  | Fokussiert auf **gesicherte geopolitische/wirtschaftliche Entwicklungen**.  | GROQ wirkt **teilweise spekulativ**, DEEPSEEK **seriöser**.                     |\n|",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen im Persischen Golf und Ukraine-Krieg treiben Energiepreise, was Energieaktien stützt."
-      },
-      {
-        "ticker": "CORE",
-        "name": "CoreWeave Inc.",
-        "asset": "KI-Cloud",
-        "reason": "Starke Quartalszahlen und hohe Nachfrage nach KI-Infrastruktur."
+        "reason": "Erhöhte Spannungen im Persischen Golf und Sanktionen gegen Iran treiben Ölpreise, was Energieaktien stützt."
       },
       {
         "ticker": "LMT",
         "name": "Lockheed Martin",
         "asset": "Rüstung",
-        "reason": "Anhaltende globale Konflikte erhöhen die Nachfrage nach Verteidigungstechnologie."
+        "reason": "Anhaltende Nachfrage durch Ukraine-Krieg und globale Aufrüstung."
+      },
+      {
+        "ticker": "NVDA",
+        "name": "NVIDIA",
+        "asset": "KI-Halbleiter",
+        "reason": "KI-„Superzyklus“ treibt Nachfrage nach Hochleistungs-Chips weiter an."
+      },
+      {
+        "ticker": "GLD",
+        "name": "Gold",
+        "asset": "Rohstoff",
+        "reason": "Sicherer Hafen bei geopolitischen Unsicherheiten und schwächerem US-Dollar."
+      },
+      {
+        "ticker": "SOXX",
+        "name": "iShares Semiconductor ETF",
+        "asset": "Halbleiter",
+        "reason": "TSMC/Sony-Kooperation und KI-Boom stärken Halbleitersektor."
       }
     ],
     "flop_5_sells": [
@@ -1816,29 +1800,41 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Instabilität durch Naturkatastrophen (Kolumbien) und wirtschaftliche Unsicherheiten."
+        "reason": "Geopolitische Risiken und schwächere globale Nachfrage belasten Exportländer."
       },
       {
-        "ticker": "TATASTEEL.NS",
-        "name": "Tata Steel",
-        "asset": "Stahl",
-        "reason": "Führungsstreitigkeiten bei Tata und schwache Nachfrage in Schlüsselmärkten."
+        "ticker": "FXI",
+        "name": "iShares China Large-Cap",
+        "asset": "China",
+        "reason": "Regulatorische Unsicherheit und schwache Binnenkonjunktur dämpfen Aktien."
       },
       {
-        "ticker": "EWZ",
-        "name": "iShares Brazil",
-        "asset": "Brasilien",
-        "reason": "Politische Unsicherheit und schwache Rohstoffpreise belasten die Wirtschaft."
+        "ticker": "XLU",
+        "name": "Utilities Select Sector",
+        "asset": "Versorger",
+        "reason": "Zinsrisiko und schwache Industriestimmung belasten defensive Sektoren."
+      },
+      {
+        "ticker": "TLT",
+        "name": "iShares 20+ Year Treasury Bond",
+        "asset": "Staatsanleihen",
+        "reason": "Fed-Signale für anhaltend hohe Zinsen drücken Anleihenkurse."
+      },
+      {
+        "ticker": "IYT",
+        "name": "iShares Transportation Average",
+        "asset": "Transport",
+        "reason": "Schwache globale Handelsdaten und hohe Energiekosten belasten Logistiksektor."
       }
     ]
   },
-  "timestamp": "2026-08-12T07:14:21.130227+00:00",
+  "timestamp": "2026-08-13T07:17:06.037026+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-12T07:11:55.079061+00:00",
+    "timestamp": "2026-08-13T07:14:35.463245+00:00",
     "feeds_total": 224,
     "feeds_successful": 120,
     "feeds_failed": 104,
-    "gdelt_articles": 0,
+    "gdelt_articles": 35,
     "telegram_posts": 0,
     "bakers_active": [
       "Groq (Llama-3.3)",
@@ -1849,7 +1845,7 @@
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
     "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (57 Nodes)",
+    "graph_merge_status": "SUCCESS (55 Nodes)",
     "errors": []
   },
   "delta": {
@@ -1857,14 +1853,14 @@
     "ampel_prev": "GELB",
     "ampel_now": "GELB",
     "ampel_changed": false,
-    "geoscore_prev": 75,
+    "geoscore_prev": 72,
     "geoscore_now": 72,
-    "geoscore_delta": -3,
+    "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 54,
-    "nodes_now": 57,
-    "hotspots_now": 9,
-    "summary": "Geoscore 75 → 72 (-3) · Graph-Knoten 54 → 57"
+    "nodes_prev": 57,
+    "nodes_now": 55,
+    "hotspots_now": 10,
+    "summary": "Graph-Knoten 57 → 55"
   }
 }
