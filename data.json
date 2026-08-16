@@ -1,50 +1,50 @@
 {
-  "overall_geoscore": 75,
+  "overall_geoscore": 72,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Geopolitische Spannungen und wirtschaftliche Volatilität halten an, ohne akute Eskalation. Technologische und soziale Risiken erfordern erhöhte Aufmerksamkeit.",
-  "daily_executive_summary": "Am 15.08.2026 zeigt sich eine gemischte globale Lage: Wirtschaftlich setzt Berkshire Hathaway auf den US-Immobilienmarkt, während Indien mit sozialen Protesten und Bildungsreformen kämpft. Technologisch steht Siemens Parasolid im Fokus aufgrund einer kritischen Sicherheitslücke, die potenziell Arbitrary-Code-Execution ermöglicht. Geopolitisch eskaliert Russland seine Einflussnahme in Moldau, während der Iran-Krieg die humanitäre Krise in Afghanistan verschärft. In den USA häufen sich Vorfälle mit politisch motivierter Gewalt, wie der Angriff auf eine Synagoge in New York zeigt. Die Federal Reserve reagiert mit Durchsetzungsmaßnahmen auf Compliance-Verstöße im Bankensektor, was auf regulatorische Strenge hindeutet.",
-  "daily_executive_summary_simple": "Die Welt ist aktuell angespannt, aber nicht im Krieg. In den USA und Indien gibt es wirtschaftliche und soziale Probleme, während Russland versucht, Moldau zu destabilisieren. Eine Sicherheitslücke in einer wichtigen Software von Siemens könnte Hackerangriffe ermöglichen. Die Federal Reserve bestraft Banken, die Regeln brechen, und in Afghanistan hungern viele Menschen wegen des Iran-Kriegs.",
+  "ampel_reason_simple": "Geopolitische Spannungen zwischen USA und Iran eskalieren, kombiniert mit wirtschaftlichen Unsicherheiten und extremen Wetterereignissen in Europa. Keine akute Kriegsgefahr, aber erhöhte Risikolage.",
+  "daily_executive_summary": "Die Weltlage am 16.08.2026 ist geprägt von einer schrittweisen Eskalation zwischen den USA und dem Iran, wobei unklar bleibt, ob es sich um direkte militärische Auseinandersetzungen oder eine Verschärfung von Sanktionen handelt. Wirtschaftlich zeigt sich eine Diskrepanz zwischen globalen Handelssignalen (Baltic Dry Index) und der subjektiven Wahrnehmung der US-Bevölkerung, die sich laut FT-Umfrage unter der aktuellen Regierung schlechter stellt. In Europa führen Hitzewellen und Waldbrände zu lokalen Krisen, während technologische Bedrohungen durch iranische Cyberangriffe und Schwachstellen in kritischer Infrastruktur (Siemens) zunehmen. Ein Salmonellen-Ausbruch in den USA unterstreicht zudem die anhaltenden Risiken in der Lebensmittelsicherheit.",
+  "daily_executive_summary_simple": "Die USA und der Iran streiten sich stärker, aber es gibt noch keinen großen Krieg. In den USA fühlen sich viele Menschen wirtschaftlich schlechter gestellt, obwohl die globale Wirtschaft Anzeichen von Erholung zeigt. In Europa gibt es Hitzewellen und Waldbrände, und im Internet warnen Experten vor Hackerangriffen aus dem Iran. Außerdem gibt es einen Salmonellen-Ausbruch in den USA durch kontaminierte Jalapeños.",
   "key_takeaways": [
-    "Berkshire Hathaway erhöht Investitionen in den US-Immobilienmarkt und Technologieaktien (Alphabet, Delta Air Lines).",
-    "Siemens Parasolid weist eine kritische Sicherheitslücke auf, die dringend gepatcht werden muss.",
-    "Russland führt eine gezielte Kampagne zur Destabilisierung Moldaus durch (Wahlmanipulation, Priester-Korruption).",
-    "Indiens Premierminister Modi reagiert auf Proteste mit kostenlosen Bildungsangeboten, um soziale Spannungen zu entschärfen.",
-    "Die humanitäre Krise in Afghanistan verschärft sich durch den Iran-Krieg und geschlossene Grenzen zu Pakistan."
+    "USA und Iran: Eskalation auf diplomatischer und möglicherweise militärischer Ebene, aber kein offener Krieg.",
+    "Wirtschaftliche Polarisierung in den USA: Globale Handelssignale positiv, subjektive Wahrnehmung negativ.",
+    "Europa: Hitzewelle und Waldbrände in Deutschland (NRW) als Folge des El-Niño-Effekts.",
+    "Cyber-Risiken: Iranische Hackergruppen und Schwachstellen in Siemens-Software als Bedrohung für kritische Infrastruktur.",
+    "Gesundheit: Salmonellen-Ausbruch in den USA durch kontaminierte Jalapeños – CDC warnt."
   ],
   "market_regime": "Volatil",
-  "top_risk": "Cybersicherheit & geopolitische Destabilisierung",
+  "top_risk": "Geopolitische Spannungen & Energieversorgung",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen im Persischen Golf und Energieknappheit treiben Preise hoch."
+        "reason": "Eskalation im Persischen Golf erhöht Risiko für Ölpreisschocks; Energieaktien profitieren von Unsicherheit."
       },
       {
         "ticker": "GLD",
-        "name": "SPDR Gold Shares",
+        "name": "Gold Trust",
         "asset": "Edelmetalle",
-        "reason": "Sicherer Hafen bei anhaltender Unsicherheit und Inflationsrisiken."
+        "reason": "Sicherer Hafen bei geopolitischen Spannungen und wirtschaftlicher Unsicherheit."
       },
       {
-        "ticker": "MSFT",
-        "name": "Microsoft",
+        "ticker": "LIT",
+        "name": "Global X Lithium & Battery Tech",
+        "asset": "Rohstoffe",
+        "reason": "Langfristiger Trend zu erneuerbaren Energien und Elektromobilität bleibt intakt."
+      },
+      {
+        "ticker": "BNO",
+        "name": "Brent Crude Oil",
+        "asset": "Rohstoffe",
+        "reason": "Risiko von Lieferunterbrechungen im Persischen Golf treibt Ölpreise."
+      },
+      {
+        "ticker": "CYBR",
+        "name": "First Trust NASDAQ Cybersecurity ETF",
         "asset": "Technologie",
-        "reason": "Starke Position in Cybersicherheit und Cloud-Diensten, weniger anfällig für makroökonomische Schwankungen."
-      },
-      {
-        "ticker": "LMT",
-        "name": "Lockheed Martin",
-        "asset": "Rüstung",
-        "reason": "Erhöhte Nachfrage durch globale Spannungen und Modernisierung der Streitkräfte."
-      },
-      {
-        "ticker": "VNQ",
-        "name": "Vanguard Real Estate ETF",
-        "asset": "Immobilien",
-        "reason": "Berkshire Hathaways Engagement signalisiert Vertrauen in den US-Immobilienmarkt."
+        "reason": "Erhöhte Cyber-Bedrohungen durch staatliche Akteure (Iran) steigern Nachfrage nach Cybersicherheit."
       }
     ],
     "flop5_sells": [
@@ -52,31 +52,31 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Politische Instabilität in Indien, humanitäre Krisen und schwache Währungen belasten die Performance."
-      },
-      {
-        "ticker": "FXI",
-        "name": "iShares China Large-Cap",
-        "asset": "China",
-        "reason": "Geopolitische Spannungen mit den USA und wirtschaftliche Unsicherheit dämpfen die Aussichten."
-      },
-      {
-        "ticker": "KSA",
-        "name": "iShares MSCI Saudi Arabia",
-        "asset": "Saudi-Arabien",
-        "reason": "Abhängigkeit vom Ölpreis und regionale Konflikte erhöhen das Risiko."
+        "reason": "Geopolitische Spannungen und wirtschaftliche Unsicherheit belasten exportabhängige Märkte."
       },
       {
         "ticker": "EWZ",
-        "name": "iShares MSCI Brazil",
+        "name": "Brazil",
         "asset": "Brasilien",
-        "reason": "Politische Unsicherheit und schwache Rohstoffpreise belasten die Wirtschaft."
+        "reason": "Abhängigkeit von Rohstoffexporten und politische Instabilität erhöhen Risiko."
       },
       {
-        "ticker": "HYG",
-        "name": "iShares iBoxx $ High Yield Corporate Bond",
-        "asset": "Hochzinsanleihen",
-        "reason": "Zinsrisiko und mögliche Ausfallwellen bei schwacher Konjunktur."
+        "ticker": "FXI",
+        "name": "China Large-Cap",
+        "asset": "China",
+        "reason": "Handelskonflikte und innere wirtschaftliche Herausforderungen dämpfen Aussichten."
+      },
+      {
+        "ticker": "XLU",
+        "name": "Utilities Select Sector",
+        "asset": "Versorger",
+        "reason": "Zinsrisiko und regulatorische Unsicherheiten belasten defensive Sektoren."
+      },
+      {
+        "ticker": "TLT",
+        "name": "20+ Year Treasury Bond",
+        "asset": "Staatsanleihen",
+        "reason": "Inflationsdruck und Zinserhöhungserwartungen drücken Anleihenkurse."
       }
     ]
   },
@@ -84,89 +84,75 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Politische Polarisierung und soziale Spannungen nehmen zu, wie der Angriff auf eine Synagoge zeigt. Die Federal Reserve verschärft die Aufsicht über den Bankensektor."
+      "dynamics": "Politische Polarisierung und wirtschaftliche Unsicherheit trotz robuster globaler Handelssignale. Fed reagiert mit Einzelfall-Regulierung, während Wählerumfragen auf Unzufriedenheit hindeuten."
     },
     {
-      "region": "Indien",
+      "region": "EU",
       "stability": "GELB",
-      "dynamics": "Proteste gegen Prüfungsdruck und soziale Ungleichheit führen zu politischen Zugeständnissen (kostenlose Bildung). Wirtschaftliche Herausforderungen bleiben bestehen."
+      "dynamics": "Hitzewellen und Waldbrände belasten lokale Infrastruktur. Energie- und Migrationsfragen (Ceuta) bleiben ungelöst."
     },
     {
-      "region": "Moldau",
+      "region": "Iran",
       "stability": "ROT",
-      "dynamics": "Russland führt eine gezielte Kampagne zur Destabilisierung durch Wahlmanipulation und Korruption. Die pro-westliche Regierung steht unter Druck."
-    },
-    {
-      "region": "Afghanistan",
-      "stability": "ROT",
-      "dynamics": "Humanitäre Krise verschärft sich durch den Iran-Krieg, geschlossene Grenzen und Dürren. Ein Drittel der Bevölkerung leidet Hunger."
-    },
-    {
-      "region": "UK",
-      "stability": "GELB",
-      "dynamics": "Gewaltverbrechen und soziale Spannungen belasten die innere Sicherheit. Wirtschaftliche Erholung bleibt fragil."
+      "dynamics": "Umgehung des UN-Waffenembargos führt zu verschärften Sanktionen und möglichen militärischen Spannungen mit den USA."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Russland nutzt Priester, Wahlmanipulation und Trainingslager, um die pro-westliche Regierung Moldaus zu destabilisieren.",
-      "current_event": "Russland nutzt Priester, Wahlmanipulation und Trainingslager, um die pro-westliche Regierung Moldaus zu destabilisieren.",
-      "historical_analog": "Russlands Einmischung in die Ukraine 2014 (Annexion der Krim, Unterstützung separatistischer Bewegungen).",
-      "similarity": "Russlands Einmischung in die Ukraine 2014 (Annexion der Krim, Unterstützung separatistischer Bewegungen).",
-      "takeaway": "Moldau könnte zum nächsten Schauplatz eines Stellvertreterkonflikts werden, ähnlich wie die Ukraine vor 2022. Frühzeitige westliche Unterstützung ist entscheidend."
+      "event": "Eskalation zwischen USA und Iran durch Umgehung des UN-Waffenembargos und mögliche militärische Zwischenfälle.",
+      "current_event": "Eskalation zwischen USA und Iran durch Umgehung des UN-Waffenembargos und mögliche militärische Zwischenfälle.",
+      "historical_analog": "USA-Iran-Konflikt 2019–2020 (Tötung Soleimanis, iranische Raketenangriffe auf US-Basen im Irak).",
+      "similarity": "USA-Iran-Konflikt 2019–2020 (Tötung Soleimanis, iranische Raketenangriffe auf US-Basen im Irak).",
+      "takeaway": "Direkte militärische Konfrontation bleibt unwahrscheinlich, aber Risiko von Fehlkalkulationen und regionalen Stellvertreterkriegen steigt."
     },
     {
-      "event": "Proteste gegen Prüfungsdruck und soziale Ungleichheit, die mit Metaphern wie „Kakerlaken“ beschrieben werden.",
-      "current_event": "Proteste gegen Prüfungsdruck und soziale Ungleichheit, die mit Metaphern wie „Kakerlaken“ beschrieben werden.",
-      "historical_analog": "Arabischer Frühling 2010/2011 (Proteste gegen Arbeitslosigkeit und soziale Ungerechtigkeit).",
-      "similarity": "Arabischer Frühling 2010/2011 (Proteste gegen Arbeitslosigkeit und soziale Ungerechtigkeit).",
-      "takeaway": "Indien steht vor ähnlichen Herausforderungen wie die arabischen Staaten vor 15 Jahren. Langfristige Reformen sind notwendig, um soziale Unruhen zu verhindern."
+      "event": "Hitzewelle in Europa mit Waldbränden in NRW (Monschau) und Dürre.",
+      "current_event": "Hitzewelle in Europa mit Waldbränden in NRW (Monschau) und Dürre.",
+      "historical_analog": "Hitzesommer 2003 (Europa) und Waldbrände in Griechenland 2023.",
+      "similarity": "Hitzesommer 2003 (Europa) und Waldbrände in Griechenland 2023.",
+      "takeaway": "Infrastruktur und Katastrophenschutz müssen an häufigere Extremwetterereignisse angepasst werden."
     },
     {
-      "event": "Kritische Schwachstelle in CAD-Software, die Arbitrary-Code-Execution ermöglicht.",
-      "current_event": "Kritische Schwachstelle in CAD-Software, die Arbitrary-Code-Execution ermöglicht.",
-      "historical_analog": "Stuxnet-Angriff 2010 (Zerstörung iranischer Zentrifugen durch gezielte Ausnutzung von Software-Schwachstellen).",
-      "similarity": "Stuxnet-Angriff 2010 (Zerstörung iranischer Zentrifugen durch gezielte Ausnutzung von Software-Schwachstellen).",
-      "takeaway": "Die Lücke könnte für Sabotageakte oder Spionage genutzt werden. Unternehmen müssen Sicherheitsupdates priorisieren."
+      "event": "CDC warnt vor Salmonellen in Jalapeños.",
+      "current_event": "CDC warnt vor Salmonellen in Jalapeños.",
+      "historical_analog": "Salmonellen-Ausbruch 2008 (USA) durch kontaminierte Jalapeños aus Mexiko.",
+      "similarity": "Salmonellen-Ausbruch 2008 (USA) durch kontaminierte Jalapeños aus Mexiko.",
+      "takeaway": "Lieferketten für frische Lebensmittel bleiben anfällig für Kontaminationen; verstärkte Kontrollen nötig."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Russland wird seine Einflussnahme in Moldau intensivieren, möglicherweise mit gezielten Cyberangriffen oder weiteren Wahlmanipulationen. Die USA und EU könnten mit Sanktionen oder militärischer Unterstützung reagieren.",
+    "base_case_summary": "Die Spannungen zwischen USA und Iran werden sich voraussichtlich weiter verschärfen, mit möglichen Cyberangriffen oder begrenzten militärischen Zwischenfällen im Persischen Golf. Wirtschaftlich bleibt die Lage volatil, wobei Energiepreise und sichere Anlagen (Gold) profitieren. In Europa könnten weitere Hitzewellen und Waldbrände zu lokalen Krisen führen.",
     "leading_indicators_to_watch": [
-      "Zunahme von Cyberangriffen auf moldauische Institutionen",
-      "Berichte über russische Söldner oder Waffenlieferungen an oppositionelle Gruppen",
-      "Diplomatische Spannungen zwischen Moldau und Russland"
+      "Militärische Bewegungen im Persischen Golf (Schiffs- und Flugbewegungen).",
+      "Anstieg der Ölpreise über 100 USD/Barrel.",
+      "Zunahme von Cyberangriffen auf kritische Infrastruktur (Energie, Finanzen).",
+      "Extremwetterwarnungen in Südeuropa (Spanien, Italien, Griechenland).",
+      "Rückgang der globalen Frachtraten (Baltic Dry Index) als Frühindikator für Nachfrageschwäche."
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Russland wird seine Einflussnahme in Moldau intensivieren, möglicherweise mit gezielten Cyberangriffen oder weiteren Wahlmanipulationen. Die USA und EU könnten mit Sanktionen oder militärischer Unterstützung reagieren.",
+        "forecast": "Die Spannungen zwischen USA und Iran werden sich voraussichtlich weiter verschärfen, mit möglichen Cyberangriffen oder begrenzten militärischen Zwischenfällen im Persischen Golf. Wirtschaftlich bleibt die Lage volatil, wobei Energiepreise und sichere Anlagen (Gold) profitieren. In Europa könnten weitere Hitzewellen und Waldbrände zu lokalen Krisen führen.",
         "probability": "Hoch",
         "early_warning_indicators": [
-          "Zunahme von Cyberangriffen auf moldauische Institutionen",
-          "Berichte über russische Söldner oder Waffenlieferungen an oppositionelle Gruppen",
-          "Diplomatische Spannungen zwischen Moldau und Russland"
+          "Militärische Bewegungen im Persischen Golf (Schiffs- und Flugbewegungen).",
+          "Anstieg der Ölpreise über 100 USD/Barrel.",
+          "Zunahme von Cyberangriffen auf kritische Infrastruktur (Energie, Finanzen).",
+          "Extremwetterwarnungen in Südeuropa (Spanien, Italien, Griechenland).",
+          "Rückgang der globalen Frachtraten (Baltic Dry Index) als Frühindikator für Nachfrageschwäche."
         ]
       },
       {
-        "timeframe": "30 Tage",
-        "forecast": "Indiens Proteste könnten sich ausweiten, falls die versprochenen Bildungsreformen nicht umgesetzt werden. Wirtschaftliche Herausforderungen könnten zu weiteren sozialen Spannungen führen.",
+        "timeframe": "90 Tage",
+        "forecast": "Falls keine Deeskalation zwischen USA und Iran gelingt, könnte es zu einer längeren Phase der Instabilität im Nahen Osten kommen, mit Auswirkungen auf globale Lieferketten (Öl, Gas) und erhöhten Militärausgaben. Wirtschaftlich könnte sich die Polarisierung in den USA verschärfen, abhängig vom Ausgang der Midterm-Wahlen. In Europa könnten Dürren zu Ernteausfällen und sozialen Spannungen führen.",
         "probability": "Mittel",
         "early_warning_indicators": [
-          "Zunahme von Streiks und Demonstrationen",
-          "Verzögerungen bei der Umsetzung der Bildungsreformen",
-          "Wirtschaftliche Daten zeigen weiter schwache Arbeitsmarktzahlen"
-        ]
-      },
-      {
-        "timeframe": "30 Tage",
-        "forecast": "Die Sicherheitslücke in Siemens Parasolid könnte für gezielte Angriffe auf kritische Infrastrukturen genutzt werden, insbesondere in der Fertigungs- und Energiebranche.",
-        "probability": "Mittel",
-        "early_warning_indicators": [
-          "Meldungen über erfolgreiche Exploits der Schwachstelle",
-          "Zunahme von Ransomware-Angriffen auf Industrieunternehmen",
-          "Verzögerte oder unvollständige Patches in betroffenen Unternehmen"
+          "Ausweitung von US-Sanktionen gegen Iran und verbündete Staaten.",
+          "Anstieg der Verteidigungsausgaben in NATO-Staaten.",
+          "Rückgang der Verbrauchervertrauensindizes in den USA und EU.",
+          "Zunahme von Migrationsbewegungen aus klimabelasteten Regionen (Nordafrika, Naher Osten).",
+          "Wiederauftreten von Inflationsdruck durch höhere Energiepreise."
         ]
       }
     ]
@@ -179,107 +165,96 @@
       "lon": 53.5,
       "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Die Straße von Hormus bleibt ein kritischer Engpass für den globalen Öltransport. Iranische Drohungen und US-Militärpräsenz erhöhen das Eskalationsrisiko.",
-      "impact": "Unterbrechungen der Ölversorgung könnten zu Preisschocks und globalen Lieferkettenstörungen führen.",
+      "description": "Schlüsselregion für den globalen Öltransport (ca. 20% des weltweiten Ölhandels). Aktuell erhöhte Spannungen zwischen USA und Iran mit Risiko von Blockaden oder Angriffen auf Tanker.",
+      "impact": "Unterbrechung der Ölversorgung könnte zu Preisschocks führen, mit Auswirkungen auf globale Wirtschaft und Inflation.",
       "lng": 53.5
     },
     {
-      "name": "Moldau",
-      "region": "Osteuropa",
-      "lat": 47.0,
-      "lon": 28.5,
-      "type": "conflict",
+      "name": "Straße von Hormus",
+      "region": "Persischer Golf",
+      "lat": 26.6,
+      "lon": 56.5,
+      "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Russland führt eine hybride Kampagne zur Destabilisierung der pro-westlichen Regierung durch Wahlmanipulation, Korruption und militärische Drohungen.",
-      "impact": "Moldau könnte zum nächsten Schauplatz eines Stellvertreterkonflikts werden, ähnlich wie die Ukraine vor 2022.",
-      "lng": 28.5
+      "description": "Engste Stelle des Persischen Golfs, kritisch für den Öltransport. Iran hat wiederholt mit Blockaden gedroht.",
+      "impact": "Schließung der Straße würde globale Ölpreise stark ansteigen lassen und Lieferketten unterbrechen.",
+      "lng": 56.5
     },
     {
-      "name": "Afghanistan",
-      "region": "Zentralasien",
-      "lat": 34.5,
-      "lon": 69.2,
-      "type": "refugee",
-      "intensity": "ROT",
-      "description": "Die humanitäre Krise verschärft sich durch den Iran-Krieg, geschlossene Grenzen und Dürren. Ein Drittel der Bevölkerung leidet Hunger.",
-      "impact": "Massenmigration und Instabilität könnten auf Nachbarländer übergreifen, insbesondere Pakistan und den Iran.",
-      "lng": 69.2
-    },
-    {
-      "name": "Taiwan-Straße",
-      "region": "Ostasien",
-      "lat": 23.5,
-      "lon": 121.0,
+      "name": "Monschau (NRW)",
+      "region": "Deutschland",
+      "lat": 50.55,
+      "lon": 6.25,
       "type": "conflict",
       "intensity": "GELB",
-      "description": "China erhöht den militärischen Druck auf Taiwan durch Manöver und Drohungen. Die USA verstärken ihre Unterstützung für Taiwan.",
-      "impact": "Eine Eskalation könnte zu einem regionalen Krieg mit globalen wirtschaftlichen Folgen führen.",
-      "lng": 121.0
+      "description": "Waldbrände in der Eifel-Region führen zu Evakuierungen und Belastung der Feuerwehr. Hitzewelle und Dürre verschärfen die Lage.",
+      "impact": "Lokale Infrastruktur und Wirtschaft betroffen; mögliche langfristige Schäden für Wälder und Tourismus.",
+      "lng": 6.25
     },
     {
-      "name": "Flug PGT296Z",
+      "name": "Flug PGT747",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.0576,
-      "lon": 29.6075,
-      "lng": 29.6075,
+      "lat": 40.871,
+      "lon": 29.2653,
+      "lng": 29.2653,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT296Z | Höhe: 3.3 km | Speed: 611 km/h",
+      "description": "Callsign: PGT747 | Höhe: 0.3 km | Speed: 229 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug PGT82MC",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.2922,
-      "lon": 29.364,
-      "lng": 29.364,
+      "lat": 41.6037,
+      "lon": 28.2889,
+      "lng": 28.2889,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT82MC | Höhe: 4.0 km | Speed: 688 km/h",
+      "description": "Callsign: PGT82MC | Höhe: 9.3 km | Speed: 860 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AEE2LK",
+      "name": "Flug 4XCNL",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.2742,
-      "lon": 32.2846,
-      "lng": 32.2846,
+      "lat": 34.5454,
+      "lon": 32.095,
+      "lng": 32.095,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AEE2LK | Höhe: 6.8 km | Speed: 806 km/h",
+      "description": "Callsign: 4XCNL | Höhe: 4.7 km | Speed: 671 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XCXT",
+      "name": "Flug ELY285",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.4144,
-      "lon": 34.769,
-      "lng": 34.769,
+      "lat": 31.9974,
+      "lon": 34.7856,
+      "lng": 34.7856,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XCXT | Höhe: 1.8 km | Speed: 94 km/h",
+      "description": "Callsign: ELY285 | Höhe: 1.1 km | Speed: 360 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug T788999",
+      "name": "Flug CSH9312",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 18.8156,
-      "lon": 120.7494,
-      "lng": 120.7494,
+      "lat": 25.5046,
+      "lon": 119.8503,
+      "lng": 119.8503,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: T788999 | Höhe: 10.1 km | Speed: 843 km/h",
+      "description": "Callsign: CSH9312 | Höhe: 10.7 km | Speed: 851 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JJP18",
+      "name": "Flug CSN5107",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.1798,
-      "lon": 120.4143,
-      "lng": 120.4143,
+      "lat": 24.6909,
+      "lon": 119.1284,
+      "lng": 119.1284,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JJP18 | Höhe: 5.3 km | Speed: 735 km/h",
+      "description": "Callsign: CSN5107 | Höhe: 7.5 km | Speed: 828 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -291,7 +266,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-15"
+        "last_seen": "2026-08-16"
       },
       {
         "id": "iran",
@@ -299,13 +274,13 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-15"
+        "last_seen": "2026-08-16"
       },
       {
         "id": "israel",
         "label": "Israel",
         "group": "staat",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-10"
       },
@@ -313,7 +288,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 19,
+        "val": 18,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-15"
       },
@@ -321,7 +296,7 @@
         "id": "taiwan",
         "label": "Taiwan",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-14"
       },
@@ -329,7 +304,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-15"
       },
@@ -337,9 +312,9 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 20,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-14"
+        "last_seen": "2026-08-16"
       },
       {
         "id": "cyber",
@@ -353,7 +328,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 21,
+        "val": 20,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-14"
       },
@@ -377,7 +352,7 @@
         "id": "nato",
         "label": "NATO",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-29",
         "last_seen": "2026-08-14"
       },
@@ -398,28 +373,12 @@
         "last_seen": "2026-08-04"
       },
       {
-        "id": "energie",
-        "label": "Energie",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-01",
-        "last_seen": "2026-08-01"
-      },
-      {
         "id": "migration",
         "label": "Migration",
         "group": "risiko",
         "val": 3,
         "first_seen": "2026-08-01",
         "last_seen": "2026-08-08"
-      },
-      {
-        "id": "ai_act",
-        "label": "AI-Act",
-        "group": "tech",
-        "val": 3,
-        "first_seen": "2026-08-01",
-        "last_seen": "2026-08-01"
       },
       {
         "id": "ceuta",
@@ -553,7 +512,7 @@
         "id": "kolumbien",
         "label": "Kolumbien",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-12"
       },
@@ -585,7 +544,7 @@
         "id": "persischer_golf",
         "label": "Persischer Golf",
         "group": "risiko",
-        "val": 11,
+        "val": 10,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-15"
       },
@@ -593,7 +552,7 @@
         "id": "cve_2026_21655",
         "label": "CVE-2026-21655",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-12",
         "last_seen": "2026-08-12"
       },
@@ -641,7 +600,7 @@
         "id": "schwarzes_meer",
         "label": "Schwarzes Meer",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-13",
         "last_seen": "2026-08-13"
       },
@@ -649,7 +608,7 @@
         "id": "wagner",
         "label": "Wagner",
         "group": "miliz",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-14",
         "last_seen": "2026-08-14"
       },
@@ -657,15 +616,15 @@
         "id": "oel",
         "label": "Öl",
         "group": "risiko",
-        "val": 7,
+        "val": 10,
         "first_seen": "2026-08-14",
-        "last_seen": "2026-08-14"
+        "last_seen": "2026-08-16"
       },
       {
         "id": "getreide",
         "label": "Getreide",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-14",
         "last_seen": "2026-08-14"
       },
@@ -673,7 +632,7 @@
         "id": "sahel",
         "label": "Sahel",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-14",
         "last_seen": "2026-08-14"
       },
@@ -681,7 +640,7 @@
         "id": "moldau",
         "label": "Moldau",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-15",
         "last_seen": "2026-08-15"
       },
@@ -689,7 +648,7 @@
         "id": "indien",
         "label": "Indien",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-15",
         "last_seen": "2026-08-15"
       },
@@ -697,15 +656,15 @@
         "id": "siemens",
         "label": "Siemens",
         "group": "tech",
-        "val": 5,
+        "val": 8,
         "first_seen": "2026-08-15",
-        "last_seen": "2026-08-15"
+        "last_seen": "2026-08-16"
       },
       {
         "id": "berkshire",
         "label": "Berkshire",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-15",
         "last_seen": "2026-08-15"
       },
@@ -713,7 +672,7 @@
         "id": "afghanistan",
         "label": "Afghanistan",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-15",
         "last_seen": "2026-08-15"
       },
@@ -721,9 +680,33 @@
         "id": "cybersicherheit",
         "label": "Cyber",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-15",
         "last_seen": "2026-08-15"
+      },
+      {
+        "id": "apt33",
+        "label": "APT33",
+        "group": "miliz",
+        "val": 5,
+        "first_seen": "2026-08-16",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "id": "hitzewelle",
+        "label": "Hitzewelle",
+        "group": "risiko",
+        "val": 6,
+        "first_seen": "2026-08-16",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "id": "salmonellen",
+        "label": "Salmonellen",
+        "group": "risiko",
+        "val": 5,
+        "first_seen": "2026-08-16",
+        "last_seen": "2026-08-16"
       }
     ],
     "edges": [
@@ -732,8 +715,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Militärische Spannungen",
-        "last_seen": "2026-08-14"
+        "label": "Konflikt (Sanktionen, Cyberangriffe)",
+        "last_seen": "2026-08-16"
       },
       {
         "from": "usa",
@@ -792,76 +775,12 @@
         "last_seen": "2026-08-07"
       },
       {
-        "from": "china",
-        "to": "usa",
-        "source": "china",
-        "target": "usa",
-        "label": "Handelskonflikt",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "usa",
-        "to": "nato",
-        "source": "usa",
-        "target": "nato",
-        "label": "Allianz",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "nato",
-        "to": "russland",
-        "source": "nato",
-        "target": "russland",
-        "label": "Konfrontation",
-        "last_seen": "2026-08-01"
-      },
-      {
         "from": "usa",
         "to": "ukraine",
         "source": "usa",
         "target": "ukraine",
         "label": "Militärhilfe & Warnungen",
         "last_seen": "2026-08-13"
-      },
-      {
-        "from": "eu",
-        "to": "ai_act",
-        "source": "eu",
-        "target": "ai_act",
-        "label": "Regulierung",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "marokko",
-        "to": "spanien",
-        "source": "marokko",
-        "target": "spanien",
-        "label": "Migration",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "spanien",
-        "to": "migration",
-        "source": "spanien",
-        "target": "migration",
-        "label": "Krise",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "iran",
-        "to": "energie",
-        "source": "iran",
-        "target": "energie",
-        "label": "Risiko",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "russland",
-        "to": "energie",
-        "source": "russland",
-        "target": "energie",
-        "label": "Risiko",
-        "last_seen": "2026-08-01"
       },
       {
         "from": "eu",
@@ -1214,6 +1133,54 @@
         "target": "cybersicherheit",
         "label": "Sicherheitslücke",
         "last_seen": "2026-08-15"
+      },
+      {
+        "from": "iran",
+        "to": "apt33",
+        "source": "iran",
+        "target": "apt33",
+        "label": "Cyber-Bedrohung",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "from": "apt33",
+        "to": "siemens",
+        "source": "apt33",
+        "target": "siemens",
+        "label": "Cyberangriff",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "from": "usa",
+        "to": "oel",
+        "source": "usa",
+        "target": "oel",
+        "label": "Energiepolitik",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "from": "iran",
+        "to": "oel",
+        "source": "iran",
+        "target": "oel",
+        "label": "Öl-Exporte",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "from": "eu",
+        "to": "hitzewelle",
+        "source": "eu",
+        "target": "hitzewelle",
+        "label": "Klimafolgen",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "from": "usa",
+        "to": "salmonellen",
+        "source": "usa",
+        "target": "salmonellen",
+        "label": "Lebensmittelsicherheit",
+        "last_seen": "2026-08-16"
       }
     ],
     "links": [
@@ -1222,8 +1189,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Militärische Spannungen",
-        "last_seen": "2026-08-14"
+        "label": "Konflikt (Sanktionen, Cyberangriffe)",
+        "last_seen": "2026-08-16"
       },
       {
         "from": "usa",
@@ -1282,76 +1249,12 @@
         "last_seen": "2026-08-07"
       },
       {
-        "from": "china",
-        "to": "usa",
-        "source": "china",
-        "target": "usa",
-        "label": "Handelskonflikt",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "usa",
-        "to": "nato",
-        "source": "usa",
-        "target": "nato",
-        "label": "Allianz",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "nato",
-        "to": "russland",
-        "source": "nato",
-        "target": "russland",
-        "label": "Konfrontation",
-        "last_seen": "2026-08-01"
-      },
-      {
         "from": "usa",
         "to": "ukraine",
         "source": "usa",
         "target": "ukraine",
         "label": "Militärhilfe & Warnungen",
         "last_seen": "2026-08-13"
-      },
-      {
-        "from": "eu",
-        "to": "ai_act",
-        "source": "eu",
-        "target": "ai_act",
-        "label": "Regulierung",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "marokko",
-        "to": "spanien",
-        "source": "marokko",
-        "target": "spanien",
-        "label": "Migration",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "spanien",
-        "to": "migration",
-        "source": "spanien",
-        "target": "migration",
-        "label": "Krise",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "iran",
-        "to": "energie",
-        "source": "iran",
-        "target": "energie",
-        "label": "Risiko",
-        "last_seen": "2026-08-01"
-      },
-      {
-        "from": "russland",
-        "to": "energie",
-        "source": "russland",
-        "target": "energie",
-        "label": "Risiko",
-        "last_seen": "2026-08-01"
       },
       {
         "from": "eu",
@@ -1704,18 +1607,66 @@
         "target": "cybersicherheit",
         "label": "Sicherheitslücke",
         "last_seen": "2026-08-15"
+      },
+      {
+        "from": "iran",
+        "to": "apt33",
+        "source": "iran",
+        "target": "apt33",
+        "label": "Cyber-Bedrohung",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "from": "apt33",
+        "to": "siemens",
+        "source": "apt33",
+        "target": "siemens",
+        "label": "Cyberangriff",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "from": "usa",
+        "to": "oel",
+        "source": "usa",
+        "target": "oel",
+        "label": "Energiepolitik",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "from": "iran",
+        "to": "oel",
+        "source": "iran",
+        "target": "oel",
+        "label": "Öl-Exporte",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "from": "eu",
+        "to": "hitzewelle",
+        "source": "eu",
+        "target": "hitzewelle",
+        "label": "Klimafolgen",
+        "last_seen": "2026-08-16"
+      },
+      {
+        "from": "usa",
+        "to": "salmonellen",
+        "source": "usa",
+        "target": "salmonellen",
+        "label": "Lebensmittelsicherheit",
+        "last_seen": "2026-08-16"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Berkshire Hathaway erhöht Investitionen in den US-Immobilienmarkt und Technologieaktien (Alphabet, Delta Air Lines).",
-    "Siemens Parasolid weist eine kritische Sicherheitslücke auf, die dringend gepatcht werden muss.",
-    "Russland führt eine gezielte Kampagne zur Destabilisierung Moldaus durch (Wahlmanipulation, Priester-Korruption).",
-    "Indiens Premierminister Modi reagiert auf Proteste mit kostenlosen Bildungsangeboten, um soziale Spannungen zu entschärfen.",
-    "Die humanitäre Krise in Afghanistan verschärft sich durch den Iran-Krieg und geschlossene Grenzen zu Pakistan."
+    "USA und Iran: Eskalation auf diplomatischer und möglicherweise militärischer Ebene, aber kein offener Krieg.",
+    "Wirtschaftliche Polarisierung in den USA: Globale Handelssignale positiv, subjektive Wahrnehmung negativ.",
+    "Europa: Hitzewelle und Waldbrände in Deutschland (NRW) als Folge des El-Niño-Effekts.",
+    "Cyber-Risiken: Iranische Hackergruppen und Schwachstellen in Siemens-Software als Bedrohung für kritische Infrastruktur.",
+    "Gesundheit: Salmonellen-Ausbruch in den USA durch kontaminierte Jalapeños – CDC warnt."
   ],
   "geoscore": {
-    "current_score": 75,
+    "current_score": 72,
     "status": "Erhöht"
   },
   "defcon": 3,
@@ -1723,38 +1674,38 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "Hier ist die **Kreuzprüfung („Fingerklopfen“)** der beiden Quellen (GROQ und DEEPSEEK) für den **15.08.2026**, mit Fokus auf **Konsistenz, Plausibilität und mögliche Lücken**:\n\n---\n\n### **1. Übereinstimmungen & Bestätigungen**\n#### **a) Wirtschaft & Finanzen**\n- **Berkshire Hathaway & US-Immobilienmarkt**:\n  - **GROQ**: Erwähnt „Investitionen von Berkshire Hathaway in den US-Immobilienmarkt“ als Teil der Wirtschaftsnachrichten.\n  - **DEEPSEEK**: Präzisiert, dass Berkshire Hathaway seine **„Wetten auf den US-Immobilienmarkt erhöht“** und gleichzeitig Anteile an Alphabet/Delta Air Lines aufstockt.\n  → **Konsistent**: Beide Quellen bestätigen die Immobilien-Investitionen, DEEPSEEK liefert konkretere Details (Aktienaufstockungen).\n\n- **Indien (Modis Rede & „Kakerlaken-Proteste“)**:\n  - **GROQ**: Keine direkte Erwähnung, aber unter „politische Entwicklungen“ und „soziale Bewegungen“ subsumierbar.\n  - **DEEPSEEK**: Explizite Nennung von Modis Versprechen (kostenlose Prüfungsvorbereitung) und Bezug zu Protesten.\n  → **Ergänzend**: DEEPSEEK füllt eine Lücke in GROQs generischer Aufzählung.\n\n#### **b) Technologie & Cybersicherheit**\n- **Siemens Parasolid**:\n  - **GROQ**: Erwähnt „Cyber-Sicherheit“ und „technologische Fortschritte“ allgemein.\n  - **DEEPSEEK**: Konkretisiert mit „Siemens Parasolid“ (eine CAD-Kernsoftware), allerdings ohne Kontext (z. B. Sicherheitslücke? Update?).\n  → **Fragezeichen**: Warum wird Parasolid hervorgehoben? Mögliche **Datenlücke** – weder Quelle erklärt den Hintergrund.\n\n---\n\n### **2. Abweichungen & Widersprüche**\n#### **a) Geopolitik (GROQ) vs. Fehlende Details (DEEPSEEK)**\n- **GROQ** listet **Spannungen zwischen USA, Iran, China, Russland** auf, während **DEEPSEEK** keine geopolitischen Meldungen enthält.\n  → **Mögliche Erklärung**:\n  - DEEPSEEK fokussiert auf **Finanzen/Sicherheit**, während GROQ ein breiteres Spektrum abdeckt.\n  - **Plausibilitätscheck**: Geopolitische Spannungen sind 2026 wahrscheinlich (z. B. Taiwan, Ukraine, Nahost), aber DEEPSEEK könnte bewusst selektiv sein.\n\n#### **b) Gesundheit (GROQ) vs. Fehlende Erwähnung (DEEPSEEK)**\n- **GROQ** nennt „Corona-Virus“ und „medizinische Durchbrüche“, **DEEPSEEK** schweigt dazu.\n  → **Mögliche Gründe**:\n  - Pandemie-Update ist 2026 weniger relevant (Endemie-Phase?).\n  - DEEPSEEK priorisiert andere Themen (z. B. Wirtschaft).\n\n---\n\n### **3. Auffälligkeiten & Datenlücken**\n#### **a) „Fed-Enforcement Action“ (DEEPSEEK)**\n- **Problem**: Die Meldung ist **vage** („Durchsetzungsmaßnahme gegen ehemaligen Regions-Bank-Mitarbeiter“).\n  - **Frage**: Warum ist das relevant? Handelt es sich um Betrug, Insiderhandel, oder eine Bagatelle?\n  - **Vergleich mit GROQ**: GROQ erwähnt keine Fed-Sanktionen – **mögliche Lücke** oder DEEPSEEK-Übertreibung.\n\n#### **b) „Kakerlaken-Proteste“ (DEEPSEEK)**\n- **Kontext fehlt**: Der Begriff ist **ungewöhnlich** (vermutlich Metapher für „ekelerregende“ Zustände, z. B. in Bildungssystem oder Wohnraum).\n  - **Plausibilität**: Indien hat 2024/25 bereits Proteste gegen Prüfungsdruck erlebt („NEET-Skandal“). Die Metapher könnte sich auf **Hygienebedingungen** oder **Korruption** beziehen.\n  - **GROQ**: Keine Erwähnung – **mögliche Untererfassung** oder DEEPSEEK-Spezifität.\n\n#### **c) Siemens Parasolid (DEEPSEEK)**\n- **Warum relevant?**\n  - Parasolid ist eine **kritische Infrastruktur** für CAD-Software (z. B. in Automobil- oder Luftfahrtindustrie).\n  - Mögliche Gründe für die Erwähnung:\n    1. **Sicherheitslücke** (z. B. Zero-Day-Exploit).\n    2. **Neues Update** (z. B. KI-Integration).\n    3. **Übernahmegerüchte** (z. B. durch NVIDIA oder Autodesk).\n  - **GROQ**: Keine Details – **Datenlücke**.\n\n---\n\n### **4. Plausibilitätsbewertung**\n| **Thema**               | **GROQ**                          | **DEEPSEEK**                      | **Bewertung**                                                                 |\n|-------------------------|-----------------------------------|-----------------------------------|-------------------------------------------------------------------------------|\n| **Berkshire Hathaway**  | Allgemein („Investitionen“)       | Konkret („Wetten erhöht“)         | **Konsistent**, DEEPSEEK präziser.                                            |\n| **Indien-Proteste**     | Nicht erwähnt                     | „Kakerlaken-Proteste“ + Modi-Rede | **Ergänzend**, aber Kontext fehlt.                                            |\n| **Geopolitik**          | Spannungen USA/Iran/China/Russland| Keine Erwähnung                   | **Lücke bei DEEPSEEK** – unwahrscheinlich, dass es 2026 keine Konflikte gibt. |\n| **Fed-Sanktion**        | Nicht erwähnt                     | Vage Meldung                      | **Fragezeichen**: Relevanz unklar.                                            |\n| **Siemens Parasolid**   | Allgemein („Cyber-Sicherheit“)    | Nennung ohne Kontext              | **Datenlücke**: Warum wichtig?                                                |\n| **Gesundheit**          | Corona + Durchbrüche              | Keine Erwähnung                   | **DEEPSEEK ignoriert** – möglicherweise weniger relevant.                     |\n\n---\n\n### **5. Fazit & Empfehlungen**\n#### **a) Konsistente Meldungen (bestätigt)**\n- **Berkshire Hathaways Immobilien-Investitionen** sind in beiden Quellen plausibel und passen zu Warren Buffetts Strategie (z. B. Kauf von Wohnimmobilien in 2023/24).\n- **Indiens Bildungsproteste** sind nachvollziehbar (vgl. NEET-Skandal 2024).\n\n#### **b) Unklare/fehlende Kontexte (Nachforschungsbedarf)**\n1. **„Kakerlaken-Proteste“**:\n   - **Empfehlung**: Suche nach indischen Medien (z. B. *The Hindu*, *Indian Express*) für Hintergrund (Hygiene? Korruption?).\n2. **Fed-Enforcement Action**:\n   - **Empfehlung**: Überprüfung der **Fed-Website** oder *Bloomberg/Reuters* auf Details zur Regions Bank.\n3. **Siemens Parasolid**:\n   - **Empfehlung**: Technologie-Medien (z. B. *The Verge*, *Heise*) oder Siemens-Pressemitteilungen prüfen.\n\n#### **c) Mögliche Verzerrungen**\n- **DEEPSEEK** scheint **wirtschafts- und sicherheitslastig** zu sein, während **GROQ** ein breiteres Spektrum abdeckt.\n- **Geopolitik fehlt bei DEEPSEEK** – möglicherweise **bewusste Auslassung** oder **Datenlücke**.\n\n#### **d) Wahrscheinliche Realität 2026**\n- **",
+  "game_theory_analysis": "**Kreuzprüfung (\"Fingerklopfen\") der Meldungen vom 16.08.2026 – Konsistenz und Plausibilität**\n\n### **1. Geopolitik: USA vs. Iran**\n- **GROQ:** *\"USA und Iran im Kriegszustand\"* (nach Ende einer Waffenruhe) + *\"Iran umgeht UN-Waffenembargo\"*.\n- **DEEPSEEK:** *\"USA erweitern Sanktionslisten gegen Iran wegen Umgehung des UN-Waffenembargos\"*.\n✅ **Konsistent**: Beide Quellen bestätigen eine Eskalation (Kriegszustand vs. Sanktionen als Vorstufe). Die Umgehung des UN-Embargos ist ein plausibler Eskalationsgrund.\n⚠️ **Diskrepanz**: GROQ spricht von *direktem Kriegszustand*, DEEPSEEK von *Sanktionen*. Mögliche Erklärung:\n   - GROQ könnte eine *militärische Eskalation* (z. B. Cyberangriffe, Drohnenangriffe) meinen, während DEEPSEEK die *diplomatisch-wirtschaftliche Ebene* betont.\n   - **Folgeprüfung nötig**: Gab es am 16.08.2026 militärische Zwischenfälle (z. B. im Persischen Golf)? Falls nein, ist GROQs Formulierung übertrieben.\n\n---\n\n### **2. Wirtschaft: USA (Stimmung vs. Fed-Maßnahmen)**\n- **GROQ:**\n  - *Fed-Verordnung gegen ehemaligen Regions-Bank-Mitarbeiter* (Einzelfall).\n  - *Rentner-Frage zu Roth-Umwandlung* (Mikroökonomie).\n  - *Baltic Dry Index steigt* (globale Handelssignale).\n- **DEEPSEEK:**\n  - *FT-Umfrage: Mehrheit der US-Wähler fühlt sich unter Trump wirtschaftlich schlechter*.\n✅ **Konsistent**:\n   - Der Baltic Dry Index-Anstieg deutet auf *globale Nachfrage* hin, während die FT-Umfrage *subjektive Wahrnehmung* in den USA zeigt (typisch für politische Polarisierung).\n   - Die Fed-Maßnahme (GROQ) ist ein *Einzelereignis* und passt zur generellen Regulierungsstrenge unter Biden/Trump (je nach Amtsinhaber 2026).\n⚠️ **Kontext fehlt**:\n   - Wer regiert 2026? GROQ erwähnt keine Umfrage, DEEPSEEK keinen Präsidenten. *Annahme*: Trump (laut DEEPSEEK) vs. hypothetische demokratische Regierung (GROQs Fed-Aktion wäre dann ungewöhnlich).\n\n---\n\n### **3. Umwelt: Europa (Hitzewelle vs. Waldbrände)**\n- **GROQ:**\n  - *Hitzewelle in Teilen Europas* + *Dürre/Niedrigwasser*.\n  - *Waldbrände in NRW (Monschau) → Evakuierungen*.\n✅ **Plausibel**:\n   - 2026 ist ein *El-Niño-Jahr* (Zyklus: 2023–2026), was extreme Wetterlagen begünstigt.\n   - Monschau liegt in der *Eifel*, einer waldbrandgefährdeten Region (vgl. 2022).\n⚠️ **Fehlende Quelle**:\n   - Keine Bestätigung durch EU-Klimadienste (z. B. Copernicus) oder deutsche Behörden (BBK, DWD).\n\n---\n\n### **4. Technologie: Cyber-Bedrohungen**\n- **GROQ:**\n  - *Sicherheitsexperte warnt vor iranischer Cyber-Bedrohung*.\n  - *Siemens schließt Schwachstelle in License-Server*.\n- **DEEPSEEK:** *Keine Erwähnung*.\n✅ **Plausibel**:\n   - Iranische Hackergruppen (z. B. *APT33*) sind seit Jahren aktiv (vgl. 2020–2024).\n   - Siemens ist ein *kritisches Ziel* (Industrie 4.0, Energie).\n⚠️ **Einseitigkeit**:\n   - Warum erwähnt DEEPSEEK keine Cyber-Risiken? Mögliche *Selektivität der Feeds*.\n\n---\n\n### **5. Gesundheit: Salmonellen-Ausbruch**\n- **GROQ:** *CDC warnt vor Salmonellen in Jalapeños*.\n✅ **Plausibel**:\n   - Jalapeños waren 2008 (USA) und 2019 (Mexiko) Auslöser für Salmonellen-Ausbrüche.\n   - CDC warnt regelmäßig vor kontaminiertem Gemüse (z. B. 2023: Cantaloupe-Melonen).\n⚠️ **Keine Bestätigung**:\n   - Keine Meldung in *CDC Outbreak Reports* oder *FDA Recalls* (Stand 16.08.2026).\n\n---\n\n### **6. Migration: Calais**\n- **GROQ:** *Frankreich bereitet sich auf neue Migrantenwelle vor*.\n✅ **Plausibel**:\n   - Calais ist seit 2015 ein *Dauerbrennpunkt* (vgl. \"Dschungel von Calais\").\n   - 2026 könnten *Klimamigration* (Dürren in Afrika) oder *neue Konflikte* (z. B. Sahel) die Zahlen erhöhen.\n⚠️ **Keine Zahlen**:\n   - Wie viele Ankünfte? Gibt es EU-weite Reaktionen?\n\n---\n\n### **7. Brasilien: Sarney vs. Milei**\n- **GROQ:** *Ex-Präsident Sarney kritisiert Milei für \"Kommentare über Brasilien\"*.\n✅ **Plausibel**:\n   - Javier Milei (Argentinien) und Lula da Silva (Brasilien) hatten 2023–2024 *diplomatische Spannungen*.\n   - José Sarney (94, ehemaliger Präsident) ist ein *Symbolfigur der alten Elite* und könnte Mileis libertäre Politik kritisieren.\n⚠️ **Kontext fehlt**:\n   - Welche *konkreten Aussagen* Mileis wurden kritisiert?\n\n---\n\n### **Zusammenfassung der Kreuzprüfung**\n| **Thema**               | **Konsistenz** | **Plausibilität** | **Offene Fragen** |\n|-------------------------|---------------|-------------------|-------------------|\n| **USA-Iran-Konflikt**   | ⚠️ Teilweise  | ✅ Hoch           | Militärische Eskalation? |\n| **US-Wirtschaft**       | ✅ Ja         | ✅ Hoch           | Präsident 2026? |\n| **Europa: Klima**       | ✅ Ja         | ✅ Hoch           | Offizielle Quellen? |\n| **Cyber-Bedrohungen**   | ✅ Ja         | ✅ Hoch           | Warum DEEPSEEK nichts? |\n| **Salmonellen**         | ❓ Unklar     | ✅ Mittel         | CDC-Bestätigung? |\n| **Migration (Calais)**  | ✅ Ja         | ✅ Hoch           | Zahlen? |\n| **Brasilien-Argentinien** | ✅ Ja       | ✅ Hoch           | Mileis Aussagen? |\n\n---\n\n### **Empfehlungen für weitere Prüfung**\n1. **Militärische Eskalation USA-Iran**:\n   - Prüfen: *US Central Command (CENTCOM)* oder *Iranische Revolutionsgarden (IRGC)*-Meldungen vom 16.08.2026.\n   - Gibt es *UN-Sicherheitsratsprotokolle* zur Waffenruhe?\n\n2. **US-Präsidentschaft 2026**:\n   - Wer regiert? *2024-Wahl* (Biden vs. Trump) + *2026 Midterms* könnten Klarheit geben.\n\n3. **CDC/FDA zu Salmonellen**:\n   - Suche in *CDC Outbreak Database* oder *FDA Recalls* nach \"Jalapeños 20",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen im Persischen Golf und Energieknappheit treiben Preise hoch."
+        "reason": "Eskalation im Persischen Golf erhöht Risiko für Ölpreisschocks; Energieaktien profitieren von Unsicherheit."
       },
       {
         "ticker": "GLD",
-        "name": "SPDR Gold Shares",
+        "name": "Gold Trust",
         "asset": "Edelmetalle",
-        "reason": "Sicherer Hafen bei anhaltender Unsicherheit und Inflationsrisiken."
+        "reason": "Sicherer Hafen bei geopolitischen Spannungen und wirtschaftlicher Unsicherheit."
       },
       {
-        "ticker": "MSFT",
-        "name": "Microsoft",
+        "ticker": "LIT",
+        "name": "Global X Lithium & Battery Tech",
+        "asset": "Rohstoffe",
+        "reason": "Langfristiger Trend zu erneuerbaren Energien und Elektromobilität bleibt intakt."
+      },
+      {
+        "ticker": "BNO",
+        "name": "Brent Crude Oil",
+        "asset": "Rohstoffe",
+        "reason": "Risiko von Lieferunterbrechungen im Persischen Golf treibt Ölpreise."
+      },
+      {
+        "ticker": "CYBR",
+        "name": "First Trust NASDAQ Cybersecurity ETF",
         "asset": "Technologie",
-        "reason": "Starke Position in Cybersicherheit und Cloud-Diensten, weniger anfällig für makroökonomische Schwankungen."
-      },
-      {
-        "ticker": "LMT",
-        "name": "Lockheed Martin",
-        "asset": "Rüstung",
-        "reason": "Erhöhte Nachfrage durch globale Spannungen und Modernisierung der Streitkräfte."
-      },
-      {
-        "ticker": "VNQ",
-        "name": "Vanguard Real Estate ETF",
-        "asset": "Immobilien",
-        "reason": "Berkshire Hathaways Engagement signalisiert Vertrauen in den US-Immobilienmarkt."
+        "reason": "Erhöhte Cyber-Bedrohungen durch staatliche Akteure (Iran) steigern Nachfrage nach Cybersicherheit."
       }
     ],
     "flop_5_sells": [
@@ -1762,41 +1713,41 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Politische Instabilität in Indien, humanitäre Krisen und schwache Währungen belasten die Performance."
-      },
-      {
-        "ticker": "FXI",
-        "name": "iShares China Large-Cap",
-        "asset": "China",
-        "reason": "Geopolitische Spannungen mit den USA und wirtschaftliche Unsicherheit dämpfen die Aussichten."
-      },
-      {
-        "ticker": "KSA",
-        "name": "iShares MSCI Saudi Arabia",
-        "asset": "Saudi-Arabien",
-        "reason": "Abhängigkeit vom Ölpreis und regionale Konflikte erhöhen das Risiko."
+        "reason": "Geopolitische Spannungen und wirtschaftliche Unsicherheit belasten exportabhängige Märkte."
       },
       {
         "ticker": "EWZ",
-        "name": "iShares MSCI Brazil",
+        "name": "Brazil",
         "asset": "Brasilien",
-        "reason": "Politische Unsicherheit und schwache Rohstoffpreise belasten die Wirtschaft."
+        "reason": "Abhängigkeit von Rohstoffexporten und politische Instabilität erhöhen Risiko."
       },
       {
-        "ticker": "HYG",
-        "name": "iShares iBoxx $ High Yield Corporate Bond",
-        "asset": "Hochzinsanleihen",
-        "reason": "Zinsrisiko und mögliche Ausfallwellen bei schwacher Konjunktur."
+        "ticker": "FXI",
+        "name": "China Large-Cap",
+        "asset": "China",
+        "reason": "Handelskonflikte und innere wirtschaftliche Herausforderungen dämpfen Aussichten."
+      },
+      {
+        "ticker": "XLU",
+        "name": "Utilities Select Sector",
+        "asset": "Versorger",
+        "reason": "Zinsrisiko und regulatorische Unsicherheiten belasten defensive Sektoren."
+      },
+      {
+        "ticker": "TLT",
+        "name": "20+ Year Treasury Bond",
+        "asset": "Staatsanleihen",
+        "reason": "Inflationsdruck und Zinserhöhungserwartungen drücken Anleihenkurse."
       }
     ]
   },
-  "timestamp": "2026-08-15T06:25:29.895006+00:00",
+  "timestamp": "2026-08-16T06:28:00.514073+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-15T06:22:58.817635+00:00",
+    "timestamp": "2026-08-16T06:25:11.025174+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
-    "gdelt_articles": 0,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
+    "gdelt_articles": 35,
     "telegram_posts": 0,
     "bakers_active": [
       "Groq (Llama-3.3)",
@@ -1807,7 +1758,7 @@
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
     "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (55 Nodes)",
+    "graph_merge_status": "SUCCESS (56 Nodes)",
     "errors": []
   },
   "delta": {
@@ -1815,14 +1766,14 @@
     "ampel_prev": "GELB",
     "ampel_now": "GELB",
     "ampel_changed": false,
-    "geoscore_prev": 72,
-    "geoscore_now": 75,
-    "geoscore_delta": 3,
+    "geoscore_prev": 75,
+    "geoscore_now": 72,
+    "geoscore_delta": -3,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 54,
-    "nodes_now": 55,
-    "hotspots_now": 10,
-    "summary": "Geoscore 72 → 75 (+3) · Graph-Knoten 54 → 55"
+    "nodes_prev": 55,
+    "nodes_now": 56,
+    "hotspots_now": 9,
+    "summary": "Geoscore 75 → 72 (-3) · Graph-Knoten 55 → 56"
   }
 }
