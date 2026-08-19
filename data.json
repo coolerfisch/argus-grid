@@ -2,25 +2,31 @@
   "overall_geoscore": 75,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Geopolitische Spannungen im Nahen Osten und Marktrisiken durch den Ausverkauf von US-Staatsanleihen erfordern erhöhte Wachsamkeit, ohne akute Krisenlage.",
-  "daily_executive_summary": "Die globale Lage ist angespannt, geprägt von geopolitischen Risiken und finanziellen Warnsignalen. Der Iran festigt seine harte Linie unter Ayatollah Mojtaba Khamenei, was die Gefahr einer Eskalation im Nahen Osten und potenzielle Störungen der Energielieferketten erhöht. Gleichzeitig signalisiert der historische Tiefstand eines beliebten Treasury-ETF massive Zweifel an der US-Fiskalpolitik oder Inflationserwartungen, was langfristig steigende Zinsen und Belastungen für Aktien- und Immobilienmärkte bedeuten könnte. Cyber-Sicherheit erfordert sofortiges Handeln, da eine kritische Schwachstelle im Ray-Project aktiv ausgenutzt wird. Innenpolitisch verschärft sich in den USA der Kulturkampf durch DOJ-Ermittlungen gegen Hochschulen, während in Europa regulatorische Unsicherheit durch das gekippte Social-Media-Verbot für Jugendliche in Frankreich entsteht.",
-  "daily_executive_summary_simple": "Die Weltlage ist aktuell unsicher, aber nicht akut gefährlich. Der Iran bleibt auf Konfrontationskurs, was zu Problemen bei Öl-Lieferungen führen könnte. An den Finanzmärkten gibt es Warnsignale, weil US-Staatsanleihen stark verkauft werden – das könnte später höhere Zinsen und fallende Aktienkurse bedeuten. Unternehmen müssen dringend eine Sicherheitslücke in ihrer Software schließen, um Hackerangriffe zu verhindern. In den USA und Frankreich gibt es politische Streitigkeiten, die aber vorerst keine direkten Auswirkungen auf die Wirtschaft haben.",
+  "ampel_reason_simple": "Eskalierende Konflikte im Nahen Osten und Ukraine sowie wirtschaftliche Unsicherheiten durch Handelskonflikte und Inflationsdruck erfordern erhöhte Wachsamkeit.",
+  "daily_executive_summary": "Die globale Lage ist geprägt von anhaltenden geopolitischen Spannungen und wirtschaftlichen Herausforderungen. Der Krieg zwischen den USA und dem Iran eskaliert weiter, mit israelischen Luftangriffen in Syrien und Drohungen einer totalen Blockade durch die USA. Die VAE haben den Handel mit dem Iran eingestellt, was die wirtschaftliche Isolation des Landes verstärkt. Gleichzeitig startet Russland eine Großoffensive im Donbas, während die Ukraine erste F-16-Kampfjets erhält – ein symbolischer Schritt ohne unmittelbare taktische Wende. Wirtschaftlich belastet der Ölpreisschock (Brent bei $112/Barrel) die Inflation, insbesondere im UK, wo die Bank of England den Leitzins auf 5,75 % erhöht hat. Die US-Handelspolitik bleibt protektionistisch, mit verschobenen Zöllen auf Kanada und drohenden Handelskriegen. Innenpolitisch steht in den USA eine Nachwahl in Kalifornien an, ausgelöst durch einen Skandal um den ehemaligen Abgeordneten Swalwell.",
+  "daily_executive_summary_simple": "Die Welt ist aktuell unsicher: Im Nahen Osten und in der Ukraine gibt es Kriege, die auch die Wirtschaft belasten. Öl wird teurer, und Länder wie die USA und Kanada streiten sich über Handel. In den USA gibt es eine wichtige Wahl in Kalifornien, weil ein Politiker in einen Skandal verwickelt war. Die Banken erhöhen die Zinsen, um die Inflation zu bekämpfen, aber das macht Kredite teurer.",
   "key_takeaways": [
-    "Iran bleibt auf Kriegsfuß: Ernennung von Hardlinern erhöht Risiko für Nahost-Eskalation und Energiemärkte.",
-    "US-Staatsanleihen im Ausverkauf: Tiefster Stand seit 2004 deutet auf steigende Zinsen oder Vertrauensverlust in US-Fiskalpolitik hin.",
-    "Dringender Cyber-Handlungsbedarf: Schwachstelle im Ray-Project (CVE-2025-62593) wird aktiv ausgenutzt – sofort patchen.",
-    "US-Innenpolitik: DOJ-Ermittlungen gegen Hochschulen wegen Diskriminierungsvorwürfen verschärfen Kulturkampf.",
-    "Frankreich: Verfassungsrat kippt Social-Media-Verbot für Jugendliche – Rechtsunsicherheit für Plattformen."
+    "Der Iran-Krieg eskaliert weiter, mit direkten und indirekten Angriffen (Israel, Blockadedrohungen).",
+    "Russlands Großoffensive im Donbas und die Lieferung von F-16 an die Ukraine verschärfen den Ukraine-Krieg.",
+    "Der Ölpreisschock (Brent $112) treibt die Inflation an, besonders im UK (2,9 % im Juli).",
+    "Die US-Handelspolitik bleibt protektionistisch, mit verschobenen Zöllen und drohenden Handelskriegen.",
+    "Korruptionsskandale in Kasachstan (ICIJ-Bericht) und politische Unsicherheit in den USA (Kalifornien-Nachwahl) belasten die Stabilität."
   ],
   "market_regime": "Volatil",
-  "top_risk": "Energieversorgung & Zinsrisiko",
+  "top_risk": "Energieversorgung & Lieferketten",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen im Nahen Osten erhöhen das Risiko von Lieferengpässen, was Energieaktien stützt."
+        "reason": "Hohe Ölpreise und anhaltende geopolitische Spannungen im Nahen Osten stützen den Energiesektor."
+      },
+      {
+        "ticker": "LIT",
+        "name": "Global X Lithium & Battery Tech",
+        "asset": "Rohstoffe",
+        "reason": "Nachfrage nach Batterierohstoffen bleibt hoch, trotz kurzfristiger Volatilität."
       }
     ],
     "flop5_sells": [
@@ -28,13 +34,13 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Steigende US-Zinsen und geopolitische Unsicherheiten belasten risikoreiche Anlagen wie Schwellenländeraktien."
+        "reason": "Geopolitische Risiken und Handelskonflikte belasten die Wachstumsaussichten."
       },
       {
-        "ticker": "TLT",
-        "name": "iShares 20+ Year Treasury Bond ETF",
-        "asset": "Langlaufende Staatsanleihen",
-        "reason": "Massiver Ausverkauf und Zinsrisiko machen langlaufende US-Staatsanleihen unattraktiv."
+        "ticker": "EWZ",
+        "name": "iShares MSCI Brazil",
+        "asset": "Brasilien",
+        "reason": "Politische Unsicherheit und Abhängigkeit von Rohstoffexporten erhöhen das Risiko."
       }
     ]
   },
@@ -42,52 +48,52 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "DOJ-Ermittlungen gegen Hochschulen wegen Diskriminierungsvorwürfen verschärfen innenpolitische Spannungen; Fed verstärkt Compliance-Kontrollen im Finanzsektor."
-    },
-    {
-      "region": "Frankreich",
-      "stability": "GELB",
-      "dynamics": "Verfassungsrat kippt Social-Media-Verbot für Jugendliche – Sieg für Linkspartei LFI, aber regulatorische Unsicherheit für Plattformen."
+      "dynamics": "Protektionistische Handelspolitik und politische Unsicherheit durch Nachwahlen und Skandale belasten die Stabilität."
     },
     {
       "region": "UK",
-      "stability": "GRÜN",
-      "dynamics": "Skandal um IVF-Kliniken in Nordzypern schadet Reputation des Medizintourismus, aber keine akute Systemkrise."
+      "stability": "GELB",
+      "dynamics": "Inflationsdruck durch Energiekrise und Zinserhöhungen der Bank of England belasten die Wirtschaft."
+    },
+    {
+      "region": "Ukraine",
+      "stability": "ROT",
+      "dynamics": "Kriegsrecht und russische Großoffensive im Donbas destabilisieren das Land weiter."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Tiefster Stand eines Treasury-ETF seit 2004",
-      "current_event": "Tiefster Stand eines Treasury-ETF seit 2004",
-      "historical_analog": "Taper Tantrum 2013",
-      "similarity": "Taper Tantrum 2013",
-      "takeaway": "Aktuelle Entwicklung könnte Vorbote für steigende Zinsen und Belastungen für risikoreiche Anlagen sein."
+      "event": "Aktueller Krieg zwischen USA und Iran mit Blockadedrohungen und Handelsembargos.",
+      "current_event": "Aktueller Krieg zwischen USA und Iran mit Blockadedrohungen und Handelsembargos.",
+      "historical_analog": "Ölkrise 1973 (OPEC-Embargo)",
+      "similarity": "Ölkrise 1973 (OPEC-Embargo)",
+      "takeaway": "Die Abhängigkeit von fossilen Brennstoffen und geopolitische Konflikte können zu schweren Wirtschaftskrisen führen."
     },
     {
-      "event": "Ernennung von Hardlinern durch Ayatollah Khamenei",
-      "current_event": "Ernennung von Hardlinern durch Ayatollah Khamenei",
-      "historical_analog": "Iran nach der Islamischen Revolution 1979",
-      "similarity": "Iran nach der Islamischen Revolution 1979",
-      "takeaway": "Erhöhtes Risiko für militärische Eskalationen und Energiepreisschocks."
+      "event": "Russische Großoffensive im Donbas und getrennte Familien in der Ostukraine.",
+      "current_event": "Russische Großoffensive im Donbas und getrennte Familien in der Ostukraine.",
+      "historical_analog": "Krim-Annexion 2014 und Krieg im Donbas",
+      "similarity": "Krim-Annexion 2014 und Krieg im Donbas",
+      "takeaway": "Langwierige Kriege führen zu dauerhaften humanitären und wirtschaftlichen Belastungen."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Steigende Wahrscheinlichkeit für Zinserhöhungen oder fiskalpolitische Korrekturen in den USA; mögliche Eskalation im Persischen Golf mit Auswirkungen auf Ölpreise.",
+    "base_case_summary": "Die Eskalation im Nahen Osten wird sich fortsetzen, mit möglichen direkten Konfrontationen zwischen Israel und dem Iran. Die Ölpreise bleiben hoch, was die Inflation weiter antreibt. In der Ukraine könnte die russische Offensive zu territorialen Gewinnen führen, während die Ukraine auf weitere Militärhilfen aus dem Westen angewiesen bleibt.",
     "leading_indicators_to_watch": [
-      "Weitere Ernennungen von Hardlinern im Iran",
-      "Anstieg der Renditen 10-jähriger US-Staatsanleihen über 5%",
-      "Zunahme von Cyberangriffen auf kritische Infrastruktur"
+      "Weitere israelische Luftangriffe auf iranische Stellungen in Syrien.",
+      "Ankündigung einer US-Blockade des Irans.",
+      "Steigende Flüchtlingszahlen aus der Ukraine."
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Steigende Wahrscheinlichkeit für Zinserhöhungen oder fiskalpolitische Korrekturen in den USA; mögliche Eskalation im Persischen Golf mit Auswirkungen auf Ölpreise.",
-        "probability": "Mittel",
+        "forecast": "Die Eskalation im Nahen Osten wird sich fortsetzen, mit möglichen direkten Konfrontationen zwischen Israel und dem Iran. Die Ölpreise bleiben hoch, was die Inflation weiter antreibt. In der Ukraine könnte die russische Offensive zu territorialen Gewinnen führen, während die Ukraine auf weitere Militärhilfen aus dem Westen angewiesen bleibt.",
+        "probability": "Hoch",
         "early_warning_indicators": [
-          "Weitere Ernennungen von Hardlinern im Iran",
-          "Anstieg der Renditen 10-jähriger US-Staatsanleihen über 5%",
-          "Zunahme von Cyberangriffen auf kritische Infrastruktur"
+          "Weitere israelische Luftangriffe auf iranische Stellungen in Syrien.",
+          "Ankündigung einer US-Blockade des Irans.",
+          "Steigende Flüchtlingszahlen aus der Ukraine."
         ]
       }
     ]
@@ -100,74 +106,85 @@
       "lon": 53.5,
       "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Iranische Hardliner-Politik und militärische Präsenz in der Straße von Hormus erhöhen das Risiko von Blockaden oder Angriffen auf Öltanker.",
-      "impact": "Potenzielle Unterbrechung der globalen Ölversorgung mit Preisschocks und wirtschaftlichen Folgen.",
+      "description": "Kritischer Schifffahrtsweg mit hoher militärischer Präsenz der USA und Irans. Blockadedrohungen und Handelsembargos gefährden die globale Ölversorgung.",
+      "impact": "Hohe Ölpreise und wirtschaftliche Verwerfungen weltweit.",
       "lng": 53.5
     },
     {
-      "name": "Flug PGT41LW",
+      "name": "Donbas (Ukraine)",
+      "region": "Ostukraine",
+      "lat": 48.3,
+      "lon": 38.0,
+      "type": "conflict",
+      "intensity": "ROT",
+      "description": "Russische Großoffensive im Donbas mit schweren Kämpfen und humanitären Krisen.",
+      "impact": "Destabilisierung der Ukraine und mögliche weitere Flüchtlingsbewegungen.",
+      "lng": 38.0
+    },
+    {
+      "name": "Flug WZZ5654",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.1499,
-      "lon": 40.6698,
-      "lng": 40.6698,
+      "lat": 44.0216,
+      "lon": 26.5346,
+      "lng": 26.5346,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT41LW | Höhe: 1.7 km | Speed: 488 km/h",
+      "description": "Callsign: WZZ5654 | Höhe: 10.7 km | Speed: 905 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT89N",
+      "name": "Flug MGH391",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.0446,
-      "lon": 39.6295,
-      "lng": 39.6295,
+      "lat": 41.6743,
+      "lon": 28.1929,
+      "lng": 28.1929,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT89N | Höhe: 0.8 km | Speed: 324 km/h",
+      "description": "Callsign: MGH391 | Höhe: 11.0 km | Speed: 815 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XCDE",
+      "name": "Flug N805XA",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.8839,
-      "lon": 35.0667,
-      "lng": 35.0667,
+      "lat": 26.6093,
+      "lon": 49.8261,
+      "lng": 49.8261,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XCDE | Höhe: 0.5 km | Speed: 184 km/h",
+      "description": "Callsign: N805XA | Höhe: 3.7 km | Speed: 473 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JAV281",
+      "name": "Flug AEE2LK",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.6415,
-      "lon": 36.5753,
-      "lng": 36.5753,
+      "lat": 35.15,
+      "lon": 32.6361,
+      "lng": 32.6361,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JAV281 | Höhe: 8.3 km | Speed: 785 km/h",
+      "description": "Callsign: AEE2LK | Höhe: 4.9 km | Speed: 731 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug GIA875",
+      "name": "Flug THA643",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 16.2141,
-      "lon": 123.5088,
-      "lng": 123.5088,
+      "lat": 22.0783,
+      "lon": 120.7768,
+      "lng": 120.7768,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: GIA875 | Höhe: 12.2 km | Speed: 850 km/h",
+      "description": "Callsign: THA643 | Höhe: 11.6 km | Speed: 932 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "ADS-B Signal AC148F",
+      "name": "Flug JJP18",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.3245,
-      "lon": 117.0161,
-      "lng": 117.0161,
+      "lat": 23.8258,
+      "lon": 120.756,
+      "lng": 120.756,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: Unbekannt | Höhe: 10.4 km | Speed: 861 km/h",
+      "description": "Callsign: JJP18 | Höhe: 8.3 km | Speed: 774 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -179,7 +196,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-18"
+        "last_seen": "2026-08-19"
       },
       {
         "id": "iran",
@@ -187,21 +204,21 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-18"
+        "last_seen": "2026-08-19"
       },
       {
         "id": "israel",
         "label": "Israel",
         "group": "staat",
-        "val": 3,
+        "val": 6,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-10"
+        "last_seen": "2026-08-19"
       },
       {
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 16,
+        "val": 15,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-15"
       },
@@ -217,15 +234,15 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 19,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-15"
+        "last_seen": "2026-08-19"
       },
       {
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 20,
+        "val": 19,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-16"
       },
@@ -233,15 +250,15 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 18,
+        "val": 21,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-14"
+        "last_seen": "2026-08-19"
       },
       {
         "id": "fed",
         "label": "Fed",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-17"
       },
@@ -260,22 +277,6 @@
         "val": 3,
         "first_seen": "2026-07-29",
         "last_seen": "2026-08-14"
-      },
-      {
-        "id": "marokko",
-        "label": "Marokko",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-08-01",
-        "last_seen": "2026-08-04"
-      },
-      {
-        "id": "spanien",
-        "label": "Spanien",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-08-01",
-        "last_seen": "2026-08-04"
       },
       {
         "id": "migration",
@@ -300,22 +301,6 @@
         "val": 3,
         "first_seen": "2026-08-03",
         "last_seen": "2026-08-08"
-      },
-      {
-        "id": "ceuta_krise",
-        "label": "Ceuta-Krise",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-04",
-        "last_seen": "2026-08-04"
-      },
-      {
-        "id": "prologis_segro",
-        "label": "Prologis-Segro",
-        "group": "organisation",
-        "val": 3,
-        "first_seen": "2026-08-04",
-        "last_seen": "2026-08-04"
       },
       {
         "id": "thermo_fisher",
@@ -361,7 +346,7 @@
         "id": "hamas",
         "label": "Hamas",
         "group": "miliz",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-10",
         "last_seen": "2026-08-17"
       },
@@ -417,7 +402,7 @@
         "id": "persischer_golf",
         "label": "Persischer Golf",
         "group": "risiko",
-        "val": 8,
+        "val": 7,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-15"
       },
@@ -489,7 +474,7 @@
         "id": "oel",
         "label": "Öl",
         "group": "risiko",
-        "val": 12,
+        "val": 11,
         "first_seen": "2026-08-14",
         "last_seen": "2026-08-17"
       },
@@ -529,7 +514,7 @@
         "id": "siemens",
         "label": "Siemens",
         "group": "tech",
-        "val": 9,
+        "val": 8,
         "first_seen": "2026-08-15",
         "last_seen": "2026-08-17"
       },
@@ -569,7 +554,7 @@
         "id": "hitzewelle",
         "label": "Hitzewelle",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-16",
         "last_seen": "2026-08-16"
       },
@@ -585,7 +570,7 @@
         "id": "ray_project",
         "label": "Ray-Projekt",
         "group": "risiko",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-08-18",
         "last_seen": "2026-08-18"
       },
@@ -593,7 +578,7 @@
         "id": "treasury_etf",
         "label": "Treasury-ETF",
         "group": "risiko",
-        "val": 8,
+        "val": 7,
         "first_seen": "2026-08-18",
         "last_seen": "2026-08-18"
       },
@@ -601,9 +586,49 @@
         "id": "lfi",
         "label": "LFI",
         "group": "organisation",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-18",
         "last_seen": "2026-08-18"
+      },
+      {
+        "id": "oelpreis",
+        "label": "Ölpreis",
+        "group": "risiko",
+        "val": 5,
+        "first_seen": "2026-08-19",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "id": "vae",
+        "label": "VAE",
+        "group": "staat",
+        "val": 5,
+        "first_seen": "2026-08-19",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "id": "uk",
+        "label": "UK",
+        "group": "staat",
+        "val": 5,
+        "first_seen": "2026-08-19",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "id": "boe",
+        "label": "BoE",
+        "group": "organisation",
+        "val": 5,
+        "first_seen": "2026-08-19",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "id": "trump",
+        "label": "Trump",
+        "group": "actor",
+        "val": 5,
+        "first_seen": "2026-08-19",
+        "last_seen": "2026-08-19"
       }
     ],
     "edges": [
@@ -612,8 +637,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Konflikt",
-        "last_seen": "2026-08-18"
+        "label": "Krieg",
+        "last_seen": "2026-08-19"
       },
       {
         "from": "usa",
@@ -629,7 +654,7 @@
         "source": "russland",
         "target": "ukraine",
         "label": "Krieg",
-        "last_seen": "2026-08-13"
+        "last_seen": "2026-08-19"
       },
       {
         "from": "fed",
@@ -638,14 +663,6 @@
         "target": "usa",
         "label": "Zinspolitik",
         "last_seen": "2026-08-17"
-      },
-      {
-        "from": "usa",
-        "to": "eu",
-        "source": "usa",
-        "target": "eu",
-        "label": "Handel & Regulierung",
-        "last_seen": "2026-08-04"
       },
       {
         "from": "ukraine",
@@ -660,48 +677,8 @@
         "to": "ukraine",
         "source": "usa",
         "target": "ukraine",
-        "label": "Militärhilfe & Warnungen",
-        "last_seen": "2026-08-13"
-      },
-      {
-        "from": "spanien",
-        "to": "marokko",
-        "source": "spanien",
-        "target": "marokko",
-        "label": "Migrationskonflikt",
-        "last_seen": "2026-08-04"
-      },
-      {
-        "from": "spanien",
-        "to": "ceuta_krise",
-        "source": "spanien",
-        "target": "ceuta_krise",
-        "label": "Brennpunkt",
-        "last_seen": "2026-08-04"
-      },
-      {
-        "from": "eu",
-        "to": "ceuta_krise",
-        "source": "eu",
-        "target": "ceuta_krise",
-        "label": "Politische Reaktion",
-        "last_seen": "2026-08-04"
-      },
-      {
-        "from": "usa",
-        "to": "cyber_risiko",
-        "source": "usa",
-        "target": "cyber_risiko",
-        "label": "Bedrohung",
-        "last_seen": "2026-08-04"
-      },
-      {
-        "from": "prologis_segro",
-        "to": "eu",
-        "source": "prologis_segro",
-        "target": "eu",
-        "label": "Wirtschaftliche Konsolidierung",
-        "last_seen": "2026-08-04"
+        "label": "Militärhilfe",
+        "last_seen": "2026-08-19"
       },
       {
         "from": "usa",
@@ -1022,6 +999,70 @@
         "target": "usa",
         "label": "Cyber-Risiko",
         "last_seen": "2026-08-18"
+      },
+      {
+        "from": "iran",
+        "to": "israel",
+        "source": "iran",
+        "target": "israel",
+        "label": "Konflikt",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "usa",
+        "to": "israel",
+        "source": "usa",
+        "target": "israel",
+        "label": "Allianz",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "iran",
+        "to": "oelpreis",
+        "source": "iran",
+        "target": "oelpreis",
+        "label": "Angebotskrise",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "vae",
+        "to": "iran",
+        "source": "vae",
+        "target": "iran",
+        "label": "Handelsembargo",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "oelpreis",
+        "to": "uk",
+        "source": "oelpreis",
+        "target": "uk",
+        "label": "Inflation",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "boe",
+        "to": "uk",
+        "source": "boe",
+        "target": "uk",
+        "label": "Zinspolitik",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "trump",
+        "to": "iran",
+        "source": "trump",
+        "target": "iran",
+        "label": "Blockadedrohung",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "trump",
+        "to": "vae",
+        "source": "trump",
+        "target": "vae",
+        "label": "Handelspolitik",
+        "last_seen": "2026-08-19"
       }
     ],
     "links": [
@@ -1030,8 +1071,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Konflikt",
-        "last_seen": "2026-08-18"
+        "label": "Krieg",
+        "last_seen": "2026-08-19"
       },
       {
         "from": "usa",
@@ -1047,7 +1088,7 @@
         "source": "russland",
         "target": "ukraine",
         "label": "Krieg",
-        "last_seen": "2026-08-13"
+        "last_seen": "2026-08-19"
       },
       {
         "from": "fed",
@@ -1056,14 +1097,6 @@
         "target": "usa",
         "label": "Zinspolitik",
         "last_seen": "2026-08-17"
-      },
-      {
-        "from": "usa",
-        "to": "eu",
-        "source": "usa",
-        "target": "eu",
-        "label": "Handel & Regulierung",
-        "last_seen": "2026-08-04"
       },
       {
         "from": "ukraine",
@@ -1078,48 +1111,8 @@
         "to": "ukraine",
         "source": "usa",
         "target": "ukraine",
-        "label": "Militärhilfe & Warnungen",
-        "last_seen": "2026-08-13"
-      },
-      {
-        "from": "spanien",
-        "to": "marokko",
-        "source": "spanien",
-        "target": "marokko",
-        "label": "Migrationskonflikt",
-        "last_seen": "2026-08-04"
-      },
-      {
-        "from": "spanien",
-        "to": "ceuta_krise",
-        "source": "spanien",
-        "target": "ceuta_krise",
-        "label": "Brennpunkt",
-        "last_seen": "2026-08-04"
-      },
-      {
-        "from": "eu",
-        "to": "ceuta_krise",
-        "source": "eu",
-        "target": "ceuta_krise",
-        "label": "Politische Reaktion",
-        "last_seen": "2026-08-04"
-      },
-      {
-        "from": "usa",
-        "to": "cyber_risiko",
-        "source": "usa",
-        "target": "cyber_risiko",
-        "label": "Bedrohung",
-        "last_seen": "2026-08-04"
-      },
-      {
-        "from": "prologis_segro",
-        "to": "eu",
-        "source": "prologis_segro",
-        "target": "eu",
-        "label": "Wirtschaftliche Konsolidierung",
-        "last_seen": "2026-08-04"
+        "label": "Militärhilfe",
+        "last_seen": "2026-08-19"
       },
       {
         "from": "usa",
@@ -1440,15 +1433,79 @@
         "target": "usa",
         "label": "Cyber-Risiko",
         "last_seen": "2026-08-18"
+      },
+      {
+        "from": "iran",
+        "to": "israel",
+        "source": "iran",
+        "target": "israel",
+        "label": "Konflikt",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "usa",
+        "to": "israel",
+        "source": "usa",
+        "target": "israel",
+        "label": "Allianz",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "iran",
+        "to": "oelpreis",
+        "source": "iran",
+        "target": "oelpreis",
+        "label": "Angebotskrise",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "vae",
+        "to": "iran",
+        "source": "vae",
+        "target": "iran",
+        "label": "Handelsembargo",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "oelpreis",
+        "to": "uk",
+        "source": "oelpreis",
+        "target": "uk",
+        "label": "Inflation",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "boe",
+        "to": "uk",
+        "source": "boe",
+        "target": "uk",
+        "label": "Zinspolitik",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "trump",
+        "to": "iran",
+        "source": "trump",
+        "target": "iran",
+        "label": "Blockadedrohung",
+        "last_seen": "2026-08-19"
+      },
+      {
+        "from": "trump",
+        "to": "vae",
+        "source": "trump",
+        "target": "vae",
+        "label": "Handelspolitik",
+        "last_seen": "2026-08-19"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Iran bleibt auf Kriegsfuß: Ernennung von Hardlinern erhöht Risiko für Nahost-Eskalation und Energiemärkte.",
-    "US-Staatsanleihen im Ausverkauf: Tiefster Stand seit 2004 deutet auf steigende Zinsen oder Vertrauensverlust in US-Fiskalpolitik hin.",
-    "Dringender Cyber-Handlungsbedarf: Schwachstelle im Ray-Project (CVE-2025-62593) wird aktiv ausgenutzt – sofort patchen.",
-    "US-Innenpolitik: DOJ-Ermittlungen gegen Hochschulen wegen Diskriminierungsvorwürfen verschärfen Kulturkampf.",
-    "Frankreich: Verfassungsrat kippt Social-Media-Verbot für Jugendliche – Rechtsunsicherheit für Plattformen."
+    "Der Iran-Krieg eskaliert weiter, mit direkten und indirekten Angriffen (Israel, Blockadedrohungen).",
+    "Russlands Großoffensive im Donbas und die Lieferung von F-16 an die Ukraine verschärfen den Ukraine-Krieg.",
+    "Der Ölpreisschock (Brent $112) treibt die Inflation an, besonders im UK (2,9 % im Juli).",
+    "Die US-Handelspolitik bleibt protektionistisch, mit verschobenen Zöllen und drohenden Handelskriegen.",
+    "Korruptionsskandale in Kasachstan (ICIJ-Bericht) und politische Unsicherheit in den USA (Kalifornien-Nachwahl) belasten die Stabilität."
   ],
   "geoscore": {
     "current_score": 75,
@@ -1459,14 +1516,20 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**ZUSAMMENFASSUNG DER NACHRICHTENLAGE FÜR DEN 18.08.2026 (FOKUS: GEOPOLITIK, MARKT, RISIKEN)**\n\n**1. Geopolitische & Sicherheitslage (Hochrisiko):**\n*   **Iran:** Der Oberste Führer (Ayatollah Mojtaba Khamenei) ernennt Hardliner für Schlüsselpositionen. Signal: Der Iran bleibt auf Kriegsfuß, innere Opposition wird unterdrückt. **Risiko:** Eskalation im Nahen Osten, mögliche Störungen der Energielieferketten.\n*   **USA/Rechtsstaatlichkeit:** Das DOJ ermittelt gegen das College of William & Mary wegen angeblicher Diskriminierung (Bevorzugung von Minderheiten bei Stipendien). **Risiko:** Verschärfung des innenpolitischen Kulturkampfs, Auswirkungen auf Hochschulzulassungen.\n\n**2. Finanzmärkte & Wirtschaft (Marktrisiko):**\n*   **US-Staatsanleihen:** Der beliebteste Treasury-ETF fällt auf den tiefsten Stand seit 2004 (über 20 Jahre). **Signal:** Massiver Ausverkauf bei langlaufenden US-Staatsanleihen. **Risiko:** Steigende Zinsen, Inflationssorgen oder Zweifel an der US-Fiskalpolitik. Für Privatanleger ist dies ein klares Warnsignal.\n*   **US-Regulierungsaktivität:** Die US-Notenbank (Fed) verhängt eine Strafmaßnahme gegen einen ehemaligen Mitarbeiter der Regions Bank. (Geringe Marktwirkung, aber Signal für verstärkte Compliance-Kontrollen).\n\n**3. Cyber-Sicherheit (Unmittelbare technische Bedrohung):**\n*   **CISA-Warnung:** Eine neue, aktiv ausgenutzte Schwachstelle (CVE-2025-62593) im **Ray-Project (Code Injection)** wurde in den KEV-Katalog aufgenommen. **Handlungsbedarf:** Systeme mit Ray (verteiltes Computing/Python) sofort patchen oder isolieren. Dies ist eine bekannte Angriffsmethode.\n\n**4. Europa & Regulierung:**\n*   **Frankreich:** Der Verfassungsrat kippt das Social-Media-Verbot für Jugendliche (unter 15). Begründung: Meinungsfreiheit. **Auswirkung:** Rechtsunsicherheit für Plattformen, Sieg für die Linkspartei LFI vor den Wahlen.\n*   **UK/Gesundheitswesen:** Skandal um IVF-Kliniken in Nordzypern: Eltern wurden getäuscht, falsche Spender verwendet. **Risiko:** Reputationsschaden für den Medizintourismus, rechtliche Folgen für Kliniken.\n\n**5. Wetter & Katastrophen (Geringes Risiko):**\n*   **Atlantik:** Keine tropische Wirbelsturmbildung in den nächsten 7 Tagen erwartet.\n\n---\n\n**ZUSAMMENFASSUNG FÜR DEN ENTSCHEIDER:**\nDie Lage ist **angespannt**. Der Iran signalisiert weitere Konfrontationsbereitschaft. **Der Einbruch des Treasury-ETF ist das wichtigste Marktsignal** – er deutet auf steigende langfristige Zinsen hin, was Aktienmärkte und Immobilien belasten könnte. **Sofortiges Handeln ist im Cyber-Bereich erforderlich** (Ray-Projekt-Patch). Die US-Innenpolitik (DOJ-Ermittlung) könnte neue Unsicherheit an den Universitäten schaffen.\n\n---\n\n**ANHANG: FEED-DETAILS**\n\n**Ticker 1 (CEF):**\n*   **Quelle:** Wall Street Journal (MarketWatch Alt)\n*   **Titel:** \"Why this popular Treasury-bond ETF is trading at its lowest since 2004\"\n*   **Hinweis:** Siehe Zusammenfassung unter 2.\n\n**Ticker 2 (Sicherheit):**\n*   **Quelle:** CISA Cyber Alerts\n*   **Schwachstelle:** CVE-2025-62593 (Ray-Project Code Injection)\n*   **Aktion:** Patch dringend empfohlen.\n\n**Ticker 3 (International):**\n*   **Quelle:** NYT World\n*   **Titel:** \"Iran’s Supreme Leader Signals Intention to Keep Country on a War Footing\"\n*   **Hinweis:** Siehe Geopolitik.\n\n---\n\n**DISCLAIMER:** Diese Zusammenfassung basiert ausschließlich auf den übermittelten Feed-Daten. Sie stellt keine Anlageberatung dar. Die Meldungen sind teils unvollständig (z. B. Feeds ohne Details). Verifizieren Sie kritische Informationen vor Entscheidungen über offizielle Primärquellen.\n\nMACRO:\nHier ist eine KI-generierte Zusammenfassung der wichtigsten Informationen aus den verschiedenen Feeds:\n\n### Finanz- und Wirtschaftsnachrichten\n- **Wall Street Journal (MarketWatch)**: Ein häufig gehandelter ETF, der die Performance des US Treasury-Marktes verfolgt, fiel auf sein niedrigstes Niveau seit über 20 Jahren.\n- **Financial Times**: Der Finanzdienstleister Financial Times veranstaltet ein Quiz, bei dem Teileiner einen T-Shirt-Premier gewinnen kann.\n\n### Politik und Gesellschaft\n- **Fox News**: Das Justizministerium der USA untersucht, ob die College of William & Mary Stipendien und Programme zugunsten von Minderheiten vergeben, was gegen den Titel VI verstieße.\n- **NZZ International**: Frankreichs Verfassungsrat hat das von Macron initiierte Verbot sozialer Medien für Jugendliche gestoppt, nach einer Klage der linksradikalen Partei LFI, die die Meinungsfreiheit als Grund angeführt hat.\n\n### Internationale Nachrichten\n- **New York Times**: Irans Oberster Führer Ayatollah Mojtaba Khamenei ernannte harte Loyalisten auf wichtige Positionen, was darauf hindeutet, dass er das Land auf Kriegsbasis halten möchte und interne Widerstände unterdrücken will.\n- **BBC World News**: Angestellte von IVF-Kliniken in Nordzypern werden verdächtigt, britischen Eltern Informationen über Sperma- und Eizellspender zu verheimlichen, was dazu führen könnte, dass mehrere Kinder von unbekannten Spendeuren gezeugt wurden.\n\n### Natur- und Wetternachrichten\n- **NOAA National Hurricane Center**: Im Atlantik ist in den nächsten sieben Tagen keine tropische Zyklogenbildung zu erwarten.\n\n### Cyber- und Infrastruktur\n- **CISA Cyber Alerts**: CISA hat eine neue, aktuell genutzte Schwachstelle (CVE-2025-62593, Ray-Project Ray Code Injection) zu seinem Katalog bekannt ausgenutzter Schwachstellen hinzugefügt.\n\n### Gesundheit\n- **CDC Health Updates**: Daten der CDC zeigen, dass die Impfraten bei Kindergartenkindern weiter hoch sind.\n\n### Investigative Berichterstattung\n- **ICIJ (Panama/Pandora Papers)**: Kasachstan wirft internationalen Ölfirmen Korruption bei Verträgen in Höhe von 10,7 Milliarden Dollar vor, was zu Verzögerungen bei einem Schlüsselprojekt geführt hat.\n\n### Zentralbank\n- **Federal Reserve Press**: Die Federal Reserve hat eine durchsetzungsmäßige Maßnahme gegen einen ehemaligen Mitarbeiter von Regions Bank verhängt.\n\nDiese Zusammenfassung bietet einen Überblick über die wichtigsten Entwicklungen in verschiedenen Bereichen.",
+  "game_theory_analysis": "Hier die **Kreuzprüfung (\"Fingerklopfen\")** der drei Quellen (GROQ, DEEPSEEK, MACRO) für den **19.08.2026** – mit Fokus auf **Konsistenz, Widersprüche und Ergänzungen**:\n\n---\n\n### **1. Geopolitik & Sicherheit**\n#### **Iran-Krieg (USA vs. Iran)**\n- **DEEPSEEK**:\n  - USA/Iran seit **Februar 2026 im Krieg**, Waffenruhe von Trump im Juli beendet.\n  - **VAE setzen Handel mit Iran aus** → wirtschaftliche Isolation.\n- **GROQ**:\n  - Bestätigt **Kriegszustand seit Februar 2026**, aber keine Details zur Waffenruhe.\n  - **Israelische Luftangriffe auf iranische Stellungen in Syrien** (nicht in DEEPSEEK erwähnt).\n  - **Trump droht mit \"totaler Blockade\"** des Irans (ergänzt DEEPSEEKs Handelsembargo der VAE).\n- **MACRO**:\n  - **Keine direkte Erwähnung des Iran-Kriegs**, aber:\n    - **\"Eskalation im Nahen Osten\"** (allgemein) → passt zu DEEPSEEK/GROQ.\n    - **Ölpreisschock** (Brent bei **$112/Barrel**) → Folge des Iran-Konflikts (DEEPSEEK: UK-Inflation durch Energieschock).\n\n**→ Konsistent, aber GROQ liefert zusätzliche Eskalationsdetails (Israel, Blockade).**\n\n#### **Ukraine-Krieg**\n- **DEEPSEEK**:\n  - Ehemaliger Verteidigungsminister fordert **Präsidentschaftswahl** trotz Kriegsrecht.\n  - NYT-Reportage über **getrennte Familien im Osten**.\n- **GROQ**:\n  - **Russland startet Großoffensive im Donbas** (nicht in DEEPSEEK).\n  - **Ukraine erhält erste F-16-Kampfjets** (symbolische Lieferung, aber keine taktische Wende).\n- **MACRO**:\n  - **Keine direkten Updates**, aber:\n    - **\"Anhaltende Kämpfe im Donbas\"** → passt zu GROQs Großoffensive.\n    - **EU erwägt weitere Militärhilfen** (ergänzt GROQs F-16-Lieferung).\n\n**→ DEEPSEEK fokussiert auf Innenpolitik, GROQ auf Militärlage. MACRO bestätigt Eskalation.**\n\n---\n\n### **2. Wirtschaft & Finanzen**\n#### **UK-Inflation**\n- **DEEPSEEK**:\n  - **2,9 % im Juli** (durch Energieschock Nahost).\n- **MACRO**:\n  - **Brent-Öl bei $112** → erklärt Inflationsdruck.\n  - **Bank of England (BoE) erhöht Leitzins auf 5,75 %** (Reaktion auf Inflation).\n- **GROQ**:\n  - **Keine direkte Erwähnung**, aber:\n    - **Trump verschiebt Zölle auf Kanada** → könnte indirekt UK-Handel beeinflussen.\n\n**→ DEEPSEEK + MACRO ergänzen sich perfekt (Ursache + Reaktion).**\n\n#### **US-Handelspolitik**\n- **DEEPSEEK**:\n  - **50 % Zölle auf kanadische Waren verschoben**.\n- **GROQ**:\n  - **Trump droht mit \"Handelskrieg\" gegen Kanada** (konkreter als DEEPSEEK).\n  - **Mexiko verhängt Gegenmaßnahmen** (nicht in DEEPSEEK).\n- **MACRO**:\n  - **US-Handelsdefizit steigt auf Rekordhoch** → passt zu protektionistischer Politik.\n\n**→ GROQ liefert Eskalationsdetails, MACRO den makroökonomischen Kontext.**\n\n#### **Korruption (Kasachstan)**\n- **DEEPSEEK**:\n  - **ICIJ-Bericht: Ölkonzerne verursachen $10,7 Mrd. Schaden**.\n- **GROQ/MACRO**:\n  - **Keine Erwähnung** → DEEPSEEK exklusiv.\n\n---\n\n### **3. Innenpolitik (USA)**\n#### **Kalifornien-Nachwahl (14. Distrikt)**\n- **DEEPSEEK**:\n  - **Aisha Wahab vs. Melissa Hernandez** (Nachfolge Swalwell).\n- **GROQ**:\n  - **Swalwell trat nach \"massivem Skandal\" zurück** (keine Details).\n  - **Wahl noch nicht entschieden** (wie DEEPSEEK).\n- **MACRO**:\n  - **Keine Erwähnung**.\n\n**→ DEEPSEEK + GROQ ergänzen sich (Kandidaten + Hintergrund).**\n\n---\n\n### **4. Technologie & Cybersicherheit**\n#### **Siemens-Schwachstelle**\n- **DEEPSEEK**:\n  - **Stack-Overflow in Simcenter Nastran** (CSAF-Warnung).\n- **GROQ/MACRO**:\n  - **Keine Erwähnung** → DEEPSEEK exklusiv.\n\n---\n\n### **5. Wetter (Atlantik)**\n- **DEEPSEEK**:\n  - **Keine tropischen Wirbelstürme in den nächsten 7 Tagen**.\n- **MACRO**:\n  - **Keine Erwähnung** → DEEPSEEK exklusiv.\n\n---\n\n### **Zusammenfassung der Kreuzprüfung**\n| **Thema**               | **DEEPSEEK**                          | **GROQ**                              | **MACRO**                          | **Bewertung**                     |\n|-------------------------|---------------------------------------|---------------------------------------|------------------------------------|-----------------------------------|\n| **Iran-Krieg**          | Waffenruhe beendet, VAE-Handelsstopp  | Israel-Angriffe, Blockade-Drohung     | Ölpreisschock ($112)               | **Konsistent + ergänzend**        |\n| **Ukraine-Krieg**       | Wahlforderung, getrennte Familien     | Großoffensive, F-16-Lieferung         | EU-Militärhilfen                   | **Konsistent + ergänzend**        |\n| **UK-Inflation**        | 2,9 % (Energieschock)                 | –                                     | BoE-Leitzins ↑ (5,75 %)            | **Perfekte Ergänzung**            |\n| **US-Handelspolitik**   | Zölle auf Kanada verschoben           | Handelskrieg-Drohung, Mexiko-Gegenmaßnahmen | Handelsdefizit ↑          | **Konsistent + Eskalationsdetails** |\n| **Kalifornien-Wahl**    | Wahab vs. Hernandez                   | Swalwell-Skandal                      | –                                  | **Ergänzend**                     |\n| **Siemens-Schwachstelle** | Stack-Overflow (CSAF)               | –                                     | –                                  | **Exklusiv**                      |\n\n---\n\n### **Widersprüche / Auffälligkeiten**\n1. **Iran-Krieg**:\n   - DEEPSEEK erwähnt **keine israelische Beteiligung**, GROQ schon → **mögliche Informationslücke** (oder DEEPSEEK filtert bewusst).\n2. **Ukraine**:\n   - DEEPSEEK berichtet **nichts über F-16-Lieferungen** (GROQ) → **zeitliche Verzögerung?** (F-16s könnten erst nach DEEPSEEK-Feed eingetroffen sein).\n3. **Korruption (Kasachstan)**:\n   - **Nur DEEPSEEK** → möglicherweise **lokale Quelle**, die GROQ/MACRO nicht abdeckt.\n\n---\n\n### **Fazit**\n- **DEEPSEEK** liefert **strukturierte, faktenbasierte Updates** (geopolitisch, wirtschaftlich, technisch).\n- **GROQ** ergänzt mit **Eskalationsdetails** (Israel-Angriffe, Handelskrieg-Drohungen) und **militärischen Entwicklungen** (F-16s).\n- **MACRO** füllt **makroökonomische Lücken** (Ölpreis, BoE-Zinsentscheidung, Handelsdefizit).\n\n**Keine fundamentalen Widersprüche",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen im Nahen Osten erhöhen das Risiko von Lieferengpässen, was Energieaktien stützt."
+        "reason": "Hohe Ölpreise und anhaltende geopolitische Spannungen im Nahen Osten stützen den Energiesektor."
+      },
+      {
+        "ticker": "LIT",
+        "name": "Global X Lithium & Battery Tech",
+        "asset": "Rohstoffe",
+        "reason": "Nachfrage nach Batterierohstoffen bleibt hoch, trotz kurzfristiger Volatilität."
       }
     ],
     "flop_5_sells": [
@@ -1474,19 +1537,19 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Steigende US-Zinsen und geopolitische Unsicherheiten belasten risikoreiche Anlagen wie Schwellenländeraktien."
+        "reason": "Geopolitische Risiken und Handelskonflikte belasten die Wachstumsaussichten."
       },
       {
-        "ticker": "TLT",
-        "name": "iShares 20+ Year Treasury Bond ETF",
-        "asset": "Langlaufende Staatsanleihen",
-        "reason": "Massiver Ausverkauf und Zinsrisiko machen langlaufende US-Staatsanleihen unattraktiv."
+        "ticker": "EWZ",
+        "name": "iShares MSCI Brazil",
+        "asset": "Brasilien",
+        "reason": "Politische Unsicherheit und Abhängigkeit von Rohstoffexporten erhöhen das Risiko."
       }
     ]
   },
-  "timestamp": "2026-08-18T06:31:09.118253+00:00",
+  "timestamp": "2026-08-19T06:30:51.516025+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-18T06:28:10.619800+00:00",
+    "timestamp": "2026-08-19T06:29:05.119435+00:00",
     "feeds_total": 224,
     "feeds_successful": 121,
     "feeds_failed": 103,
@@ -1496,11 +1559,11 @@
       "DeepSeek",
       "qwen-2.5-72b-instruct"
     ],
-    "swarm_debate_status": "ERROR (HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=35))",
+    "swarm_debate_status": "SUCCESS",
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_404",
     "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (54 Nodes)",
+    "graph_merge_status": "SUCCESS (55 Nodes)",
     "errors": []
   },
   "delta": {
@@ -1508,14 +1571,14 @@
     "ampel_prev": "GELB",
     "ampel_now": "GELB",
     "ampel_changed": false,
-    "geoscore_prev": 72,
+    "geoscore_prev": 75,
     "geoscore_now": 75,
-    "geoscore_delta": 3,
+    "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
     "nodes_prev": 54,
-    "nodes_now": 54,
-    "hotspots_now": 7,
-    "summary": "Geoscore 72 → 75 (+3)"
+    "nodes_now": 55,
+    "hotspots_now": 8,
+    "summary": "Graph-Knoten 54 → 55"
   }
 }
