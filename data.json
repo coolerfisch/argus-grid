@@ -2,25 +2,25 @@
   "overall_geoscore": 75,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Eskalierende Handelskonflikte zwischen USA und Kanada sowie kritische Cybersicherheitslücken erhöhen die globale Unsicherheit, ohne jedoch akute Kriegsgefahr auszulösen.",
-  "daily_executive_summary": "Die Weltlage am 22.08.2026 ist geprägt von einer Verschärfung geopolitischer Spannungen, insbesondere im Handelskonflikt zwischen den USA und Kanada, der mit gegenseitigen Zöllen eskaliert. Gleichzeitig setzt Russland seine Angriffe auf die Ukraine fort, wobei zivile Opferzahlen weiter steigen. Im Cybersicherheitsbereich stellt die neu entdeckte Schwachstelle CVE-2026-73570 in der Zimbra Collaboration Suite eine akute Bedrohung dar, da sie aktiv ausgenutzt wird. Die US-Notenbank hat zudem eine regulatorische Genehmigung für die National Westminster Bank erteilt, was auf Konsolidierungstendenzen im Bankensektor hindeutet. In Europa festigt Giorgia Meloni ihre Position als führende Figur des Rechtskonservatismus. Wetterbeobachtungen im Nordostatlantik deuten auf mögliche, aber noch nicht akute Sturmgefahren hin.",
-  "daily_executive_summary_simple": "Die Welt ist aktuell unsicherer geworden: USA und Kanada streiten sich über Handel, Russland greift die Ukraine weiter an, und eine gefährliche Sicherheitslücke bedroht E-Mail-Server weltweit. In den USA gibt es politische Turbulenzen, und in Europa wird die italienische Regierung immer einflussreicher. Das Wetter könnte bald stürmisch werden, aber noch ist keine akute Gefahr in Sicht.",
+  "ampel_reason_simple": "Handelskonflikte zwischen USA und Kanada sowie kritische Cybersicherheitslücken erhöhen die globale Unsicherheit, ohne akute Eskalation.",
+  "daily_executive_summary": "Die globale Lage ist geprägt von eskalierenden Handelskonflikten zwischen den USA und Kanada, die durch aggressive Rhetorik und gegenseitige Zölle verschärft werden. Gleichzeitig dominieren strategische Übernahmen europäischer Vermögensverwalter durch US-Investoren die Finanzmärkte, was auf eine anhaltende Konsolidierung hindeutet. Im Bereich Cybersicherheit stellt die neu entdeckte Schwachstelle CVE-2026-73570 in der Zimbra Collaboration Suite ein erhebliches Risiko dar, da sie aktiv ausgenutzt wird. Politisch bleibt die AfD in Sachsen-Anhalt ein zentrales Thema, während der Kryptosektor durch erneute Vorfälle an Vertrauen verliert. Naturkatastrophen sind aktuell kein dominierender Faktor, jedoch wird die Entwicklung im Atlantik beobachtet.",
+  "daily_executive_summary_simple": "Die Weltwirtschaft ist unsicher wegen eines Streits zwischen den USA und Kanada. Gleichzeitig kaufen US-Firmen viele europäische Geldverwalter auf. Eine gefährliche Sicherheitslücke in einer weit verbreiteten Software bedroht Unternehmen. In Deutschland warnt eine Therapeutin vor einem möglichen Erfolg der AfD. Im Kryptobereich gibt es erneut mysteriöse Vorfälle.",
   "key_takeaways": [
-    "Handelskonflikt USA-Kanada eskaliert mit 50% Vergeltungszöllen – mögliche Auswirkungen auf globale Lieferketten.",
-    "Kritische Cybersicherheitslücke CVE-2026-73570 in Zimbra Collaboration Suite wird aktiv ausgenutzt – dringender Patchbedarf.",
-    "Russlands Angriffe auf die Ukraine führen zu steigenden zivilen Opfern, insbesondere durch Raketen und Drohnen.",
-    "US-Notenbank genehmigt Antrag der National Westminster Bank – Hinweis auf regulatorische Konsolidierung im Bankensektor.",
-    "Giorgia Meloni festigt ihre Position als zentrale Figur des europäischen Rechtskonservatismus."
+    "Eskalierender Handelskonflikt zwischen USA und Kanada mit gegenseitigen Zöllen und provokativer Rhetorik.",
+    "Kritische Cybersicherheitslücke (CVE-2026-73570) in Zimbra Collaboration Suite erfordert sofortige Patches.",
+    "US-Investoren übernehmen europäische Vermögensverwalter in Rekordgeschwindigkeit.",
+    "AfD in Sachsen-Anhalt könnte von Ostdeutschlands Unzufriedenheit profitieren.",
+    "Mysteriöses Verschwinden eines Krypto-Chefs unterstreicht anhaltende Probleme im Kryptosektor."
   ],
   "market_regime": "Volatil",
-  "top_risk": "Cybersicherheit & Handelskonflikte",
+  "top_risk": "Handelskonflikte & Cybersicherheit",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Eskalierende geopolitische Spannungen und mögliche Lieferkettenunterbrechungen erhöhen die Nachfrage nach sicheren Energiequellen."
+        "reason": "Geopolitische Spannungen und Handelskonflikte erhöhen die Nachfrage nach sicheren Energiequellen."
       }
     ],
     "flop5_sells": [
@@ -28,7 +28,7 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Handelskonflikte und unsichere geopolitische Lage erhöhen das Risiko für Schwellenmärkte, insbesondere bei exportabhängigen Volkswirtschaften."
+        "reason": "Handelskonflikte und wirtschaftliche Unsicherheit belasten exportabhängige Schwellenländer."
       }
     ]
   },
@@ -36,67 +36,82 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Politische Spannungen durch mysteriösen Todesfall einer New Yorkerin und zunehmende Akzeptanz flexibler Zahlungsmethoden wie Venmo für Studiengebühren."
+      "dynamics": "Handelskonflikt mit Kanada eskaliert, innenpolitische Spannungen durch polarisierende Rhetorik."
     },
     {
       "region": "Kanada",
       "stability": "GELB",
-      "dynamics": "Eskalation des Handelskonflikts mit den USA durch Vergeltungszölle und gescheiterte Verhandlungen."
+      "dynamics": "Vergeltungszölle gegen USA, diplomatische Spannungen durch Trumps Annexionsrhetorik."
     },
     {
-      "region": "EU",
+      "region": "Deutschland",
       "stability": "GELB",
-      "dynamics": "Rechtskonservative Kräfte um Giorgia Meloni gewinnen an Einfluss, während die Ukraine-Krise weiterhin Druck auf die Energie- und Sicherheitspolitik ausübt."
+      "dynamics": "AfD könnte in Sachsen-Anhalt an Einfluss gewinnen, gesellschaftliche Spaltung vertieft sich."
+    },
+    {
+      "region": "UK",
+      "stability": "GRÜN",
+      "dynamics": "Stabile Lage, aber wirtschaftliche Herausforderungen durch US-Übernahmen im Finanzsektor."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Eskalation mit 50% Vergeltungszöllen nach gescheiterten Verhandlungen.",
-      "current_event": "Eskalation mit 50% Vergeltungszöllen nach gescheiterten Verhandlungen.",
-      "historical_analog": "US-kanadischer Handelskonflikt 2018 (Stahl- und Aluminiumzölle unter Trump).",
-      "similarity": "US-kanadischer Handelskonflikt 2018 (Stahl- und Aluminiumzölle unter Trump).",
-      "takeaway": "Historisch führten solche Eskalationen zu kurzfristigen Marktvolatilitäten, aber selten zu langfristigen Handelskriegen. Dennoch sind Lieferkettenanpassungen wahrscheinlich."
+      "event": "Eskalation durch gegenseitige Zölle und Annexionsrhetorik",
+      "current_event": "Eskalation durch gegenseitige Zölle und Annexionsrhetorik",
+      "historical_analog": "US-kanadischer Lachsstreit (1997) und Handelskrieg unter Trump (2018)",
+      "similarity": "US-kanadischer Lachsstreit (1997) und Handelskrieg unter Trump (2018)",
+      "takeaway": "Historisch führten solche Konflikte zu kurzfristigen Marktvolatilitäten, aber selten zu langfristigen Brüchen."
     },
     {
-      "event": "Aktive Ausnutzung einer kritischen OS-Command-Injection-Schwachstelle.",
-      "current_event": "Aktive Ausnutzung einer kritischen OS-Command-Injection-Schwachstelle.",
-      "historical_analog": "Heartbleed-Bug (2014) und Exchange-Server-Schwachstellen (2021).",
-      "similarity": "Heartbleed-Bug (2014) und Exchange-Server-Schwachstellen (2021).",
-      "takeaway": "Schnelle Patch-Implementierung ist entscheidend, um größere Schäden zu verhindern. Unternehmen sollten Incident-Response-Pläne aktivieren."
+      "event": "Aktive Ausnutzung der Zimbra-Schwachstelle",
+      "current_event": "Aktive Ausnutzung der Zimbra-Schwachstelle",
+      "historical_analog": "Heartbleed-Bug (2014) und Exchange-Server-Schwachstellen (2021)",
+      "similarity": "Heartbleed-Bug (2014) und Exchange-Server-Schwachstellen (2021)",
+      "takeaway": "Schnelle Patch-Einführung ist entscheidend, um großflächige Kompromittierungen zu verhindern."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Der Handelskonflikt zwischen USA und Kanada wird sich weiter verschärfen, mit möglichen Auswirkungen auf globale Lieferketten, insbesondere in den Bereichen Automobil und Landwirtschaft. Die Cybersicherheitslage bleibt angespannt, da weitere Ausnutzungen der Zimbra-Schwachstelle erwartet werden. In der Ukraine könnte Russland seine Angriffe intensivieren, um vor dem Winter Druck auf die Zivilbevölkerung auszuüben.",
+    "base_case_summary": "Handelskonflikt zwischen USA und Kanada wird sich weiter verschärfen, aber keine militärische Eskalation. Cybersicherheitsvorfälle nehmen zu, falls Patches nicht zeitnah eingespielt werden.",
     "leading_indicators_to_watch": [
-      "Weitere Ankündigungen von Zöllen oder Handelsbeschränkungen zwischen USA und Kanada.",
-      "Zunahme von Cyberangriffen auf Zimbra-Server in Unternehmens- und Regierungsnetzwerken.",
-      "Erhöhte militärische Aktivitäten Russlands in der Ukraine, insbesondere gegen zivile Infrastruktur."
+      "Weitere Zollerhöhungen oder Sanktionen",
+      "Zunahme von Cyberangriffen auf Zimbra-Systeme",
+      "Marktvolatilität durch Unsicherheit in Handelsbeziehungen"
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Der Handelskonflikt zwischen USA und Kanada wird sich weiter verschärfen, mit möglichen Auswirkungen auf globale Lieferketten, insbesondere in den Bereichen Automobil und Landwirtschaft. Die Cybersicherheitslage bleibt angespannt, da weitere Ausnutzungen der Zimbra-Schwachstelle erwartet werden. In der Ukraine könnte Russland seine Angriffe intensivieren, um vor dem Winter Druck auf die Zivilbevölkerung auszuüben.",
+        "forecast": "Handelskonflikt zwischen USA und Kanada wird sich weiter verschärfen, aber keine militärische Eskalation. Cybersicherheitsvorfälle nehmen zu, falls Patches nicht zeitnah eingespielt werden.",
         "probability": "Hoch",
         "early_warning_indicators": [
-          "Weitere Ankündigungen von Zöllen oder Handelsbeschränkungen zwischen USA und Kanada.",
-          "Zunahme von Cyberangriffen auf Zimbra-Server in Unternehmens- und Regierungsnetzwerken.",
-          "Erhöhte militärische Aktivitäten Russlands in der Ukraine, insbesondere gegen zivile Infrastruktur."
+          "Weitere Zollerhöhungen oder Sanktionen",
+          "Zunahme von Cyberangriffen auf Zimbra-Systeme",
+          "Marktvolatilität durch Unsicherheit in Handelsbeziehungen"
+        ]
+      },
+      {
+        "timeframe": "90 Tage",
+        "forecast": "US-Übernahmen im europäischen Finanzsektor beschleunigen sich, während Schwellenländer unter Handelsbarrieren leiden. AfD könnte in Sachsen-Anhalt an die Regierung beteiligt werden.",
+        "probability": "Mittel",
+        "early_warning_indicators": [
+          "Weitere Übernahmeankündigungen im Finanzsektor",
+          "Umfragewerte der AfD in Sachsen-Anhalt",
+          "Wirtschaftliche Kennzahlen von Schwellenländern"
         ]
       }
     ]
   },
   "conflict_hotspots": [
     {
-      "name": "Ukraine (Kriwi Rih)",
-      "region": "Osteuropa",
-      "lat": 47.91,
-      "lon": 33.41,
+      "name": "USA-Kanada Handelskonflikt",
+      "region": "Nordamerika",
+      "lat": 45.4,
+      "lon": -75.7,
       "type": "conflict",
-      "intensity": "ROT",
-      "description": "Russische Luftangriffe auf die Stadt Kriwi Rih führen zu steigenden zivilen Opfern, insbesondere durch Raketen und Drohnen.",
-      "impact": "Humanitäre Krise verschärft sich, mögliche Eskalation mit NATO-Staaten durch Lieferung von Waffen an die Ukraine.",
-      "lng": 33.41
+      "intensity": "GELB",
+      "description": "Eskalierender Handelskonflikt mit gegenseitigen Zöllen und provokativer Rhetorik.",
+      "impact": "Wirtschaftliche Unsicherheit, Marktvolatilität und diplomatische Spannungen.",
+      "lng": -75.7
     },
     {
       "name": "Persischer Golf",
@@ -104,75 +119,86 @@
       "lat": 26.5,
       "lon": 53.5,
       "type": "chokepoint",
-      "intensity": "GELB",
-      "description": "Erhöhte militärische Präsenz und Spannungen zwischen Iran und westlichen Staaten, insbesondere nach Vorfällen in der Straße von Hormus.",
-      "impact": "Mögliche Unterbrechungen der Öltransporte mit Auswirkungen auf globale Energiemärkte.",
+      "intensity": "ROT",
+      "description": "Anhaltende Spannungen durch regionale Konflikte und strategische Interessen.",
+      "impact": "Risiko für globale Energieversorgung und Schifffahrtsrouten.",
       "lng": 53.5
     },
     {
-      "name": "Flug PGT82MC",
+      "name": "Flug PGT10RR",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.9701,
-      "lon": 29.5038,
-      "lng": 29.5038,
+      "lat": 40.9827,
+      "lon": 39.8656,
+      "lng": 39.8656,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT82MC | Höhe: 9.7 km | Speed: 514 km/h",
+      "description": "Callsign: PGT10RR | Höhe: 0.8 km | Speed: 408 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT905",
+      "name": "Flug PGT296Z",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.3103,
-      "lon": 29.2905,
-      "lng": 29.2905,
+      "lat": 40.706,
+      "lon": 29.2236,
+      "lng": 29.2236,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT905 | Höhe: 10.4 km | Speed: 734 km/h",
+      "description": "Callsign: PGT296Z | Höhe: 3.6 km | Speed: 672 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JAV281",
+      "name": "Flug AXB895",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.7537,
-      "lon": 36.1554,
-      "lng": 36.1554,
+      "lat": 26.6958,
+      "lon": 50.1564,
+      "lng": 50.1564,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JAV281 | Höhe: 1.5 km | Speed: 361 km/h",
+      "description": "Callsign: AXB895 | Höhe: 10.4 km | Speed: 874 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ64",
+      "name": "Flug N805XA",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.6711,
-      "lon": 32.0594,
-      "lng": 32.0594,
+      "lat": 23.7575,
+      "lon": 51.0779,
+      "lng": 51.0779,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ64 | Höhe: 10.7 km | Speed: 814 km/h",
+      "description": "Callsign: N805XA | Höhe: 4.9 km | Speed: 702 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "ADS-B Signal 8A05AC",
+      "name": "Flug RRR9958",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 34.1647,
+      "lon": 32.7041,
+      "lng": 32.7041,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: RRR9958 | Höhe: 3.4 km | Speed: 636 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "ADS-B Signal 781BEF",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 15.4141,
-      "lon": 122.8813,
-      "lng": 122.8813,
+      "lat": 24.5991,
+      "lon": 118.0542,
+      "lng": 118.0542,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: Unbekannt | Höhe: 9.8 km | Speed: 885 km/h",
+      "description": "Callsign: Unbekannt | Höhe: 10.2 km | Speed: 806 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CPA884",
+      "name": "Flug CPA319",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.0727,
-      "lon": 121.3443,
-      "lng": 121.3443,
+      "lat": 22.3528,
+      "lon": 115.8669,
+      "lng": 115.8669,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CPA884 | Höhe: 9.4 km | Speed: 941 km/h",
+      "description": "Callsign: CPA319 | Höhe: 7.9 km | Speed: 870 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -184,7 +210,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-22"
+        "last_seen": "2026-08-23"
       },
       {
         "id": "iran",
@@ -192,13 +218,13 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-22"
+        "last_seen": "2026-08-23"
       },
       {
         "id": "israel",
         "label": "Israel",
         "group": "staat",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-20"
       },
@@ -206,7 +232,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 12,
+        "val": 11,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-15"
       },
@@ -222,7 +248,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -230,7 +256,7 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 20,
+        "val": 19,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -238,7 +264,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -265,22 +291,6 @@
         "val": 3,
         "first_seen": "2026-07-29",
         "last_seen": "2026-08-14"
-      },
-      {
-        "id": "migration",
-        "label": "Migration",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-01",
-        "last_seen": "2026-08-08"
-      },
-      {
-        "id": "cyberrisiko",
-        "label": "Cyberrisiko",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-03",
-        "last_seen": "2026-08-08"
       },
       {
         "id": "palästina",
@@ -350,7 +360,7 @@
         "id": "persischer_golf",
         "label": "Persischer Golf",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-15"
       },
@@ -422,7 +432,7 @@
         "id": "oel",
         "label": "Öl",
         "group": "risiko",
-        "val": 8,
+        "val": 7,
         "first_seen": "2026-08-14",
         "last_seen": "2026-08-17"
       },
@@ -462,7 +472,7 @@
         "id": "siemens",
         "label": "Siemens",
         "group": "tech",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-15",
         "last_seen": "2026-08-17"
       },
@@ -526,7 +536,7 @@
         "id": "treasury_etf",
         "label": "Treasury-ETF",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-18",
         "last_seen": "2026-08-18"
       },
@@ -590,7 +600,7 @@
         "id": "mlflow_ssrf",
         "label": "CVE-2026-64849",
         "group": "risiko",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-08-20",
         "last_seen": "2026-08-20"
       },
@@ -606,25 +616,49 @@
         "id": "kanada",
         "label": "Kanada",
         "group": "staat",
-        "val": 7,
+        "val": 10,
         "first_seen": "2026-08-22",
-        "last_seen": "2026-08-22"
+        "last_seen": "2026-08-23"
       },
       {
         "id": "zimbra",
         "label": "CVE-2026-73570",
         "group": "risiko",
-        "val": 6,
+        "val": 8,
         "first_seen": "2026-08-22",
-        "last_seen": "2026-08-22"
+        "last_seen": "2026-08-23"
       },
       {
         "id": "meloni",
         "label": "G. Meloni",
         "group": "actor",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-22"
+      },
+      {
+        "id": "deutschland",
+        "label": "Deutschland",
+        "group": "staat",
+        "val": 6,
+        "first_seen": "2026-08-23",
+        "last_seen": "2026-08-23"
+      },
+      {
+        "id": "afd",
+        "label": "AfD",
+        "group": "organisation",
+        "val": 5,
+        "first_seen": "2026-08-23",
+        "last_seen": "2026-08-23"
+      },
+      {
+        "id": "us_investoren",
+        "label": "US-Investoren",
+        "group": "actor",
+        "val": 6,
+        "first_seen": "2026-08-23",
+        "last_seen": "2026-08-23"
       }
     ],
     "edges": [
@@ -633,8 +667,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Sanktionen & Konflikt",
-        "last_seen": "2026-08-20"
+        "label": "Konflikt",
+        "last_seen": "2026-08-23"
       },
       {
         "from": "usa",
@@ -1018,7 +1052,7 @@
         "source": "usa",
         "target": "kanada",
         "label": "Handelskonflikt",
-        "last_seen": "2026-08-22"
+        "last_seen": "2026-08-23"
       },
       {
         "from": "eu",
@@ -1059,6 +1093,38 @@
         "target": "eu",
         "label": "Einfluss",
         "last_seen": "2026-08-22"
+      },
+      {
+        "from": "usa",
+        "to": "us_investoren",
+        "source": "usa",
+        "target": "us_investoren",
+        "label": "Finanzübernahmen",
+        "last_seen": "2026-08-23"
+      },
+      {
+        "from": "us_investoren",
+        "to": "deutschland",
+        "source": "us_investoren",
+        "target": "deutschland",
+        "label": "Übernahmen",
+        "last_seen": "2026-08-23"
+      },
+      {
+        "from": "zimbra",
+        "to": "deutschland",
+        "source": "zimbra",
+        "target": "deutschland",
+        "label": "Cyberrisiko",
+        "last_seen": "2026-08-23"
+      },
+      {
+        "from": "afd",
+        "to": "deutschland",
+        "source": "afd",
+        "target": "deutschland",
+        "label": "Politische Spannung",
+        "last_seen": "2026-08-23"
       }
     ],
     "links": [
@@ -1067,8 +1133,8 @@
         "to": "iran",
         "source": "usa",
         "target": "iran",
-        "label": "Sanktionen & Konflikt",
-        "last_seen": "2026-08-20"
+        "label": "Konflikt",
+        "last_seen": "2026-08-23"
       },
       {
         "from": "usa",
@@ -1452,7 +1518,7 @@
         "source": "usa",
         "target": "kanada",
         "label": "Handelskonflikt",
-        "last_seen": "2026-08-22"
+        "last_seen": "2026-08-23"
       },
       {
         "from": "eu",
@@ -1493,15 +1559,47 @@
         "target": "eu",
         "label": "Einfluss",
         "last_seen": "2026-08-22"
+      },
+      {
+        "from": "usa",
+        "to": "us_investoren",
+        "source": "usa",
+        "target": "us_investoren",
+        "label": "Finanzübernahmen",
+        "last_seen": "2026-08-23"
+      },
+      {
+        "from": "us_investoren",
+        "to": "deutschland",
+        "source": "us_investoren",
+        "target": "deutschland",
+        "label": "Übernahmen",
+        "last_seen": "2026-08-23"
+      },
+      {
+        "from": "zimbra",
+        "to": "deutschland",
+        "source": "zimbra",
+        "target": "deutschland",
+        "label": "Cyberrisiko",
+        "last_seen": "2026-08-23"
+      },
+      {
+        "from": "afd",
+        "to": "deutschland",
+        "source": "afd",
+        "target": "deutschland",
+        "label": "Politische Spannung",
+        "last_seen": "2026-08-23"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Handelskonflikt USA-Kanada eskaliert mit 50% Vergeltungszöllen – mögliche Auswirkungen auf globale Lieferketten.",
-    "Kritische Cybersicherheitslücke CVE-2026-73570 in Zimbra Collaboration Suite wird aktiv ausgenutzt – dringender Patchbedarf.",
-    "Russlands Angriffe auf die Ukraine führen zu steigenden zivilen Opfern, insbesondere durch Raketen und Drohnen.",
-    "US-Notenbank genehmigt Antrag der National Westminster Bank – Hinweis auf regulatorische Konsolidierung im Bankensektor.",
-    "Giorgia Meloni festigt ihre Position als zentrale Figur des europäischen Rechtskonservatismus."
+    "Eskalierender Handelskonflikt zwischen USA und Kanada mit gegenseitigen Zöllen und provokativer Rhetorik.",
+    "Kritische Cybersicherheitslücke (CVE-2026-73570) in Zimbra Collaboration Suite erfordert sofortige Patches.",
+    "US-Investoren übernehmen europäische Vermögensverwalter in Rekordgeschwindigkeit.",
+    "AfD in Sachsen-Anhalt könnte von Ostdeutschlands Unzufriedenheit profitieren.",
+    "Mysteriöses Verschwinden eines Krypto-Chefs unterstreicht anhaltende Probleme im Kryptosektor."
   ],
   "geoscore": {
     "current_score": 75,
@@ -1512,14 +1610,14 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBasierend auf den von Ihnen bereitgestellten Feeds für den 22. August 2026, hier eine gebündelte Kurzanalyse der wichtigsten Themen:\n\n**1. Geopolitische Spannungen & Handel:**\nDer Handelskonflikt zwischen den USA und Kanada eskaliert deutlich. Nach dem Scheitern von Gesprächen kündigt Kanada Vergeltungszölle von 50 % auf US-Importe im Wert von 20 Mrd. CAD an (BBC, FT). Gleichzeitig setzt Russland seine Angriffe auf die Ukraine fort, wobei die Zahl der zivilen Opfer durch Raketen- und Drohnenangriffe besorgniserregend steigt (NZZ).\n\n**2. Cybersicherheit (Kritisch):**\nCISA hat eine neue Schwachstelle in den Katalog der bekannten ausgenutzten Schwachstellen (KEV) aufgenommen: **CVE-2026-73570** – eine OS-Command-Injection in der Zimbra Collaboration Suite. Diese Schwachstelle wird aktiv ausgenutzt und stellt ein hohes Risiko für betroffene E-Mail- und Kollaborationsserver dar. Es wird dringend empfohlen, Patches zu prüfen und anzuwenden.\n\n**3. Finanz- & US-Nachrichten:**\n- Die US-Notenbank (Fed) hat den Antrag von National Westminster Bank Plc genehmigt, was auf eine regulatorische Konsolidierung im Bankensektor hindeutet.\n- Im US-Wahlkampf- & Politikbetrieb sorgt die Geschichte um eine vermisste New Yorkerin für Aufsehen, die nach mysteriösen Bitcoin-Nachrichten tot in Las Vegas gefunden wurde (Fox News).\n- Im Bereich Verbraucherfinanzen: Immer mehr US-Unis akzeptieren Venmo für Studiengebühren – ein Trend zur flexibleren Zahlungsabwicklung, der aber auch Risiken birgt (WSJ/MarketWatch).\n\n**4. Europäische Politik:**\nEin NYT-Interview mit Giorgia Meloni zeigt, wie die italienische Ministerpräsidentin sich vom politischen Außenseiter zur zentralen Figur des Rechtskonservatismus in Europa entwickelt hat.\n\n**5. Wetterlage:**\nDer National Hurricane Center (NOAA) beobachtet im Nordostatlantik ein starkes, nicht-tropisches Tiefdruckgebiet. Es besteht derzeit keine unmittelbare Hurrikan-Warnung, jedoch wird die weitere Entwicklung beobachtet.\n\n---\n\n**Empfehlung für Sie:**\nFalls Sie für Ihre Systeme Zimbra einsetzen, priorisieren Sie die Sicherheitsmeldung zu CVE-2026-73570. Die Meldung von CISA deutet auf eine aktive Bedrohungslage hin. Die Lage im Handelskonflikt USA-Kanada könnte sich auf Märkte und Lieferketten auswirken – beobachten Sie die Entwicklungen hierzu.\n\nMACRO:\n### Summary of Key Updates (22.08.2026)\n\n#### Zentralbank: Federal Reserve Press\n- **Federal Reserve Board approves application by National Westminster Bank Plc**: This move might indicate regulatory approval for the bank's expansion or restructuring plans.\n\n#### Cyber / Infrastruktur: CISA Cyber Alerts\n- **CISA Adds One Known Exploited Vulnerability to Catalog**: The newly added vulnerability is CVE-2026-73570, affecting the Zimbra Collaboration Suite (ZCS). This OS Command Injection Vulnerability is a significant concern due to its potential for active exploitation by malicious actors.\n\n#### CH/Presse: NZZ International\n- **Perfider Doppelschlag in Kriwi Rih**: Russian airstrikes in Ukraine continue to escalate, resulting in a growing number of civilian casualties. The article highlights the severe impact of both missile and drone attacks.\n\n#### US/Finanzen: Wall Street Journal (MarketWatch Alt)\n- **Venmo for College Tuition**: Some universities are now accepting Venmo as a payment method for tuition, reflecting a trend towards more flexible financial transactions.\n\n#### US/Presse: New York Times World\n- **Giorgia Meloni and Italy's Hard Right**: In a rare interview, Italian politician Giorgia Meloni discusses her political journey and her potential to lead Italy's most durable postwar government.\n\n#### UK/Medien: BBC World News\n- **Canada Matches US Tariffs**: Canada has announced a 50% levy on $20 billion worth of US imports following a breakdown in trade talks. The move is seen as a significant escalation in trade tensions between the two countries.\n\n#### US/Politik: Fox News Latest\n- **Missing New York Grandmother Found Dead**: Alisa Goods, a grandmother from New York, was found dead near Las Vegas airport after surveillance showed her collapsing on Aug. 8. The case has raised questions about her involvement in Bitcoin transactions.\n\n#### UK/Finanzen: Financial Times\n- **Canada Vows to Match US Tariffs**: Canada's top Washington envoy criticizes the US for a \"missed opportunity\" as the country vows to match US tariffs, further complicating the trade relationship.\n\n#### Wetter/Extreme: NOAA National Hurricane Center\n- **Atlantic Tropical Weather Outlook**: A strong non-tropical area of low pressure is located over the northeastern Atlantic, but no immediate tropical cyclone threats are noted.\n\n#### Investigativ Net: ICIJ (Panama/Pandora Papers)\n- **Met Still Holds Stolen Artworks**: Despite years of confiscations, the Metropolitan Museum of Art still holds hundreds of pieces linked to alleged trafficking and looting figures. The museum is conducting an expedited review of these works.\n\n#### Medizin: CDC Health Updates\n- **Outbreak Linked to Alfalfa Sprouts**: The CDC reports an outbreak of E. coli and Salmonella linked to alfalfa sprouts, causing illness in multiple people.\n\n### Analysis\n- **Cybersecurity Alert**: The addition of CVE-2026-73570 to the CISA catalog underscores the ongoing threat of cyber vulnerabilities, particularly in enterprise communication tools like Zimbra.\n- **Geopolitical Tensions**: The escalation of trade tensions between the US and Canada, and the continued civilian casualties in Ukraine, highlight thevolatile nature of global politics and the potential for economic and humanitarian crises.\n- **Financial Flexibility**: The acceptance of Venmo for college tuition reflects a broader trend towards the integration of digital payment methods in various sectors.\n- **Health Concerns**: The E. coli and Salmonella outbreak linked to alfalfa sprouts is a reminder of the importance of food safety and the rapid dissemination of health alerts.\n\nThese updates provide a comprehensive overview of the day's key news and developments across various sectors.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 23. AUGUST 2026**\n\n**1.  GLOBALE & WIRTSCHAFTLICHE LAGE**\nDie wirtschaftliche Unsicherheit wird durch den eskalierenden Handelskonflikt zwischen den USA und Kanada verstärkt. Premierminister Carney kündigt Vergeltungszölle an, während Ex-Präsident Trump erneut die Idee einer Annexion Kanadas als 51. US-Bundesstaat ins Spiel bringt. Parallel dazu zeigt sich eine strategische Verschiebung im Finanzsektor: US-Investoren übernehmen europäische Vermögensverwalter in einem Tempo, das es seit Jahrzehnten nicht mehr gegeben hat, um global zu expandieren. Die US-Notenbank hat unterdessen den Antrag der National Westminster Bank Plc genehmigt, was auf eine anhaltende internationale Konsolidierung im Bankensektor hindeutet.\n\n**2.  CYBERSICHERHEIT & INFRASTRUKTUR**\nEs besteht eine akute Warnlage. Die US-Behörde CISA hat eine neue, aktiv ausgenutzte Schwachstelle in den Katalog der bekannten Sicherheitslücken aufgenommen: CVE-2026-73570 betrifft die Zimbra Collaboration Suite (ZCS) und ermöglicht die Ausführung von Betriebssystembefehlen (OS Command Injection). Da Zimbra in vielen Unternehmen und Institutionen weltweit eingesetzt wird, drohen durch diese Angriffsvektoren umfassende Kompromittierungen. Die Behörde empfiehlt dringend, die verfügbaren Patches sofort einzuspielen.\n\n**3.  POLITIK & GESELLSCHAFT**\n- **USA/Kanada:** Der Handelsstreit dominiert die Berichterstattung. Die Rhetorik Trumps sorgt für diplomatische Spannungen; Kanadas Regierung reagiert mit wirtschaftlichen Gegenmaßnahmen.\n- **Deutschland:** Die NZZ porträtiert die DDR-Therapeutin Irene Misselwitz, die vor den Landtagswahlen in Sachsen-Anhalt vor einem möglichen Wahlerfolg der AfD warnt. Sie sieht darin eine \"Rache der Ossis für 1989\" und kritisiert das Versprechen von Sicherheit durch die Partei als Trugschluss.\n- **UK:** Eine persönliche Kolumne im Wall Street Journal thematisiert die Frage einer monatlichen Rente an eine entfremdete Tochter. Der Fall verdeutlicht die rechtlichen und emotionalen Grauzonen bei der Vermögensübertragung in zerrütteten Familienverhältnissen.\n\n**4.  WIRTSCHAFT & FINANZEN OHNE GLOBALKONTEXT**\nDer europäische Asset-Management-Markt erlebt eine Übernahmewelle durch US-Konzerne. Der Grund: Europäische Fondsgesellschaften kämpfen mit schwachen Margen und Skaleneffekten, während US-Wettbewerber aggressiv auf Marktkonsolidierung setzen, um ihre globale Präsenz zu stärken.\n\n**5.  SICHERHEIT & KRIMINALITÄT**\nDie New York Times berichtet über das erneute Verschwinden eines Krypto-Chefs einer europäischen Börse – vier Jahre nachdem bereits sein Vorgänger unter mysteriösen Umständen verschwand. Diese Vorfälle untermauern das anhaltende Misstrauen gegenüber dem Kryptosektor und seine Attraktivität für kriminelle Netzwerke.\n\n**6.  UNFÄLLE & NATURKATASTROPHEN**\nIm Atlantik gibt der National Hurricane Center (NHC) einen Tropischen Wetterausblick heraus. Aktuell besteht keine unmittelbare Warnung für Landgebiete, jedoch wird die Entwicklung im Nordatlantik beobachtet. Ein kurioser Vorfall im US-Bundesstaat Tennessee: Ein Schwarzbär drang in einen Teeladen in Gatlinburg ein und erschreckte ein Paar während dessen Hochzeitstags-Reise. Es gab offenbar keine Verletzten, lediglich Sachschaden.\n\nMACRO:\n**23.08.2026 Overview:**\n\n### Zentralbank\n- **Federal Reserve Press:**\n  - The Federal Reserve Board has approved the application by National Westminster Bank Plc. This move is likely to have implications for cross-border banking regulations and operations in the U.S.\n\n### Cyber / Infrastruktur\n- **CISA Cyber Alerts:**\n  - CISA has added CVE-2026-73570, a Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability, to its Known Exploited Vulnerabilities (KEV) Catalog. This vulnerability is being actively exploited, and organizations are advised to patch their systems immediately.\n\n### US/Presse\n- **New York Times World:**\n  - The article highlights the ongoing issues in the cryptocurrency industry, particularly focusing on the mysterious disappearance of cryptocurrency exchange bosses. The collapse of a European exchange further tarnishes the industry's reputation.\n\n### US/Finanzen\n- **Wall Street Journal (MarketWatch Alt):**\n  - An article discusses the ethical and financial considerations of leaving an estranged daughter a monthly annuity. The author reflects on the nature of the estrangement and the moral obligations of a parent.\n\n### UK/Medien\n- **BBC World News:**\n  - Canada is retaliating against the U.S. in a trade war, with the Canadian prime minister announcing retaliatory tariffs. The U.S. is accused of initiating the trade conflict.\n\n### US/Politik\n- **Fox News Latest:**\n  - A video captures a black bear entering a Tennessee tea shop during a couple's anniversary trip, highlighting the unexpected and sometimes dangerous encounters with wildlife.\n\n### CH/Presse\n- **NZZ International:**\n  - An interview with Dr. Irene Misselwitz, a psychotherapist from East Germany, discusses the rise of the AfD party in Saxony-Anhalt and its impact on the region's sense of security and identity post-reunification.\n\n### UK/Finanzen\n- **Financial Times:**\n  - U.S. buyers are acquiring European asset managers at a record pace, driven by the desire to expand globally and bulk up their portfolios. This trend reflects the current dynamics in the global financial market.\n\n### Wetter/Extreme\n- **NOAA National Hurricane Center:**\n  - The Atlantic Tropical Weather Outlook reports a non-tropical area of low pressure in the northeastern Atlantic, potentially affecting coastal areas with gale-force winds.\n\n### Investigativ Net\n- **ICIJ (Panama/Pandora Papers):**\n  - Despite years of efforts to confiscate stolen artworks, the Metropolitan Museum of Art still holds hundreds of pieces linked to alleged trafficking and looting. The museum has initiated an expedited review of these works.\n\n### NGO/Frühwarnung\n- **International Crisis Group:**\n  - The latest reports from the International Crisis Group, while incomplete, likely provide early warnings and analyses of potential geopolitical and humanitarian crises.\n\nThis summary covers the key points from the various feeds, providing a comprehensive overview of the day's events and developments.",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Eskalierende geopolitische Spannungen und mögliche Lieferkettenunterbrechungen erhöhen die Nachfrage nach sicheren Energiequellen."
+        "reason": "Geopolitische Spannungen und Handelskonflikte erhöhen die Nachfrage nach sicheren Energiequellen."
       }
     ],
     "flop_5_sells": [
@@ -1527,16 +1625,16 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Handelskonflikte und unsichere geopolitische Lage erhöhen das Risiko für Schwellenmärkte, insbesondere bei exportabhängigen Volkswirtschaften."
+        "reason": "Handelskonflikte und wirtschaftliche Unsicherheit belasten exportabhängige Schwellenländer."
       }
     ]
   },
-  "timestamp": "2026-08-22T06:26:55.316042+00:00",
+  "timestamp": "2026-08-23T06:28:21.450844+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-22T06:24:56.911264+00:00",
+    "timestamp": "2026-08-23T06:26:22.132804+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -1546,8 +1644,8 @@
     "swarm_debate_status": "ERROR (HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=35))",
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (56 Nodes)",
+    "opensky_status": "SUCCESS (7 Signale)",
+    "graph_merge_status": "SUCCESS (57 Nodes)",
     "errors": []
   },
   "delta": {
@@ -1555,14 +1653,14 @@
     "ampel_prev": "GELB",
     "ampel_now": "GELB",
     "ampel_changed": false,
-    "geoscore_prev": 72,
+    "geoscore_prev": 75,
     "geoscore_now": 75,
-    "geoscore_delta": 3,
+    "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 55,
-    "nodes_now": 56,
-    "hotspots_now": 8,
-    "summary": "Geoscore 72 → 75 (+3) · Graph-Knoten 55 → 56"
+    "nodes_prev": 56,
+    "nodes_now": 57,
+    "hotspots_now": 9,
+    "summary": "Graph-Knoten 56 → 57"
   }
 }
