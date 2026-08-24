@@ -1,26 +1,50 @@
 {
-  "overall_geoscore": 75,
+  "overall_geoscore": 72,
   "defcon_level": 3,
   "ampel_status": "GELB",
-  "ampel_reason_simple": "Handelskonflikte zwischen USA und Kanada sowie kritische Cybersicherheitslücken erhöhen die globale Unsicherheit, ohne akute Eskalation.",
-  "daily_executive_summary": "Die globale Lage ist geprägt von eskalierenden Handelskonflikten zwischen den USA und Kanada, die durch aggressive Rhetorik und gegenseitige Zölle verschärft werden. Gleichzeitig dominieren strategische Übernahmen europäischer Vermögensverwalter durch US-Investoren die Finanzmärkte, was auf eine anhaltende Konsolidierung hindeutet. Im Bereich Cybersicherheit stellt die neu entdeckte Schwachstelle CVE-2026-73570 in der Zimbra Collaboration Suite ein erhebliches Risiko dar, da sie aktiv ausgenutzt wird. Politisch bleibt die AfD in Sachsen-Anhalt ein zentrales Thema, während der Kryptosektor durch erneute Vorfälle an Vertrauen verliert. Naturkatastrophen sind aktuell kein dominierender Faktor, jedoch wird die Entwicklung im Atlantik beobachtet.",
-  "daily_executive_summary_simple": "Die Weltwirtschaft ist unsicher wegen eines Streits zwischen den USA und Kanada. Gleichzeitig kaufen US-Firmen viele europäische Geldverwalter auf. Eine gefährliche Sicherheitslücke in einer weit verbreiteten Software bedroht Unternehmen. In Deutschland warnt eine Therapeutin vor einem möglichen Erfolg der AfD. Im Kryptobereich gibt es erneut mysteriöse Vorfälle.",
+  "ampel_reason_simple": "Handelskonflikt USA-Kanada und kritische Zimbra-Schwachstelle erhöhen Risiken, aber keine akute Eskalation oder systemische Krise erkennbar.",
+  "daily_executive_summary": "Die globale Lage am 24.08.2026 ist geprägt von zwei zentralen Risikofaktoren: Erstens droht ein Handelskonflikt zwischen den USA und Kanada, der Lieferketten in Nordamerika – insbesondere in der Auto- und Energiebranche – belasten könnte. Die Märkte reagieren bisher verhalten, doch strukturelle Verwerfungen sind möglich, falls Zölle oder Sanktionen umgesetzt werden. Zweitens wurde eine kritische Sicherheitslücke in Zimbra Collaboration Suite (CVE-2026-73570) identifiziert, die bereits aktiv ausgenutzt wird und Unternehmen weltweit gefährdet. Cyberangriffe könnten zu Datenlecks oder Ransomware-Attacken führen. Geopolitisch bleibt die Ukraine-Krise stabil, während in Lateinamerika rechtspopulistische Allianzen an Einfluss gewinnen. Die Taliban konsolidieren weiterhin ihre Macht in Afghanistan, was langfristig regionale Instabilität begünstigt.",
+  "daily_executive_summary_simple": "Die Welt ist aktuell etwas unsicherer geworden. Die USA und Kanada streiten sich über Handel, was Probleme für Autos und Energie machen könnte. Gleichzeitig gibt es eine gefährliche Computer-Schwachstelle, die Hacker ausnutzen. In anderen Teilen der Welt, wie der Ukraine oder Afghanistan, bleibt die Lage angespannt, aber es gibt keine akuten Kriege. Die Börsen reagieren noch ruhig, aber es könnte bald unruhiger werden.",
   "key_takeaways": [
-    "Eskalierender Handelskonflikt zwischen USA und Kanada mit gegenseitigen Zöllen und provokativer Rhetorik.",
-    "Kritische Cybersicherheitslücke (CVE-2026-73570) in Zimbra Collaboration Suite erfordert sofortige Patches.",
-    "US-Investoren übernehmen europäische Vermögensverwalter in Rekordgeschwindigkeit.",
-    "AfD in Sachsen-Anhalt könnte von Ostdeutschlands Unzufriedenheit profitieren.",
-    "Mysteriöses Verschwinden eines Krypto-Chefs unterstreicht anhaltende Probleme im Kryptosektor."
+    "Handelskonflikt USA-Kanada bedroht nordamerikanische Lieferketten, besonders in der Auto- und Energiebranche.",
+    "Kritische Zimbra-Schwachstelle (CVE-2026-73570) wird aktiv ausgenutzt – sofortige Patches erforderlich.",
+    "Märkte bleiben vorerst stabil, aber strukturelle Risiken durch Handelsstreit und Cyberbedrohungen bestehen.",
+    "Rechtspopulistische Allianzen in Lateinamerika gewinnen an Einfluss, was regionale Polarisierung verstärkt.",
+    "Taliban festigen ihre Kontrolle über Afghanistan, was langfristig humanitäre und sicherheitspolitische Risiken birgt."
   ],
-  "market_regime": "Volatil",
-  "top_risk": "Handelskonflikte & Cybersicherheit",
+  "market_regime": "Fragmentiert / Volatil",
+  "top_risk": "Lieferketten & Energie",
   "equity_rotation": {
     "top5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen und Handelskonflikte erhöhen die Nachfrage nach sicheren Energiequellen."
+        "reason": "Handelskonflikt USA-Kanada könnte Energieexporte beeinträchtigen, was die Preise stützt. Zudem bleibt die geopolitische Lage im Persischen Golf angespannt."
+      },
+      {
+        "ticker": "GLD",
+        "name": "SPDR Gold Trust",
+        "asset": "Edelmetalle",
+        "reason": "Sicherer Hafen bei zunehmender Unsicherheit durch Handelskonflikte und Cyberrisiken."
+      },
+      {
+        "ticker": "LMT",
+        "name": "Lockheed Martin",
+        "asset": "Rüstung",
+        "reason": "Langfristige Nachfrage durch globale Spannungen, insbesondere in Osteuropa und Asien."
+      },
+      {
+        "ticker": "MSFT",
+        "name": "Microsoft",
+        "asset": "Technologie",
+        "reason": "Cybersicherheitsausgaben steigen aufgrund der Zimbra-Schwachstelle und ähnlicher Bedrohungen."
+      },
+      {
+        "ticker": "NEE",
+        "name": "NextEra Energy",
+        "asset": "Erneuerbare Energien",
+        "reason": "Diversifizierung weg von fossilen Brennstoffen wird durch Handelskonflikte beschleunigt."
       }
     ],
     "flop5_sells": [
@@ -28,7 +52,31 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Handelskonflikte und wirtschaftliche Unsicherheit belasten exportabhängige Schwellenländer."
+        "reason": "Handelskonflikte und globale Unsicherheit belasten exportabhängige Volkswirtschaften."
+      },
+      {
+        "ticker": "TSLA",
+        "name": "Tesla",
+        "asset": "Automobil",
+        "reason": "Lieferkettenrisiken in Nordamerika und mögliche Zölle auf Batteriematerialien."
+      },
+      {
+        "ticker": "AMZN",
+        "name": "Amazon",
+        "asset": "E-Commerce/Logistik",
+        "reason": "Handelsbeschränkungen könnten Lieferketten und Margen belasten."
+      },
+      {
+        "ticker": "BABA",
+        "name": "Alibaba",
+        "asset": "Technologie/E-Commerce",
+        "reason": "Geopolitische Spannungen zwischen USA und China sowie Handelskonflikte wirken belastend."
+      },
+      {
+        "ticker": "XLU",
+        "name": "Utilities Select Sector",
+        "asset": "Versorger",
+        "reason": "Zinsrisiko und mögliche regulatorische Eingriffe bei Handelskonflikten."
       }
     ]
   },
@@ -36,83 +84,77 @@
     {
       "region": "USA",
       "stability": "GELB",
-      "dynamics": "Handelskonflikt mit Kanada eskaliert, innenpolitische Spannungen durch polarisierende Rhetorik."
+      "dynamics": "Handelskonflikt mit Kanada könnte Midterm-Wahlen 2026 beeinflussen. Cyberbedrohungen erfordern regulatorische Maßnahmen. Polarisierung in der Innenpolitik bleibt hoch."
     },
     {
       "region": "Kanada",
       "stability": "GELB",
-      "dynamics": "Vergeltungszölle gegen USA, diplomatische Spannungen durch Trumps Annexionsrhetorik."
+      "dynamics": "Wirtschaftliche Abhängigkeit von den USA führt zu Verwundbarkeit. Regierung sucht nach alternativen Handelspartnern, insbesondere in Asien."
     },
     {
-      "region": "Deutschland",
-      "stability": "GELB",
-      "dynamics": "AfD könnte in Sachsen-Anhalt an Einfluss gewinnen, gesellschaftliche Spaltung vertieft sich."
-    },
-    {
-      "region": "UK",
+      "region": "EU",
       "stability": "GRÜN",
-      "dynamics": "Stabile Lage, aber wirtschaftliche Herausforderungen durch US-Übernahmen im Finanzsektor."
+      "dynamics": "Stabile Lage, aber Handelskonflikt USA-Kanada könnte indirekte Auswirkungen auf europäische Lieferketten haben. Fokus auf Ukraine-Hilfen und Energiesicherheit."
+    },
+    {
+      "region": "Lateinamerika",
+      "stability": "GELB",
+      "dynamics": "Rechtspopulistische Regierungen stärken Allianzen, was zu regionaler Polarisierung führt. Wirtschaftliche Unsicherheit in mehreren Ländern."
+    },
+    {
+      "region": "Afghanistan",
+      "stability": "ROT",
+      "dynamics": "Taliban festigen Kontrolle, aber humanitäre Krise verschärft sich. Internationale Isolation bleibt bestehen."
     }
   ],
   "historical_precedents": [
     {
-      "event": "Eskalation durch gegenseitige Zölle und Annexionsrhetorik",
-      "current_event": "Eskalation durch gegenseitige Zölle und Annexionsrhetorik",
-      "historical_analog": "US-kanadischer Lachsstreit (1997) und Handelskrieg unter Trump (2018)",
-      "similarity": "US-kanadischer Lachsstreit (1997) und Handelskrieg unter Trump (2018)",
-      "takeaway": "Historisch führten solche Konflikte zu kurzfristigen Marktvolatilitäten, aber selten zu langfristigen Brüchen."
+      "event": "Drohende Zölle und Sanktionen zwischen den USA und Kanada.",
+      "current_event": "Drohende Zölle und Sanktionen zwischen den USA und Kanada.",
+      "historical_analog": "US-kanadischer Lachs-Streit (1997) und Handelskonflikt unter Trump (2018–2019).",
+      "similarity": "US-kanadischer Lachs-Streit (1997) und Handelskonflikt unter Trump (2018–2019).",
+      "takeaway": "Historisch führten solche Konflikte zu kurzfristigen Marktverwerfungen, aber selten zu langfristigen Brüchen. Dennoch können Lieferketten nachhaltig gestört werden."
     },
     {
-      "event": "Aktive Ausnutzung der Zimbra-Schwachstelle",
-      "current_event": "Aktive Ausnutzung der Zimbra-Schwachstelle",
-      "historical_analog": "Heartbleed-Bug (2014) und Exchange-Server-Schwachstellen (2021)",
-      "similarity": "Heartbleed-Bug (2014) und Exchange-Server-Schwachstellen (2021)",
-      "takeaway": "Schnelle Patch-Einführung ist entscheidend, um großflächige Kompromittierungen zu verhindern."
+      "event": "Kritische OS-Command-Injection-Schwachstelle in Zimbra Collaboration Suite.",
+      "current_event": "Kritische OS-Command-Injection-Schwachstelle in Zimbra Collaboration Suite.",
+      "historical_analog": "Exchange-Server-Schwachstellen (ProxyLogon/ProxyShell, 2021) und Log4j (2021).",
+      "similarity": "Exchange-Server-Schwachstellen (ProxyLogon/ProxyShell, 2021) und Log4j (2021).",
+      "takeaway": "Solche Schwachstellen führen oft zu massiven Cyberangriffen, einschließlich Ransomware und Datendiebstahl. Schnelle Reaktion ist entscheidend."
     }
   ],
   "predictive_horizon": {
     "base_case_probability_pct": 65,
-    "base_case_summary": "Handelskonflikt zwischen USA und Kanada wird sich weiter verschärfen, aber keine militärische Eskalation. Cybersicherheitsvorfälle nehmen zu, falls Patches nicht zeitnah eingespielt werden.",
+    "base_case_summary": "Der Handelskonflikt zwischen den USA und Kanada wird sich voraussichtlich verschärfen, mit ersten Zöllen oder Sanktionen. Dies könnte zu Lieferengpässen in der Auto- und Energiebranche führen. Die Zimbra-Schwachstelle wird zu einer Welle von Cyberangriffen führen, insbesondere auf ungeschützte Systeme. Die Märkte werden volatil bleiben, mit möglichen Kursrückgängen in exportabhängigen Sektoren.",
     "leading_indicators_to_watch": [
-      "Weitere Zollerhöhungen oder Sanktionen",
-      "Zunahme von Cyberangriffen auf Zimbra-Systeme",
-      "Marktvolatilität durch Unsicherheit in Handelsbeziehungen"
+      "Ankündigung konkreter Zölle oder Sanktionen durch die USA oder Kanada.",
+      "Zunahme von Cyberangriffen auf Zimbra-Systeme in CISA- oder BSI-Warnungen.",
+      "Rückgang der Aktienkurse von Unternehmen mit nordamerikanischen Lieferketten (z. B. Automobilhersteller)."
     ],
     "horizon_list": [
       {
         "timeframe": "30 Tage",
-        "forecast": "Handelskonflikt zwischen USA und Kanada wird sich weiter verschärfen, aber keine militärische Eskalation. Cybersicherheitsvorfälle nehmen zu, falls Patches nicht zeitnah eingespielt werden.",
+        "forecast": "Der Handelskonflikt zwischen den USA und Kanada wird sich voraussichtlich verschärfen, mit ersten Zöllen oder Sanktionen. Dies könnte zu Lieferengpässen in der Auto- und Energiebranche führen. Die Zimbra-Schwachstelle wird zu einer Welle von Cyberangriffen führen, insbesondere auf ungeschützte Systeme. Die Märkte werden volatil bleiben, mit möglichen Kursrückgängen in exportabhängigen Sektoren.",
         "probability": "Hoch",
         "early_warning_indicators": [
-          "Weitere Zollerhöhungen oder Sanktionen",
-          "Zunahme von Cyberangriffen auf Zimbra-Systeme",
-          "Marktvolatilität durch Unsicherheit in Handelsbeziehungen"
+          "Ankündigung konkreter Zölle oder Sanktionen durch die USA oder Kanada.",
+          "Zunahme von Cyberangriffen auf Zimbra-Systeme in CISA- oder BSI-Warnungen.",
+          "Rückgang der Aktienkurse von Unternehmen mit nordamerikanischen Lieferketten (z. B. Automobilhersteller)."
         ]
       },
       {
         "timeframe": "90 Tage",
-        "forecast": "US-Übernahmen im europäischen Finanzsektor beschleunigen sich, während Schwellenländer unter Handelsbarrieren leiden. AfD könnte in Sachsen-Anhalt an die Regierung beteiligt werden.",
+        "forecast": "Falls der Handelskonflikt eskaliert, könnten sich die USA und Kanada auf ein begrenzteres Abkommen einigen, um die schlimmsten Auswirkungen abzumildern. Die Zimbra-Schwachstelle wird weitgehend gepatcht sein, aber Nachwirkungen wie Datenlecks oder Ransomware-Fälle werden sichtbar. In Lateinamerika könnten rechtspopulistische Regierungen weitere Allianzen schmieden, was zu regionalen Spannungen führt.",
         "probability": "Mittel",
         "early_warning_indicators": [
-          "Weitere Übernahmeankündigungen im Finanzsektor",
-          "Umfragewerte der AfD in Sachsen-Anhalt",
-          "Wirtschaftliche Kennzahlen von Schwellenländern"
+          "Verhandlungen zwischen den USA und Kanada über Handelsabkommen.",
+          "Rückgang der Meldungen zu Zimbra-Exploits in Cybersecurity-Feeds.",
+          "Zunahme diplomatischer Aktivitäten zwischen lateinamerikanischen Ländern."
         ]
       }
     ]
   },
   "conflict_hotspots": [
-    {
-      "name": "USA-Kanada Handelskonflikt",
-      "region": "Nordamerika",
-      "lat": 45.4,
-      "lon": -75.7,
-      "type": "conflict",
-      "intensity": "GELB",
-      "description": "Eskalierender Handelskonflikt mit gegenseitigen Zöllen und provokativer Rhetorik.",
-      "impact": "Wirtschaftliche Unsicherheit, Marktvolatilität und diplomatische Spannungen.",
-      "lng": -75.7
-    },
     {
       "name": "Persischer Golf",
       "region": "Persischer Golf",
@@ -120,85 +162,96 @@
       "lon": 53.5,
       "type": "chokepoint",
       "intensity": "ROT",
-      "description": "Anhaltende Spannungen durch regionale Konflikte und strategische Interessen.",
-      "impact": "Risiko für globale Energieversorgung und Schifffahrtsrouten.",
+      "description": "Die Straße von Hormus bleibt ein kritischer Engpass für den globalen Öltransport. Spannungen zwischen dem Iran und westlichen Staaten sowie regionalen Akteuren (z. B. Saudi-Arabien) bestehen fort.",
+      "impact": "Jede Eskalation könnte zu Unterbrechungen der Ölversorgung führen, was die globalen Energiepreise stark beeinflusst.",
       "lng": 53.5
+    },
+    {
+      "name": "Ukraine",
+      "region": "Osteuropa",
+      "lat": 49.0,
+      "lon": 32.0,
+      "type": "conflict",
+      "intensity": "GELB",
+      "description": "Der Krieg zwischen Russland und der Ukraine dauert an, aber die Frontlinien sind weitgehend stabil. Die EU hat weitere Finanzhilfen genehmigt, was die Widerstandsfähigkeit der Ukraine stützt.",
+      "impact": "Langfristige humanitäre und wirtschaftliche Belastung für Europa. Risiko von Eskalationen bleibt bestehen, insbesondere bei Angriffen auf kritische Infrastruktur.",
+      "lng": 32.0
+    },
+    {
+      "name": "Taiwan-Straße",
+      "region": "Ostasien",
+      "lat": 23.5,
+      "lon": 121.0,
+      "type": "conflict",
+      "intensity": "GELB",
+      "description": "Spannungen zwischen China und Taiwan bleiben hoch, mit regelmäßigen Militärmanövern und diplomatischen Provokationen. Die USA unterstützen Taiwan weiterhin militärisch.",
+      "impact": "Jede militärische Eskalation hätte schwerwiegende Folgen für die globale Halbleiterindustrie und die Weltwirtschaft.",
+      "lng": 121.0
     },
     {
       "name": "Flug PGT10RR",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.9827,
-      "lon": 39.8656,
-      "lng": 39.8656,
+      "lat": 41.1028,
+      "lon": 39.1895,
+      "lng": 39.1895,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT10RR | Höhe: 0.8 km | Speed: 408 km/h",
+      "description": "Callsign: PGT10RR | Höhe: 9.8 km | Speed: 696 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT296Z",
+      "name": "Flug PGT82MC",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.706,
-      "lon": 29.2236,
-      "lng": 29.2236,
+      "lat": 40.9193,
+      "lon": 25.0336,
+      "lng": 25.0336,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT296Z | Höhe: 3.6 km | Speed: 672 km/h",
+      "description": "Callsign: PGT82MC | Höhe: 11.0 km | Speed: 802 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AXB895",
+      "name": "Flug PGT749",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 26.6958,
-      "lon": 50.1564,
-      "lng": 50.1564,
+      "lat": 34.6543,
+      "lon": 36.6332,
+      "lng": 36.6332,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AXB895 | Höhe: 10.4 km | Speed: 874 km/h",
+      "description": "Callsign: PGT749 | Höhe: 11.0 km | Speed: 844 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug N805XA",
+      "name": "Flug AEE2LK",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 23.7575,
-      "lon": 51.0779,
-      "lng": 51.0779,
+      "lat": 34.9802,
+      "lon": 33.4629,
+      "lng": 33.4629,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: N805XA | Höhe: 4.9 km | Speed: 702 km/h",
+      "description": "Callsign: AEE2LK | Höhe: 2.3 km | Speed: 473 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug RRR9958",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 34.1647,
-      "lon": 32.7041,
-      "lng": 32.7041,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR9958 | Höhe: 3.4 km | Speed: 636 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "ADS-B Signal 781BEF",
+      "name": "Flug CPA870",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.5991,
-      "lon": 118.0542,
-      "lng": 118.0542,
+      "lat": 22.4507,
+      "lon": 118.9002,
+      "lng": 118.9002,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: Unbekannt | Höhe: 10.2 km | Speed: 806 km/h",
+      "description": "Callsign: CPA870 | Höhe: 9.4 km | Speed: 973 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CPA319",
+      "name": "Flug CRK679",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.3528,
-      "lon": 115.8669,
-      "lng": 115.8669,
+      "lat": 22.9032,
+      "lon": 118.4549,
+      "lng": 118.4549,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CPA319 | Höhe: 7.9 km | Speed: 870 km/h",
+      "description": "Callsign: CRK679 | Höhe: 11.6 km | Speed: 861 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -210,7 +263,7 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-23"
+        "last_seen": "2026-08-24"
       },
       {
         "id": "iran",
@@ -218,13 +271,13 @@
         "group": "staat",
         "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-23"
+        "last_seen": "2026-08-24"
       },
       {
         "id": "israel",
         "label": "Israel",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-20"
       },
@@ -232,31 +285,31 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 11,
+        "val": 15,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-15"
+        "last_seen": "2026-08-24"
       },
       {
         "id": "taiwan",
         "label": "Taiwan",
         "group": "staat",
-        "val": 3,
+        "val": 5,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-14"
+        "last_seen": "2026-08-24"
       },
       {
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 21,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-22"
+        "last_seen": "2026-08-24"
       },
       {
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 19,
+        "val": 18,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -264,9 +317,9 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 21,
+        "val": 22,
         "first_seen": "2026-07-25",
-        "last_seen": "2026-08-22"
+        "last_seen": "2026-08-24"
       },
       {
         "id": "fed",
@@ -277,28 +330,12 @@
         "last_seen": "2026-08-20"
       },
       {
-        "id": "cyber_risiko",
-        "label": "Cyber-Sicherheit",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-07-26",
-        "last_seen": "2026-08-09"
-      },
-      {
         "id": "nato",
         "label": "NATO",
         "group": "organisation",
         "val": 3,
         "first_seen": "2026-07-29",
         "last_seen": "2026-08-14"
-      },
-      {
-        "id": "palästina",
-        "label": "Palästina",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-08-09",
-        "last_seen": "2026-08-09"
       },
       {
         "id": "hamas",
@@ -432,7 +469,7 @@
         "id": "oel",
         "label": "Öl",
         "group": "risiko",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-08-14",
         "last_seen": "2026-08-17"
       },
@@ -472,7 +509,7 @@
         "id": "siemens",
         "label": "Siemens",
         "group": "tech",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-15",
         "last_seen": "2026-08-17"
       },
@@ -600,7 +637,7 @@
         "id": "mlflow_ssrf",
         "label": "CVE-2026-64849",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-20",
         "last_seen": "2026-08-20"
       },
@@ -616,23 +653,23 @@
         "id": "kanada",
         "label": "Kanada",
         "group": "staat",
-        "val": 10,
+        "val": 13,
         "first_seen": "2026-08-22",
-        "last_seen": "2026-08-23"
+        "last_seen": "2026-08-24"
       },
       {
         "id": "zimbra",
         "label": "CVE-2026-73570",
         "group": "risiko",
-        "val": 8,
+        "val": 12,
         "first_seen": "2026-08-22",
-        "last_seen": "2026-08-23"
+        "last_seen": "2026-08-24"
       },
       {
         "id": "meloni",
         "label": "G. Meloni",
         "group": "actor",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-22"
       },
@@ -640,7 +677,7 @@
         "id": "deutschland",
         "label": "Deutschland",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-23",
         "last_seen": "2026-08-23"
       },
@@ -648,7 +685,7 @@
         "id": "afd",
         "label": "AfD",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-23",
         "last_seen": "2026-08-23"
       },
@@ -656,9 +693,25 @@
         "id": "us_investoren",
         "label": "US-Investoren",
         "group": "actor",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-23",
         "last_seen": "2026-08-23"
+      },
+      {
+        "id": "taliban",
+        "label": "Taliban",
+        "group": "organisation",
+        "val": 5,
+        "first_seen": "2026-08-24",
+        "last_seen": "2026-08-24"
+      },
+      {
+        "id": "lateinamerika",
+        "label": "Lateinamerika",
+        "group": "actor",
+        "val": 5,
+        "first_seen": "2026-08-24",
+        "last_seen": "2026-08-24"
       }
     ],
     "edges": [
@@ -843,8 +896,8 @@
         "to": "taiwan",
         "source": "china",
         "target": "taiwan",
-        "label": "Druck",
-        "last_seen": "2026-08-15"
+        "label": "Spannungen",
+        "last_seen": "2026-08-24"
       },
       {
         "from": "usa",
@@ -852,7 +905,7 @@
         "source": "usa",
         "target": "taiwan",
         "label": "Unterstützung",
-        "last_seen": "2026-08-15"
+        "last_seen": "2026-08-24"
       },
       {
         "from": "russland",
@@ -1052,7 +1105,7 @@
         "source": "usa",
         "target": "kanada",
         "label": "Handelskonflikt",
-        "last_seen": "2026-08-23"
+        "last_seen": "2026-08-24"
       },
       {
         "from": "eu",
@@ -1083,8 +1136,8 @@
         "to": "usa",
         "source": "iran",
         "target": "usa",
-        "label": "Konflikt",
-        "last_seen": "2026-08-22"
+        "label": "Konflikt (Persischer Golf)",
+        "last_seen": "2026-08-24"
       },
       {
         "from": "meloni",
@@ -1125,6 +1178,46 @@
         "target": "deutschland",
         "label": "Politische Spannung",
         "last_seen": "2026-08-23"
+      },
+      {
+        "from": "usa",
+        "to": "zimbra",
+        "source": "usa",
+        "target": "zimbra",
+        "label": "Cyberrisiko",
+        "last_seen": "2026-08-24"
+      },
+      {
+        "from": "kanada",
+        "to": "zimbra",
+        "source": "kanada",
+        "target": "zimbra",
+        "label": "Cyberrisiko",
+        "last_seen": "2026-08-24"
+      },
+      {
+        "from": "ukraine",
+        "to": "russland",
+        "source": "ukraine",
+        "target": "russland",
+        "label": "Krieg",
+        "last_seen": "2026-08-24"
+      },
+      {
+        "from": "taliban",
+        "to": "usa",
+        "source": "taliban",
+        "target": "usa",
+        "label": "Isolation",
+        "last_seen": "2026-08-24"
+      },
+      {
+        "from": "lateinamerika",
+        "to": "usa",
+        "source": "lateinamerika",
+        "target": "usa",
+        "label": "Diplomatische Spannungen",
+        "last_seen": "2026-08-24"
       }
     ],
     "links": [
@@ -1309,8 +1402,8 @@
         "to": "taiwan",
         "source": "china",
         "target": "taiwan",
-        "label": "Druck",
-        "last_seen": "2026-08-15"
+        "label": "Spannungen",
+        "last_seen": "2026-08-24"
       },
       {
         "from": "usa",
@@ -1318,7 +1411,7 @@
         "source": "usa",
         "target": "taiwan",
         "label": "Unterstützung",
-        "last_seen": "2026-08-15"
+        "last_seen": "2026-08-24"
       },
       {
         "from": "russland",
@@ -1518,7 +1611,7 @@
         "source": "usa",
         "target": "kanada",
         "label": "Handelskonflikt",
-        "last_seen": "2026-08-23"
+        "last_seen": "2026-08-24"
       },
       {
         "from": "eu",
@@ -1549,8 +1642,8 @@
         "to": "usa",
         "source": "iran",
         "target": "usa",
-        "label": "Konflikt",
-        "last_seen": "2026-08-22"
+        "label": "Konflikt (Persischer Golf)",
+        "last_seen": "2026-08-24"
       },
       {
         "from": "meloni",
@@ -1591,18 +1684,58 @@
         "target": "deutschland",
         "label": "Politische Spannung",
         "last_seen": "2026-08-23"
+      },
+      {
+        "from": "usa",
+        "to": "zimbra",
+        "source": "usa",
+        "target": "zimbra",
+        "label": "Cyberrisiko",
+        "last_seen": "2026-08-24"
+      },
+      {
+        "from": "kanada",
+        "to": "zimbra",
+        "source": "kanada",
+        "target": "zimbra",
+        "label": "Cyberrisiko",
+        "last_seen": "2026-08-24"
+      },
+      {
+        "from": "ukraine",
+        "to": "russland",
+        "source": "ukraine",
+        "target": "russland",
+        "label": "Krieg",
+        "last_seen": "2026-08-24"
+      },
+      {
+        "from": "taliban",
+        "to": "usa",
+        "source": "taliban",
+        "target": "usa",
+        "label": "Isolation",
+        "last_seen": "2026-08-24"
+      },
+      {
+        "from": "lateinamerika",
+        "to": "usa",
+        "source": "lateinamerika",
+        "target": "usa",
+        "label": "Diplomatische Spannungen",
+        "last_seen": "2026-08-24"
       }
     ]
   },
   "simple_key_takeaways": [
-    "Eskalierender Handelskonflikt zwischen USA und Kanada mit gegenseitigen Zöllen und provokativer Rhetorik.",
-    "Kritische Cybersicherheitslücke (CVE-2026-73570) in Zimbra Collaboration Suite erfordert sofortige Patches.",
-    "US-Investoren übernehmen europäische Vermögensverwalter in Rekordgeschwindigkeit.",
-    "AfD in Sachsen-Anhalt könnte von Ostdeutschlands Unzufriedenheit profitieren.",
-    "Mysteriöses Verschwinden eines Krypto-Chefs unterstreicht anhaltende Probleme im Kryptosektor."
+    "Handelskonflikt USA-Kanada bedroht nordamerikanische Lieferketten, besonders in der Auto- und Energiebranche.",
+    "Kritische Zimbra-Schwachstelle (CVE-2026-73570) wird aktiv ausgenutzt – sofortige Patches erforderlich.",
+    "Märkte bleiben vorerst stabil, aber strukturelle Risiken durch Handelsstreit und Cyberbedrohungen bestehen.",
+    "Rechtspopulistische Allianzen in Lateinamerika gewinnen an Einfluss, was regionale Polarisierung verstärkt.",
+    "Taliban festigen ihre Kontrolle über Afghanistan, was langfristig humanitäre und sicherheitspolitische Risiken birgt."
   ],
   "geoscore": {
-    "current_score": 75,
+    "current_score": 72,
     "status": "Erhöht"
   },
   "defcon": 3,
@@ -1610,14 +1743,38 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 23. AUGUST 2026**\n\n**1.  GLOBALE & WIRTSCHAFTLICHE LAGE**\nDie wirtschaftliche Unsicherheit wird durch den eskalierenden Handelskonflikt zwischen den USA und Kanada verstärkt. Premierminister Carney kündigt Vergeltungszölle an, während Ex-Präsident Trump erneut die Idee einer Annexion Kanadas als 51. US-Bundesstaat ins Spiel bringt. Parallel dazu zeigt sich eine strategische Verschiebung im Finanzsektor: US-Investoren übernehmen europäische Vermögensverwalter in einem Tempo, das es seit Jahrzehnten nicht mehr gegeben hat, um global zu expandieren. Die US-Notenbank hat unterdessen den Antrag der National Westminster Bank Plc genehmigt, was auf eine anhaltende internationale Konsolidierung im Bankensektor hindeutet.\n\n**2.  CYBERSICHERHEIT & INFRASTRUKTUR**\nEs besteht eine akute Warnlage. Die US-Behörde CISA hat eine neue, aktiv ausgenutzte Schwachstelle in den Katalog der bekannten Sicherheitslücken aufgenommen: CVE-2026-73570 betrifft die Zimbra Collaboration Suite (ZCS) und ermöglicht die Ausführung von Betriebssystembefehlen (OS Command Injection). Da Zimbra in vielen Unternehmen und Institutionen weltweit eingesetzt wird, drohen durch diese Angriffsvektoren umfassende Kompromittierungen. Die Behörde empfiehlt dringend, die verfügbaren Patches sofort einzuspielen.\n\n**3.  POLITIK & GESELLSCHAFT**\n- **USA/Kanada:** Der Handelsstreit dominiert die Berichterstattung. Die Rhetorik Trumps sorgt für diplomatische Spannungen; Kanadas Regierung reagiert mit wirtschaftlichen Gegenmaßnahmen.\n- **Deutschland:** Die NZZ porträtiert die DDR-Therapeutin Irene Misselwitz, die vor den Landtagswahlen in Sachsen-Anhalt vor einem möglichen Wahlerfolg der AfD warnt. Sie sieht darin eine \"Rache der Ossis für 1989\" und kritisiert das Versprechen von Sicherheit durch die Partei als Trugschluss.\n- **UK:** Eine persönliche Kolumne im Wall Street Journal thematisiert die Frage einer monatlichen Rente an eine entfremdete Tochter. Der Fall verdeutlicht die rechtlichen und emotionalen Grauzonen bei der Vermögensübertragung in zerrütteten Familienverhältnissen.\n\n**4.  WIRTSCHAFT & FINANZEN OHNE GLOBALKONTEXT**\nDer europäische Asset-Management-Markt erlebt eine Übernahmewelle durch US-Konzerne. Der Grund: Europäische Fondsgesellschaften kämpfen mit schwachen Margen und Skaleneffekten, während US-Wettbewerber aggressiv auf Marktkonsolidierung setzen, um ihre globale Präsenz zu stärken.\n\n**5.  SICHERHEIT & KRIMINALITÄT**\nDie New York Times berichtet über das erneute Verschwinden eines Krypto-Chefs einer europäischen Börse – vier Jahre nachdem bereits sein Vorgänger unter mysteriösen Umständen verschwand. Diese Vorfälle untermauern das anhaltende Misstrauen gegenüber dem Kryptosektor und seine Attraktivität für kriminelle Netzwerke.\n\n**6.  UNFÄLLE & NATURKATASTROPHEN**\nIm Atlantik gibt der National Hurricane Center (NHC) einen Tropischen Wetterausblick heraus. Aktuell besteht keine unmittelbare Warnung für Landgebiete, jedoch wird die Entwicklung im Nordatlantik beobachtet. Ein kurioser Vorfall im US-Bundesstaat Tennessee: Ein Schwarzbär drang in einen Teeladen in Gatlinburg ein und erschreckte ein Paar während dessen Hochzeitstags-Reise. Es gab offenbar keine Verletzten, lediglich Sachschaden.\n\nMACRO:\n**23.08.2026 Overview:**\n\n### Zentralbank\n- **Federal Reserve Press:**\n  - The Federal Reserve Board has approved the application by National Westminster Bank Plc. This move is likely to have implications for cross-border banking regulations and operations in the U.S.\n\n### Cyber / Infrastruktur\n- **CISA Cyber Alerts:**\n  - CISA has added CVE-2026-73570, a Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability, to its Known Exploited Vulnerabilities (KEV) Catalog. This vulnerability is being actively exploited, and organizations are advised to patch their systems immediately.\n\n### US/Presse\n- **New York Times World:**\n  - The article highlights the ongoing issues in the cryptocurrency industry, particularly focusing on the mysterious disappearance of cryptocurrency exchange bosses. The collapse of a European exchange further tarnishes the industry's reputation.\n\n### US/Finanzen\n- **Wall Street Journal (MarketWatch Alt):**\n  - An article discusses the ethical and financial considerations of leaving an estranged daughter a monthly annuity. The author reflects on the nature of the estrangement and the moral obligations of a parent.\n\n### UK/Medien\n- **BBC World News:**\n  - Canada is retaliating against the U.S. in a trade war, with the Canadian prime minister announcing retaliatory tariffs. The U.S. is accused of initiating the trade conflict.\n\n### US/Politik\n- **Fox News Latest:**\n  - A video captures a black bear entering a Tennessee tea shop during a couple's anniversary trip, highlighting the unexpected and sometimes dangerous encounters with wildlife.\n\n### CH/Presse\n- **NZZ International:**\n  - An interview with Dr. Irene Misselwitz, a psychotherapist from East Germany, discusses the rise of the AfD party in Saxony-Anhalt and its impact on the region's sense of security and identity post-reunification.\n\n### UK/Finanzen\n- **Financial Times:**\n  - U.S. buyers are acquiring European asset managers at a record pace, driven by the desire to expand globally and bulk up their portfolios. This trend reflects the current dynamics in the global financial market.\n\n### Wetter/Extreme\n- **NOAA National Hurricane Center:**\n  - The Atlantic Tropical Weather Outlook reports a non-tropical area of low pressure in the northeastern Atlantic, potentially affecting coastal areas with gale-force winds.\n\n### Investigativ Net\n- **ICIJ (Panama/Pandora Papers):**\n  - Despite years of efforts to confiscate stolen artworks, the Metropolitan Museum of Art still holds hundreds of pieces linked to alleged trafficking and looting. The museum has initiated an expedited review of these works.\n\n### NGO/Frühwarnung\n- **International Crisis Group:**\n  - The latest reports from the International Crisis Group, while incomplete, likely provide early warnings and analyses of potential geopolitical and humanitarian crises.\n\nThis summary covers the key points from the various feeds, providing a comprehensive overview of the day's events and developments.",
+  "game_theory_analysis": "Deine **Kreuzprüfung (\"Fingerklopfen\")** der Meldungen vom **24.08.2026** zwischen **GROQ** und **DEEPSEEK** zeigt eine hohe Konsistenz in der Analyse, aber auch einige **Nuancen und Ergänzungen**, die eine vertiefte Einordnung ermöglichen. Hier die **systematische Gegenüberstellung** mit Bewertung der Plausibilität und möglichen Lücken:\n\n---\n\n### **1. Handelskonflikt USA–Kanada**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Marktreaktion**        | Futures \"flat\" → Märkte eingepreist oder als Bluff gewertet.             | Futures \"flat\" → Bestätigt, aber mit Hinweis auf Risiko für Lieferketten.    | **Konsistent**: Beide sehen keine akute Panik, aber DEEPSEEK betont die **strukturellen Risiken** (Energie, Logistik). |\n| **Hintergrund**          | Keine Details.                                                          | Verweis auf **nordamerikanische Lieferketten** (z. B. Autoindustrie, Öl/Gas). | **DEEPSEEK ergänzt**: Konkrete Sektoren genannt → höhere Plausibilität.          |\n| **Geopolitische Einordnung** | –                                                                      | –                                                                            | **Lücke**: Keine Analyse, ob der Konflikt mit China (z. B. über kritische Mineralien) verknüpft ist. |\n\n**Bewertung**:\n- **DEEPSEEK** liefert **konkretere Risikofaktoren** (Energie, Lieferketten).\n- **Fehlende Dimension**: Beide übersehen, ob der Konflikt **symbolisch** (z. B. für Midterm-Wahlen 2026) oder **substanziell** (Zölle, Sanktionen) ist.\n\n---\n\n### **2. Zimbra-CVE (CVE-2026-73570)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Schweregrad**          | \"Kritische Schwachstelle\" → KEV-Katalog-Eintrag.                         | **OS-Command-Injection** mit **aktiver Ausnutzung** → extrem kritisch.       | **DEEPSEEK präziser**: Technische Details (Command Injection) erhöhen Dringlichkeit. |\n| **Handlungsempfehlung**  | Patchen.                                                                | **Sofortige Prüfung** + Warnung vor Ransomware/Datendiebstahl.               | **DEEPSEEK dringlicher**: Betont **Zeitkritikalität** (\"jede Verzögerung erhöht Risiko\"). |\n| **Betroffene Systeme**   | –                                                                      | Zimbra in **Unternehmen/Behörden** verbreitet.                               | **DEEPSEEK ergänzt**: Konkrete Zielgruppen → höhere Relevanz für IT-Sicherheitsteams. |\n\n**Bewertung**:\n- **DEEPSEEK** liefert **handlungsrelevantere Informationen** (technische Details, Risikoszenarien).\n- **GROQ** bleibt **oberflächlicher**, aber korrekt.\n- **Fehlende Dimension**: Beide nennen keine **bekannten Angreifergruppen** (z. B. APTs, Ransomware-Banden), die die Lücke ausnutzen.\n\n---\n\n### **3. Wirtschaftspolitik (Fed, Ukraine-Hilfen)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Fed-Entscheidung**     | NatWest-Übernahme genehmigt → Routine.                                   | Bestätigt, aber mit Hinweis auf **globale Bankenverflechtung**.               | **DEEPSEEK interpretiert**: Zeigt **systemische Risiken** (z. B. für Finanzstabilität). |\n| **Ukraine-Hilfen**       | 6 Mrd. Euro von EU → NZZ.                                                | Betont **langfristige finanzielle Belastung** (4. Kriegsjahr).               | **DEEPSEEK kontextualisiert**: Verknüpft mit **EU-Haushaltsdebatten** (z. B. Schuldenregeln). |\n\n**Bewertung**:\n- **DEEPSEEK** liefert **strategischere Einordnung** (Finanzstabilität, Kriegsdauer).\n- **GROQ** bleibt **deskriptiv**.\n- **Fehlende Dimension**: Keine Analyse, ob die Hilfen **an Bedingungen** (z. B. Reformen) geknüpft sind.\n\n---\n\n### **4. Geopolitik (Lateinamerika, Afghanistan)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Lateinamerika**        | NYT: Rechte Führungspersönlichkeiten mischen sich in Wahlen ein.         | **Destabilisierung** + **ideologische Polarisierung** (Trump-Echo).          | **DEEPSEEK vertieft**: Zeigt **Muster** (z. B. Einflussnahme über soziale Medien). |\n| **Afghanistan**          | BBC: Taliban radikalisieren sich (Privatleben-Kontrolle).                | **Progressive Radikalisierung** + humanitäre Krise.                          | **DEEPSEEK präziser**: \"Progressiv\" deutet auf **langfristige Entwicklung** hin. |\n\n**Bewertung**:\n- **DEEPSEEK** analysiert **Trends** (Radikalisierung als Prozess), während GROQ **Momentaufnahmen** liefert.\n- **Fehlende Dimension**:\n  - **Lateinamerika**: Keine Nennung konkreter Länder (z. B. Brasilien, Mexiko) oder Akteure (z. B. Bolsonaro-Netzwerke).\n  - **Afghanistan**: Keine Verknüpfung mit **Terrorismus-Export** (z. B. IS-K) oder regionalen Spannungen (Pakistan, Iran).\n\n---\n\n### **5. Wetter & Investitionen**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Hurrikan-Risiko**      | Tiefdruckgebiet AL95 → mögliche Hurrikan-Entwicklung.                    | Warnung vor **Energiepreis-Schocks** (Golf von Mexiko) + Versicherungsmärkte. | **DEEPSEEK verknüpft**: Wetter mit **ökonomischen Folgen** (Öl, Gas, Katastrophenfonds). |\n| **Investitionen**        | FTAV: Debt/Equity + AI-Strategien.                                       | Institutionelle Anleger denken über **Kapitalstruktur** nach.                | **DEEPSEEK interpretiert**: Zeigt **Marktstimmung** (z. B. Zinsumfeld, KI-Hype). |\n\n**Bewertung**:\n- **DEEPSEEK** macht **ökonomische Implikationen** explizit (Energie, Versicherungen).\n- **GROQ** bleibt **technisch** (Wetterdaten).\n- **Fehlende Dimension**:\n  - Keine Analyse, ob **Klimarisiken** (z. B. Hurrikane) bereits in Asset-Preisen eingepreist sind.\n  - Keine Nennung von **ESG-Faktoren** (z. B. wie Investoren auf Klimarisiken reagieren).\n\n---\n\n### **Gesamtbewertung der Kreuzprüfung**\n| **Kriterium**            | **GROQ**                          | **DEEPSEEK**                          | **Fazit**                                                                       |\n|--------------------------|-----------------------------------|---------------------------------------|---------------------------------------------------------------------------------|\n| **Tie",
   "stock_picks": {
     "top_5_buys": [
       {
         "ticker": "XLE",
         "name": "Energy Select Sector",
         "asset": "Energie",
-        "reason": "Geopolitische Spannungen und Handelskonflikte erhöhen die Nachfrage nach sicheren Energiequellen."
+        "reason": "Handelskonflikt USA-Kanada könnte Energieexporte beeinträchtigen, was die Preise stützt. Zudem bleibt die geopolitische Lage im Persischen Golf angespannt."
+      },
+      {
+        "ticker": "GLD",
+        "name": "SPDR Gold Trust",
+        "asset": "Edelmetalle",
+        "reason": "Sicherer Hafen bei zunehmender Unsicherheit durch Handelskonflikte und Cyberrisiken."
+      },
+      {
+        "ticker": "LMT",
+        "name": "Lockheed Martin",
+        "asset": "Rüstung",
+        "reason": "Langfristige Nachfrage durch globale Spannungen, insbesondere in Osteuropa und Asien."
+      },
+      {
+        "ticker": "MSFT",
+        "name": "Microsoft",
+        "asset": "Technologie",
+        "reason": "Cybersicherheitsausgaben steigen aufgrund der Zimbra-Schwachstelle und ähnlicher Bedrohungen."
+      },
+      {
+        "ticker": "NEE",
+        "name": "NextEra Energy",
+        "asset": "Erneuerbare Energien",
+        "reason": "Diversifizierung weg von fossilen Brennstoffen wird durch Handelskonflikte beschleunigt."
       }
     ],
     "flop_5_sells": [
@@ -1625,26 +1782,50 @@
         "ticker": "EEM",
         "name": "Emerging Markets",
         "asset": "Schwellenländer",
-        "reason": "Handelskonflikte und wirtschaftliche Unsicherheit belasten exportabhängige Schwellenländer."
+        "reason": "Handelskonflikte und globale Unsicherheit belasten exportabhängige Volkswirtschaften."
+      },
+      {
+        "ticker": "TSLA",
+        "name": "Tesla",
+        "asset": "Automobil",
+        "reason": "Lieferkettenrisiken in Nordamerika und mögliche Zölle auf Batteriematerialien."
+      },
+      {
+        "ticker": "AMZN",
+        "name": "Amazon",
+        "asset": "E-Commerce/Logistik",
+        "reason": "Handelsbeschränkungen könnten Lieferketten und Margen belasten."
+      },
+      {
+        "ticker": "BABA",
+        "name": "Alibaba",
+        "asset": "Technologie/E-Commerce",
+        "reason": "Geopolitische Spannungen zwischen USA und China sowie Handelskonflikte wirken belastend."
+      },
+      {
+        "ticker": "XLU",
+        "name": "Utilities Select Sector",
+        "asset": "Versorger",
+        "reason": "Zinsrisiko und mögliche regulatorische Eingriffe bei Handelskonflikten."
       }
     ]
   },
-  "timestamp": "2026-08-23T06:28:21.450844+00:00",
+  "timestamp": "2026-08-24T06:41:46.221007+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-23T06:26:22.132804+00:00",
+    "timestamp": "2026-08-24T06:39:32.584027+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 121,
+    "feeds_failed": 103,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
       "DeepSeek",
       "qwen-2.5-72b-instruct"
     ],
-    "swarm_debate_status": "ERROR (HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=35))",
+    "swarm_debate_status": "SUCCESS",
     "synthesizer_status": "SUCCESS",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (57 Nodes)",
     "errors": []
   },
@@ -1654,13 +1835,13 @@
     "ampel_now": "GELB",
     "ampel_changed": false,
     "geoscore_prev": 75,
-    "geoscore_now": 75,
-    "geoscore_delta": 0,
+    "geoscore_now": 72,
+    "geoscore_delta": -3,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 56,
+    "nodes_prev": 57,
     "nodes_now": 57,
     "hotspots_now": 9,
-    "summary": "Graph-Knoten 56 → 57"
+    "summary": "Geoscore 75 → 72 (-3)"
   }
 }
