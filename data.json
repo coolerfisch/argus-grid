@@ -1,267 +1,122 @@
 {
+  "ampel_status": "GELB",
+  "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
+  "daily_executive_summary": "### **Kreuzprüfung der Feeds vom 25.08.2026 (\"Fingerklopfen\")**\n**Vergleich GROQ vs. DEEPSEEK – Konsistenz, Abweichungen, Ergänzungen**\n\n---\n\n### **1. Cybersicherheit / Kritische Infrastruktur (Höchste Priorität)**\n✅ **Übereinstimmung:**\n- Beide Feeds bestätigen die **CVE-2026-21962** (Oracle HTTP Server/WebLogic Proxy Plug-in) als **aktiv ausgenutzte Schwachstelle** (KEV-Eintrag bei CISA).\n- **Handlungsaufforderung:** Sofortiges Patchen und IoC-Überprüfung.\n\n⚠️ **Ergänzungen/Abweichungen:**\n- **DEEPSEEK** liefert präzisere technische Details (z. B. \"Improper Access Control\"), während **GROQ**...",
+  "daily_executive_summary_simple": "### **Kreuzprüfung der Feeds vom 25.08.2026 (\"Fingerklopfen\")**\n**Vergleich GROQ vs. DEEPSEEK – Konsistenz, Abweichungen, Ergänzungen**\n\n---\n\n### **1. Cybersicherheit / Kritische Infrastruktur (Höchste Priorität)**\n✅ **Übereinstimmung:**\n- Beide Feeds bestätigen die **CVE-2026-21962** (Oracle HTTP Server/WebLogic Proxy Plug-in) als **aktiv ausgenut...",
+  "key_takeaways": [
+    "Beide Feeds bestätigen die **CVE-2026-21962** (Oracle HTTP Server/WebLogic Proxy Plug-in) als **aktiv ausgenutzte Schwachstelle** (KEV-Eintrag bei CISA).",
+    "Handlungsaufforderung:** Sofortiges Patchen und IoC-Überprüfung.",
+    "DEEPSEEK** liefert präzisere technische Details (z. B. \"Improper Access Control\"), während **GROQ** (laut Ihrem Input) keine spezifischen CVE-Details nennt.",
+    "GROQ** erwähnt zusätzlich:",
+    "Microsoft-Exchange-Server-Schwachstelle** (CVE-2026-34567) mit \"kritischem\" CVSS-Score (9.8)."
+  ],
   "overall_geoscore": 72,
   "defcon_level": 3,
-  "ampel_status": "GELB",
-  "ampel_reason_simple": "Handelskonflikt USA-Kanada und kritische Zimbra-Schwachstelle erhöhen Risiken, aber keine akute Eskalation oder systemische Krise erkennbar.",
-  "daily_executive_summary": "Die globale Lage am 24.08.2026 ist geprägt von zwei zentralen Risikofaktoren: Erstens droht ein Handelskonflikt zwischen den USA und Kanada, der Lieferketten in Nordamerika – insbesondere in der Auto- und Energiebranche – belasten könnte. Die Märkte reagieren bisher verhalten, doch strukturelle Verwerfungen sind möglich, falls Zölle oder Sanktionen umgesetzt werden. Zweitens wurde eine kritische Sicherheitslücke in Zimbra Collaboration Suite (CVE-2026-73570) identifiziert, die bereits aktiv ausgenutzt wird und Unternehmen weltweit gefährdet. Cyberangriffe könnten zu Datenlecks oder Ransomware-Attacken führen. Geopolitisch bleibt die Ukraine-Krise stabil, während in Lateinamerika rechtspopulistische Allianzen an Einfluss gewinnen. Die Taliban konsolidieren weiterhin ihre Macht in Afghanistan, was langfristig regionale Instabilität begünstigt.",
-  "daily_executive_summary_simple": "Die Welt ist aktuell etwas unsicherer geworden. Die USA und Kanada streiten sich über Handel, was Probleme für Autos und Energie machen könnte. Gleichzeitig gibt es eine gefährliche Computer-Schwachstelle, die Hacker ausnutzen. In anderen Teilen der Welt, wie der Ukraine oder Afghanistan, bleibt die Lage angespannt, aber es gibt keine akuten Kriege. Die Börsen reagieren noch ruhig, aber es könnte bald unruhiger werden.",
-  "key_takeaways": [
-    "Handelskonflikt USA-Kanada bedroht nordamerikanische Lieferketten, besonders in der Auto- und Energiebranche.",
-    "Kritische Zimbra-Schwachstelle (CVE-2026-73570) wird aktiv ausgenutzt – sofortige Patches erforderlich.",
-    "Märkte bleiben vorerst stabil, aber strukturelle Risiken durch Handelsstreit und Cyberbedrohungen bestehen.",
-    "Rechtspopulistische Allianzen in Lateinamerika gewinnen an Einfluss, was regionale Polarisierung verstärkt.",
-    "Taliban festigen ihre Kontrolle über Afghanistan, was langfristig humanitäre und sicherheitspolitische Risiken birgt."
-  ],
-  "market_regime": "Fragmentiert / Volatil",
-  "top_risk": "Lieferketten & Energie",
-  "equity_rotation": {
-    "top5_buys": [
-      {
-        "ticker": "XLE",
-        "name": "Energy Select Sector",
-        "asset": "Energie",
-        "reason": "Handelskonflikt USA-Kanada könnte Energieexporte beeinträchtigen, was die Preise stützt. Zudem bleibt die geopolitische Lage im Persischen Golf angespannt."
-      },
-      {
-        "ticker": "GLD",
-        "name": "SPDR Gold Trust",
-        "asset": "Edelmetalle",
-        "reason": "Sicherer Hafen bei zunehmender Unsicherheit durch Handelskonflikte und Cyberrisiken."
-      },
-      {
-        "ticker": "LMT",
-        "name": "Lockheed Martin",
-        "asset": "Rüstung",
-        "reason": "Langfristige Nachfrage durch globale Spannungen, insbesondere in Osteuropa und Asien."
-      },
-      {
-        "ticker": "MSFT",
-        "name": "Microsoft",
-        "asset": "Technologie",
-        "reason": "Cybersicherheitsausgaben steigen aufgrund der Zimbra-Schwachstelle und ähnlicher Bedrohungen."
-      },
-      {
-        "ticker": "NEE",
-        "name": "NextEra Energy",
-        "asset": "Erneuerbare Energien",
-        "reason": "Diversifizierung weg von fossilen Brennstoffen wird durch Handelskonflikte beschleunigt."
-      }
-    ],
-    "flop5_sells": [
-      {
-        "ticker": "EEM",
-        "name": "Emerging Markets",
-        "asset": "Schwellenländer",
-        "reason": "Handelskonflikte und globale Unsicherheit belasten exportabhängige Volkswirtschaften."
-      },
-      {
-        "ticker": "TSLA",
-        "name": "Tesla",
-        "asset": "Automobil",
-        "reason": "Lieferkettenrisiken in Nordamerika und mögliche Zölle auf Batteriematerialien."
-      },
-      {
-        "ticker": "AMZN",
-        "name": "Amazon",
-        "asset": "E-Commerce/Logistik",
-        "reason": "Handelsbeschränkungen könnten Lieferketten und Margen belasten."
-      },
-      {
-        "ticker": "BABA",
-        "name": "Alibaba",
-        "asset": "Technologie/E-Commerce",
-        "reason": "Geopolitische Spannungen zwischen USA und China sowie Handelskonflikte wirken belastend."
-      },
-      {
-        "ticker": "XLU",
-        "name": "Utilities Select Sector",
-        "asset": "Versorger",
-        "reason": "Zinsrisiko und mögliche regulatorische Eingriffe bei Handelskonflikten."
-      }
-    ]
-  },
-  "domestic_policy_matrix": [
-    {
-      "region": "USA",
-      "stability": "GELB",
-      "dynamics": "Handelskonflikt mit Kanada könnte Midterm-Wahlen 2026 beeinflussen. Cyberbedrohungen erfordern regulatorische Maßnahmen. Polarisierung in der Innenpolitik bleibt hoch."
-    },
-    {
-      "region": "Kanada",
-      "stability": "GELB",
-      "dynamics": "Wirtschaftliche Abhängigkeit von den USA führt zu Verwundbarkeit. Regierung sucht nach alternativen Handelspartnern, insbesondere in Asien."
-    },
-    {
-      "region": "EU",
-      "stability": "GRÜN",
-      "dynamics": "Stabile Lage, aber Handelskonflikt USA-Kanada könnte indirekte Auswirkungen auf europäische Lieferketten haben. Fokus auf Ukraine-Hilfen und Energiesicherheit."
-    },
-    {
-      "region": "Lateinamerika",
-      "stability": "GELB",
-      "dynamics": "Rechtspopulistische Regierungen stärken Allianzen, was zu regionaler Polarisierung führt. Wirtschaftliche Unsicherheit in mehreren Ländern."
-    },
-    {
-      "region": "Afghanistan",
-      "stability": "ROT",
-      "dynamics": "Taliban festigen Kontrolle, aber humanitäre Krise verschärft sich. Internationale Isolation bleibt bestehen."
-    }
-  ],
-  "historical_precedents": [
-    {
-      "event": "Drohende Zölle und Sanktionen zwischen den USA und Kanada.",
-      "current_event": "Drohende Zölle und Sanktionen zwischen den USA und Kanada.",
-      "historical_analog": "US-kanadischer Lachs-Streit (1997) und Handelskonflikt unter Trump (2018–2019).",
-      "similarity": "US-kanadischer Lachs-Streit (1997) und Handelskonflikt unter Trump (2018–2019).",
-      "takeaway": "Historisch führten solche Konflikte zu kurzfristigen Marktverwerfungen, aber selten zu langfristigen Brüchen. Dennoch können Lieferketten nachhaltig gestört werden."
-    },
-    {
-      "event": "Kritische OS-Command-Injection-Schwachstelle in Zimbra Collaboration Suite.",
-      "current_event": "Kritische OS-Command-Injection-Schwachstelle in Zimbra Collaboration Suite.",
-      "historical_analog": "Exchange-Server-Schwachstellen (ProxyLogon/ProxyShell, 2021) und Log4j (2021).",
-      "similarity": "Exchange-Server-Schwachstellen (ProxyLogon/ProxyShell, 2021) und Log4j (2021).",
-      "takeaway": "Solche Schwachstellen führen oft zu massiven Cyberangriffen, einschließlich Ransomware und Datendiebstahl. Schnelle Reaktion ist entscheidend."
-    }
-  ],
+  "market_regime": "Unsicher / Fragmentiert",
+  "top_risk": "Geopolitische Volatilität",
+  "game_theory_analysis": "### **Kreuzprüfung der Feeds vom 25.08.2026 (\"Fingerklopfen\")**\n**Vergleich GROQ vs. DEEPSEEK – Konsistenz, Abweichungen, Ergänzungen**\n\n---\n\n### **1. Cybersicherheit / Kritische Infrastruktur (Höchste Priorität)**\n✅ **Übereinstimmung:**\n- Beide Feeds bestätigen die **CVE-2026-21962** (Oracle HTTP Server/WebLogic Proxy Plug-in) als **aktiv ausgenutzte Schwachstelle** (KEV-Eintrag bei CISA).\n- **Handlungsaufforderung:** Sofortiges Patchen und IoC-Überprüfung.\n\n⚠️ **Ergänzungen/Abweichungen:**\n- **DEEPSEEK** liefert präzisere technische Details (z. B. \"Improper Access Control\"), während **GROQ** (laut Ihrem Input) keine spezifischen CVE-Details nennt.\n- **GROQ** erwähnt zusätzlich:\n  - **Microsoft-Exchange-Server-Schwachstelle** (CVE-2026-34567) mit \"kritischem\" CVSS-Score (9.8).\n  - **Ransomware-Angriff auf ein deutsches Krankenhaus** (Erpressungssumme: 5 Mio. €).\n  → **Fazit:** GROQ erweitert das Lagebild um **zwei weitere kritische Lücken** und einen **konkreten Vorfall in Deutschland**, was die Dringlichkeit erhöht.\n\n---\n\n### **2. Geopolitik & Kriegsführung (Hohe Priorität)**\n✅ **Übereinstimmung:**\n- **KI-Drohnen im Ukraine-Krieg:** Beide Feeds bestätigen den **ersten vollständig KI-gesteuerten Drohnenangriff** (Nvidia-Chip).\n- **Iran-Sanktionen:** DEEPSEEK spricht von \"wirtschaftlichem D-Day\", GROQ von **\"beispielloser Eskalation\"** (Sanktionen gegen iranische Öl- und Tech-Sektoren).\n- **Syrien:** Streichung von der Terrorliste wird in beiden Feeds als **diplomatischer Wendepunkt** gewertet.\n\n⚠️ **Ergänzungen/Abweichungen:**\n- **GROQ** fügt hinzu:\n  - **China-Taiwan:** Militärmanöver um die Insel mit **Hyperschallraketen-Tests** (DF-17).\n  - **Nordkorea:** Verkauf von **KI-gestützter Artillerie** an Russland (Bestätigung durch US-Geheimdienste).\n  - **Sahelzone:** Putsch in **Niger** (Militärjunta kündigt Austritt aus ECOWAS an).\n  → **Fazit:** GROQ liefert **konkretere Bedrohungsszenarien** (Hyperschallwaffen, Nordkorea-Russland-Kooperation) und **regionale Instabilität** (Sahel).\n\n---\n\n### **3. Wirtschaft & Finanzen (Mittlere Priorität)**\n✅ **Übereinstimmung:**\n- **OnlyFans-Dividenden:** Beide Feeds berichten über die **700 Mio. USD** an den verstorbenen Eigentümer.\n- **Fed-Entscheidung:** Genehmigung für National Westminster Bank wird erwähnt.\n\n⚠️ **Ergänzungen/Abweichungen:**\n- **GROQ** ergänzt:\n  - **Bitcoin-ETF:** SEC genehmigt **drei neue Spot-ETFs** (u. a. von BlackRock), was zu einem **Kursanstieg auf 120.000 USD** führt.\n  - **Lieferketten:** **Streiks in US-Häfen** (Los Angeles/Long Beach) wegen KI-bedingter Jobverluste.\n  - **Europäische Bankenkrise:** **Deutsche Bank** warnt vor \"systemischen Risiken\" durch Immobilienblase in Deutschland.\n  → **Fazit:** GROQ liefert **marktbewegende Nachrichten** (Bitcoin, Streiks, Bankenkrise), die DEEPSEEK nicht abdeckt.\n\n---\n\n### **4. Innenpolitik & Soziales (USA)**\n✅ **Übereinstimmung:**\n- **COBRA-Kosten:** WSJ-Analyse wird in beiden Feeds zitiert.\n- **Hitzewelle in Arizona:** Fall des 72-Jährigen mit Amputation wird erwähnt.\n\n⚠️ **Ergänzungen/Abweichungen:**\n- **GROQ** fügt hinzu:\n  - **Wahlkampf 2026:** **Trump kündigt \"Operation Clean Sweep\"** an (Massenabschiebungen, falls gewählt).\n  - **Gun Control:** **Supreme Court blockiert** neues Bundesgesetz zu Hintergrundchecks.\n  - **Klimapolitik:** **Texas verbietet E-Auto-Förderung** (\"Energieunabhängigkeit\").\n  → **Fazit:** GROQ liefert **politisch brisante Entwicklungen**, die DEEPSEEK nicht abdeckt.\n\n---\n\n### **5. Wetterlage (Beobachtung)**\n✅ **Übereinstimmung:**\n- **NOAA-Tiefdruckgebiet (AL95)** wird in beiden Feeds erwähnt.\n\n⚠️ **Ergänzungen/Abweichungen:**\n- **GROQ** ergänzt:\n  - **Hurrikan \"Luna\"** (Kategorie 3) trifft auf **Florida** (Evakuierungen in Miami).\n  - **Hitzerekord in Europa:** **48°C in Spanien**, Waldbrände in Griechenland.\n  → **Fazit:** GROQ liefert **konkrete Extremwetterereignisse**, während DEEPSEEK nur eine vage Beobachtung meldet.\n\n---\n\n### **6. Langfristige Rechtsfälle (Kontext)**\n✅ **Übereinstimmung:**\n- **ICIJ-Recherche zum Met Museum** wird in beiden Feeds angesprochen.\n\n⚠️ **Ergänzungen/Abweichungen:**\n- **GROQ** fügt hinzu:\n  - **Korruptionsskandal in der EU:** **EU-Kommissar für Digitales** tritt zurück (Vorwürfe: Lobbyismus für Tech-Konzerne).\n  - **Klimaklagen:** **Shell verliert Prozess in den Niederlanden** (muss CO₂-Ausstoß bis 2030 um 45% reduzieren).\n  → **Fazit:** GROQ liefert **juristische und politische Langzeitfolgen**, die DEEPSEEK nicht abdeckt.\n\n---\n\n### **Zusammenfassung der Kreuzprüfung**\n| **Kategorie**               | **DEEPSEEK**                          | **GROQ** (Ergänzungen)                                                                 | **Bewertung**                                                                 |\n|-----------------------------|---------------------------------------|---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|\n| **Cybersicherheit**         | CVE-2026-21962 (Oracle)               | + CVE-2026-34567 (Exchange), Ransomware-Angriff in DE                                 | **GROQ detaillierter & aktueller**                                            |\n| **Geopolitik**              | KI-Drohnen, Iran, Syrien              | + China-Taiwan (Hyperschall), Nordkorea-Russland, Niger-Putsch                        | **GROQ liefert konkretere Bedrohungen**                                       |\n| **Wirtschaft**              | OnlyFans, Fed                         | + Bitcoin-ETF, Hafenstreiks, Deutsche Bank-Warnung                                    | **GROQ mit marktrelevanten Updates**                                          |\n| **Innenpolitik (USA)**      | COBRA, Hitzewelle                     | + Trump-Plan, Supreme Court, Texas-E-Auto-Verbot                                      | **GROQ politisch brisanter**                                                  |\n| **Wetter**                  | NOAA-Tiefdruckgebiet                  | + Hurrikan \"Luna\", Hitzerekord in Europa                                              | **GROQ mit konkreten Extremwetter-Ereignissen**                               |\n| **Rechtsfälle**             | Met Museum                            | + EU-Korruption, Shell-Klimak",
   "predictive_horizon": {
-    "base_case_probability_pct": 65,
-    "base_case_summary": "Der Handelskonflikt zwischen den USA und Kanada wird sich voraussichtlich verschärfen, mit ersten Zöllen oder Sanktionen. Dies könnte zu Lieferengpässen in der Auto- und Energiebranche führen. Die Zimbra-Schwachstelle wird zu einer Welle von Cyberangriffen führen, insbesondere auf ungeschützte Systeme. Die Märkte werden volatil bleiben, mit möglichen Kursrückgängen in exportabhängigen Sektoren.",
+    "base_case_probability_pct": 55,
+    "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
     "leading_indicators_to_watch": [
-      "Ankündigung konkreter Zölle oder Sanktionen durch die USA oder Kanada.",
-      "Zunahme von Cyberangriffen auf Zimbra-Systeme in CISA- oder BSI-Warnungen.",
-      "Rückgang der Aktienkurse von Unternehmen mit nordamerikanischen Lieferketten (z. B. Automobilhersteller)."
+      "Weitere Eskalationssignale in den Feeds",
+      "Zentralbank-Kommunikation",
+      "Militärische Bewegungen"
     ],
-    "horizon_list": [
-      {
-        "timeframe": "30 Tage",
-        "forecast": "Der Handelskonflikt zwischen den USA und Kanada wird sich voraussichtlich verschärfen, mit ersten Zöllen oder Sanktionen. Dies könnte zu Lieferengpässen in der Auto- und Energiebranche führen. Die Zimbra-Schwachstelle wird zu einer Welle von Cyberangriffen führen, insbesondere auf ungeschützte Systeme. Die Märkte werden volatil bleiben, mit möglichen Kursrückgängen in exportabhängigen Sektoren.",
-        "probability": "Hoch",
-        "early_warning_indicators": [
-          "Ankündigung konkreter Zölle oder Sanktionen durch die USA oder Kanada.",
-          "Zunahme von Cyberangriffen auf Zimbra-Systeme in CISA- oder BSI-Warnungen.",
-          "Rückgang der Aktienkurse von Unternehmen mit nordamerikanischen Lieferketten (z. B. Automobilhersteller)."
-        ]
-      },
-      {
-        "timeframe": "90 Tage",
-        "forecast": "Falls der Handelskonflikt eskaliert, könnten sich die USA und Kanada auf ein begrenzteres Abkommen einigen, um die schlimmsten Auswirkungen abzumildern. Die Zimbra-Schwachstelle wird weitgehend gepatcht sein, aber Nachwirkungen wie Datenlecks oder Ransomware-Fälle werden sichtbar. In Lateinamerika könnten rechtspopulistische Regierungen weitere Allianzen schmieden, was zu regionalen Spannungen führt.",
-        "probability": "Mittel",
-        "early_warning_indicators": [
-          "Verhandlungen zwischen den USA und Kanada über Handelsabkommen.",
-          "Rückgang der Meldungen zu Zimbra-Exploits in Cybersecurity-Feeds.",
-          "Zunahme diplomatischer Aktivitäten zwischen lateinamerikanischen Ländern."
-        ]
-      }
-    ]
+    "horizon_list": []
   },
   "conflict_hotspots": [
     {
-      "name": "Persischer Golf",
-      "region": "Persischer Golf",
-      "lat": 26.5,
-      "lon": 53.5,
-      "type": "chokepoint",
+      "name": "Flug PGT90KU",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 41.9977,
+      "lon": 28.3456,
+      "lng": 28.3456,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: PGT90KU | Höhe: 9.4 km | Speed: 819 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug PGT7QZ",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 43.7599,
+      "lon": 25.314,
+      "lng": 25.314,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: PGT7QZ | Höhe: 10.4 km | Speed: 790 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug WZZ64",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 33.1873,
+      "lon": 33.3612,
+      "lng": 33.3612,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: WZZ64 | Höhe: 8.3 km | Speed: 846 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug JAV281",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 31.7382,
+      "lon": 36.0484,
+      "lng": 36.0484,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: JAV281 | Höhe: 0.9 km | Speed: 271 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug GIA875",
+      "region": "Taiwan-Straße / Ostasien",
+      "lat": 22.2846,
+      "lon": 121.1505,
+      "lng": 121.1505,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: GIA875 | Höhe: 11.6 km | Speed: 858 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug N365LV",
+      "region": "Taiwan-Straße / Ostasien",
+      "lat": 23.0653,
+      "lon": 118.7301,
+      "lng": 118.7301,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: N365LV | Höhe: 14.3 km | Speed: 899 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug CNV7190",
+      "region": "Taiwan-Straße / Ostasien",
+      "lat": 17.7269,
+      "lon": 122.1719,
+      "lng": 122.1719,
+      "type": "flight",
       "intensity": "ROT",
-      "description": "Die Straße von Hormus bleibt ein kritischer Engpass für den globalen Öltransport. Spannungen zwischen dem Iran und westlichen Staaten sowie regionalen Akteuren (z. B. Saudi-Arabien) bestehen fort.",
-      "impact": "Jede Eskalation könnte zu Unterbrechungen der Ölversorgung führen, was die globalen Energiepreise stark beeinflusst.",
-      "lng": 53.5
-    },
-    {
-      "name": "Ukraine",
-      "region": "Osteuropa",
-      "lat": 49.0,
-      "lon": 32.0,
-      "type": "conflict",
-      "intensity": "GELB",
-      "description": "Der Krieg zwischen Russland und der Ukraine dauert an, aber die Frontlinien sind weitgehend stabil. Die EU hat weitere Finanzhilfen genehmigt, was die Widerstandsfähigkeit der Ukraine stützt.",
-      "impact": "Langfristige humanitäre und wirtschaftliche Belastung für Europa. Risiko von Eskalationen bleibt bestehen, insbesondere bei Angriffen auf kritische Infrastruktur.",
-      "lng": 32.0
-    },
-    {
-      "name": "Taiwan-Straße",
-      "region": "Ostasien",
-      "lat": 23.5,
-      "lon": 121.0,
-      "type": "conflict",
-      "intensity": "GELB",
-      "description": "Spannungen zwischen China und Taiwan bleiben hoch, mit regelmäßigen Militärmanövern und diplomatischen Provokationen. Die USA unterstützen Taiwan weiterhin militärisch.",
-      "impact": "Jede militärische Eskalation hätte schwerwiegende Folgen für die globale Halbleiterindustrie und die Weltwirtschaft.",
-      "lng": 121.0
-    },
-    {
-      "name": "Flug PGT10RR",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.1028,
-      "lon": 39.1895,
-      "lng": 39.1895,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: PGT10RR | Höhe: 9.8 km | Speed: 696 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug PGT82MC",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.9193,
-      "lon": 25.0336,
-      "lng": 25.0336,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: PGT82MC | Höhe: 11.0 km | Speed: 802 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug PGT749",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 34.6543,
-      "lon": 36.6332,
-      "lng": 36.6332,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: PGT749 | Höhe: 11.0 km | Speed: 844 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug AEE2LK",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 34.9802,
-      "lon": 33.4629,
-      "lng": 33.4629,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: AEE2LK | Höhe: 2.3 km | Speed: 473 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug CPA870",
-      "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.4507,
-      "lon": 118.9002,
-      "lng": 118.9002,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: CPA870 | Höhe: 9.4 km | Speed: 973 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug CRK679",
-      "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.9032,
-      "lon": 118.4549,
-      "lng": 118.4549,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: CRK679 | Höhe: 11.6 km | Speed: 861 km/h",
-      "impact": "Strategischer Transponder-Korridor"
+      "description": "Callsign: CNV7190 | Höhe: 10.7 km | Speed: 799 km/h",
+      "impact": "Militärische Luftraumüberwachung (Taiwan-Straße / Ostasien)"
     }
   ],
+  "historical_precedents": [],
+  "domestic_policy_matrix": [],
+  "equity_rotation": {
+    "top5_buys": [],
+    "flop5_sells": []
+  },
   "graph_network": {
     "nodes": [
       {
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -269,7 +124,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -277,7 +132,7 @@
         "id": "israel",
         "label": "Israel",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-20"
       },
@@ -285,7 +140,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 15,
+        "val": 14,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -293,7 +148,7 @@
         "id": "taiwan",
         "label": "Taiwan",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -301,7 +156,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -309,7 +164,7 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 18,
+        "val": 17,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -317,7 +172,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 22,
+        "val": 21,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -344,22 +199,6 @@
         "val": 3,
         "first_seen": "2026-08-10",
         "last_seen": "2026-08-17"
-      },
-      {
-        "id": "oelpreise",
-        "label": "Ölpreise",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-10",
-        "last_seen": "2026-08-10"
-      },
-      {
-        "id": "straits_of_hormuz",
-        "label": "Straße von Hormus",
-        "group": "chokepoint",
-        "val": 3,
-        "first_seen": "2026-08-10",
-        "last_seen": "2026-08-10"
       },
       {
         "id": "kolumbien",
@@ -469,7 +308,7 @@
         "id": "oel",
         "label": "Öl",
         "group": "risiko",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-14",
         "last_seen": "2026-08-17"
       },
@@ -637,7 +476,7 @@
         "id": "mlflow_ssrf",
         "label": "CVE-2026-64849",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-20",
         "last_seen": "2026-08-20"
       },
@@ -653,7 +492,7 @@
         "id": "kanada",
         "label": "Kanada",
         "group": "staat",
-        "val": 13,
+        "val": 12,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -661,7 +500,7 @@
         "id": "zimbra",
         "label": "CVE-2026-73570",
         "group": "risiko",
-        "val": 12,
+        "val": 11,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -677,7 +516,7 @@
         "id": "deutschland",
         "label": "Deutschland",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-23",
         "last_seen": "2026-08-23"
       },
@@ -685,7 +524,7 @@
         "id": "afd",
         "label": "AfD",
         "group": "organisation",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-23",
         "last_seen": "2026-08-23"
       },
@@ -693,7 +532,7 @@
         "id": "us_investoren",
         "label": "US-Investoren",
         "group": "actor",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-23",
         "last_seen": "2026-08-23"
       },
@@ -701,7 +540,7 @@
         "id": "taliban",
         "label": "Taliban",
         "group": "organisation",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-24",
         "last_seen": "2026-08-24"
       },
@@ -709,7 +548,7 @@
         "id": "lateinamerika",
         "label": "Lateinamerika",
         "group": "actor",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-24",
         "last_seen": "2026-08-24"
       }
@@ -754,38 +593,6 @@
         "target": "ukraine",
         "label": "Militärhilfe",
         "last_seen": "2026-08-20"
-      },
-      {
-        "from": "iran",
-        "to": "straits_of_hormuz",
-        "source": "iran",
-        "target": "straits_of_hormuz",
-        "label": "Bedrohung",
-        "last_seen": "2026-08-10"
-      },
-      {
-        "from": "straits_of_hormuz",
-        "to": "oelpreise",
-        "source": "straits_of_hormuz",
-        "target": "oelpreise",
-        "label": "Einfluss",
-        "last_seen": "2026-08-10"
-      },
-      {
-        "from": "israel",
-        "to": "hamas",
-        "source": "israel",
-        "target": "hamas",
-        "label": "Konflikt (unbestätigt)",
-        "last_seen": "2026-08-10"
-      },
-      {
-        "from": "hamas",
-        "to": "oelpreise",
-        "source": "hamas",
-        "target": "oelpreise",
-        "label": "Potenzielle Eskalation",
-        "last_seen": "2026-08-10"
       },
       {
         "from": "iran",
@@ -1263,38 +1070,6 @@
       },
       {
         "from": "iran",
-        "to": "straits_of_hormuz",
-        "source": "iran",
-        "target": "straits_of_hormuz",
-        "label": "Bedrohung",
-        "last_seen": "2026-08-10"
-      },
-      {
-        "from": "straits_of_hormuz",
-        "to": "oelpreise",
-        "source": "straits_of_hormuz",
-        "target": "oelpreise",
-        "label": "Einfluss",
-        "last_seen": "2026-08-10"
-      },
-      {
-        "from": "israel",
-        "to": "hamas",
-        "source": "israel",
-        "target": "hamas",
-        "label": "Konflikt (unbestätigt)",
-        "last_seen": "2026-08-10"
-      },
-      {
-        "from": "hamas",
-        "to": "oelpreise",
-        "source": "hamas",
-        "target": "oelpreise",
-        "label": "Potenzielle Eskalation",
-        "last_seen": "2026-08-10"
-      },
-      {
-        "from": "iran",
         "to": "muddywater",
         "source": "iran",
         "target": "muddywater",
@@ -1728,11 +1503,11 @@
     ]
   },
   "simple_key_takeaways": [
-    "Handelskonflikt USA-Kanada bedroht nordamerikanische Lieferketten, besonders in der Auto- und Energiebranche.",
-    "Kritische Zimbra-Schwachstelle (CVE-2026-73570) wird aktiv ausgenutzt – sofortige Patches erforderlich.",
-    "Märkte bleiben vorerst stabil, aber strukturelle Risiken durch Handelsstreit und Cyberbedrohungen bestehen.",
-    "Rechtspopulistische Allianzen in Lateinamerika gewinnen an Einfluss, was regionale Polarisierung verstärkt.",
-    "Taliban festigen ihre Kontrolle über Afghanistan, was langfristig humanitäre und sicherheitspolitische Risiken birgt."
+    "Beide Feeds bestätigen die **CVE-2026-21962** (Oracle HTTP Server/WebLogic Proxy Plug-in) als **aktiv ausgenutzte Schwachstelle** (KEV-Eintrag bei CISA).",
+    "Handlungsaufforderung:** Sofortiges Patchen und IoC-Überprüfung.",
+    "DEEPSEEK** liefert präzisere technische Details (z. B. \"Improper Access Control\"), während **GROQ** (laut Ihrem Input) keine spezifischen CVE-Details nennt.",
+    "GROQ** erwähnt zusätzlich:",
+    "Microsoft-Exchange-Server-Schwachstelle** (CVE-2026-34567) mit \"kritischem\" CVSS-Score (9.8)."
   ],
   "geoscore": {
     "current_score": 72,
@@ -1743,79 +1518,16 @@
     "level": 3,
     "label": "DEFCON 3"
   },
-  "game_theory_analysis": "Deine **Kreuzprüfung (\"Fingerklopfen\")** der Meldungen vom **24.08.2026** zwischen **GROQ** und **DEEPSEEK** zeigt eine hohe Konsistenz in der Analyse, aber auch einige **Nuancen und Ergänzungen**, die eine vertiefte Einordnung ermöglichen. Hier die **systematische Gegenüberstellung** mit Bewertung der Plausibilität und möglichen Lücken:\n\n---\n\n### **1. Handelskonflikt USA–Kanada**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Marktreaktion**        | Futures \"flat\" → Märkte eingepreist oder als Bluff gewertet.             | Futures \"flat\" → Bestätigt, aber mit Hinweis auf Risiko für Lieferketten.    | **Konsistent**: Beide sehen keine akute Panik, aber DEEPSEEK betont die **strukturellen Risiken** (Energie, Logistik). |\n| **Hintergrund**          | Keine Details.                                                          | Verweis auf **nordamerikanische Lieferketten** (z. B. Autoindustrie, Öl/Gas). | **DEEPSEEK ergänzt**: Konkrete Sektoren genannt → höhere Plausibilität.          |\n| **Geopolitische Einordnung** | –                                                                      | –                                                                            | **Lücke**: Keine Analyse, ob der Konflikt mit China (z. B. über kritische Mineralien) verknüpft ist. |\n\n**Bewertung**:\n- **DEEPSEEK** liefert **konkretere Risikofaktoren** (Energie, Lieferketten).\n- **Fehlende Dimension**: Beide übersehen, ob der Konflikt **symbolisch** (z. B. für Midterm-Wahlen 2026) oder **substanziell** (Zölle, Sanktionen) ist.\n\n---\n\n### **2. Zimbra-CVE (CVE-2026-73570)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Schweregrad**          | \"Kritische Schwachstelle\" → KEV-Katalog-Eintrag.                         | **OS-Command-Injection** mit **aktiver Ausnutzung** → extrem kritisch.       | **DEEPSEEK präziser**: Technische Details (Command Injection) erhöhen Dringlichkeit. |\n| **Handlungsempfehlung**  | Patchen.                                                                | **Sofortige Prüfung** + Warnung vor Ransomware/Datendiebstahl.               | **DEEPSEEK dringlicher**: Betont **Zeitkritikalität** (\"jede Verzögerung erhöht Risiko\"). |\n| **Betroffene Systeme**   | –                                                                      | Zimbra in **Unternehmen/Behörden** verbreitet.                               | **DEEPSEEK ergänzt**: Konkrete Zielgruppen → höhere Relevanz für IT-Sicherheitsteams. |\n\n**Bewertung**:\n- **DEEPSEEK** liefert **handlungsrelevantere Informationen** (technische Details, Risikoszenarien).\n- **GROQ** bleibt **oberflächlicher**, aber korrekt.\n- **Fehlende Dimension**: Beide nennen keine **bekannten Angreifergruppen** (z. B. APTs, Ransomware-Banden), die die Lücke ausnutzen.\n\n---\n\n### **3. Wirtschaftspolitik (Fed, Ukraine-Hilfen)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Fed-Entscheidung**     | NatWest-Übernahme genehmigt → Routine.                                   | Bestätigt, aber mit Hinweis auf **globale Bankenverflechtung**.               | **DEEPSEEK interpretiert**: Zeigt **systemische Risiken** (z. B. für Finanzstabilität). |\n| **Ukraine-Hilfen**       | 6 Mrd. Euro von EU → NZZ.                                                | Betont **langfristige finanzielle Belastung** (4. Kriegsjahr).               | **DEEPSEEK kontextualisiert**: Verknüpft mit **EU-Haushaltsdebatten** (z. B. Schuldenregeln). |\n\n**Bewertung**:\n- **DEEPSEEK** liefert **strategischere Einordnung** (Finanzstabilität, Kriegsdauer).\n- **GROQ** bleibt **deskriptiv**.\n- **Fehlende Dimension**: Keine Analyse, ob die Hilfen **an Bedingungen** (z. B. Reformen) geknüpft sind.\n\n---\n\n### **4. Geopolitik (Lateinamerika, Afghanistan)**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Lateinamerika**        | NYT: Rechte Führungspersönlichkeiten mischen sich in Wahlen ein.         | **Destabilisierung** + **ideologische Polarisierung** (Trump-Echo).          | **DEEPSEEK vertieft**: Zeigt **Muster** (z. B. Einflussnahme über soziale Medien). |\n| **Afghanistan**          | BBC: Taliban radikalisieren sich (Privatleben-Kontrolle).                | **Progressive Radikalisierung** + humanitäre Krise.                          | **DEEPSEEK präziser**: \"Progressiv\" deutet auf **langfristige Entwicklung** hin. |\n\n**Bewertung**:\n- **DEEPSEEK** analysiert **Trends** (Radikalisierung als Prozess), während GROQ **Momentaufnahmen** liefert.\n- **Fehlende Dimension**:\n  - **Lateinamerika**: Keine Nennung konkreter Länder (z. B. Brasilien, Mexiko) oder Akteure (z. B. Bolsonaro-Netzwerke).\n  - **Afghanistan**: Keine Verknüpfung mit **Terrorismus-Export** (z. B. IS-K) oder regionalen Spannungen (Pakistan, Iran).\n\n---\n\n### **5. Wetter & Investitionen**\n| **Aspekt**               | **GROQ**                                                                 | **DEEPSEEK**                                                                 | **Kreuzprüfung**                                                                 |\n|--------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| **Hurrikan-Risiko**      | Tiefdruckgebiet AL95 → mögliche Hurrikan-Entwicklung.                    | Warnung vor **Energiepreis-Schocks** (Golf von Mexiko) + Versicherungsmärkte. | **DEEPSEEK verknüpft**: Wetter mit **ökonomischen Folgen** (Öl, Gas, Katastrophenfonds). |\n| **Investitionen**        | FTAV: Debt/Equity + AI-Strategien.                                       | Institutionelle Anleger denken über **Kapitalstruktur** nach.                | **DEEPSEEK interpretiert**: Zeigt **Marktstimmung** (z. B. Zinsumfeld, KI-Hype). |\n\n**Bewertung**:\n- **DEEPSEEK** macht **ökonomische Implikationen** explizit (Energie, Versicherungen).\n- **GROQ** bleibt **technisch** (Wetterdaten).\n- **Fehlende Dimension**:\n  - Keine Analyse, ob **Klimarisiken** (z. B. Hurrikane) bereits in Asset-Preisen eingepreist sind.\n  - Keine Nennung von **ESG-Faktoren** (z. B. wie Investoren auf Klimarisiken reagieren).\n\n---\n\n### **Gesamtbewertung der Kreuzprüfung**\n| **Kriterium**            | **GROQ**                          | **DEEPSEEK**                          | **Fazit**                                                                       |\n|--------------------------|-----------------------------------|---------------------------------------|---------------------------------------------------------------------------------|\n| **Tie",
   "stock_picks": {
-    "top_5_buys": [
-      {
-        "ticker": "XLE",
-        "name": "Energy Select Sector",
-        "asset": "Energie",
-        "reason": "Handelskonflikt USA-Kanada könnte Energieexporte beeinträchtigen, was die Preise stützt. Zudem bleibt die geopolitische Lage im Persischen Golf angespannt."
-      },
-      {
-        "ticker": "GLD",
-        "name": "SPDR Gold Trust",
-        "asset": "Edelmetalle",
-        "reason": "Sicherer Hafen bei zunehmender Unsicherheit durch Handelskonflikte und Cyberrisiken."
-      },
-      {
-        "ticker": "LMT",
-        "name": "Lockheed Martin",
-        "asset": "Rüstung",
-        "reason": "Langfristige Nachfrage durch globale Spannungen, insbesondere in Osteuropa und Asien."
-      },
-      {
-        "ticker": "MSFT",
-        "name": "Microsoft",
-        "asset": "Technologie",
-        "reason": "Cybersicherheitsausgaben steigen aufgrund der Zimbra-Schwachstelle und ähnlicher Bedrohungen."
-      },
-      {
-        "ticker": "NEE",
-        "name": "NextEra Energy",
-        "asset": "Erneuerbare Energien",
-        "reason": "Diversifizierung weg von fossilen Brennstoffen wird durch Handelskonflikte beschleunigt."
-      }
-    ],
-    "flop_5_sells": [
-      {
-        "ticker": "EEM",
-        "name": "Emerging Markets",
-        "asset": "Schwellenländer",
-        "reason": "Handelskonflikte und globale Unsicherheit belasten exportabhängige Volkswirtschaften."
-      },
-      {
-        "ticker": "TSLA",
-        "name": "Tesla",
-        "asset": "Automobil",
-        "reason": "Lieferkettenrisiken in Nordamerika und mögliche Zölle auf Batteriematerialien."
-      },
-      {
-        "ticker": "AMZN",
-        "name": "Amazon",
-        "asset": "E-Commerce/Logistik",
-        "reason": "Handelsbeschränkungen könnten Lieferketten und Margen belasten."
-      },
-      {
-        "ticker": "BABA",
-        "name": "Alibaba",
-        "asset": "Technologie/E-Commerce",
-        "reason": "Geopolitische Spannungen zwischen USA und China sowie Handelskonflikte wirken belastend."
-      },
-      {
-        "ticker": "XLU",
-        "name": "Utilities Select Sector",
-        "asset": "Versorger",
-        "reason": "Zinsrisiko und mögliche regulatorische Eingriffe bei Handelskonflikten."
-      }
-    ]
+    "top_5_buys": [],
+    "flop_5_sells": []
   },
-  "timestamp": "2026-08-24T06:41:46.221007+00:00",
+  "timestamp": "2026-08-25T06:34:30.940986+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-24T06:39:32.584027+00:00",
+    "timestamp": "2026-08-25T06:31:42.714882+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -1823,25 +1535,27 @@
       "qwen-2.5-72b-instruct"
     ],
     "swarm_debate_status": "SUCCESS",
-    "synthesizer_status": "SUCCESS",
+    "synthesizer_status": "ERROR (ReadTimeout)",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (57 Nodes)",
-    "errors": []
+    "opensky_status": "SUCCESS (7 Signale)",
+    "graph_merge_status": "SUCCESS (55 Nodes)",
+    "errors": [
+      "Synthesizer Exception: HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=70)"
+    ]
   },
   "delta": {
     "has_previous": true,
     "ampel_prev": "GELB",
     "ampel_now": "GELB",
     "ampel_changed": false,
-    "geoscore_prev": 75,
+    "geoscore_prev": 72,
     "geoscore_now": 72,
-    "geoscore_delta": -3,
+    "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
     "nodes_prev": 57,
-    "nodes_now": 57,
-    "hotspots_now": 9,
-    "summary": "Geoscore 75 → 72 (-3)"
+    "nodes_now": 55,
+    "hotspots_now": 7,
+    "summary": "Graph-Knoten 57 → 55"
   }
 }
