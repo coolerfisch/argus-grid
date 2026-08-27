@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nDiese Nachrichtenlage vom 26.08.2026 skizziert ein hochdramatisches globales Szenario, das von wirtschaftlicher Fragmentierung, anhaltendem Krieg und neuen technologischen Sicherheitsrisiken geprägt ist. Hier ist eine strukturierte Einordnung der wichtigsten Trends und Ereignisse:\n\n### 1. Eskalation des Handelskriegs: Kanada als \"Dollar-for-Dollar\"-Hardliner\nDie USA und Kanada befinden sich in der schwersten Handelsauseinandersetzung ihrer Geschichte. Kanadas Ankündigung von Vergeltungszöllen von bis zu 50 % (auf Alufolie, Geschirrspüler, Frischfisch und Kosmetik) ist eine di...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nDiese Nachrichtenlage vom 26.08.2026 skizziert ein hochdramatisches globales Szenario, das von wirtschaftlicher Fragmentierung, anhaltendem Krieg und neuen technologischen Sicherheitsrisiken geprägt ist. Hier ist eine strukturierte Einordnung der wichtigsten Trends und Ereignisse:\n\n### 1. Eskalation des Handelskriegs: Kanada als \"...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**DATUM: 27.08.2026**\n\n**TAGESÜBERSICHT:**  \nAn diesem Donnerstag dominieren drei große Themenstränge: Eine verheerende Flutkatastrophe im Himalaya-Gebiet mit Hunderten Toten, gezielte Cyberangriffe chinesischer Hacker auf US-Energiebehörden sowie regulatorische Eingriffe der US-Notenbank im Finanzsektor. Hinzu kommen neue Schwachstellenmeldungen für kritische Infrastruktur und eine Warnung vor einem neuen tropischen System im Atlantik.\n\n---\n\n### 🌍 Internationale Katastrophe: Flut in Nepal/Tibet\n**Quellen:** New York Times, BBC World News  \n**Lage:** Bei einer massiven Sturzf...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**DATUM: 27.08.2026**\n\n**TAGESÜBERSICHT:**  \nAn diesem Donnerstag dominieren drei große Themenstränge: Eine verheerende Flutkatastrophe im Himalaya-Gebiet mit Hunderten Toten, gezielte Cyberangriffe chinesischer Hacker auf US-Energiebehörden sowie regulatorische Eingriffe der US-Notenbank im Finanzsektor. Hinzu kommen neue Schwach...",
   "key_takeaways": [
-    "Bedeutung:** Dies ist keine symbolische Geste mehr, sondern ein strategischer Schlag. Kanada nutzt seine wirtschaftliche Interdependenz gezielt, um politischen Druck auf den US-Wahlkampf (mitten im Jahr 2026) auszuüben.",
-    "Risiko:** Die Lieferketten Nordamerikas (Automobil, Landwirtschaft) drohen zu zerreißen. Die Inflation in beiden Ländern dürfte durch diese Maßnahmen deutlich anziehen.",
-    "Direkter Effekt:** Die **Financial Times** meldet einen Anstieg der britischen Energiepreisobergrenze um 4 % auf ein Drei-Jahres-Hoch. Der Ölpreis und die Transportkosten explodieren offenbar.",
-    "Verbindung zur Fed:`** Diese externe Preisschocks (Energie) stellt die US-Notenbank vor ein massives Dilemma: Muss sie die Zinsen hochhalten, um die Inflation zu bekämpfen, obwohl die Wirtschaft unter dem Handelskrieg leidet? Die Rede von Fed-Gouverneurin Cook in Alaska wird hier mit Spannung erwartet – sie dürfte den Spagat zwischen Inflationsbekämpfung und Wachstumsängsten thematisieren.",
-    "Kernproblem:** Die Schwachstellen erlauben **unautorisierten administrativen Zugriff** und **Session-Hijacking**. Angesichts des Krieges mit dem Iran ist die Gefahr von staatlich gelenkten Cyberangriffen auf kritische US-Infrastruktur (Energie, Wasser, Logistik) extrem hoch."
+    "beliebige lokale Dateien lesen oder schreiben",
+    "unerwünschte ausgehende Netzwerkverbindungen auslösen",
+    "TLS-Verbindungen abfangen, sich als vertrauenswürdige Peers ausgeben und Daten manipulieren",
+    "Aktives System AL96** im zentralen tropischen Atlantik wird per Satellit und Mikrowellenbeobachtung überwacht.",
+    "Die offizielle Prognose für die atlantische Hurrikansaison zeigt eine erhöhte Aktivität; AL96 hat aktuell eine **mittlere Wahrscheinlichkeit** der Entwicklung zu einem tropischen Sturm innerhalb der nächsten Tage."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nDiese Nachrichtenlage vom 26.08.2026 skizziert ein hochdramatisches globales Szenario, das von wirtschaftlicher Fragmentierung, anhaltendem Krieg und neuen technologischen Sicherheitsrisiken geprägt ist. Hier ist eine strukturierte Einordnung der wichtigsten Trends und Ereignisse:\n\n### 1. Eskalation des Handelskriegs: Kanada als \"Dollar-for-Dollar\"-Hardliner\nDie USA und Kanada befinden sich in der schwersten Handelsauseinandersetzung ihrer Geschichte. Kanadas Ankündigung von Vergeltungszöllen von bis zu 50 % (auf Alufolie, Geschirrspüler, Frischfisch und Kosmetik) ist eine direkte Reaktion auf Trumps neue Zölle.\n*   **Bedeutung:** Dies ist keine symbolische Geste mehr, sondern ein strategischer Schlag. Kanada nutzt seine wirtschaftliche Interdependenz gezielt, um politischen Druck auf den US-Wahlkampf (mitten im Jahr 2026) auszuüben.\n*   **Risiko:** Die Lieferketten Nordamerikas (Automobil, Landwirtschaft) drohen zu zerreißen. Die Inflation in beiden Ländern dürfte durch diese Maßnahmen deutlich anziehen.\n\n### 2. Geopolitischer Brennpunkt: Iran-Krieg und Energiekrise\nDer Live-Ticker der NZZ bestätigt einen anhaltenden Kriegszustand zwischen den USA und dem Iran seit Februar 2026. Die Waffenruhe wurde von Trump im Juli aufgekündigt.\n*   **Direkter Effekt:** Die **Financial Times** meldet einen Anstieg der britischen Energiepreisobergrenze um 4 % auf ein Drei-Jahres-Hoch. Der Ölpreis und die Transportkosten explodieren offenbar.\n*   **Verbindung zur Fed:`** Diese externe Preisschocks (Energie) stellt die US-Notenbank vor ein massives Dilemma: Muss sie die Zinsen hochhalten, um die Inflation zu bekämpfen, obwohl die Wirtschaft unter dem Handelskrieg leidet? Die Rede von Fed-Gouverneurin Cook in Alaska wird hier mit Spannung erwartet – sie dürfte den Spagat zwischen Inflationsbekämpfung und Wachstumsängsten thematisieren.\n\n### 3. Cyber-Sicherheit: Kritische Schwachstelle in Infrastruktur-Komponenten\nDie CISA-Warnung zur Ebyte NE2-D11 (einem drahtlosen Modul, häufig in industriellen Fernsteuerungen oder Smart-Grid-Anwendungen) ist ein stiller, aber gefährlicher Albtraum.\n*   **Kernproblem:** Die Schwachstellen erlauben **unautorisierten administrativen Zugriff** und **Session-Hijacking**. Angesichts des Krieges mit dem Iran ist die Gefahr von staatlich gelenkten Cyberangriffen auf kritische US-Infrastruktur (Energie, Wasser, Logistik) extrem hoch.\n*   **Implikation:** Unternehmen, die diese Module nutzen, müssen sofort mit Patches rechnen – oder riskieren, dass ihre Systeme als Teil der Kriegsführung lahmgelegt werden.\n\n### 4. Sozialpolitische Spannungen im US-Wahlkampf\nZwei Meldungen zeigen die kulturelle Kluft in den USA:\n*   **Der Clancy-Prozess:** Die Kommentare des Staatsanwalts (im Fall Lindsay Clancy) deuten auf eine hoch emotionale Debatte über postpartale Psychosen und weibliche Jurys hin – ein Hit-Thema für die konservative Basis.\n*   **Der Generationenkonflikt (WSJ):** Die Frage, ob Senioren mit ihrem gebundenen Vermögen (12 Billionen Dollar in Eigenheim-Equity) die Wirtschaft \"verderben\", wird zum wirtschaftspolitischen Sprengstoff, da jüngere Generationen mit hohen Mieten und Zinsen kämpfen.\n\n### 5. Hurrikan-Saison: Der \"Golf von Amerika\" im Fokus\nDer Wetterbericht zeigt ein neues Tropensystem (AL96) im Ostatlantik. Wichtig ist hier die sprachliche Änderung: Der NHC spricht vom \"Gulf of America\" (was auf die Umbenennung durch die Trump-Administration zurückgeht). Angesichts der Energiekrise wäre ein starker Hurrikan, der in den Golf (Ölraffinerien) einschlägt, ein weiterer Schock für die globalen Märkte.\n\n---\n\n**Gesamtbild des Tages (26.08.2026):**\nDie Welt steckt mitten in einem **polykrisenhaften Zustand**. Ein Krieg um die Seewege (Iran), ein zerrüttetes transatlantisches Verhältnis (Kanada/USA), Inflation durch Energiekosten und gleichzeitig eine fragile Cybersicherheitslage. Die US-Notenbank (Fed) dürfte in ihrer Kommunikation versuchen, die Märkte zu beruhigen, während sie auf einem schmalen Grat zwischen Rezession und Stagflation balanciert. Anleger und Verbraucher müssen sich auf volatile Zeiten einstellen.\n\nMACRO:\n### Summary of Key News and Developments (26.08.2026)\n\n#### Economic and Financial News\n- **Fed Speeches & Minutes: Cook, Outlook for the U.S. and Alaskan Economies**\n  - Fed Governor Cook delivered a speech at the 2026 Economic Luncheon of the Anchorage Economic Development Corporation, discussing economic outlooks for the U.S. and Alaska.\n- **Wall Street Journal (MarketWatch Alt): Are older Americans spoiling the economy for everyone else?**\n  - Article explores strategies to encourage seniors to utilize their $12 trillion in home equity to boost the economy.\n- **Financial Times: UK household energy price cap to rise by 4% from October**\n  - The Middle East conflict has driven the UK's household energy price cap to a three-year high, affecting winter energy costs.\n\n#### Political and Trade News\n- **New York Times World: Canada Fires Back in Trade War Against Trump With Up to 50% Tariffs**\n  - Canada announced retaliatory tariffs of up to 50% on U.S. goods, including aluminum foil, dishwashers, and fish, in response to new Trump tariffs.\n- **BBC World News: Canada announces 'dollar-for-dollar' retaliatory tariffs on US as high as 50%**\n  - Coverage of Canada's retaliation against U.S. trade actions, with tariffs on various goods.\n- **Fox News Latest: Prosecutor in infamous killer mom case says women on Lindsay Clancy jury may bring ‘strange twist’ to verdict**\n  - Prosecutor Tommy Pope comments on the potential influence of women jurors in the Lindsay Clancy case, noting they may be less sympathetic to her postpartum psychosis defense.\n\n#### International and Security News\n- **NZZ International: LIVE-TICKER - Iran-Krieg: Teheran und Oman besprechen wieder Schifffahrtsregeln**\n  - Live updates on the war between the U.S. and Iran, with a focus on recent discussions between Iran and Oman regarding maritime regulations.\n- **CISA Cyber Alerts: Ebyte NE2-D11 - View CSAF**\n  - Alert on vulnerabilities in Ebyte NE2-D11 devices that could allow attackers to gain unauthorized access, disclose information, modify configurations, and disrupt operations.\n\n#### Health and Environment News\n- **CDC Health Updates: Outbreak linked to alfalfa sprouts; people sickened with E. coli and Salmonella**\n  - CDC warns of a multistate outbreak of Salmonella and E. coli linked to recalled alfalfa sprout products.\n- **NOAA National Hurricane Center: Atlantic Tropical Weather Outlook**\n  - Tropical weather outlook for the North Atlantic, including an area of low pressure associated with a tropical wave.\n\n#### Cultural and Social News\n- **ICIJ (Panama/Pandora Papers): Despite years of confiscations, the Met still holds hundreds of pieces linked to alleged trafficking and looting figures**\n  - The Metropolitan Museum of Art is under scrutiny for holding artwork tied to trafficking and looting, despite ongoing reviews.\n\n### Key Takeaways\n- **Trade Tensions:** Canada and the U.S. are in a trade war, with Canada imposing significant retaliatory tariffs.\n- **Economic Outlook:** The Fed discusses economic prospects, while there is a focus on how older Americans can impact the economy.\n- **International Conflict:** The conflict between the U.S. and Iran continues, with ongoing discussions and security alerts.\n- **Health Concerns:** A multistate outbreak linked to contaminated alfalfa sprouts is under investigation.\n- **Cultural Controversies:** The Met is facing scrutiny over artwork linked to trafficking and looting.\n\nThese developments highlight ongoing economic, political, and social challenges globally.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**DATUM: 27.08.2026**\n\n**TAGESÜBERSICHT:**  \nAn diesem Donnerstag dominieren drei große Themenstränge: Eine verheerende Flutkatastrophe im Himalaya-Gebiet mit Hunderten Toten, gezielte Cyberangriffe chinesischer Hacker auf US-Energiebehörden sowie regulatorische Eingriffe der US-Notenbank im Finanzsektor. Hinzu kommen neue Schwachstellenmeldungen für kritische Infrastruktur und eine Warnung vor einem neuen tropischen System im Atlantik.\n\n---\n\n### 🌍 Internationale Katastrophe: Flut in Nepal/Tibet\n**Quellen:** New York Times, BBC World News  \n**Lage:** Bei einer massiven Sturzflut in den Tälern Nepals und Tibets wurden nach offiziellen Angaben **Hunderte Menschen getötet**. Überlebende berichten, dass eine Wand aus Schlamm und Geröll ganze Dörfer innerhalb von Minuten weggespült habe.  \n**Ursache:** Erste wissenschaftliche Untersuchungen deuten auf einen **kollabierten Gletscher** hin – ein weiteres alarmierendes Beispiel für die rapide schmelzenden Eismassen im Himalaya.  \n**Rettung:** Einsatzkräfte durchkämmen entlegene Täler, die Versorgung der Region ist massiv erschwert.\n\n**Bewertung:** Die Katastrophe verdeutlicht die wachsende Gefahr durch Gletschersee-Ausbrüche als direkte Folge des Klimawandels – ein Risiko, das auch für andere Bergregionen weltweit steigt.\n\n---\n\n### 🖥️ Cyberangriffe auf US-Regierungsnetzwerke\n**Quelle:** Fox News  \n**Angreifer:** Die als „QTFY“ bekannte chinesische Hackergruppe.  \n**Erfolge:** Die Angreifer verschafften sich Zugang zu **drei Laboren des US-Energieministeriums** und stahlen Daten aus über **300 Organisationen**, bevor das FBI die zugrundeliegenden Domains beschlagnahmen konnte.  \n**Ziel:** Offenbar Spionage und Datenabfluss im Bereich Energie- und Sicherheitsforschung.\n\n**Bewertung:** Dies ist einer der größten dokumentierten Einbrüche in US-Behördennetze in diesem Jahr. Die anhaltende Verwundbarkeit kritischer Behörden trotz verstärkter Abwehrmaßnahmen ist besorgniserregend.\n\n---\n\n### 🏦 Finanzregulierung & Märkte\n**US-Notenbank:** Die Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen **ehemaligen Mitarbeiter der Banco Popular de Puerto Rico** verhängt. Details wurden nicht veröffentlicht; es handelt sich typischerweise um Verstöße gegen interne Kontrollen oder Compliance-Auflagen.  \n**Asset-Management:** Die Financial Times berichtet, dass der **Wettlauf um Größe** in der Vermögensverwaltung trotz Rekordhochs an den Börsen immer dringlicher wird. Der Druck, neue Kunden zu gewinnen, steigt.  \n**Steuertipp:** Das Wall Street Journal behandelt die Frage eines Hauses als Geschenk an die Mutter – ein Fall, der zeigt, wie komplex die steuerliche Rückübertragung von Immobilien zur Kapitalgewinnminimierung sein kann.\n\n**Bewertung:** Die Mischung aus Behördenmaßnahmen, Konsolidierungsdruck und steuerlichen Gestaltungsfragen zeigt: Die Finanzbranche bleibt trotz guter Aktienkurse unter erheblichem strukturellem Druck.\n\n---\n\n### ⚙️ Kritische Infrastruktur: Neue Sicherheitswarnung\n**Quelle:** CISA (US-Cybersicherheitsbehörde)  \n**Betroffen:** **Applied Systems Engineering ASE2000 V2 Communication Test Set** – ein Werkzeug zur Überprüfung von Kommunikationssystemen, häufig in Industrieanlagen eingesetzt.  \n**Schwachstellen:** Angreifer können:  \n- beliebige lokale Dateien lesen oder schreiben  \n- unerwünschte ausgehende Netzwerkverbindungen auslösen  \n- TLS-Verbindungen abfangen, sich als vertrauenswürdige Peers ausgeben und Daten manipulieren  \n\n**Bewertung:** Besonders kritisch, da das Gerät in Umgebungen eingesetzt wird, in denen Netzwerkkommunikation über Sicherheitsgrenzen hinweg geprüft wird – eine Kompromittierung könnte tief in kontrollierte Industrienetze führen.\n\n---\n\n### 🌊 Wetter & Naturereignisse\n**NOAA (National Hurricane Center):**  \n- **Aktives System AL96** im zentralen tropischen Atlantik wird per Satellit und Mikrowellenbeobachtung überwacht.  \n- Die offizielle Prognose für die atlantische Hurrikansaison zeigt eine erhöhte Aktivität; AL96 hat aktuell eine **mittlere Wahrscheinlichkeit** der Entwicklung zu einem tropischen Sturm innerhalb der nächsten Tage.  \n- Keine unmittelbare Bedrohung für Land, Entwicklung wird aber verfolgt.\n\n---\n\n### 📜 Internationale Erinnerung: Tod von Ratko Mladić\n**Quelle:** NZZ International  \nDer frühere bosnisch-serbische Militärführer **Ratko Mladić**, vom UN-Kriegsverbrechertribunal wegen Völkermordes in Bosnien-Herzegowina verurteilt, ist gestorben. Mladić, der in den 1990er-Jahren für das Massaker von Srebrenica verantwortlich war, bleibt in Teilen der Region umstritten verehrt.\n\n**Bewertung:** Sein Tod beendet ein Kapitel der Aufarbeitung, lässt jedoch die gesellschaftlichen Spaltungen in den Nachfolgestaaten Jugoslawiens weiterhin sichtbar bleiben.\n\n---\n\n### 🔮 Ausblick & Empfehlungen\n- **Fokus Katastrophenschutz:** Die Himalaya-Flut zeigt: Anpassungsmaßnahmen an Gletscherseen müssen weltweit beschleunigt werden.  \n- **Cybersicherheit:** Betreiber kritischer Infrastruktur – insbesondere Energie – sollten die neuesten CISA-Warnungen umgehend prüfen und ihre Netzwerk-Segmentierung überdenken.  \n- **Finanzmarkt:** Anleger sollten trotz Rekordhochs die zunehmende Konsolidierung und regulatorische Risiken im Asset-Management im Blick behalten.  \n- **Wetter:** Für den atlantischen Seeraum bleibt AL96 zu beobachten; keine unmittelbaren Küstenwarnungen.\n\n---\n*Berichtszeitpunkt: 27.08.2026, 14:00 MESZ*\n\nMACRO:",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug TOY15",
+      "name": "Flug PGT10CA",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 46.2331,
-      "lon": 26.7523,
-      "lng": 26.7523,
+      "lat": 40.5361,
+      "lon": 27.844,
+      "lng": 27.844,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TOY15 | Höhe: 2.4 km | Speed: 395 km/h",
+      "description": "Callsign: PGT10CA | Höhe: 6.0 km | Speed: 687 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT65G",
+      "name": "Flug PGT91N",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 43.1537,
-      "lon": 26.1807,
-      "lng": 26.1807,
+      "lat": 41.8888,
+      "lon": 26.5232,
+      "lng": 26.5232,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT65G | Höhe: 10.4 km | Speed: 807 km/h",
+      "description": "Callsign: PGT91N | Höhe: 10.6 km | Speed: 942 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ43QZ",
+      "name": "Flug AEE908",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.014,
-      "lon": 34.8679,
-      "lng": 34.8679,
+      "lat": 35.0018,
+      "lon": 33.1802,
+      "lng": 33.1802,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ43QZ | Höhe: 6.2 km | Speed: 332 km/h",
+      "description": "Callsign: AEE908 | Höhe: 3.7 km | Speed: 612 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JAV281",
+      "name": "Flug 4XCDE",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.7171,
-      "lon": 35.9993,
-      "lng": 35.9993,
+      "lat": 32.8183,
+      "lon": 35.0591,
+      "lng": 35.0591,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JAV281 | Höhe: 3.8 km | Speed: 0 km/h",
+      "description": "Callsign: 4XCDE | Höhe: 0.4 km | Speed: 242 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JJP18",
+      "name": "Flug RRR6992",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 34.2237,
+      "lon": 32.612,
+      "lng": 32.612,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: RRR6992 | Höhe: 3.3 km | Speed: 591 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug JJP57",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.7893,
-      "lon": 121.1458,
-      "lng": 121.1458,
+      "lat": 25.3039,
+      "lon": 121.5887,
+      "lng": 121.5887,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JJP18 | Höhe: 10.7 km | Speed: 849 km/h",
+      "description": "Callsign: JJP57 | Höhe: 1.6 km | Speed: 445 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DKH1129",
+      "name": "Flug UAE330",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.1981,
-      "lon": 116.5657,
-      "lng": 116.5657,
+      "lat": 15.0617,
+      "lon": 120.8279,
+      "lng": 120.8279,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: DKH1129 | Höhe: 11.0 km | Speed: 822 km/h",
+      "description": "Callsign: UAE330 | Höhe: 3.4 km | Speed: 583 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,7 +116,7 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 20,
+        "val": 19,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -113,7 +124,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 20,
+        "val": 19,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -129,7 +140,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 13,
+        "val": 12,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -145,7 +156,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 20,
+        "val": 19,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -153,7 +164,7 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 16,
+        "val": 15,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -161,7 +172,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 20,
+        "val": 19,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -190,44 +201,12 @@
         "last_seen": "2026-08-17"
       },
       {
-        "id": "kolumbien",
-        "label": "Kolumbien",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-08-11",
-        "last_seen": "2026-08-12"
-      },
-      {
         "id": "persischer_golf",
         "label": "Persischer Golf",
         "group": "risiko",
         "val": 3,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-15"
-      },
-      {
-        "id": "cve_2026_21655",
-        "label": "CVE-2026-21655",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-12",
-        "last_seen": "2026-08-12"
-      },
-      {
-        "id": "tata",
-        "label": "Tata",
-        "group": "organisation",
-        "val": 3,
-        "first_seen": "2026-08-12",
-        "last_seen": "2026-08-12"
-      },
-      {
-        "id": "coreweave",
-        "label": "CoreWeave",
-        "group": "tech",
-        "val": 3,
-        "first_seen": "2026-08-12",
-        "last_seen": "2026-08-12"
       },
       {
         "id": "cisco",
@@ -273,7 +252,7 @@
         "id": "oel",
         "label": "Öl",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-14",
         "last_seen": "2026-08-17"
       },
@@ -457,7 +436,7 @@
         "id": "kanada",
         "label": "Kanada",
         "group": "staat",
-        "val": 11,
+        "val": 10,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -465,7 +444,7 @@
         "id": "zimbra",
         "label": "CVE-2026-73570",
         "group": "risiko",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -566,30 +545,6 @@
         "target": "persischer_golf",
         "label": "Bedrohung",
         "last_seen": "2026-08-18"
-      },
-      {
-        "from": "cve_2026_21655",
-        "to": "usa",
-        "source": "cve_2026_21655",
-        "target": "usa",
-        "label": "Cyberbedrohung",
-        "last_seen": "2026-08-12"
-      },
-      {
-        "from": "cve_2026_21655",
-        "to": "eu",
-        "source": "cve_2026_21655",
-        "target": "eu",
-        "label": "Cyberbedrohung",
-        "last_seen": "2026-08-12"
-      },
-      {
-        "from": "coreweave",
-        "to": "usa",
-        "source": "coreweave",
-        "target": "usa",
-        "label": "Wirtschaftlicher Aufschwung",
-        "last_seen": "2026-08-12"
       },
       {
         "from": "russland",
@@ -994,30 +949,6 @@
         "last_seen": "2026-08-18"
       },
       {
-        "from": "cve_2026_21655",
-        "to": "usa",
-        "source": "cve_2026_21655",
-        "target": "usa",
-        "label": "Cyberbedrohung",
-        "last_seen": "2026-08-12"
-      },
-      {
-        "from": "cve_2026_21655",
-        "to": "eu",
-        "source": "cve_2026_21655",
-        "target": "eu",
-        "label": "Cyberbedrohung",
-        "last_seen": "2026-08-12"
-      },
-      {
-        "from": "coreweave",
-        "to": "usa",
-        "source": "coreweave",
-        "target": "usa",
-        "label": "Wirtschaftlicher Aufschwung",
-        "last_seen": "2026-08-12"
-      },
-      {
         "from": "russland",
         "to": "schwarzes_meer",
         "source": "russland",
@@ -1372,11 +1303,11 @@
     ]
   },
   "simple_key_takeaways": [
-    "Bedeutung:** Dies ist keine symbolische Geste mehr, sondern ein strategischer Schlag. Kanada nutzt seine wirtschaftliche Interdependenz gezielt, um politischen Druck auf den US-Wahlkampf (mitten im Jahr 2026) auszuüben.",
-    "Risiko:** Die Lieferketten Nordamerikas (Automobil, Landwirtschaft) drohen zu zerreißen. Die Inflation in beiden Ländern dürfte durch diese Maßnahmen deutlich anziehen.",
-    "Direkter Effekt:** Die **Financial Times** meldet einen Anstieg der britischen Energiepreisobergrenze um 4 % auf ein Drei-Jahres-Hoch. Der Ölpreis und die Transportkosten explodieren offenbar.",
-    "Verbindung zur Fed:`** Diese externe Preisschocks (Energie) stellt die US-Notenbank vor ein massives Dilemma: Muss sie die Zinsen hochhalten, um die Inflation zu bekämpfen, obwohl die Wirtschaft unter dem Handelskrieg leidet? Die Rede von Fed-Gouverneurin Cook in Alaska wird hier mit Spannung erwartet – sie dürfte den Spagat zwischen Inflationsbekämpfung und Wachstumsängsten thematisieren.",
-    "Kernproblem:** Die Schwachstellen erlauben **unautorisierten administrativen Zugriff** und **Session-Hijacking**. Angesichts des Krieges mit dem Iran ist die Gefahr von staatlich gelenkten Cyberangriffen auf kritische US-Infrastruktur (Energie, Wasser, Logistik) extrem hoch."
+    "beliebige lokale Dateien lesen oder schreiben",
+    "unerwünschte ausgehende Netzwerkverbindungen auslösen",
+    "TLS-Verbindungen abfangen, sich als vertrauenswürdige Peers ausgeben und Daten manipulieren",
+    "Aktives System AL96** im zentralen tropischen Atlantik wird per Satellit und Mikrowellenbeobachtung überwacht.",
+    "Die offizielle Prognose für die atlantische Hurrikansaison zeigt eine erhöhte Aktivität; AL96 hat aktuell eine **mittlere Wahrscheinlichkeit** der Entwicklung zu einem tropischen Sturm innerhalb der nächsten Tage."
   ],
   "geoscore": {
     "current_score": 72,
@@ -1391,23 +1322,23 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-08-26T06:36:29.027387+00:00",
+  "timestamp": "2026-08-27T17:12:08.222429+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-26T06:33:42.151512+00:00",
+    "timestamp": "2026-08-27T17:09:33.748953+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 118,
+    "feeds_failed": 106,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
-      "DeepSeek",
-      "qwen-2.5-72b-instruct"
+      "qwen-2.5-72b-instruct",
+      "DeepSeek"
     ],
     "swarm_debate_status": "ERROR (HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=35))",
     "synthesizer_status": "ERROR (ReadTimeout)",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (52 Nodes)",
+    "opensky_status": "SUCCESS (7 Signale)",
+    "graph_merge_status": "SUCCESS (48 Nodes)",
     "errors": [
       "Synthesizer Exception: HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=70)"
     ]
@@ -1422,9 +1353,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 55,
-    "nodes_now": 52,
-    "hotspots_now": 6,
-    "summary": "Graph-Knoten 55 → 52"
+    "nodes_prev": 52,
+    "nodes_now": 48,
+    "hotspots_now": 7,
+    "summary": "Graph-Knoten 52 → 48"
   }
 }
