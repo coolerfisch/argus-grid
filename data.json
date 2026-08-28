@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**DATUM: 27.08.2026**\n\n**TAGESÜBERSICHT:**  \nAn diesem Donnerstag dominieren drei große Themenstränge: Eine verheerende Flutkatastrophe im Himalaya-Gebiet mit Hunderten Toten, gezielte Cyberangriffe chinesischer Hacker auf US-Energiebehörden sowie regulatorische Eingriffe der US-Notenbank im Finanzsektor. Hinzu kommen neue Schwachstellenmeldungen für kritische Infrastruktur und eine Warnung vor einem neuen tropischen System im Atlantik.\n\n---\n\n### 🌍 Internationale Katastrophe: Flut in Nepal/Tibet\n**Quellen:** New York Times, BBC World News  \n**Lage:** Bei einer massiven Sturzf...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**DATUM: 27.08.2026**\n\n**TAGESÜBERSICHT:**  \nAn diesem Donnerstag dominieren drei große Themenstränge: Eine verheerende Flutkatastrophe im Himalaya-Gebiet mit Hunderten Toten, gezielte Cyberangriffe chinesischer Hacker auf US-Energiebehörden sowie regulatorische Eingriffe der US-Notenbank im Finanzsektor. Hinzu kommen neue Schwach...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 28.08.2026**\n\n**1. WIRTSCHAFT & FINANZEN**\n- **Notenbank / Aufsicht:** Die US-Notenbank (Federal Reserve) hat eine Durchsetzungsmaßnahme (Enforcement Action) gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details zur Art des Verstoßes wurden in der Meldung nicht genannt, was auf interne Verstöße oder Compliance-Probleme hindeutet.\n- **Verbraucherfinanzen:** Das Wall Street Journal warnt eindringlich vor der Nutzung „kostenloser“ Finanzberater von Banken. Diese seien oft provisionsbasiert und nicht an die Interessen des K...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 28.08.2026**\n\n**1. WIRTSCHAFT & FINANZEN**\n- **Notenbank / Aufsicht:** Die US-Notenbank (Federal Reserve) hat eine Durchsetzungsmaßnahme (Enforcement Action) gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details zur Art des Verstoßes wurden in der Meldung nicht genannt, was ...",
   "key_takeaways": [
-    "beliebige lokale Dateien lesen oder schreiben",
-    "unerwünschte ausgehende Netzwerkverbindungen auslösen",
-    "TLS-Verbindungen abfangen, sich als vertrauenswürdige Peers ausgeben und Daten manipulieren",
-    "Aktives System AL96** im zentralen tropischen Atlantik wird per Satellit und Mikrowellenbeobachtung überwacht.",
-    "Die offizielle Prognose für die atlantische Hurrikansaison zeigt eine erhöhte Aktivität; AL96 hat aktuell eine **mittlere Wahrscheinlichkeit** der Entwicklung zu einem tropischen Sturm innerhalb der nächsten Tage."
+    "Notenbank / Aufsicht:** Die US-Notenbank (Federal Reserve) hat eine Durchsetzungsmaßnahme (Enforcement Action) gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details zur Art des Verstoßes wurden in der Meldung nicht genannt, was auf interne Verstöße oder Compliance-Probleme hindeutet.",
+    "Verbraucherfinanzen:** Das Wall Street Journal warnt eindringlich vor der Nutzung „kostenloser“ Finanzberater von Banken. Diese seien oft provisionsbasiert und nicht an die Interessen des Kunden gebunden. Es gebe keinen Ersatz für unabhängige, qualifizierte Finanzberatung.",
+    "Cyberbedrohung:** Die US-Behörde CISA warnt vor einer Schwachstelle im „OTTO Fleet Manager“ von Rockwell Automation. Die Sicherheitslücke (Details in CSAF-Datei) ermöglicht Angreifern eine deutlich kostengünstigere Offline-Brute-Force-Attacke gegen gespeicherte Passwort-Hashes. Betroffen sind bestimmte Versionen der Software; ein Update wird dringend empfohlen.",
+    "Wahlbetrugs-Vorwürfe:** Die von der Trump-Administration angekündigte Verschärfung gegen Wahlbetrug hat die erste Verhaftung zur Folge: Ein honduranischer Staatsbürger in Los Angeles wurde wegen mutmaßlicher illegaler Wählerregistrierung angeklagt. Es drohen Haft und Abschiebung. Offizielle kündigten weitere Festnahmen an.",
+    "Gerichtsentscheidung:** Ein Bundesrichter hat den Versuch von Donald Trump abgewiesen, seine Verurteilung im Schweigegeldprozess (Hush-Money-Fall) auf Bundesebene anzufechten. Der Richter stellte klar, dass die Zahlung und die Vertuschung nicht unter die präsidiale Immunität fallen."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**DATUM: 27.08.2026**\n\n**TAGESÜBERSICHT:**  \nAn diesem Donnerstag dominieren drei große Themenstränge: Eine verheerende Flutkatastrophe im Himalaya-Gebiet mit Hunderten Toten, gezielte Cyberangriffe chinesischer Hacker auf US-Energiebehörden sowie regulatorische Eingriffe der US-Notenbank im Finanzsektor. Hinzu kommen neue Schwachstellenmeldungen für kritische Infrastruktur und eine Warnung vor einem neuen tropischen System im Atlantik.\n\n---\n\n### 🌍 Internationale Katastrophe: Flut in Nepal/Tibet\n**Quellen:** New York Times, BBC World News  \n**Lage:** Bei einer massiven Sturzflut in den Tälern Nepals und Tibets wurden nach offiziellen Angaben **Hunderte Menschen getötet**. Überlebende berichten, dass eine Wand aus Schlamm und Geröll ganze Dörfer innerhalb von Minuten weggespült habe.  \n**Ursache:** Erste wissenschaftliche Untersuchungen deuten auf einen **kollabierten Gletscher** hin – ein weiteres alarmierendes Beispiel für die rapide schmelzenden Eismassen im Himalaya.  \n**Rettung:** Einsatzkräfte durchkämmen entlegene Täler, die Versorgung der Region ist massiv erschwert.\n\n**Bewertung:** Die Katastrophe verdeutlicht die wachsende Gefahr durch Gletschersee-Ausbrüche als direkte Folge des Klimawandels – ein Risiko, das auch für andere Bergregionen weltweit steigt.\n\n---\n\n### 🖥️ Cyberangriffe auf US-Regierungsnetzwerke\n**Quelle:** Fox News  \n**Angreifer:** Die als „QTFY“ bekannte chinesische Hackergruppe.  \n**Erfolge:** Die Angreifer verschafften sich Zugang zu **drei Laboren des US-Energieministeriums** und stahlen Daten aus über **300 Organisationen**, bevor das FBI die zugrundeliegenden Domains beschlagnahmen konnte.  \n**Ziel:** Offenbar Spionage und Datenabfluss im Bereich Energie- und Sicherheitsforschung.\n\n**Bewertung:** Dies ist einer der größten dokumentierten Einbrüche in US-Behördennetze in diesem Jahr. Die anhaltende Verwundbarkeit kritischer Behörden trotz verstärkter Abwehrmaßnahmen ist besorgniserregend.\n\n---\n\n### 🏦 Finanzregulierung & Märkte\n**US-Notenbank:** Die Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen **ehemaligen Mitarbeiter der Banco Popular de Puerto Rico** verhängt. Details wurden nicht veröffentlicht; es handelt sich typischerweise um Verstöße gegen interne Kontrollen oder Compliance-Auflagen.  \n**Asset-Management:** Die Financial Times berichtet, dass der **Wettlauf um Größe** in der Vermögensverwaltung trotz Rekordhochs an den Börsen immer dringlicher wird. Der Druck, neue Kunden zu gewinnen, steigt.  \n**Steuertipp:** Das Wall Street Journal behandelt die Frage eines Hauses als Geschenk an die Mutter – ein Fall, der zeigt, wie komplex die steuerliche Rückübertragung von Immobilien zur Kapitalgewinnminimierung sein kann.\n\n**Bewertung:** Die Mischung aus Behördenmaßnahmen, Konsolidierungsdruck und steuerlichen Gestaltungsfragen zeigt: Die Finanzbranche bleibt trotz guter Aktienkurse unter erheblichem strukturellem Druck.\n\n---\n\n### ⚙️ Kritische Infrastruktur: Neue Sicherheitswarnung\n**Quelle:** CISA (US-Cybersicherheitsbehörde)  \n**Betroffen:** **Applied Systems Engineering ASE2000 V2 Communication Test Set** – ein Werkzeug zur Überprüfung von Kommunikationssystemen, häufig in Industrieanlagen eingesetzt.  \n**Schwachstellen:** Angreifer können:  \n- beliebige lokale Dateien lesen oder schreiben  \n- unerwünschte ausgehende Netzwerkverbindungen auslösen  \n- TLS-Verbindungen abfangen, sich als vertrauenswürdige Peers ausgeben und Daten manipulieren  \n\n**Bewertung:** Besonders kritisch, da das Gerät in Umgebungen eingesetzt wird, in denen Netzwerkkommunikation über Sicherheitsgrenzen hinweg geprüft wird – eine Kompromittierung könnte tief in kontrollierte Industrienetze führen.\n\n---\n\n### 🌊 Wetter & Naturereignisse\n**NOAA (National Hurricane Center):**  \n- **Aktives System AL96** im zentralen tropischen Atlantik wird per Satellit und Mikrowellenbeobachtung überwacht.  \n- Die offizielle Prognose für die atlantische Hurrikansaison zeigt eine erhöhte Aktivität; AL96 hat aktuell eine **mittlere Wahrscheinlichkeit** der Entwicklung zu einem tropischen Sturm innerhalb der nächsten Tage.  \n- Keine unmittelbare Bedrohung für Land, Entwicklung wird aber verfolgt.\n\n---\n\n### 📜 Internationale Erinnerung: Tod von Ratko Mladić\n**Quelle:** NZZ International  \nDer frühere bosnisch-serbische Militärführer **Ratko Mladić**, vom UN-Kriegsverbrechertribunal wegen Völkermordes in Bosnien-Herzegowina verurteilt, ist gestorben. Mladić, der in den 1990er-Jahren für das Massaker von Srebrenica verantwortlich war, bleibt in Teilen der Region umstritten verehrt.\n\n**Bewertung:** Sein Tod beendet ein Kapitel der Aufarbeitung, lässt jedoch die gesellschaftlichen Spaltungen in den Nachfolgestaaten Jugoslawiens weiterhin sichtbar bleiben.\n\n---\n\n### 🔮 Ausblick & Empfehlungen\n- **Fokus Katastrophenschutz:** Die Himalaya-Flut zeigt: Anpassungsmaßnahmen an Gletscherseen müssen weltweit beschleunigt werden.  \n- **Cybersicherheit:** Betreiber kritischer Infrastruktur – insbesondere Energie – sollten die neuesten CISA-Warnungen umgehend prüfen und ihre Netzwerk-Segmentierung überdenken.  \n- **Finanzmarkt:** Anleger sollten trotz Rekordhochs die zunehmende Konsolidierung und regulatorische Risiken im Asset-Management im Blick behalten.  \n- **Wetter:** Für den atlantischen Seeraum bleibt AL96 zu beobachten; keine unmittelbaren Küstenwarnungen.\n\n---\n*Berichtszeitpunkt: 27.08.2026, 14:00 MESZ*\n\nMACRO:",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 28.08.2026**\n\n**1. WIRTSCHAFT & FINANZEN**\n- **Notenbank / Aufsicht:** Die US-Notenbank (Federal Reserve) hat eine Durchsetzungsmaßnahme (Enforcement Action) gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details zur Art des Verstoßes wurden in der Meldung nicht genannt, was auf interne Verstöße oder Compliance-Probleme hindeutet.\n- **Verbraucherfinanzen:** Das Wall Street Journal warnt eindringlich vor der Nutzung „kostenloser“ Finanzberater von Banken. Diese seien oft provisionsbasiert und nicht an die Interessen des Kunden gebunden. Es gebe keinen Ersatz für unabhängige, qualifizierte Finanzberatung.\n\n**2. SICHERHEIT & TECHNOLOGIE**\n- **Cyberbedrohung:** Die US-Behörde CISA warnt vor einer Schwachstelle im „OTTO Fleet Manager“ von Rockwell Automation. Die Sicherheitslücke (Details in CSAF-Datei) ermöglicht Angreifern eine deutlich kostengünstigere Offline-Brute-Force-Attacke gegen gespeicherte Passwort-Hashes. Betroffen sind bestimmte Versionen der Software; ein Update wird dringend empfohlen.\n\n**3. US-POLITIK & JUSTIZ**\n- **Wahlbetrugs-Vorwürfe:** Die von der Trump-Administration angekündigte Verschärfung gegen Wahlbetrug hat die erste Verhaftung zur Folge: Ein honduranischer Staatsbürger in Los Angeles wurde wegen mutmaßlicher illegaler Wählerregistrierung angeklagt. Es drohen Haft und Abschiebung. Offizielle kündigten weitere Festnahmen an.\n- **Gerichtsentscheidung:** Ein Bundesrichter hat den Versuch von Donald Trump abgewiesen, seine Verurteilung im Schweigegeldprozess (Hush-Money-Fall) auf Bundesebene anzufechten. Der Richter stellte klar, dass die Zahlung und die Vertuschung nicht unter die präsidiale Immunität fallen.\n\n**4. INTERNATIONALE LAGE**\n- **Nepal / Flutkatastrophe:** Die Zahl der Vermissten nach der verheerenden Flut und dem Erdrutsch an der nepalesisch-tibetischen Grenze wurde auf rund 1.900 verdoppelt. Viele Opfer stammen von Wasserkraftprojekten. Die Rettungsarbeiten sind massiv durch die Angst vor weiteren Überschwemmungen durch einen neu entstandenen Barrieresee behindert.\n- **Ukraine-Krieg / Geheimdienste:** Laut einem Bericht der NZZ soll CIA-Direktor John Ratcliffe während eines mysteriösen Besuchs in Russland den Kreml mit aller Deutlichkeit darauf hingewiesen haben, dass die ukrainische Offensive in einer Sackgasse stecke. Dies wird als Aufforderung zu Verhandlungen gewertet. Die Informationen sind nicht offiziell bestätigt.\n\n**5. WETTER & EXTREMEREIGNISSE**\n- **Atlantik / Tropen:** Das National Hurricane Center beobachtet den Atlantik. Im aktuellen Tropenausblick (Stand 28.08., 14:00 EDT) werden keine unmittelbaren Warnungen für das Wochenende genannt. (Keine aktiven Systeme in der Meldung vermerkt.)\n\n---\n**WICHTIGSTE EREIGNISSE FÜR DEN TAG:**\n1.  **Nepal:** Dramatische Verschärfung der humanitären Lage (1.900 Vermisste) und latente Gefahr eines zweiten Flutereignisses.\n2.  **Justiz in den USA:** Juristische Niederlage für Donald Trump im Schweigegeldverfahren; erste Verhaftung in der „Wahlbetrugs“-Offensive.\n3.  **Cyber-Sicherheit:** Dringender Sicherheitspatch für Rockwell Automation OTTO Fleet Manager erforderlich (Passwort-Hash-Angriff).\n\nMACRO:\n**Summary of Relevant News Feeds for 28.08.2026**\n\n### Zentralbank\n- **Federal Reserve Press**: The Federal Reserve Board has issued an enforcement action against a former employee of Banco Popular de Puerto Rico. This move likely involves regulatory violations or misconduct.\n\n### Cyber / Infrastruktur\n- **CISA Cyber Alerts**: \n  - **Rockwell Automation OTTO Fleet Manager Vulnerability**: Versions of Rockwell Automation OTTO Fleet Manager earlier than the latest update are vulnerable to a security flaw. Exploiting this vulnerability can make it easier for attackers to perform offline brute-force attacks against stored password hashes.\n\n### US/Finanzen\n- **Wall Street Journal (MarketWatch Alt)**: \n  - **Financial Advice**: A cautionary article advises consumers to be wary of \"free\" financial advice offered by financial institutions, emphasizing that proper financial advice comes with its own due diligence and cost.\n\n### US/Presse\n- **New York Times World**: \n  - **Nepal Disaster**: Nepal has more than doubled the number of people reported missing to 1,900 due to the recent landslide. Rescue efforts are complicated by the risk of new flooding from a barrier lake formed by the landslide.\n\n### US/Politik\n- **Fox News Latest**: \n  - **Trump Election Fraud**: The first arrest has been made in the Trump election fraud crackdown, with a Honduran national in Los Angeles facing felony charges for allegedly registering to vote. More arrests are expected.\n\n### UK/Finanzen\n- **Financial Times**: \n  - **Trump Legal Challenge**: A federal court has rejected Trump's bid to challenge his conviction related to hush-money payments, ruling that such actions are not covered by presidential immunity.\n\n### UK/Medien\n- **BBC World News**: \n  - **Nepal-Tibet Flood Risk**: Rescuers in Nepal are fearing a second flood due to a barrier lake formed by a recent landslide near the Nepal-Tibet border. Laura Bicker provides details on the potential risks.\n\n### CH/Presse\n- **NZZ International**: \n  - **CIA Director's Russia Visit**: A new version of the story suggests that CIA Director John Ratcliffe visited Moscow to insist on negotiations for ending the Ukraine war, emphasizing that the Ukrainian offensive is at a stalemate.\n\n### Wetter/Extreme\n- **NOAA National Hurricane Center**: \n  - **Atlantic Tropical Weather Outlook**: The National Hurricane Center has issued its final advisory on the remnants of Dolly, which are now over the central Atlantic. No immediate threats to land are anticipated.\n\n### Investigativ Net\n- **ICIJ (Panama/Pandora Papers)**: \n  - **Metropolitan Museum Artworks**: Despite years of confiscations, the Metropolitan Museum still holds hundreds of pieces linked to alleged trafficking and looting figures. The museum is initiating an expedited review of these works.\n\n### Medizin\n- **CDC Health Updates**: \n  - **Outbreak Information**: The Centers for Disease Control and Prevention (CDC) have issued an update on an ongoing health issue. The full details of the outbreak are not yet provided but are expected to be critical for public health.\n\nThese summaries provide a snapshot of key news items across various sectors and regions as of 28.08.2026.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT10CA",
+      "name": "Flug PGT27UP",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.5361,
-      "lon": 27.844,
-      "lng": 27.844,
+      "lat": 42.0544,
+      "lon": 26.0961,
+      "lng": 26.0961,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT10CA | Höhe: 6.0 km | Speed: 687 km/h",
+      "description": "Callsign: PGT27UP | Höhe: 11.3 km | Speed: 935 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT91N",
+      "name": "Flug WMT8ZY",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.8888,
-      "lon": 26.5232,
-      "lng": 26.5232,
+      "lat": 44.6497,
+      "lon": 26.0696,
+      "lng": 26.0696,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT91N | Höhe: 10.6 km | Speed: 942 km/h",
+      "description": "Callsign: WMT8ZY | Höhe: 1.6 km | Speed: 495 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AEE908",
+      "name": "Flug WZZ5Z",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.0018,
-      "lon": 33.1802,
-      "lng": 33.1802,
+      "lat": 34.7636,
+      "lon": 32.9101,
+      "lng": 32.9101,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AEE908 | Höhe: 3.7 km | Speed: 612 km/h",
+      "description": "Callsign: WZZ5Z | Höhe: 5.9 km | Speed: 673 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XCDE",
+      "name": "Flug IGO084",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.8183,
-      "lon": 35.0591,
-      "lng": 35.0591,
+      "lat": 26.5339,
+      "lon": 51.8442,
+      "lng": 51.8442,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XCDE | Höhe: 0.4 km | Speed: 242 km/h",
+      "description": "Callsign: IGO084 | Höhe: 9.3 km | Speed: 790 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug RRR6992",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 34.2237,
-      "lon": 32.612,
-      "lng": 32.612,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR6992 | Höhe: 3.3 km | Speed: 591 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug JJP57",
+      "name": "Flug CPA087",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.3039,
-      "lon": 121.5887,
-      "lng": 121.5887,
+      "lat": 22.4784,
+      "lon": 116.9501,
+      "lng": 116.9501,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JJP57 | Höhe: 1.6 km | Speed: 445 km/h",
+      "description": "Callsign: CPA087 | Höhe: 11.9 km | Speed: 949 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UAE330",
+      "name": "Flug CPA888",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 15.0617,
-      "lon": 120.8279,
-      "lng": 120.8279,
+      "lat": 22.3418,
+      "lon": 118.5333,
+      "lng": 118.5333,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAE330 | Höhe: 3.4 km | Speed: 583 km/h",
+      "description": "Callsign: CPA888 | Höhe: 8.8 km | Speed: 925 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,7 +105,7 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 19,
+        "val": 18,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -124,7 +113,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 19,
+        "val": 18,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -140,7 +129,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 12,
+        "val": 11,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -156,7 +145,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 19,
+        "val": 18,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -164,7 +153,7 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 15,
+        "val": 14,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -172,7 +161,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 19,
+        "val": 18,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -207,38 +196,6 @@
         "val": 3,
         "first_seen": "2026-08-11",
         "last_seen": "2026-08-15"
-      },
-      {
-        "id": "cisco",
-        "label": "Cisco",
-        "group": "tech",
-        "val": 3,
-        "first_seen": "2026-08-13",
-        "last_seen": "2026-08-13"
-      },
-      {
-        "id": "tsmc",
-        "label": "TSMC",
-        "group": "tech",
-        "val": 3,
-        "first_seen": "2026-08-13",
-        "last_seen": "2026-08-13"
-      },
-      {
-        "id": "johnson_controls",
-        "label": "Johnson Controls",
-        "group": "tech",
-        "val": 3,
-        "first_seen": "2026-08-13",
-        "last_seen": "2026-08-13"
-      },
-      {
-        "id": "schwarzes_meer",
-        "label": "Schwarzes Meer",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-13",
-        "last_seen": "2026-08-13"
       },
       {
         "id": "wagner",
@@ -436,7 +393,7 @@
         "id": "kanada",
         "label": "Kanada",
         "group": "staat",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -444,7 +401,7 @@
         "id": "zimbra",
         "label": "CVE-2026-73570",
         "group": "risiko",
-        "val": 9,
+        "val": 8,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -545,14 +502,6 @@
         "target": "persischer_golf",
         "label": "Bedrohung",
         "last_seen": "2026-08-18"
-      },
-      {
-        "from": "russland",
-        "to": "schwarzes_meer",
-        "source": "russland",
-        "target": "schwarzes_meer",
-        "label": "Eskalation",
-        "last_seen": "2026-08-13"
       },
       {
         "from": "usa",
@@ -949,14 +898,6 @@
         "last_seen": "2026-08-18"
       },
       {
-        "from": "russland",
-        "to": "schwarzes_meer",
-        "source": "russland",
-        "target": "schwarzes_meer",
-        "label": "Eskalation",
-        "last_seen": "2026-08-13"
-      },
-      {
         "from": "usa",
         "to": "china",
         "source": "usa",
@@ -1303,11 +1244,11 @@
     ]
   },
   "simple_key_takeaways": [
-    "beliebige lokale Dateien lesen oder schreiben",
-    "unerwünschte ausgehende Netzwerkverbindungen auslösen",
-    "TLS-Verbindungen abfangen, sich als vertrauenswürdige Peers ausgeben und Daten manipulieren",
-    "Aktives System AL96** im zentralen tropischen Atlantik wird per Satellit und Mikrowellenbeobachtung überwacht.",
-    "Die offizielle Prognose für die atlantische Hurrikansaison zeigt eine erhöhte Aktivität; AL96 hat aktuell eine **mittlere Wahrscheinlichkeit** der Entwicklung zu einem tropischen Sturm innerhalb der nächsten Tage."
+    "Notenbank / Aufsicht:** Die US-Notenbank (Federal Reserve) hat eine Durchsetzungsmaßnahme (Enforcement Action) gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details zur Art des Verstoßes wurden in der Meldung nicht genannt, was auf interne Verstöße oder Compliance-Probleme hindeutet.",
+    "Verbraucherfinanzen:** Das Wall Street Journal warnt eindringlich vor der Nutzung „kostenloser“ Finanzberater von Banken. Diese seien oft provisionsbasiert und nicht an die Interessen des Kunden gebunden. Es gebe keinen Ersatz für unabhängige, qualifizierte Finanzberatung.",
+    "Cyberbedrohung:** Die US-Behörde CISA warnt vor einer Schwachstelle im „OTTO Fleet Manager“ von Rockwell Automation. Die Sicherheitslücke (Details in CSAF-Datei) ermöglicht Angreifern eine deutlich kostengünstigere Offline-Brute-Force-Attacke gegen gespeicherte Passwort-Hashes. Betroffen sind bestimmte Versionen der Software; ein Update wird dringend empfohlen.",
+    "Wahlbetrugs-Vorwürfe:** Die von der Trump-Administration angekündigte Verschärfung gegen Wahlbetrug hat die erste Verhaftung zur Folge: Ein honduranischer Staatsbürger in Los Angeles wurde wegen mutmaßlicher illegaler Wählerregistrierung angeklagt. Es drohen Haft und Abschiebung. Offizielle kündigten weitere Festnahmen an.",
+    "Gerichtsentscheidung:** Ein Bundesrichter hat den Versuch von Donald Trump abgewiesen, seine Verurteilung im Schweigegeldprozess (Hush-Money-Fall) auf Bundesebene anzufechten. Der Richter stellte klar, dass die Zahlung und die Vertuschung nicht unter die präsidiale Immunität fallen."
   ],
   "geoscore": {
     "current_score": 72,
@@ -1322,23 +1263,23 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-08-27T17:12:08.222429+00:00",
+  "timestamp": "2026-08-28T17:59:30.319839+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-27T17:09:33.748953+00:00",
+    "timestamp": "2026-08-28T17:56:36.289431+00:00",
     "feeds_total": 224,
     "feeds_successful": 118,
     "feeds_failed": 106,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
-      "qwen-2.5-72b-instruct",
-      "DeepSeek"
+      "DeepSeek",
+      "qwen-2.5-72b-instruct"
     ],
     "swarm_debate_status": "ERROR (HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=35))",
     "synthesizer_status": "ERROR (ReadTimeout)",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (7 Signale)",
-    "graph_merge_status": "SUCCESS (48 Nodes)",
+    "opensky_status": "SUCCESS (6 Signale)",
+    "graph_merge_status": "SUCCESS (44 Nodes)",
     "errors": [
       "Synthesizer Exception: HTTPSConnectionPool(host='api.mistral.ai', port=443): Read timed out. (read timeout=70)"
     ]
@@ -1353,9 +1294,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 52,
-    "nodes_now": 48,
-    "hotspots_now": 7,
-    "summary": "Graph-Knoten 52 → 48"
+    "nodes_prev": 48,
+    "nodes_now": 44,
+    "hotspots_now": 6,
+    "summary": "Graph-Knoten 48 → 44"
   }
 }
