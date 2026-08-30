@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der Nachrichtenlage vom 29.08.2026**\n\nDie Meldungen des Tages zeigen ein breites Spektrum an geopolitischen, wirtschaftlichen und sicherheitsrelevanten Ereignissen. Die auffälligsten Entwicklungen lassen sich wie folgt clustern:\n\n**1. Geopolitik & Energie: Der US-Venezuela-Öl-Deal**\nDie Meldung der NZZ über ein weitreichendes Ölgeschäft zwischen den USA und Venezuela ist der dominierende geopolitische Brocken. Angesichts der größten Ölreserven der Welt in Venezuela und der anhaltenden Sanktionspolitik Washingtons wäre ein solcher Deal ein Paradigmenwechsel. Die stra...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der Nachrichtenlage vom 29.08.2026**\n\nDie Meldungen des Tages zeigen ein breites Spektrum an geopolitischen, wirtschaftlichen und sicherheitsrelevanten Ereignissen. Die auffälligsten Entwicklungen lassen sich wie folgt clustern:\n\n**1. Geopolitik & Energie: Der US-Venezuela-Öl-Deal**\nDie Meldung der NZZ über ein weitreich...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der wichtigsten Meldungen für den 30.08.2026:**\n\n---\n\n**1. Wirtschaft & Finanzen (USA):**\nDer Artikel über Roth-Conversions mit über 8 Millionen Dollar Ersparnissen ist ein klassisches Beispiel für einen \"Wealth-Management\"-Ratgeber. Interessant ist hier die Kernfrage des Paares: Sie zahlen keine 2% Gebühren (ca. 160.000 USD/Jahr) an einen Berater. Das ist eine relevante Diskussion über Gebührenstrukturen in der US-Finanzbranche, hat aber keine makroökonomische Signalwirkung.\n\n---\n\n**2. Kritische Infrastruktur & Cybersicherheit (Global):**\nDie CISA-Warnung bezüglich...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der wichtigsten Meldungen für den 30.08.2026:**\n\n---\n\n**1. Wirtschaft & Finanzen (USA):**\nDer Artikel über Roth-Conversions mit über 8 Millionen Dollar Ersparnissen ist ein klassisches Beispiel für einen \"Wealth-Management\"-Ratgeber. Interessant ist hier die Kernfrage des Paares: Sie zahlen keine 2% Gebühren (ca. 160.000...",
   "key_takeaways": [
-    "Banco Popular:** Die Durchsetzungsmaßnahme der Fed gegen einen ehemaligen Mitarbeiter ist ein Routinefall der Bankenaufsicht.",
-    "NHL (Macklin Celebrini):** Der Verzicht auf Gehalt zugunsten des Teams (Salary Cap) ist eine strategische Entscheidung im US-Sportbusiness und zeigt das Verständnis für Teambuilding, ist aber journalistisch von geringer Tragweite.",
-    "Federal Reserve:** Die Federal Reserve Board hat eine Durchsetzungshandlung gegen einen ehemaligen Mitarbeiter von Banco Popular de Puerto Rico verhängt. Dies deutet auf Compliance-Verstöße oder Fehlverhalten im Finanzsektor hin.",
-    "CISA:** Ein Sicherheitsrisiko wurde im Rockwell Automation OTTO Fleet Manager identifiziert, das es Angreifern ermöglicht, brute-force-Angriffe gegen gespeicherte Passwörter zu vereinfachen. Dies betroffene Versionen sind alle bis zur aktuellen Version.",
-    "Nepal:** Überschwemmungen in Nepal haben immense Zerstörung verursacht, mit mindestens 2.400 Verschollenen. Die Rettungsmissionen laufen seit vier Tagen."
+    "261 Ausländer aus 23 Ländern** werden vermisst.",
+    "Die chinesischen Behörden veröffentlichen kaum Details.",
+    "Das dramatischste Filmmaterial wird in China selbst nicht gezeigt (Informationskontrolle).",
+    "Hauptthema:** Humanitäre und diplomatische Krise um die Tibet-Fluten mit internationalen Vermissten.",
+    "Sicherheitslage:** Neue Cyber-Schwachstelle in industrieller Steuerungssoftware (Rockwell) – hohe Priorität für OT-Sicherheitsbeauftragte."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der Nachrichtenlage vom 29.08.2026**\n\nDie Meldungen des Tages zeigen ein breites Spektrum an geopolitischen, wirtschaftlichen und sicherheitsrelevanten Ereignissen. Die auffälligsten Entwicklungen lassen sich wie folgt clustern:\n\n**1. Geopolitik & Energie: Der US-Venezuela-Öl-Deal**\nDie Meldung der NZZ über ein weitreichendes Ölgeschäft zwischen den USA und Venezuela ist der dominierende geopolitische Brocken. Angesichts der größten Ölreserven der Welt in Venezuela und der anhaltenden Sanktionspolitik Washingtons wäre ein solcher Deal ein Paradigmenwechsel. Die strategische Motivation liegt auf der Hand: Die USA sichern sich Zugang zu Rohöl, um die Energiepreise zu stabilisieren und die Abhängigkeit von anderen Förderländern zu verringern, während Venezuela dringend Devisen und Investitionen benötigt. Die offene Frage aus der Meldung ist berechtigt: Eine Umsetzung scheitert derzeit an der politischen Legitimität des Maduro-Regimes und an logistischen Hürden (veraltete Infrastruktur). Diese Entwicklung könnte die Ölpreise an den Weltmärkten kurzfristig unter Druck setzen.\n\n**2. Krieg in der Ukraine: Eskalation nahe Kiew**\nDie Financial Times berichtet von einem massiven russischen Angriff auf ein Munitionsdepot nahe Kiew. Die Dauer der Luftangriffe (27 Alarme seit Donnerstag) und die Tiefe der Schläge bis in die Hauptstadtregion deuten auf eine taktische Intensivierung hin. Dies ist ein Zeichen dafür, dass Russland weiterhin versucht, die ukrainische Logistik zu schwächen, und dass die Luftabwehr der Ukraine vor enorme Herausforderungen gestellt wird. Diese Angriffe haben direkte Auswirkungen auf die Energieinfrastruktur und die Zivilbevölkerung, was in den kommenden Tagen die Diskussion um weitere Waffenlieferungen anheizen dürfte.\n\n**3. Humanitäre Krisen & Informationskontrolle: Nepal und Tibet**\nNepal: Die Flutkatastrophe mit 2.400 Vermissten verdeutlicht die Vulnerabilität des Himalaya-Staates gegenüber Klimaextremen. Der Wiederaufbau wird internationale Hilfsgelder benötigen.\nTibet: Der Bericht der BBC, wonach die dramatischsten Überschwemmungsbilder in China zensiert werden, ist ein Indikator für die Informationskontrolle der chinesischen Regierung in Krisenzeiten. Die mangelnde Transparenz erschwert nicht nur internationale Hilfsmaßnahmen, sondern untergräbt auch das Vertrauen in offizielle Opferzahlen.\n\n**4. Wirtschaft & Arbeitsmarkt: US-Konjunkturflaute**\nDer Bericht des Wall Street Journal über den abkühlenden Arbeitsmarkt (trotz des früheren Anstiegs) bestätigt den Abschwung. Die Kombination aus sinkenden Neueinstellungen und weniger Stellenausschreibungen deutet auf eine nachlassende Nachfrage hin. Dies könnte die Federal Reserve in ihrer Zinspolitik bestätigen, vorerst auf weitere Erhöhungen zu verzichten, wobei die kommenden Inflationsdaten entscheidend sein werden. Die Arbeitsmarktschwäche ist ein Warnsignal für die US-Konsumausgaben im vierten Quartal.\n\n**5. Cybersicherheit (Nischenmeldung)**\nDie Schwachstelle im Rockwell Automation OTTO Fleet Manager (Offline-Brute-Force-Angriffe auf Passwort-Hashes) ist primär für Industrieanlagen relevant. Sie unterstreicht die anhaltende Bedrohungslage in der OT/ICS-Umgebung, die oft kritischer Infrastruktur zugrunde liegt. Ein Update ist dringend erforderlich.\n\n**6. Personalien & Sport (Kurzmeldungen)**\n- **Banco Popular:** Die Durchsetzungsmaßnahme der Fed gegen einen ehemaligen Mitarbeiter ist ein Routinefall der Bankenaufsicht.\n- **NHL (Macklin Celebrini):** Der Verzicht auf Gehalt zugunsten des Teams (Salary Cap) ist eine strategische Entscheidung im US-Sportbusiness und zeigt das Verständnis für Teambuilding, ist aber journalistisch von geringer Tragweite.\n\n---\n\n**Fazit für diverse Feeds:**\nDie Top-Themen des Tages sind der **US-Venezuela-Deal**, die **Intensivierung des Ukraine-Krieges** und die **US-Konjunktursorgen**. Die Humanitären Krisen in Asien und die Cyber-Sicherheitslücke sind wichtige Meldungen für spezifische Zielgruppen (Entwicklungshilfe, IT-Sicherheit). Die wirtschaftlichen Meldungen dominieren die Finanzpresse, während die geopolitischen Spannungen die Schlagzeilen der Nachrichtenagenturen prägen.\n\nMACRO:\n**Synthese der aktuellen Ereignisse und Berichte:**\n\n1. **Zentralbanken:**\n   - **Federal Reserve:** Die Federal Reserve Board hat eine Durchsetzungshandlung gegen einen ehemaligen Mitarbeiter von Banco Popular de Puerto Rico verhängt. Dies deutet auf Compliance-Verstöße oder Fehlverhalten im Finanzsektor hin.\n\n2. **Cyber / Infrastruktur:**\n   - **CISA:** Ein Sicherheitsrisiko wurde im Rockwell Automation OTTO Fleet Manager identifiziert, das es Angreifern ermöglicht, brute-force-Angriffe gegen gespeicherte Passwörter zu vereinfachen. Dies betroffene Versionen sind alle bis zur aktuellen Version.\n\n3. **Presseberichte ( international ):**\n   - **Nepal:** Überschwemmungen in Nepal haben immense Zerstörung verursacht, mit mindestens 2.400 Verschollenen. Die Rettungsmissionen laufen seit vier Tagen.\n   - **USA:** Das US-geführte Jobmarkt hat nach einem Anstieg am Anfang des Jahres im Sommer eine Verlangsamung erfahren. Das Anzahl der Stellenanzeigen ist zurückgegangen, was die Erwerbschancen für Jobsuchende verringert.\n   - **Venezuela:** Die USA und Venezuela haben ein umfangreiches Ölgeschäft abgeschlossen, durch das die USA auf venezolanische Ölreserven zugreifen können. Die Nachhaltigkeit und Auswirkungen dieses Deals sind noch offen.\n   - **Russland / Ukraine:** Dutzende Menschen wurden in einem russischen Angriff auf eine Munitionslager in der Nähe von Kiew getötet. Die Angriffe durch russische Drohnen dauern bereits seit Donnerstag an und haben 27 Alarme ausgelöst.\n   - **Schweiz:** Die Vereinigten Staaten haben ein umfangreiches Ölgeschäft mit Venezuela abgeschlossen, um auf die größten Ölreserven der Welt zuzugreifen.\n   - **Tibet:** Footage der Deadly Flash Floods in Tibet wird in China nicht gezeigt, was die Transparenz und den Informationsaustausch beschränkt.\n\n4. **Politik:**\n   - **USA:** Macklin Celebrini, eine prominente Sportfigur, hat bei seinem Vertrag mit den San Jose Sharks $2 Millionen pro Jahr abgelehnt, um dem Team mehr finanzielle Flexibilität zu geben.\n\n5. **Wetter und Naturkatastrophen:**\n   - **NOAA:** Der National Hurricane Center gibt ein Tropisches Wetterausblick für den Nordatlantik, den Karibik und den Golfo von Mexiko. Die Überreste von Sturm Dolly verursachen weiterhin Regen und Gewitter östlich der Leeward Islands.\n\n6. **Investigative Berichte:**\n   - **ICIJ:** Trotz vieler Jahrzehnte der Beschlagnahme sind Hunderte von Kunstwerken im British Museum, die mit vermutlichem Kunstraub und Plünderung in Verbindung stehen, noch immer in der Sammlung. Das Museum hat eine beschleunigte Überprüfung dieser Werke eingeleitet.\n\n7. **Ngos und Frühwarnsysteme:**\n   - **International Crisis Group:** Es gibt aktuell keine spezifischenwarnungen, aber die Situation in Nepal, Tibet und der Ukraine bleibt angespannt und erfordert kontinuierliche Überwachung.\n\nDiese Zusammenfassung bietet einen Überblick über die wichtigsten aktuellen Ereignisse in verschiedenen Bereichen.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der wichtigsten Meldungen für den 30.08.2026:**\n\n---\n\n**1. Wirtschaft & Finanzen (USA):**\nDer Artikel über Roth-Conversions mit über 8 Millionen Dollar Ersparnissen ist ein klassisches Beispiel für einen \"Wealth-Management\"-Ratgeber. Interessant ist hier die Kernfrage des Paares: Sie zahlen keine 2% Gebühren (ca. 160.000 USD/Jahr) an einen Berater. Das ist eine relevante Diskussion über Gebührenstrukturen in der US-Finanzbranche, hat aber keine makroökonomische Signalwirkung.\n\n---\n\n**2. Kritische Infrastruktur & Cybersicherheit (Global):**\nDie CISA-Warnung bezüglich **Rockwell Automation OTTO Fleet Manager** ist sicherheitsrelevant. Die Schwachstelle betrifft reduzierte Rechenkosten für **Offline-Brute-Force-Angriffe** auf Passwort-Hashes. Das ist eine schwerwiegende Design-Schwachstelle (vermutlich CWE-916: Verwendung von schwachen oder unzureichend gesicherten Hash-Algorithmen). Da es sich um eine Fleet-Manager-Software handelt (vermutlich für mobile Roboter/Logistik in der Industrie), könnte ein erfolgreicher Angriff Zugang zu industriellen Netzwerken ermöglichen. **Handlungsempfehlung:** Patches umgehend einspielen und Passwörter zurücksetzen.\n\n---\n\n**3. Extremwetter / Atlantik (USA/Karibik):**\nDer NOAA-Outlook meldet die **Überreste von Tropical Storm Dolly** östlich der Leeward Islands. Dies ist ein \"strong tropical wave\" mit Potenzial zur erneuten Entwicklung. Das ist eine klassische Wetterwarnung für Ende August – der Höhepunkt der atlantischen Hurrikansaison. Kein akuter Landfall-Warntext erkennbar, aber die Entwicklung sollte beobachtet werden.\n\n---\n\n**4. Asien-Katastrophe: Tibet-Fluten (China/Indien):**\nDies ist die dominierende Nachrichtenlage des Tages. Die **NYT** und **BBC** berichten übereinstimmend über eine große Katastrophe:\n- **261 Ausländer aus 23 Ländern** werden vermisst.\n- Die chinesischen Behörden veröffentlichen kaum Details.\n- Das dramatischste Filmmaterial wird in China selbst nicht gezeigt (Informationskontrolle).\n\nDies ist ein geopolitisch sensibler Vorfall, da er internationale Opfer betrifft und die Transparenz der chinesischen Krisenkommunikation infrage stellt. Die Diskrepanz zwischen offiziellen Verlautbarungen und internationalen Berichten wird in den nächsten Tagen für diplomatische Spannungen sorgen.\n\n---\n\n**5. Europa-Politik (Island):**\nIsland lehnt die EU-Beitrittsverhandlungen überraschend deutlich ab. Das ist ein **Rückschlag für die EU-Erweiterungspolitik**. Das Votum ist ein Zeichen für die anhaltende Skepsis in Nordeuropa gegenüber Brüssel. Für Brüssel ist es ein Prestigeverlust, da Island als wirtschaftlich stabiler und reicher Kandidat gegolten hatte.\n\n---\n\n**6. UK/Finanzen (Bildung):**\nDer FT-Artikel über \"School IB economics: The hottest rave this summer? Just add caffeine\" scheint eine satirische oder vereinfachte Darstellung des Wettbewerbsgleichgewichts zu sein (Caffeine-Rave als Analogie). Das ist Content für das Feuilleton, kein echtes Wirtschaftssignal.\n\n---\n\n**Zusammenfassung der Lage am 30.08.2026:**\n\n- **Hauptthema:** Humanitäre und diplomatische Krise um die Tibet-Fluten mit internationalen Vermissten.\n- **Sicherheitslage:** Neue Cyber-Schwachstelle in industrieller Steuerungssoftware (Rockwell) – hohe Priorität für OT-Sicherheitsbeauftragte.\n- **Meteorologie:** Nachwirkungen von \"Dolly\" im Atlantik, Überwachungsstatus.\n- **Politik:** EU-Erweiterung erleidet einen Dämpfer durch Islands Ablehnung.\n\nMACRO:\n### Overview of Today's Key News (30.08.2026)\n\n1. **Zentralbank**: \n   - **Federal Reserve Press**: The Federal Reserve Board has issued an enforcement action against a former employee of Banco Popular de Puerto Rico. This move is part of ongoing efforts to ensure regulatory compliance and accountability within financial institutions.\n\n2. **Cyber / Infrastruktur**:\n   - **CISA Cyber Alerts**: Rockwell Automation's OTTO Fleet Manager is vulnerable to a security flaw. Successful exploitation could reduce the computational cost required for an attacker to perform offline brute-force attacks against stored password hashes. Affected versions are OTTO Fleet Manager <= 1.0.2.3.\n\n3. **US/Finanzen**:\n   - **Wall Street Journal (MarketWatch Alt)**: An 84-year-old and his 77-year-old wife with $8 million in savings are considering Roth conversions. They are hesitant to pay a financial adviser 2% of their assets, which would amount to roughly $160,000 annually.\n\n4. **US/Politik**:\n   - **Fox News Latest**: The American Culture Quiz tests knowledge of national traits, trends, history, and people, focusing this week on football futures and dessert drama.\n\n5. **US/Presse**:\n   - **New York Times World**: China reports that 261 foreigners from 23 countries are missing in the Tibet flood disaster. This is one of the clearest pictures yet of the disaster on the Chinese side of the border, where authorities have been tight-lipped about the situation.\n\n6. **CH/Presse**:\n   - **NZZ International**: Iceland has unexpectedly and strongly rejected EU accession talks. This decision puts an end to a long-standing debate and is a setback for the EU.\n\n7. **UK/Medien**:\n   - **BBC World News**: Footage of the deadly floods in Tibet is not being shown in China, leaving the public with little information about the victims. This censorship highlights the opaque nature of disaster reporting in the region.\n\n8. **UK/Finanzen**:\n   - **Financial Times**: In an unusual trend, IB economics classes have become popular among high school students, who are adding caffeine to create a \"hottest rave\" atmosphere.\n\n9. **Wetter/Extreme**:\n   - **NOAA National Hurricane Center**: The remnants of Tropical Storm Dolly, now a strong tropical wave, continue to move east of the Leeward Islands. The National Hurricane Center is monitoring the situation closely.\n\n10. **Investigativ Net**:\n    - **OCCRP (Organized Crime & Corruption)**: Sebastián Marset, an alleged narco-terrorist, is attempting to have his U.S. indictment dismissed on jurisdictional grounds, claiming that a single wire transfer routed through a server in Virginia does not warrant prosecution.\n\n11. **Cyber-Espionage**:\n    - **Citizen Lab (Spyware & Surveillance)**: An unprecedented number of Apple users in 110 countries have received notifications alerting them to suspected spyware attacks on their devices. This widespread alert is raising concerns about the security of Apple products.\n\n### Key Takeaways\n- **Financial Regulation**: The Federal Reserve's enforcement action underscores the importance of regulatory compliance in the financial sector.\n- **Cybersecurity**: Rockwell Automation's security flaw and the widespread Apple spyware alerts highlight the ongoing threats in the cybersecurity landscape.\n- **International Disasters**: The Tibet flood disaster and the lack of transparency from Chinese authorities raise questions about international disaster response and information control.\n- **Economic Trends**: The popularity of IB economics classes and the hesitancy to pay high fees for financial advice reflect changing economic priorities and educational trends.\n- **Political Developments**: Iceland's rejection of EU accession talks and the American Culture Quiz reflect shifts in national and cultural attitudes.\n\nStay informed and be prepared for these developments.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT861J",
+      "name": "Flug PGT65UA",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.8297,
-      "lon": 28.3565,
-      "lng": 28.3565,
+      "lat": 45.0054,
+      "lon": 25.2994,
+      "lng": 25.2994,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT861J | Höhe: 9.9 km | Speed: 766 km/h",
+      "description": "Callsign: PGT65UA | Höhe: 10.4 km | Speed: 775 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT73G",
+      "name": "Flug PGT949",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.3041,
-      "lon": 27.4198,
-      "lng": 27.4198,
+      "lat": 42.3559,
+      "lon": 26.6523,
+      "lng": 26.6523,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT73G | Höhe: 8.6 km | Speed: 875 km/h",
+      "description": "Callsign: PGT949 | Höhe: 9.8 km | Speed: 815 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ11PP",
+      "name": "Flug JAV816",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.6156,
-      "lon": 33.5439,
-      "lng": 33.5439,
+      "lat": 31.1361,
+      "lon": 36.0282,
+      "lng": 36.0282,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ11PP | Höhe: 1.3 km | Speed: 501 km/h",
+      "description": "Callsign: JAV816 | Höhe: 5.4 km | Speed: 670 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AEE904",
+      "name": "Flug HMZ711",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.815,
-      "lon": 33.5528,
-      "lng": 33.5528,
+      "lat": 25.7004,
+      "lon": 51.7502,
+      "lng": 51.7502,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AEE904 | Höhe: 0.5 km | Speed: 282 km/h",
+      "description": "Callsign: HMZ711 | Höhe: 3.8 km | Speed: 651 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA677",
+      "name": "Flug CXA8720",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.0753,
-      "lon": 121.0676,
-      "lng": 121.0676,
+      "lat": 22.4958,
+      "lon": 115.8057,
+      "lng": 115.8057,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA677 | Höhe: 11.0 km | Speed: 921 km/h",
+      "description": "Callsign: CXA8720 | Höhe: 10.1 km | Speed: 838 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UAL837",
+      "name": "Flug CXA8672",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.449,
-      "lon": 121.8659,
-      "lng": 121.8659,
+      "lat": 21.8907,
+      "lon": 115.1278,
+      "lng": 115.1278,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAL837 | Höhe: 9.1 km | Speed: 893 km/h",
+      "description": "Callsign: CXA8672 | Höhe: 7.5 km | Speed: 806 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,7 +105,7 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 17,
+        "val": 16,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -113,7 +113,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 17,
+        "val": 16,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -129,7 +129,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -145,7 +145,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 17,
+        "val": 16,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -153,7 +153,7 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 13,
+        "val": 12,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -161,7 +161,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 17,
+        "val": 16,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -182,14 +182,6 @@
         "last_seen": "2026-08-17"
       },
       {
-        "id": "persischer_golf",
-        "label": "Persischer Golf",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-11",
-        "last_seen": "2026-08-15"
-      },
-      {
         "id": "oel",
         "label": "Öl",
         "group": "risiko",
@@ -198,52 +190,12 @@
         "last_seen": "2026-08-17"
       },
       {
-        "id": "moldau",
-        "label": "Moldau",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-08-15",
-        "last_seen": "2026-08-15"
-      },
-      {
-        "id": "indien",
-        "label": "Indien",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-08-15",
-        "last_seen": "2026-08-15"
-      },
-      {
         "id": "siemens",
         "label": "Siemens",
         "group": "tech",
         "val": 3,
         "first_seen": "2026-08-15",
         "last_seen": "2026-08-17"
-      },
-      {
-        "id": "berkshire",
-        "label": "Berkshire",
-        "group": "organisation",
-        "val": 3,
-        "first_seen": "2026-08-15",
-        "last_seen": "2026-08-15"
-      },
-      {
-        "id": "afghanistan",
-        "label": "Afghanistan",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-15",
-        "last_seen": "2026-08-15"
-      },
-      {
-        "id": "cybersicherheit",
-        "label": "Cyber",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-15",
-        "last_seen": "2026-08-15"
       },
       {
         "id": "apt33",
@@ -361,7 +313,7 @@
         "id": "kanada",
         "label": "Kanada",
         "group": "staat",
-        "val": 8,
+        "val": 7,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -369,7 +321,7 @@
         "id": "zimbra",
         "label": "CVE-2026-73570",
         "group": "risiko",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -464,30 +416,6 @@
         "last_seen": "2026-08-20"
       },
       {
-        "from": "iran",
-        "to": "persischer_golf",
-        "source": "iran",
-        "target": "persischer_golf",
-        "label": "Bedrohung",
-        "last_seen": "2026-08-18"
-      },
-      {
-        "from": "usa",
-        "to": "china",
-        "source": "usa",
-        "target": "china",
-        "label": "Spannung",
-        "last_seen": "2026-08-15"
-      },
-      {
-        "from": "russland",
-        "to": "moldau",
-        "source": "russland",
-        "target": "moldau",
-        "label": "Destabilisierung",
-        "last_seen": "2026-08-15"
-      },
-      {
         "from": "china",
         "to": "taiwan",
         "source": "china",
@@ -502,30 +430,6 @@
         "target": "taiwan",
         "label": "Unterstützung",
         "last_seen": "2026-08-24"
-      },
-      {
-        "from": "russland",
-        "to": "iran",
-        "source": "russland",
-        "target": "iran",
-        "label": "Kooperation",
-        "last_seen": "2026-08-15"
-      },
-      {
-        "from": "indien",
-        "to": "cybersicherheit",
-        "source": "indien",
-        "target": "cybersicherheit",
-        "label": "Proteste",
-        "last_seen": "2026-08-15"
-      },
-      {
-        "from": "siemens",
-        "to": "cybersicherheit",
-        "source": "siemens",
-        "target": "cybersicherheit",
-        "label": "Sicherheitslücke",
-        "last_seen": "2026-08-15"
       },
       {
         "from": "iran",
@@ -858,30 +762,6 @@
         "last_seen": "2026-08-20"
       },
       {
-        "from": "iran",
-        "to": "persischer_golf",
-        "source": "iran",
-        "target": "persischer_golf",
-        "label": "Bedrohung",
-        "last_seen": "2026-08-18"
-      },
-      {
-        "from": "usa",
-        "to": "china",
-        "source": "usa",
-        "target": "china",
-        "label": "Spannung",
-        "last_seen": "2026-08-15"
-      },
-      {
-        "from": "russland",
-        "to": "moldau",
-        "source": "russland",
-        "target": "moldau",
-        "label": "Destabilisierung",
-        "last_seen": "2026-08-15"
-      },
-      {
         "from": "china",
         "to": "taiwan",
         "source": "china",
@@ -896,30 +776,6 @@
         "target": "taiwan",
         "label": "Unterstützung",
         "last_seen": "2026-08-24"
-      },
-      {
-        "from": "russland",
-        "to": "iran",
-        "source": "russland",
-        "target": "iran",
-        "label": "Kooperation",
-        "last_seen": "2026-08-15"
-      },
-      {
-        "from": "indien",
-        "to": "cybersicherheit",
-        "source": "indien",
-        "target": "cybersicherheit",
-        "label": "Proteste",
-        "last_seen": "2026-08-15"
-      },
-      {
-        "from": "siemens",
-        "to": "cybersicherheit",
-        "source": "siemens",
-        "target": "cybersicherheit",
-        "label": "Sicherheitslücke",
-        "last_seen": "2026-08-15"
       },
       {
         "from": "iran",
@@ -1212,11 +1068,11 @@
     ]
   },
   "simple_key_takeaways": [
-    "Banco Popular:** Die Durchsetzungsmaßnahme der Fed gegen einen ehemaligen Mitarbeiter ist ein Routinefall der Bankenaufsicht.",
-    "NHL (Macklin Celebrini):** Der Verzicht auf Gehalt zugunsten des Teams (Salary Cap) ist eine strategische Entscheidung im US-Sportbusiness und zeigt das Verständnis für Teambuilding, ist aber journalistisch von geringer Tragweite.",
-    "Federal Reserve:** Die Federal Reserve Board hat eine Durchsetzungshandlung gegen einen ehemaligen Mitarbeiter von Banco Popular de Puerto Rico verhängt. Dies deutet auf Compliance-Verstöße oder Fehlverhalten im Finanzsektor hin.",
-    "CISA:** Ein Sicherheitsrisiko wurde im Rockwell Automation OTTO Fleet Manager identifiziert, das es Angreifern ermöglicht, brute-force-Angriffe gegen gespeicherte Passwörter zu vereinfachen. Dies betroffene Versionen sind alle bis zur aktuellen Version.",
-    "Nepal:** Überschwemmungen in Nepal haben immense Zerstörung verursacht, mit mindestens 2.400 Verschollenen. Die Rettungsmissionen laufen seit vier Tagen."
+    "261 Ausländer aus 23 Ländern** werden vermisst.",
+    "Die chinesischen Behörden veröffentlichen kaum Details.",
+    "Das dramatischste Filmmaterial wird in China selbst nicht gezeigt (Informationskontrolle).",
+    "Hauptthema:** Humanitäre und diplomatische Krise um die Tibet-Fluten mit internationalen Vermissten.",
+    "Sicherheitslage:** Neue Cyber-Schwachstelle in industrieller Steuerungssoftware (Rockwell) – hohe Priorität für OT-Sicherheitsbeauftragte."
   ],
   "geoscore": {
     "current_score": 72,
@@ -1231,9 +1087,9 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-08-29T12:02:03.622742+00:00",
+  "timestamp": "2026-08-30T10:59:47.549317+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-29T12:01:10.094592+00:00",
+    "timestamp": "2026-08-30T10:57:57.539760+00:00",
     "feeds_total": 224,
     "feeds_successful": 120,
     "feeds_failed": 104,
@@ -1247,7 +1103,7 @@
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
     "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (40 Nodes)",
+    "graph_merge_status": "SUCCESS (34 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
     ]
@@ -1262,9 +1118,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 44,
-    "nodes_now": 40,
+    "nodes_prev": 40,
+    "nodes_now": 34,
     "hotspots_now": 6,
-    "summary": "Graph-Knoten 44 → 40"
+    "summary": "Graph-Knoten 40 → 34"
   }
 }
