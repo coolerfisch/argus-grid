@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 31. AUGUST 2026**\n\n**Geopolitik & Sicherheit**\n- **US-Iran-Konflikt eskaliert erneut:** Erstmals seit Ende Juli haben die USA wieder Ziele im Iran angegriffen. Ein Angriff auf die Insel Larak in der Straße von Hormus forderte zwei Tote und zwei Verletzte. Die Lage in der Region bleibt extrem volatil.\n- **Israel: Generäle warnen vor \"jüdischem Terrorismus\":** Eine wachsende Zahl ehemaliger israelischer Generäle und Geheimdienstchefs erhebt schwere Vorwürfe gegen Siedler im Westjordanland. Sie sprechen von \"ethnischer Säuberung\" mit Regierungsunterstütz...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 31. AUGUST 2026**\n\n**Geopolitik & Sicherheit**\n- **US-Iran-Konflikt eskaliert erneut:** Erstmals seit Ende Juli haben die USA wieder Ziele im Iran angegriffen. Ein Angriff auf die Insel Larak in der Straße von Hormus forderte zwei Tote und zwei Verletzte. Die Lage in der Region bleibt extrem volatil.\n- **I...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**ZUSAMMENFASSUNG DER NACHRICHTENLAGE ZUM 01.09.2026**\n\nDie globale Lage ist geprägt von wirtschaftlicher Vorsicht an den US-Märkten, geopolitischen Machtdemonstrationen, einer angespannten Migrationskrise in Asien sowie politischen Verwerfungen in Europa und den USA.\n\n**1. WIRTSCHAFT & FINANZEN:**\n*   **(USA)** Die Wall Street zeigt sich nervös. Strategen von Citadel Securities und JPMorgan raten zu temporärer Vorsicht, obwohl beide den Bullenmarkt nicht für beendet halten. Es werden zwei Wege zur Vorbereitung auf Turbulenzen empfohlen.\n*   **(UK)** Steigende Kreditkosten in...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**ZUSAMMENFASSUNG DER NACHRICHTENLAGE ZUM 01.09.2026**\n\nDie globale Lage ist geprägt von wirtschaftlicher Vorsicht an den US-Märkten, geopolitischen Machtdemonstrationen, einer angespannten Migrationskrise in Asien sowie politischen Verwerfungen in Europa und den USA.\n\n**1. WIRTSCHAFT & FINANZEN:**\n*   **(USA)** Die Wall Street ze...",
   "key_takeaways": [
-    "US-Iran-Konflikt eskaliert erneut:** Erstmals seit Ende Juli haben die USA wieder Ziele im Iran angegriffen. Ein Angriff auf die Insel Larak in der Straße von Hormus forderte zwei Tote und zwei Verletzte. Die Lage in der Region bleibt extrem volatil.",
-    "Israel: Generäle warnen vor \"jüdischem Terrorismus\":** Eine wachsende Zahl ehemaliger israelischer Generäle und Geheimdienstchefs erhebt schwere Vorwürfe gegen Siedler im Westjordanland. Sie sprechen von \"ethnischer Säuberung\" mit Regierungsunterstützung und warnen vor dem Untergang der Gesellschaft.",
-    "Türkei-PKK-Friedensprozess gewinnt an Fahrt:** Nach der militärischen Niederlage der Kurden signalisiert Ankara Entgegenkommen. Vier Arbeitsgruppen sollen die Umsetzung des Amnestiegesetzes beschleunigen. Es bleibt offen, ob die Zugeständnisse über eine Strafverschonung hinausgehen.",
-    "Notenbank-Maßnahme:** Die US-Notenbank (Fed) hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details wurden nicht genannt, es handelt sich jedoch um eine aufsichtsrechtliche Maßnahme.",
-    "Schwachstelle in industrieller Software:** Das CISA warnt vor einer Sicherheitslücke im \"Rockwell Automation OTTO Fleet Manager\". Die Schwachstelle ermöglicht Angreifern, Offline-Brute-Force-Angriffe auf Passwort-Hashes deutlich effizienter durchzuführen. Betroffen sind bestimmte Versionen des Produkts."
+    "(USA)** Die Wall Street zeigt sich nervös. Strategen von Citadel Securities und JPMorgan raten zu temporärer Vorsicht, obwohl beide den Bullenmarkt nicht für beendet halten. Es werden zwei Wege zur Vorbereitung auf Turbulenzen empfohlen.",
+    "(UK)** Steigende Kreditkosten in Großbritannien erhöhen den Druck auf Premierminister und Kanzler (Burnham und Healey) vor dem Oktober-Budget. Die Finanzierung zentraler Pläne ist unklar.",
+    "CISA-Warnung:** Zwei neue aktiv ausgenutzte Schwachstellen (CVE-2026-81578, CVE-2026-82078) wurden in den Katalog aufgenommen. Betroffen ist **PaperCut NG/MF** (fehlende Authentifizierung und Unsafe Reflection). Unmittelbarer Handlungsbedarf für Administratoren.",
+    "Zentralbank (USA):** Die Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.",
+    "Machtprobe:** Zwei konkurrierende Gipfeltreffen zeigen eine gespaltene Welt: Xi Jinping trifft sich mit Russland und Iran, während Europa die Trump-Administration bei der G20 herausfordert. Ein \"Split-Screen\"-Bild der globalen Kräfteverhältnisse."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 31. AUGUST 2026**\n\n**Geopolitik & Sicherheit**\n- **US-Iran-Konflikt eskaliert erneut:** Erstmals seit Ende Juli haben die USA wieder Ziele im Iran angegriffen. Ein Angriff auf die Insel Larak in der Straße von Hormus forderte zwei Tote und zwei Verletzte. Die Lage in der Region bleibt extrem volatil.\n- **Israel: Generäle warnen vor \"jüdischem Terrorismus\":** Eine wachsende Zahl ehemaliger israelischer Generäle und Geheimdienstchefs erhebt schwere Vorwürfe gegen Siedler im Westjordanland. Sie sprechen von \"ethnischer Säuberung\" mit Regierungsunterstützung und warnen vor dem Untergang der Gesellschaft.\n- **Türkei-PKK-Friedensprozess gewinnt an Fahrt:** Nach der militärischen Niederlage der Kurden signalisiert Ankara Entgegenkommen. Vier Arbeitsgruppen sollen die Umsetzung des Amnestiegesetzes beschleunigen. Es bleibt offen, ob die Zugeständnisse über eine Strafverschonung hinausgehen.\n\n**Wirtschaft & Finanzen**\n- **Notenbank-Maßnahme:** Die US-Notenbank (Fed) hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details wurden nicht genannt, es handelt sich jedoch um eine aufsichtsrechtliche Maßnahme.\n\n**Cyber-Sicherheit**\n- **Schwachstelle in industrieller Software:** Das CISA warnt vor einer Sicherheitslücke im \"Rockwell Automation OTTO Fleet Manager\". Die Schwachstelle ermöglicht Angreifern, Offline-Brute-Force-Angriffe auf Passwort-Hashes deutlich effizienter durchzuführen. Betroffen sind bestimmte Versionen des Produkts.\n\n**Kultur & Medien**\n- **Streaming-Herbst:** Der September bringt neue Staffeln beliebter Serien auf die Streaming-Plattformen, darunter \"Slow Horses\" (Apple), \"The Gentlemen\" (Netflix) und \"MobLand\" (Paramount).\n- **Musik:** Das Reading Festival 2026 war geprägt von britischen und irischen Acts. Erstmals seit 25 Jahren kamen alle Headliner aus diesen beiden Nationen, darunter Charli XCX, Fontaines DC, Dave und Raye.\n\n**Tourismus & Regionen**\n- **USA:** Ein Casino im Bundesstaat Nevada, kurz vor der Schließung, setzt auf Null-Resort-Gebühren und niedrige Preise, um von Las Vegas enttäuschte Touristen anzuziehen. Der Standort Primm Valley will so als günstige Alternative punkten.\n\n**Wetter & Natur**\n- **Atlantik:** Keine aktuellen Sturmwarnungen im tropischen Atlantik. Eine tropische Wetterentwicklung wird derzeit nicht erwartet.\n\nMACRO:\n### Highlights from Today's Feeds (31.08.2026)\n\n#### **Zentralbank (Federal Reserve)**\n- **Federal Reserve Board issues enforcement action with former employee of Banco Popular de Puerto Rico.**\n  - The Federal Reserve Board has taken action against a former employee of Banco Popular de Puerto Rico, likely for regulatory violations or misconduct.\n\n#### **Cyber / Infrastruktur (CISA Cyber Alerts)**\n- **Rockwell Automation OTTO Fleet Manager Vulnerability**\n  - **Summary:** A vulnerability in Rockwell Automation OTTO Fleet Manager could make it easier for attackers to perform offline brute-force attacks against stored password hashes.\n  - **Affected Versions:** OTTO Fleet Manager <=\n\n#### **US/Presse (New York Times)**\n- **Generals in Israel See 'Jewish Terrorism' as a Major Threat**\n  - A growing number of former Israeli generals, intelligence officials, and prime ministers are expressing concern about the actions of settlers in the West Bank, accusing them of committing ethnic cleansing with government support.\n\n#### **US/Finanzen (Wall Street Journal)**\n- **Streaming Recommendations for September 2026**\n  - Despite rising prices, several popular shows are returning for new seasons, including Apple’s ‘Slow Horses,’ Netflix’s ‘The Gentlemen,’ and Paramount’s ‘MobLand.’\n\n#### **CH/Presse (NZZ International)**\n- **Turkey and the PKK Peace Process Gains Momentum**\n  - After the defeat of the Kurds on the battlefield, President Erdogan is making overtures to the PKK. Four working groups are tasked with quickly implementing the amnesty law, though the extent of concessions beyond legal immunity remains unclear.\n\n#### **US/Politik (Fox News)**\n- **Nevada Casino Reopens to Attract Tourists Fed Up with Las Vegas Prices**\n  - The Primm Valley Resort & Casino is reopening with zero resort fees and affordable prices to attract travelers disillusioned by the rising costs in Las Vegas.\n\n#### **UK/Medien (BBC World News)**\n- **US and Iran Exchange Strikes for the First Time in Weeks**\n  - The US conducted an attack on Larak Island in the Strait of Hormuz, the first known strike since late July, killing two people and injuring two others. Iran has responded with a counter-strike.\n\n#### **UK/Finanzen (Financial Times)**\n- **Reading Festival Highlights British and Irish Music**\n  - For the first time in 25 years, all headliners at the Reading Festival were from Britain and Ireland, with standout performances by Charli XCX, Fontaines DC, Dave, and Raye.\n\n#### **Wetter/Extreme (NOAA National Hurricane Center)**\n- **Atlantic Tropical Weather Outlook**\n  - An area of low pressure in the Northern Gulf of America, about 100 miles south of the coast, is being monitored for potential development.\n\n#### **Investigativ Net (ICIJ)**\n- **Metropolitan Museum Still Holds Looted Art Despite Confiscations**\n  - Despite years of confiscations, the Metropolitan Museum in London still holds hundreds of pieces linked to alleged trafficking and looting. The museum states it has no intention of keeping stolen artwork.\n\n### Key Takeaways\n- **Cybersecurity:** Be aware of the Rockwell Automation OTTO Fleet Manager vulnerability and consider updating to a secure version.\n- **International Relations:** Tensions between Israel and Palestinian settlers are escalating, and a shift in Israeli military and political leadership's views is notable.\n- **Entertainment:** Streaming services continue to offer a variety of new and returning shows, albeit at higher prices.\n- **Economics:** Nevada's gambling industry is attempting to attract customers back with lower prices, challenging the dominance of Las Vegas.\n- **Conflict:** The exchange of strikes between the US and Iran in the Strait of Hormuz indicates ongoing tensions in the region.\n- **Culture:** The Reading Festival's focus on British and Irish music highlights the strong cultural influence of these nations.\n- **Natural Disasters:** Monitor the low pressure area in the Gulf of America for potential hurricane development.\n- **Art and Ethics:** The continued possession of potentially looted artifacts by major museums raises ethical questions about cultural heritage and restitution.\n\nStay informed and stay safe!",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**ZUSAMMENFASSUNG DER NACHRICHTENLAGE ZUM 01.09.2026**\n\nDie globale Lage ist geprägt von wirtschaftlicher Vorsicht an den US-Märkten, geopolitischen Machtdemonstrationen, einer angespannten Migrationskrise in Asien sowie politischen Verwerfungen in Europa und den USA.\n\n**1. WIRTSCHAFT & FINANZEN:**\n*   **(USA)** Die Wall Street zeigt sich nervös. Strategen von Citadel Securities und JPMorgan raten zu temporärer Vorsicht, obwohl beide den Bullenmarkt nicht für beendet halten. Es werden zwei Wege zur Vorbereitung auf Turbulenzen empfohlen.\n*   **(UK)** Steigende Kreditkosten in Großbritannien erhöhen den Druck auf Premierminister und Kanzler (Burnham und Healey) vor dem Oktober-Budget. Die Finanzierung zentraler Pläne ist unklar.\n\n**2. SICHERHEIT & CYBER:**\n*   **CISA-Warnung:** Zwei neue aktiv ausgenutzte Schwachstellen (CVE-2026-81578, CVE-2026-82078) wurden in den Katalog aufgenommen. Betroffen ist **PaperCut NG/MF** (fehlende Authentifizierung und Unsafe Reflection). Unmittelbarer Handlungsbedarf für Administratoren.\n*   **Zentralbank (USA):** Die Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.\n\n**3. GEOPOLITIK & INTERNATIONALES:**\n*   **Machtprobe:** Zwei konkurrierende Gipfeltreffen zeigen eine gespaltene Welt: Xi Jinping trifft sich mit Russland und Iran, während Europa die Trump-Administration bei der G20 herausfordert. Ein \"Split-Screen\"-Bild der globalen Kräfteverhältnisse.\n*   **Migrationskrise (Afghanistan):** Millionen abgeschobene Menschen (6 Mio. insgesamt) sind gezwungen, unter dem Taliban-Regime neu anzufangen. Allein 2026 kehrten bisher eine Million weitere aus Pakistan und dem Iran zurück.\n\n**4. POLITIK & GESELLSCHAFT:**\n*   **(USA)** Der Wahlkampf für die Midterms wird von gegenseitigen Vorwürfen dominiert: Dunkles Geld, gefälschte Umfragen und Eingriffe in die Vorwahlen prägen den Zyklus 2026.\n*   **(Österreich/Europa)** Die Regierung kündigt einem Verein die Arbeit, der in Gefängnissen Islamisten deradikalisieren sollte. Experten sehen darin ein akutes Sicherheitsrisiko, da der Verein selbst unter Extremismusverdacht gestellt wurde.\n\n**5. WETTER (ATLANTIK):**\n*   Aktiver Tropischer Wirbelsturm im Nordatlantik, der Karibik und dem Golf von Amerika. **(Details folgen in der nächsten Aktualisierung des NHC).**\n\n---\n**HANDLUNGSEMPFEHLUNGEN (Priorität für den 01.09.2026):**\n*   **IT-Sicherheit:** Sofortige Prüfung und Patchen von **PaperCut NG/MF**-Installationen gegen die CVE-2026-81578 und CVE-2026-82078.\n*   **Finanzstrategie:** Überprüfung der Depot-Allokation angesichts der Warnungen von Citadel und JPMorgan (Absicherungsstrategien in Betracht ziehen).\n*   **Wetter:** Beobachtung der aktuellen Tropenlage im Atlantik, da ein aktives System gemeldet ist.\n\nMACRO:\n### Summary of Key News on 01.09.2026\n\n#### **Zentralbank (Central Bank)**\n- **Federal Reserve Press**: The Federal Reserve Board has issued an enforcement action against a former employee of Banco Popular de Puerto Rico. This action is part of ongoing regulatory efforts to ensure compliance and accountability within financial institutions.\n\n#### **Cyber / Infrastruktur (Cyber/Infrastructure)**\n- **CISA Cyber Alerts**: CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog. These include:\n  - **CVE-2026-81578**: PaperCut NG/MF Missing Authentication for Critical Function.\n  - **CVE-2026-82078**: PaperCut NG/MF Unsafe Reflection Vulnerability.\n  - Organizations are advised to patch these vulnerabilities immediately to mitigate the risk of exploitation.\n\n#### **US/Finanzen (U.S. Finance)**\n- **Wall Street Journal (MarketWatch Alt)**: Market strategists at Citadel Securities and JPMorgan are expressing cautious sentiments, albeit without predicting the end of the bull market. They recommend preparing for potential market turbulence.\n\n#### **US/Politik (U.S. Politics)**\n- **Fox News Latest**: The 2026 midterm elections are marked by accusations of election interference and voter confusion tactics from both Republicans and Democrats. Issues such as dark money, fake polls, and primary meddling are prominent.\n\n#### **US/Presse (U.S. Press)**\n- **New York Times World**: Two recent high-level meetings have highlighted the shifting global power dynamics. Xi Jinping's gathering with leaders from Russia and Iran contrasts with Europe's challenge to the Trump administration at the G20, illustrating a divided international landscape.\n\n#### **CH/Presse (Swiss Press)**\n- **NZZ International**: Austria's government has terminated its contract with a de-radicalization organization working in prisons, raising concerns among experts about the potential security risks of this abrupt decision.\n\n#### **UK/Medien (UK Media)**\n- **BBC World News**: Afghanistan is witnessing a significant influx of deportees from Pakistan and Iran, with six million people forced to return and start anew under the Taliban's rule. This humanitarian crisis adds to the country's existing challenges.\n\n#### **UK/Finanzen (UK Finance)**\n- **Financial Times**: The rise in UK borrowing costs is putting pressure on Prime Minister Rishi Sunak and Chancellor Jeremy Hunt as they prepare for the upcoming Budget in October. Questions linger about how they will fund key government plans amid economic uncertainties.\n\n#### **Wetter/Extreme (Extreme Weather)**\n- **NOAA National Hurricane Center**: The Atlantic has an active tropical weather system, with Tropical Storm Edouard currently located over the northern Gulf. The National Hurricane Center is issuing advisories, and residents in affected areas are advised to stay informed and prepared.\n\n#### **Investigativ Net (Investigative Network)**\n- **ICIJ (Panama/Pandora Papers)**: Financial records obtained by the International Consortium of Investigative Journalists (ICIJ) reveal that some early customers of the crypto giant Tether were later implicated in financial crimes, including money laundering and sanctions violations.\n\n#### **Medizin (Medicine)**\n- **CDC Health Updates**: The CDC has launched a new data channel focused on overdose prevention. This initiative aims to provide real-time data and resources to help combat the growing issue of drug overdoses and support public health efforts.\n\n### Insights\n- **Economic Caution**: Financial markets are showing signs of cautious optimism, with key market strategists advising on potential turbulence.\n- **Political Tensions**: The 2026 U.S. midterm elections are marked by allegations of interference and voter manipulation, reflecting deep political divisions.\n- **Global Power Shifts**: International meetings highlight the ongoing power dynamics between China, Russia, Iran, and Western nations.\n- **Cybersecurity Concerns**: New vulnerabilities in critical software underscore the importance of timely patching and robust cybersecurity measures.\n- **Humanitarian Crisis**: The situation in Afghanistan and the influx of deportees highlight the ongoing humanitarian challenges and political complexities in the region.\n- **Health Initiatives**: The CDC's new data channel for overdose prevention is a significant step in addressing the public health crisis related to drug overdoses.\n\nThis summary provides a comprehensive overview of the key developments across various sectors, offering insights into the global and domestic landscape as of 01.09.2026.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug TVF46KG",
+      "name": "Flug PGT706H",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.6364,
-      "lon": 26.8835,
-      "lng": 26.8835,
+      "lat": 43.1914,
+      "lon": 26.1243,
+      "lng": 26.1243,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TVF46KG | Höhe: 7.4 km | Speed: 726 km/h",
+      "description": "Callsign: PGT706H | Höhe: 9.8 km | Speed: 746 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT539T",
+      "name": "Flug T7CDS",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.8386,
-      "lon": 25.9821,
-      "lng": 25.9821,
+      "lat": 40.9605,
+      "lon": 41.0253,
+      "lng": 41.0253,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT539T | Höhe: 10.4 km | Speed: 813 km/h",
+      "description": "Callsign: T7CDS | Höhe: 14.3 km | Speed: 788 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WMT4470",
+      "name": "Flug AXB374",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.5435,
-      "lon": 34.0856,
-      "lng": 34.0856,
+      "lat": 26.3642,
+      "lon": 50.8103,
+      "lng": 50.8103,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WMT4470 | Höhe: 3.7 km | Speed: 705 km/h",
+      "description": "Callsign: AXB374 | Höhe: 3.0 km | Speed: 579 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug FYC702",
+      "name": "Flug WZZ9YX",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.4142,
-      "lon": 37.3512,
-      "lng": 37.3512,
+      "lat": 33.8617,
+      "lon": 33.8486,
+      "lng": 33.8486,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: FYC702 | Höhe: 4.9 km | Speed: 627 km/h",
+      "description": "Callsign: WZZ9YX | Höhe: 6.8 km | Speed: 761 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CSH886",
+      "name": "Flug GAF152",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 31.1687,
+      "lon": 35.3315,
+      "lng": 35.3315,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: GAF152 | Höhe: 2.3 km | Speed: 542 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug THA673",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.3136,
-      "lon": 119.5573,
-      "lng": 119.5573,
+      "lat": 22.3801,
+      "lon": 121.2759,
+      "lng": 121.2759,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSH886 | Höhe: 11.9 km | Speed: 933 km/h",
+      "description": "Callsign: THA673 | Höhe: 11.6 km | Speed: 901 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UAE366",
+      "name": "Flug GES641R",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.0393,
-      "lon": 121.1733,
-      "lng": 121.1733,
+      "lat": 15.186,
+      "lon": 120.6892,
+      "lng": 120.6892,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAE366 | Höhe: 0.4 km | Speed: 271 km/h",
+      "description": "Callsign: GES641R | Höhe: 4.5 km | Speed: 490 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,7 +116,7 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 15,
+        "val": 14,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -113,7 +124,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 15,
+        "val": 14,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -129,7 +140,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 8,
+        "val": 7,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -145,7 +156,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 15,
+        "val": 14,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -153,7 +164,7 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 11,
+        "val": 10,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -161,7 +172,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 15,
+        "val": 14,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -172,30 +183,6 @@
         "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-20"
-      },
-      {
-        "id": "hamas",
-        "label": "Hamas",
-        "group": "miliz",
-        "val": 3,
-        "first_seen": "2026-08-10",
-        "last_seen": "2026-08-17"
-      },
-      {
-        "id": "oel",
-        "label": "Öl",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-14",
-        "last_seen": "2026-08-17"
-      },
-      {
-        "id": "siemens",
-        "label": "Siemens",
-        "group": "tech",
-        "val": 3,
-        "first_seen": "2026-08-15",
-        "last_seen": "2026-08-17"
       },
       {
         "id": "ray_project",
@@ -289,7 +276,7 @@
         "id": "kanada",
         "label": "Kanada",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -297,7 +284,7 @@
         "id": "zimbra",
         "label": "CVE-2026-73570",
         "group": "risiko",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -406,30 +393,6 @@
         "target": "taiwan",
         "label": "Unterstützung",
         "last_seen": "2026-08-24"
-      },
-      {
-        "from": "iran",
-        "to": "oel",
-        "source": "iran",
-        "target": "oel",
-        "label": "Lieferrisiko",
-        "last_seen": "2026-08-17"
-      },
-      {
-        "from": "usa",
-        "to": "hamas",
-        "source": "usa",
-        "target": "hamas",
-        "label": "Diplomatie (Kushner)",
-        "last_seen": "2026-08-17"
-      },
-      {
-        "from": "siemens",
-        "to": "usa",
-        "source": "siemens",
-        "target": "usa",
-        "label": "Cyber-Risiko",
-        "last_seen": "2026-08-17"
       },
       {
         "from": "usa",
@@ -714,30 +677,6 @@
         "last_seen": "2026-08-24"
       },
       {
-        "from": "iran",
-        "to": "oel",
-        "source": "iran",
-        "target": "oel",
-        "label": "Lieferrisiko",
-        "last_seen": "2026-08-17"
-      },
-      {
-        "from": "usa",
-        "to": "hamas",
-        "source": "usa",
-        "target": "hamas",
-        "label": "Diplomatie (Kushner)",
-        "last_seen": "2026-08-17"
-      },
-      {
-        "from": "siemens",
-        "to": "usa",
-        "source": "siemens",
-        "target": "usa",
-        "label": "Cyber-Risiko",
-        "last_seen": "2026-08-17"
-      },
-      {
         "from": "usa",
         "to": "treasury_etf",
         "source": "usa",
@@ -964,11 +903,11 @@
     ]
   },
   "simple_key_takeaways": [
-    "US-Iran-Konflikt eskaliert erneut:** Erstmals seit Ende Juli haben die USA wieder Ziele im Iran angegriffen. Ein Angriff auf die Insel Larak in der Straße von Hormus forderte zwei Tote und zwei Verletzte. Die Lage in der Region bleibt extrem volatil.",
-    "Israel: Generäle warnen vor \"jüdischem Terrorismus\":** Eine wachsende Zahl ehemaliger israelischer Generäle und Geheimdienstchefs erhebt schwere Vorwürfe gegen Siedler im Westjordanland. Sie sprechen von \"ethnischer Säuberung\" mit Regierungsunterstützung und warnen vor dem Untergang der Gesellschaft.",
-    "Türkei-PKK-Friedensprozess gewinnt an Fahrt:** Nach der militärischen Niederlage der Kurden signalisiert Ankara Entgegenkommen. Vier Arbeitsgruppen sollen die Umsetzung des Amnestiegesetzes beschleunigen. Es bleibt offen, ob die Zugeständnisse über eine Strafverschonung hinausgehen.",
-    "Notenbank-Maßnahme:** Die US-Notenbank (Fed) hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details wurden nicht genannt, es handelt sich jedoch um eine aufsichtsrechtliche Maßnahme.",
-    "Schwachstelle in industrieller Software:** Das CISA warnt vor einer Sicherheitslücke im \"Rockwell Automation OTTO Fleet Manager\". Die Schwachstelle ermöglicht Angreifern, Offline-Brute-Force-Angriffe auf Passwort-Hashes deutlich effizienter durchzuführen. Betroffen sind bestimmte Versionen des Produkts."
+    "(USA)** Die Wall Street zeigt sich nervös. Strategen von Citadel Securities und JPMorgan raten zu temporärer Vorsicht, obwohl beide den Bullenmarkt nicht für beendet halten. Es werden zwei Wege zur Vorbereitung auf Turbulenzen empfohlen.",
+    "(UK)** Steigende Kreditkosten in Großbritannien erhöhen den Druck auf Premierminister und Kanzler (Burnham und Healey) vor dem Oktober-Budget. Die Finanzierung zentraler Pläne ist unklar.",
+    "CISA-Warnung:** Zwei neue aktiv ausgenutzte Schwachstellen (CVE-2026-81578, CVE-2026-82078) wurden in den Katalog aufgenommen. Betroffen ist **PaperCut NG/MF** (fehlende Authentifizierung und Unsafe Reflection). Unmittelbarer Handlungsbedarf für Administratoren.",
+    "Zentralbank (USA):** Die Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.",
+    "Machtprobe:** Zwei konkurrierende Gipfeltreffen zeigen eine gespaltene Welt: Xi Jinping trifft sich mit Russland und Iran, während Europa die Trump-Administration bei der G20 herausfordert. Ein \"Split-Screen\"-Bild der globalen Kräfteverhältnisse."
   ],
   "geoscore": {
     "current_score": 72,
@@ -983,12 +922,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-08-31T12:18:07.434037+00:00",
+  "timestamp": "2026-09-01T10:53:24.011136+00:00",
   "pipeline_health": {
-    "timestamp": "2026-08-31T12:16:19.603487+00:00",
+    "timestamp": "2026-09-01T10:51:41.546183+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -998,8 +937,8 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (31 Nodes)",
+    "opensky_status": "SUCCESS (7 Signale)",
+    "graph_merge_status": "SUCCESS (28 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
     ]
@@ -1014,9 +953,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 34,
-    "nodes_now": 31,
-    "hotspots_now": 6,
-    "summary": "Graph-Knoten 34 → 31"
+    "nodes_prev": 31,
+    "nodes_now": 28,
+    "hotspots_now": 7,
+    "summary": "Graph-Knoten 31 → 28"
   }
 }
