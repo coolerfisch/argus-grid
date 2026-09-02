@@ -1,20 +1,18 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**ZUSAMMENFASSUNG DER NACHRICHTENLAGE ZUM 01.09.2026**\n\nDie globale Lage ist geprägt von wirtschaftlicher Vorsicht an den US-Märkten, geopolitischen Machtdemonstrationen, einer angespannten Migrationskrise in Asien sowie politischen Verwerfungen in Europa und den USA.\n\n**1. WIRTSCHAFT & FINANZEN:**\n*   **(USA)** Die Wall Street zeigt sich nervös. Strategen von Citadel Securities und JPMorgan raten zu temporärer Vorsicht, obwohl beide den Bullenmarkt nicht für beendet halten. Es werden zwei Wege zur Vorbereitung auf Turbulenzen empfohlen.\n*   **(UK)** Steigende Kreditkosten in...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**ZUSAMMENFASSUNG DER NACHRICHTENLAGE ZUM 01.09.2026**\n\nDie globale Lage ist geprägt von wirtschaftlicher Vorsicht an den US-Märkten, geopolitischen Machtdemonstrationen, einer angespannten Migrationskrise in Asien sowie politischen Verwerfungen in Europa und den USA.\n\n**1. WIRTSCHAFT & FINANZEN:**\n*   **(USA)** Die Wall Street ze...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**JAHRESZEITEN-HINWEIS:** Der 2. September 2026 ist ein Mittwoch.\n\n---\n\n### TAGESZUSAMMENFASSUNG (02.09.2026)\n\n**1. Geopolitik & Sicherheit (Krisenverschärfung)**\nDer Tag steht im Zeichen einer **massiven Eskalation des Ukraine-Krieges und der globalen Machtprojektion**. Die Ukraine kündigt an, ihre Drohnenoperationen auszuweiten und fordert, dass alle Fluggesellschaften den russischen Luftraum meiden – was insbesondere chinesische und Golf-Airlines betrifft, die noch fliegen. Russland droht mit Gegenangriffen. Parallel dazu liefert sich die Welt einen **Showdown der Systeme*...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**JAHRESZEITEN-HINWEIS:** Der 2. September 2026 ist ein Mittwoch.\n\n---\n\n### TAGESZUSAMMENFASSUNG (02.09.2026)\n\n**1. Geopolitik & Sicherheit (Krisenverschärfung)**\nDer Tag steht im Zeichen einer **massiven Eskalation des Ukraine-Krieges und der globalen Machtprojektion**. Die Ukraine kündigt an, ihre Drohnenoperationen auszuweiten ...",
   "key_takeaways": [
-    "(USA)** Die Wall Street zeigt sich nervös. Strategen von Citadel Securities und JPMorgan raten zu temporärer Vorsicht, obwohl beide den Bullenmarkt nicht für beendet halten. Es werden zwei Wege zur Vorbereitung auf Turbulenzen empfohlen.",
-    "(UK)** Steigende Kreditkosten in Großbritannien erhöhen den Druck auf Premierminister und Kanzler (Burnham und Healey) vor dem Oktober-Budget. Die Finanzierung zentraler Pläne ist unklar.",
-    "CISA-Warnung:** Zwei neue aktiv ausgenutzte Schwachstellen (CVE-2026-81578, CVE-2026-82078) wurden in den Katalog aufgenommen. Betroffen ist **PaperCut NG/MF** (fehlende Authentifizierung und Unsafe Reflection). Unmittelbarer Handlungsbedarf für Administratoren.",
-    "Zentralbank (USA):** Die Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.",
-    "Machtprobe:** Zwei konkurrierende Gipfeltreffen zeigen eine gespaltene Welt: Xi Jinping trifft sich mit Russland und Iran, während Europa die Trump-Administration bei der G20 herausfordert. Ein \"Split-Screen\"-Bild der globalen Kräfteverhältnisse."
+    "G20-Abschlusskommuniqué:** Wird es eine gemeinsame Linie zu Energiepreisen und Ukraine geben, oder bleibt es bei Konfrontation?",
+    "Fed-Reden:** Weitere Kommentare zur Inflationspolitik angesichts des Ölpreises sind zu erwarten.",
+    "Ukraine-Front:** Wie reagiert die russische Luftabwehr auf erweiterte Drohnenangriffe? Reaktionen der Luftfahrtbranche (China, Golf) auf Selenskyjs Forderung."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**ZUSAMMENFASSUNG DER NACHRICHTENLAGE ZUM 01.09.2026**\n\nDie globale Lage ist geprägt von wirtschaftlicher Vorsicht an den US-Märkten, geopolitischen Machtdemonstrationen, einer angespannten Migrationskrise in Asien sowie politischen Verwerfungen in Europa und den USA.\n\n**1. WIRTSCHAFT & FINANZEN:**\n*   **(USA)** Die Wall Street zeigt sich nervös. Strategen von Citadel Securities und JPMorgan raten zu temporärer Vorsicht, obwohl beide den Bullenmarkt nicht für beendet halten. Es werden zwei Wege zur Vorbereitung auf Turbulenzen empfohlen.\n*   **(UK)** Steigende Kreditkosten in Großbritannien erhöhen den Druck auf Premierminister und Kanzler (Burnham und Healey) vor dem Oktober-Budget. Die Finanzierung zentraler Pläne ist unklar.\n\n**2. SICHERHEIT & CYBER:**\n*   **CISA-Warnung:** Zwei neue aktiv ausgenutzte Schwachstellen (CVE-2026-81578, CVE-2026-82078) wurden in den Katalog aufgenommen. Betroffen ist **PaperCut NG/MF** (fehlende Authentifizierung und Unsafe Reflection). Unmittelbarer Handlungsbedarf für Administratoren.\n*   **Zentralbank (USA):** Die Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.\n\n**3. GEOPOLITIK & INTERNATIONALES:**\n*   **Machtprobe:** Zwei konkurrierende Gipfeltreffen zeigen eine gespaltene Welt: Xi Jinping trifft sich mit Russland und Iran, während Europa die Trump-Administration bei der G20 herausfordert. Ein \"Split-Screen\"-Bild der globalen Kräfteverhältnisse.\n*   **Migrationskrise (Afghanistan):** Millionen abgeschobene Menschen (6 Mio. insgesamt) sind gezwungen, unter dem Taliban-Regime neu anzufangen. Allein 2026 kehrten bisher eine Million weitere aus Pakistan und dem Iran zurück.\n\n**4. POLITIK & GESELLSCHAFT:**\n*   **(USA)** Der Wahlkampf für die Midterms wird von gegenseitigen Vorwürfen dominiert: Dunkles Geld, gefälschte Umfragen und Eingriffe in die Vorwahlen prägen den Zyklus 2026.\n*   **(Österreich/Europa)** Die Regierung kündigt einem Verein die Arbeit, der in Gefängnissen Islamisten deradikalisieren sollte. Experten sehen darin ein akutes Sicherheitsrisiko, da der Verein selbst unter Extremismusverdacht gestellt wurde.\n\n**5. WETTER (ATLANTIK):**\n*   Aktiver Tropischer Wirbelsturm im Nordatlantik, der Karibik und dem Golf von Amerika. **(Details folgen in der nächsten Aktualisierung des NHC).**\n\n---\n**HANDLUNGSEMPFEHLUNGEN (Priorität für den 01.09.2026):**\n*   **IT-Sicherheit:** Sofortige Prüfung und Patchen von **PaperCut NG/MF**-Installationen gegen die CVE-2026-81578 und CVE-2026-82078.\n*   **Finanzstrategie:** Überprüfung der Depot-Allokation angesichts der Warnungen von Citadel und JPMorgan (Absicherungsstrategien in Betracht ziehen).\n*   **Wetter:** Beobachtung der aktuellen Tropenlage im Atlantik, da ein aktives System gemeldet ist.\n\nMACRO:\n### Summary of Key News on 01.09.2026\n\n#### **Zentralbank (Central Bank)**\n- **Federal Reserve Press**: The Federal Reserve Board has issued an enforcement action against a former employee of Banco Popular de Puerto Rico. This action is part of ongoing regulatory efforts to ensure compliance and accountability within financial institutions.\n\n#### **Cyber / Infrastruktur (Cyber/Infrastructure)**\n- **CISA Cyber Alerts**: CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog. These include:\n  - **CVE-2026-81578**: PaperCut NG/MF Missing Authentication for Critical Function.\n  - **CVE-2026-82078**: PaperCut NG/MF Unsafe Reflection Vulnerability.\n  - Organizations are advised to patch these vulnerabilities immediately to mitigate the risk of exploitation.\n\n#### **US/Finanzen (U.S. Finance)**\n- **Wall Street Journal (MarketWatch Alt)**: Market strategists at Citadel Securities and JPMorgan are expressing cautious sentiments, albeit without predicting the end of the bull market. They recommend preparing for potential market turbulence.\n\n#### **US/Politik (U.S. Politics)**\n- **Fox News Latest**: The 2026 midterm elections are marked by accusations of election interference and voter confusion tactics from both Republicans and Democrats. Issues such as dark money, fake polls, and primary meddling are prominent.\n\n#### **US/Presse (U.S. Press)**\n- **New York Times World**: Two recent high-level meetings have highlighted the shifting global power dynamics. Xi Jinping's gathering with leaders from Russia and Iran contrasts with Europe's challenge to the Trump administration at the G20, illustrating a divided international landscape.\n\n#### **CH/Presse (Swiss Press)**\n- **NZZ International**: Austria's government has terminated its contract with a de-radicalization organization working in prisons, raising concerns among experts about the potential security risks of this abrupt decision.\n\n#### **UK/Medien (UK Media)**\n- **BBC World News**: Afghanistan is witnessing a significant influx of deportees from Pakistan and Iran, with six million people forced to return and start anew under the Taliban's rule. This humanitarian crisis adds to the country's existing challenges.\n\n#### **UK/Finanzen (UK Finance)**\n- **Financial Times**: The rise in UK borrowing costs is putting pressure on Prime Minister Rishi Sunak and Chancellor Jeremy Hunt as they prepare for the upcoming Budget in October. Questions linger about how they will fund key government plans amid economic uncertainties.\n\n#### **Wetter/Extreme (Extreme Weather)**\n- **NOAA National Hurricane Center**: The Atlantic has an active tropical weather system, with Tropical Storm Edouard currently located over the northern Gulf. The National Hurricane Center is issuing advisories, and residents in affected areas are advised to stay informed and prepared.\n\n#### **Investigativ Net (Investigative Network)**\n- **ICIJ (Panama/Pandora Papers)**: Financial records obtained by the International Consortium of Investigative Journalists (ICIJ) reveal that some early customers of the crypto giant Tether were later implicated in financial crimes, including money laundering and sanctions violations.\n\n#### **Medizin (Medicine)**\n- **CDC Health Updates**: The CDC has launched a new data channel focused on overdose prevention. This initiative aims to provide real-time data and resources to help combat the growing issue of drug overdoses and support public health efforts.\n\n### Insights\n- **Economic Caution**: Financial markets are showing signs of cautious optimism, with key market strategists advising on potential turbulence.\n- **Political Tensions**: The 2026 U.S. midterm elections are marked by allegations of interference and voter manipulation, reflecting deep political divisions.\n- **Global Power Shifts**: International meetings highlight the ongoing power dynamics between China, Russia, Iran, and Western nations.\n- **Cybersecurity Concerns**: New vulnerabilities in critical software underscore the importance of timely patching and robust cybersecurity measures.\n- **Humanitarian Crisis**: The situation in Afghanistan and the influx of deportees highlight the ongoing humanitarian challenges and political complexities in the region.\n- **Health Initiatives**: The CDC's new data channel for overdose prevention is a significant step in addressing the public health crisis related to drug overdoses.\n\nThis summary provides a comprehensive overview of the key developments across various sectors, offering insights into the global and domestic landscape as of 01.09.2026.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**JAHRESZEITEN-HINWEIS:** Der 2. September 2026 ist ein Mittwoch.\n\n---\n\n### TAGESZUSAMMENFASSUNG (02.09.2026)\n\n**1. Geopolitik & Sicherheit (Krisenverschärfung)**\nDer Tag steht im Zeichen einer **massiven Eskalation des Ukraine-Krieges und der globalen Machtprojektion**. Die Ukraine kündigt an, ihre Drohnenoperationen auszuweiten und fordert, dass alle Fluggesellschaften den russischen Luftraum meiden – was insbesondere chinesische und Golf-Airlines betrifft, die noch fliegen. Russland droht mit Gegenangriffen. Parallel dazu liefert sich die Welt einen **Showdown der Systeme**: Xi Jinping trifft sich in einer Schau mit Russland und Iran, während Europa und die USA sich beim G20-Gipfel gegenüberstehen. Ein beunruhigendes Detail aus dem Nahen Osten: Iranische Staatsmedien rufen zur Ermordung von Barron Trump (Sohn des US-Präsidenten) auf, nachdem es offenbar bereits Mordkomplotte gegen den Sohn von Benjamin Netanyahu gegeben haben soll. Diese Entwicklung macht den Konflikt zunehmend **personalisiert und lebensbedrohlich für direkte Familienangehörige**.\n\n**2. Wirtschaft & Energie (Verbraucher leiden)**\nDie **Energiekrise trifft die Realwirtschaft** mit voller Wucht: Europas größte Fluggesellschaft Ryanair kürzt ihre Winterkapazität drastisch, weil der ungesicherte Kerosinpreis bei 140 Dollar pro Barrel liegt. Dies ist ein klares Signal, dass hohe Energiepreise nicht nur abstrakte Inflation sind, sondern zu **konkreten Angebotskürzungen** führen (weniger Flüge, höhere Ticketpreise). In den USA gibt es eine unterschwellige Wirtschaftsnachricht: Der Vizepräsident und die Notenbank (Fed) sind aktiv, wobei die Fed eine Durchsetzungsmaßnahme gegen einen Ex-Mitarbeiter der Banco Popular de Puerto Rico ankündigt – ein regulatorisches Detail, das in Krisenzeiten untergeht.\n\n**3. Industrie & Rüstung (Reindustrialisierung)**\nFord versucht ein bundespolitisches Comeback: Der US-Autobauer will nach fast 40 Jahren wieder in das Verteidigungsgeschäft einsteigen und bietet sich für den Bau der neuen britischen Militärfahrzeuge an. Dies zeigt einen Trend zur **Wiederbewaffnung und Rüstungskonversion** der Industrie, angetrieben durch die NATO-Verpflichtungen.\n\n**4. Cyber & Technik (Verwundbarkeit)**\nNeue Schwachstellen in der Industrie-Software **Rockwell Automation RSLinx Classic** (Version bis 4.50) wurden gemeldet. Die Schwachstellen (CVE-2026-9621, -9622, -9624) erlauben **Denial-of-Service-Angriffe** (DoS). In einer Zeit, in der kritische Infrastruktur (Energie, Logistik) bereits durch die Krise belastet ist, sind Ausfälle von Steuerungssystemen besonders gefährlich. Es drohen Produktionsstillstände.\n\n**5. Wetter (Saisonbeginn)**\nDer NOAA Hurricane Center Outlook (2. September) meldet eine tropische Wetterlage im Atlantik. Zu diesem Zeitpunkt (Höhepunkt der Hurrikansaison) ist Wachsamkeit geboten. Aktuelle Details zur Stärke oder Zugbahn sind in den Daten noch nicht spezifiziert.\n\n---\n\n### KONTEXTUELLE EINORDNUNG: Was diese Nachrichten für die Welt bedeuten\n\n**Der \"heiße\" Herbst kündigt sich an:**\nDie Kombination aus **Ryanair-Kapazitätskürzungen bei 140 Dollar Öl** und der **Ukraine-Eskalation** zeichnet ein düsteres Bild für den kommenden Winter. Die Energiekosten sind nicht mehr nur ein statistisches Problem; sie diktieren die Produktionspläne von Unternehmen. Parallel dazu testen die Supermächte (USA/Europa vs. China/Russland/Iran) ihre Einflusssphären.\n\n**Demokratie unter Druck:**\nDie Morde-Drohungen gegen die Kinder von Staats- und Regierungschefs (Trump-Sohn, Netanyahu-Sohn) sind eine neue Dimension des hybriden Krieges. Dabei bleibt unklar, ob es sich um iranische Desinformation handelt, um die USA zu destabilisieren, oder um konkrete Sicherheitswarnungen. Beides zeigt, dass der Konflikt die **Schwelle zur physischen Gewalt gegen Familien** überschreiten könnte.\n\n---\n\n### AUSBLICK AUF MORGEN (03.09.2026)\n- **G20-Abschlusskommuniqué:** Wird es eine gemeinsame Linie zu Energiepreisen und Ukraine geben, oder bleibt es bei Konfrontation?\n- **Fed-Reden:** Weitere Kommentare zur Inflationspolitik angesichts des Ölpreises sind zu erwarten.\n- **Ukraine-Front:** Wie reagiert die russische Luftabwehr auf erweiterte Drohnenangriffe? Reaktionen der Luftfahrtbranche (China, Golf) auf Selenskyjs Forderung.\n\nMACRO:",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +25,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT706H",
+      "name": "Flug PGT1101",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 43.1914,
-      "lon": 26.1243,
-      "lng": 26.1243,
+      "lat": 42.5616,
+      "lon": 26.2464,
+      "lng": 26.2464,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT706H | Höhe: 9.8 km | Speed: 746 km/h",
+      "description": "Callsign: PGT1101 | Höhe: 10.4 km | Speed: 762 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug T7CDS",
+      "name": "Flug PGT906",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.9605,
-      "lon": 41.0253,
-      "lng": 41.0253,
+      "lat": 40.803,
+      "lon": 29.0718,
+      "lng": 29.0718,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: T7CDS | Höhe: 14.3 km | Speed: 788 km/h",
+      "description": "Callsign: PGT906 | Höhe: 1.1 km | Speed: 362 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AXB374",
+      "name": "Flug JAV300",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 26.3642,
-      "lon": 50.8103,
-      "lng": 50.8103,
+      "lat": 30.2795,
+      "lon": 36.2513,
+      "lng": 36.2513,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AXB374 | Höhe: 3.0 km | Speed: 579 km/h",
+      "description": "Callsign: JAV300 | Höhe: 9.1 km | Speed: 827 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ9YX",
+      "name": "Flug 4XBCQ",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.8617,
-      "lon": 33.8486,
-      "lng": 33.8486,
+      "lat": 32.1789,
+      "lon": 34.8321,
+      "lng": 34.8321,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ9YX | Höhe: 6.8 km | Speed: 761 km/h",
+      "description": "Callsign: 4XBCQ | Höhe: 0.1 km | Speed: 144 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug GAF152",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 31.1687,
-      "lon": 35.3315,
-      "lng": 35.3315,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: GAF152 | Höhe: 2.3 km | Speed: 542 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug THA673",
+      "name": "Flug CQH7507",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.3801,
-      "lon": 121.2759,
-      "lng": 121.2759,
+      "lat": 23.2447,
+      "lon": 115.0353,
+      "lng": 115.0353,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA673 | Höhe: 11.6 km | Speed: 901 km/h",
+      "description": "Callsign: CQH7507 | Höhe: 6.8 km | Speed: 769 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug GES641R",
+      "name": "Flug CPA885",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 15.186,
-      "lon": 120.6892,
-      "lng": 120.6892,
+      "lat": 22.3148,
+      "lon": 116.5634,
+      "lng": 116.5634,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: GES641R | Höhe: 4.5 km | Speed: 490 km/h",
+      "description": "Callsign: CPA885 | Höhe: 9.8 km | Speed: 858 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,7 +103,7 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 14,
+        "val": 13,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -124,7 +111,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 14,
+        "val": 13,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -140,7 +127,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -156,7 +143,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 14,
+        "val": 13,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -164,7 +151,7 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -172,7 +159,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 14,
+        "val": 13,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -183,30 +170,6 @@
         "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-20"
-      },
-      {
-        "id": "ray_project",
-        "label": "Ray-Projekt",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-18",
-        "last_seen": "2026-08-18"
-      },
-      {
-        "id": "treasury_etf",
-        "label": "Treasury-ETF",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-18",
-        "last_seen": "2026-08-18"
-      },
-      {
-        "id": "lfi",
-        "label": "LFI",
-        "group": "organisation",
-        "val": 3,
-        "first_seen": "2026-08-18",
-        "last_seen": "2026-08-18"
       },
       {
         "id": "oelpreis",
@@ -276,7 +239,7 @@
         "id": "kanada",
         "label": "Kanada",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -284,7 +247,7 @@
         "id": "zimbra",
         "label": "CVE-2026-73570",
         "group": "risiko",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -393,22 +356,6 @@
         "target": "taiwan",
         "label": "Unterstützung",
         "last_seen": "2026-08-24"
-      },
-      {
-        "from": "usa",
-        "to": "treasury_etf",
-        "source": "usa",
-        "target": "treasury_etf",
-        "label": "Fiskalpolitik",
-        "last_seen": "2026-08-18"
-      },
-      {
-        "from": "ray_project",
-        "to": "usa",
-        "source": "ray_project",
-        "target": "usa",
-        "label": "Cyber-Risiko",
-        "last_seen": "2026-08-18"
       },
       {
         "from": "iran",
@@ -677,22 +624,6 @@
         "last_seen": "2026-08-24"
       },
       {
-        "from": "usa",
-        "to": "treasury_etf",
-        "source": "usa",
-        "target": "treasury_etf",
-        "label": "Fiskalpolitik",
-        "last_seen": "2026-08-18"
-      },
-      {
-        "from": "ray_project",
-        "to": "usa",
-        "source": "ray_project",
-        "target": "usa",
-        "label": "Cyber-Risiko",
-        "last_seen": "2026-08-18"
-      },
-      {
         "from": "iran",
         "to": "israel",
         "source": "iran",
@@ -903,11 +834,9 @@
     ]
   },
   "simple_key_takeaways": [
-    "(USA)** Die Wall Street zeigt sich nervös. Strategen von Citadel Securities und JPMorgan raten zu temporärer Vorsicht, obwohl beide den Bullenmarkt nicht für beendet halten. Es werden zwei Wege zur Vorbereitung auf Turbulenzen empfohlen.",
-    "(UK)** Steigende Kreditkosten in Großbritannien erhöhen den Druck auf Premierminister und Kanzler (Burnham und Healey) vor dem Oktober-Budget. Die Finanzierung zentraler Pläne ist unklar.",
-    "CISA-Warnung:** Zwei neue aktiv ausgenutzte Schwachstellen (CVE-2026-81578, CVE-2026-82078) wurden in den Katalog aufgenommen. Betroffen ist **PaperCut NG/MF** (fehlende Authentifizierung und Unsafe Reflection). Unmittelbarer Handlungsbedarf für Administratoren.",
-    "Zentralbank (USA):** Die Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.",
-    "Machtprobe:** Zwei konkurrierende Gipfeltreffen zeigen eine gespaltene Welt: Xi Jinping trifft sich mit Russland und Iran, während Europa die Trump-Administration bei der G20 herausfordert. Ein \"Split-Screen\"-Bild der globalen Kräfteverhältnisse."
+    "G20-Abschlusskommuniqué:** Wird es eine gemeinsame Linie zu Energiepreisen und Ukraine geben, oder bleibt es bei Konfrontation?",
+    "Fed-Reden:** Weitere Kommentare zur Inflationspolitik angesichts des Ölpreises sind zu erwarten.",
+    "Ukraine-Front:** Wie reagiert die russische Luftabwehr auf erweiterte Drohnenangriffe? Reaktionen der Luftfahrtbranche (China, Golf) auf Selenskyjs Forderung."
   ],
   "geoscore": {
     "current_score": 72,
@@ -922,23 +851,23 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-01T10:53:24.011136+00:00",
+  "timestamp": "2026-09-02T10:17:28.607860+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-01T10:51:41.546183+00:00",
+    "timestamp": "2026-09-02T10:16:43.421894+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 117,
+    "feeds_failed": 107,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
-      "DeepSeek",
-      "qwen-2.5-72b-instruct"
+      "qwen-2.5-72b-instruct",
+      "DeepSeek"
     ],
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (7 Signale)",
-    "graph_merge_status": "SUCCESS (28 Nodes)",
+    "opensky_status": "SUCCESS (6 Signale)",
+    "graph_merge_status": "SUCCESS (25 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
     ]
@@ -953,9 +882,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 31,
-    "nodes_now": 28,
-    "hotspots_now": 7,
-    "summary": "Graph-Knoten 31 → 28"
+    "nodes_prev": 28,
+    "nodes_now": 25,
+    "hotspots_now": 6,
+    "summary": "Graph-Knoten 28 → 25"
   }
 }
