@@ -1,18 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**JAHRESZEITEN-HINWEIS:** Der 2. September 2026 ist ein Mittwoch.\n\n---\n\n### TAGESZUSAMMENFASSUNG (02.09.2026)\n\n**1. Geopolitik & Sicherheit (Krisenverschärfung)**\nDer Tag steht im Zeichen einer **massiven Eskalation des Ukraine-Krieges und der globalen Machtprojektion**. Die Ukraine kündigt an, ihre Drohnenoperationen auszuweiten und fordert, dass alle Fluggesellschaften den russischen Luftraum meiden – was insbesondere chinesische und Golf-Airlines betrifft, die noch fliegen. Russland droht mit Gegenangriffen. Parallel dazu liefert sich die Welt einen **Showdown der Systeme*...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**JAHRESZEITEN-HINWEIS:** Der 2. September 2026 ist ein Mittwoch.\n\n---\n\n### TAGESZUSAMMENFASSUNG (02.09.2026)\n\n**1. Geopolitik & Sicherheit (Krisenverschärfung)**\nDer Tag steht im Zeichen einer **massiven Eskalation des Ukraine-Krieges und der globalen Machtprojektion**. Die Ukraine kündigt an, ihre Drohnenoperationen auszuweiten ...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**NEWSBERICHT – 03. September 2026**\n\n**1. Fed verhängt Disziplinarmaßnahme gegen Ex-Banker in Puerto Rico**\nDie US-Notenbank Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details zur Person oder den genauen Verstößen wurden zunächst nicht genannt. Die Maßnahme ist Teil der laufenden regulatorischen Aufsicht über ehemalige Führungskräfte und Mitarbeiter von Finanzinstituten.\n\n**2. Internationale Behörden veröffentlichen Krisenkommunikations-Leitfaden**\nCISA hat zusammen mit dem FBI und internationa...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**NEWSBERICHT – 03. September 2026**\n\n**1. Fed verhängt Disziplinarmaßnahme gegen Ex-Banker in Puerto Rico**\nDie US-Notenbank Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details zur Person oder den genauen Verstößen wurden zunächst nicht genannt. Die ...",
   "key_takeaways": [
-    "G20-Abschlusskommuniqué:** Wird es eine gemeinsame Linie zu Energiepreisen und Ukraine geben, oder bleibt es bei Konfrontation?",
-    "Fed-Reden:** Weitere Kommentare zur Inflationspolitik angesichts des Ölpreises sind zu erwarten.",
-    "Ukraine-Front:** Wie reagiert die russische Luftabwehr auf erweiterte Drohnenangriffe? Reaktionen der Luftfahrtbranche (China, Golf) auf Selenskyjs Forderung."
+    "Federal Reserve Press**: Die Federal Reserve Board hat eine durchsetzungsvorsorge gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.",
+    "CISA Cyber Alerts**: CISA, das FBI und internationale Partner haben eine Richtlinie veröffentlicht, die Organisationen bei der Planung und Durchführung klarer, zeitnaher, genauer und zielgruppengerechter Kommunikation während IT- und OT-Ausfällen unterstützt.",
+    "Wall Street Journal (MarketWatch Alt)**: Eine Oma gibt ihrem Enkel mit schwerer psychischer Erkrankung monatlich 1.000 USD. Sie plant, wie sie ihn nach ihrem Tod schützen kann.",
+    "New York Times World**: Russland und Ukraine befinden sich in einer sich verschärfenden Spirale ohne Ende, wobei beide Seiten versuchen, sich gegenseitig durch Raketen und Drohnen zur Aufgabe zu zwingen. Der menschliche Leidensweg sieht keine Abschwächung der Entschlossenheit.",
+    "NZZ International**: Im Pentagon entbrennt ein Machtkampf. Daniel Driscoll, Staatssekretär des Heeres, galt als Aufsteiger. Dies passte seinem Chef Pete Hegseth nicht, und Driscoll wurde trotz guter Beziehungen zum Weißen Haus von Hegseths Personalpolitik betroffen."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**JAHRESZEITEN-HINWEIS:** Der 2. September 2026 ist ein Mittwoch.\n\n---\n\n### TAGESZUSAMMENFASSUNG (02.09.2026)\n\n**1. Geopolitik & Sicherheit (Krisenverschärfung)**\nDer Tag steht im Zeichen einer **massiven Eskalation des Ukraine-Krieges und der globalen Machtprojektion**. Die Ukraine kündigt an, ihre Drohnenoperationen auszuweiten und fordert, dass alle Fluggesellschaften den russischen Luftraum meiden – was insbesondere chinesische und Golf-Airlines betrifft, die noch fliegen. Russland droht mit Gegenangriffen. Parallel dazu liefert sich die Welt einen **Showdown der Systeme**: Xi Jinping trifft sich in einer Schau mit Russland und Iran, während Europa und die USA sich beim G20-Gipfel gegenüberstehen. Ein beunruhigendes Detail aus dem Nahen Osten: Iranische Staatsmedien rufen zur Ermordung von Barron Trump (Sohn des US-Präsidenten) auf, nachdem es offenbar bereits Mordkomplotte gegen den Sohn von Benjamin Netanyahu gegeben haben soll. Diese Entwicklung macht den Konflikt zunehmend **personalisiert und lebensbedrohlich für direkte Familienangehörige**.\n\n**2. Wirtschaft & Energie (Verbraucher leiden)**\nDie **Energiekrise trifft die Realwirtschaft** mit voller Wucht: Europas größte Fluggesellschaft Ryanair kürzt ihre Winterkapazität drastisch, weil der ungesicherte Kerosinpreis bei 140 Dollar pro Barrel liegt. Dies ist ein klares Signal, dass hohe Energiepreise nicht nur abstrakte Inflation sind, sondern zu **konkreten Angebotskürzungen** führen (weniger Flüge, höhere Ticketpreise). In den USA gibt es eine unterschwellige Wirtschaftsnachricht: Der Vizepräsident und die Notenbank (Fed) sind aktiv, wobei die Fed eine Durchsetzungsmaßnahme gegen einen Ex-Mitarbeiter der Banco Popular de Puerto Rico ankündigt – ein regulatorisches Detail, das in Krisenzeiten untergeht.\n\n**3. Industrie & Rüstung (Reindustrialisierung)**\nFord versucht ein bundespolitisches Comeback: Der US-Autobauer will nach fast 40 Jahren wieder in das Verteidigungsgeschäft einsteigen und bietet sich für den Bau der neuen britischen Militärfahrzeuge an. Dies zeigt einen Trend zur **Wiederbewaffnung und Rüstungskonversion** der Industrie, angetrieben durch die NATO-Verpflichtungen.\n\n**4. Cyber & Technik (Verwundbarkeit)**\nNeue Schwachstellen in der Industrie-Software **Rockwell Automation RSLinx Classic** (Version bis 4.50) wurden gemeldet. Die Schwachstellen (CVE-2026-9621, -9622, -9624) erlauben **Denial-of-Service-Angriffe** (DoS). In einer Zeit, in der kritische Infrastruktur (Energie, Logistik) bereits durch die Krise belastet ist, sind Ausfälle von Steuerungssystemen besonders gefährlich. Es drohen Produktionsstillstände.\n\n**5. Wetter (Saisonbeginn)**\nDer NOAA Hurricane Center Outlook (2. September) meldet eine tropische Wetterlage im Atlantik. Zu diesem Zeitpunkt (Höhepunkt der Hurrikansaison) ist Wachsamkeit geboten. Aktuelle Details zur Stärke oder Zugbahn sind in den Daten noch nicht spezifiziert.\n\n---\n\n### KONTEXTUELLE EINORDNUNG: Was diese Nachrichten für die Welt bedeuten\n\n**Der \"heiße\" Herbst kündigt sich an:**\nDie Kombination aus **Ryanair-Kapazitätskürzungen bei 140 Dollar Öl** und der **Ukraine-Eskalation** zeichnet ein düsteres Bild für den kommenden Winter. Die Energiekosten sind nicht mehr nur ein statistisches Problem; sie diktieren die Produktionspläne von Unternehmen. Parallel dazu testen die Supermächte (USA/Europa vs. China/Russland/Iran) ihre Einflusssphären.\n\n**Demokratie unter Druck:**\nDie Morde-Drohungen gegen die Kinder von Staats- und Regierungschefs (Trump-Sohn, Netanyahu-Sohn) sind eine neue Dimension des hybriden Krieges. Dabei bleibt unklar, ob es sich um iranische Desinformation handelt, um die USA zu destabilisieren, oder um konkrete Sicherheitswarnungen. Beides zeigt, dass der Konflikt die **Schwelle zur physischen Gewalt gegen Familien** überschreiten könnte.\n\n---\n\n### AUSBLICK AUF MORGEN (03.09.2026)\n- **G20-Abschlusskommuniqué:** Wird es eine gemeinsame Linie zu Energiepreisen und Ukraine geben, oder bleibt es bei Konfrontation?\n- **Fed-Reden:** Weitere Kommentare zur Inflationspolitik angesichts des Ölpreises sind zu erwarten.\n- **Ukraine-Front:** Wie reagiert die russische Luftabwehr auf erweiterte Drohnenangriffe? Reaktionen der Luftfahrtbranche (China, Golf) auf Selenskyjs Forderung.\n\nMACRO:",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**NEWSBERICHT – 03. September 2026**\n\n**1. Fed verhängt Disziplinarmaßnahme gegen Ex-Banker in Puerto Rico**\nDie US-Notenbank Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details zur Person oder den genauen Verstößen wurden zunächst nicht genannt. Die Maßnahme ist Teil der laufenden regulatorischen Aufsicht über ehemalige Führungskräfte und Mitarbeiter von Finanzinstituten.\n\n**2. Internationale Behörden veröffentlichen Krisenkommunikations-Leitfaden**\nCISA hat zusammen mit dem FBI und internationalen Partnern neue Empfehlungen für Dienstleister veröffentlicht. Der Leitfaden „Communicating Under Pressure\" soll Unternehmen helfen, bei IT- und OT-Ausfällen – ob durch Cyberangriffe oder andere Ursachen – klare und zeitnahe Informationen zu liefern. Im Fokus stehen Verantwortlichkeiten, Zielgruppen und Genauigkeit in der Kommunikation während des Notfallmanagements.\n\n**3. Finanzielle Absicherung für psychisch kranken Enkel gesucht**\nDer „MarketWatch\"-Ratgeber des Wall Street Journal thematisiert einen komplexen Fall der Nachlassplanung: Eine Großmutter fragt, wie sie ihren erwachsenen Enkel mit schwerer psychischer Erkrankung nach ihrem Tod finanziell schützen kann, ohne dessen Sozialleistungen zu gefährden. Sie überweist ihm derzeit monatlich 1.000 Dollar und sucht nach Wegen für betreutes Vermögen oder Sonderbedarfs-Treuhandfonds.\n\n**4. Eskalationsspirale im Ukraine-Krieg hält an**\nDie New York Times berichtet über die unverändert hohe Intensität des Konflikts zwischen Russland und der Ukraine. Beide Seiten setzen weiterhin massiv Raketen und Drohnen ein, um den Gegner zur Aufgabe zu zwingen. Das menschliche Leid ist enorm, doch es gibt keine Anzeichen dafür, dass die Entschlossenheit beider Nationen nachlässt.\n\n**5. Machtkampf im Pentagon: Hegseth entmachtet Army-Staatssekretär**\nNZZ International meldet einen internen Führungskonflikt im US-Verteidigungsministerium: Army-Staatssekretär Daniel Driscoll, eigentlich als Aufsteiger gehandelt und gut im Weißen Haus vernetzt, musste sich der Personalpolitik von Verteidigungsminister Pete Hegseth beugen. Driscoll sollte die Armee modernisieren, scheiterte jedoch offenbar am internen Machtgefüge. Experten warnen vor einer vergifteten Führungskultur im Pentagon.\n\n**6. UNO warnt vor \"Super-El-Niño\" mit globalen Folgen**\nDie Weltorganisation für Meteorologie (WMO) hat eine Warnung vor einem außergewöhnlich starken El-Niño-Phänomen herausgegeben. Die natürliche Wettererscheinung könnte erhebliche Störungen für die globalen Volkswirtschaften bedeuten, etwa durch Extremwetterereignisse, Ernteausfälle und Lieferkettenprobleme. Länder bereiten sich auf mögliche wirtschaftliche Folgen vor.\n\n**7. AOC unterstützt Demokratin bei Senatsrennen in Florida**\nDie progressive US-Abgeordnete Alexandria Ocasio-Cortez hat ihre Unterstützung für die demokratische Kandidatin Angie Nixon bei der Senatswahl in Florida angekündigt. Nixon tritt gegen die republikanische Amtsinhaberin Ashley Moody an. Ocasio-Cortez betonte, man müsse die Wahl in dem Bundesstaat ernst nehmen und eine progressive Stimme stärken.\n\n**8. Selenskyj rügt Geheimdienste nach Schießerei in Kiew**\nDie Financial Times berichtet von einem seltenen Vorfall in einem ruhigen Kiewer Bezirk: Bei einer Auseinandersetzung zwischen einem Spionagedienst und einer Militäreinheit kam es zu einem Schusswechsel. Präsident Wolodymyr Selenskyj hat die beteiligten Behörden daraufhin scharf gerügt und interne Untersuchungen angeordnet. Die Hintergründe des Zwischenfalls sind bislang unklar.\n\n**9. Tropenwetter-Update für den Atlantik**\nDas National Hurricane Center meldet in seiner aktuellen Übersicht für den Nordatlantik, die Karibik und den Golf von Amerika derzeit keine aktiven Sturmsysteme. Es wird auf die laufenden Vorhersagen des Weather Prediction Center verwiesen. Die Hurrikansaison dauert noch bis Ende November an.\n\nMACRO:\nHier sind die wichtigsten Informationen aus den aktuellen Newsfeeds:\n\n### Zentralbank\n- **Federal Reserve Press**: Die Federal Reserve Board hat eine durchsetzungsvorsorge gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.\n\n### Cyber- und Infrastruktur\n- **CISA Cyber Alerts**: CISA, das FBI und internationale Partner haben eine Richtlinie veröffentlicht, die Organisationen bei der Planung und Durchführung klarer, zeitnaher, genauer und zielgruppengerechter Kommunikation während IT- und OT-Ausfällen unterstützt.\n\n### US-Finanzen\n- **Wall Street Journal (MarketWatch Alt)**: Eine Oma gibt ihrem Enkel mit schwerer psychischer Erkrankung monatlich 1.000 USD. Sie plant, wie sie ihn nach ihrem Tod schützen kann.\n\n### US-Presse\n- **New York Times World**: Russland und Ukraine befinden sich in einer sich verschärfenden Spirale ohne Ende, wobei beide Seiten versuchen, sich gegenseitig durch Raketen und Drohnen zur Aufgabe zu zwingen. Der menschliche Leidensweg sieht keine Abschwächung der Entschlossenheit.\n\n### Schweiz-Presse\n- **NZZ International**: Im Pentagon entbrennt ein Machtkampf. Daniel Driscoll, Staatssekretär des Heeres, galt als Aufsteiger. Dies passte seinem Chef Pete Hegseth nicht, und Driscoll wurde trotz guter Beziehungen zum Weißen Haus von Hegseths Personalpolitik betroffen.\n\n### UK-Medien\n- **BBC World News**: Die UNO warnt vor einem \"supersized\" El Niño, das globale Wirtschaften stören könnte.\n\n### US-Politik\n- **Fox News Latest**: Rep. Alexandria Ocasio-Cortez unterstützt die demokratische Kandidatin für den US-Senat Angela Nixon in Florida, die gegen die republikanische Senatin Ashley Moody antritt.\n\n### UK-Finanzen\n- **Financial Times**: Präsident Zelenskyy tadelt Geheimdienste nach Schießerei in Kiev, die zwischen Spionage- und Militäreinheiten stattfand.\n\n### Wetter/Extreme\n- **NOAA National Hurricane Center**: Die Wettervorhersagezentrale gibt eine Tropenwetteraussicht für den Nordatlantik, den Karibischen Raum und den Golf von Mexiko heraus, einschließlich der aktuellen Entwicklungen um tropische Depressionen.\n\n### Investigativ-Net\n- **ICIJ (Panama/Pandora Papers)**: Ein Geschworenengericht spricht den maltesischen Geschäftsmann Yorgen Fenech frei, der zuletzt von sieben Männern für den Mord an Daphne Caruana Galizia 2017 angeklagt wurde.\n\n### Medizin\n- **CDC Health Updates**: Das CDC lanciert einen neuen Datenkanal zur Überwachung von Überdosis Trends und zur Stärkung der Prävention bundesweit.\n\n### Cyber-Espionage\n- **Citizen Lab**: Der Citizen Lab veröffentlichte Informationen zu neuesten Entwicklungen im Bereich Cyber-Spionage. (Der Text wurde abgeschnitten, aber der Bericht beinhaltet wahrscheinlich neue Einsichten in Cyber-Attacken und -Techniken.)\n\nDiese Zusammenfassung gibt einen Überblick über die aktuellen Ereignisse in verschiedenen Bereichen auf internationaler und nationaler Ebene.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -25,69 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT1101",
+      "name": "Flug PGT35BN",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.5616,
-      "lon": 26.2464,
-      "lng": 26.2464,
+      "lat": 40.8392,
+      "lon": 28.2334,
+      "lng": 28.2334,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT1101 | Höhe: 10.4 km | Speed: 762 km/h",
+      "description": "Callsign: PGT35BN | Höhe: 5.2 km | Speed: 589 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT906",
+      "name": "Flug EWG55CU",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.803,
-      "lon": 29.0718,
-      "lng": 29.0718,
+      "lat": 43.6482,
+      "lon": 26.2191,
+      "lng": 26.2191,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT906 | Höhe: 1.1 km | Speed: 362 km/h",
+      "description": "Callsign: EWG55CU | Höhe: 6.2 km | Speed: 757 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JAV300",
+      "name": "Flug 4XCDE",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 30.2795,
-      "lon": 36.2513,
-      "lng": 36.2513,
+      "lat": 32.2222,
+      "lon": 34.8825,
+      "lng": 34.8825,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JAV300 | Höhe: 9.1 km | Speed: 827 km/h",
+      "description": "Callsign: 4XCDE | Höhe: 0.3 km | Speed: 171 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug 4XBCQ",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.1789,
-      "lon": 34.8321,
-      "lng": 34.8321,
+      "lat": 31.6301,
+      "lon": 34.8148,
+      "lng": 34.8148,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XBCQ | Höhe: 0.1 km | Speed: 144 km/h",
+      "description": "Callsign: 4XBCQ | Höhe: 0.5 km | Speed: 247 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CQH7507",
+      "name": "Flug CXA881",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.2447,
-      "lon": 115.0353,
-      "lng": 115.0353,
+      "lat": 24.0995,
+      "lon": 120.709,
+      "lng": 120.709,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CQH7507 | Höhe: 6.8 km | Speed: 769 km/h",
+      "description": "Callsign: CXA881 | Höhe: 6.4 km | Speed: 752 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CPA885",
+      "name": "Flug DKH1365",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.3148,
-      "lon": 116.5634,
-      "lng": 116.5634,
+      "lat": 26.7721,
+      "lon": 120.69,
+      "lng": 120.69,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CPA885 | Höhe: 9.8 km | Speed: 858 km/h",
+      "description": "Callsign: DKH1365 | Höhe: 11.0 km | Speed: 817 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -103,7 +105,7 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 13,
+        "val": 12,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -111,7 +113,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 13,
+        "val": 12,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -127,7 +129,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 6,
+        "val": 5,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -143,7 +145,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 13,
+        "val": 12,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -151,7 +153,7 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 9,
+        "val": 8,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -159,7 +161,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 13,
+        "val": 12,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -170,46 +172,6 @@
         "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-20"
-      },
-      {
-        "id": "oelpreis",
-        "label": "Ölpreis",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-19",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "id": "vae",
-        "label": "VAE",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-08-19",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "id": "uk",
-        "label": "UK",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-08-19",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "id": "boe",
-        "label": "BoE",
-        "group": "organisation",
-        "val": 3,
-        "first_seen": "2026-08-19",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "id": "trump",
-        "label": "Trump",
-        "group": "actor",
-        "val": 3,
-        "first_seen": "2026-08-19",
-        "last_seen": "2026-08-19"
       },
       {
         "id": "australien",
@@ -239,7 +201,7 @@
         "id": "kanada",
         "label": "Kanada",
         "group": "staat",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
       },
@@ -364,62 +326,6 @@
         "target": "israel",
         "label": "Proxy-Konflikt",
         "last_seen": "2026-08-20"
-      },
-      {
-        "from": "usa",
-        "to": "israel",
-        "source": "usa",
-        "target": "israel",
-        "label": "Allianz",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "iran",
-        "to": "oelpreis",
-        "source": "iran",
-        "target": "oelpreis",
-        "label": "Angebotskrise",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "vae",
-        "to": "iran",
-        "source": "vae",
-        "target": "iran",
-        "label": "Handelsembargo",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "oelpreis",
-        "to": "uk",
-        "source": "oelpreis",
-        "target": "uk",
-        "label": "Inflation",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "boe",
-        "to": "uk",
-        "source": "boe",
-        "target": "uk",
-        "label": "Zinspolitik",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "trump",
-        "to": "iran",
-        "source": "trump",
-        "target": "iran",
-        "label": "Blockadedrohung",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "trump",
-        "to": "vae",
-        "source": "trump",
-        "target": "vae",
-        "label": "Handelspolitik",
-        "last_seen": "2026-08-19"
       },
       {
         "from": "israel",
@@ -632,62 +538,6 @@
         "last_seen": "2026-08-20"
       },
       {
-        "from": "usa",
-        "to": "israel",
-        "source": "usa",
-        "target": "israel",
-        "label": "Allianz",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "iran",
-        "to": "oelpreis",
-        "source": "iran",
-        "target": "oelpreis",
-        "label": "Angebotskrise",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "vae",
-        "to": "iran",
-        "source": "vae",
-        "target": "iran",
-        "label": "Handelsembargo",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "oelpreis",
-        "to": "uk",
-        "source": "oelpreis",
-        "target": "uk",
-        "label": "Inflation",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "boe",
-        "to": "uk",
-        "source": "boe",
-        "target": "uk",
-        "label": "Zinspolitik",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "trump",
-        "to": "iran",
-        "source": "trump",
-        "target": "iran",
-        "label": "Blockadedrohung",
-        "last_seen": "2026-08-19"
-      },
-      {
-        "from": "trump",
-        "to": "vae",
-        "source": "trump",
-        "target": "vae",
-        "label": "Handelspolitik",
-        "last_seen": "2026-08-19"
-      },
-      {
         "from": "israel",
         "to": "australien",
         "source": "israel",
@@ -834,9 +684,11 @@
     ]
   },
   "simple_key_takeaways": [
-    "G20-Abschlusskommuniqué:** Wird es eine gemeinsame Linie zu Energiepreisen und Ukraine geben, oder bleibt es bei Konfrontation?",
-    "Fed-Reden:** Weitere Kommentare zur Inflationspolitik angesichts des Ölpreises sind zu erwarten.",
-    "Ukraine-Front:** Wie reagiert die russische Luftabwehr auf erweiterte Drohnenangriffe? Reaktionen der Luftfahrtbranche (China, Golf) auf Selenskyjs Forderung."
+    "Federal Reserve Press**: Die Federal Reserve Board hat eine durchsetzungsvorsorge gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.",
+    "CISA Cyber Alerts**: CISA, das FBI und internationale Partner haben eine Richtlinie veröffentlicht, die Organisationen bei der Planung und Durchführung klarer, zeitnaher, genauer und zielgruppengerechter Kommunikation während IT- und OT-Ausfällen unterstützt.",
+    "Wall Street Journal (MarketWatch Alt)**: Eine Oma gibt ihrem Enkel mit schwerer psychischer Erkrankung monatlich 1.000 USD. Sie plant, wie sie ihn nach ihrem Tod schützen kann.",
+    "New York Times World**: Russland und Ukraine befinden sich in einer sich verschärfenden Spirale ohne Ende, wobei beide Seiten versuchen, sich gegenseitig durch Raketen und Drohnen zur Aufgabe zu zwingen. Der menschliche Leidensweg sieht keine Abschwächung der Entschlossenheit.",
+    "NZZ International**: Im Pentagon entbrennt ein Machtkampf. Daniel Driscoll, Staatssekretär des Heeres, galt als Aufsteiger. Dies passte seinem Chef Pete Hegseth nicht, und Driscoll wurde trotz guter Beziehungen zum Weißen Haus von Hegseths Personalpolitik betroffen."
   ],
   "geoscore": {
     "current_score": 72,
@@ -851,23 +703,23 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-02T10:17:28.607860+00:00",
+  "timestamp": "2026-09-03T10:28:33.126121+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-02T10:16:43.421894+00:00",
+    "timestamp": "2026-09-03T10:27:10.257251+00:00",
     "feeds_total": 224,
-    "feeds_successful": 117,
-    "feeds_failed": 107,
+    "feeds_successful": 121,
+    "feeds_failed": 103,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
-      "qwen-2.5-72b-instruct",
-      "DeepSeek"
+      "DeepSeek",
+      "qwen-2.5-72b-instruct"
     ],
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
     "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (25 Nodes)",
+    "graph_merge_status": "SUCCESS (20 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
     ]
@@ -882,9 +734,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 28,
-    "nodes_now": 25,
+    "nodes_prev": 25,
+    "nodes_now": 20,
     "hotspots_now": 6,
-    "summary": "Graph-Knoten 28 → 25"
+    "summary": "Graph-Knoten 25 → 20"
   }
 }
