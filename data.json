@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**NEWSBERICHT – 03. September 2026**\n\n**1. Fed verhängt Disziplinarmaßnahme gegen Ex-Banker in Puerto Rico**\nDie US-Notenbank Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details zur Person oder den genauen Verstößen wurden zunächst nicht genannt. Die Maßnahme ist Teil der laufenden regulatorischen Aufsicht über ehemalige Führungskräfte und Mitarbeiter von Finanzinstituten.\n\n**2. Internationale Behörden veröffentlichen Krisenkommunikations-Leitfaden**\nCISA hat zusammen mit dem FBI und internationa...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**NEWSBERICHT – 03. September 2026**\n\n**1. Fed verhängt Disziplinarmaßnahme gegen Ex-Banker in Puerto Rico**\nDie US-Notenbank Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details zur Person oder den genauen Verstößen wurden zunächst nicht genannt. Die ...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 04. September 2026**\n\n**Geopolitik & Konflikte**\n- **Russland:** Der russische Staat hat Anklage gegen die bekannte Menschenrechtsaktivistin Lida Moniawa (im Westen oft als „Mutter Teresa Russlands\" bezeichnet) erhoben. Ihr wird Kritik am Krieg in der Ukraine vorgeworfen, wobei ihr eine Haftstrafe von bis zu zehn Jahren droht. Dies zeigt die anhaltende Unterdrückung jeglicher regimekritischer Stimmen.\n\n**Naturkatastrophen & humanitäre Lage**\n- **Nepal:** Die Lage nach den schweren Überschwemmungen bleibt kritisch. Während die Behörden mit dem Wiederau...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 04. September 2026**\n\n**Geopolitik & Konflikte**\n- **Russland:** Der russische Staat hat Anklage gegen die bekannte Menschenrechtsaktivistin Lida Moniawa (im Westen oft als „Mutter Teresa Russlands\" bezeichnet) erhoben. Ihr wird Kritik am Krieg in der Ukraine vorgeworfen, wobei ihr eine Haftstrafe von bis ...",
   "key_takeaways": [
-    "Federal Reserve Press**: Die Federal Reserve Board hat eine durchsetzungsvorsorge gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.",
-    "CISA Cyber Alerts**: CISA, das FBI und internationale Partner haben eine Richtlinie veröffentlicht, die Organisationen bei der Planung und Durchführung klarer, zeitnaher, genauer und zielgruppengerechter Kommunikation während IT- und OT-Ausfällen unterstützt.",
-    "Wall Street Journal (MarketWatch Alt)**: Eine Oma gibt ihrem Enkel mit schwerer psychischer Erkrankung monatlich 1.000 USD. Sie plant, wie sie ihn nach ihrem Tod schützen kann.",
-    "New York Times World**: Russland und Ukraine befinden sich in einer sich verschärfenden Spirale ohne Ende, wobei beide Seiten versuchen, sich gegenseitig durch Raketen und Drohnen zur Aufgabe zu zwingen. Der menschliche Leidensweg sieht keine Abschwächung der Entschlossenheit.",
-    "NZZ International**: Im Pentagon entbrennt ein Machtkampf. Daniel Driscoll, Staatssekretär des Heeres, galt als Aufsteiger. Dies passte seinem Chef Pete Hegseth nicht, und Driscoll wurde trotz guter Beziehungen zum Weißen Haus von Hegseths Personalpolitik betroffen."
+    "Russland:** Der russische Staat hat Anklage gegen die bekannte Menschenrechtsaktivistin Lida Moniawa (im Westen oft als „Mutter Teresa Russlands\" bezeichnet) erhoben. Ihr wird Kritik am Krieg in der Ukraine vorgeworfen, wobei ihr eine Haftstrafe von bis zu zehn Jahren droht. Dies zeigt die anhaltende Unterdrückung jeglicher regimekritischer Stimmen.",
+    "Nepal:** Die Lage nach den schweren Überschwemmungen bleibt kritisch. Während die Behörden mit dem Wiederaufbau beginnen, suchen Rettungskräfte weiterhin in einem Tunnel eines Wasserkraftprojekts nach Überlebenden. Zwei Personen konnten lebend gerettet werden, Dutzende gelten weiterhin als vermisst. Die nepalesische Regierung fordert milliardenschwere internationale Hilfen für den Wiederaufbau.",
+    "USA / Puerto Rico:** Die US-Notenbank (Federal Reserve) hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Es handelt sich um eine behördliche Anordnung (Enforcement Action), Details zur Art des Verstoßes wurden in der Meldung nicht näher ausgeführt.",
+    "Rockwell Automation (Industrieanlagen):** Eine Sicherheitslücke (CVE-2025-10478) wurde im Modul 1756-ENBT (Ethernet-Kommunikationsmodul) entdeckt. Eine erfolgreiche Ausnutzung führt zum Absturz des Moduls, was einen Neustart des Geräts erfordert. Betroffen sind alle Versionen des Moduls. Angesichts der weiten Verbreitung von Rockwell-Steuerungen in der Industrie ist dies ein relevanter Warnhinweis.",
+    "USA (Viral):** Ein Kuriosum aus den USA: Ein viraler Vorfall um gestohlene Zimtschnecken in einer Bäckerei führte zu einer Anzeige wegen Diebstahls in Höhe von 3.100 US-Dollar. Die Ermittlungen ergaben eine unerwartete Wendung, als bekannt wurde, dass der beschuldigte Uber-Fahrer während einer Lieferfahrt von der US-Grenzpatrouille (Border Patrol) festgenommen wurde."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**NEWSBERICHT – 03. September 2026**\n\n**1. Fed verhängt Disziplinarmaßnahme gegen Ex-Banker in Puerto Rico**\nDie US-Notenbank Federal Reserve hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Details zur Person oder den genauen Verstößen wurden zunächst nicht genannt. Die Maßnahme ist Teil der laufenden regulatorischen Aufsicht über ehemalige Führungskräfte und Mitarbeiter von Finanzinstituten.\n\n**2. Internationale Behörden veröffentlichen Krisenkommunikations-Leitfaden**\nCISA hat zusammen mit dem FBI und internationalen Partnern neue Empfehlungen für Dienstleister veröffentlicht. Der Leitfaden „Communicating Under Pressure\" soll Unternehmen helfen, bei IT- und OT-Ausfällen – ob durch Cyberangriffe oder andere Ursachen – klare und zeitnahe Informationen zu liefern. Im Fokus stehen Verantwortlichkeiten, Zielgruppen und Genauigkeit in der Kommunikation während des Notfallmanagements.\n\n**3. Finanzielle Absicherung für psychisch kranken Enkel gesucht**\nDer „MarketWatch\"-Ratgeber des Wall Street Journal thematisiert einen komplexen Fall der Nachlassplanung: Eine Großmutter fragt, wie sie ihren erwachsenen Enkel mit schwerer psychischer Erkrankung nach ihrem Tod finanziell schützen kann, ohne dessen Sozialleistungen zu gefährden. Sie überweist ihm derzeit monatlich 1.000 Dollar und sucht nach Wegen für betreutes Vermögen oder Sonderbedarfs-Treuhandfonds.\n\n**4. Eskalationsspirale im Ukraine-Krieg hält an**\nDie New York Times berichtet über die unverändert hohe Intensität des Konflikts zwischen Russland und der Ukraine. Beide Seiten setzen weiterhin massiv Raketen und Drohnen ein, um den Gegner zur Aufgabe zu zwingen. Das menschliche Leid ist enorm, doch es gibt keine Anzeichen dafür, dass die Entschlossenheit beider Nationen nachlässt.\n\n**5. Machtkampf im Pentagon: Hegseth entmachtet Army-Staatssekretär**\nNZZ International meldet einen internen Führungskonflikt im US-Verteidigungsministerium: Army-Staatssekretär Daniel Driscoll, eigentlich als Aufsteiger gehandelt und gut im Weißen Haus vernetzt, musste sich der Personalpolitik von Verteidigungsminister Pete Hegseth beugen. Driscoll sollte die Armee modernisieren, scheiterte jedoch offenbar am internen Machtgefüge. Experten warnen vor einer vergifteten Führungskultur im Pentagon.\n\n**6. UNO warnt vor \"Super-El-Niño\" mit globalen Folgen**\nDie Weltorganisation für Meteorologie (WMO) hat eine Warnung vor einem außergewöhnlich starken El-Niño-Phänomen herausgegeben. Die natürliche Wettererscheinung könnte erhebliche Störungen für die globalen Volkswirtschaften bedeuten, etwa durch Extremwetterereignisse, Ernteausfälle und Lieferkettenprobleme. Länder bereiten sich auf mögliche wirtschaftliche Folgen vor.\n\n**7. AOC unterstützt Demokratin bei Senatsrennen in Florida**\nDie progressive US-Abgeordnete Alexandria Ocasio-Cortez hat ihre Unterstützung für die demokratische Kandidatin Angie Nixon bei der Senatswahl in Florida angekündigt. Nixon tritt gegen die republikanische Amtsinhaberin Ashley Moody an. Ocasio-Cortez betonte, man müsse die Wahl in dem Bundesstaat ernst nehmen und eine progressive Stimme stärken.\n\n**8. Selenskyj rügt Geheimdienste nach Schießerei in Kiew**\nDie Financial Times berichtet von einem seltenen Vorfall in einem ruhigen Kiewer Bezirk: Bei einer Auseinandersetzung zwischen einem Spionagedienst und einer Militäreinheit kam es zu einem Schusswechsel. Präsident Wolodymyr Selenskyj hat die beteiligten Behörden daraufhin scharf gerügt und interne Untersuchungen angeordnet. Die Hintergründe des Zwischenfalls sind bislang unklar.\n\n**9. Tropenwetter-Update für den Atlantik**\nDas National Hurricane Center meldet in seiner aktuellen Übersicht für den Nordatlantik, die Karibik und den Golf von Amerika derzeit keine aktiven Sturmsysteme. Es wird auf die laufenden Vorhersagen des Weather Prediction Center verwiesen. Die Hurrikansaison dauert noch bis Ende November an.\n\nMACRO:\nHier sind die wichtigsten Informationen aus den aktuellen Newsfeeds:\n\n### Zentralbank\n- **Federal Reserve Press**: Die Federal Reserve Board hat eine durchsetzungsvorsorge gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.\n\n### Cyber- und Infrastruktur\n- **CISA Cyber Alerts**: CISA, das FBI und internationale Partner haben eine Richtlinie veröffentlicht, die Organisationen bei der Planung und Durchführung klarer, zeitnaher, genauer und zielgruppengerechter Kommunikation während IT- und OT-Ausfällen unterstützt.\n\n### US-Finanzen\n- **Wall Street Journal (MarketWatch Alt)**: Eine Oma gibt ihrem Enkel mit schwerer psychischer Erkrankung monatlich 1.000 USD. Sie plant, wie sie ihn nach ihrem Tod schützen kann.\n\n### US-Presse\n- **New York Times World**: Russland und Ukraine befinden sich in einer sich verschärfenden Spirale ohne Ende, wobei beide Seiten versuchen, sich gegenseitig durch Raketen und Drohnen zur Aufgabe zu zwingen. Der menschliche Leidensweg sieht keine Abschwächung der Entschlossenheit.\n\n### Schweiz-Presse\n- **NZZ International**: Im Pentagon entbrennt ein Machtkampf. Daniel Driscoll, Staatssekretär des Heeres, galt als Aufsteiger. Dies passte seinem Chef Pete Hegseth nicht, und Driscoll wurde trotz guter Beziehungen zum Weißen Haus von Hegseths Personalpolitik betroffen.\n\n### UK-Medien\n- **BBC World News**: Die UNO warnt vor einem \"supersized\" El Niño, das globale Wirtschaften stören könnte.\n\n### US-Politik\n- **Fox News Latest**: Rep. Alexandria Ocasio-Cortez unterstützt die demokratische Kandidatin für den US-Senat Angela Nixon in Florida, die gegen die republikanische Senatin Ashley Moody antritt.\n\n### UK-Finanzen\n- **Financial Times**: Präsident Zelenskyy tadelt Geheimdienste nach Schießerei in Kiev, die zwischen Spionage- und Militäreinheiten stattfand.\n\n### Wetter/Extreme\n- **NOAA National Hurricane Center**: Die Wettervorhersagezentrale gibt eine Tropenwetteraussicht für den Nordatlantik, den Karibischen Raum und den Golf von Mexiko heraus, einschließlich der aktuellen Entwicklungen um tropische Depressionen.\n\n### Investigativ-Net\n- **ICIJ (Panama/Pandora Papers)**: Ein Geschworenengericht spricht den maltesischen Geschäftsmann Yorgen Fenech frei, der zuletzt von sieben Männern für den Mord an Daphne Caruana Galizia 2017 angeklagt wurde.\n\n### Medizin\n- **CDC Health Updates**: Das CDC lanciert einen neuen Datenkanal zur Überwachung von Überdosis Trends und zur Stärkung der Prävention bundesweit.\n\n### Cyber-Espionage\n- **Citizen Lab**: Der Citizen Lab veröffentlichte Informationen zu neuesten Entwicklungen im Bereich Cyber-Spionage. (Der Text wurde abgeschnitten, aber der Bericht beinhaltet wahrscheinlich neue Einsichten in Cyber-Attacken und -Techniken.)\n\nDiese Zusammenfassung gibt einen Überblick über die aktuellen Ereignisse in verschiedenen Bereichen auf internationaler und nationaler Ebene.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 04. September 2026**\n\n**Geopolitik & Konflikte**\n- **Russland:** Der russische Staat hat Anklage gegen die bekannte Menschenrechtsaktivistin Lida Moniawa (im Westen oft als „Mutter Teresa Russlands\" bezeichnet) erhoben. Ihr wird Kritik am Krieg in der Ukraine vorgeworfen, wobei ihr eine Haftstrafe von bis zu zehn Jahren droht. Dies zeigt die anhaltende Unterdrückung jeglicher regimekritischer Stimmen.\n\n**Naturkatastrophen & humanitäre Lage**\n- **Nepal:** Die Lage nach den schweren Überschwemmungen bleibt kritisch. Während die Behörden mit dem Wiederaufbau beginnen, suchen Rettungskräfte weiterhin in einem Tunnel eines Wasserkraftprojekts nach Überlebenden. Zwei Personen konnten lebend gerettet werden, Dutzende gelten weiterhin als vermisst. Die nepalesische Regierung fordert milliardenschwere internationale Hilfen für den Wiederaufbau.\n\n**Wirtschaft & Finanzen**\n- **USA / Puerto Rico:** Die US-Notenbank (Federal Reserve) hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Es handelt sich um eine behördliche Anordnung (Enforcement Action), Details zur Art des Verstoßes wurden in der Meldung nicht näher ausgeführt.\n\n**Cybersicherheit & Kritische Infrastruktur**\n- **Rockwell Automation (Industrieanlagen):** Eine Sicherheitslücke (CVE-2025-10478) wurde im Modul 1756-ENBT (Ethernet-Kommunikationsmodul) entdeckt. Eine erfolgreiche Ausnutzung führt zum Absturz des Moduls, was einen Neustart des Geräts erfordert. Betroffen sind alle Versionen des Moduls. Angesichts der weiten Verbreitung von Rockwell-Steuerungen in der Industrie ist dies ein relevanter Warnhinweis.\n\n**Lokale US-Nachrichten (Kurioses)**\n- **USA (Viral):** Ein Kuriosum aus den USA: Ein viraler Vorfall um gestohlene Zimtschnecken in einer Bäckerei führte zu einer Anzeige wegen Diebstahls in Höhe von 3.100 US-Dollar. Die Ermittlungen ergaben eine unerwartete Wendung, als bekannt wurde, dass der beschuldigte Uber-Fahrer während einer Lieferfahrt von der US-Grenzpatrouille (Border Patrol) festgenommen wurde.\n\n**Medien- & Kulturperspektiven**\n- **Chicago (USA):** Der in Großbritannien ansässige Ableger der *Financial Times* porträtiert in einem Reisefeature acht prominente Einheimische Chicagos. Sie teilen ihre persönlichen Lieblingsorte in der drittgrößten Stadt der USA – ein eher positiver Kontrapunkt zu den sonstigen Schlagzeilen des Tages.\n\n**Wetter (Atlantic)**\n- **Tropenlage:** Das National Hurricane Center (NHC) meldet, dass im Nordatlantik, der Karibik und dem Golf von Amerika in den nächsten sieben Tagen keine Bildung tropischer Wirbelstürme erwartet wird.\n\n---\n\n**Feeds, die heute keine neuen Beiträge enthielten:**\n- *Wall Street Journal (Markets)*: Keine aktuellen, relevanten Meldungen (lediglich Service-Piece zu privater Studienfinanzierung).\n- *BBC World News*: Meldung deckt sich mit dem Nepal-Thema des NYT Live-Updates.\n\n**Einschätzung der Redaktion:**\nDie dominierenden Themen sind die humanitäre Katastrophe in Nepal sowie die zunehmende Repression in Russland. Die Cyber-Warnung zu Rockwell Automation ist ein technischer, aber wichtiger Hinweis für Betreiber kritischer Infrastruktur. An den Finanzmärkten selbst gibt es heute keine impulsgebenden Nachrichten; die Enforcement Action der Fed ist ein behördlicher Einzelfall.\n\nMACRO:\n### Summary of Key News on 04.09.2026\n\n#### **Zentralbank: Federal Reserve Press**\n- **News**: Federal Reserve Board issues enforcement action against a former employee of Banco Popular de Puerto Rico.\n- **Implications**: This action highlights ongoing regulatory scrutiny of financial institutions and their employees.\n\n#### **Cyber / Infrastruktur: CISA Cyber Alerts**\n- **News**: Rockwell Automation 1756-ENBT Module is vulnerable to a critical flaw (CVE-2025-10478) that could cause the module to crash.\n- **Affected Versions**: All versions.\n- **Impact**: Successful exploitation requires the device to be restarted, disrupting operations.\n- **Recommended Action**: Users should update to the latest version or apply mitigations as advised by the vendor.\n\n#### **US/Finanzen: Wall Street Journal (MarketWatch Alt)**\n- **News**: Two 62-year-old grandparents, neither of whom attended college, are grappling with the financial burden of funding their granddaughter's college education.\n- **Background**: The grandparents gained custody of their granddaughter under challenging circumstances.\n- **Discussion**: The article explores the financial and emotional challenges faced by older caregivers in the context of higher education costs.\n\n#### **US/Politik: Fox News Latest**\n- **News**: A viral cinnamon rolls theft accusation involving a $3,100 theft claim took an unexpected turn when the Uber driver was arrested by U.S. Border Patrol during a delivery.\n- **Implications**: The case highlights the intersection of local crime and federal border enforcement.\n\n#### **UK/Medien: BBC World News**\n- **News**: Nepal faces a significant funding gap to rebuild after flash floods caused widespread damage.\n- **Context**: Authorities in Nepal are beginning the rebuilding process amidst the debris, emphasizing the need for substantial international funding.\n\n#### **US/Presse: New York Times World**\n- **News**: Rescuers have found two survivors in a tunnel at a hydropower project in Nepal following last week's deadly flood.\n- **Details**: Dozens of people are still believed to be trapped, and the number of survivors remains uncertain.\n- **Human Interest**: The ongoing search and rescue efforts highlight the resilience and dedication of emergency responders.\n\n#### **CH/Presse: NZZ International**\n- **News**: Lida Moniawa, a Russian activist often referred to as \"Russia's Mother Teresa,\" faces up to ten years in prison for criticizing the war in Ukraine.\n- **Background**: Moniawa has dedicated her life to helping the most vulnerable in Russian society and has remained in Moscow despite the risks.\n- **Implications**: The case underscores the harsh crackdown on dissent in Russia under Putin's regime.\n\n#### **UK/Finanzen: Financial Times**\n- **News**: Prominent Chicagoans share their favorite spots in the city, offering insights into the cultural and culinary landscape of America's third-largest city.\n- **Discussion**: The article provides a local perspective on what makes Chicago unique and special to its residents.\n\n#### **Wetter/Extreme: NOAA National Hurricane Center**\n- **News**: No tropical cyclone formation is expected in the North Atlantic, Caribbean Sea, or Gulf of Mexico over the next seven days.\n- **Forecast**: The current outlook indicates stable weather conditions in these regions.\n- **Significance**: This update is crucial for residents and businesses in potentially affected areas, providing reassurance and allowing for better planning.\n\n#### **Investigativ Net: ICIJ (Panama/Pandora Papers)**\n- **News**: A nominee to run the oil deal in Venezuela is under investigation in two countries for embezzlement.\n- **Background**: ICIJ's 2020 FinCEN Files revealed suspicious payments involving the nominee's company.\n- **Implications**: The allegations raise questions about the integrity and transparency of the proposed deal and the individuals involved.\n\n#### **Medizin: CDC Health Updates**\n- **News**: The CDC has launched a new data channel to track overdose trends and enhance prevention efforts.\n- **Purpose**: The new channel aims to provide real-time data to public health officials and policymakers to better understand and combat the opioid crisis.\n- **Impact**: This initiative is expected to improve the effectiveness of overdose prevention strategies and save lives.\n\nThese updates cover a range of topics from financial regulation and cybersecurity to natural disasters and political activism, providing a comprehensive overview of the day's most significant news.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,69 @@
   },
   "conflict_hotspots": [
     {
+      "name": "Flug PGT29DJ",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 41.8825,
+      "lon": 25.8535,
+      "lng": 25.8535,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: PGT29DJ | Höhe: 10.7 km | Speed: 856 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
       "name": "Flug PGT35BN",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8392,
-      "lon": 28.2334,
-      "lng": 28.2334,
+      "lat": 40.7203,
+      "lon": 28.731,
+      "lng": 28.731,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT35BN | Höhe: 5.2 km | Speed: 589 km/h",
+      "description": "Callsign: PGT35BN | Höhe: 2.3 km | Speed: 465 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug EWG55CU",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 43.6482,
-      "lon": 26.2191,
-      "lng": 26.2191,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: EWG55CU | Höhe: 6.2 km | Speed: 757 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug 4XCDE",
+      "name": "Flug WMT9BW",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.2222,
-      "lon": 34.8825,
-      "lng": 34.8825,
+      "lat": 32.1752,
+      "lon": 34.0706,
+      "lng": 34.0706,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XCDE | Höhe: 0.3 km | Speed: 171 km/h",
+      "description": "Callsign: WMT9BW | Höhe: 5.3 km | Speed: 702 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XBCQ",
+      "name": "Flug T7FTH",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.6301,
-      "lon": 34.8148,
-      "lng": 34.8148,
+      "lat": 35.1252,
+      "lon": 35.8284,
+      "lng": 35.8284,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XBCQ | Höhe: 0.5 km | Speed: 247 km/h",
+      "description": "Callsign: T7FTH | Höhe: 12.2 km | Speed: 770 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CXA881",
+      "name": "Flug CPA867",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.0995,
-      "lon": 120.709,
-      "lng": 120.709,
+      "lat": 25.3583,
+      "lon": 121.7513,
+      "lng": 121.7513,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CXA881 | Höhe: 6.4 km | Speed: 752 km/h",
+      "description": "Callsign: CPA867 | Höhe: 9.8 km | Speed: 895 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DKH1365",
+      "name": "Flug SIA601",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 26.7721,
-      "lon": 120.69,
-      "lng": 120.69,
+      "lat": 25.9168,
+      "lon": 122.5621,
+      "lng": 122.5621,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: DKH1365 | Höhe: 11.0 km | Speed: 817 km/h",
+      "description": "Callsign: SIA601 | Höhe: 11.6 km | Speed: 959 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,7 +105,7 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 12,
+        "val": 11,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -113,23 +113,15 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 12,
+        "val": 11,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
-      },
-      {
-        "id": "israel",
-        "label": "Israel",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-07-25",
-        "last_seen": "2026-08-20"
       },
       {
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 5,
+        "val": 4,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -145,7 +137,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 12,
+        "val": 11,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -153,7 +145,7 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 8,
+        "val": 7,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -161,41 +153,9 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 12,
+        "val": 11,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
-      },
-      {
-        "id": "fed",
-        "label": "Fed",
-        "group": "organisation",
-        "val": 3,
-        "first_seen": "2026-07-25",
-        "last_seen": "2026-08-20"
-      },
-      {
-        "id": "australien",
-        "label": "Australien",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-08-20",
-        "last_seen": "2026-08-20"
-      },
-      {
-        "id": "mlflow_ssrf",
-        "label": "CVE-2026-64849",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-20",
-        "last_seen": "2026-08-20"
-      },
-      {
-        "id": "aca",
-        "label": "ACA",
-        "group": "risiko",
-        "val": 3,
-        "first_seen": "2026-08-20",
-        "last_seen": "2026-08-20"
       },
       {
         "id": "kanada",
@@ -288,22 +248,6 @@
         "last_seen": "2026-08-22"
       },
       {
-        "from": "fed",
-        "to": "usa",
-        "source": "fed",
-        "target": "usa",
-        "label": "Wirtschaftspolitik",
-        "last_seen": "2026-08-20"
-      },
-      {
-        "from": "usa",
-        "to": "ukraine",
-        "source": "usa",
-        "target": "ukraine",
-        "label": "Militärhilfe",
-        "last_seen": "2026-08-20"
-      },
-      {
         "from": "china",
         "to": "taiwan",
         "source": "china",
@@ -318,38 +262,6 @@
         "target": "taiwan",
         "label": "Unterstützung",
         "last_seen": "2026-08-24"
-      },
-      {
-        "from": "iran",
-        "to": "israel",
-        "source": "iran",
-        "target": "israel",
-        "label": "Proxy-Konflikt",
-        "last_seen": "2026-08-20"
-      },
-      {
-        "from": "israel",
-        "to": "australien",
-        "source": "israel",
-        "target": "australien",
-        "label": "Diplomatische Krise",
-        "last_seen": "2026-08-20"
-      },
-      {
-        "from": "mlflow_ssrf",
-        "to": "usa",
-        "source": "mlflow_ssrf",
-        "target": "usa",
-        "label": "Cyberrisiko",
-        "last_seen": "2026-08-20"
-      },
-      {
-        "from": "aca",
-        "to": "usa",
-        "source": "aca",
-        "target": "usa",
-        "label": "Innenpolitik",
-        "last_seen": "2026-08-20"
       },
       {
         "from": "usa",
@@ -498,22 +410,6 @@
         "last_seen": "2026-08-22"
       },
       {
-        "from": "fed",
-        "to": "usa",
-        "source": "fed",
-        "target": "usa",
-        "label": "Wirtschaftspolitik",
-        "last_seen": "2026-08-20"
-      },
-      {
-        "from": "usa",
-        "to": "ukraine",
-        "source": "usa",
-        "target": "ukraine",
-        "label": "Militärhilfe",
-        "last_seen": "2026-08-20"
-      },
-      {
         "from": "china",
         "to": "taiwan",
         "source": "china",
@@ -528,38 +424,6 @@
         "target": "taiwan",
         "label": "Unterstützung",
         "last_seen": "2026-08-24"
-      },
-      {
-        "from": "iran",
-        "to": "israel",
-        "source": "iran",
-        "target": "israel",
-        "label": "Proxy-Konflikt",
-        "last_seen": "2026-08-20"
-      },
-      {
-        "from": "israel",
-        "to": "australien",
-        "source": "israel",
-        "target": "australien",
-        "label": "Diplomatische Krise",
-        "last_seen": "2026-08-20"
-      },
-      {
-        "from": "mlflow_ssrf",
-        "to": "usa",
-        "source": "mlflow_ssrf",
-        "target": "usa",
-        "label": "Cyberrisiko",
-        "last_seen": "2026-08-20"
-      },
-      {
-        "from": "aca",
-        "to": "usa",
-        "source": "aca",
-        "target": "usa",
-        "label": "Innenpolitik",
-        "last_seen": "2026-08-20"
       },
       {
         "from": "usa",
@@ -684,11 +548,11 @@
     ]
   },
   "simple_key_takeaways": [
-    "Federal Reserve Press**: Die Federal Reserve Board hat eine durchsetzungsvorsorge gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico erlassen.",
-    "CISA Cyber Alerts**: CISA, das FBI und internationale Partner haben eine Richtlinie veröffentlicht, die Organisationen bei der Planung und Durchführung klarer, zeitnaher, genauer und zielgruppengerechter Kommunikation während IT- und OT-Ausfällen unterstützt.",
-    "Wall Street Journal (MarketWatch Alt)**: Eine Oma gibt ihrem Enkel mit schwerer psychischer Erkrankung monatlich 1.000 USD. Sie plant, wie sie ihn nach ihrem Tod schützen kann.",
-    "New York Times World**: Russland und Ukraine befinden sich in einer sich verschärfenden Spirale ohne Ende, wobei beide Seiten versuchen, sich gegenseitig durch Raketen und Drohnen zur Aufgabe zu zwingen. Der menschliche Leidensweg sieht keine Abschwächung der Entschlossenheit.",
-    "NZZ International**: Im Pentagon entbrennt ein Machtkampf. Daniel Driscoll, Staatssekretär des Heeres, galt als Aufsteiger. Dies passte seinem Chef Pete Hegseth nicht, und Driscoll wurde trotz guter Beziehungen zum Weißen Haus von Hegseths Personalpolitik betroffen."
+    "Russland:** Der russische Staat hat Anklage gegen die bekannte Menschenrechtsaktivistin Lida Moniawa (im Westen oft als „Mutter Teresa Russlands\" bezeichnet) erhoben. Ihr wird Kritik am Krieg in der Ukraine vorgeworfen, wobei ihr eine Haftstrafe von bis zu zehn Jahren droht. Dies zeigt die anhaltende Unterdrückung jeglicher regimekritischer Stimmen.",
+    "Nepal:** Die Lage nach den schweren Überschwemmungen bleibt kritisch. Während die Behörden mit dem Wiederaufbau beginnen, suchen Rettungskräfte weiterhin in einem Tunnel eines Wasserkraftprojekts nach Überlebenden. Zwei Personen konnten lebend gerettet werden, Dutzende gelten weiterhin als vermisst. Die nepalesische Regierung fordert milliardenschwere internationale Hilfen für den Wiederaufbau.",
+    "USA / Puerto Rico:** Die US-Notenbank (Federal Reserve) hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Es handelt sich um eine behördliche Anordnung (Enforcement Action), Details zur Art des Verstoßes wurden in der Meldung nicht näher ausgeführt.",
+    "Rockwell Automation (Industrieanlagen):** Eine Sicherheitslücke (CVE-2025-10478) wurde im Modul 1756-ENBT (Ethernet-Kommunikationsmodul) entdeckt. Eine erfolgreiche Ausnutzung führt zum Absturz des Moduls, was einen Neustart des Geräts erfordert. Betroffen sind alle Versionen des Moduls. Angesichts der weiten Verbreitung von Rockwell-Steuerungen in der Industrie ist dies ein relevanter Warnhinweis.",
+    "USA (Viral):** Ein Kuriosum aus den USA: Ein viraler Vorfall um gestohlene Zimtschnecken in einer Bäckerei führte zu einer Anzeige wegen Diebstahls in Höhe von 3.100 US-Dollar. Die Ermittlungen ergaben eine unerwartete Wendung, als bekannt wurde, dass der beschuldigte Uber-Fahrer während einer Lieferfahrt von der US-Grenzpatrouille (Border Patrol) festgenommen wurde."
   ],
   "geoscore": {
     "current_score": 72,
@@ -703,12 +567,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-03T10:28:33.126121+00:00",
+  "timestamp": "2026-09-04T10:15:58.893254+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-03T10:27:10.257251+00:00",
+    "timestamp": "2026-09-04T10:14:39.536770+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -719,7 +583,7 @@
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
     "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (20 Nodes)",
+    "graph_merge_status": "SUCCESS (15 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
     ]
@@ -734,9 +598,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 25,
-    "nodes_now": 20,
+    "nodes_prev": 20,
+    "nodes_now": 15,
     "hotspots_now": 6,
-    "summary": "Graph-Knoten 25 → 20"
+    "summary": "Graph-Knoten 20 → 15"
   }
 }
