@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 04. September 2026**\n\n**Geopolitik & Konflikte**\n- **Russland:** Der russische Staat hat Anklage gegen die bekannte Menschenrechtsaktivistin Lida Moniawa (im Westen oft als „Mutter Teresa Russlands\" bezeichnet) erhoben. Ihr wird Kritik am Krieg in der Ukraine vorgeworfen, wobei ihr eine Haftstrafe von bis zu zehn Jahren droht. Dies zeigt die anhaltende Unterdrückung jeglicher regimekritischer Stimmen.\n\n**Naturkatastrophen & humanitäre Lage**\n- **Nepal:** Die Lage nach den schweren Überschwemmungen bleibt kritisch. Während die Behörden mit dem Wiederau...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 04. September 2026**\n\n**Geopolitik & Konflikte**\n- **Russland:** Der russische Staat hat Anklage gegen die bekannte Menschenrechtsaktivistin Lida Moniawa (im Westen oft als „Mutter Teresa Russlands\" bezeichnet) erhoben. Ihr wird Kritik am Krieg in der Ukraine vorgeworfen, wobei ihr eine Haftstrafe von bis ...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**Zusammenfassung der Nachrichtenlage vom 05.09.2026:**\n\nDie heutigen Meldungen zeigen ein breites Spektrum von regulatorischen Entscheidungen im Finanzsektor über akute Cybersicherheitswarnungen bis hin zu politischen und gesellschaftlichen Entwicklungen in den USA, Europa und dem Nahen Osten.\n\n**1. US-Notenbank (Federal Reserve):**  \nDie Federal Reserve hat formelle Durchsetzungsmaßnahmen gegen die *United Texas Bank* sowie die *Quontic Bank Acquisition Corp.* und *Quontic Bank Holdings Corp.* beendet. Dies deutet darauf hin, dass die genannten Institute die geforderten Auf...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**Zusammenfassung der Nachrichtenlage vom 05.09.2026:**\n\nDie heutigen Meldungen zeigen ein breites Spektrum von regulatorischen Entscheidungen im Finanzsektor über akute Cybersicherheitswarnungen bis hin zu politischen und gesellschaftlichen Entwicklungen in den USA, Europa und dem Nahen Osten.\n\n**1. US-Notenbank (Federal Reserve)...",
   "key_takeaways": [
-    "Russland:** Der russische Staat hat Anklage gegen die bekannte Menschenrechtsaktivistin Lida Moniawa (im Westen oft als „Mutter Teresa Russlands\" bezeichnet) erhoben. Ihr wird Kritik am Krieg in der Ukraine vorgeworfen, wobei ihr eine Haftstrafe von bis zu zehn Jahren droht. Dies zeigt die anhaltende Unterdrückung jeglicher regimekritischer Stimmen.",
-    "Nepal:** Die Lage nach den schweren Überschwemmungen bleibt kritisch. Während die Behörden mit dem Wiederaufbau beginnen, suchen Rettungskräfte weiterhin in einem Tunnel eines Wasserkraftprojekts nach Überlebenden. Zwei Personen konnten lebend gerettet werden, Dutzende gelten weiterhin als vermisst. Die nepalesische Regierung fordert milliardenschwere internationale Hilfen für den Wiederaufbau.",
-    "USA / Puerto Rico:** Die US-Notenbank (Federal Reserve) hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Es handelt sich um eine behördliche Anordnung (Enforcement Action), Details zur Art des Verstoßes wurden in der Meldung nicht näher ausgeführt.",
-    "Rockwell Automation (Industrieanlagen):** Eine Sicherheitslücke (CVE-2025-10478) wurde im Modul 1756-ENBT (Ethernet-Kommunikationsmodul) entdeckt. Eine erfolgreiche Ausnutzung führt zum Absturz des Moduls, was einen Neustart des Geräts erfordert. Betroffen sind alle Versionen des Moduls. Angesichts der weiten Verbreitung von Rockwell-Steuerungen in der Industrie ist dies ein relevanter Warnhinweis.",
-    "USA (Viral):** Ein Kuriosum aus den USA: Ein viraler Vorfall um gestohlene Zimtschnecken in einer Bäckerei führte zu einer Anzeige wegen Diebstahls in Höhe von 3.100 US-Dollar. Die Ermittlungen ergaben eine unerwartete Wendung, als bekannt wurde, dass der beschuldigte Uber-Fahrer während einer Lieferfahrt von der US-Grenzpatrouille (Border Patrol) festgenommen wurde."
+    "Federal Reserve** hat Maßnahmen gegen United Texas Bank, Quontic Bank Acquisition Corp., und Quontic Bank Holdings Corp. beendet.",
+    "CISA** hat eine neue Verwundbarkeit (CVE-2026-85046) in den Google Chromium V8 Typkonfusion zu seinem Known Exploited Vulnerabilities (KEV) Katalog hinzugefügt, basierend auf Beweisen aktiver Ausnutzung.",
+    "Missouri Attorney General Catherine Hanaway** hat einen Notfallrekurs beim US Supreme Court eingereicht, um die von Trump unterstützte Wahlkreiszeichnung wiederherzustellen.",
+    "Bloom Energy** wurde dem S&P 500 Index hinzugefügt, während Molson Coors Beverage, Builders FirstSource und Trade Desk daraus entfernt werden.",
+    "Tausende Soldaten an Bord der **USS Abraham Lincoln** fanden in Thailand vorübergehende Erleichterung von ihren anstrengenden Einsätzen."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 04. September 2026**\n\n**Geopolitik & Konflikte**\n- **Russland:** Der russische Staat hat Anklage gegen die bekannte Menschenrechtsaktivistin Lida Moniawa (im Westen oft als „Mutter Teresa Russlands\" bezeichnet) erhoben. Ihr wird Kritik am Krieg in der Ukraine vorgeworfen, wobei ihr eine Haftstrafe von bis zu zehn Jahren droht. Dies zeigt die anhaltende Unterdrückung jeglicher regimekritischer Stimmen.\n\n**Naturkatastrophen & humanitäre Lage**\n- **Nepal:** Die Lage nach den schweren Überschwemmungen bleibt kritisch. Während die Behörden mit dem Wiederaufbau beginnen, suchen Rettungskräfte weiterhin in einem Tunnel eines Wasserkraftprojekts nach Überlebenden. Zwei Personen konnten lebend gerettet werden, Dutzende gelten weiterhin als vermisst. Die nepalesische Regierung fordert milliardenschwere internationale Hilfen für den Wiederaufbau.\n\n**Wirtschaft & Finanzen**\n- **USA / Puerto Rico:** Die US-Notenbank (Federal Reserve) hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Es handelt sich um eine behördliche Anordnung (Enforcement Action), Details zur Art des Verstoßes wurden in der Meldung nicht näher ausgeführt.\n\n**Cybersicherheit & Kritische Infrastruktur**\n- **Rockwell Automation (Industrieanlagen):** Eine Sicherheitslücke (CVE-2025-10478) wurde im Modul 1756-ENBT (Ethernet-Kommunikationsmodul) entdeckt. Eine erfolgreiche Ausnutzung führt zum Absturz des Moduls, was einen Neustart des Geräts erfordert. Betroffen sind alle Versionen des Moduls. Angesichts der weiten Verbreitung von Rockwell-Steuerungen in der Industrie ist dies ein relevanter Warnhinweis.\n\n**Lokale US-Nachrichten (Kurioses)**\n- **USA (Viral):** Ein Kuriosum aus den USA: Ein viraler Vorfall um gestohlene Zimtschnecken in einer Bäckerei führte zu einer Anzeige wegen Diebstahls in Höhe von 3.100 US-Dollar. Die Ermittlungen ergaben eine unerwartete Wendung, als bekannt wurde, dass der beschuldigte Uber-Fahrer während einer Lieferfahrt von der US-Grenzpatrouille (Border Patrol) festgenommen wurde.\n\n**Medien- & Kulturperspektiven**\n- **Chicago (USA):** Der in Großbritannien ansässige Ableger der *Financial Times* porträtiert in einem Reisefeature acht prominente Einheimische Chicagos. Sie teilen ihre persönlichen Lieblingsorte in der drittgrößten Stadt der USA – ein eher positiver Kontrapunkt zu den sonstigen Schlagzeilen des Tages.\n\n**Wetter (Atlantic)**\n- **Tropenlage:** Das National Hurricane Center (NHC) meldet, dass im Nordatlantik, der Karibik und dem Golf von Amerika in den nächsten sieben Tagen keine Bildung tropischer Wirbelstürme erwartet wird.\n\n---\n\n**Feeds, die heute keine neuen Beiträge enthielten:**\n- *Wall Street Journal (Markets)*: Keine aktuellen, relevanten Meldungen (lediglich Service-Piece zu privater Studienfinanzierung).\n- *BBC World News*: Meldung deckt sich mit dem Nepal-Thema des NYT Live-Updates.\n\n**Einschätzung der Redaktion:**\nDie dominierenden Themen sind die humanitäre Katastrophe in Nepal sowie die zunehmende Repression in Russland. Die Cyber-Warnung zu Rockwell Automation ist ein technischer, aber wichtiger Hinweis für Betreiber kritischer Infrastruktur. An den Finanzmärkten selbst gibt es heute keine impulsgebenden Nachrichten; die Enforcement Action der Fed ist ein behördlicher Einzelfall.\n\nMACRO:\n### Summary of Key News on 04.09.2026\n\n#### **Zentralbank: Federal Reserve Press**\n- **News**: Federal Reserve Board issues enforcement action against a former employee of Banco Popular de Puerto Rico.\n- **Implications**: This action highlights ongoing regulatory scrutiny of financial institutions and their employees.\n\n#### **Cyber / Infrastruktur: CISA Cyber Alerts**\n- **News**: Rockwell Automation 1756-ENBT Module is vulnerable to a critical flaw (CVE-2025-10478) that could cause the module to crash.\n- **Affected Versions**: All versions.\n- **Impact**: Successful exploitation requires the device to be restarted, disrupting operations.\n- **Recommended Action**: Users should update to the latest version or apply mitigations as advised by the vendor.\n\n#### **US/Finanzen: Wall Street Journal (MarketWatch Alt)**\n- **News**: Two 62-year-old grandparents, neither of whom attended college, are grappling with the financial burden of funding their granddaughter's college education.\n- **Background**: The grandparents gained custody of their granddaughter under challenging circumstances.\n- **Discussion**: The article explores the financial and emotional challenges faced by older caregivers in the context of higher education costs.\n\n#### **US/Politik: Fox News Latest**\n- **News**: A viral cinnamon rolls theft accusation involving a $3,100 theft claim took an unexpected turn when the Uber driver was arrested by U.S. Border Patrol during a delivery.\n- **Implications**: The case highlights the intersection of local crime and federal border enforcement.\n\n#### **UK/Medien: BBC World News**\n- **News**: Nepal faces a significant funding gap to rebuild after flash floods caused widespread damage.\n- **Context**: Authorities in Nepal are beginning the rebuilding process amidst the debris, emphasizing the need for substantial international funding.\n\n#### **US/Presse: New York Times World**\n- **News**: Rescuers have found two survivors in a tunnel at a hydropower project in Nepal following last week's deadly flood.\n- **Details**: Dozens of people are still believed to be trapped, and the number of survivors remains uncertain.\n- **Human Interest**: The ongoing search and rescue efforts highlight the resilience and dedication of emergency responders.\n\n#### **CH/Presse: NZZ International**\n- **News**: Lida Moniawa, a Russian activist often referred to as \"Russia's Mother Teresa,\" faces up to ten years in prison for criticizing the war in Ukraine.\n- **Background**: Moniawa has dedicated her life to helping the most vulnerable in Russian society and has remained in Moscow despite the risks.\n- **Implications**: The case underscores the harsh crackdown on dissent in Russia under Putin's regime.\n\n#### **UK/Finanzen: Financial Times**\n- **News**: Prominent Chicagoans share their favorite spots in the city, offering insights into the cultural and culinary landscape of America's third-largest city.\n- **Discussion**: The article provides a local perspective on what makes Chicago unique and special to its residents.\n\n#### **Wetter/Extreme: NOAA National Hurricane Center**\n- **News**: No tropical cyclone formation is expected in the North Atlantic, Caribbean Sea, or Gulf of Mexico over the next seven days.\n- **Forecast**: The current outlook indicates stable weather conditions in these regions.\n- **Significance**: This update is crucial for residents and businesses in potentially affected areas, providing reassurance and allowing for better planning.\n\n#### **Investigativ Net: ICIJ (Panama/Pandora Papers)**\n- **News**: A nominee to run the oil deal in Venezuela is under investigation in two countries for embezzlement.\n- **Background**: ICIJ's 2020 FinCEN Files revealed suspicious payments involving the nominee's company.\n- **Implications**: The allegations raise questions about the integrity and transparency of the proposed deal and the individuals involved.\n\n#### **Medizin: CDC Health Updates**\n- **News**: The CDC has launched a new data channel to track overdose trends and enhance prevention efforts.\n- **Purpose**: The new channel aims to provide real-time data to public health officials and policymakers to better understand and combat the opioid crisis.\n- **Impact**: This initiative is expected to improve the effectiveness of overdose prevention strategies and save lives.\n\nThese updates cover a range of topics from financial regulation and cybersecurity to natural disasters and political activism, providing a comprehensive overview of the day's most significant news.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**Zusammenfassung der Nachrichtenlage vom 05.09.2026:**\n\nDie heutigen Meldungen zeigen ein breites Spektrum von regulatorischen Entscheidungen im Finanzsektor über akute Cybersicherheitswarnungen bis hin zu politischen und gesellschaftlichen Entwicklungen in den USA, Europa und dem Nahen Osten.\n\n**1. US-Notenbank (Federal Reserve):**  \nDie Federal Reserve hat formelle Durchsetzungsmaßnahmen gegen die *United Texas Bank* sowie die *Quontic Bank Acquisition Corp.* und *Quontic Bank Holdings Corp.* beendet. Dies deutet darauf hin, dass die genannten Institute die geforderten Auflagen erfüllt und die regulatorischen Anforderungen (z. B. in Bezug auf Compliance oder Risikomanagement) wiederhergestellt haben.\n\n**2. Cybersicherheit (CISA):**  \nDas Cybersecurity-Infrastruktursicherheitsamt (CISA) hat eine neue, aktiv ausgenutzte Schwachstelle in seinen Katalog (KEV) aufgenommen. Es handelt sich um **CVE-2026-85046**, eine Type-Confusion-Schwachstelle in der V8-Engine von Google Chromium. Diese Schwachstellenklasse wird häufig von Angreifern genutzt, um Code im Browser auszuführen oder Speicherfehler zu provozieren. Unternehmen und Nutzer werden dringend aufgefordert, Updates einzuspielen.\n\n**3. US-Politik (Wahlrecht/Redistricting):**  \nMissouris Generalstaatsanwältin Catherine Hanaway hat einen Eilantrag beim Obersten Gerichtshof der USA eingereicht, um eine von Donald Trump unterstützte Neuaufteilung der Kongresswahlbezirke wiederzubeleben. Dies ist der jüngste Schritt in einem juristischen Streit über die Wahlkreisgrenzen, der erhebliche Auswirkungen auf die Sitzverteilung im Repräsentantenhaus haben könnte.\n\n**4. Finanzmärkte (Indexänderungen):**  \nIm S&P 500 gibt es Veränderungen: *Bloom Energy* wird in den Index aufgenommen. Gleichzeitig werden *Molson Coors Beverage*, *Builders FirstSource* und *The Trade Desk* aus dem Benchmark-Index entfernt. Solche Umschichtungen führen oft zu erhöhter Handelsaktivität, da Fonds ihre Portfolios anpassen.\n\n**5. US-Militär & Internationales (Personal):**  \nEin Artikel der New York Times berichtet über eine kurze Erholungsphase für Tausende Soldaten des Flugzeugträgers *USS Abraham Lincoln* in Thailand. Der Zwischenstopp bietet nach monatelangen Kampfeinsätzen eine vorübergehende Abwechslung, kann aber die psychischen und physischen Belastungen nur teilweise lindern.\n\n**6. UK (Justiz):**  \nIm Mordfall Lindsay Clancy wurde ein Fehlprozess (Mistrial) erklärt, da die Jury keine einstimmige Entscheidung treffen konnte. Die Angeklagte, die beschuldigt wird, für den Tod ihrer drei Kinder verantwortlich zu sein, muss sich weiterhin auf ein mögliches erneutes Verfahren einstellen. Der Fall bleibt rechtlich und gesellschaftlich hochsensibel.\n\n**7. Europa (Polen/Innenpolitik):**  \nDie NZZ analysiert das Ende der Ära Jaroslaw Kaczynski. Durch die selbstverschuldete Spaltung seiner Partei PiS verliert der langjährige starke Mann der polnischen Rechten zunehmend an Einfluss. Seine radikale Linie und sein absoluter Führungsanspruch stoßen intern auf wachsenden Widerstand.\n\n**8. UK (Politik/Recht):**  \nNigel Farage besteht darauf, dass seine Partei *Reform UK* kein Gesetz gebrochen habe. Dies geschieht vor dem Hintergrund, dass zwei wichtige Berater zurückgetreten sind, nachdem Vorwürfe über angebliche Versuche, illegale Auslandsfinanzierung zu erhalten, laut wurden. Der Parteitag in Birmingham wird von diesen Turbulenzen überschattet.\n\n**9. Wetter (Atlantik):**  \nDer National Hurricane Center (NHC) hat seinen tropischen Wetterausblick für den Atlantik veröffentlicht. Die Meldung (Stand 05:11 UTC) beinhaltet die übliche Überwachung tropischer Wellen und potenzieller Sturmgebiete. Konkrete Warnungen vor einem unmittelbar drohenden Sturm sind in der Kurzfassung nicht enthalten, was auf eine aktuelle Beruhigung hindeutet.\n\nMACRO:\n### Zusammenfassung der aktuellen Nachrichten\n\n**Zentralbank:**\n- **Federal Reserve** hat Maßnahmen gegen United Texas Bank, Quontic Bank Acquisition Corp., und Quontic Bank Holdings Corp. beendet.\n\n**Cyber / Infrastruktur:**\n- **CISA** hat eine neue Verwundbarkeit (CVE-2026-85046) in den Google Chromium V8 Typkonfusion zu seinem Known Exploited Vulnerabilities (KEV) Katalog hinzugefügt, basierend auf Beweisen aktiver Ausnutzung.\n\n**US/Politik:**\n- **Missouri Attorney General Catherine Hanaway** hat einen Notfallrekurs beim US Supreme Court eingereicht, um die von Trump unterstützte Wahlkreiszeichnung wiederherzustellen.\n\n**US/Finanzen:**\n- **Bloom Energy** wurde dem S&P 500 Index hinzugefügt, während Molson Coors Beverage, Builders FirstSource und Trade Desk daraus entfernt werden.\n\n**US/Presse:**\n- Tausende Soldaten an Bord der **USS Abraham Lincoln** fanden in Thailand vorübergehende Erleichterung von ihren anstrengenden Einsätzen.\n\n**UK/Medien:**\n- **Mistrial** im Mordfall Lindsay Clancy durch Jury-Deadlock, der Fall und Clancys Zukunft sind ungewiss.\n\n**CH/Presse:**\n- **Kaczynski-Ära endet:** Jaroslaw Kaczynski, der das polnische rechte Lager seit 25 Jahren kontrolliert, verliert an Einfluss durch die Spaltung seiner Partei PiS.\n\n**UK/Finanzen:**\n- **Nigel Farage** behauptet, dass die **Reform Party** keines Gesetzes verletzt hat, nachdem wichtige Berater das Parteikonferenz in Birmingham verlassen haben, angeblich aufgrund angeblicher Versuche illegaler ausländischer Finanzierung.\n\n**Wetter/Extreme:**\n- **National Hurricane Center** sieht in den nächsten 7 Tagen keine Bildung von tropischen Wirbelstürmen im Nordatlantik, Karibik oder Golf von Mexiko.\n\n**Investigativ Net:**\n- Der von der **Biden-Administration** nominierte Verantwortliche für die venezolanische Ölgeschäft ist in zwei Ländern wegen Korruptionsvorwürfen unter Untersuchung. Die **ICIJ** hatte 2020 aufgrund der FinCEN-Files flagrante Zahlungen von einem der Unternehmen des venezolanischen Tycoons aufgedeckt.\n\nDiese Informationen geben einen Überblick über die wichtigsten aktuellen Ereignisse in verschiedenen Bereichen.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT29DJ",
+      "name": "Flug NSZ4608",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.8825,
-      "lon": 25.8535,
-      "lng": 25.8535,
+      "lat": 42.6674,
+      "lon": 28.5295,
+      "lng": 28.5295,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT29DJ | Höhe: 10.7 km | Speed: 856 km/h",
+      "description": "Callsign: NSZ4608 | Höhe: 10.4 km | Speed: 835 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT35BN",
+      "name": "Flug PGT331",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.7203,
-      "lon": 28.731,
-      "lng": 28.731,
+      "lat": 42.4165,
+      "lon": 27.7679,
+      "lng": 27.7679,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT35BN | Höhe: 2.3 km | Speed: 465 km/h",
+      "description": "Callsign: PGT331 | Höhe: 10.4 km | Speed: 824 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WMT9BW",
+      "name": "Flug AXB386",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.1752,
-      "lon": 34.0706,
-      "lng": 34.0706,
+      "lat": 26.5191,
+      "lon": 51.8902,
+      "lng": 51.8902,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WMT9BW | Höhe: 5.3 km | Speed: 702 km/h",
+      "description": "Callsign: AXB386 | Höhe: 10.4 km | Speed: 820 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug T7FTH",
+      "name": "Flug WZZ993",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.1252,
-      "lon": 35.8284,
-      "lng": 35.8284,
+      "lat": 34.9483,
+      "lon": 33.6775,
+      "lng": 33.6775,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: T7FTH | Höhe: 12.2 km | Speed: 770 km/h",
+      "description": "Callsign: WZZ993 | Höhe: 0.5 km | Speed: 309 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CPA867",
+      "name": "Flug ANA878",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.3583,
-      "lon": 121.7513,
-      "lng": 121.7513,
+      "lat": 21.5218,
+      "lon": 118.8958,
+      "lng": 118.8958,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CPA867 | Höhe: 9.8 km | Speed: 895 km/h",
+      "description": "Callsign: ANA878 | Höhe: 11.3 km | Speed: 882 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug SIA601",
+      "name": "Flug THA631",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.9168,
-      "lon": 122.5621,
-      "lng": 122.5621,
+      "lat": 21.1666,
+      "lon": 117.4432,
+      "lng": 117.4432,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: SIA601 | Höhe: 11.6 km | Speed: 959 km/h",
+      "description": "Callsign: THA631 | Höhe: 11.6 km | Speed: 895 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,7 +105,7 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 11,
+        "val": 10,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -113,7 +113,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 11,
+        "val": 10,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -121,7 +121,7 @@
         "id": "china",
         "label": "China",
         "group": "staat",
-        "val": 4,
+        "val": 3,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -137,7 +137,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 11,
+        "val": 10,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -145,7 +145,7 @@
         "id": "eu",
         "label": "EU",
         "group": "organisation",
-        "val": 7,
+        "val": 6,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-22"
       },
@@ -153,7 +153,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 11,
+        "val": 10,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -548,11 +548,11 @@
     ]
   },
   "simple_key_takeaways": [
-    "Russland:** Der russische Staat hat Anklage gegen die bekannte Menschenrechtsaktivistin Lida Moniawa (im Westen oft als „Mutter Teresa Russlands\" bezeichnet) erhoben. Ihr wird Kritik am Krieg in der Ukraine vorgeworfen, wobei ihr eine Haftstrafe von bis zu zehn Jahren droht. Dies zeigt die anhaltende Unterdrückung jeglicher regimekritischer Stimmen.",
-    "Nepal:** Die Lage nach den schweren Überschwemmungen bleibt kritisch. Während die Behörden mit dem Wiederaufbau beginnen, suchen Rettungskräfte weiterhin in einem Tunnel eines Wasserkraftprojekts nach Überlebenden. Zwei Personen konnten lebend gerettet werden, Dutzende gelten weiterhin als vermisst. Die nepalesische Regierung fordert milliardenschwere internationale Hilfen für den Wiederaufbau.",
-    "USA / Puerto Rico:** Die US-Notenbank (Federal Reserve) hat eine Durchsetzungsmaßnahme gegen einen ehemaligen Mitarbeiter der Banco Popular de Puerto Rico verhängt. Es handelt sich um eine behördliche Anordnung (Enforcement Action), Details zur Art des Verstoßes wurden in der Meldung nicht näher ausgeführt.",
-    "Rockwell Automation (Industrieanlagen):** Eine Sicherheitslücke (CVE-2025-10478) wurde im Modul 1756-ENBT (Ethernet-Kommunikationsmodul) entdeckt. Eine erfolgreiche Ausnutzung führt zum Absturz des Moduls, was einen Neustart des Geräts erfordert. Betroffen sind alle Versionen des Moduls. Angesichts der weiten Verbreitung von Rockwell-Steuerungen in der Industrie ist dies ein relevanter Warnhinweis.",
-    "USA (Viral):** Ein Kuriosum aus den USA: Ein viraler Vorfall um gestohlene Zimtschnecken in einer Bäckerei führte zu einer Anzeige wegen Diebstahls in Höhe von 3.100 US-Dollar. Die Ermittlungen ergaben eine unerwartete Wendung, als bekannt wurde, dass der beschuldigte Uber-Fahrer während einer Lieferfahrt von der US-Grenzpatrouille (Border Patrol) festgenommen wurde."
+    "Federal Reserve** hat Maßnahmen gegen United Texas Bank, Quontic Bank Acquisition Corp., und Quontic Bank Holdings Corp. beendet.",
+    "CISA** hat eine neue Verwundbarkeit (CVE-2026-85046) in den Google Chromium V8 Typkonfusion zu seinem Known Exploited Vulnerabilities (KEV) Katalog hinzugefügt, basierend auf Beweisen aktiver Ausnutzung.",
+    "Missouri Attorney General Catherine Hanaway** hat einen Notfallrekurs beim US Supreme Court eingereicht, um die von Trump unterstützte Wahlkreiszeichnung wiederherzustellen.",
+    "Bloom Energy** wurde dem S&P 500 Index hinzugefügt, während Molson Coors Beverage, Builders FirstSource und Trade Desk daraus entfernt werden.",
+    "Tausende Soldaten an Bord der **USS Abraham Lincoln** fanden in Thailand vorübergehende Erleichterung von ihren anstrengenden Einsätzen."
   ],
   "geoscore": {
     "current_score": 72,
@@ -567,12 +567,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-04T10:15:58.893254+00:00",
+  "timestamp": "2026-09-05T09:44:02.491168+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-04T10:14:39.536770+00:00",
+    "timestamp": "2026-09-05T09:43:07.691220+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 119,
+    "feeds_failed": 105,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -598,9 +598,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 20,
+    "nodes_prev": 15,
     "nodes_now": 15,
     "hotspots_now": 6,
-    "summary": "Graph-Knoten 20 → 15"
+    "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
