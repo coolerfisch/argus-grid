@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**Zusammenfassung der Nachrichtenlage vom 05.09.2026:**\n\nDie heutigen Meldungen zeigen ein breites Spektrum von regulatorischen Entscheidungen im Finanzsektor über akute Cybersicherheitswarnungen bis hin zu politischen und gesellschaftlichen Entwicklungen in den USA, Europa und dem Nahen Osten.\n\n**1. US-Notenbank (Federal Reserve):**  \nDie Federal Reserve hat formelle Durchsetzungsmaßnahmen gegen die *United Texas Bank* sowie die *Quontic Bank Acquisition Corp.* und *Quontic Bank Holdings Corp.* beendet. Dies deutet darauf hin, dass die genannten Institute die geforderten Auf...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**Zusammenfassung der Nachrichtenlage vom 05.09.2026:**\n\nDie heutigen Meldungen zeigen ein breites Spektrum von regulatorischen Entscheidungen im Finanzsektor über akute Cybersicherheitswarnungen bis hin zu politischen und gesellschaftlichen Entwicklungen in den USA, Europa und dem Nahen Osten.\n\n**1. US-Notenbank (Federal Reserve)...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided news feeds, here is a summary of the most significant developments:\n\n**Geopolitics & Diplomacy:**\nHigh-level US envoys Steve Witkoff and Jared Kushner are expected to arrive in Ukraine for talks, following their meeting with Russian President Putin in Moscow. Expectations in Kyiv are reportedly low, indicating a tense and uncertain diplomatic environment.\n\n**Cybersecurity Threat:**\nCISA has added a new vulnerability (CVE-2026-85046) to its Known Exploited Vulnerabilities catalog. This vulnerability involves a type confusion issue in Google's Chromium V8...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided news feeds, here is a summary of the most significant developments:\n\n**Geopolitics & Diplomacy:**\nHigh-level US envoys Steve Witkoff and Jared Kushner are expected to arrive in Ukraine for talks, following their meeting with Russian President Putin in Moscow. Expectations in Kyiv are reportedly low, indicatin...",
   "key_takeaways": [
-    "Federal Reserve** hat Maßnahmen gegen United Texas Bank, Quontic Bank Acquisition Corp., und Quontic Bank Holdings Corp. beendet.",
-    "CISA** hat eine neue Verwundbarkeit (CVE-2026-85046) in den Google Chromium V8 Typkonfusion zu seinem Known Exploited Vulnerabilities (KEV) Katalog hinzugefügt, basierend auf Beweisen aktiver Ausnutzung.",
-    "Missouri Attorney General Catherine Hanaway** hat einen Notfallrekurs beim US Supreme Court eingereicht, um die von Trump unterstützte Wahlkreiszeichnung wiederherzustellen.",
-    "Bloom Energy** wurde dem S&P 500 Index hinzugefügt, während Molson Coors Beverage, Builders FirstSource und Trade Desk daraus entfernt werden.",
-    "Tausende Soldaten an Bord der **USS Abraham Lincoln** fanden in Thailand vorübergehende Erleichterung von ihren anstrengenden Einsätzen."
+    "Michigan narrowly avoided an upset against Western Michigan, winning on a 46-yard Hail Mary pass by Bryce Underwood, which prevented a repeat of their historic 2007 Appalachian State loss.",
+    "A personal finance story highlights an individual who taught themselves to invest, overcoming the expectation that they would have to rely solely on Social Security for retirement.",
+    "Federal Reserve Board announced the termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.",
+    "CISA has added one new vulnerability (CVE-2026-85046) to its Known Exploited Vulnerabilities (KEV) Catalog.",
+    "The vulnerability is a Google Chromium V8 Type Confusion Vulnerability, which is a frequent attack vector for malicious cyber actors."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**Zusammenfassung der Nachrichtenlage vom 05.09.2026:**\n\nDie heutigen Meldungen zeigen ein breites Spektrum von regulatorischen Entscheidungen im Finanzsektor über akute Cybersicherheitswarnungen bis hin zu politischen und gesellschaftlichen Entwicklungen in den USA, Europa und dem Nahen Osten.\n\n**1. US-Notenbank (Federal Reserve):**  \nDie Federal Reserve hat formelle Durchsetzungsmaßnahmen gegen die *United Texas Bank* sowie die *Quontic Bank Acquisition Corp.* und *Quontic Bank Holdings Corp.* beendet. Dies deutet darauf hin, dass die genannten Institute die geforderten Auflagen erfüllt und die regulatorischen Anforderungen (z. B. in Bezug auf Compliance oder Risikomanagement) wiederhergestellt haben.\n\n**2. Cybersicherheit (CISA):**  \nDas Cybersecurity-Infrastruktursicherheitsamt (CISA) hat eine neue, aktiv ausgenutzte Schwachstelle in seinen Katalog (KEV) aufgenommen. Es handelt sich um **CVE-2026-85046**, eine Type-Confusion-Schwachstelle in der V8-Engine von Google Chromium. Diese Schwachstellenklasse wird häufig von Angreifern genutzt, um Code im Browser auszuführen oder Speicherfehler zu provozieren. Unternehmen und Nutzer werden dringend aufgefordert, Updates einzuspielen.\n\n**3. US-Politik (Wahlrecht/Redistricting):**  \nMissouris Generalstaatsanwältin Catherine Hanaway hat einen Eilantrag beim Obersten Gerichtshof der USA eingereicht, um eine von Donald Trump unterstützte Neuaufteilung der Kongresswahlbezirke wiederzubeleben. Dies ist der jüngste Schritt in einem juristischen Streit über die Wahlkreisgrenzen, der erhebliche Auswirkungen auf die Sitzverteilung im Repräsentantenhaus haben könnte.\n\n**4. Finanzmärkte (Indexänderungen):**  \nIm S&P 500 gibt es Veränderungen: *Bloom Energy* wird in den Index aufgenommen. Gleichzeitig werden *Molson Coors Beverage*, *Builders FirstSource* und *The Trade Desk* aus dem Benchmark-Index entfernt. Solche Umschichtungen führen oft zu erhöhter Handelsaktivität, da Fonds ihre Portfolios anpassen.\n\n**5. US-Militär & Internationales (Personal):**  \nEin Artikel der New York Times berichtet über eine kurze Erholungsphase für Tausende Soldaten des Flugzeugträgers *USS Abraham Lincoln* in Thailand. Der Zwischenstopp bietet nach monatelangen Kampfeinsätzen eine vorübergehende Abwechslung, kann aber die psychischen und physischen Belastungen nur teilweise lindern.\n\n**6. UK (Justiz):**  \nIm Mordfall Lindsay Clancy wurde ein Fehlprozess (Mistrial) erklärt, da die Jury keine einstimmige Entscheidung treffen konnte. Die Angeklagte, die beschuldigt wird, für den Tod ihrer drei Kinder verantwortlich zu sein, muss sich weiterhin auf ein mögliches erneutes Verfahren einstellen. Der Fall bleibt rechtlich und gesellschaftlich hochsensibel.\n\n**7. Europa (Polen/Innenpolitik):**  \nDie NZZ analysiert das Ende der Ära Jaroslaw Kaczynski. Durch die selbstverschuldete Spaltung seiner Partei PiS verliert der langjährige starke Mann der polnischen Rechten zunehmend an Einfluss. Seine radikale Linie und sein absoluter Führungsanspruch stoßen intern auf wachsenden Widerstand.\n\n**8. UK (Politik/Recht):**  \nNigel Farage besteht darauf, dass seine Partei *Reform UK* kein Gesetz gebrochen habe. Dies geschieht vor dem Hintergrund, dass zwei wichtige Berater zurückgetreten sind, nachdem Vorwürfe über angebliche Versuche, illegale Auslandsfinanzierung zu erhalten, laut wurden. Der Parteitag in Birmingham wird von diesen Turbulenzen überschattet.\n\n**9. Wetter (Atlantik):**  \nDer National Hurricane Center (NHC) hat seinen tropischen Wetterausblick für den Atlantik veröffentlicht. Die Meldung (Stand 05:11 UTC) beinhaltet die übliche Überwachung tropischer Wellen und potenzieller Sturmgebiete. Konkrete Warnungen vor einem unmittelbar drohenden Sturm sind in der Kurzfassung nicht enthalten, was auf eine aktuelle Beruhigung hindeutet.\n\nMACRO:\n### Zusammenfassung der aktuellen Nachrichten\n\n**Zentralbank:**\n- **Federal Reserve** hat Maßnahmen gegen United Texas Bank, Quontic Bank Acquisition Corp., und Quontic Bank Holdings Corp. beendet.\n\n**Cyber / Infrastruktur:**\n- **CISA** hat eine neue Verwundbarkeit (CVE-2026-85046) in den Google Chromium V8 Typkonfusion zu seinem Known Exploited Vulnerabilities (KEV) Katalog hinzugefügt, basierend auf Beweisen aktiver Ausnutzung.\n\n**US/Politik:**\n- **Missouri Attorney General Catherine Hanaway** hat einen Notfallrekurs beim US Supreme Court eingereicht, um die von Trump unterstützte Wahlkreiszeichnung wiederherzustellen.\n\n**US/Finanzen:**\n- **Bloom Energy** wurde dem S&P 500 Index hinzugefügt, während Molson Coors Beverage, Builders FirstSource und Trade Desk daraus entfernt werden.\n\n**US/Presse:**\n- Tausende Soldaten an Bord der **USS Abraham Lincoln** fanden in Thailand vorübergehende Erleichterung von ihren anstrengenden Einsätzen.\n\n**UK/Medien:**\n- **Mistrial** im Mordfall Lindsay Clancy durch Jury-Deadlock, der Fall und Clancys Zukunft sind ungewiss.\n\n**CH/Presse:**\n- **Kaczynski-Ära endet:** Jaroslaw Kaczynski, der das polnische rechte Lager seit 25 Jahren kontrolliert, verliert an Einfluss durch die Spaltung seiner Partei PiS.\n\n**UK/Finanzen:**\n- **Nigel Farage** behauptet, dass die **Reform Party** keines Gesetzes verletzt hat, nachdem wichtige Berater das Parteikonferenz in Birmingham verlassen haben, angeblich aufgrund angeblicher Versuche illegaler ausländischer Finanzierung.\n\n**Wetter/Extreme:**\n- **National Hurricane Center** sieht in den nächsten 7 Tagen keine Bildung von tropischen Wirbelstürmen im Nordatlantik, Karibik oder Golf von Mexiko.\n\n**Investigativ Net:**\n- Der von der **Biden-Administration** nominierte Verantwortliche für die venezolanische Ölgeschäft ist in zwei Ländern wegen Korruptionsvorwürfen unter Untersuchung. Die **ICIJ** hatte 2020 aufgrund der FinCEN-Files flagrante Zahlungen von einem der Unternehmen des venezolanischen Tycoons aufgedeckt.\n\nDiese Informationen geben einen Überblick über die wichtigsten aktuellen Ereignisse in verschiedenen Bereichen.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided news feeds, here is a summary of the most significant developments:\n\n**Geopolitics & Diplomacy:**\nHigh-level US envoys Steve Witkoff and Jared Kushner are expected to arrive in Ukraine for talks, following their meeting with Russian President Putin in Moscow. Expectations in Kyiv are reportedly low, indicating a tense and uncertain diplomatic environment.\n\n**Cybersecurity Threat:**\nCISA has added a new vulnerability (CVE-2026-85046) to its Known Exploited Vulnerabilities catalog. This vulnerability involves a type confusion issue in Google's Chromium V8 engine and is already being actively exploited by malicious actors, posing a significant risk.\n\n**Financial Regulation:**\nThe Federal Reserve Board has announced the termination of enforcement actions against United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp., signaling a conclusion to regulatory oversight in these specific cases.\n\n**German Regional Politics:**\nAhead of a state election in eastern Germany, the far-right party AfD, led by Ulrich Siegmund, is favored to win, potentially bringing the party to the cusp of power in the region.\n\n**European Municipal Finance:**\nThe city of Graz, Austria, faces imminent insolvency, holding the highest per-capita debt among Austrian cities. The governing communist party has been forced to impose a spending freeze to address the crisis.\n\n**US Domestic News & Sports:**\n- Michigan narrowly avoided an upset against Western Michigan, winning on a 46-yard Hail Mary pass by Bryce Underwood, which prevented a repeat of their historic 2007 Appalachian State loss.\n- A personal finance story highlights an individual who taught themselves to invest, overcoming the expectation that they would have to rely solely on Social Security for retirement.\n\n**Weather:**\nThe National Hurricane Center has issued a routine Atlantic Tropical Weather Outlook as of early morning on September 6, 2026, monitoring conditions in the North Atlantic, Caribbean Sea, and the Gulf of America.\n\nMACRO:\nEs scheint, dass die Nachricht über den CDCのが途中で切れています。以下は、提供された情報に基づく要約と重要なポイントです：\n\n1. **Zentralbank (Federal Reserve)**\n   - Federal Reserve Board announced the termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.\n\n2. **Cyber / Infrastruktur (CISA)**\n   - CISA has added one new vulnerability (CVE-2026-85046) to its Known Exploited Vulnerabilities (KEV) Catalog.\n   - The vulnerability is a Google Chromium V8 Type Confusion Vulnerability, which is a frequent attack vector for malicious cyber actors.\n\n3. **US/Finanzen (Wall Street Journal)**\n   - An article discusses how someone who thought they would rely on Social Security learned to invest and built their own wealth.\n\n4. **US/Politik (Fox News)**\n   - Michigan Wolverines narrowly avoided an upset by Western Michigan, winning with a 46-yard Hail Mary pass.\n\n5. **US/Presse (New York Times)**\n   - Ulrich Siegmund, a 35-year-old former air freshener salesman, is leading the far-right AfD party in Germany, which is favored to win a state election.\n\n6. **UK/Medien (BBC World News)**\n   - US envoys Steve Witkoff and Jared Kushner are expected to visit Ukraine after meeting with Putin in Russia.\n\n7. **CH/Presse (NZZ International)**\n   - The city of Graz in Austria faces potential insolvency and must implement a spending freeze due to the highest per capita debt among Austrian cities.\n\n8. **UK/Finanzen (Financial Times)**\n   - Hopes in Kyiv are low ahead of the visit by US envoys Steve Witkoff and Jared Kushner after their meeting with Putin in Moscow.\n\n9. **Wetter/Extreme (NOAA National Hurricane Center)**\n   - No tropical cyclone formation is expected in the North Atlantic, Caribbean Sea, and Gulf of Mexico over the next 7 days.\n\n10. **Investigativ Net (ICIJ)**\n    - A White House pick to run the Venezuela oil deal is under investigation in two countries, as revealed by the ICIJ’s 2020 FinCEN Files.\n\n11. **Medizin (CDC)**\n    - CDC has launched a new overdose prevention data channel, but the information seems to be cut off. (More details are likely available from the CDC's official website or a complete news article.)\n\nIf you need more detailed information on any of these points, feel free to ask!",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug NSZ4608",
+      "name": "Flug PGT1101",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.6674,
-      "lon": 28.5295,
-      "lng": 28.5295,
+      "lat": 40.8307,
+      "lon": 29.1204,
+      "lng": 29.1204,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: NSZ4608 | Höhe: 10.4 km | Speed: 835 km/h",
+      "description": "Callsign: PGT1101 | Höhe: 1.6 km | Speed: 507 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT331",
+      "name": "Flug PGT64XV",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.4165,
-      "lon": 27.7679,
-      "lng": 27.7679,
+      "lat": 40.8432,
+      "lon": 27.3807,
+      "lng": 27.3807,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT331 | Höhe: 10.4 km | Speed: 824 km/h",
+      "description": "Callsign: PGT64XV | Höhe: 9.3 km | Speed: 809 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AXB386",
+      "name": "Flug T7464",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 26.5191,
-      "lon": 51.8902,
-      "lng": 51.8902,
+      "lat": 22.918,
+      "lon": 51.6963,
+      "lng": 51.6963,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AXB386 | Höhe: 10.4 km | Speed: 820 km/h",
+      "description": "Callsign: T7464 | Höhe: 12.2 km | Speed: 975 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ993",
+      "name": "Flug IGO81Q",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.9483,
-      "lon": 33.6775,
-      "lng": 33.6775,
+      "lat": 22.48,
+      "lon": 51.2017,
+      "lng": 51.2017,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ993 | Höhe: 0.5 km | Speed: 309 km/h",
+      "description": "Callsign: IGO81Q | Höhe: 11.0 km | Speed: 933 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug ANA878",
+      "name": "Flug RRR4117",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 34.4727,
+      "lon": 32.8621,
+      "lng": 32.8621,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: RRR4117 | Höhe: 1.5 km | Speed: 436 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug LATTE18",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.5218,
-      "lon": 118.8958,
-      "lng": 118.8958,
+      "lat": 16.4297,
+      "lon": 120.8518,
+      "lng": 120.8518,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ANA878 | Höhe: 11.3 km | Speed: 882 km/h",
+      "description": "Callsign: LATTE18 | Höhe: 10.4 km | Speed: 885 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA631",
+      "name": "Flug CPA879",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.1666,
-      "lon": 117.4432,
-      "lng": 117.4432,
+      "lat": 23.3294,
+      "lon": 119.1796,
+      "lng": 119.1796,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA631 | Höhe: 11.6 km | Speed: 895 km/h",
+      "description": "Callsign: CPA879 | Höhe: 11.6 km | Speed: 897 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,7 +116,7 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -113,7 +124,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -137,23 +148,15 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
-      },
-      {
-        "id": "eu",
-        "label": "EU",
-        "group": "organisation",
-        "val": 6,
-        "first_seen": "2026-07-25",
-        "last_seen": "2026-08-22"
       },
       {
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 10,
+        "val": 9,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -172,14 +175,6 @@
         "val": 3,
         "first_seen": "2026-08-22",
         "last_seen": "2026-08-24"
-      },
-      {
-        "id": "meloni",
-        "label": "G. Meloni",
-        "group": "actor",
-        "val": 3,
-        "first_seen": "2026-08-22",
-        "last_seen": "2026-08-22"
       },
       {
         "id": "deutschland",
@@ -232,22 +227,6 @@
         "last_seen": "2026-08-23"
       },
       {
-        "from": "usa",
-        "to": "russland",
-        "source": "usa",
-        "target": "russland",
-        "label": "Spannungen",
-        "last_seen": "2026-08-22"
-      },
-      {
-        "from": "russland",
-        "to": "ukraine",
-        "source": "russland",
-        "target": "ukraine",
-        "label": "Krieg",
-        "last_seen": "2026-08-22"
-      },
-      {
         "from": "china",
         "to": "taiwan",
         "source": "china",
@@ -272,44 +251,12 @@
         "last_seen": "2026-08-24"
       },
       {
-        "from": "eu",
-        "to": "russland",
-        "source": "eu",
-        "target": "russland",
-        "label": "Sanktionen",
-        "last_seen": "2026-08-22"
-      },
-      {
-        "from": "zimbra",
-        "to": "usa",
-        "source": "zimbra",
-        "target": "usa",
-        "label": "Cyberbedrohung",
-        "last_seen": "2026-08-22"
-      },
-      {
-        "from": "zimbra",
-        "to": "eu",
-        "source": "zimbra",
-        "target": "eu",
-        "label": "Cyberbedrohung",
-        "last_seen": "2026-08-22"
-      },
-      {
         "from": "iran",
         "to": "usa",
         "source": "iran",
         "target": "usa",
         "label": "Konflikt (Persischer Golf)",
         "last_seen": "2026-08-24"
-      },
-      {
-        "from": "meloni",
-        "to": "eu",
-        "source": "meloni",
-        "target": "eu",
-        "label": "Einfluss",
-        "last_seen": "2026-08-22"
       },
       {
         "from": "usa",
@@ -394,22 +341,6 @@
         "last_seen": "2026-08-23"
       },
       {
-        "from": "usa",
-        "to": "russland",
-        "source": "usa",
-        "target": "russland",
-        "label": "Spannungen",
-        "last_seen": "2026-08-22"
-      },
-      {
-        "from": "russland",
-        "to": "ukraine",
-        "source": "russland",
-        "target": "ukraine",
-        "label": "Krieg",
-        "last_seen": "2026-08-22"
-      },
-      {
         "from": "china",
         "to": "taiwan",
         "source": "china",
@@ -434,44 +365,12 @@
         "last_seen": "2026-08-24"
       },
       {
-        "from": "eu",
-        "to": "russland",
-        "source": "eu",
-        "target": "russland",
-        "label": "Sanktionen",
-        "last_seen": "2026-08-22"
-      },
-      {
-        "from": "zimbra",
-        "to": "usa",
-        "source": "zimbra",
-        "target": "usa",
-        "label": "Cyberbedrohung",
-        "last_seen": "2026-08-22"
-      },
-      {
-        "from": "zimbra",
-        "to": "eu",
-        "source": "zimbra",
-        "target": "eu",
-        "label": "Cyberbedrohung",
-        "last_seen": "2026-08-22"
-      },
-      {
         "from": "iran",
         "to": "usa",
         "source": "iran",
         "target": "usa",
         "label": "Konflikt (Persischer Golf)",
         "last_seen": "2026-08-24"
-      },
-      {
-        "from": "meloni",
-        "to": "eu",
-        "source": "meloni",
-        "target": "eu",
-        "label": "Einfluss",
-        "last_seen": "2026-08-22"
       },
       {
         "from": "usa",
@@ -548,11 +447,11 @@
     ]
   },
   "simple_key_takeaways": [
-    "Federal Reserve** hat Maßnahmen gegen United Texas Bank, Quontic Bank Acquisition Corp., und Quontic Bank Holdings Corp. beendet.",
-    "CISA** hat eine neue Verwundbarkeit (CVE-2026-85046) in den Google Chromium V8 Typkonfusion zu seinem Known Exploited Vulnerabilities (KEV) Katalog hinzugefügt, basierend auf Beweisen aktiver Ausnutzung.",
-    "Missouri Attorney General Catherine Hanaway** hat einen Notfallrekurs beim US Supreme Court eingereicht, um die von Trump unterstützte Wahlkreiszeichnung wiederherzustellen.",
-    "Bloom Energy** wurde dem S&P 500 Index hinzugefügt, während Molson Coors Beverage, Builders FirstSource und Trade Desk daraus entfernt werden.",
-    "Tausende Soldaten an Bord der **USS Abraham Lincoln** fanden in Thailand vorübergehende Erleichterung von ihren anstrengenden Einsätzen."
+    "Michigan narrowly avoided an upset against Western Michigan, winning on a 46-yard Hail Mary pass by Bryce Underwood, which prevented a repeat of their historic 2007 Appalachian State loss.",
+    "A personal finance story highlights an individual who taught themselves to invest, overcoming the expectation that they would have to rely solely on Social Security for retirement.",
+    "Federal Reserve Board announced the termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.",
+    "CISA has added one new vulnerability (CVE-2026-85046) to its Known Exploited Vulnerabilities (KEV) Catalog.",
+    "The vulnerability is a Google Chromium V8 Type Confusion Vulnerability, which is a frequent attack vector for malicious cyber actors."
   ],
   "geoscore": {
     "current_score": 72,
@@ -567,12 +466,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-05T09:44:02.491168+00:00",
+  "timestamp": "2026-09-06T09:59:25.006653+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-05T09:43:07.691220+00:00",
+    "timestamp": "2026-09-06T09:58:35.498354+00:00",
     "feeds_total": 224,
-    "feeds_successful": 119,
-    "feeds_failed": 105,
+    "feeds_successful": 121,
+    "feeds_failed": 103,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -582,8 +481,8 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
-    "graph_merge_status": "SUCCESS (15 Nodes)",
+    "opensky_status": "SUCCESS (7 Signale)",
+    "graph_merge_status": "SUCCESS (13 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
     ]
@@ -599,8 +498,8 @@
     "defcon_prev": 3,
     "defcon_now": 3,
     "nodes_prev": 15,
-    "nodes_now": 15,
-    "hotspots_now": 6,
-    "summary": "Keine wesentliche Änderung zur Vortageslage."
+    "nodes_now": 13,
+    "hotspots_now": 7,
+    "summary": "Graph-Knoten 15 → 13"
   }
 }
