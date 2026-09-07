@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided news feeds, here is a summary of the most significant developments:\n\n**Geopolitics & Diplomacy:**\nHigh-level US envoys Steve Witkoff and Jared Kushner are expected to arrive in Ukraine for talks, following their meeting with Russian President Putin in Moscow. Expectations in Kyiv are reportedly low, indicating a tense and uncertain diplomatic environment.\n\n**Cybersecurity Threat:**\nCISA has added a new vulnerability (CVE-2026-85046) to its Known Exploited Vulnerabilities catalog. This vulnerability involves a type confusion issue in Google's Chromium V8...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided news feeds, here is a summary of the most significant developments:\n\n**Geopolitics & Diplomacy:**\nHigh-level US envoys Steve Witkoff and Jared Kushner are expected to arrive in Ukraine for talks, following their meeting with Russian President Putin in Moscow. Expectations in Kyiv are reportedly low, indicatin...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBasierend auf den von Ihnen bereitgestellten Feeds und dem simulierten Datum **(07.09.2026)** ergibt sich folgende **Zusammenfassung der Nachrichtenlage**:\n\n**1. Wirtschaft & Geldpolitik (USA):**\n*   **Fed:** Federal-Reserve-Gouverneur **Christopher Waller** hält eine Rede zur wirtschaftlichen Lage und zur Kommunikationsstrategie der Notenbank. Angesichts der jüngsten Marktbewegungen wird jede Nuance bezüglich Zinssenkungen mit Spannung erwartet.\n\n**2. Cybersicherheit (Kritische Infrastruktur):**\n*   **CISA:** Die Behörde hat eine neue, aktiv ausgenutzte Schwachstelle im Goog...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBasierend auf den von Ihnen bereitgestellten Feeds und dem simulierten Datum **(07.09.2026)** ergibt sich folgende **Zusammenfassung der Nachrichtenlage**:\n\n**1. Wirtschaft & Geldpolitik (USA):**\n*   **Fed:** Federal-Reserve-Gouverneur **Christopher Waller** hält eine Rede zur wirtschaftlichen Lage und zur Kommunikationsstrategie ...",
   "key_takeaways": [
-    "Michigan narrowly avoided an upset against Western Michigan, winning on a 46-yard Hail Mary pass by Bryce Underwood, which prevented a repeat of their historic 2007 Appalachian State loss.",
-    "A personal finance story highlights an individual who taught themselves to invest, overcoming the expectation that they would have to rely solely on Social Security for retirement.",
-    "Federal Reserve Board announced the termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.",
-    "CISA has added one new vulnerability (CVE-2026-85046) to its Known Exploited Vulnerabilities (KEV) Catalog.",
-    "The vulnerability is a Google Chromium V8 Type Confusion Vulnerability, which is a frequent attack vector for malicious cyber actors."
+    "Fed:** Federal-Reserve-Gouverneur **Christopher Waller** hält eine Rede zur wirtschaftlichen Lage und zur Kommunikationsstrategie der Notenbank. Angesichts der jüngsten Marktbewegungen wird jede Nuance bezüglich Zinssenkungen mit Spannung erwartet.",
+    "CISA:** Die Behörde hat eine neue, aktiv ausgenutzte Schwachstelle im Google-Chromium-V8-Modul in den KEV-Katalog aufgenommen (**CVE-2026-85046**). Unternehmen wird dringend empfohlen, Patches umgehend einzuspielen, da dieser Angriffsvektor als hochriskant eingestuft wird.",
+    "Apple:** Der Konzern steht vor seiner Launch-Veranstaltung. Im Fokus steht nicht nur das iPhone 18 (Pro), sondern ein **faltbares \"iPhone Ultra\"** mit einem Einstiegspreis von nahezu **2.000 US-Dollar**. Apple zielt damit bewusst auf den Luxussegment-Markt, um das Umsatzwachstum zu sichern.",
+    "Friedensprozess:** Die **Trump-Administration** versucht mit einer \"Peace Express\"-Initiative neue Gespräche anzustoßen. Analysten der *New York Times* berichten jedoch, dass der Prozess eingefroren ist und neue Verhandlungen parallel zu eskalierenden Gefechten stattfinden dürften. Die Lage bleibt angespannt und unberechenbar.",
+    "WWE:** Der Wrestling-Narrativ nimmt eine überraschende Wendung: **Cody Rhodes** verliert bei WrestleMania 42 (bzw. Sunday Night's Main Event) gegen Randy Orton, der mit einem Low Blow und RKO gewinnt. Die Storyline deutet auf eine anhaltende Fehde hin, da Rhodes \"conflicted\" dargestellt wird."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided news feeds, here is a summary of the most significant developments:\n\n**Geopolitics & Diplomacy:**\nHigh-level US envoys Steve Witkoff and Jared Kushner are expected to arrive in Ukraine for talks, following their meeting with Russian President Putin in Moscow. Expectations in Kyiv are reportedly low, indicating a tense and uncertain diplomatic environment.\n\n**Cybersecurity Threat:**\nCISA has added a new vulnerability (CVE-2026-85046) to its Known Exploited Vulnerabilities catalog. This vulnerability involves a type confusion issue in Google's Chromium V8 engine and is already being actively exploited by malicious actors, posing a significant risk.\n\n**Financial Regulation:**\nThe Federal Reserve Board has announced the termination of enforcement actions against United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp., signaling a conclusion to regulatory oversight in these specific cases.\n\n**German Regional Politics:**\nAhead of a state election in eastern Germany, the far-right party AfD, led by Ulrich Siegmund, is favored to win, potentially bringing the party to the cusp of power in the region.\n\n**European Municipal Finance:**\nThe city of Graz, Austria, faces imminent insolvency, holding the highest per-capita debt among Austrian cities. The governing communist party has been forced to impose a spending freeze to address the crisis.\n\n**US Domestic News & Sports:**\n- Michigan narrowly avoided an upset against Western Michigan, winning on a 46-yard Hail Mary pass by Bryce Underwood, which prevented a repeat of their historic 2007 Appalachian State loss.\n- A personal finance story highlights an individual who taught themselves to invest, overcoming the expectation that they would have to rely solely on Social Security for retirement.\n\n**Weather:**\nThe National Hurricane Center has issued a routine Atlantic Tropical Weather Outlook as of early morning on September 6, 2026, monitoring conditions in the North Atlantic, Caribbean Sea, and the Gulf of America.\n\nMACRO:\nEs scheint, dass die Nachricht über den CDCのが途中で切れています。以下は、提供された情報に基づく要約と重要なポイントです：\n\n1. **Zentralbank (Federal Reserve)**\n   - Federal Reserve Board announced the termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.\n\n2. **Cyber / Infrastruktur (CISA)**\n   - CISA has added one new vulnerability (CVE-2026-85046) to its Known Exploited Vulnerabilities (KEV) Catalog.\n   - The vulnerability is a Google Chromium V8 Type Confusion Vulnerability, which is a frequent attack vector for malicious cyber actors.\n\n3. **US/Finanzen (Wall Street Journal)**\n   - An article discusses how someone who thought they would rely on Social Security learned to invest and built their own wealth.\n\n4. **US/Politik (Fox News)**\n   - Michigan Wolverines narrowly avoided an upset by Western Michigan, winning with a 46-yard Hail Mary pass.\n\n5. **US/Presse (New York Times)**\n   - Ulrich Siegmund, a 35-year-old former air freshener salesman, is leading the far-right AfD party in Germany, which is favored to win a state election.\n\n6. **UK/Medien (BBC World News)**\n   - US envoys Steve Witkoff and Jared Kushner are expected to visit Ukraine after meeting with Putin in Russia.\n\n7. **CH/Presse (NZZ International)**\n   - The city of Graz in Austria faces potential insolvency and must implement a spending freeze due to the highest per capita debt among Austrian cities.\n\n8. **UK/Finanzen (Financial Times)**\n   - Hopes in Kyiv are low ahead of the visit by US envoys Steve Witkoff and Jared Kushner after their meeting with Putin in Moscow.\n\n9. **Wetter/Extreme (NOAA National Hurricane Center)**\n   - No tropical cyclone formation is expected in the North Atlantic, Caribbean Sea, and Gulf of Mexico over the next 7 days.\n\n10. **Investigativ Net (ICIJ)**\n    - A White House pick to run the Venezuela oil deal is under investigation in two countries, as revealed by the ICIJ’s 2020 FinCEN Files.\n\n11. **Medizin (CDC)**\n    - CDC has launched a new overdose prevention data channel, but the information seems to be cut off. (More details are likely available from the CDC's official website or a complete news article.)\n\nIf you need more detailed information on any of these points, feel free to ask!",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBasierend auf den von Ihnen bereitgestellten Feeds und dem simulierten Datum **(07.09.2026)** ergibt sich folgende **Zusammenfassung der Nachrichtenlage**:\n\n**1. Wirtschaft & Geldpolitik (USA):**\n*   **Fed:** Federal-Reserve-Gouverneur **Christopher Waller** hält eine Rede zur wirtschaftlichen Lage und zur Kommunikationsstrategie der Notenbank. Angesichts der jüngsten Marktbewegungen wird jede Nuance bezüglich Zinssenkungen mit Spannung erwartet.\n\n**2. Cybersicherheit (Kritische Infrastruktur):**\n*   **CISA:** Die Behörde hat eine neue, aktiv ausgenutzte Schwachstelle im Google-Chromium-V8-Modul in den KEV-Katalog aufgenommen (**CVE-2026-85046**). Unternehmen wird dringend empfohlen, Patches umgehend einzuspielen, da dieser Angriffsvektor als hochriskant eingestuft wird.\n\n**3. Technologie & Konsum (USA):**\n*   **Apple:** Der Konzern steht vor seiner Launch-Veranstaltung. Im Fokus steht nicht nur das iPhone 18 (Pro), sondern ein **faltbares \"iPhone Ultra\"** mit einem Einstiegspreis von nahezu **2.000 US-Dollar**. Apple zielt damit bewusst auf den Luxussegment-Markt, um das Umsatzwachstum zu sichern.\n\n**4. Geopolitik & Ukraine-Krieg:**\n*   **Friedensprozess:** Die **Trump-Administration** versucht mit einer \"Peace Express\"-Initiative neue Gespräche anzustoßen. Analysten der *New York Times* berichten jedoch, dass der Prozess eingefroren ist und neue Verhandlungen parallel zu eskalierenden Gefechten stattfinden dürften. Die Lage bleibt angespannt und unberechenbar.\n\n**5. US-Politik & Popkultur (Kurzmeldungen):**\n*   **WWE:** Der Wrestling-Narrativ nimmt eine überraschende Wendung: **Cody Rhodes** verliert bei WrestleMania 42 (bzw. Sunday Night's Main Event) gegen Randy Orton, der mit einem Low Blow und RKO gewinnt. Die Storyline deutet auf eine anhaltende Fehde hin, da Rhodes \"conflicted\" dargestellt wird.\n\n**6. Europa & UK:**\n*   **UK-Finanzen:** Der neue Schatzkanzler **John Healey** hält seine erste Grundsatzrede und fordert eine **\"ehrliche\" Haushaltspolitik**. Staatsunternehmen sollen gezwungen werden, stärker in den privaten Sektor zu investieren, um die Ausgabenkontrolle zu verschärfen.\n*   **Deutschland:** Nach den Landtagswahlen in Sachsen (simuliert) steht die **AfD** kurz vor einer Regierungsbildung. Parteimitglieder fordern unter dem Slogan \"Democracy demands\" die etablierten Parteien zur Kooperation auf.\n\n**7. Internationale Presse (Schweiz):**\n*   **Thailand/US-Militär:** Die *NZZ* porträtiert die Rückkehr der US-Streitkräfte mit dem Flugzeugträger USS „Abraham Lincoln\" nahe Pattaya. Der Artikel beleuchtet die historische und kulturelle Veränderung Thailands durch die amerikanische Präsenz (\"Sündenpfuhl\") und deren heutige Auswirkungen.\n\n**8. Wetter (Atlantik):**\n*   **Hurrikan-Saison:** Das National Hurricane Center gibt Entwarnung: Innerhalb der nächsten **7 Tage** ist mit **keiner tropischen Zyklonbildung** im Atlantik zu rechnen.\n\n**9. Investigativ (ICIJ):**\n*   Der Feed zur **White House**-Verbindung in den Panama/Pandora-Papers bleibt in der Anzeige abgeschnitten. Es ist jedoch damit zu rechnen, dass neue Dokumente zu politischen Verstrickungen veröffentlicht werden.\n\n---\n\n**Gesamtbild (Meta-Ebene für den 07.09.2026):**\nDer Tag ist geprägt von **wirtschaftlicher Vorsicht** (Fed-Rede, Apple-Luxusstrategie gegen Inflation) und **geopolitischer Unsicherheit** (Ukraine). Während die USA sich auf eine teure Tech-Zukunft und innenpolitische Dramen (WWE) konzentrieren, warnen Sicherheitsbehörden gleichzeitig vor akuten Cyber-Bedrohungen. In Europa kämpfen die Regierungen mit Haushaltsdisziplin, während in Deutschland der politische Druck durch den Rechtsruck zunimmt.\n\nMACRO:\n**DATUM: 07.09.2026 (2026). FEEDS SUMMARY:**\n\n1. **Zentralbank:**\n   - **Fed Speeches & Minutes:** Christopher Waller discusses the economic outlook and his policy communication at the Reuters NEXT Newsmaker Interview in Washington, D.C.\n\n2. **Cyber / Infrastruktur:**\n   - **CISA Cyber Alerts:** CISA adds CVE-2026-85046, a Google Chromium V8 type confusion vulnerability, to its Known Exploited Vulnerabilities (KEV) Catalog. This type of vulnerability is frequently exploited by malicious actors.\n\n3. **US/Finanzen:**\n   - **Wall Street Journal (MarketWatch Alt):** Apple is expected to launch the iPhone 18, 18 Pro, and a foldable iPhone Ultra with a starting price near $2,000, targeting high-end buyers.\n\n4. **US/Presse:**\n   - **New York Times World:** A delegation from the Trump administration's peace process visits Kyiv, but new talks will occur amid escalating fighting in Ukraine.\n\n5. **US/Politik:**\n   - **Fox News Latest:** Cody Rhodes loses to Randy Orton at WrestleMania 42 due to a low blow and an RKO, creating a significant moment in the WWE storyline.\n\n6. **UK/Medien:**\n   - **BBC World News:** Germany's far-right AfD party, after a state election win, seeks to form a government despite falling three seats short of a majority, claiming that \"democracy demands\" cooperation with them.\n\n7. **UK/Finanzen:**\n   - **Financial Times:** UK Chancellor John Healey urges state-owned bodies to invest more in the private sector to control spending, emphasizing the need for honesty about fiscal challenges.\n\n8. **CH/Presse:**\n   - **NZZ International:** The USS Abraham Lincoln, a U.S. aircraft carrier, docks near Pattaya, Thailand, allowing 5,000 soldiers to take a shore leave in a city heavily influenced by American presence.\n\n9. **Wetter/Extreme:**\n   - **NOAA National Hurricane Center:** No tropical cyclone formation is expected in the North Atlantic, Caribbean Sea, or Gulf of Mexico over the next seven days.\n\n10. **Investigativ Net:**\n    - **ICIJ (Panama/Pandora Papers):** The White House's nominee to manage the Venezuela oil deal is under investigation in two countries for suspicious payments involving a Venezuelan tycoon's company, as revealed by the 2020 FinCEN Files.\n\n11. **Medizin:**\n    - **CDC Health Updates:** The CDC launches a new data channel to track overdose trends and enhance prevention efforts nationwide.\n\n12. **Cyber-Espionage:**\n    - **Citizen Lab (Spyware & Surveillance):** An update on cyber-espionage activities and surveillance efforts, though the specific details are not provided in the feed.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT1101",
+      "name": "Flug PGT7QZ",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8307,
-      "lon": 29.1204,
-      "lng": 29.1204,
+      "lat": 42.3558,
+      "lon": 27.413,
+      "lng": 27.413,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT1101 | Höhe: 1.6 km | Speed: 507 km/h",
+      "description": "Callsign: PGT7QZ | Höhe: 10.3 km | Speed: 746 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT64XV",
+      "name": "Flug PGT76TF",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8432,
-      "lon": 27.3807,
-      "lng": 27.3807,
+      "lat": 40.2546,
+      "lon": 30.9324,
+      "lng": 30.9324,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT64XV | Höhe: 9.3 km | Speed: 809 km/h",
+      "description": "Callsign: PGT76TF | Höhe: 8.9 km | Speed: 793 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug T7464",
+      "name": "Flug T7AKR20",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 22.918,
-      "lon": 51.6963,
-      "lng": 51.6963,
+      "lat": 29.5903,
+      "lon": 34.5005,
+      "lng": 34.5005,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: T7464 | Höhe: 12.2 km | Speed: 975 km/h",
+      "description": "Callsign: T7AKR20 | Höhe: 12.5 km | Speed: 912 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug IGO81Q",
+      "name": "Flug WZZ4225",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 22.48,
-      "lon": 51.2017,
-      "lng": 51.2017,
+      "lat": 35.5918,
+      "lon": 34.0271,
+      "lng": 34.0271,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: IGO81Q | Höhe: 11.0 km | Speed: 933 km/h",
+      "description": "Callsign: WZZ4225 | Höhe: 10.4 km | Speed: 823 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug RRR4117",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 34.4727,
-      "lon": 32.8621,
-      "lng": 32.8621,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR4117 | Höhe: 1.5 km | Speed: 436 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug LATTE18",
+      "name": "Flug N8868A",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 16.4297,
-      "lon": 120.8518,
-      "lng": 120.8518,
+      "lat": 22.3897,
+      "lon": 115.6489,
+      "lng": 115.6489,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: LATTE18 | Höhe: 10.4 km | Speed: 885 km/h",
+      "description": "Callsign: N8868A | Höhe: 11.9 km | Speed: 934 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CPA879",
+      "name": "Flug UAE338",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.3294,
-      "lon": 119.1796,
-      "lng": 119.1796,
+      "lat": 15.4401,
+      "lon": 120.5855,
+      "lng": 120.5855,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CPA879 | Höhe: 11.6 km | Speed: 897 km/h",
+      "description": "Callsign: UAE338 | Höhe: 1.3 km | Speed: 450 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,7 +105,7 @@
         "id": "usa",
         "label": "USA",
         "group": "staat",
-        "val": 9,
+        "val": 8,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -124,7 +113,7 @@
         "id": "iran",
         "label": "Iran",
         "group": "staat",
-        "val": 9,
+        "val": 8,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -148,7 +137,7 @@
         "id": "russland",
         "label": "Russland",
         "group": "staat",
-        "val": 9,
+        "val": 8,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -156,7 +145,7 @@
         "id": "ukraine",
         "label": "Ukraine",
         "group": "staat",
-        "val": 9,
+        "val": 8,
         "first_seen": "2026-07-25",
         "last_seen": "2026-08-24"
       },
@@ -177,30 +166,6 @@
         "last_seen": "2026-08-24"
       },
       {
-        "id": "deutschland",
-        "label": "Deutschland",
-        "group": "staat",
-        "val": 3,
-        "first_seen": "2026-08-23",
-        "last_seen": "2026-08-23"
-      },
-      {
-        "id": "afd",
-        "label": "AfD",
-        "group": "organisation",
-        "val": 3,
-        "first_seen": "2026-08-23",
-        "last_seen": "2026-08-23"
-      },
-      {
-        "id": "us_investoren",
-        "label": "US-Investoren",
-        "group": "actor",
-        "val": 3,
-        "first_seen": "2026-08-23",
-        "last_seen": "2026-08-23"
-      },
-      {
         "id": "taliban",
         "label": "Taliban",
         "group": "organisation",
@@ -218,14 +183,6 @@
       }
     ],
     "edges": [
-      {
-        "from": "usa",
-        "to": "iran",
-        "source": "usa",
-        "target": "iran",
-        "label": "Konflikt",
-        "last_seen": "2026-08-23"
-      },
       {
         "from": "china",
         "to": "taiwan",
@@ -257,38 +214,6 @@
         "target": "usa",
         "label": "Konflikt (Persischer Golf)",
         "last_seen": "2026-08-24"
-      },
-      {
-        "from": "usa",
-        "to": "us_investoren",
-        "source": "usa",
-        "target": "us_investoren",
-        "label": "Finanzübernahmen",
-        "last_seen": "2026-08-23"
-      },
-      {
-        "from": "us_investoren",
-        "to": "deutschland",
-        "source": "us_investoren",
-        "target": "deutschland",
-        "label": "Übernahmen",
-        "last_seen": "2026-08-23"
-      },
-      {
-        "from": "zimbra",
-        "to": "deutschland",
-        "source": "zimbra",
-        "target": "deutschland",
-        "label": "Cyberrisiko",
-        "last_seen": "2026-08-23"
-      },
-      {
-        "from": "afd",
-        "to": "deutschland",
-        "source": "afd",
-        "target": "deutschland",
-        "label": "Politische Spannung",
-        "last_seen": "2026-08-23"
       },
       {
         "from": "usa",
@@ -333,14 +258,6 @@
     ],
     "links": [
       {
-        "from": "usa",
-        "to": "iran",
-        "source": "usa",
-        "target": "iran",
-        "label": "Konflikt",
-        "last_seen": "2026-08-23"
-      },
-      {
         "from": "china",
         "to": "taiwan",
         "source": "china",
@@ -371,38 +288,6 @@
         "target": "usa",
         "label": "Konflikt (Persischer Golf)",
         "last_seen": "2026-08-24"
-      },
-      {
-        "from": "usa",
-        "to": "us_investoren",
-        "source": "usa",
-        "target": "us_investoren",
-        "label": "Finanzübernahmen",
-        "last_seen": "2026-08-23"
-      },
-      {
-        "from": "us_investoren",
-        "to": "deutschland",
-        "source": "us_investoren",
-        "target": "deutschland",
-        "label": "Übernahmen",
-        "last_seen": "2026-08-23"
-      },
-      {
-        "from": "zimbra",
-        "to": "deutschland",
-        "source": "zimbra",
-        "target": "deutschland",
-        "label": "Cyberrisiko",
-        "last_seen": "2026-08-23"
-      },
-      {
-        "from": "afd",
-        "to": "deutschland",
-        "source": "afd",
-        "target": "deutschland",
-        "label": "Politische Spannung",
-        "last_seen": "2026-08-23"
       },
       {
         "from": "usa",
@@ -447,11 +332,11 @@
     ]
   },
   "simple_key_takeaways": [
-    "Michigan narrowly avoided an upset against Western Michigan, winning on a 46-yard Hail Mary pass by Bryce Underwood, which prevented a repeat of their historic 2007 Appalachian State loss.",
-    "A personal finance story highlights an individual who taught themselves to invest, overcoming the expectation that they would have to rely solely on Social Security for retirement.",
-    "Federal Reserve Board announced the termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.",
-    "CISA has added one new vulnerability (CVE-2026-85046) to its Known Exploited Vulnerabilities (KEV) Catalog.",
-    "The vulnerability is a Google Chromium V8 Type Confusion Vulnerability, which is a frequent attack vector for malicious cyber actors."
+    "Fed:** Federal-Reserve-Gouverneur **Christopher Waller** hält eine Rede zur wirtschaftlichen Lage und zur Kommunikationsstrategie der Notenbank. Angesichts der jüngsten Marktbewegungen wird jede Nuance bezüglich Zinssenkungen mit Spannung erwartet.",
+    "CISA:** Die Behörde hat eine neue, aktiv ausgenutzte Schwachstelle im Google-Chromium-V8-Modul in den KEV-Katalog aufgenommen (**CVE-2026-85046**). Unternehmen wird dringend empfohlen, Patches umgehend einzuspielen, da dieser Angriffsvektor als hochriskant eingestuft wird.",
+    "Apple:** Der Konzern steht vor seiner Launch-Veranstaltung. Im Fokus steht nicht nur das iPhone 18 (Pro), sondern ein **faltbares \"iPhone Ultra\"** mit einem Einstiegspreis von nahezu **2.000 US-Dollar**. Apple zielt damit bewusst auf den Luxussegment-Markt, um das Umsatzwachstum zu sichern.",
+    "Friedensprozess:** Die **Trump-Administration** versucht mit einer \"Peace Express\"-Initiative neue Gespräche anzustoßen. Analysten der *New York Times* berichten jedoch, dass der Prozess eingefroren ist und neue Verhandlungen parallel zu eskalierenden Gefechten stattfinden dürften. Die Lage bleibt angespannt und unberechenbar.",
+    "WWE:** Der Wrestling-Narrativ nimmt eine überraschende Wendung: **Cody Rhodes** verliert bei WrestleMania 42 (bzw. Sunday Night's Main Event) gegen Randy Orton, der mit einem Low Blow und RKO gewinnt. Die Storyline deutet auf eine anhaltende Fehde hin, da Rhodes \"conflicted\" dargestellt wird."
   ],
   "geoscore": {
     "current_score": 72,
@@ -466,12 +351,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-06T09:59:25.006653+00:00",
+  "timestamp": "2026-09-07T11:10:14.829852+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-06T09:58:35.498354+00:00",
+    "timestamp": "2026-09-07T11:09:15.657142+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
+    "feeds_successful": 118,
+    "feeds_failed": 106,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -481,8 +366,8 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (7 Signale)",
-    "graph_merge_status": "SUCCESS (13 Nodes)",
+    "opensky_status": "SUCCESS (6 Signale)",
+    "graph_merge_status": "SUCCESS (10 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
     ]
@@ -497,9 +382,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 15,
-    "nodes_now": 13,
-    "hotspots_now": 7,
-    "summary": "Graph-Knoten 15 → 13"
+    "nodes_prev": 13,
+    "nodes_now": 10,
+    "hotspots_now": 6,
+    "summary": "Graph-Knoten 13 → 10"
   }
 }
