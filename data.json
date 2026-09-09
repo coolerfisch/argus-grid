@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 08.09.2026**\n\n**Top-Themen:**\n1. **Geopolitik/Handelskrieg:** Kanada kontert mit Vergeltungszöllen über 20 Mrd. USD auf US-Produkte; der größte bilaterale Handelskorridor der Welt gerät unter Druck.\n2. **Deutschland/Europa:** Desaströse Wahlschlappe für die Union in einem Bundesland; Friedrich Merz gerät innerparteilich unter Druck, schließt Kurswechsel aber aus.\n3. **Katastrophenhilfe:** Nepal steht nach der verheerenden Sturzflut vor einem Wiederaufbau, der Milliardensummen verschlingen wird – das Land hatte sich noch nicht vom Erdbeben 2015 erholt....",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 08.09.2026**\n\n**Top-Themen:**\n1. **Geopolitik/Handelskrieg:** Kanada kontert mit Vergeltungszöllen über 20 Mrd. USD auf US-Produkte; der größte bilaterale Handelskorridor der Welt gerät unter Druck.\n2. **Deutschland/Europa:** Desaströse Wahlschlappe für die Union in einem Bundesland; Friedrich Merz gerät i...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 09. September 2026**\n\n---\n\n**1. Geopolitik & Konflikte**\n- **[Eskalation]** Der Ölpreis steigt erstmals seit Juli wieder auf über 100 US-Dollar pro Fass (Brent). Auslöser sind US-Angriffe auf fünf iranische Tanker am Dienstag, die in Verbindung mit anhaltenden Houthi-Angriffen im Roten Meer die globalen Lieferketten bedrohen.\n- **[Afrika / Gesundheit]** In der Demokratischen Republik Kongo löst der plötzliche Tod eines Lkw-Fahrers in einem abgelegenen Dorf eine Ebola-Panik aus. Medizinisches Personal vor Ort kämpft um die sichere Isolierung des Leichn...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 09. September 2026**\n\n---\n\n**1. Geopolitik & Konflikte**\n- **[Eskalation]** Der Ölpreis steigt erstmals seit Juli wieder auf über 100 US-Dollar pro Fass (Brent). Auslöser sind US-Angriffe auf fünf iranische Tanker am Dienstag, die in Verbindung mit anhaltenden Houthi-Angriffen im Roten Meer die globalen Li...",
   "key_takeaways": [
-    "Regulatorik:** Die Federal Reserve hat die Durchsetzungsmaßnahmen gegen die United Texas Bank, Quontic Bank Acquisition Corp. und Quontic Bank Holdings Corp. aufgehoben.",
-    "Finanzdienstleistung/Erbrecht:** Der \"MarketWatch\"-Ratgeber behandelt die Frage, ob drei Geschwister ein geerbtes IRA direkt auszahlen lassen können oder separate Erb-IRAs eröffnen müssen.",
-    "Innenpolitik:** Ein Ex-Mitglied der Democratic Socialists of America (DSA) greift Abdul El-Sayed an und warnt vor marxistisch-leninistischen Tendenzen innerhalb der Organisation.",
-    "CISA-Katalog:** Neue bekannte ausgenutzte Schwachstelle aufgenommen: CVE-2026-85046 – Google Chromium V8 Type Confusion Vulnerability. Chromium-Nutzer sollten umgehend auf verfügbare Patches achten.",
-    "Die Financial Times berichtet über einen Anstieg von \"Made in EU\"-Fälschungen: Kriminelle Banden verlagern die Zigarettenproduktion in die EU, nachdem der Grenzschmuggel eingedämmt wurde."
+    "[Eskalation]** Der Ölpreis steigt erstmals seit Juli wieder auf über 100 US-Dollar pro Fass (Brent). Auslöser sind US-Angriffe auf fünf iranische Tanker am Dienstag, die in Verbindung mit anhaltenden Houthi-Angriffen im Roten Meer die globalen Lieferketten bedrohen.",
+    "[Afrika / Gesundheit]** In der Demokratischen Republik Kongo löst der plötzliche Tod eines Lkw-Fahrers in einem abgelegenen Dorf eine Ebola-Panik aus. Medizinisches Personal vor Ort kämpft um die sichere Isolierung des Leichnams, es kommt zu einem Stillstand mit der lokalen Bevölkerung.",
+    "[Rohstoffe / Märkte]** Die Brent-Rohöl-Futures durchbrechen die Marke von 100 Dollar. Analysten warnen vor weiteren Lieferengpässen, falls die Spannungen im Nahen Osten anhalten.",
+    "[USA / Retail]** GameStop, einst die berühmteste „Meme-Aktie“, erwirtschaftet inzwischen mehr Umsatz mit Sammlerstücken als mit Videospielen. Das Unternehmen hat sich laut Wall Street Journal grundlegend transformiert.",
+    "[US-Finanzregulierung]** Die US-Notenbank (Fed) beendet formelle Durchsetzungsmaßnahmen gegen die United Texas Bank sowie die Quontic Bank Acquisition Corp. und Quontic Bank Holdings Corp. Die Maßnahmen werden als vertrauensbildendes Signal für den Bankensektor gewertet."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 08.09.2026**\n\n**Top-Themen:**\n1. **Geopolitik/Handelskrieg:** Kanada kontert mit Vergeltungszöllen über 20 Mrd. USD auf US-Produkte; der größte bilaterale Handelskorridor der Welt gerät unter Druck.\n2. **Deutschland/Europa:** Desaströse Wahlschlappe für die Union in einem Bundesland; Friedrich Merz gerät innerparteilich unter Druck, schließt Kurswechsel aber aus.\n3. **Katastrophenhilfe:** Nepal steht nach der verheerenden Sturzflut vor einem Wiederaufbau, der Milliardensummen verschlingen wird – das Land hatte sich noch nicht vom Erdbeben 2015 erholt.\n\n**USA & Finanzen:**\n- **Regulatorik:** Die Federal Reserve hat die Durchsetzungsmaßnahmen gegen die United Texas Bank, Quontic Bank Acquisition Corp. und Quontic Bank Holdings Corp. aufgehoben.\n- **Finanzdienstleistung/Erbrecht:** Der \"MarketWatch\"-Ratgeber behandelt die Frage, ob drei Geschwister ein geerbtes IRA direkt auszahlen lassen können oder separate Erb-IRAs eröffnen müssen.\n- **Innenpolitik:** Ein Ex-Mitglied der Democratic Socialists of America (DSA) greift Abdul El-Sayed an und warnt vor marxistisch-leninistischen Tendenzen innerhalb der Organisation.\n\n**IT-Security:**\n- **CISA-Katalog:** Neue bekannte ausgenutzte Schwachstelle aufgenommen: CVE-2026-85046 – Google Chromium V8 Type Confusion Vulnerability. Chromium-Nutzer sollten umgehend auf verfügbare Patches achten.\n\n**Wirtschaft (International):**\n- Die Financial Times berichtet über einen Anstieg von \"Made in EU\"-Fälschungen: Kriminelle Banden verlagern die Zigarettenproduktion in die EU, nachdem der Grenzschmuggel eingedämmt wurde.\n\n**Wetter/Unwetter:**\n- Der National Hurricane Center (NHC) gibt keine unmittelbare Warnung aus; der Tropische Wetterausblick (02:00 Uhr EDT) liefert keine neuen akuten Sturmwarnungen für den Atlantik.\n\nMACRO:\n### Zusammenfassung der aktuellen Ereignisse (DATUM: 08.09.2026)\n\n#### Zentralbank\n- **Federal Reserve**: Die Federal Reserve Board hat die Enforcement-Aktionen gegen United Texas Bank, Quontic Bank Acquisition Corp., und Quontic Bank Holdings Corp. beendet.\n\n#### Cyber / Infrastruktur\n- **CISA Cyber Alerts**: CISA hat CVE-2026-85046, eine neue bekannte und ausgenutzte Vulnerability im Google Chromium V8, ihrem Known Exploited Vulnerabilities (KEV) Catalog hinzugefügt. Diese Type Confusion Vulnerability wird von böswilligen Akteuren häufig genutzt und stellt eine erhebliche Bedrohung dar.\n\n#### US/Finanzen\n- **Wall Street Journal (MarketWatch Alt)**: Ein Erbe von einem IRA-Plan kann nicht einfach in bar eingelöst werden. Als Testamentsvollstrecker ist es notwendig, drei neue vererbte IRAs zu erstellen, um das Vermögen gleichmäßig zu teilen.\n\n#### US/Presse\n- **New York Times World**: Ein Sieg der rechten Extremisten in einem Landtagswahlergebnis in Deutschland führt zu erhöhtem Druck auf Kanzler Friedrich Merz. Dieser hat versprochen, die Kommunikation zu verbessern, aber keine politischen Änderungen anzubringen.\n\n#### CH/Presse\n- **NZZ International**: Nepal muss Milliarden für den Wiederaufbau nach einer Sturzflut ausgeben. Das Land hatte sich noch nicht von dem verheerenden Erdbeben von 2015 erholt. Viele Überlebende wissen nicht, wo sie anfangen sollen.\n\n#### US/Politik\n- **Fox News Latest**: Ein ehemaliger Mitglied der Democratic Socialists of America (DSA) warnt vor der Übernahme der DSA durch Marxisten und Leninisten und kritisiert Abdul El-Sayed als unehrlich.\n\n#### UK/Medien\n- **BBC World News**: Kanada bereitet sich auf einen anhaltenden Handelkrieg vor, nachdem Gegen-Sanktionen im Wert von 20 Milliarden US-Dollar gegen US-Produkte in Kraft getreten sind. Dies gefährdet das größte bilaterale Handelsverhältnis der Welt.\n\n#### UK/Finanzen\n- **Financial Times**: Der Handel von gefälschten Zigaretten, die \"Made in EU\" getauft sind, steigt, da kriminelle Banden die Produktion auf nationaler Ebene aufgenommen haben, nachdem internationale Schmuggler härter gejagt werden.\n\n#### Wetter/Extreme\n- **NOAA National Hurricane Center**: Im Nordatlantik, dem Karibischen Meer und dem Golf von Mexiko wird bis zum 15. September keine tropische Zyklonenbildung erwartet.\n\n#### Investigativ Net\n- **ICIJ (Panama/Pandora Papers)**: Der von der Weißen Haus nominierte Leiter des venezolanischen Öldeals steht unter Ermittlungen in zwei Ländern. Die FinCEN Files von 2020 enthüllten, dass große Banken verdächtige Zahlungen durch das Unternehmen eines venezolanischen Milliardärs verfolgten, das im Zentrum von Embezzlement-Ermittlungen in Europa steht.\n\nDiese Zusammenfassung gibt einen Überblick über die wichtigsten Ereignisse in verschiedenen Bereichen, einschließlich Zentralbankpolitik, Cyber- und Infrastruktur, Finanzen, Presse, Politik, Medien, Wetter und investigative Berichterstattung.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**TAGESZUSAMMENFASSUNG – 09. September 2026**\n\n---\n\n**1. Geopolitik & Konflikte**\n- **[Eskalation]** Der Ölpreis steigt erstmals seit Juli wieder auf über 100 US-Dollar pro Fass (Brent). Auslöser sind US-Angriffe auf fünf iranische Tanker am Dienstag, die in Verbindung mit anhaltenden Houthi-Angriffen im Roten Meer die globalen Lieferketten bedrohen.\n- **[Afrika / Gesundheit]** In der Demokratischen Republik Kongo löst der plötzliche Tod eines Lkw-Fahrers in einem abgelegenen Dorf eine Ebola-Panik aus. Medizinisches Personal vor Ort kämpft um die sichere Isolierung des Leichnams, es kommt zu einem Stillstand mit der lokalen Bevölkerung.\n\n**2. Finanzmärkte & Wirtschaft**\n- **[Rohstoffe / Märkte]** Die Brent-Rohöl-Futures durchbrechen die Marke von 100 Dollar. Analysten warnen vor weiteren Lieferengpässen, falls die Spannungen im Nahen Osten anhalten.\n- **[USA / Retail]** GameStop, einst die berühmteste „Meme-Aktie“, erwirtschaftet inzwischen mehr Umsatz mit Sammlerstücken als mit Videospielen. Das Unternehmen hat sich laut Wall Street Journal grundlegend transformiert.\n- **[US-Finanzregulierung]** Die US-Notenbank (Fed) beendet formelle Durchsetzungsmaßnahmen gegen die United Texas Bank sowie die Quontic Bank Acquisition Corp. und Quontic Bank Holdings Corp. Die Maßnahmen werden als vertrauensbildendes Signal für den Bankensektor gewertet.\n\n**3. Technologie & Cybersicherheit**\n- **[Sicherheitslücke]** CISA warnt vor einer kritischen Schwachstelle in CareCam Pro IP-Kameras (Modell ANJIA AJL33PC0801, betroffene Firmware: linux_linux_202008261138_svn13796). Eine erfolgreiche Ausnutzung könnte einem Angreifer die vollständige Kontrolle über das Gerät ermöglichen.\n\n**4. Gesellschaft & Medien**\n- **[USA / Kultur]** Der Schauspieler und Comedian Michael Rapaport erklärt im Interview mit Craig Carton, dass seine pro-israelische Haltung ihn in Hollywood Aufträge gekostet habe. Er berichtet von abgesagten Shows, ausbleibenden Studioangeboten und Drohungen gegen Comedy-Club-Mitarbeiter.\n- **[China / Politik]** Die NZZ berichtet, wie Xi Jinping systematisch die Erinnerung an Maos Schreckensherrschaft tilge. Während die KPCh einst Schutzmechanismen gegen Alleinherrschaft installierte, baue Xi diese nun ab, um seine eigene Macht zu festigen.\n\n---\n\n**Marktindikatoren**\n- Öl (Brent): >100 USD/Fass (Höchststand seit Juli 2026)\n- USD/CHF: Keine signifikanten Bewegungen gemeldet (Fokus auf Öl und Fed-Maßnahmen)\n\nMACRO:\nEs scheint, dass die letzte Einträge khỏe Schein, als sei sie unvollständig. Hier ist eine Kompilation der importanten Punkte aus den bereitgestellten Feeds:\n\n### Zentralbank\n- **Federal Reserve Board**:\n  - Beendet Zwangsvollstreckungsmaßnahmen gegenüber United Texas Bank, Quontic Bank Acquisition Corp., und Quontic Bank Holdings Corp.\n\n### Cyber / Infrastruktur\n- **CISA Cyber Alerts**:\n  - Sicherheitslücke in CareCam Pro IP Cameras: Erfolgreiche Ausnutzung könnte Angreifern die vollständige Kontrolle über das Gerät ermöglichen.\n  - Betroffene Versionen: ANJIA AJL33PC0801 mit Firmware linux_linux_202008261138_svn13796 und Bootloader U-Boot_2010.06.\n\n### US/Finanzen\n- **Wall Street Journal (MarketWatch)**:\n  - GameStop generiert mehr Umsatz durch Sammelobjekte als durch Videospiele.\n\n### US/Politik\n- **Fox News**:\n  - Michael Rapaport behauptet, dass sein pro-israelischer Standpunkt ihm Hollywood-Auftritte gekostet hat.\n\n### US/Presse\n- **New York Times**:\n  - Ein plötzlicher Todesfall eines Fahrers löste Ebola-Panik in Kongo aus. Medizinisches Personal musste den Körper sicher isolieren.\n\n### CH/Presse\n- **NZZ International**:\n  - Xi Jinping löst die Erinnerung an Maos Schreckensherrschaft aus. Die Kommunistische Partei schafft Schutzmechanismen gegen Alleinherrscher ab.\n\n### UK/Medien\n- **BBC World News**:\n  - Ölpreis erreicht erstmals seit Juli wieder 100 USD pro Barrel nach Angriffen der USA auf iranische Tanker.\n\n### UK/Finanzen\n- **Financial Times**:\n  - Ölpreis steigt auf 100 USD aufgrund von Sorge um globale Versorgung.\n  - Weitere Themen: Anthropic-Forscher kündigt und warnt vor \"Wetten\" mit der Zukunft der Menschheit.\n\n### Wetter/Extreme\n- **NOAA National Hurricane Center**:\n  - Atlantischer Tropischer Wetterausblick: Keine Erwartung von tropischen Zyklonenbildung in den nächsten 7 Tagen.\n\n### Investigativ\n- **ICIJ (Panama/Pandora Papers)**:\n  - Weiße Haus-Nominierung für Venezuela-Oil-Deal unter Ermittlungen in zwei Ländern. Die Firma eines venezolanischen Milliardärs steht im Zentrum von Geldwäscheuntersuchungen in Europa.\n\n### Medizin\n- **CDC Health Updates**:\n  - CDC startet neue Überdosispräventionsdatenkanäle.\n\nDiese Zusammenfassung bietet einen Überblick über die aktuellen Ereignisse und Neuigkeiten aus verschiedenen Bereichen. Wenn Sie weitere Informationen zu einem spezifischen Punkt benötigen, lassen Sie es mich wissen!",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +27,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT96LK",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 44.1451,
-      "lon": 25.1851,
-      "lng": 25.1851,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: PGT96LK | Höhe: 10.4 km | Speed: 778 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
       "name": "Flug PGT65UA",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.5443,
-      "lon": 27.8263,
-      "lng": 27.8263,
+      "lat": 42.8635,
+      "lon": 29.0155,
+      "lng": 29.0155,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT65UA | Höhe: 10.4 km | Speed: 780 km/h",
+      "description": "Callsign: PGT65UA | Höhe: 9.8 km | Speed: 821 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DUKE75",
+      "name": "Flug PGT47HW",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 45.3844,
-      "lon": 25.3602,
-      "lng": 25.3602,
+      "lat": 40.7964,
+      "lon": 29.05,
+      "lng": 29.05,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: PGT47HW | Höhe: 1.0 km | Speed: 379 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug NATO01",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 45.6129,
+      "lon": 27.0327,
+      "lng": 27.0327,
       "type": "flight",
       "intensity": "ROT",
-      "description": "Callsign: DUKE75 | Höhe: 12.2 km | Speed: 599 km/h",
+      "description": "Callsign: NATO01 | Höhe: 8.2 km | Speed: 698 km/h",
       "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
     },
     {
-      "name": "Flug IGO81Q",
+      "name": "Flug AEE907",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 22.5991,
-      "lon": 49.5399,
-      "lng": 49.5399,
+      "lat": 34.6815,
+      "lon": 33.3298,
+      "lng": 33.3298,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: IGO81Q | Höhe: 11.6 km | Speed: 895 km/h",
+      "description": "Callsign: AEE907 | Höhe: 3.1 km | Speed: 544 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug VTAGL",
+      "name": "Flug AIZ1354",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 23.1048,
-      "lon": 51.7752,
-      "lng": 51.7752,
+      "lat": 31.9268,
+      "lon": 35.0347,
+      "lng": 35.0347,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: VTAGL | Höhe: 13.7 km | Speed: 896 km/h",
+      "description": "Callsign: AIZ1354 | Höhe: 0.9 km | Speed: 354 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CPA549",
+      "name": "Flug CDG2295",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.2448,
-      "lon": 120.4021,
-      "lng": 120.4021,
+      "lat": 24.114,
+      "lon": 117.7858,
+      "lng": 117.7858,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CPA549 | Höhe: 11.6 km | Speed: 916 km/h",
+      "description": "Callsign: CDG2295 | Höhe: 10.1 km | Speed: 813 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CPA539",
+      "name": "Flug LATTE18",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.9323,
-      "lon": 120.0326,
-      "lng": 120.0326,
+      "lat": 16.2736,
+      "lon": 120.5493,
+      "lng": 120.5493,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CPA539 | Höhe: 12.2 km | Speed: 890 km/h",
+      "description": "Callsign: LATTE18 | Höhe: 11.3 km | Speed: 870 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,11 +116,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Regulatorik:** Die Federal Reserve hat die Durchsetzungsmaßnahmen gegen die United Texas Bank, Quontic Bank Acquisition Corp. und Quontic Bank Holdings Corp. aufgehoben.",
-    "Finanzdienstleistung/Erbrecht:** Der \"MarketWatch\"-Ratgeber behandelt die Frage, ob drei Geschwister ein geerbtes IRA direkt auszahlen lassen können oder separate Erb-IRAs eröffnen müssen.",
-    "Innenpolitik:** Ein Ex-Mitglied der Democratic Socialists of America (DSA) greift Abdul El-Sayed an und warnt vor marxistisch-leninistischen Tendenzen innerhalb der Organisation.",
-    "CISA-Katalog:** Neue bekannte ausgenutzte Schwachstelle aufgenommen: CVE-2026-85046 – Google Chromium V8 Type Confusion Vulnerability. Chromium-Nutzer sollten umgehend auf verfügbare Patches achten.",
-    "Die Financial Times berichtet über einen Anstieg von \"Made in EU\"-Fälschungen: Kriminelle Banden verlagern die Zigarettenproduktion in die EU, nachdem der Grenzschmuggel eingedämmt wurde."
+    "[Eskalation]** Der Ölpreis steigt erstmals seit Juli wieder auf über 100 US-Dollar pro Fass (Brent). Auslöser sind US-Angriffe auf fünf iranische Tanker am Dienstag, die in Verbindung mit anhaltenden Houthi-Angriffen im Roten Meer die globalen Lieferketten bedrohen.",
+    "[Afrika / Gesundheit]** In der Demokratischen Republik Kongo löst der plötzliche Tod eines Lkw-Fahrers in einem abgelegenen Dorf eine Ebola-Panik aus. Medizinisches Personal vor Ort kämpft um die sichere Isolierung des Leichnams, es kommt zu einem Stillstand mit der lokalen Bevölkerung.",
+    "[Rohstoffe / Märkte]** Die Brent-Rohöl-Futures durchbrechen die Marke von 100 Dollar. Analysten warnen vor weiteren Lieferengpässen, falls die Spannungen im Nahen Osten anhalten.",
+    "[USA / Retail]** GameStop, einst die berühmteste „Meme-Aktie“, erwirtschaftet inzwischen mehr Umsatz mit Sammlerstücken als mit Videospielen. Das Unternehmen hat sich laut Wall Street Journal grundlegend transformiert.",
+    "[US-Finanzregulierung]** Die US-Notenbank (Fed) beendet formelle Durchsetzungsmaßnahmen gegen die United Texas Bank sowie die Quontic Bank Acquisition Corp. und Quontic Bank Holdings Corp. Die Maßnahmen werden als vertrauensbildendes Signal für den Bankensektor gewertet."
   ],
   "geoscore": {
     "current_score": 72,
@@ -135,12 +135,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-08T10:21:57.737946+00:00",
+  "timestamp": "2026-09-09T10:30:19.847675+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-08T10:20:52.759425+00:00",
+    "timestamp": "2026-09-09T10:29:13.781857+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 121,
+    "feeds_failed": 103,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -166,9 +166,9 @@
     "geoscore_delta": 0,
     "defcon_prev": 3,
     "defcon_now": 3,
-    "nodes_prev": 10,
+    "nodes_prev": 0,
     "nodes_now": 0,
     "hotspots_now": 7,
-    "summary": "Graph-Knoten 10 → 0"
+    "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
