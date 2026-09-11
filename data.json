@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nThis looks like a news feed digest dated **10 September 2026**. A few observations:\n\n**What stands out**\n\n- **The date is in the future** relative to my knowledge, and several items are clearly synthetic or speculative rather than reported events — e.g., a Charlie Kirk assassination at UVU, a Trump proposal for $5,000 per adult if Republicans win midterms, and a Nepal \"umsturz\" (coup/revolt) anniversary dated 8 September 2025. None of these correspond to real events I can verify.\n- **Some items mix real and fictional elements.** The CVE IDs (Fortinet, Citrix NetScaler) resemb...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nThis looks like a news feed digest dated **10 September 2026**. A few observations:\n\n**What stands out**\n\n- **The date is in the future** relative to my knowledge, and several items are clearly synthetic or speculative rather than reported events — e.g., a Charlie Kirk assassination at UVU, a Trump proposal for $5,000 per adult if...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nHier ist eine strukturierte Zusammenfassung der Nachrichtenlage vom 11. September 2026, basierend auf den bereitgestellten Feeds. Ich habe die Meldungen nach Themen geordnet und kompakte Zusammenfassungen erstellt. Auffällig ist, dass die Meldungen teils sehr unterschiedliche geopolitische und wirtschaftliche Spannungsfelder abbilden.\n\n---\n\n### 📊 Wirtschaft, Finanzen & Regulierung\n\n**USA – Bankenregulierung**\nDie US-Bankenaufsichtsbehörden (Federal Reserve und Partner) reduzieren die regulatorischen Lasten für Community Banks und weiten die Eligibility für den 18-monatigen Pr...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nHier ist eine strukturierte Zusammenfassung der Nachrichtenlage vom 11. September 2026, basierend auf den bereitgestellten Feeds. Ich habe die Meldungen nach Themen geordnet und kompakte Zusammenfassungen erstellt. Auffällig ist, dass die Meldungen teils sehr unterschiedliche geopolitische und wirtschaftliche Spannungsfelder abbil...",
   "key_takeaways": [
-    "The date is in the future** relative to my knowledge, and several items are clearly synthetic or speculative rather than reported events — e.g., a Charlie Kirk assassination at UVU, a Trump proposal for $5,000 per adult if Republicans win midterms, and a Nepal \"umsturz\" (coup/revolt) anniversary dated 8 September 2025. None of these correspond to real events I can verify.",
-    "Some items mix real and fictional elements.** The CVE IDs (Fortinet, Citrix NetScaler) resemble real KEV catalog entries but with future/wrong identifiers. The ICIJ item references real reporting (FinCEN Files, 2020) but attaches it to a hypothetical Venezuela oil-deal story.",
-    "One item is a genuine-looking boilerplate**: the NHC Tropical Weather Outlook for 10 Sep 2026 is standard template text with no active systems — the kind of routine advisory that would look identical in any year.",
-    "A placeholder is visible**: the NYT item literally says *\"TK great summary will go here\"* — a sign this is a draft or generated mock-up, not a finished wire.",
-    "Fed Speech:** Christopher Waller, a member of the Federal Reserve, delivered a speech at the Reuters NEXT Newsmaker Interview in Washington, D.C., discussing the economic outlook and his views on policy communication. Waller emphasized the importance of clear and transparent communication in guiding market expectations and managing economic stability."
+    "CVE-2026-67277**: MikroTik RouterOS – Fehlende Authentifizierung für kritische Funktion.",
+    "CVE-2026-86060**: MikroTik RouterOS – Unsachgemäße Neutralisierung von Argumenten (Delimiter).",
+    "Sicherheitslage**: Zwei große Konfliktherde (Ukraine, Libanon/Israel) dominieren die internationalen Nachrichten. Der russische Angriff auf ein Einkaufszentrum und die Zerstörung von Tyros zeigen die anhaltende Intensität.",
+    "Wirtschaft**: Die Ölpreis-Schere (Rohöl unter 100 USD, Diesel über 6 USD) ist ein starker Hinweis auf Raffineriekapazitäten oder Logistikprobleme. Die Fed-Entlastung für Community Banks ist ein klassisches Deregulierungssignal.",
+    "Cyber**: MikroTik-Schwachstellen sind ernst zu nehmen, da RouterOS weit verbreitet ist. Aktive Ausnutzung bedeutet akuten Handlungsbedarf."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nThis looks like a news feed digest dated **10 September 2026**. A few observations:\n\n**What stands out**\n\n- **The date is in the future** relative to my knowledge, and several items are clearly synthetic or speculative rather than reported events — e.g., a Charlie Kirk assassination at UVU, a Trump proposal for $5,000 per adult if Republicans win midterms, and a Nepal \"umsturz\" (coup/revolt) anniversary dated 8 September 2025. None of these correspond to real events I can verify.\n- **Some items mix real and fictional elements.** The CVE IDs (Fortinet, Citrix NetScaler) resemble real KEV catalog entries but with future/wrong identifiers. The ICIJ item references real reporting (FinCEN Files, 2020) but attaches it to a hypothetical Venezuela oil-deal story.\n- **One item is a genuine-looking boilerplate**: the NHC Tropical Weather Outlook for 10 Sep 2026 is standard template text with no active systems — the kind of routine advisory that would look identical in any year.\n- **A placeholder is visible**: the NYT item literally says *\"TK great summary will go here\"* — a sign this is a draft or generated mock-up, not a finished wire.\n\n**On the substance**\n\nIf your goal is to treat this as a realistic scenario exercise, the items cluster around plausible 2026 themes: Fed communication strategy (Waller), a steady drumbeat of actively exploited CVEs, UK fiscal devolution (mayoral tourism taxes), Atlantic hurricane quiet, and Nepal's post-uprising disillusionment.\n\n**Quick questions so I can help usefully:**\n1. Is this a **fiction/wargaming/simulation** prompt, or are you testing whether I'll treat fabricated news as real?\n2. Do you want a **verification pass** flagging which items are real vs. invented?\n3. Or do you want me to **summarize/analyze** the feed as if it were a genuine morning briefing?\n\nMy default: I'd treat it as fictional unless you tell me otherwise, and I won't assert any of these events as having occurred.\n\nMACRO:\n### Overview of Key Developments (10.09.2026)\n\n#### Economic Outlook and Policy Communication\n- **Fed Speech:** Christopher Waller, a member of the Federal Reserve, delivered a speech at the Reuters NEXT Newsmaker Interview in Washington, D.C., discussing the economic outlook and his views on policy communication. Waller emphasized the importance of clear and transparent communication in guiding market expectations and managing economic stability.\n\n#### Cybersecurity Alerts\n- **CISA Adds New Vulnerabilities:** The Cybersecurity and Infrastructure Security Agency (CISA) has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog. These include:\n  - **CVE-2025-25249:** Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability\n  - **CVE-2026-19490:** Citrix NetScaler Authentication Bypass Using an Alternate Method\n\n#### Nepal Political Climate\n- **NZZ International:** One year after the coup in Nepal, there is growing disillusionment among the youth, particularly in the wake of the recent Himalayan floods. The anniversary of the police brutality on September 8, 2025, is being marked with increasing criticism of the current government's handling of the country's challenges.\n\n#### Financial Planning and Exploitation\n- **Wall Street Journal (MarketWatch Alt):** A discussion on the importance of financial planning for incapacity, highlighting the risks of financial exploitation, especially in light of parents' cognitive decline.\n\n#### Afghanistan War\n- **New York Times World:** A comprehensive 25-year photographic summary of the \"Forever War\" in Afghanistan, capturing the long and complex history of the conflict.\n\n#### Political Promises and Financial Incentives\n- **BBC World News:** Former President Trump has promised every adult American $5,000 if Republicans win the upcoming midterms, without providing details on how this plan would be funded or implemented.\n\n#### University Response to Tragedy\n- **Fox News Latest:** The new president of Utah Valley University (UVU) vowed to continue fostering free speech on campus, despite the recent assassination of Charlie Kirk. He also revealed that his daughters were present at the event when the incident occurred.\n\n#### Tourism Tax in England\n- **Financial Times:** English mayors are granted the authority to introduce an unlimited tourism tax, affecting hotel rooms, bed and breakfasts, and Airbnb-type rentals. This move aims to address the financial impact of tourism on local communities.\n\n#### Weather Outlook\n- **NOAA National Hurricane Center:** The National Hurricane Center reports that no tropical cyclone formation is expected in the North Atlantic, Caribbean Sea, or Gulf of Mexico over the next seven days.\n\n#### Investigative Journalism\n- **ICIJ (Panama/Pandora Papers):** The White House nominee to oversee Venezuela’s oil deal is under investigation in two countries for alleged embezzlement, as reported by the International Consortium of Investigative Journalists (ICIJ).\n\n#### Medical Updates\n- **CDC Health Updates:** The Centers for Disease Control and Prevention (CDC) has launched a new data channel to track overdose trends and enhance overdose prevention efforts across the nation.\n\n#### Cyber-Espionage and Legal Developments\n- **Citizen Lab (Spyware & Surveillance):** The U.K. Supreme Court has ruled that victims of spyware can sue foreign states, opening new avenues for legal action against state-sponsored cyber-espionage.\n\nThese developments highlight a range of critical issues from economic policy and cybersecurity to political stability and public health, reflecting the complex global landscape as of September 10, 2026.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nHier ist eine strukturierte Zusammenfassung der Nachrichtenlage vom 11. September 2026, basierend auf den bereitgestellten Feeds. Ich habe die Meldungen nach Themen geordnet und kompakte Zusammenfassungen erstellt. Auffällig ist, dass die Meldungen teils sehr unterschiedliche geopolitische und wirtschaftliche Spannungsfelder abbilden.\n\n---\n\n### 📊 Wirtschaft, Finanzen & Regulierung\n\n**USA – Bankenregulierung**\nDie US-Bankenaufsichtsbehörden (Federal Reserve und Partner) reduzieren die regulatorischen Lasten für Community Banks und weiten die Eligibility für den 18-monatigen Prüfzyklus aus. Ziel ist es, kleinere Institute zu entlasten. *(Quelle: Federal Reserve Press)*\n\n**Rohölpreise**\nDer US-Ölpreis (WTI) fällt unter 100 US-Dollar pro Barrel, während der Dieselpreis mit über 6 US-Dollar ein neues Rekordhoch erreicht. Hintergrund sind Berichte über geplante diplomatische Gespräche zwischen Golfstaaten, die den Brent- und WTI-Frontmonatskontrakt leicht sinken ließen. Die Schere zwischen Rohöl und raffinierten Produkten bleibt historisch extrem. *(Quelle: WSJ/MarketWatch)*\n\n**Hongkong – Justiz**\nIn Hongkong wurden Organisatoren der Tiananmen-Gedenkveranstaltung zu Haftstrafen von mehr als fünf Jahren verurteilt. Die Behörden gehen damit weiter gegen politische Dissidenten vor. *(Quelle: Financial Times)*\n\n---\n\n### 🌍 Geopolitik & Sicherheit\n\n**Israel – Politik & Wahlkampf**\nDer 7. Oktober und das Hamas-Massaker holen Benjamin Netanyahu im Wahlkampf ein. Ein Zeitungsbericht über eine ignorierte Warnung aus Abu Dhabi vor dem Angriff wird zum beherrschenden Thema. Netanyahu kann sich laut NZZ dennoch auf eine loyale Wählerschaft stützen. *(Quelle: NZZ International)*\n\n**Libanon – Kriegsfolgen**\nDie libanesische Stadt Tyros (Tyre), eine der ältesten Metropolen der Welt, wurde durch Krieg stark beschädigt. Die New York Times berichtet über das Ausmaß der Zerstörung in der antiken Stadt. *(Quelle: NYT World)*\n\n**Ukraine – Russischer Angriff**\nBei einem russischen Angriff auf ein Einkaufszentrum in Pawlohrad (Ukraine) wurden nach ukrainischen Angaben fünf Menschen getötet und 67 verletzt. Es ist der dritte russische Angriff auf ein Einkaufszentrum innerhalb weniger Tage. *(Quelle: BBC World News)*\n\n**Bangladesch – Investigativ**\nDer OCCRP-Feed beginnt mit einer Meldung über die gestürzte Premierministerin von Bangladesch (der Text ist abgeschnitten). Es deutet auf weitere investigative Enthüllungen hin. *(Quelle: OCCRP)*\n\n---\n\n### 💻 Cyber & Infrastruktur\n\n**CISA – Known Exploited Vulnerabilities**\nDie US-Cybersecurity-Behörde CISA hat zwei neue Schwachstellen in ihren KEV-Katalog aufgenommen, die aktiv ausgenutzt werden:\n\n- **CVE-2026-67277**: MikroTik RouterOS – Fehlende Authentifizierung für kritische Funktion.\n- **CVE-2026-86060**: MikroTik RouterOS – Unsachgemäße Neutralisierung von Argumenten (Delimiter).\n\nBeide betreffen MikroTik-Router und sollten priorisiert gepatcht werden. *(Quelle: CISA Cyber Alerts)*\n\n---\n\n### 🌪️ Wetter & Extreme\n\n**Atlantic Tropical Weather Outlook**\nDas NOAA National Hurricane Center meldet für die nächsten 7 Tage **keine** tropische Zyklonenbildung im Nordatlantik, der Karibik und dem Golf von Amerika. *(Quelle: NOAA NHC)*\n\n---\n\n### 🍔 Kurioses & Boulevard\n\n**USA – Fast Food**\nEine Wendy’s-Filiale in Oklahoma bringt den zuvor verbotenen „T-Rex Burger“ zurück: neun Patties, die in neun Minuten gegessen werden müssen. Eine mutige Marketingaktion. *(Quelle: Fox News)*\n\n---\n\n### 🧭 Einordnung & Muster\n\n- **Sicherheitslage**: Zwei große Konfliktherde (Ukraine, Libanon/Israel) dominieren die internationalen Nachrichten. Der russische Angriff auf ein Einkaufszentrum und die Zerstörung von Tyros zeigen die anhaltende Intensität.\n- **Wirtschaft**: Die Ölpreis-Schere (Rohöl unter 100 USD, Diesel über 6 USD) ist ein starker Hinweis auf Raffineriekapazitäten oder Logistikprobleme. Die Fed-Entlastung für Community Banks ist ein klassisches Deregulierungssignal.\n- **Cyber**: MikroTik-Schwachstellen sind ernst zu nehmen, da RouterOS weit verbreitet ist. Aktive Ausnutzung bedeutet akuten Handlungsbedarf.\n- **Politik**: Hongkong bleibt ein Brennpunkt politischer Repression. In Israel wird der 7. Oktober zum Wahlkampfthema – mit potenziell großen Auswirkungen auf die Regierungsbildung.\n\nFalls du zu einem der Punkte tiefer einsteigen möchtest (z. B. die CVE-Details, die Ölpreisentwicklung oder die politischen Implikationen in Israel), sag Bescheid.\n\nMACRO:\n### Key Developments as of September 11, 2026\n\n#### Financial and Economic News:\n- **Community Banks Relief**: The Federal Reserve and other agencies have taken steps to reduce regulatory burdens for community banks, expanding eligibility for an 18-month exam cycle. This move aims to ease the operational pressures on smaller financial institutions.\n- **Oil Prices**: U.S. oil prices have dipped below $100 per barrel, while diesel prices have surpassed $6, marking a new record. These fluctuations are influenced by diplomatic talks between Gulf states.\n- **Hong Kong Pro-Democracy Activists**: Pro-democracy activists in Hong Kong, known for organizing Tiananmen vigil events, have been sentenced to jail terms exceeding five years, signaling a continued crackdown on political dissent.\n\n#### Cybersecurity and Infrastructure:\n- **CISA Adds Vulnerabilities**: The Cybersecurity and Infrastructure Security Agency (CISA) has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog:\n  - **CVE-2026-67277**: MikroTik RouterOS Missing Authentication for Critical Function.\n  - **CVE-2026-86060**: MikroTik RouterOS Improper Neutralization of Argument Delimiters.\n  - Both vulnerabilities are actively exploited, and immediate action is advised.\n\n#### International Politics and Conflict:\n- **Israel Elections**: The October 7 election in Israel is heavily influenced by a Hamas masscarc from a previous attack, despite Prime Minister Benjamin Netanyahu's strong base of support.\n- **Lebanese City of Tyre**: The ancient city of Tyre in Lebanon, one of the world's oldest metropolises, has been severely impacted by ongoing conflict and war.\n- **Ukraine Conflict**: A Russian strike on a shopping center in Pavlohrad, Ukraine, has resulted in five deaths and 67 injuries, marking the third such attack in recent days.\n\n#### Weather and Natural Disasters:\n- **Atlantic Tropical Weather Outlook**: The National Hurricane Center (NHC) reports that no tropical cyclone formation is expected in the next seven days in the North Atlantic, Caribbean Sea, or Gulf of Mexico.\n\n#### Investigative and Governance:\n- **Bangladesh PM's Daughter**: Saima Wazed, daughter of the ousted Bangladeshi Prime Minister Sheikh Hasina, has resigned from her position as the World Health Organization's (WHO) Southeast Asia regional director following an internal investigation into alleged financial fraud and academic misrepresentation.\n\n#### Health and Medicine:\n- **Rabies Increase**: The Centers for Disease Control and Prevention (CDC) has issued a statement on the recent increase in animal rabies activity and associated human exposures, highlighting the need for heightened vigilance and preventive measures.\n\n#### Miscellaneous:\n- **Wendy's T-Rex Burger Challenge**: A Wendy's restaurant in Oklahoma is offering a nine-patty cheeseburger challenge, daring customers to eat the entire T-Rex burger within nine minutes. This unique promotion is drawing attention and participation.\n\nThese developments highlight a range of global issues, from economic policies and cybersecurity threats to political conflicts and health concerns, providing a comprehensive snapshot of the current state of affairs.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,91 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT63QR",
+      "name": "Flug TVF11FC",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.9957,
-      "lon": 26.4098,
-      "lng": 26.4098,
+      "lat": 43.8661,
+      "lon": 26.8491,
+      "lng": 26.8491,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT63QR | Höhe: 11.0 km | Speed: 837 km/h",
+      "description": "Callsign: TVF11FC | Höhe: 10.3 km | Speed: 807 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT706H",
+      "name": "Flug PGT1235",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.451,
-      "lon": 27.2968,
-      "lng": 27.2968,
+      "lat": 42.8289,
+      "lon": 25.2801,
+      "lng": 25.2801,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT706H | Höhe: 10.4 km | Speed: 830 km/h",
+      "description": "Callsign: PGT1235 | Höhe: 11.0 km | Speed: 845 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DUKE60",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 46.0353,
-      "lon": 25.9274,
-      "lng": 25.9274,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: DUKE60 | Höhe: 8.2 km | Speed: 540 km/h",
-      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
-    },
-    {
-      "name": "Flug AXB848",
+      "name": "Flug WMT9BW",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 25.8687,
-      "lon": 51.8617,
-      "lng": 51.8617,
+      "lat": 32.3394,
+      "lon": 33.5809,
+      "lng": 33.5809,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AXB848 | Höhe: 7.8 km | Speed: 827 km/h",
+      "description": "Callsign: WMT9BW | Höhe: 7.2 km | Speed: 696 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug AEE907",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.7362,
-      "lon": 32.9632,
-      "lng": 32.9632,
+      "lat": 34.7594,
+      "lon": 32.5817,
+      "lng": 32.5817,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AEE907 | Höhe: 5.1 km | Speed: 653 km/h",
+      "description": "Callsign: AEE907 | Höhe: 6.5 km | Speed: 672 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug GAF107",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 30.938,
-      "lon": 33.4127,
-      "lng": 33.4127,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: GAF107 | Höhe: 9.1 km | Speed: 728 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug DKH1575",
+      "name": "Flug CRK605",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.1947,
-      "lon": 118.859,
-      "lng": 118.859,
+      "lat": 22.3273,
+      "lon": 117.1605,
+      "lng": 117.1605,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: DKH1575 | Höhe: 11.0 km | Speed: 857 km/h",
+      "description": "Callsign: CRK605 | Höhe: 11.0 km | Speed: 847 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CRK619",
+      "name": "Flug HKC963",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.596,
-      "lon": 122.053,
-      "lng": 122.053,
+      "lat": 24.9742,
+      "lon": 121.2472,
+      "lng": 121.2472,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CRK619 | Höhe: 11.0 km | Speed: 822 km/h",
+      "description": "Callsign: HKC963 | Höhe: 12.2 km | Speed: 871 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -127,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "The date is in the future** relative to my knowledge, and several items are clearly synthetic or speculative rather than reported events — e.g., a Charlie Kirk assassination at UVU, a Trump proposal for $5,000 per adult if Republicans win midterms, and a Nepal \"umsturz\" (coup/revolt) anniversary dated 8 September 2025. None of these correspond to real events I can verify.",
-    "Some items mix real and fictional elements.** The CVE IDs (Fortinet, Citrix NetScaler) resemble real KEV catalog entries but with future/wrong identifiers. The ICIJ item references real reporting (FinCEN Files, 2020) but attaches it to a hypothetical Venezuela oil-deal story.",
-    "One item is a genuine-looking boilerplate**: the NHC Tropical Weather Outlook for 10 Sep 2026 is standard template text with no active systems — the kind of routine advisory that would look identical in any year.",
-    "A placeholder is visible**: the NYT item literally says *\"TK great summary will go here\"* — a sign this is a draft or generated mock-up, not a finished wire.",
-    "Fed Speech:** Christopher Waller, a member of the Federal Reserve, delivered a speech at the Reuters NEXT Newsmaker Interview in Washington, D.C., discussing the economic outlook and his views on policy communication. Waller emphasized the importance of clear and transparent communication in guiding market expectations and managing economic stability."
+    "CVE-2026-67277**: MikroTik RouterOS – Fehlende Authentifizierung für kritische Funktion.",
+    "CVE-2026-86060**: MikroTik RouterOS – Unsachgemäße Neutralisierung von Argumenten (Delimiter).",
+    "Sicherheitslage**: Zwei große Konfliktherde (Ukraine, Libanon/Israel) dominieren die internationalen Nachrichten. Der russische Angriff auf ein Einkaufszentrum und die Zerstörung von Tyros zeigen die anhaltende Intensität.",
+    "Wirtschaft**: Die Ölpreis-Schere (Rohöl unter 100 USD, Diesel über 6 USD) ist ein starker Hinweis auf Raffineriekapazitäten oder Logistikprobleme. Die Fed-Entlastung für Community Banks ist ein klassisches Deregulierungssignal.",
+    "Cyber**: MikroTik-Schwachstellen sind ernst zu nehmen, da RouterOS weit verbreitet ist. Aktive Ausnutzung bedeutet akuten Handlungsbedarf."
   ],
   "geoscore": {
     "current_score": 72,
@@ -146,12 +124,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-10T10:22:09.043622+00:00",
+  "timestamp": "2026-09-11T10:20:05.665699+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-10T10:19:00.749619+00:00",
+    "timestamp": "2026-09-11T10:18:48.108121+00:00",
     "feeds_total": 224,
-    "feeds_successful": 119,
-    "feeds_failed": 105,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -161,7 +139,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (8 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -179,7 +157,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 8,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
