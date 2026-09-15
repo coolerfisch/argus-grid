@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds from 14.09.2026, here's a structured overview of the day's developments:\n\n## 🏦 Central Banks & Regulation\n- **Federal Reserve** seeks comment on proposed **third-party risk management guidance** and issued a statement on **community bank engagement with core service providers** — part of ongoing efforts to tighten oversight of fintech and vendor dependencies.\n\n## 🔐 Cybersecurity\n- **CISA** added three actively exploited vulnerabilities to its **KEV Catalog**:\n  - **CVE-2026-42016** — JFrog Artifactory Incorrect Authorization\n  - **CVE-2026-42018** — JFrog A...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds from 14.09.2026, here's a structured overview of the day's developments:\n\n## 🏦 Central Banks & Regulation\n- **Federal Reserve** seeks comment on proposed **third-party risk management guidance** and issued a statement on **community bank engagement with core service providers** — part of ongoing efforts to tight...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nDie Meldung **„Investigativ Net“** ist leer – dort liegt kein Feed-Eintrag vor. Hier ist die Zusammenfassung aller anderen Feeds vom 15.09.2026:\n\n**Zentralbank / Geldpolitik**\n- Fed-Gouverneur Waller spricht bei Reuters NEXT in Washington zu Konjunktur und seiner Politik-Kommunikation.\n\n**Cyber / Infrastruktur**\n- CISA nimmt eine neue Schwachstelle in den KEV-Katalog auf: **CVE-2026-76461** – SQL-Injection im Cisco Secure Email Gateway, bereits aktiv ausgenutzt.\n\n**US / Finanzen**\n- Morgan Stanley Fixed-Income-Team (5-Sterne-Fondsmanager): Langfristig lohnen sich Distressed D...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nDie Meldung **„Investigativ Net“** ist leer – dort liegt kein Feed-Eintrag vor. Hier ist die Zusammenfassung aller anderen Feeds vom 15.09.2026:\n\n**Zentralbank / Geldpolitik**\n- Fed-Gouverneur Waller spricht bei Reuters NEXT in Washington zu Konjunktur und seiner Politik-Kommunikation.\n\n**Cyber / Infrastruktur**\n- CISA nimmt eine ...",
   "key_takeaways": [
-    "Federal Reserve** seeks comment on proposed **third-party risk management guidance** and issued a statement on **community bank engagement with core service providers** — part of ongoing efforts to tighten oversight of fintech and vendor dependencies.",
-    "CISA** added three actively exploited vulnerabilities to its **KEV Catalog**:",
-    "CVE-2026-42016** — JFrog Artifactory Incorrect Authorization",
-    "CVE-2026-42018** — JFrog Artifactory Improper Authentication",
-    "CVE-2026-…** (third entry truncated)"
+    "Fed-Gouverneur Waller spricht bei Reuters NEXT in Washington zu Konjunktur und seiner Politik-Kommunikation.",
+    "CISA nimmt eine neue Schwachstelle in den KEV-Katalog auf: **CVE-2026-76461** – SQL-Injection im Cisco Secure Email Gateway, bereits aktiv ausgenutzt.",
+    "Morgan Stanley Fixed-Income-Team (5-Sterne-Fondsmanager): Langfristig lohnen sich Distressed Debt und Frontier-Local-Market-Investments.",
+    "Kyrgyzstan:** Wirtschaftsboom (+11 % im Vorjahr), u. a. als Transitroute für Waren nach Russland (NYT).",
+    "Kuba:** Schwere Krise, deutlich steigende Kriminalität – Castro-Zitat vom „sichersten Land der Welt“ wirkt hohl (NZZ)."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds from 14.09.2026, here's a structured overview of the day's developments:\n\n## 🏦 Central Banks & Regulation\n- **Federal Reserve** seeks comment on proposed **third-party risk management guidance** and issued a statement on **community bank engagement with core service providers** — part of ongoing efforts to tighten oversight of fintech and vendor dependencies.\n\n## 🔐 Cybersecurity\n- **CISA** added three actively exploited vulnerabilities to its **KEV Catalog**:\n  - **CVE-2026-42016** — JFrog Artifactory Incorrect Authorization\n  - **CVE-2026-42018** — JFrog Artifactory Improper Authentication\n  - **CVE-2026-…** (third entry truncated)\n- Organizations running JFrog Artifactory should prioritize patching.\n\n## 🇸🇪 Sweden Election\n- **NZZ**: After >90% of votes counted, the **left bloc holds a razor-thin lead**. PM **Ulf Kristersson** (centre-right) refuses to resign.\n- **Sweden Democrats** lost the most voters — but a role in government isn't fully ruled out.\n\n## 🇺🇸 US Politics & Finance\n- **Fox News**: Trump claims **China \"spies\" on the US** following a new report.\n- **WSJ / MarketWatch**: **Citigroup warns** that an **AI industry pause** could \"pull the rug out\" from the stock market — AI has been a key driver of 2026 gains.\n- **NYT World**: China's **top spy chief warns AI is a threat to Communist Party rule** — notable given Beijing's public messaging urging the US not to hype AI dangers.\n\n## 🇺🇦 Russia / Ukraine\n- **BBC**: Russia struck a **Ukrainian train** shortly after **Boris Johnson** and top European officials left the station (Polish border). Johnson condemned the strike.\n\n## 🏅 Sport\n- **FT**: The **399-team Samarkand Olympiad** begins — England off to a strong start. (Plus a chess puzzle: find Carlsen's winning move.)\n\n## 🌪️ Weather\n- **NOAA NHC**: Atlantic Tropical Weather Outlook issued — monitoring ongoing activity in the basin.\n\n---\n\n**Cross-cutting themes:**\n1. **AI risk** dominates both financial (Citigroup) and geopolitical/security (China spy chief) discourse.\n2. **Cyber vulnerabilities** with active exploitation continue at pace (JFrog Artifactory).\n3. **Political volatility** in Europe (Sweden) and continued Russia–Ukraine tensions.\n\nWant me to dig deeper into any specific feed — e.g., the CVE details, the Swedish coalition math, or the Citigroup AI warning?\n\nMACRO:\n### Daily News Summary (14.09.2026)\n\n#### **Economic and Financial News**\n- **Federal Reserve**: The Federal Reserve and other agencies are seeking public comment on proposed third-party risk management guidance and have issued a statement on community bank engagement with core service providers. (Source: Federal Reserve Press)\n- **Citigroup Warning**: Citigroup cautions that a slowdown in artificial intelligence (AI) model developments could lead to revised earnings, which have been a key factor in stock market gains this year. (Source: Wall Street Journal)\n- **Samarkand Olympiad**: The 399-team Samarkand Olympiad begins, with England needing a strong start. (Source: Financial Times)\n\n#### **Cyber and Infrastructure**\n- **CISA Alerts**: The Cybersecurity and Infrastructure Security Agency (CISA) has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog due to active exploitation:\n  - CVE-2026-42016: JFrog Artifactory Incorrect Authorization Vulnerability\n  - CVE-2026-42018: JFrog Artifactory Improper Authentication Vulnerability (Source: CISA Cyber Alerts)\n\n#### **Political News**\n- **Swedish Elections**: With over 90% of the votes counted, the left-wing parties are narrowly leading in Sweden's elections. The right-wing government, led by Ulf Kristersson, faces the possibility of stepping down, though their entry into the government is not entirely ruled out. (Source: NZZ International)\n- **Trump on China**: Former U.S. President Donald Trump claims that China is spying on the U.S. following a new report. (Source: Fox News)\n- **China and AI**: China's top spy chief warns that AI poses a threat to the Communist Party's rule, despite Beijing's efforts to downplay the dangers of AI to the U.S. (Source: New York Times)\n\n#### **International News**\n- **Russia-Ukraine Conflict**: Russia launched an attack on a Ukrainian train shortly after Boris Johnson and other European officials left a station. Johnson criticized the attack, calling it \"warped logic.\" (Source: BBC World News)\n\n#### **Environmental and Investigative News**\n- **Kronospan Investigation**: Romanian prosecutors have charged two subsidiaries of global timber giant Kronospan with forging environmental records to hide toxic emissions. (Source: OCCRP)\n\n#### **Weather and Natural Disasters**\n- **Atlantic Tropical Weather Outlook**: A trough of low pressure located more than 1,000 miles east-southeast of Bermuda continues to be monitored for potential development. (Source: NOAA National Hurricane Center)\n\nThis summary provides a comprehensive overview of the key events and developments across various sectors for the day.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nDie Meldung **„Investigativ Net“** ist leer – dort liegt kein Feed-Eintrag vor. Hier ist die Zusammenfassung aller anderen Feeds vom 15.09.2026:\n\n**Zentralbank / Geldpolitik**\n- Fed-Gouverneur Waller spricht bei Reuters NEXT in Washington zu Konjunktur und seiner Politik-Kommunikation.\n\n**Cyber / Infrastruktur**\n- CISA nimmt eine neue Schwachstelle in den KEV-Katalog auf: **CVE-2026-76461** – SQL-Injection im Cisco Secure Email Gateway, bereits aktiv ausgenutzt.\n\n**US / Finanzen**\n- Morgan Stanley Fixed-Income-Team (5-Sterne-Fondsmanager): Langfristig lohnen sich Distressed Debt und Frontier-Local-Market-Investments.\n\n**Internationale Wirtschaft / Presse**\n- **Kyrgyzstan:** Wirtschaftsboom (+11 % im Vorjahr), u. a. als Transitroute für Waren nach Russland (NYT).\n- **Kuba:** Schwere Krise, deutlich steigende Kriminalität – Castro-Zitat vom „sichersten Land der Welt“ wirkt hohl (NZZ).\n- **Düngemittel:** Entspannung bei Nahrungsmittelkrise, da Exporteure außerhalb des Golfs die Lücke nach dem Iran-Krieg füllen; Lieferungen durch die Straße von Hormus brechen ein (FT).\n\n**USA / Politik & Technologie**\n- **Trump:** Bezeichnet KI-Sicherheitsbedenken als „Hoax“ und lehnt strengere Schutzvorgaben ab – Reaktion auf Anthropic-Mitgründer Jack Clark (BBC), der einen möglichen verpflichtenden KI-„Kill Switch“ ins Spiel brachte.\n- **Data Center:** Trumps Rechenzentrums-Vorstoß spaltet den Kongress; lokaler Widerstand wegen Wasser- und Stromverbrauch, Demokraten fordern Einschränkungen, Republikaner betonen KI-Wettlauf und lokale Kontrolle (Fox News).\n\n**Wetter / Extreme**\n- NOAA: Tiefdruckrinne östlich-südöstlich von Bermuda, derzeit disorganisiert – Beobachtung im zentralen subtropischen Atlantik.\n\n**Hinweis:** Der Feed „Investigativ Net“ enthält keine Daten – falls dort etwas erscheinen sollte, bitte erneut senden.\n\nMACRO:\n**Key Points from Today's Feeds (15.09.2026):**\n\n1. **Federal Reserve Speech**:\n   - **Speaker**: Christopher Waller\n   - **Event**: Reuters NEXT Newsmaker Interview\n   - **Key Takeaways**: Waller discussed the economic outlook and provided insights into his policy communication strategy. He likely addressed current economic conditions, inflation, and the Fed's stance on monetary policy.\n\n2. **CISA Cyber Alert**:\n   - **Vulnerability Added**: CVE-2026-76461\n   - **Description**: SQL Injection vulnerability in Cisco Secure Email Gateway\n   - **Impact**: Poses a significant risk as it is a common attack vector for malicious actors. Organizations are advised to patch immediately.\n\n3. **Financial Advice**:\n   - **Source**: Wall Street Journal\n   - **Topic**: Best way to invest in bonds for the long term\n   - **Key Insights**: A fixed-income team at Morgan Stanley recommends investing in distressed debt and frontier local markets to achieve solid returns.\n\n4. **Kyrgyzstan Economy**:\n   - **Source**: New York Times World\n   - **Highlights**: Kyrgyzstan's economy grew by 11% last year, partly due to its role as a key conduit for goods flowing into Russia amid the war in Ukraine.\n\n5. **Cuban Security Concerns**:\n   - **Source**: NZZ International\n   - **Context**: Cuba is experiencing a significant rise in criminal activity, leading to a decline in public safety. The crisis on the island is exacerbating these issues.\n\n6. **AI Safety Fears**:\n   - **Source**: BBC World News\n   - **Statement**: President Trump calls AI safety concerns a \"hoax\" and rejects calls for greater safeguards. This comes after Jack Clark, co-founder of Anthropic, suggested that an AI \"kill switch\" might need to be mandatory.\n\n7. **Food Crisis**:\n   - **Source**: Financial Times\n   - **Context**: Fears over a food crisis are easing as fertiliser exporters outside the Gulf are filling the gap left by the Iran war. Countries like India and China are increasing their market share of urea exports.\n\n8. **Data Center Controversy**:\n   - **Source**: Fox News\n   - **Issue**: Trump's push for data centers is causing friction in Congress. Democrats are concerned about water use and electricity bills, while Republicans highlight the benefits of AI and local control.\n\n9. **Atlantic Weather Outlook**:\n   - **Source**: NOAA National Hurricane Center\n   - **Summary**: A trough of low pressure east-southeast of Bermuda is producing disorganized showers and thunderstorms. The potential for development is being monitored.\n\n10. **Chinese Banking and High-Risk Clients**:\n    - **Source**: ICIJ (Panama/Pandora Papers)\n    - **Findings**: Confidential records show that the Industrial and Commercial Bank of China's London units have served firms linked to oligarchs and autocrats, aiming to secure resources and alliances for China's strategic goals.\n\n11. **Cyber-Espionage and Hack-for-Hire Firms**:\n    - **Source**: Citizen Lab\n    - **Action**: Bipartisan group of U.S. lawmakers is calling for sanctions on several hack-for-hire firms due to their involvement in cyber espionage and surveillance activities.\n\nThese highlights provide a comprehensive overview of today's key developments across various sectors, including economics, cybersecurity, geopolitics, and technology.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT417M",
+      "name": "Flug PGT38BF",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.5617,
-      "lon": 27.0674,
-      "lng": 27.0674,
+      "lat": 42.4925,
+      "lon": 26.8103,
+      "lng": 26.8103,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT417M | Höhe: 9.4 km | Speed: 860 km/h",
+      "description": "Callsign: PGT38BF | Höhe: 10.2 km | Speed: 832 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT470B",
+      "name": "Flug WZZ9UF",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.5711,
-      "lon": 28.6939,
-      "lng": 28.6939,
+      "lat": 44.2161,
+      "lon": 26.6819,
+      "lng": 26.6819,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT470B | Höhe: 8.0 km | Speed: 742 km/h",
+      "description": "Callsign: WZZ9UF | Höhe: 8.5 km | Speed: 758 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XBEC",
+      "name": "Flug AXB374",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.8282,
-      "lon": 34.6689,
-      "lng": 34.6689,
+      "lat": 26.3366,
+      "lon": 50.8371,
+      "lng": 50.8371,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XBEC | Höhe: 0.4 km | Speed: 177 km/h",
+      "description": "Callsign: AXB374 | Höhe: 2.2 km | Speed: 553 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug IAW102",
+      "name": "Flug T7AWK",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 29.5959,
-      "lon": 33.764,
-      "lng": 33.764,
+      "lat": 33.7581,
+      "lon": 36.5177,
+      "lng": 36.5177,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: IAW102 | Höhe: 10.7 km | Speed: 902 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug THA635",
-      "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.0846,
-      "lon": 119.7789,
-      "lng": 119.7789,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: THA635 | Höhe: 11.1 km | Speed: 900 km/h",
+      "description": "Callsign: T7AWK | Höhe: 10.7 km | Speed: 831 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug DKH1365",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.8074,
-      "lon": 118.3744,
-      "lng": 118.3744,
+      "lat": 25.246,
+      "lon": 120.0855,
+      "lng": 120.0855,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: DKH1365 | Höhe: 11.0 km | Speed: 808 km/h",
+      "description": "Callsign: DKH1365 | Höhe: 9.8 km | Speed: 831 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug CQH8949",
+      "region": "Taiwan-Straße / Ostasien",
+      "lat": 23.7199,
+      "lon": 117.0846,
+      "lng": 117.0846,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: CQH8949 | Höhe: 9.2 km | Speed: 855 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Federal Reserve** seeks comment on proposed **third-party risk management guidance** and issued a statement on **community bank engagement with core service providers** — part of ongoing efforts to tighten oversight of fintech and vendor dependencies.",
-    "CISA** added three actively exploited vulnerabilities to its **KEV Catalog**:",
-    "CVE-2026-42016** — JFrog Artifactory Incorrect Authorization",
-    "CVE-2026-42018** — JFrog Artifactory Improper Authentication",
-    "CVE-2026-…** (third entry truncated)"
+    "Fed-Gouverneur Waller spricht bei Reuters NEXT in Washington zu Konjunktur und seiner Politik-Kommunikation.",
+    "CISA nimmt eine neue Schwachstelle in den KEV-Katalog auf: **CVE-2026-76461** – SQL-Injection im Cisco Secure Email Gateway, bereits aktiv ausgenutzt.",
+    "Morgan Stanley Fixed-Income-Team (5-Sterne-Fondsmanager): Langfristig lohnen sich Distressed Debt und Frontier-Local-Market-Investments.",
+    "Kyrgyzstan:** Wirtschaftsboom (+11 % im Vorjahr), u. a. als Transitroute für Waren nach Russland (NYT).",
+    "Kuba:** Schwere Krise, deutlich steigende Kriminalität – Castro-Zitat vom „sichersten Land der Welt“ wirkt hohl (NZZ)."
   ],
   "geoscore": {
     "current_score": 72,
@@ -124,12 +124,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-14T11:21:17.769993+00:00",
+  "timestamp": "2026-09-15T10:45:53.872941+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-14T11:20:16.963777+00:00",
+    "timestamp": "2026-09-15T10:44:53.456503+00:00",
     "feeds_total": 224,
-    "feeds_successful": 115,
-    "feeds_failed": 109,
+    "feeds_successful": 113,
+    "feeds_failed": 111,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
