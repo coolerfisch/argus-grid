@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feed snapshot you've provided (dated 17.09.2026), here's a structured briefing of what's notable:\n\n## Key Themes Across the Feeds\n\n**1. US Diplomacy Under Strain / Allied Realignment**\n- **Canada–EU pact** (NYT): PM Mark Carney is pushing for an EU-Canada alliance explicitly framed as protecting \"sovereignty and independence\" amid a historic low in US-Canada ties. This pairs with the FT's \"chattering central bankers\" piece — signaling a broader theme of Western allies hedging against US unpredictability.\n- **Fed FOMC statement** (Zentralbank): A new FOMC statemen...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feed snapshot you've provided (dated 17.09.2026), here's a structured briefing of what's notable:\n\n## Key Themes Across the Feeds\n\n**1. US Diplomacy Under Strain / Allied Realignment**\n- **Canada–EU pact** (NYT): PM Mark Carney is pushing for an EU-Canada alliance explicitly framed as protecting \"sovereignty and indep...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the data feed provided for **18 September 2026**, here is a structured summary and analysis of the key developments:\n\n---\n\n## 1. Central Banking & Monetary Policy\n**Fed Speeches & Minutes — Waller, *The Economic Outlook and Some Comments on My Policy Communication***\n- **Source:** Federal Reserve / Reuters NEXT Newsmaker Interview, Washington, D.C.\n- **Key takeaway:** Fed Governor Waller is speaking publicly at a Reuters event, addressing both the economic outlook and his own communication approach. This signals ongoing internal Fed debate about forward guidance and...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the data feed provided for **18 September 2026**, here is a structured summary and analysis of the key developments:\n\n---\n\n## 1. Central Banking & Monetary Policy\n**Fed Speeches & Minutes — Waller, *The Economic Outlook and Some Comments on My Policy Communication***\n- **Source:** Federal Reserve / Reuters NEXT Newsmaker ...",
   "key_takeaways": [
-    "Canada–EU pact** (NYT): PM Mark Carney is pushing for an EU-Canada alliance explicitly framed as protecting \"sovereignty and independence\" amid a historic low in US-Canada ties. This pairs with the FT's \"chattering central bankers\" piece — signaling a broader theme of Western allies hedging against US unpredictability.",
-    "Fed FOMC statement** (Zentralbank): A new FOMC statement is out, though the feed doesn't give the content — worth checking for rate stance and any political-pressure subtext (the FT piece on \"Warsh's task force\" hints at internal Fed debate).",
-    "NZZ**: China is expanding exit restrictions — even Chinese passport holders can't assume they can leave. Justified on national security grounds. This is a significant escalation in mobility control.",
-    "ICIJ**: UK Parliament is debating infrastructure security following \"China Capital\" revelations, with ICBC (Industrial and Commercial Bank of China) identified as a financing hub. This suggests Chinese capital in critical UK infrastructure is now a live political issue.",
-    "CISA KEV**: Added **CVE-2026-58704**, an improper authorization vuln in **Google Pixel** devices, with evidence of active exploitation. Mobile device auth bypass = high risk for targeted attacks."
+    "Source:** Federal Reserve / Reuters NEXT Newsmaker Interview, Washington, D.C.",
+    "Key takeaway:** Fed Governor Waller is speaking publicly at a Reuters event, addressing both the economic outlook and his own communication approach. This signals ongoing internal Fed debate about forward guidance and transparency.",
+    "Market implication:** Watch for signals on the rate path and any hints of dissent within the FOMC, especially given the WSJ piece below.",
+    "Threat:** An attacker on the **same network segment** can send specially crafted packets under specific timing conditions to **tamper with communication data**, potentially causing a denial of service (de) — likely \"denial of service\" or \"denial of communication.\"",
+    "Relevance:** This is an industrial control system (ICS) vulnerability. Affected environments include manufacturing, energy, and critical infrastructure. Segment isolation and network monitoring are key mitigations."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feed snapshot you've provided (dated 17.09.2026), here's a structured briefing of what's notable:\n\n## Key Themes Across the Feeds\n\n**1. US Diplomacy Under Strain / Allied Realignment**\n- **Canada–EU pact** (NYT): PM Mark Carney is pushing for an EU-Canada alliance explicitly framed as protecting \"sovereignty and independence\" amid a historic low in US-Canada ties. This pairs with the FT's \"chattering central bankers\" piece — signaling a broader theme of Western allies hedging against US unpredictability.\n- **Fed FOMC statement** (Zentralbank): A new FOMC statement is out, though the feed doesn't give the content — worth checking for rate stance and any political-pressure subtext (the FT piece on \"Warsh's task force\" hints at internal Fed debate).\n\n**2. China Tightening Controls**\n- **NZZ**: China is expanding exit restrictions — even Chinese passport holders can't assume they can leave. Justified on national security grounds. This is a significant escalation in mobility control.\n- **ICIJ**: UK Parliament is debating infrastructure security following \"China Capital\" revelations, with ICBC (Industrial and Commercial Bank of China) identified as a financing hub. This suggests Chinese capital in critical UK infrastructure is now a live political issue.\n\n**3. Cybersecurity**\n- **CISA KEV**: Added **CVE-2026-58704**, an improper authorization vuln in **Google Pixel** devices, with evidence of active exploitation. Mobile device auth bypass = high risk for targeted attacks.\n\n**4. Middle East / Syria**\n- **BBC**: Investigative finding that Austin Tice's kidnapping was approved by Bashar al-Assad — a major accountability revelation regarding the US journalist's abduction.\n\n**5. US Domestic Politics**\n- **Fox News**: Kamala Harris is campaigning with Abdul El-Sayed in Michigan, fueling 2028 speculation. Notable as an early signal of the post-2024 Democratic realignment.\n\n**6. Extreme Weather**\n- **NOAA**: System **AL98** in the Central Subtropical Atlantic is organizing — a watch item for Caribbean/Gulf tracks.\n\n**7. Personal Finance / Social Security**\n- **WSJ/MarketWatch**: A reader question about a widower claiming Social Security based on a high-earning deceased spouse — a reminder of survivor-benefit rules.\n\n---\n\nIf you'd like, I can:\n- Deep-dive any single item (e.g., the FOMC implications, CVE-2026-58704 risks, or China's exit restrictions),\n- Draft a headline summary or risk dashboard, or\n- Cross-reference connections (e.g., the China infra story + Carney's EU-Canada push as a coordinated Western response).\n\nWhich thread matters most to you?\n\nMACRO:\n**Date: 17.09.2026**\n\n### Economic and Financial News\n\n- **[Zentralbank]** Federal Reserve issues FOMC statement, likely addressing current economic conditions and potential changes in monetary policy.\n- **[US/Finanzen]** The Wall Street Journal discusses a potential \"silver lining\" for a man whose high-earning wife passed away at 60, exploring Social Security benefits.\n- **[UK/Finanzen]** The Financial Times argues that \"chattering central bankers are good,\" providing data for a task force.\n- **[US/Finanzen]** Wall Street Journal: Individuals in high-earning households can potentially benefit from Social Security in the event of a spouse's early death.\n\n### Cybersecurity and Infrastructure Updates\n\n- **[Cyber / Infrastruktur]** CISA adds a new vulnerability, CVE-2026-58704, to its Known Exploited Vulnerabilities (KEV) Catalog, highlighting an improper authorization issue in Google Pixel devices.\n- **[Investigativ Net]** ICIJ and its partners reveal that Chinese bank ICBC has been a significant financing hub for infrastructure in the UK and Australia, prompting concerns over Beijing's influence.\n- **[Cyber-Espionage]** Citizen Lab reports that bipartisan lawmakers are calling for the U.S. government to ban several hack-for-hire firms, citing a recent report on cyber espionage.\n\n### International and Political News\n\n- **[CH/Presse]** China tightens exit restrictions, affecting even those with Chinese passports, citing national security.\n- **[UK/Medien]** The BBC finds evidence that the Assad regime planned the kidnapping of U.S. journalist Austin Tice, with the former leader's approval.\n- **[US/Presse]** Prime Minister Mark Carney of Canada calls for an E.U.-Canada pact to secure sovereignty and independence, amid strained U.S.-Canada relations.\n- **[US/Politik]** Vice President Kamala Harris supports radical Senate nominee Abdul El-Sayed at a Michigan fundraiser, raising speculation about a potential 2028 presidential run.\n\n### Weather and Environmental News\n\n- **[Wetter/Extreme]** The National Hurricane Center provides an Atlantic Tropical Weather Outlook, noting the organization of showers and thunderstorms in the Central Subtropical Atlantic.\n\n### Health and Medical News\n\n- **[Medizin]** The CDC releases a health update, potentially addressing recent health concerns or outbreaks.\n\n### Additional Information\n\n- **[UK/Medien]** The BBC's findings on the Assad regime's involvement in the kidnapping of Austin Tice highlight the ongoing tensions and human rights abuses in Syria.\n- **[Investigativ Net]** The ICIJ revelations about Chinese bank ICBC's role in financing infrastructure projects in the U.K. and Australia raise significant geopolitical and security concerns.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the data feed provided for **18 September 2026**, here is a structured summary and analysis of the key developments:\n\n---\n\n## 1. Central Banking & Monetary Policy\n**Fed Speeches & Minutes — Waller, *The Economic Outlook and Some Comments on My Policy Communication***\n- **Source:** Federal Reserve / Reuters NEXT Newsmaker Interview, Washington, D.C.\n- **Key takeaway:** Fed Governor Waller is speaking publicly at a Reuters event, addressing both the economic outlook and his own communication approach. This signals ongoing internal Fed debate about forward guidance and transparency.\n- **Market implication:** Watch for signals on the rate path and any hints of dissent within the FOMC, especially given the WSJ piece below.\n\n---\n\n## 2. Cyber / Infrastructure Security\n**CISA Alert — Mitsubishi Electric CC-Link IE TSN Communication Protocol (Update A)**\n- **Threat:** An attacker on the **same network segment** can send specially crafted packets under specific timing conditions to **tamper with communication data**, potentially causing a denial of service (de) — likely \"denial of service\" or \"denial of communication.\"\n- **Relevance:** This is an industrial control system (ICS) vulnerability. Affected environments include manufacturing, energy, and critical infrastructure. Segment isolation and network monitoring are key mitigations.\n\n---\n\n## 3. US Economy & Markets\n**WSJ / MarketWatch — *The Fed's never been so confident on economic growth. What investors should do now, according to KKR.***\n- FOMC members show **lowest level of worry about GDP growth** since the Fed began releasing its outlook.\n- KKR offers investor guidance — likely favoring **pro-cyclical exposure, equities, and credit** over defensive positioning.\n- **Contrast:** This optimism sits alongside the Fed communication focus from Waller, raising the question of whether markets are pricing in a \"no landing\" or \"soft landing\" scenario.\n\n**FT — Berkshire Hathaway names Howard Buffett as chair**\n- **Warren Buffett** transitions to **chair emeritus**; Howard Buffett becomes chair.\n- **Significance:** Succession clarity for Berkshire. Warren Buffett remains involved in an emeritus capacity, but this marks a formal generational shift in the conglomerate's leadership structure.\n\n---\n\n## 4. US Politics & Media\n**Fox News — Judge Judy warns of 'danger' if prosecutors don't retry Lindsay Clancy**\n- Judge Judy Sheindlin comments on the **Lindsay Clancy murder mistrial** in Massachusetts.\n- **Context:** Clancy is accused of killing her three children. The mistrial raises legal and public-safety questions. Sheindlin argues for a retrial.\n- **Media angle:** High-profile true-crime case intersecting with judicial commentary and public opinion.\n\n---\n\n## 5. UK / International Media\n**BBC — Three dead and eight injured in Philippines school shooting**\n- **Third school shooting in the Philippines since June.**\n- **Gunman among the dead.**\n- Raises urgent questions about **gun control, school security, and regional instability** in the Philippines.\n\n---\n\n## 6. Switzerland / Russia\n**NZZ International — Russia's election result is practically certain. What's interesting is what has changed anyway.**\n- Russia votes for a new **Duma** this weekend. Opposition is largely excluded.\n- **Key insight:** Since the last Duma election, **the war has become noticeably more present in daily life**, unsettling the population.\n- **Implication:** Even without electoral uncertainty, the **social and economic toll of the war** is shaping Russian domestic dynamics — a factor for European security and energy markets.\n\n---\n\n## 7. Germany / Culture & Politics\n**NYT World — German Art Institutions Prepare for a Fight as Far Right Looks to Take Power**\n- **AfD (Alternative for Germany)** is seeking to control a **state government** for the first time.\n- The party's push for **\"patriotic\" art** has drawn comparisons with **Nazi cultural policies**.\n- **Significance:** Cultural institutions are bracing for political interference. This is a bellwether for how the AfD might govern and influence civil society at the state level.\n\n---\n\n## 8. Weather / Extreme Events\n**NOAA National Hurricane Center — Atlantic Tropical Weather Outlook**\n- **AL98 (Central Subtropical Atlantic):** Showers and thunderstorms associated with a disturbance.\n- **Status:** Under watch for potential development.\n- **Relevance:** Atlantic hurricane season remains active. Any development could affect shipping, energy infrastructure, or coastal populations depending on track.\n\n---\n\n## Cross-Cutting Themes\n| Theme | Signals |\n|-------|---------|\n| **Fed confidence vs. communication** | Waller speech + WSJ/KKR piece suggest a Fed comfortable with growth, but still refining its messaging. |\n| **Industrial cybersecurity** | Mitsubishi protocol flaw highlights ongoing ICS/OT risk. |\n| **Succession & leadership** | Berkshire's chair transition is a major corporate governance event. |\n| **Political volatility** | AfD in Germany, Russia's Duma election, and US judicial controversies all point to heightened political risk. |\n| **Public safety** | Philippines school shooting adds to global concerns about violence in schools. |\n| **Climate/weather** | Atlantic disturbance AL98 warrants monitoring. |\n\n---\n\n**Bottom line:** The 18 September 2026 feed shows a world balancing **economic optimism (Fed, KKR)** against **persistent political, security, and climate risks** — from Russian war fatigue and German far-right cultural battles to ICS vulnerabilities and Atlantic storm activity. Berkshire's leadership change adds a long-anticipated corporate succession milestone.\n\nMACRO:\n### Summary of Key Feeds for 18.09.2026\n\n#### **Economic and Financial News**\n- **Fed Speeches & Minutes:**\n  - **Speaker:** Christopher Waller\n  - **Event:** Reuters NEXT Newsmaker Interview, Washington, D.C.\n  - **Content:** Waller discussed the economic outlook and policy communication. The Federal Open Market Committee (FOMC) members showed their lowest level of worry about GDP growth since the first release of economic forecasts.\n\n- **Wall Street Journal (MarketWatch):**\n  - **Topic:** Fed Confidence and Investor Strategy\n  - **Content:** The FOMC is more optimistic about economic growth. KKR suggests that investors should take note and adjust their strategies accordingly.\n\n- **Financial Times:**\n  - **Topic:** Berkshire Hathaway Leadership\n  - **Content:** Howard Buffett has been named the new chair of Berkshire Hathaway, while Warren Buffett will take on the role of chair emeritus.\n\n#### **Political and Social News**\n- **New York Times:**\n  - **Topic:** German Art Institutions\n  - **Content:** German art institutions are preparing to oppose far-right efforts to control state governments, with the Alternative for Germany (AfD) party pushing for \"patriotic\" art, drawing comparisons to Nazi policies.\n\n- **Fox News:**\n  - **Topic:** Judicial Commentary\n  - **Content:** Judge Judy Sheindlin warned of the \"danger\" if prosecutors do not retry Lindsay Clancy, the Massachusetts mother accused of killing her three children, after her murder trial ended in a mistrial.\n\n- **NZZ International:**\n  - **Topic:** Russian Elections\n  - **Content:** Despite the exclusion of the opposition, Russia is holding parliamentary elections. The war in Ukraine has made a significant impact on daily life, causing uncertainty among the population.\n\n#### **International and Security News**\n- **BBC World News:**\n  - **Topic:** Philippines School Shooting\n  - **Content:** Three people are dead and eight are injured in a school shooting in the Philippines. The gunman is among the dead. This is the third school shooting in the country since June.\n\n- **ICIJ (Panama/Pandora Papers):**\n  - **Topic:** Infrastructure Security\n  - **Content:** ICIJ and its media partners revealed that the Chinese bank ICBC has been a significant financing hub for infrastructure projects in the U.K. and Australia, raising questions about Beijing's influence on public projects.\n\n#### **Health and Environmental News**\n- **CDC Health Updates:**\n  - **Topic:** Rabies Activity\n  - **Content:** The CDC issued a statement on increases in recent animal rabies activity and associated human exposures.\n\n- **NOAA National Hurricane Center:**\n  - **Topic:** Atlantic Tropical Weather Outlook\n  - **Content:** An area of low pressure in the Central Subtropical Atlantic is producing showers and thunderstorms, with a potential for development.\n\n#### **Cyber and Infrastructure**\n- **CISA Cyber Alerts:**\n  - **Topic:** Mitsubishi Electric CC-Link IE TSN Communication Protocol\n  - **Content:** A vulnerability in the Mitsubishi Electric CC-Link IE TSN Communication Protocol could allow attackers to tamper with communication data by sending specially crafted packets under specific timing conditions, potentially leading to disruption.\n\n### Key Takeaways\n- **Economic Confidence:** The Fed is more optimistic about economic growth, which could influence investor behavior.\n- **Political Tensions:** Far-right movements in Germany and the ongoing war in Ukraine are impacting cultural and political environments in Europe.\n- **Security Concerns:** Cyber vulnerabilities in industrial protocols and the influence of Chinese financing on infrastructure are raising security concerns globally.\n- **Health and Weather:** Increased rabies activity and potential tropical weather developments highlight ongoing health and environmental issues.\n\nThese insights provide a comprehensive overview of the day's key events and trends.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,91 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT706H",
+      "name": "Flug ENT1RX",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.3355,
-      "lon": 29.1643,
-      "lng": 29.1643,
+      "lat": 44.2761,
+      "lon": 28.0253,
+      "lng": 28.0253,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT706H | Höhe: 6.0 km | Speed: 714 km/h",
+      "description": "Callsign: ENT1RX | Höhe: 9.8 km | Speed: 828 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT89XR",
+      "name": "Flug PGT35BN",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.568,
-      "lon": 29.0816,
-      "lng": 29.0816,
+      "lat": 40.6528,
+      "lon": 28.804,
+      "lng": 28.804,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT89XR | Höhe: 7.6 km | Speed: 748 km/h",
+      "description": "Callsign: PGT35BN | Höhe: 2.2 km | Speed: 439 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WMT9BW",
+      "name": "Flug GAFMED1",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 46.109,
+      "lon": 25.7647,
+      "lng": 25.7647,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: GAFMED1 | Höhe: 4.8 km | Speed: 544 km/h",
+      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
+    },
+    {
+      "name": "Flug DUKE95",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 40.9455,
+      "lon": 27.3207,
+      "lng": 27.3207,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: DUKE95 | Höhe: 9.1 km | Speed: 734 km/h",
+      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
+    },
+    {
+      "name": "Flug AXB927",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.76,
-      "lon": 33.0826,
-      "lng": 33.0826,
+      "lat": 26.5957,
+      "lon": 51.2835,
+      "lng": 51.2835,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WMT9BW | Höhe: 9.5 km | Speed: 775 km/h",
+      "description": "Callsign: AXB927 | Höhe: 10.4 km | Speed: 850 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XDAN",
+      "name": "Flug AUA7HV",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.3355,
-      "lon": 35.3878,
-      "lng": 35.3878,
+      "lat": 34.8078,
+      "lon": 33.5433,
+      "lng": 33.5433,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XDAN | Höhe: 1.5 km | Speed: 161 km/h",
+      "description": "Callsign: AUA7HV | Höhe: 0.5 km | Speed: 304 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CSH809",
+      "name": "Flug CSN3562",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.9998,
-      "lon": 119.4734,
-      "lng": 119.4734,
+      "lat": 23.6215,
+      "lon": 116.7374,
+      "lng": 116.7374,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSH809 | Höhe: 10.4 km | Speed: 837 km/h",
+      "description": "Callsign: CSN3562 | Höhe: 9.5 km | Speed: 922 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "ADS-B Signal 781BFE",
+      "name": "Flug THA631",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 27.1322,
-      "lon": 121.3017,
-      "lng": 121.3017,
+      "lat": 22.3175,
+      "lon": 120.1763,
+      "lng": 120.1763,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: Unbekannt | Höhe: 9.2 km | Speed: 828 km/h",
+      "description": "Callsign: THA631 | Höhe: 3.2 km | Speed: 589 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,11 +127,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Canada–EU pact** (NYT): PM Mark Carney is pushing for an EU-Canada alliance explicitly framed as protecting \"sovereignty and independence\" amid a historic low in US-Canada ties. This pairs with the FT's \"chattering central bankers\" piece — signaling a broader theme of Western allies hedging against US unpredictability.",
-    "Fed FOMC statement** (Zentralbank): A new FOMC statement is out, though the feed doesn't give the content — worth checking for rate stance and any political-pressure subtext (the FT piece on \"Warsh's task force\" hints at internal Fed debate).",
-    "NZZ**: China is expanding exit restrictions — even Chinese passport holders can't assume they can leave. Justified on national security grounds. This is a significant escalation in mobility control.",
-    "ICIJ**: UK Parliament is debating infrastructure security following \"China Capital\" revelations, with ICBC (Industrial and Commercial Bank of China) identified as a financing hub. This suggests Chinese capital in critical UK infrastructure is now a live political issue.",
-    "CISA KEV**: Added **CVE-2026-58704**, an improper authorization vuln in **Google Pixel** devices, with evidence of active exploitation. Mobile device auth bypass = high risk for targeted attacks."
+    "Source:** Federal Reserve / Reuters NEXT Newsmaker Interview, Washington, D.C.",
+    "Key takeaway:** Fed Governor Waller is speaking publicly at a Reuters event, addressing both the economic outlook and his own communication approach. This signals ongoing internal Fed debate about forward guidance and transparency.",
+    "Market implication:** Watch for signals on the rate path and any hints of dissent within the FOMC, especially given the WSJ piece below.",
+    "Threat:** An attacker on the **same network segment** can send specially crafted packets under specific timing conditions to **tamper with communication data**, potentially causing a denial of service (de) — likely \"denial of service\" or \"denial of communication.\"",
+    "Relevance:** This is an industrial control system (ICS) vulnerability. Affected environments include manufacturing, energy, and critical infrastructure. Segment isolation and network monitoring are key mitigations."
   ],
   "geoscore": {
     "current_score": 72,
@@ -124,12 +146,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-17T10:43:45.242238+00:00",
+  "timestamp": "2026-09-18T10:19:44.969537+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-17T10:42:50.609894+00:00",
+    "timestamp": "2026-09-18T10:18:27.468177+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 114,
+    "feeds_failed": 110,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -139,7 +161,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (8 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -157,7 +179,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 6,
+    "hotspots_now": 8,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
