@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nHere is a summary of the key developments from your September 20, 2026 feed:\n\n**Finance & Markets**\n- **Fed Speech:** Governor Bowman is presenting initial findings from an independent review of the Silicon Valley Bank collapse, speaking in London.\n- **Crypto Warning:** A MarketWatch reader reports investing $1.1 million in a crypto platform on the advice of a major NY investment bank EVP, and fears the $20 million balance may be lost — a cautionary tale on platform risk.\n- **Georgia Senate Race:** Jon Ossoff's campaign is drawing national attention and 2028 presidential spec...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nHere is a summary of the key developments from your September 20, 2026 feed:\n\n**Finance & Markets**\n- **Fed Speech:** Governor Bowman is presenting initial findings from an independent review of the Silicon Valley Bank collapse, speaking in London.\n- **Crypto Warning:** A MarketWatch reader reports investing $1.1 million in a cryp...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feed you provided, here is a structured summary of the news as of **21.09.2026**:\n\n### 🏦 Central Banks & Finance\n- **Federal Reserve:** The Federal Reserve Board announced the termination of an enforcement action with **SNB Bancshares** and **Bank of Eufaula**.\n- **WSJ / MarketWatch:** A Warren Buffett–inspired fund manager (Rob Vinall of RV Capital) is betting big on **Chinese stocks**, citing low valuations and founder management.\n- **Financial Times:** Trump's crusade against tariff cheats may tangle up trade in red tape, straining an overburdened US customs b...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feed you provided, here is a structured summary of the news as of **21.09.2026**:\n\n### 🏦 Central Banks & Finance\n- **Federal Reserve:** The Federal Reserve Board announced the termination of an enforcement action with **SNB Bancshares** and **Bank of Eufaula**.\n- **WSJ / MarketWatch:** A Warren Buffett–inspired fund m...",
   "key_takeaways": [
-    "Fed Speech:** Governor Bowman is presenting initial findings from an independent review of the Silicon Valley Bank collapse, speaking in London.",
-    "Crypto Warning:** A MarketWatch reader reports investing $1.1 million in a crypto platform on the advice of a major NY investment bank EVP, and fears the $20 million balance may be lost — a cautionary tale on platform risk.",
-    "Georgia Senate Race:** Jon Ossoff's campaign is drawing national attention and 2028 presidential speculation as he leads in a pivotal Senate race, per the FT.",
-    "CISA KEV Additions:** Two actively exploited Linux kernel flaws added to the Known Exploited Vulnerabilities catalog:",
-    "CVE-2025-39964 — Race condition"
+    "Federal Reserve:** The Federal Reserve Board announced the termination of an enforcement action with **SNB Bancshares** and **Bank of Eufaula**.",
+    "WSJ / MarketWatch:** A Warren Buffett–inspired fund manager (Rob Vinall of RV Capital) is betting big on **Chinese stocks**, citing low valuations and founder management.",
+    "Financial Times:** Trump's crusade against tariff cheats may tangle up trade in red tape, straining an overburdened US customs bureaucracy.",
+    "CISA KEV Catalog:** Two new vulnerabilities added based on evidence of active exploitation:",
+    "CVE-2025-39964** – Linux Kernel Race Condition Vulnerability"
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nHere is a summary of the key developments from your September 20, 2026 feed:\n\n**Finance & Markets**\n- **Fed Speech:** Governor Bowman is presenting initial findings from an independent review of the Silicon Valley Bank collapse, speaking in London.\n- **Crypto Warning:** A MarketWatch reader reports investing $1.1 million in a crypto platform on the advice of a major NY investment bank EVP, and fears the $20 million balance may be lost — a cautionary tale on platform risk.\n- **Georgia Senate Race:** Jon Ossoff's campaign is drawing national attention and 2028 presidential speculation as he leads in a pivotal Senate race, per the FT.\n\n**Cybersecurity**\n- **CISA KEV Additions:** Two actively exploited Linux kernel flaws added to the Known Exploited Vulnerabilities catalog:\n  - CVE-2025-39964 — Race condition\n  - CVE-2026-53266 — Out-of-bounds write\n  - Patch priority is high given confirmed active exploitation.\n\n**Geopolitics & Diplomacy**\n- **Ukraine:** A \"massive\" Ukrainian drone attack on the Moscow region killed two people and hit a major oil refinery; Moscow's mayor claims 450 drones were downed.\n- **Greenland/US:** Danes and Greenlanders are puzzled by a new US agreement that closely resembles the existing 75-year-old arrangement — after Trump's push for control triggered the biggest NATO crisis in years.\n- **Myanmar:** Ambassador U Kyaw Moe Tun continues refusing to vacate his UN post and Upper East Side residence, more than five years on.\n\n**Royal & Media**\n- **Prince Harry:** Experts highlight a \"contradiction\" in his push for a royal upbringing for Archie and Lilibet after the palace exit, as the children start school in England.\n\n**Weather**\n- **Atlantic:** NOAA's Tropical Weather Outlook notes active systems in the Atlantic basin — a storm is being tracked (the feed cuts off mid-bulletin).\n\n**Looking for a pattern?** The green energy of the drone war, the crypto-cautionary tale, the Fed's post-mortem on SVB, and CISA's Linux alerts all point to one theme: **systems — financial, software, and geopolitical — under strain from accumulated risk.**\n\nMACRO:\nHier ist eine Kernaussage für jeden Feed:\n\n1. [Zentralbank] **Fed Speeches & Minutes**: Michelle Bowman, Mitglied der Federal Reserve, präsentiert die anfänglichen Ergebnisse einer unabhängigen Untersuchung der Silicon Valley Bank.\n\n2. [Cyber / Infrastruktur] **CISA Cyber Alerts**: CISA hat zwei neue Schwachstellen (CVE-2025-39964 und CVE-2026-53266) zum Known Exploited Vulnerabilities (KEV) Katalog hinzugefügt, da sie aktuell ausgenutzt werden.\n\n3. [US/Finanzen] **Wall Street Journal (MarketWatch Alt)**: Ein Investor fragt, ob er sein komplettes Kryptoinvestment von 1,1 Millionen Dollar verloren hat, nachdem er auf die Empfehlung eines Vizepräsidenten einer führenden Investmentbank in New York gehört hat.\n\n4. [US/Presse] **New York Times World**: Der myanmarische Diplomat U Kyaw Moe Tun weigert sich, seinen UN-Posten in New York aufzugeben, trotz der politischen Veränderungen in Myanmar.\n\n5. [US/Politik] **Fox News Latest**: Prince Harrys Versuch, seinen Kindern Archie und Lilibet eine königliche Erziehung zu ermöglichen, wirft Fragen auf, ob er das Verhältnis zu König Charles und Prince William wieder kitten kann.\n\n6. [CH/Presse] **NZZ International**: Dänemark und Grönland wundern sich über das neue Abkommen mit den USA, das Ähnlichkeiten mit dem seit 75 Jahren bestehenden Abkommen zeigt, obwohl Präsident Trump die Kontrolle über Grönland anstreben wollte.\n\n7. [UK/Medien] **BBC World News**: Zwei Menschen starben und ein großer Ölfabrik wurde getroffen, alsRussland meldet, dass 450 Drohnen während eines \"unprecedenten Angriffs\" auf das Moskauer Gebiet abgeschossen wurden.\n\n8. [UK/Finanzen] **Financial Times**: Jon Ossoffs Medienpräsenz und seine kritischen Angriffe auf den \"crooked president\" (präsidenten der USA) geben ihm einen Vorsprung in Georgias entscheidender Senatswahl und nationale Aufmerksamkeit für 2028.\n\n9. [Wetter/Extreme] **NOAA National Hurricane Center**: Der National Hurricane Center gibt eine Tropenwetteraussicht für den Nordatlantik, die Karibik und den Golf von Mexiko heraus, einschließlich der Überwachung von Tropical Depression Six.\n\n10. [Investigativ Net] **ICIJ (Panama/Pandora Papers)**: Der \"Tinder-Schwindler\" verkündet Pläne für eine neue Dating-App, die Sicherheit für Frauen sicherstellen soll, was jedoch von der führenden Online-Dating-Branchenvereinigung abgelehnt wird.\n\n11. [Medizin] **CDC Health Updates**: Die CDC veröffentlicht eine Erklärung zu steigender Rabies-Aktivität bei Tieren und damit verbundenen menschlichen Expositionen.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feed you provided, here is a structured summary of the news as of **21.09.2026**:\n\n### 🏦 Central Banks & Finance\n- **Federal Reserve:** The Federal Reserve Board announced the termination of an enforcement action with **SNB Bancshares** and **Bank of Eufaula**.\n- **WSJ / MarketWatch:** A Warren Buffett–inspired fund manager (Rob Vinall of RV Capital) is betting big on **Chinese stocks**, citing low valuations and founder management.\n- **Financial Times:** Trump's crusade against tariff cheats may tangle up trade in red tape, straining an overburdened US customs bureaucracy.\n\n### 💻 Cyber & Infrastructure\n- **CISA KEV Catalog:** Two new vulnerabilities added based on evidence of active exploitation:\n  - **CVE-2025-39964** – Linux Kernel Race Condition Vulnerability\n  - **CVE-2026-53266** – Linux Kernel Out-of-Bounds Write Vulnerability\n  - *Note: These types of vulnerabilities are frequently targeted.*\n\n### 🌍 Politics & International\n- **Germany:** Chancellor **Merz** calls the state election a \"disaster\" for his party (CDU) but vows to stay on. Exit polls show damaging losses in **Mecklenburg-Vorpommern** and **Berlin**.\n- **Russia:** In the first Duma election since the invasion of Ukraine, **United Russia** has again won an overwhelming majority. The bigger question is what the Kremlin plans next.\n- **Europe / NYT:** Challenges to identity—real and imagined—are driving Europe's far right, with populist emphasis on national identity finding deep resonance among voters.\n- **US / Fox News:** Falcons' Drake London shouted at a fan during the team's 34-3 blowout loss to the Panthers.\n\n### 🌪️ Weather & Extremes\n- **NOAA National Hurricane Center:** The NHC is issuing advisories on **Tropical Storm [name cut off]** in the Atlantic. The full outlook was truncated in your feed.\n\n---\n\n**Note:** The NOAA entry cuts off mid-sentence (\"Tropical Storm \"), so the specific storm name and details are incomplete. If you have the rest of that feed, I can incorporate it.\n\nMACRO:\n**DATUM: 21.09.2026**\n\n### Zentralbank\n- **Federal Reserve Press:**\n  - **Termination of Enforcement Action:** The Federal Reserve Board has announced the termination of enforcement action with SNB Bancshares and Bank of Eufaula.\n\n### Cyber / Infrastruktur\n- **CISA Cyber Alerts:**\n  - **New Vulnerabilities Added to KEV Catalog:**\n    - CVE-2025-39964: Linux Kernel Race Condition Vulnerability\n    - CVE-2026-53266: Linux Kernel Out-of-Bounds Write Vulnerability\n  - These vulnerabilities are frequently targeted by cyber attackers and pose significant risks to systems.\n\n### US/Finanzen\n- **Wall Street Journal (MarketWatch Alt):**\n  - **Warren Buffett–Inspired Fund Betting on Chinese Stocks:**\n  - RV Capital’s Rob Vinall is investing heavily in Chinese stocks due to low valuations and strong founder management.\n\n### US/Politik\n- **Fox News Latest:**\n  - **Drake London Shouts at Fan During Blowout Loss:**\n  - Falcons' wide receiver Drake London was seen shouting expletives at a fan during the team’s 34-3 loss to the Carolina Panthers.\n\n### CH/Presse\n- **NZZ International:**\n  - **Duma Election Confirms Putin’s War Course:**\n  - The pro-government party United Russia has won a significant majority in the State Duma. The focus is now on what the Kremlin plans next.\n\n### US/Presse\n- **New York Times World:**\n  - **Far Right in Europe Driven by Identity Challenges:**\n  - The rise of far-right movements in Europe is driven by a populist emphasis on national identity and pride, appealing to voters who feel disoriented in a rapidly changing world.\n\n### UK/Finanzen\n- **Financial Times:**\n  - **Trump’s Tariff Crusade Creates More Bureaucratic Tangle:**\n  - Another initiative by the Trump administration to combat tariff evasion may further burden an already overburdened customs bureaucracy.\n\n### UK/Medien\n- **BBC World News:**\n  - **Merz Calls State Election a 'Disaster':**\n  - German Chancellor Merz faces significant losses for his centre-right CDU party in state elections in Mecklenburg-Vorpommern and Berlin, but vows to stay in his position.\n\n### Wetter/Extreme\n- **NOAA National Hurricane Center:**\n  - **Atlantic Tropical Weather Outlook:**\n  - The National Hurricane Center is monitoring Tropical Storm Fay, located several hundred miles away. Advisories are being issued regularly.\n\n### Investigativ Net\n- **ICIJ (Panama/Pandora Papers):**\n  - **Statement on Missing Journalist Micah Reddy:**\n  - ICIJ has lost contact with its Africa coordinator, Micah Reddy, and local journalist Mohamed Willo Ismael, in Djibouti City. The organization is deeply concerned and is working to locate them.\n\n### Medizin\n- **CDC Health Updates:**\n  - **Increase in Animal Rabies Activity:**\n  - The CDC has issued a statement regarding a recent increase in animal rabies activity and associated human exposures. Public health measures are being enhanced to address the issue.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT27PU",
+      "name": "Flug PGT914H",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.0555,
-      "lon": 28.1279,
-      "lng": 28.1279,
+      "lat": 40.8791,
+      "lon": 29.4653,
+      "lng": 29.4653,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT27PU | Höhe: 5.9 km | Speed: 670 km/h",
+      "description": "Callsign: PGT914H | Höhe: 1.6 km | Speed: 512 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug SWR154",
+      "name": "Flug PGT470B",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 44.4171,
-      "lon": 26.9328,
-      "lng": 26.9328,
+      "lat": 43.6949,
+      "lon": 25.2735,
+      "lng": 25.2735,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: SWR154 | Höhe: 11.3 km | Speed: 876 km/h",
+      "description": "Callsign: PGT470B | Höhe: 10.4 km | Speed: 782 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JAV1195",
+      "name": "Flug DUKE75",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 44.4508,
+      "lon": 28.0947,
+      "lng": 28.0947,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: DUKE75 | Höhe: 7.6 km | Speed: 298 km/h",
+      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
+    },
+    {
+      "name": "Flug AIC2029",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 30.1144,
-      "lon": 35.4349,
-      "lng": 35.4349,
+      "lat": 26.3468,
+      "lon": 51.5958,
+      "lng": 51.5958,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JAV1195 | Höhe: 9.1 km | Speed: 832 km/h",
+      "description": "Callsign: AIC2029 | Höhe: 11.0 km | Speed: 911 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XBOI",
+      "name": "Flug AEE904",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.8295,
-      "lon": 35.0139,
-      "lng": 35.0139,
+      "lat": 34.9317,
+      "lon": 33.2236,
+      "lng": 33.2236,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XBOI | Höhe: 1.0 km | Speed: 243 km/h",
+      "description": "Callsign: AEE904 | Höhe: 2.5 km | Speed: 567 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug APG133",
+      "name": "Flug THA635",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.9001,
-      "lon": 120.6849,
-      "lng": 120.6849,
+      "lat": 22.0146,
+      "lon": 117.99,
+      "lng": 117.99,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: APG133 | Höhe: 6.0 km | Speed: 723 km/h",
+      "description": "Callsign: THA635 | Höhe: 13.1 km | Speed: 877 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PAL331",
+      "name": "Flug CSN6480",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 19.7429,
-      "lon": 116.9697,
-      "lng": 116.9697,
+      "lat": 26.1167,
+      "lon": 119.5128,
+      "lng": 119.5128,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PAL331 | Höhe: 10.1 km | Speed: 876 km/h",
+      "description": "Callsign: CSN6480 | Höhe: 9.2 km | Speed: 835 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,11 +116,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Fed Speech:** Governor Bowman is presenting initial findings from an independent review of the Silicon Valley Bank collapse, speaking in London.",
-    "Crypto Warning:** A MarketWatch reader reports investing $1.1 million in a crypto platform on the advice of a major NY investment bank EVP, and fears the $20 million balance may be lost — a cautionary tale on platform risk.",
-    "Georgia Senate Race:** Jon Ossoff's campaign is drawing national attention and 2028 presidential speculation as he leads in a pivotal Senate race, per the FT.",
-    "CISA KEV Additions:** Two actively exploited Linux kernel flaws added to the Known Exploited Vulnerabilities catalog:",
-    "CVE-2025-39964 — Race condition"
+    "Federal Reserve:** The Federal Reserve Board announced the termination of an enforcement action with **SNB Bancshares** and **Bank of Eufaula**.",
+    "WSJ / MarketWatch:** A Warren Buffett–inspired fund manager (Rob Vinall of RV Capital) is betting big on **Chinese stocks**, citing low valuations and founder management.",
+    "Financial Times:** Trump's crusade against tariff cheats may tangle up trade in red tape, straining an overburdened US customs bureaucracy.",
+    "CISA KEV Catalog:** Two new vulnerabilities added based on evidence of active exploitation:",
+    "CVE-2025-39964** – Linux Kernel Race Condition Vulnerability"
   ],
   "geoscore": {
     "current_score": 72,
@@ -124,12 +135,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-20T10:22:16.040054+00:00",
+  "timestamp": "2026-09-21T11:35:07.212636+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-20T10:21:06.591792+00:00",
+    "timestamp": "2026-09-21T11:33:48.356606+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 119,
+    "feeds_failed": 105,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -139,7 +150,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (7 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -157,7 +168,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 6,
+    "hotspots_now": 7,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
