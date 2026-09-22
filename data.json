@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feed you provided, here is a structured summary of the news as of **21.09.2026**:\n\n### 🏦 Central Banks & Finance\n- **Federal Reserve:** The Federal Reserve Board announced the termination of an enforcement action with **SNB Bancshares** and **Bank of Eufaula**.\n- **WSJ / MarketWatch:** A Warren Buffett–inspired fund manager (Rob Vinall of RV Capital) is betting big on **Chinese stocks**, citing low valuations and founder management.\n- **Financial Times:** Trump's crusade against tariff cheats may tangle up trade in red tape, straining an overburdened US customs b...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feed you provided, here is a structured summary of the news as of **21.09.2026**:\n\n### 🏦 Central Banks & Finance\n- **Federal Reserve:** The Federal Reserve Board announced the termination of an enforcement action with **SNB Bancshares** and **Bank of Eufaula**.\n- **WSJ / MarketWatch:** A Warren Buffett–inspired fund m...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **22 September 2026**, here is a structured summary and analysis of the key developments across your monitored categories:\n\n---\n\n### 1. Zentralbank / Finance & Monetary Policy\n- **Fed (Bowman):** Governor Bowman delivered a speech at the Lord Mayor's Luncheon in London, presenting initial findings from an independent review of the Silicon Valley Bank collapse. This suggests ongoing internal scrutiny and potential regulatory adjustments. *Watch for follow-up on capital requirements or supervisory changes.*\n- **FT – Trump & Markets:** The *Financ...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **22 September 2026**, here is a structured summary and analysis of the key developments across your monitored categories:\n\n---\n\n### 1. Zentralbank / Finance & Monetary Policy\n- **Fed (Bowman):** Governor Bowman delivered a speech at the Lord Mayor's Luncheon in London, presenting initial findings f...",
   "key_takeaways": [
-    "Federal Reserve:** The Federal Reserve Board announced the termination of an enforcement action with **SNB Bancshares** and **Bank of Eufaula**.",
-    "WSJ / MarketWatch:** A Warren Buffett–inspired fund manager (Rob Vinall of RV Capital) is betting big on **Chinese stocks**, citing low valuations and founder management.",
-    "Financial Times:** Trump's crusade against tariff cheats may tangle up trade in red tape, straining an overburdened US customs bureaucracy.",
-    "CISA KEV Catalog:** Two new vulnerabilities added based on evidence of active exploitation:",
-    "CVE-2025-39964** – Linux Kernel Race Condition Vulnerability"
+    "Fed (Bowman):** Governor Bowman delivered a speech at the Lord Mayor's Luncheon in London, presenting initial findings from an independent review of the Silicon Valley Bank collapse. This suggests ongoing internal scrutiny and potential regulatory adjustments. *Watch for follow-up on capital requirements or supervisory changes.*",
+    "FT – Trump & Markets:** The *Financial Times* reports that Trump is \"checking out of his presidency,\" allegedly obsessed with monuments and bogged down in a war with Iran. This implies heightened political risk and potential market volatility, especially in energy and defense sectors.",
+    "WSJ (MarketWatch) – Personal Finance:** A lighter piece on friendship and money, but reflects broader consumer sentiment and social dynamics around spending — useful for soft economic indicators.",
+    "CISA KEV Addition:** CISA added **CVE-2026-7273** — a stack-based buffer overflow in **Zyxel GS1900 series switches** — to its Known Exploited Vulnerabilities catalog. This is a frequent attack vector, and active exploitation is confirmed.",
+    "Action:** Any organization using Zyxel GS1900 switches should patch immediately or mitigate. This is a high-priority alert for network infrastructure."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feed you provided, here is a structured summary of the news as of **21.09.2026**:\n\n### 🏦 Central Banks & Finance\n- **Federal Reserve:** The Federal Reserve Board announced the termination of an enforcement action with **SNB Bancshares** and **Bank of Eufaula**.\n- **WSJ / MarketWatch:** A Warren Buffett–inspired fund manager (Rob Vinall of RV Capital) is betting big on **Chinese stocks**, citing low valuations and founder management.\n- **Financial Times:** Trump's crusade against tariff cheats may tangle up trade in red tape, straining an overburdened US customs bureaucracy.\n\n### 💻 Cyber & Infrastructure\n- **CISA KEV Catalog:** Two new vulnerabilities added based on evidence of active exploitation:\n  - **CVE-2025-39964** – Linux Kernel Race Condition Vulnerability\n  - **CVE-2026-53266** – Linux Kernel Out-of-Bounds Write Vulnerability\n  - *Note: These types of vulnerabilities are frequently targeted.*\n\n### 🌍 Politics & International\n- **Germany:** Chancellor **Merz** calls the state election a \"disaster\" for his party (CDU) but vows to stay on. Exit polls show damaging losses in **Mecklenburg-Vorpommern** and **Berlin**.\n- **Russia:** In the first Duma election since the invasion of Ukraine, **United Russia** has again won an overwhelming majority. The bigger question is what the Kremlin plans next.\n- **Europe / NYT:** Challenges to identity—real and imagined—are driving Europe's far right, with populist emphasis on national identity finding deep resonance among voters.\n- **US / Fox News:** Falcons' Drake London shouted at a fan during the team's 34-3 blowout loss to the Panthers.\n\n### 🌪️ Weather & Extremes\n- **NOAA National Hurricane Center:** The NHC is issuing advisories on **Tropical Storm [name cut off]** in the Atlantic. The full outlook was truncated in your feed.\n\n---\n\n**Note:** The NOAA entry cuts off mid-sentence (\"Tropical Storm \"), so the specific storm name and details are incomplete. If you have the rest of that feed, I can incorporate it.\n\nMACRO:\n**DATUM: 21.09.2026**\n\n### Zentralbank\n- **Federal Reserve Press:**\n  - **Termination of Enforcement Action:** The Federal Reserve Board has announced the termination of enforcement action with SNB Bancshares and Bank of Eufaula.\n\n### Cyber / Infrastruktur\n- **CISA Cyber Alerts:**\n  - **New Vulnerabilities Added to KEV Catalog:**\n    - CVE-2025-39964: Linux Kernel Race Condition Vulnerability\n    - CVE-2026-53266: Linux Kernel Out-of-Bounds Write Vulnerability\n  - These vulnerabilities are frequently targeted by cyber attackers and pose significant risks to systems.\n\n### US/Finanzen\n- **Wall Street Journal (MarketWatch Alt):**\n  - **Warren Buffett–Inspired Fund Betting on Chinese Stocks:**\n  - RV Capital’s Rob Vinall is investing heavily in Chinese stocks due to low valuations and strong founder management.\n\n### US/Politik\n- **Fox News Latest:**\n  - **Drake London Shouts at Fan During Blowout Loss:**\n  - Falcons' wide receiver Drake London was seen shouting expletives at a fan during the team’s 34-3 loss to the Carolina Panthers.\n\n### CH/Presse\n- **NZZ International:**\n  - **Duma Election Confirms Putin’s War Course:**\n  - The pro-government party United Russia has won a significant majority in the State Duma. The focus is now on what the Kremlin plans next.\n\n### US/Presse\n- **New York Times World:**\n  - **Far Right in Europe Driven by Identity Challenges:**\n  - The rise of far-right movements in Europe is driven by a populist emphasis on national identity and pride, appealing to voters who feel disoriented in a rapidly changing world.\n\n### UK/Finanzen\n- **Financial Times:**\n  - **Trump’s Tariff Crusade Creates More Bureaucratic Tangle:**\n  - Another initiative by the Trump administration to combat tariff evasion may further burden an already overburdened customs bureaucracy.\n\n### UK/Medien\n- **BBC World News:**\n  - **Merz Calls State Election a 'Disaster':**\n  - German Chancellor Merz faces significant losses for his centre-right CDU party in state elections in Mecklenburg-Vorpommern and Berlin, but vows to stay in his position.\n\n### Wetter/Extreme\n- **NOAA National Hurricane Center:**\n  - **Atlantic Tropical Weather Outlook:**\n  - The National Hurricane Center is monitoring Tropical Storm Fay, located several hundred miles away. Advisories are being issued regularly.\n\n### Investigativ Net\n- **ICIJ (Panama/Pandora Papers):**\n  - **Statement on Missing Journalist Micah Reddy:**\n  - ICIJ has lost contact with its Africa coordinator, Micah Reddy, and local journalist Mohamed Willo Ismael, in Djibouti City. The organization is deeply concerned and is working to locate them.\n\n### Medizin\n- **CDC Health Updates:**\n  - **Increase in Animal Rabies Activity:**\n  - The CDC has issued a statement regarding a recent increase in animal rabies activity and associated human exposures. Public health measures are being enhanced to address the issue.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **22 September 2026**, here is a structured summary and analysis of the key developments across your monitored categories:\n\n---\n\n### 1. Zentralbank / Finance & Monetary Policy\n- **Fed (Bowman):** Governor Bowman delivered a speech at the Lord Mayor's Luncheon in London, presenting initial findings from an independent review of the Silicon Valley Bank collapse. This suggests ongoing internal scrutiny and potential regulatory adjustments. *Watch for follow-up on capital requirements or supervisory changes.*\n- **FT – Trump & Markets:** The *Financial Times* reports that Trump is \"checking out of his presidency,\" allegedly obsessed with monuments and bogged down in a war with Iran. This implies heightened political risk and potential market volatility, especially in energy and defense sectors.\n- **WSJ (MarketWatch) – Personal Finance:** A lighter piece on friendship and money, but reflects broader consumer sentiment and social dynamics around spending — useful for soft economic indicators.\n\n**Takeaway:** Mixed signals — Fed introspection on bank stability vs. geopolitical/political risk from the White House. Markets may be jittery.\n\n---\n\n### 2. Cyber / Infrastructure\n- **CISA KEV Addition:** CISA added **CVE-2026-7273** — a stack-based buffer overflow in **Zyxel GS1900 series switches** — to its Known Exploited Vulnerabilities catalog. This is a frequent attack vector, and active exploitation is confirmed.\n- **Action:** Any organization using Zyxel GS1900 switches should patch immediately or mitigate. This is a high-priority alert for network infrastructure.\n\n**Takeaway:** Critical infrastructure risk. Zyxel devices are common in SMB and branch networks. Expect scanning and exploitation attempts.\n\n---\n\n### 3. CH / Presse (Switzerland / International)\n- **NZZ on Kosovo:** The long prison sentences for Hashim Thaci and former KLA fighters have sparked outrage in Kosovo. The NZZ argues that criticism of the trial is partly misplaced — the real issue is **proportionality**, not necessarily the evidence. This is a nuanced take on a politically charged post-conflict justice case.\n\n**Takeaway:** Balkan stability and EU integration implications. Watch for protests or diplomatic fallout.\n\n---\n\n### 4. US / Politik\n- **Fox News – Michigan:** Abdul El-Sayed's Jewish outreach has ignited \"tokenism\" fury. ~500 Jewish Democrats signed an open letter backing **Mike Rogers** and denouncing El-Sayed's alleged ties to anti-Jewish elements. Michigan GOP chair makes a bold prediction.\n- **Context:** This is a key swing-state race. The Jewish vote and progressive-left tensions are central.\n\n**Takeaway:** Identity politics and coalition fragmentation in Michigan. Could affect turnout and national narrative.\n\n---\n\n### 5. UK / Medien & US / Presse\n- **BBC – Media Boycott:** Major US outlets are boycotting shared Trump coverage in protest of a media ban. CNN, MS NOW, and Politico were banned from the White House. Regular coverage disrupted.\n- **NYT – China Church Crackdown:** Cherie Geng is trying to free her husband, a pastor detained by Chinese police. Dozens of church members detained. She rebuilds life in exile.\n- **FT – Trump & Iran:** As above, Trump is \"checking out\" — obsessed with monuments, no way out of Iran war.\n\n**Takeaway:** Press freedom under pressure in the US; religious persecution in China. Both are escalating human rights and governance stories.\n\n---\n\n### 6. UK / Finanzen\n- **FT:** Already covered — Trump's distraction and Iran war. Financial markets may be underpricing political risk.\n\n---\n\n### 7. Wetter / Extreme\n- **NOAA:** Tropical Storm **Fay** active in the Atlantic, several hundred miles from land. Advisories issued. *Monitor for track changes.*\n\n**Takeaway:** No immediate landfall threat, but Caribbean/Gulf interests should stay alert.\n\n---\n\n### 8. Medizin (CDC)\n- **Truncated feed:** \"CDC H\" — likely CDC Health Advisory or Headlines. Without full text, assume a public health alert. *Recommend checking CDC directly for updates.*\n\n---\n\n## Overall Synthesis for 22.09.2026\n\n| Domain | Risk Level | Key Issue |\n|--------|------------|-----------|\n| Cyber | 🔴 High | Zyxel CVE actively exploited |\n| Finance | 🟠 Medium | Fed review, Trump/Iran risk |\n| Politics | 🔴 High | Michigan race, media bans, Kosovo |\n| Media/Freedom | 🟠 Medium | US boycott, China crackdown |\n| Weather | 🟡 Low | TS Fay, no landfall yet |\n| Health | ⚪ Unknown | CDC feed truncated |\n\n**Bottom line:** A day of **institutional stress** — central banks reviewing failures, cyber vulnerabilities exploited, press freedoms challenged, and political coalitions tested. The Zyxel CVE is the most actionable immediate threat for IT teams. The Trump/Iran and Kosovo stories are the ones to watch for second-order effects.\n\nWould you like a deeper dive into any specific feed?\n\nMACRO:\n### Summary of Key News and Developments (22.09.2026)\n\n#### **Economics and Finance**\n- **Fed Speech on Silicon Valley Bank:** Fed Governor Michelle Bowman discusses initial findings from an independent review of Silicon Valley Bank, highlighting the need for improved regulatory oversight and risk management practices.\n- **Financial Times:** Reports on President Trump's declining focus on governance and increasing obsession with building monuments to himself, amid ongoing tensions with Iran.\n\n#### **Cybersecurity and Infrastructure**\n- **CISA Adds New Vulnerability to Catalog:** The Cybersecurity and Infrastructure Security Agency (CISA) has added CVE-2026-7273, a stack-based buffer overflow vulnerability in Zyxel GS1900 Series Switches, to its Known Exploited Vulnerabilities (KEV) Catalog due to evidence of active exploitation.\n\n#### **Politics and Media**\n- **Kosovo: Sentencing of Hashim Thaci:** The long prison sentences for former fighters and politicians, including Hashim Thaci, have sparked outrage in Kosovo. Critics question the evidence and the proportionality of the sentences.\n- **Michigan Jewish Outreach Controversy:** Mike Rogers is backed by 500 Jewish Democrats in an open letter, criticizing Abdul El-Sayed's alleged ties to anti-Jewish elements.\n- **Media Ban at White House:** Major US media outlets, including CNN, MS NOW, and Politico, are boycotting shared coverage of President Trump due to his ban on these outlets from the White House.\n\n#### **Health and Science**\n- **CDC Youth Health Data:** The Centers for Disease Control and Prevention (CDC) report encouraging progress in youth health metrics, indicating positive trends in several key areas.\n\n#### **International and Human Rights**\n- **China's Church Crackdown:** Cherie Geng, in exile, is working to free her husband, a pastor, and other church members who were detained by Chinese authorities, highlighting the ongoing religious persecution in China.\n- **Journalists Disappearance in Djibouti:** The disappearance of two journalists in Djibouti has raised concerns for their safety, prompting calls for investigation and action.\n\n#### **Technology and Security**\n- **C4ADS Open-Source Library:** C4ADS has released vtrr-queue, an open-source Python library for Bring Your Own Data (BYOD) that allows investigators to upload and search their own files, enhancing data-driven security analysis.\n\n#### **Weather and Environment**\n- **Tropical Storm Fay:** The National Hurricane Center is monitoring Tropical Storm Fay, which is located several hundred miles away from the North Atlantic, Caribbean Sea, and Gulf of America, with ongoing advisories and updates.\n\n#### **Personal and Social**\n- **Financial Relationships:** A personal finance article discusses the dynamics of a friendship where one person consistently pays for everything, exploring the emotional and financial implications of such arrangements.\n\n### Key Takeaways\n- **Regulatory and Cybersecurity Concerns:** The Fed's review of Silicon Valley Bank and CISA's addition of a new vulnerability highlight ongoing issues in financial and cybersecurity sectors.\n- **Political Turmoil and Media Relations:** The media ban at the White House and the controversy surrounding Hashim Thaci's sentencing reflect broader political and media dynamics.\n- **Human Rights and Religious Persecution:** The case of Cherie Geng and her husband, along with the disappearance of journalists in Djibouti, underscores global human rights challenges.\n- **Technological Advancements:** The release of vtrr-queue by C4ADS demonstrates the ongoing development and application of data-driven tools for security and investigative purposes.\n\nThis summary provides a snapshot of the day's key developments across various sectors, offering insights into the broader global landscape.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT914H",
+      "name": "Flug PGT706H",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8791,
-      "lon": 29.4653,
-      "lng": 29.4653,
+      "lat": 43.0014,
+      "lon": 26.4021,
+      "lng": 26.4021,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT914H | Höhe: 1.6 km | Speed: 512 km/h",
+      "description": "Callsign: PGT706H | Höhe: 10.4 km | Speed: 819 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT470B",
+      "name": "Flug PGT353Z",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 43.6949,
-      "lon": 25.2735,
-      "lng": 25.2735,
+      "lat": 42.9435,
+      "lon": 27.5315,
+      "lng": 27.5315,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT470B | Höhe: 10.4 km | Speed: 782 km/h",
+      "description": "Callsign: PGT353Z | Höhe: 10.4 km | Speed: 838 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DUKE75",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 44.4508,
-      "lon": 28.0947,
-      "lng": 28.0947,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: DUKE75 | Höhe: 7.6 km | Speed: 298 km/h",
-      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
-    },
-    {
-      "name": "Flug AIC2029",
+      "name": "Flug AEE907",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 26.3468,
-      "lon": 51.5958,
-      "lng": 51.5958,
+      "lat": 34.9897,
+      "lon": 32.1515,
+      "lng": 32.1515,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC2029 | Höhe: 11.0 km | Speed: 911 km/h",
+      "description": "Callsign: AEE907 | Höhe: 7.8 km | Speed: 732 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AEE904",
+      "name": "Flug WZZ9YX",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.9317,
-      "lon": 33.2236,
-      "lng": 33.2236,
+      "lat": 32.7198,
+      "lon": 33.9842,
+      "lng": 33.9842,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AEE904 | Höhe: 2.5 km | Speed: 567 km/h",
+      "description": "Callsign: WZZ9YX | Höhe: 4.7 km | Speed: 668 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA635",
+      "name": "Flug AMU861",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.0146,
-      "lon": 117.99,
-      "lng": 117.99,
+      "lat": 25.1274,
+      "lon": 121.4587,
+      "lng": 121.4587,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA635 | Höhe: 13.1 km | Speed: 877 km/h",
+      "description": "Callsign: AMU861 | Höhe: 10.4 km | Speed: 831 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CSN6480",
+      "name": "Flug CQH7302",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 26.1167,
-      "lon": 119.5128,
-      "lng": 119.5128,
+      "lat": 22.6412,
+      "lon": 115.1649,
+      "lng": 115.1649,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSN6480 | Höhe: 9.2 km | Speed: 835 km/h",
+      "description": "Callsign: CQH7302 | Höhe: 8.5 km | Speed: 768 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Federal Reserve:** The Federal Reserve Board announced the termination of an enforcement action with **SNB Bancshares** and **Bank of Eufaula**.",
-    "WSJ / MarketWatch:** A Warren Buffett–inspired fund manager (Rob Vinall of RV Capital) is betting big on **Chinese stocks**, citing low valuations and founder management.",
-    "Financial Times:** Trump's crusade against tariff cheats may tangle up trade in red tape, straining an overburdened US customs bureaucracy.",
-    "CISA KEV Catalog:** Two new vulnerabilities added based on evidence of active exploitation:",
-    "CVE-2025-39964** – Linux Kernel Race Condition Vulnerability"
+    "Fed (Bowman):** Governor Bowman delivered a speech at the Lord Mayor's Luncheon in London, presenting initial findings from an independent review of the Silicon Valley Bank collapse. This suggests ongoing internal scrutiny and potential regulatory adjustments. *Watch for follow-up on capital requirements or supervisory changes.*",
+    "FT – Trump & Markets:** The *Financial Times* reports that Trump is \"checking out of his presidency,\" allegedly obsessed with monuments and bogged down in a war with Iran. This implies heightened political risk and potential market volatility, especially in energy and defense sectors.",
+    "WSJ (MarketWatch) – Personal Finance:** A lighter piece on friendship and money, but reflects broader consumer sentiment and social dynamics around spending — useful for soft economic indicators.",
+    "CISA KEV Addition:** CISA added **CVE-2026-7273** — a stack-based buffer overflow in **Zyxel GS1900 series switches** — to its Known Exploited Vulnerabilities catalog. This is a frequent attack vector, and active exploitation is confirmed.",
+    "Action:** Any organization using Zyxel GS1900 switches should patch immediately or mitigate. This is a high-priority alert for network infrastructure."
   ],
   "geoscore": {
     "current_score": 72,
@@ -135,12 +124,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-21T11:35:07.212636+00:00",
+  "timestamp": "2026-09-22T10:40:46.339962+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-21T11:33:48.356606+00:00",
+    "timestamp": "2026-09-22T10:39:41.374634+00:00",
     "feeds_total": 224,
-    "feeds_successful": 119,
-    "feeds_failed": 105,
+    "feeds_successful": 121,
+    "feeds_failed": 103,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -150,7 +139,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -168,7 +157,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 7,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
