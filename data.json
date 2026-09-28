@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured briefing of the feeds for **27 September 2026**:\n\n---\n\n## 📊 Financial & Economic\n\n- **Federal Reserve** approves application by **Peoples Bancorp Inc.** (press release, no objections noted).\n- **MarketWatch/WSJ**: The upcoming **US jobs report** could push **10-year and 30-year Treasury yields sharply higher**. A strong print may pressure the Fed toward **another rate hike in October**.\n\n---\n\n## 🛡️ Cybersecurity & Infrastructure\n\n- **CISA adds two Known Exploited Vulnerabilities (KEV)** based on evidence of active exploitation:\n  - **CVE-2026-65660** – Mic...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured briefing of the feeds for **27 September 2026**:\n\n---\n\n## 📊 Financial & Economic\n\n- **Federal Reserve** approves application by **Peoples Bancorp Inc.** (press release, no objections noted).\n- **MarketWatch/WSJ**: The upcoming **US jobs report** could push **10-year and 30-year Treasury yields sharply higher**....",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **28.09.2026**, here is a structured situational overview:\n\n## 🔴 Top Stories\n\n### 1. UK Terror Plot Foiled at RAF Fairford\nMultiple sources converge on a major security incident:\n- **NZZ**: A farmer called police after spotting masked men near a British air base — likely preventing a terror attack. Five men arrested, dozens of households evacuated. The base is used by the US for strikes on Iran.\n- **Financial Times**: All five suspects are UK nationals, in their twenties, residents of London.\n- **New York Times**: Conflicting accounts between a...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **28.09.2026**, here is a structured situational overview:\n\n## 🔴 Top Stories\n\n### 1. UK Terror Plot Foiled at RAF Fairford\nMultiple sources converge on a major security incident:\n- **NZZ**: A farmer called police after spotting masked men near a British air base — likely preventing a terror attack. ...",
   "key_takeaways": [
-    "Federal Reserve** approves application by **Peoples Bancorp Inc.** (press release, no objections noted).",
-    "MarketWatch/WSJ**: The upcoming **US jobs report** could push **10-year and 30-year Treasury yields sharply higher**. A strong print may pressure the Fed toward **another rate hike in October**.",
-    "CISA adds two Known Exploited Vulnerabilities (KEV)** based on evidence of active exploitation:",
-    "CVE-2026-65660** – Microsoft SharePoint Code Injection",
-    "CVE-2026-67279** – MikroTik RouterOS Improper Enforcement of Behavioral Workflow"
+    "NZZ**: A farmer called police after spotting masked men near a British air base — likely preventing a terror attack. Five men arrested, dozens of households evacuated. The base is used by the US for strikes on Iran.",
+    "Financial Times**: All five suspects are UK nationals, in their twenties, residents of London.",
+    "New York Times**: Conflicting accounts between a bystander who called police and President Trump raise questions about whether security services had advance knowledge of the plot.",
+    "CISA** is amplifying Citrix's disclosure of **eight new vulnerabilities** (CVE-2026-88771 through CVE-2026-88778) affecting NetScaler ADC and Gateway.",
+    "CISA has added at least one to its Known Exploited Vulnerabilities catalog."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured briefing of the feeds for **27 September 2026**:\n\n---\n\n## 📊 Financial & Economic\n\n- **Federal Reserve** approves application by **Peoples Bancorp Inc.** (press release, no objections noted).\n- **MarketWatch/WSJ**: The upcoming **US jobs report** could push **10-year and 30-year Treasury yields sharply higher**. A strong print may pressure the Fed toward **another rate hike in October**.\n\n---\n\n## 🛡️ Cybersecurity & Infrastructure\n\n- **CISA adds two Known Exploited Vulnerabilities (KEV)** based on evidence of active exploitation:\n  - **CVE-2026-65660** – Microsoft SharePoint Code Injection\n  - **CVE-2026-67279** – MikroTik RouterOS Improper Enforcement of Behavioral Workflow\n- **Phishing alert (Fox News)**: Campaign impersonating **OpenAI/ChatGPT** uses fake billing emails and a convincing login page to harvest credentials and payment details.\n\n---\n\n## 🌍 Geopolitics & International\n\n- **Venezuela (NZZ)**: Opposition leader **María Corina Machado** is again blocked from returning home; **Washington reportedly won't allow it**. Meanwhile, **Trump hosts Venezuelan President Delcy Rodríguez** in New York with full honors.\n- **Iran/US (BBC)**: Iran's foreign minister says **only negotiation can end the conflict** after Trump rejected a **Hormuz deal**; Tehran says it awaits a formal rejection.\n- **Myanmar (NYT)**: Military increasingly uses **motorized paragliders and gyrocopters** to bomb rebel-held towns and villages.\n\n---\n\n## 🌦️ Weather & Health\n\n- **NOAA/NHC**: Advisories issued for **Tropical Depression Fay**, located well to the west-southwest (Atlantic basin). Full outlook truncated.\n- **CDC**: Annual Report to the Nation highlights **progress against lung cancer**.\n\n---\n\n## 📰 Also Noted\n\n- **Financial Times**: \"The India shock\" — India's strategy of **exporting workers** to manage its labor surplus, and its limits.\n\n---\n\nWould you like a deeper dive into any single item — e.g., the CVE details, the Treasury yield implications, or the Venezuela story?\n\nMACRO:\n### Summary of Key News Feed Items for 27.09.2026\n\n#### **Economic and Financial News:**\n1. **Federal Reserve Approval**:\n   - **SOURCE**: Federal Reserve Press\n   - **SUMMARY**: The Federal Reserve Board has approved the application by Peoples Bancorp Inc., a significant move in the banking sector.\n\n2. **Potential Impact of Jobs Report on Treasury Yields**:\n   - **SOURCE**: Wall Street Journal (MarketWatch Alt)\n   - **SUMMARY**: A strong jobs report could lead to a surge in 10-year and 30-year Treasury yields, potentially pressuring the Federal Reserve to raise interest rates again in October.\n\n3. **India's Emigration Strategy**:\n   - **SOURCE**: Financial Times\n   - **SUMMARY**: Emigration has been a strategy for New Delhi to manage its labor surplus, but this approach is facing limits.\n\n#### **Cybersecurity and Technology:**\n1. **CISA Adds New Vulnerabilities to Catalog**:\n   - **SOURCE**: CISA Cyber Alerts\n   - **SUMMARY**: CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog:\n     - **CVE-2026-65660**: Microsoft SharePoint Code Injection Vulnerability\n     - **CVE-2026-67279**: Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability\n\n2. **Phishing Campaign Targeting ChatGPT Users**:\n   - **SOURCE**: Fox News Latest\n   - **SUMMARY**: A phishing campaign impersonates OpenAI, using fake ChatGPT billing emails to steal user credentials and payment details.\n\n#### **Political and International News:**\n1. **María Corina Machado's Return to Venezuela Halted**:\n   - **SOURCE**: NZZ International\n   - **SUMMARY**: Opposition leader María Corina Machado's attempt to return to Venezuela is blocked by Washington, while Venezuelan President Delcy Rodríguez is received with honors in New York by Donald Trump.\n\n2. **Iranian Minister Rejects Trump's Hormuz Deal**:\n   - **SOURCE**: BBC World News\n   - **SUMMARY**: Iran's foreign minister states that only negotiation can end the conflict, despite the U.S. President's rejection of a Hormuz deal.\n\n3. **China's Global Financial Influence**:\n   - **SOURCE**: ICIJ (Panama/Pandora Papers)\n   - **SUMMARY**: ICIJ’s media partners have uncovered how ICBC (Industrial and Commercial Bank of China) has advanced China’s political goals across four continents through strategic deals.\n\n4. **UN Reports on Cyber Espionage**:\n   - **SOURCE**: Citizen Lab (Spyware & Surveillance)\n   - **SUMMARY**: UN reports cite Citizen Lab's findings on cyber espionage and surveillance, highlighting the global impact of digital threats.\n\n#### **Health and Environmental News:**\n1. **Progress in Reducing Cancer Mortality**:\n   - **SOURCE**: CDC Health Updates\n   - **SUMMARY**: The latest Annual Report to the Nation shows a decline in cancer mortality, with significant progress against lung cancer.\n\n2. **Tropical Weather Outlook**:\n   - **SOURCE**: NOAA National Hurricane Center\n   - **SUMMARY**: The National Hurricane Center is monitoring Tropical Depression Fay, located west of the North Atlantic, Caribbean Sea, and the Gulf of Mexico.\n\n#### **Conflict and Security:**\n1. **Recreational Aerial Craft Used as Weapons in Myanmar**:\n   - **SOURCE**: New York Times World\n   - **SUMMARY**: Motorized paragliders and gyrocopters are being used by the military to bomb towns and villages in rebel-held territory in Myanmar, highlighting the innovative and concerning use of recreational technology in conflict.\n\nThese updates provide a comprehensive overview of the day's most significant news across various sectors, from economics and politics to health and cybersecurity.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **28.09.2026**, here is a structured situational overview:\n\n## 🔴 Top Stories\n\n### 1. UK Terror Plot Foiled at RAF Fairford\nMultiple sources converge on a major security incident:\n- **NZZ**: A farmer called police after spotting masked men near a British air base — likely preventing a terror attack. Five men arrested, dozens of households evacuated. The base is used by the US for strikes on Iran.\n- **Financial Times**: All five suspects are UK nationals, in their twenties, residents of London.\n- **New York Times**: Conflicting accounts between a bystander who called police and President Trump raise questions about whether security services had advance knowledge of the plot.\n\n**Assessment**: This is the dominant cross-source story. The involvement of a US-used base tied to Iran operations, combined with conflicting official narratives, suggests significant geopolitical and intelligence ramifications.\n\n### 2. Citrix NetScaler Zero-Day Vulnerabilities (Critical)\n- **CISA** is amplifying Citrix's disclosure of **eight new vulnerabilities** (CVE-2026-88771 through CVE-2026-88778) affecting NetScaler ADC and Gateway.\n- CISA has added at least one to its Known Exploited Vulnerabilities catalog.\n\n**Assessment**: Given Citrix NetScaler's widespread enterprise and government deployment, this represents an urgent patching priority. The volume of CVEs (8) in a single disclosure is notable.\n\n### 3. SpaceX Starship Launch Imminent\n- **MarketWatch**: SpaceX is \"moments away\" from a monumental Starship launch, moving closer to full reusability.\n\n### 4. Yemen Conflict Zone Reporting\n- **BBC**: Rare access to Yemen's front-line city as Houthis battle for control.\n\n## 🟡 Other Developments\n\n| Category | Item |\n|----------|------|\n| **Central Banking** | Fed approves Peoples Bancorp Inc. application |\n| **US Politics/Culture** | Fox News highlights NFL's \"God-centered\" culture after Sunday games |\n| **Weather** | NOAA tracking Tropical Depression in Atlantic/Caribbean/Gulf |\n\n## 📊 Cross-Cutting Themes\n\n1. **Iran nexus**: The RAF Fairford plot connects to US-Iran tensions via the base's role in strikes on Iran.\n2. **Cyber urgency**: The Citrix zero-days require immediate attention for critical infrastructure defenders.\n3. **Information uncertainty**: The NYT's reporting on conflicting accounts around the UK plot suggests early-stage confusion or deliberate messaging variance.\n\n---\n\nWould you like a deeper dive into any specific thread — e.g., the Citrix CVE technical details, the RAF Fairford geopolitical context, or the Fed approval?\n\nMACRO:\n### Summary of Today's News (28.09.2026)\n\n#### **Fed Approves Application by Peoples Bancorp Inc.**\n- **Source:** Federal Reserve Press\n- **Details:** The Federal Reserve Board has approved an application by Peoples Bancorp Inc.\n\n#### **Critical Zero-Day Vulnerabilities in Citrix NetScaler Products**\n- **Source:** CISA Cyber Alerts\n- **Details:** CISA is warning about eight new critical zero-day vulnerabilities affecting Citrix NetScaler ADC and Gateway products. The vulnerabilities are listed as CVE-2026-88771 to CVE-2026-88778. Immediate action is advised to mitigate potential exploits.\n\n#### **SpaceX Starship Launch**\n- **Source:** Wall Street Journal (MarketWatch)\n- **Details:** SpaceX is on the verge of a significant launch, aiming to make the Starship rocket fully reusable. This milestone could revolutionize space travel and reduce costs.\n\n#### **Possible Foiled Terror Attack at U.K. Air Base**\n- **Source:** New York Times\n- **Details:** Conflicting accounts regarding a potential terror attack at a U.K. air base used by the U.S. have raised questions about prior knowledge by security services. The incident remains under investigation.\n\n#### **NFL Continues to Showcase Faith**\n- **Source:** Fox News\n- **Details:** Players like Bo Nix and Talanoa Hufanga continued to express their faith on national TV during Sunday's NFL games, reinforcing the league's reputation as the most God-centered professional sports league in America.\n\n#### **Yemen's Front-Line City in Conflict**\n- **Source:** BBC World News\n- **Details:** The BBC gains rare access to Yemen's front-line city, where pro-government forces are battling the Houthis for control. The ongoing conflict has caused significant humanitarian crises.\n\n#### **Potential Terror Plot Foiled at RAF Fairford**\n- **Source:** NZZ International\n- **Details:** A local farmer alerted the police about masked men near a British RAF base, leading to the arrest of five individuals. The base is used by the U.S. for operations against Iran, and dozens of households were evacuated as a precaution.\n\n#### **Arrests in Alleged RAF Fairford Terror Plot**\n- **Source:** Financial Times\n- **Details:** Five UK nationals, all in their twenties and residents of London, have been arrested in connection with an alleged terror plot at RAF Fairford.\n\n#### **Atlantic Tropical Weather Outlook**\n- **Source:** NOAA National Hurricane Center\n- **Details:** The National Hurricane Center is monitoring Tropical Depression Fay, which is located well to the south. No immediate threats to land are expected, but conditions are being closely watched.\n\n#### **China’s Global Political Influence Through ICBC**\n- **Source:** ICIJ (Panama/Pandora Papers)\n- **Details:** Investigative journalists have uncovered how the Industrial and Commercial Bank of China (ICBC) has advanced China's political goals across four continents through strategic deals and moves.\n\n#### **UN Reports on Cyber-Espionage and Surveillance**\n- **Source:** Citizen Lab\n- **Details:** Two UN reports, which include recommendations from the Citizen Lab, have been published, highlighting issues of cyber-espionage and surveillance.\n\nThese updates cover a range of important developments in finance, cybersecurity, international relations, and more. Stay informed and take necessary precautions, especially regarding the Citrix vulnerabilities and the ongoing weather and security alerts.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,91 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT73G",
+      "name": "Flug PGT1257",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.8873,
-      "lon": 26.548,
-      "lng": 26.548,
+      "lat": 41.0232,
+      "lon": 29.611,
+      "lng": 29.611,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT73G | Höhe: 9.6 km | Speed: 810 km/h",
+      "description": "Callsign: PGT1257 | Höhe: 2.9 km | Speed: 489 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WMT1409",
+      "name": "Flug PGT685B",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.3958,
-      "lon": 29.4417,
-      "lng": 29.4417,
+      "lat": 43.4821,
+      "lon": 26.6985,
+      "lng": 26.6985,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WMT1409 | Höhe: 10.4 km | Speed: 900 km/h",
+      "description": "Callsign: PGT685B | Höhe: 9.8 km | Speed: 855 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AXB478",
+      "name": "Flug DUKE75",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 44.564,
+      "lon": 27.9682,
+      "lng": 27.9682,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: DUKE75 | Höhe: 4.7 km | Speed: 325 km/h",
+      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
+    },
+    {
+      "name": "Flug AXB398",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 25.1305,
-      "lon": 51.8706,
-      "lng": 51.8706,
+      "lat": 22.6415,
+      "lon": 50.9768,
+      "lng": 50.9768,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AXB478 | Höhe: 2.9 km | Speed: 546 km/h",
+      "description": "Callsign: AXB398 | Höhe: 10.7 km | Speed: 924 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ2719",
+      "name": "Flug TVF3452",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.9724,
-      "lon": 33.7296,
-      "lng": 33.7296,
+      "lat": 32.5702,
+      "lon": 33.925,
+      "lng": 33.925,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ2719 | Höhe: 0.5 km | Speed: 263 km/h",
+      "description": "Callsign: TVF3452 | Höhe: 4.5 km | Speed: 730 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CKK262",
+      "name": "Flug RRR9915",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 32.1974,
+      "lon": 33.1009,
+      "lng": 33.1009,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: RRR9915 | Höhe: 9.4 km | Speed: 894 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug AMU9626",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 26.5722,
-      "lon": 122.2037,
-      "lng": 122.2037,
+      "lat": 25.3781,
+      "lon": 121.4403,
+      "lng": 121.4403,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CKK262 | Höhe: 8.8 km | Speed: 924 km/h",
+      "description": "Callsign: AMU9626 | Höhe: 1.2 km | Speed: 380 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JTA307",
+      "name": "Flug UAL837",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.2941,
-      "lon": 121.4979,
-      "lng": 121.4979,
+      "lat": 23.4528,
+      "lon": 120.2511,
+      "lng": 120.2511,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JTA307 | Höhe: 1.7 km | Speed: 365 km/h",
+      "description": "Callsign: UAL837 | Höhe: 4.7 km | Speed: 655 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,11 +127,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Federal Reserve** approves application by **Peoples Bancorp Inc.** (press release, no objections noted).",
-    "MarketWatch/WSJ**: The upcoming **US jobs report** could push **10-year and 30-year Treasury yields sharply higher**. A strong print may pressure the Fed toward **another rate hike in October**.",
-    "CISA adds two Known Exploited Vulnerabilities (KEV)** based on evidence of active exploitation:",
-    "CVE-2026-65660** – Microsoft SharePoint Code Injection",
-    "CVE-2026-67279** – MikroTik RouterOS Improper Enforcement of Behavioral Workflow"
+    "NZZ**: A farmer called police after spotting masked men near a British air base — likely preventing a terror attack. Five men arrested, dozens of households evacuated. The base is used by the US for strikes on Iran.",
+    "Financial Times**: All five suspects are UK nationals, in their twenties, residents of London.",
+    "New York Times**: Conflicting accounts between a bystander who called police and President Trump raise questions about whether security services had advance knowledge of the plot.",
+    "CISA** is amplifying Citrix's disclosure of **eight new vulnerabilities** (CVE-2026-88771 through CVE-2026-88778) affecting NetScaler ADC and Gateway.",
+    "CISA has added at least one to its Known Exploited Vulnerabilities catalog."
   ],
   "geoscore": {
     "current_score": 72,
@@ -124,12 +146,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-27T11:07:09.885186+00:00",
+  "timestamp": "2026-09-28T12:29:32.809937+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-27T11:06:02.034374+00:00",
+    "timestamp": "2026-09-28T12:28:29.116539+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -139,7 +161,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (8 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -157,7 +179,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 6,
+    "hotspots_now": 8,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
