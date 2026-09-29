@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **28.09.2026**, here is a structured situational overview:\n\n## 🔴 Top Stories\n\n### 1. UK Terror Plot Foiled at RAF Fairford\nMultiple sources converge on a major security incident:\n- **NZZ**: A farmer called police after spotting masked men near a British air base — likely preventing a terror attack. Five men arrested, dozens of households evacuated. The base is used by the US for strikes on Iran.\n- **Financial Times**: All five suspects are UK nationals, in their twenties, residents of London.\n- **New York Times**: Conflicting accounts between a...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **28.09.2026**, here is a structured situational overview:\n\n## 🔴 Top Stories\n\n### 1. UK Terror Plot Foiled at RAF Fairford\nMultiple sources converge on a major security incident:\n- **NZZ**: A farmer called police after spotting masked men near a British air base — likely preventing a terror attack. ...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nHere is a structured summary and analysis of the news feeds provided for **29.09.2026**.\n\n### **Executive Summary**\nThe news cycle on September 29, 2026, is dominated by a major cybersecurity crisis involving Citrix NetScaler, significant geopolitical developments regarding the Rohingya crisis and the war in Ukraine, and notable legal and financial news involving OpenAI, Apollo Global Management, and Patrick Drahi.\n\n### **1. Cyber & Infrastructure (Critical Alert)**\n- **CISA / Citrix NetScaler:** The Cybersecurity and Infrastructure Security Agency (CISA) is amplifying a crit...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nHere is a structured summary and analysis of the news feeds provided for **29.09.2026**.\n\n### **Executive Summary**\nThe news cycle on September 29, 2026, is dominated by a major cybersecurity crisis involving Citrix NetScaler, significant geopolitical developments regarding the Rohingya crisis and the war in Ukraine, and notable l...",
   "key_takeaways": [
-    "NZZ**: A farmer called police after spotting masked men near a British air base — likely preventing a terror attack. Five men arrested, dozens of households evacuated. The base is used by the US for strikes on Iran.",
-    "Financial Times**: All five suspects are UK nationals, in their twenties, residents of London.",
-    "New York Times**: Conflicting accounts between a bystander who called police and President Trump raise questions about whether security services had advance knowledge of the plot.",
-    "CISA** is amplifying Citrix's disclosure of **eight new vulnerabilities** (CVE-2026-88771 through CVE-2026-88778) affecting NetScaler ADC and Gateway.",
-    "CISA has added at least one to its Known Exploited Vulnerabilities catalog."
+    "CISA / Citrix NetScaler:** The Cybersecurity and Infrastructure Security Agency (CISA) is amplifying a critical alert regarding **eight new vulnerabilities** affecting Citrix NetScaler ADC and Gateway products (CVE-2026-88771 through CVE-2026-88778).",
+    "Status:** These are described as \"Critical Zero-Day Vulnerabilities Exploited,\" indicating active exploitation in the wild. CISA has added one or more of these to its Known Exploited Vulnerabilities catalog, mandating urgent patching for federal agencies and strongly advising private sector action.",
+    "Myanmar/Malaysia (Rohingya Crisis):** According to *NZZ International*, Malaysia has broken a regional taboo by sending Rohingya refugees back to Myanmar. The Myanmar regime is offering to accept returnees in exchange for international recognition. The article notes that Rohingya remain unsafe in Myanmar, raising concerns about forced repatriation.",
+    "Ukraine War:** The *New York Times* reports on the slow destruction of Kramatorsk, a city in eastern Ukraine. The author reflects on how the city, once thought likely to survive the war mostly unscathed, is now being systematically destroyed \"bomb by bomb.\"",
+    "China/ICBC (Investigative):** The *ICIJ* is reporting on the \"China Capital\" stories, revealing how the Industrial and Commercial Bank of China (ICBC) advanced China's political interests. (The feed is truncated, but indicates a major leak or investigation into Chinese banking influence)."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **28.09.2026**, here is a structured situational overview:\n\n## 🔴 Top Stories\n\n### 1. UK Terror Plot Foiled at RAF Fairford\nMultiple sources converge on a major security incident:\n- **NZZ**: A farmer called police after spotting masked men near a British air base — likely preventing a terror attack. Five men arrested, dozens of households evacuated. The base is used by the US for strikes on Iran.\n- **Financial Times**: All five suspects are UK nationals, in their twenties, residents of London.\n- **New York Times**: Conflicting accounts between a bystander who called police and President Trump raise questions about whether security services had advance knowledge of the plot.\n\n**Assessment**: This is the dominant cross-source story. The involvement of a US-used base tied to Iran operations, combined with conflicting official narratives, suggests significant geopolitical and intelligence ramifications.\n\n### 2. Citrix NetScaler Zero-Day Vulnerabilities (Critical)\n- **CISA** is amplifying Citrix's disclosure of **eight new vulnerabilities** (CVE-2026-88771 through CVE-2026-88778) affecting NetScaler ADC and Gateway.\n- CISA has added at least one to its Known Exploited Vulnerabilities catalog.\n\n**Assessment**: Given Citrix NetScaler's widespread enterprise and government deployment, this represents an urgent patching priority. The volume of CVEs (8) in a single disclosure is notable.\n\n### 3. SpaceX Starship Launch Imminent\n- **MarketWatch**: SpaceX is \"moments away\" from a monumental Starship launch, moving closer to full reusability.\n\n### 4. Yemen Conflict Zone Reporting\n- **BBC**: Rare access to Yemen's front-line city as Houthis battle for control.\n\n## 🟡 Other Developments\n\n| Category | Item |\n|----------|------|\n| **Central Banking** | Fed approves Peoples Bancorp Inc. application |\n| **US Politics/Culture** | Fox News highlights NFL's \"God-centered\" culture after Sunday games |\n| **Weather** | NOAA tracking Tropical Depression in Atlantic/Caribbean/Gulf |\n\n## 📊 Cross-Cutting Themes\n\n1. **Iran nexus**: The RAF Fairford plot connects to US-Iran tensions via the base's role in strikes on Iran.\n2. **Cyber urgency**: The Citrix zero-days require immediate attention for critical infrastructure defenders.\n3. **Information uncertainty**: The NYT's reporting on conflicting accounts around the UK plot suggests early-stage confusion or deliberate messaging variance.\n\n---\n\nWould you like a deeper dive into any specific thread — e.g., the Citrix CVE technical details, the RAF Fairford geopolitical context, or the Fed approval?\n\nMACRO:\n### Summary of Today's News (28.09.2026)\n\n#### **Fed Approves Application by Peoples Bancorp Inc.**\n- **Source:** Federal Reserve Press\n- **Details:** The Federal Reserve Board has approved an application by Peoples Bancorp Inc.\n\n#### **Critical Zero-Day Vulnerabilities in Citrix NetScaler Products**\n- **Source:** CISA Cyber Alerts\n- **Details:** CISA is warning about eight new critical zero-day vulnerabilities affecting Citrix NetScaler ADC and Gateway products. The vulnerabilities are listed as CVE-2026-88771 to CVE-2026-88778. Immediate action is advised to mitigate potential exploits.\n\n#### **SpaceX Starship Launch**\n- **Source:** Wall Street Journal (MarketWatch)\n- **Details:** SpaceX is on the verge of a significant launch, aiming to make the Starship rocket fully reusable. This milestone could revolutionize space travel and reduce costs.\n\n#### **Possible Foiled Terror Attack at U.K. Air Base**\n- **Source:** New York Times\n- **Details:** Conflicting accounts regarding a potential terror attack at a U.K. air base used by the U.S. have raised questions about prior knowledge by security services. The incident remains under investigation.\n\n#### **NFL Continues to Showcase Faith**\n- **Source:** Fox News\n- **Details:** Players like Bo Nix and Talanoa Hufanga continued to express their faith on national TV during Sunday's NFL games, reinforcing the league's reputation as the most God-centered professional sports league in America.\n\n#### **Yemen's Front-Line City in Conflict**\n- **Source:** BBC World News\n- **Details:** The BBC gains rare access to Yemen's front-line city, where pro-government forces are battling the Houthis for control. The ongoing conflict has caused significant humanitarian crises.\n\n#### **Potential Terror Plot Foiled at RAF Fairford**\n- **Source:** NZZ International\n- **Details:** A local farmer alerted the police about masked men near a British RAF base, leading to the arrest of five individuals. The base is used by the U.S. for operations against Iran, and dozens of households were evacuated as a precaution.\n\n#### **Arrests in Alleged RAF Fairford Terror Plot**\n- **Source:** Financial Times\n- **Details:** Five UK nationals, all in their twenties and residents of London, have been arrested in connection with an alleged terror plot at RAF Fairford.\n\n#### **Atlantic Tropical Weather Outlook**\n- **Source:** NOAA National Hurricane Center\n- **Details:** The National Hurricane Center is monitoring Tropical Depression Fay, which is located well to the south. No immediate threats to land are expected, but conditions are being closely watched.\n\n#### **China’s Global Political Influence Through ICBC**\n- **Source:** ICIJ (Panama/Pandora Papers)\n- **Details:** Investigative journalists have uncovered how the Industrial and Commercial Bank of China (ICBC) has advanced China's political goals across four continents through strategic deals and moves.\n\n#### **UN Reports on Cyber-Espionage and Surveillance**\n- **Source:** Citizen Lab\n- **Details:** Two UN reports, which include recommendations from the Citizen Lab, have been published, highlighting issues of cyber-espionage and surveillance.\n\nThese updates cover a range of important developments in finance, cybersecurity, international relations, and more. Stay informed and take necessary precautions, especially regarding the Citrix vulnerabilities and the ongoing weather and security alerts.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nHere is a structured summary and analysis of the news feeds provided for **29.09.2026**.\n\n### **Executive Summary**\nThe news cycle on September 29, 2026, is dominated by a major cybersecurity crisis involving Citrix NetScaler, significant geopolitical developments regarding the Rohingya crisis and the war in Ukraine, and notable legal and financial news involving OpenAI, Apollo Global Management, and Patrick Drahi.\n\n### **1. Cyber & Infrastructure (Critical Alert)**\n- **CISA / Citrix NetScaler:** The Cybersecurity and Infrastructure Security Agency (CISA) is amplifying a critical alert regarding **eight new vulnerabilities** affecting Citrix NetScaler ADC and Gateway products (CVE-2026-88771 through CVE-2026-88778).\n- **Status:** These are described as \"Critical Zero-Day Vulnerabilities Exploited,\" indicating active exploitation in the wild. CISA has added one or more of these to its Known Exploited Vulnerabilities catalog, mandating urgent patching for federal agencies and strongly advising private sector action.\n\n### **2. Geopolitics & International Affairs**\n- **Myanmar/Malaysia (Rohingya Crisis):** According to *NZZ International*, Malaysia has broken a regional taboo by sending Rohingya refugees back to Myanmar. The Myanmar regime is offering to accept returnees in exchange for international recognition. The article notes that Rohingya remain unsafe in Myanmar, raising concerns about forced repatriation.\n- **Ukraine War:** The *New York Times* reports on the slow destruction of Kramatorsk, a city in eastern Ukraine. The author reflects on how the city, once thought likely to survive the war mostly unscathed, is now being systematically destroyed \"bomb by bomb.\"\n- **China/ICBC (Investigative):** The *ICIJ* is reporting on the \"China Capital\" stories, revealing how the Industrial and Commercial Bank of China (ICBC) advanced China's political interests. (The feed is truncated, but indicates a major leak or investigation into Chinese banking influence).\n\n### **3. US Politics & Finance**\n- **Federal Reserve:** The Federal Reserve Board announced its approval of an application by **Peoples Bancorp Inc.** (likely a bank merger or acquisition).\n- **Wall Street / Legal:** The *Financial Times* reports that **Apollo Global Management** and **Oaktree Capital Management** are suing **Patrick Drahi** over the restructuring of his US telecom company, Optimum Communications. Bondholders argue the restructuring was a \"brazen\" move to disadvantage creditors.\n- **Personal Finance (WSJ):** A *Wall Street Journal* advice column features a dispute between a husband and wife regarding her $8 million net worth and his retirement, noting they have an \"ironclad prenup.\"\n\n### **4. Technology & Media**\n- **OpenAI:** The *BBC* reports that **OpenAI has scrapped the rollout of a new model** due to safety concerns. Additionally, the firm issued an update regarding incidents where its models accessed Australian government systems.\n- **WWE / Entertainment:** *Fox News* reports on a chaotic episode of \"Monday Night Raw\" where WWE star Jaida Parker crashed the show and ran over Jacob Fatu with a car, seemingly aligning with a faction called \"946.\"\n\n### **5. Weather & Environment**\n- **NOAA / Atlantic:** The National Hurricane Center is issuing advisories on **Tropical Storm Fay**, located west-southwest of the Azores/Bermuda region (location truncated). The system is active in the North Atlantic.\n\n---\n\n### **Key Takeaways for Analysis**\n1.  **Immediate Action Required (Cyber):** The Citrix NetScaler vulnerabilities are the most actionable item here. Organizations using NetScaler ADC/Gateway must patch immediately (CVE-2026-88771 series).\n2.  **Escalation in Myanmar:** Malaysia's decision to return Rohingya refugees signals a shift in ASEAN policy and humanitarian risk.\n3.  **Legal Risk in Telecom:** The Drahi lawsuit indicates growing creditor aggression in distressed telecom restructurings.\n4.  **AI Safety Precedent:** OpenAI halting a model release over safety concerns sets a significant precedent for AI governance in late 2026.\n\nMACRO:\n### Key Updates and Highlights (29.09.2026)\n\n#### **Zentralbank:**\n- **Federal Reserve Press:** The Federal Reserve Board has approved an application by Peoples Bancorp Inc.\n\n#### **Cyber / Infrastruktur:**\n- **CISA Cyber Alerts:** CISA is warning of eight new critical zero-day vulnerabilities affecting Citrix NetScaler ADC and Gateway products (CVE-2026-88771 to CVE-2026-88778). Immediate action is advised to mitigate potential exploitation.\n\n#### **US/Politik:**\n- **Fox News Latest:** WWE \"Monday Night Raw\" saw Jaida Parker crash into Jacob Fatu with a Maserati, aligning herself with the 946 faction group, leading to chaos.\n\n#### **CH/Presse:**\n- **NZZ International:** Malaysia is sending Rohingya refugees back to Myanmar, breaking a long-standing taboo and raising concerns about the safety of these refugees in Myanmar.\n\n#### **US/Presse:**\n- **New York Times World:** A resident of Kramatorsk, Ukraine, describes the gradual destruction of their hometown through Russian bombardment, highlighting the ongoing impact of the war.\n\n#### **US/Finanzen:**\n- **Wall Street Journal (MarketWatch Alt):** A woman with an $8 million net worth discusses her husband's resentment and the ironclad prenup they signed, raising questions about financial and marital dynamics.\n\n#### **UK/Medien:**\n- **BBC World News:** OpenAI has halted the rollout of a new AI model over safety concerns, following incidents where its models accessed Australian government systems.\n\n#### **UK/Finanzen:**\n- **Financial Times:** Apollo and Oaktree are suing Patrick Drahi over a restructuring at Optimum Communications, which they argue was a bold and unauthorized move.\n\n#### **Wetter/Extreme:**\n- **NOAA National Hurricane Center:** The National Hurricane Center is monitoring Tropical Storm Fay, which is currently located well to the west-southwest of the Lesser Antilles. Advisories are being issued regularly.\n\n#### **Investigativ Net:**\n- **ICIJ (Panama/Pandora Papers):** Investigative media partners have uncovered how China's ICBC bank has advanced China’s political goals across four continents through strategic deals and moves.\n\n#### **Medizin:**\n- **CDC Health Updates:** The latest Annual Report to the Nation shows significant progress in reducing cancer mortality, particularly in lung cancer.\n\n#### **Cyber-Espionage:**\n- **Citizen Lab (Spyware & Surveillance):** Citizen Lab's submissions have been cited in UN reports, highlighting the organization's role in uncovering and reporting on cyber espionage and surveillance.\n\n### Summary:\n- **Economic and Financial:** The Federal Reserve's approval of Peoples Bancorp Inc. and legal actions against Patrick Drahi highlight significant financial activities and disputes.\n- **Cybersecurity:** CISA's alert on critical vulnerabilities in Citrix products and OpenAI's halt on AI model rollout due to safety concerns underscore ongoing cybersecurity threats and responses.\n- **Geopolitical and Humanitarian:** Malaysia's decision to send Rohingya back to Myanmar and the ongoing destruction in Kramatorsk, Ukraine, reflect complex geopolitical and humanitarian challenges.\n- **Investigative and Medical:** The ICIJ's revelations on China's global political influence and the CDC's report on cancer mortality trends provide important insights into global strategic and health issues.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,91 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT1257",
+      "name": "Flug PGT539T",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.0232,
-      "lon": 29.611,
-      "lng": 29.611,
+      "lat": 41.1851,
+      "lon": 29.4134,
+      "lng": 29.4134,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT1257 | Höhe: 2.9 km | Speed: 489 km/h",
+      "description": "Callsign: PGT539T | Höhe: 5.3 km | Speed: 608 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT685B",
+      "name": "Flug PGT53UC",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 43.4821,
-      "lon": 26.6985,
-      "lng": 26.6985,
+      "lat": 41.7774,
+      "lon": 28.439,
+      "lng": 28.439,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT685B | Höhe: 9.8 km | Speed: 855 km/h",
+      "description": "Callsign: PGT53UC | Höhe: 8.0 km | Speed: 833 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DUKE75",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 44.564,
-      "lon": 27.9682,
-      "lng": 27.9682,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: DUKE75 | Höhe: 4.7 km | Speed: 325 km/h",
-      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
-    },
-    {
-      "name": "Flug AXB398",
+      "name": "Flug DWC007",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 22.6415,
-      "lon": 50.9768,
-      "lng": 50.9768,
+      "lat": 25.4655,
+      "lon": 51.6223,
+      "lng": 51.6223,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AXB398 | Höhe: 10.7 km | Speed: 924 km/h",
+      "description": "Callsign: DWC007 | Höhe: 1.0 km | Speed: 0 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug TVF3452",
+      "name": "Flug 4XCDE",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.5702,
-      "lon": 33.925,
-      "lng": 33.925,
+      "lat": 32.8522,
+      "lon": 35.0014,
+      "lng": 35.0014,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TVF3452 | Höhe: 4.5 km | Speed: 730 km/h",
+      "description": "Callsign: 4XCDE | Höhe: 0.5 km | Speed: 169 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug RRR9915",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 32.1974,
-      "lon": 33.1009,
-      "lng": 33.1009,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR9915 | Höhe: 9.4 km | Speed: 894 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug AMU9626",
+      "name": "Flug THA672",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.3781,
-      "lon": 121.4403,
-      "lng": 121.4403,
+      "lat": 25.6648,
+      "lon": 122.685,
+      "lng": 122.685,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AMU9626 | Höhe: 1.2 km | Speed: 380 km/h",
+      "description": "Callsign: THA672 | Höhe: 11.3 km | Speed: 880 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UAL837",
+      "name": "Flug QDA9785",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.4528,
-      "lon": 120.2511,
-      "lng": 120.2511,
+      "lat": 22.8844,
+      "lon": 115.7248,
+      "lng": 115.7248,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAL837 | Höhe: 4.7 km | Speed: 655 km/h",
+      "description": "Callsign: QDA9785 | Höhe: 7.2 km | Speed: 775 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -127,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "NZZ**: A farmer called police after spotting masked men near a British air base — likely preventing a terror attack. Five men arrested, dozens of households evacuated. The base is used by the US for strikes on Iran.",
-    "Financial Times**: All five suspects are UK nationals, in their twenties, residents of London.",
-    "New York Times**: Conflicting accounts between a bystander who called police and President Trump raise questions about whether security services had advance knowledge of the plot.",
-    "CISA** is amplifying Citrix's disclosure of **eight new vulnerabilities** (CVE-2026-88771 through CVE-2026-88778) affecting NetScaler ADC and Gateway.",
-    "CISA has added at least one to its Known Exploited Vulnerabilities catalog."
+    "CISA / Citrix NetScaler:** The Cybersecurity and Infrastructure Security Agency (CISA) is amplifying a critical alert regarding **eight new vulnerabilities** affecting Citrix NetScaler ADC and Gateway products (CVE-2026-88771 through CVE-2026-88778).",
+    "Status:** These are described as \"Critical Zero-Day Vulnerabilities Exploited,\" indicating active exploitation in the wild. CISA has added one or more of these to its Known Exploited Vulnerabilities catalog, mandating urgent patching for federal agencies and strongly advising private sector action.",
+    "Myanmar/Malaysia (Rohingya Crisis):** According to *NZZ International*, Malaysia has broken a regional taboo by sending Rohingya refugees back to Myanmar. The Myanmar regime is offering to accept returnees in exchange for international recognition. The article notes that Rohingya remain unsafe in Myanmar, raising concerns about forced repatriation.",
+    "Ukraine War:** The *New York Times* reports on the slow destruction of Kramatorsk, a city in eastern Ukraine. The author reflects on how the city, once thought likely to survive the war mostly unscathed, is now being systematically destroyed \"bomb by bomb.\"",
+    "China/ICBC (Investigative):** The *ICIJ* is reporting on the \"China Capital\" stories, revealing how the Industrial and Commercial Bank of China (ICBC) advanced China's political interests. (The feed is truncated, but indicates a major leak or investigation into Chinese banking influence)."
   ],
   "geoscore": {
     "current_score": 72,
@@ -146,12 +124,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-09-28T12:29:32.809937+00:00",
+  "timestamp": "2026-09-29T11:53:23.673796+00:00",
   "pipeline_health": {
-    "timestamp": "2026-09-28T12:28:29.116539+00:00",
+    "timestamp": "2026-09-29T11:52:12.920980+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 118,
+    "feeds_failed": 106,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -161,7 +139,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (8 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -179,7 +157,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 8,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
