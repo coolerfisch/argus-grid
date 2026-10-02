@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nHere is a structured summary and analysis of the news feeds provided for **October 1, 2026**.\n\n### 📊 News Summary by Category\n\n#### 🏦 Central Banks & Financial Stability\n*   **Federal Reserve:** The Fed finalized changes to its **stress test framework**. The stated goals are to enhance transparency and public accountability while reducing volatility in stress-test-related capital requirements. This suggests a move toward more predictable, rules-based capital planning for banks.\n*   **Financial Times (FT):** Australia is highlighted as a model for **financial system resilience...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nHere is a structured summary and analysis of the news feeds provided for **October 1, 2026**.\n\n### 📊 News Summary by Category\n\n#### 🏦 Central Banks & Financial Stability\n*   **Federal Reserve:** The Fed finalized changes to its **stress test framework**. The stated goals are to enhance transparency and public accountability while ...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n\n\nMACRO:\n### Summary of Key News Feeds on 02.10.2026\n\n#### **Zentralbank:**\n- **Fed Speeches & Minutes: Bowman, Modernizing Financial Regulation**\n  - **Content:** Michelle Bowman speaks at the Atlantic Council 2026 CEO & Senior Management Summit in Washington, D.C., discussing initial observations from the eSLR (Enhanced Supervision and Liquidity Requirements) framework. The focus is on modernizing financial regulation to adapt to new technological and market dynamics.\n\n#### **Cyber / Infrastruktur:**\n- **CISA Cyber Alerts: Armatura LLC Armatura One - View CSAF**\n  - **Summa...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n\n\nMACRO:\n### Summary of Key News Feeds on 02.10.2026\n\n#### **Zentralbank:**\n- **Fed Speeches & Minutes: Bowman, Modernizing Financial Regulation**\n  - **Content:** Michelle Bowman speaks at the Atlantic Council 2026 CEO & Senior Management Summit in Washington, D.C., discussing initial observations from the eSLR (Enhanced Supervis...",
   "key_takeaways": [
-    "Federal Reserve:** The Fed finalized changes to its **stress test framework**. The stated goals are to enhance transparency and public accountability while reducing volatility in stress-test-related capital requirements. This suggests a move toward more predictable, rules-based capital planning for banks.",
-    "Financial Times (FT):** Australia is highlighted as a model for **financial system resilience against undersea cable blackouts**. This is a significant infrastructure concern, as global finance relies heavily on undersea data lines.",
-    "US Diesel Ban & EU Stockpiles:** The White House is reportedly asking Germany and France to release diesel stockpiles. The EU Commission, France, Ireland, Britain, and Italy are holding a call about this. This points to a potential **energy supply crisis** or a major policy shift in the US regarding diesel.",
-    "CISA Alert:** A new vulnerability (**CVE-2026-76504**) has been added to the Known Exploited Vulnerabilities (KEV) Catalog. It affects **Cisco Catalyst SD-WAN Manager** and involves a \"Hex Encoding Vulnerability.\" CISA notes this is a frequent attack vector and poses a significant risk, indicating active exploitation.",
-    "Israel (NYT):** There was an **attack on a flight**. Israeli passengers and reserve pilots helped secure the plane and land it safely. The attacker has not been identified. Prime Minister Netanyahu praised the injured captain. This is a major security incident."
+    "Fed Speeches & Minutes: Bowman, Modernizing Financial Regulation**",
+    "Content:** Michelle Bowman speaks at the Atlantic Council 2026 CEO & Senior Management Summit in Washington, D.C., discussing initial observations from the eSLR (Enhanced Supervision and Liquidity Requirements) framework. The focus is on modernizing financial regulation to adapt to new technological and market dynamics.",
+    "CISA Cyber Alerts: Armatura LLC Armatura One - View CSAF**",
+    "Summary:** CISA has issued a security alert for Armatura LLC Armatura One, highlighting vulnerabilities that could allow attackers to gain unauthorized access to the database, execute arbitrary code with high privileges, or control the physical access-control system. Affected versions of Armatura One are not fully specified but are under investigation.",
+    "Wall Street Journal (MarketWatch Alt): 401(k) Investment Dilemma**"
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nHere is a structured summary and analysis of the news feeds provided for **October 1, 2026**.\n\n### 📊 News Summary by Category\n\n#### 🏦 Central Banks & Financial Stability\n*   **Federal Reserve:** The Fed finalized changes to its **stress test framework**. The stated goals are to enhance transparency and public accountability while reducing volatility in stress-test-related capital requirements. This suggests a move toward more predictable, rules-based capital planning for banks.\n*   **Financial Times (FT):** Australia is highlighted as a model for **financial system resilience against undersea cable blackouts**. This is a significant infrastructure concern, as global finance relies heavily on undersea data lines.\n*   **US Diesel Ban & EU Stockpiles:** The White House is reportedly asking Germany and France to release diesel stockpiles. The EU Commission, France, Ireland, Britain, and Italy are holding a call about this. This points to a potential **energy supply crisis** or a major policy shift in the US regarding diesel.\n\n#### 🛡️ Cybersecurity & Infrastructure\n*   **CISA Alert:** A new vulnerability (**CVE-2026-76504**) has been added to the Known Exploited Vulnerabilities (KEV) Catalog. It affects **Cisco Catalyst SD-WAN Manager** and involves a \"Hex Encoding Vulnerability.\" CISA notes this is a frequent attack vector and poses a significant risk, indicating active exploitation.\n\n#### 🌍 Geopolitics & International Affairs\n*   **Israel (NYT):** There was an **attack on a flight**. Israeli passengers and reserve pilots helped secure the plane and land it safely. The attacker has not been identified. Prime Minister Netanyahu praised the injured captain. This is a major security incident.\n*   **Romania (NZZ):** Romania is in a **political deadlock**. For the third time since June, the formation of a government in Bucharest has failed. The article notes this standstill is costly for the country.\n\n#### ⚖️ US Domestic & Legal\n*   **Death Row (BBC):** Inmate **Christa Pike survived an execution attempt** after two lethal injections. She is now receiving \"life-saving measures\" in a hospital. This raises significant legal and ethical questions about capital punishment procedures.\n*   **Sports (Fox News):** The Dallas Cowboys, under Jerry Jones, have traded for Steelers' **Joey Porter Jr.**, signaling an \"all-in\" push for a Super Bowl.\n\n#### 🌪️ Weather & Environment\n*   **NOAA:** The Atlantic Tropical Weather Outlook is active, indicating ongoing monitoring of tropical systems.\n\n---\n\n### 🔍 Key Themes & Analysis\n\n1.  **Financial System Under Stress:** The combination of the Fed adjusting stress tests, Australia preparing for cable blackouts, and the US potentially banning diesel (requiring EU stockpile releases) suggests a **global financial and energy system under significant strain**. The focus is on resilience and contingency planning.\n2.  **Active Cyber Threats:** The CISA alert for a Cisco SD-WAN vulnerability is a **critical, immediate threat**. SD-WAN is core networking infrastructure for many large organizations. A hex encoding vulnerability could allow for remote code execution or data manipulation.\n3.  **Political Instability & Security Incidents:** The failed government formation in Romania and the attack on an Israeli flight point to **ongoing geopolitical and internal political volatility**.\n4.  **Controversial Legal Procedures:** The survival of Christa Pike after a failed execution will likely reignite debates about the **reliability and humanity of lethal injection protocols**.\n\n### 📌 What to Watch\n*   **Cisco SD-WAN:** Immediate patching or mitigation for CVE-2026-76504 is critical for any organization using this product.\n*   **US Diesel Policy:** The outcome of the EU call regarding diesel stockpiles could impact global energy prices and US-EU relations.\n*   **Romania:** Will a fourth attempt at government formation succeed, or will snap elections be called?\n*   **Israel:** Investigation into the flight attack will be closely followed for security implications.\n\nMACRO:\n### Kürschners Nachrichtenübersicht – 01.10.2026\n\n#### Zentralbank\n- **Federal Reserve Press**: Die Federal Reserve Board hat Änderungen verabschiedet, um die Transparenz und öffentliche Rechenschaftspflicht ihrer Stresstests zu verbessern und Schwankungen in den durch Stresstests beeinflussten Kapitalanforderungen zu reduzieren.\n\n#### Cyber / Infrastruktur\n- **CISA Cyber Alerts**: CISA hat eine neue Verwundbarkeit zum \"Known Exploited Vulnerabilities (KEV) Catalog\" hinzugefügt, basierend auf Beweisen für aktive Ausnutzung.\n  - **CVE-2026-76504 Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability**: Dieser Fehler ist ein häufiges Angriffsvektor für bösartige Cyberschurken und stellt eine erhebliche Bedrohung dar.\n\n#### US/Finanzen\n- **Wall Street Journal (MarketWatch Alt)**: Europäische Versorgung könnte die Auswirkungen eines US-Dieselverbots beeinflussen, da der Weiße Haus Berichten zufolge Deutschland und Frankreich gebeten hat, die Vorräte freizugeben.\n  - Es wird berichtet, dass die EU-Kommission, Frankreich, Irland, Großbritannien und Italien ein Telefonat über die Möglichkeit der Freisetzung von Dieseltanks führen.\n\n#### US/Presse\n- **New York Times World**: Live-Updates: Israelis feiern die Rückkehr der Passagiere, während Fragen um die Flugzeugangriffswelle auftauchen.\n  - Premierminister Benjamin Netanyahu lobte den verletzten Kapitän, die israelischen Fluggäste und die Reservepiloten, die halfen, das Flugzeug sicher zu landen. Der Angreifer ist bisher nicht identifiziert.\n\n#### US/Politik\n- **Fox News Latest**: Jerry Jones setzt alles auf eine Karte, als die Cowboys den Steelers' Joey Porter Jr. für einen Super Bowl-Sieg transferringieren.\n  - Joey Porter Jr. wechselt von den Steelers zu den Dallas Cowboys, während Jerry Jones alles auf eine Karte setzt, um seine Super Bowl-Träume zu verwirklichen.\n\n#### CH/Presse\n- **NZZ International**: Rumänien steckt in der politischen Sackgasse fest.\n  - Zum dritten Mal seit Juni ist in Bukarest die Bildung einer Regierung gescheitert. Der Stillstand kostet das Land teuer.\n\n#### UK/Medien\n- **BBC World News**: US-Todeszeileninsasse überlebt Hinrichtungsversuch nach zwei tödlichen Injektionen.\n  - Die Anwältin von Christa Pike, einer Tötungsschuldigen, meldet, dass sie nach zwei Injektionen von Pentobarbital in einem Krankenhaus lebensrettende Maßnahmen erhält.\n\n#### UK/Finanzen\n- **Financial Times**: Australiens Banken zeigen, wie man sich auf Kabelausfälle vorbereitet.\n  - Das Land bereitet sein Finanzsystem darauf vor, Kabelstörungen zu überstehen, die durch Unterwasserleitungen verursacht werden können.\n\n#### Wetter/Extreme\n- **NOAA National Hurricane Center**: Atlantik-Tropisches Wetter-Vorhersage.\n  - Keine tropische Wirbelsturmbildung erwartet in den nächsten sieben Tagen.\n\n#### Investigativ Net\n- **ICIJ (Panama/Pandora Papers)**: Gunvor verurteilte öffentlich den Krieg in Russland, tätigte aber weiterhin Geschäfte mit russischen Energieunternehmen.\n  - Obwohl das Handelsunternehmen öffentlich erklärte, seine Geschäfte in Russland einzustellen, gab es intern zu, dass es diese weiterführte.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n\n\nMACRO:\n### Summary of Key News Feeds on 02.10.2026\n\n#### **Zentralbank:**\n- **Fed Speeches & Minutes: Bowman, Modernizing Financial Regulation**\n  - **Content:** Michelle Bowman speaks at the Atlantic Council 2026 CEO & Senior Management Summit in Washington, D.C., discussing initial observations from the eSLR (Enhanced Supervision and Liquidity Requirements) framework. The focus is on modernizing financial regulation to adapt to new technological and market dynamics.\n\n#### **Cyber / Infrastruktur:**\n- **CISA Cyber Alerts: Armatura LLC Armatura One - View CSAF**\n  - **Summary:** CISA has issued a security alert for Armatura LLC Armatura One, highlighting vulnerabilities that could allow attackers to gain unauthorized access to the database, execute arbitrary code with high privileges, or control the physical access-control system. Affected versions of Armatura One are not fully specified but are under investigation.\n\n#### **US/Finanzen:**\n- **Wall Street Journal (MarketWatch Alt): 401(k) Investment Dilemma**\n  - **Content:** A young professional, frequently laid off, questions whether to invest in their employer’s 401(k) or explore other investment options. The article reflects on the diminishing faith in long-term career stability and the need for diversified financial planning.\n\n#### **US/Politik:**\n- **Fox News Latest: Rachel's Political Contributions**\n  - **Content:** Rachel, a prominent political figure, is actively funding progressive campaigns, reflecting a shift in political donations and strategies. The news highlights the top stories from the most influential news source in the morning.\n\n#### **UK/Medien:**\n- **BBC World News: FlyDubai Pilot's Courage**\n  - **Content:** Captain Smit Machchhar of a FlyDubai flight describes his courageous actions during a cockpit attack by his co-pilot. Despite serious injuries, he opened the cockpit door to prevent a potential crash, demonstrating exceptional bravery.\n\n#### **CH/Presse:**\n- **NZZ International: Lula's Presidential Bid**\n  - **Content:** Lula, a longstanding political figure in Brazil, aims to become president for the fourth time. The article discusses the changing political landscape in Brazil and the risks Lula takes by positioning himself as indispensable, potentially jeopardizing his political legacy.\n\n#### **US/Presse:**\n- **New York Times World: Indian Pilot's Attack**\n  - **Content:** Capt. Smit Machchhar, who was stabbed by his co-pilot during a FlyDubai flight from Dubai to Tel Aviv, recounts the sudden and violent attack. Despite his injuries, he acted to prevent a crash, emphasizing his commitment to passenger safety.\n\n#### **UK/Finanzen:**\n- **Financial Times: German Debt as Haven**\n  - **Content:** Investors are flocking to German government bonds (Bunds) as a safe haven amidst a bond market rout. Bund yields have decreased, contrasting with the sharp sell-offs in U.S., French, and other government bonds due to inflation concerns.\n\n#### **Wetter/Extreme:**\n- **NOAA National Hurricane Center: Atlantic Tropical Weather Outlook**\n  - **Content:** The National Hurricane Center provides an update on the remnants of Tropical Storm Fay in the West-Central Atlantic. A trough of low pressure is associated with the remnants, and there are ongoing monitoring efforts for potential re-development.\n\n#### **Investigativ Net:**\n- **ICIJ (Panama/Pandora Papers): Gunvor's Russia Business**\n  - **Content:** Despite publicly condemning Russia's war, Gunvor, a trading giant, continued to conduct business with Russian energy firms. The company privately acknowledged these deals to its bank, the Industrial and Commercial Bank of China, stating they complied with sanctions.\n\n#### **Cyber-Espionage:**\n- **Citizen Lab: UN Reports on Surveillance**\n  - **Content:** The UN has published reports citing submissions from Citizen Lab, a leading organization in the field of cyber espionage and surveillance. These reports highlight ongoing issues and concerns related to digital surveillance and its implications for global security.\n\nThese news items cover a wide range of topics, from financial regulation and cybersecurity to political contributions and international conflicts, reflecting the complex and interconnected nature of global news in 2026.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +27,91 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT685B",
+      "name": "Flug PGT498Y",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.0825,
-      "lon": 29.5962,
-      "lng": 29.5962,
+      "lat": 40.8759,
+      "lon": 29.512,
+      "lng": 29.512,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT685B | Höhe: 3.1 km | Speed: 533 km/h",
+      "description": "Callsign: PGT498Y | Höhe: 5.4 km | Speed: 619 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT539T",
+      "name": "Flug PGT417M",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.5756,
-      "lon": 26.6549,
-      "lng": 26.6549,
+      "lat": 40.8751,
+      "lon": 29.2763,
+      "lng": 29.2763,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT539T | Höhe: 10.4 km | Speed: 808 km/h",
+      "description": "Callsign: PGT417M | Höhe: 0.1 km | Speed: 210 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DUKE60",
+      "name": "Flug RRR6629",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 45.3958,
-      "lon": 25.3174,
-      "lng": 25.3174,
+      "lat": 40.1159,
+      "lon": 29.9347,
+      "lng": 29.9347,
       "type": "flight",
       "intensity": "ROT",
-      "description": "Callsign: DUKE60 | Höhe: 8.5 km | Speed: 512 km/h",
+      "description": "Callsign: RRR6629 | Höhe: 9.8 km | Speed: 839 km/h",
       "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
+    },
+    {
+      "name": "Flug TVF3451",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 33.179,
+      "lon": 32.284,
+      "lng": 32.284,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: TVF3451 | Höhe: 11.6 km | Speed: 747 km/h",
+      "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug AIC2029",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 26.7614,
-      "lon": 50.2592,
-      "lng": 50.2592,
+      "lat": 26.2602,
+      "lon": 51.7903,
+      "lng": 51.7903,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC2029 | Höhe: 11.0 km | Speed: 853 km/h",
+      "description": "Callsign: AIC2029 | Höhe: 10.4 km | Speed: 850 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XBEC",
+      "name": "Flug CNV5403",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.821,
-      "lon": 34.9673,
-      "lng": 34.9673,
+      "lat": 22.9722,
+      "lon": 51.5798,
+      "lng": 51.5798,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: CNV5403 | Höhe: 11.3 km | Speed: 868 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug CSN3562",
+      "region": "Taiwan-Straße / Ostasien",
+      "lat": 23.4405,
+      "lon": 116.4632,
+      "lng": 116.4632,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XBEC | Höhe: 0.3 km | Speed: 195 km/h",
+      "description": "Callsign: CSN3562 | Höhe: 8.4 km | Speed: 884 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA677",
+      "name": "Flug THA673",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.7744,
-      "lon": 120.142,
-      "lng": 120.142,
+      "lat": 21.1579,
+      "lon": 117.4799,
+      "lng": 117.4799,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA677 | Höhe: 11.6 km | Speed: 938 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug CRK232",
-      "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.2561,
-      "lon": 117.0947,
-      "lng": 117.0947,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: CRK232 | Höhe: 10.5 km | Speed: 828 km/h",
+      "description": "Callsign: THA673 | Höhe: 11.6 km | Speed: 928 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,11 +127,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Federal Reserve:** The Fed finalized changes to its **stress test framework**. The stated goals are to enhance transparency and public accountability while reducing volatility in stress-test-related capital requirements. This suggests a move toward more predictable, rules-based capital planning for banks.",
-    "Financial Times (FT):** Australia is highlighted as a model for **financial system resilience against undersea cable blackouts**. This is a significant infrastructure concern, as global finance relies heavily on undersea data lines.",
-    "US Diesel Ban & EU Stockpiles:** The White House is reportedly asking Germany and France to release diesel stockpiles. The EU Commission, France, Ireland, Britain, and Italy are holding a call about this. This points to a potential **energy supply crisis** or a major policy shift in the US regarding diesel.",
-    "CISA Alert:** A new vulnerability (**CVE-2026-76504**) has been added to the Known Exploited Vulnerabilities (KEV) Catalog. It affects **Cisco Catalyst SD-WAN Manager** and involves a \"Hex Encoding Vulnerability.\" CISA notes this is a frequent attack vector and poses a significant risk, indicating active exploitation.",
-    "Israel (NYT):** There was an **attack on a flight**. Israeli passengers and reserve pilots helped secure the plane and land it safely. The attacker has not been identified. Prime Minister Netanyahu praised the injured captain. This is a major security incident."
+    "Fed Speeches & Minutes: Bowman, Modernizing Financial Regulation**",
+    "Content:** Michelle Bowman speaks at the Atlantic Council 2026 CEO & Senior Management Summit in Washington, D.C., discussing initial observations from the eSLR (Enhanced Supervision and Liquidity Requirements) framework. The focus is on modernizing financial regulation to adapt to new technological and market dynamics.",
+    "CISA Cyber Alerts: Armatura LLC Armatura One - View CSAF**",
+    "Summary:** CISA has issued a security alert for Armatura LLC Armatura One, highlighting vulnerabilities that could allow attackers to gain unauthorized access to the database, execute arbitrary code with high privileges, or control the physical access-control system. Affected versions of Armatura One are not fully specified but are under investigation.",
+    "Wall Street Journal (MarketWatch Alt): 401(k) Investment Dilemma**"
   ],
   "geoscore": {
     "current_score": 72,
@@ -135,9 +146,9 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-10-01T12:09:08.811859+00:00",
+  "timestamp": "2026-10-02T11:39:53.935153+00:00",
   "pipeline_health": {
-    "timestamp": "2026-10-01T12:08:07.334376+00:00",
+    "timestamp": "2026-10-02T11:38:43.256747+00:00",
     "feeds_total": 224,
     "feeds_successful": 120,
     "feeds_failed": 104,
@@ -150,7 +161,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (8 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -168,7 +179,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 7,
+    "hotspots_now": 8,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
