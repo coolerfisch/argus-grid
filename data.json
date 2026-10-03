@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n\n\nMACRO:\n### Summary of Key News Feeds on 02.10.2026\n\n#### **Zentralbank:**\n- **Fed Speeches & Minutes: Bowman, Modernizing Financial Regulation**\n  - **Content:** Michelle Bowman speaks at the Atlantic Council 2026 CEO & Senior Management Summit in Washington, D.C., discussing initial observations from the eSLR (Enhanced Supervision and Liquidity Requirements) framework. The focus is on modernizing financial regulation to adapt to new technological and market dynamics.\n\n#### **Cyber / Infrastruktur:**\n- **CISA Cyber Alerts: Armatura LLC Armatura One - View CSAF**\n  - **Summa...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n\n\nMACRO:\n### Summary of Key News Feeds on 02.10.2026\n\n#### **Zentralbank:**\n- **Fed Speeches & Minutes: Bowman, Modernizing Financial Regulation**\n  - **Content:** Michelle Bowman speaks at the Atlantic Council 2026 CEO & Senior Management Summit in Washington, D.C., discussing initial observations from the eSLR (Enhanced Supervis...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**Lagebild 03.10.2026**\n\n**Naher Osten / Luftverkehr**\nDie FlyDubai-Zwischenfallberichterstattung verdichtet sich zu einem schweren Sicherheitsvorfall: Ein 29-jähriger omanischer Co-Pilot (Hamam al-Hammami) soll den Kapitän auf einem Flug nach Tel Aviv attackiert haben – laut UAE-Beamten mit einer Axt, laut anderen Quellen mit einem Messer. Der verletzte indische Pilot konnte die Cockpit-Tür entriegeln, vier israelische Passagiere überwältigten den Angreifer. Al-Hammami war 2024 bei Oman Air gegroundet worden. Motiv und Hintergrund bleiben offen; die unterschiedlichen Waffend...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**Lagebild 03.10.2026**\n\n**Naher Osten / Luftverkehr**\nDie FlyDubai-Zwischenfallberichterstattung verdichtet sich zu einem schweren Sicherheitsvorfall: Ein 29-jähriger omanischer Co-Pilot (Hamam al-Hammami) soll den Kapitän auf einem Flug nach Tel Aviv attackiert haben – laut UAE-Beamten mit einer Axt, laut anderen Quellen mit ein...",
   "key_takeaways": [
-    "Fed Speeches & Minutes: Bowman, Modernizing Financial Regulation**",
-    "Content:** Michelle Bowman speaks at the Atlantic Council 2026 CEO & Senior Management Summit in Washington, D.C., discussing initial observations from the eSLR (Enhanced Supervision and Liquidity Requirements) framework. The focus is on modernizing financial regulation to adapt to new technological and market dynamics.",
-    "CISA Cyber Alerts: Armatura LLC Armatura One - View CSAF**",
-    "Summary:** CISA has issued a security alert for Armatura LLC Armatura One, highlighting vulnerabilities that could allow attackers to gain unauthorized access to the database, execute arbitrary code with high privileges, or control the physical access-control system. Affected versions of Armatura One are not fully specified but are under investigation.",
-    "Wall Street Journal (MarketWatch Alt): 401(k) Investment Dilemma**"
+    "GDELT (epochtimes.com)**: The United Arab Emirates has suspended all trade with Iran due to missile threats. (Date: 20260819T093000Z)",
+    "Federal Reserve Press**: The Federal Reserve Board has approved the application by Fleur Capital Corporation.",
+    "Wall Street Journal (MarketWatch Alt)**: A 67-year-old employee at a big-box store, earning $19.50 an hour, questions his retirement prospects, despite receiving Social Security and having a 401(k).",
+    "CISA Cyber Alerts**: CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog:",
+    "CVE-2026-102489**: Zammad GmbH Zammad Session Fixation Vulnerability"
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n\n\nMACRO:\n### Summary of Key News Feeds on 02.10.2026\n\n#### **Zentralbank:**\n- **Fed Speeches & Minutes: Bowman, Modernizing Financial Regulation**\n  - **Content:** Michelle Bowman speaks at the Atlantic Council 2026 CEO & Senior Management Summit in Washington, D.C., discussing initial observations from the eSLR (Enhanced Supervision and Liquidity Requirements) framework. The focus is on modernizing financial regulation to adapt to new technological and market dynamics.\n\n#### **Cyber / Infrastruktur:**\n- **CISA Cyber Alerts: Armatura LLC Armatura One - View CSAF**\n  - **Summary:** CISA has issued a security alert for Armatura LLC Armatura One, highlighting vulnerabilities that could allow attackers to gain unauthorized access to the database, execute arbitrary code with high privileges, or control the physical access-control system. Affected versions of Armatura One are not fully specified but are under investigation.\n\n#### **US/Finanzen:**\n- **Wall Street Journal (MarketWatch Alt): 401(k) Investment Dilemma**\n  - **Content:** A young professional, frequently laid off, questions whether to invest in their employer’s 401(k) or explore other investment options. The article reflects on the diminishing faith in long-term career stability and the need for diversified financial planning.\n\n#### **US/Politik:**\n- **Fox News Latest: Rachel's Political Contributions**\n  - **Content:** Rachel, a prominent political figure, is actively funding progressive campaigns, reflecting a shift in political donations and strategies. The news highlights the top stories from the most influential news source in the morning.\n\n#### **UK/Medien:**\n- **BBC World News: FlyDubai Pilot's Courage**\n  - **Content:** Captain Smit Machchhar of a FlyDubai flight describes his courageous actions during a cockpit attack by his co-pilot. Despite serious injuries, he opened the cockpit door to prevent a potential crash, demonstrating exceptional bravery.\n\n#### **CH/Presse:**\n- **NZZ International: Lula's Presidential Bid**\n  - **Content:** Lula, a longstanding political figure in Brazil, aims to become president for the fourth time. The article discusses the changing political landscape in Brazil and the risks Lula takes by positioning himself as indispensable, potentially jeopardizing his political legacy.\n\n#### **US/Presse:**\n- **New York Times World: Indian Pilot's Attack**\n  - **Content:** Capt. Smit Machchhar, who was stabbed by his co-pilot during a FlyDubai flight from Dubai to Tel Aviv, recounts the sudden and violent attack. Despite his injuries, he acted to prevent a crash, emphasizing his commitment to passenger safety.\n\n#### **UK/Finanzen:**\n- **Financial Times: German Debt as Haven**\n  - **Content:** Investors are flocking to German government bonds (Bunds) as a safe haven amidst a bond market rout. Bund yields have decreased, contrasting with the sharp sell-offs in U.S., French, and other government bonds due to inflation concerns.\n\n#### **Wetter/Extreme:**\n- **NOAA National Hurricane Center: Atlantic Tropical Weather Outlook**\n  - **Content:** The National Hurricane Center provides an update on the remnants of Tropical Storm Fay in the West-Central Atlantic. A trough of low pressure is associated with the remnants, and there are ongoing monitoring efforts for potential re-development.\n\n#### **Investigativ Net:**\n- **ICIJ (Panama/Pandora Papers): Gunvor's Russia Business**\n  - **Content:** Despite publicly condemning Russia's war, Gunvor, a trading giant, continued to conduct business with Russian energy firms. The company privately acknowledged these deals to its bank, the Industrial and Commercial Bank of China, stating they complied with sanctions.\n\n#### **Cyber-Espionage:**\n- **Citizen Lab: UN Reports on Surveillance**\n  - **Content:** The UN has published reports citing submissions from Citizen Lab, a leading organization in the field of cyber espionage and surveillance. These reports highlight ongoing issues and concerns related to digital surveillance and its implications for global security.\n\nThese news items cover a wide range of topics, from financial regulation and cybersecurity to political contributions and international conflicts, reflecting the complex and interconnected nature of global news in 2026.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**Lagebild 03.10.2026**\n\n**Naher Osten / Luftverkehr**\nDie FlyDubai-Zwischenfallberichterstattung verdichtet sich zu einem schweren Sicherheitsvorfall: Ein 29-jähriger omanischer Co-Pilot (Hamam al-Hammami) soll den Kapitän auf einem Flug nach Tel Aviv attackiert haben – laut UAE-Beamten mit einer Axt, laut anderen Quellen mit einem Messer. Der verletzte indische Pilot konnte die Cockpit-Tür entriegeln, vier israelische Passagiere überwältigten den Angreifer. Al-Hammami war 2024 bei Oman Air gegroundet worden. Motiv und Hintergrund bleiben offen; die unterschiedlichen Waffendarstellungen deuten auf unvollständige Primärinformation hin.\n\n**Golf / Iran**\nParallel dazu: Die VAE haben laut GDELT-Signal (Quelle: Epoch Times) **alle Handelsbeziehungen zum Iran ausgesetzt** – Begründung: Raketenbedrohung. Das ist ein erheblicher Eskalationsschritt und verschärft die regionale Wirtschafts- und Sicherheitslage. Zeitliche Nähe zum FlyDubai-Vorfall ist auffällig, ein Zusammenhang ist derzeit jedoch nicht belegt.\n\n**Cyber**\nCISA hat zwei aktiv ausgenutzte Schwachstellen in **Zammad** (Session Fixation, Improper Privilege Management) in den KEV-Katalog aufgenommen – beide mit CVE-2026-Nummern, also frische Lücken. Betreiber von Zammad-Instanzen sollten umgehend patchen; aktive Ausnutzung ist bestätigt.\n\n**Finanzen / Handel**\nChina eröffnet **Antidumping-Untersuchung gegen europäische Chemieexporte** – Gegenmaßnahme nach drei EU-Untersuchungen in der Vorwoche. Der handelspolitische Tit-for-Tat-Kurs zwischen EU und China setzt sich fort.\n\n**US-Notenbank**\nFed genehmigt Antrag der **Fleur Capital Corporation** – regulatorisch unspektakulär, aber Teil der laufenden Konsolidierung im Finanzsektor.\n\n**Israel / Innenpolitik**\nNZZ berichtet über die zunehmende Polarisierung zwischen säkularen und ultraorthodoxen Israelis – Stichworte „Religionskrieg\" und „Untergangsphantasien\". Der Konflikt um die Frage, wie jüdisch der jüdische Staat sein soll, wird zunehmend existenziell aufgeladen.\n\n**US-Soziales**\nWSJ/ MarketWatch: 67-jähriger Big-Box-Mitarbeiter bei $19,50/Stunde, $2.410 monatliche Social Security, $214.000 im 401(k) – die Frage „Wann kann ich endlich in Rente?\" illustriert die anhaltende Altersarmutsproblematik im US-Einzelhandel.\n\n**Wetter**\nNOAA Atlantic Tropical Weather Outlook (03.10., 05:29 UTC) liegt vor – Inhalt im Feed abgeschnitten, daher keine belastbare Aussage zu aktiven Systemen möglich.\n\n---\n\n**Einordnung:** Zwei dominante Stränge – (1) eine gefährliche Zuspitzung im Golf: FlyDubai-Angriff plus VAE-Handelsstopp gegen Iran, (2) handels- und sicherheitspolitische Friktionen (China/EU, Israel-Innenpolitik, US-Soziales). Der FlyDubai-Fall verdient besondere Aufmerksamkeit, weil er einen potenziellen Insider-Bedrohungsfall im Luftverkehr darstellt, während die VAE-Iran-Maßnahme geopolitisch schwerer wiegt.\n\nMACRO:\n### Summary of Key News and Developments on October 3, 2026\n\n#### International Relations and Security\n- **GDELT (epochtimes.com)**: The United Arab Emirates has suspended all trade with Iran due to missile threats. (Date: 20260819T093000Z)\n\n#### Economic and Finance\n- **Federal Reserve Press**: The Federal Reserve Board has approved the application by Fleur Capital Corporation.\n- **Wall Street Journal (MarketWatch Alt)**: A 67-year-old employee at a big-box store, earning $19.50 an hour, questions his retirement prospects, despite receiving Social Security and having a 401(k).\n\n#### Cybersecurity and Infrastructure\n- **CISA Cyber Alerts**: CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog:\n  - **CVE-2026-102489**: Zammad GmbH Zammad Session Fixation Vulnerability\n  - **CVE-2026-102490**: Zammad GmbH Zammad Improper Privilege Management Vulnerability\n\n#### Politics and Society\n- **NZZ International**: Tensions between secular and ultra-Orthodox Jews in Israel are escalating, with conflicts marked by fear and doomsday scenarios.\n- **Fox News**: A 29-year-old Omani co-pilot, Hamam al-Hammami, previously grounded by Oman Air in 2024, is accused of stabbing the captain on a FlyDubai flight to Tel Aviv.\n- **New York Times**: After a FlyDubai pilot was stabbed, a badly injured Indian captain managed to unlock the cockpit door, and four Israeli passengers intervened to prevent a disaster.\n- **BBC World News**: UAE officials confirm that the co-pilot who attacked the captain on the Israel-bound flight used an axe.\n\n#### International Trade\n- **Financial Times**: China has initiated an anti-dumping probe into European chemical exports, following three similar investigations launched by the EU last week.\n\n#### Weather and Natural Disasters\n- **NOAA National Hurricane Center**: No tropical cyclone formation is expected in the North Atlantic, Caribbean Sea, or Gulf of Mexico over the next seven days.\n\n#### Organized Crime\n- **OCCRP**: Leaked videos of Uruguayan drug lord Sebastián Marset alleging high-level state protection have led to mass arrests across the Bolivian justice system.\n\n### Key Points\n- **Trade Suspension**: UAE suspends trade with Iran due to missile threats.\n- **Economic Approvals**: Federal Reserve approves Fleur Capital Corporation's application.\n- **Cybersecurity**: CISA adds two new vulnerabilities to its KEV Catalog.\n- **Retirement Concerns**: An elderly employee debates his retirement plans.\n- **Religious Tensions**: Escalating conflict between secular and ultra-Orthodox Jews in Israel.\n- **Aviation Incident**: FlyDubai co-pilot accused of stabbing the captain, leading to intervention by passengers and crew.\n- **Trade Investigations**: China launches anti-dumping probe into European chemical exports.\n- **Weather Outlook**: No tropical cyclone formation expected in the next week.\n- **Organized Crime**: Leaked videos lead to mass arrests in Bolivia's justice system.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,91 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT498Y",
+      "name": "Flug PGT52GR",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8759,
-      "lon": 29.512,
-      "lng": 29.512,
+      "lat": 40.9874,
+      "lon": 29.5522,
+      "lng": 29.5522,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT498Y | Höhe: 5.4 km | Speed: 619 km/h",
+      "description": "Callsign: PGT52GR | Höhe: 1.8 km | Speed: 474 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT417M",
+      "name": "Flug PGT980R",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8751,
-      "lon": 29.2763,
-      "lng": 29.2763,
+      "lat": 40.5306,
+      "lon": 32.4386,
+      "lng": 32.4386,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT417M | Höhe: 0.1 km | Speed: 210 km/h",
+      "description": "Callsign: PGT980R | Höhe: 9.5 km | Speed: 760 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug RRR6629",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.1159,
-      "lon": 29.9347,
-      "lng": 29.9347,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR6629 | Höhe: 9.8 km | Speed: 839 km/h",
-      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
-    },
-    {
-      "name": "Flug TVF3451",
+      "name": "Flug WZZ5VC",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.179,
-      "lon": 32.284,
-      "lng": 32.284,
+      "lat": 34.7582,
+      "lon": 33.0321,
+      "lng": 33.0321,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TVF3451 | Höhe: 11.6 km | Speed: 747 km/h",
+      "description": "Callsign: WZZ5VC | Höhe: 4.9 km | Speed: 606 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AIC2029",
+      "name": "Flug T7AFP",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 26.2602,
-      "lon": 51.7903,
-      "lng": 51.7903,
+      "lat": 26.6603,
+      "lon": 51.4515,
+      "lng": 51.4515,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC2029 | Höhe: 10.4 km | Speed: 850 km/h",
+      "description": "Callsign: T7AFP | Höhe: 13.7 km | Speed: 893 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CNV5403",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 22.9722,
-      "lon": 51.5798,
-      "lng": 51.5798,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: CNV5403 | Höhe: 11.3 km | Speed: 868 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug CSN3562",
+      "name": "Flug CPA430",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.4405,
-      "lon": 116.4632,
-      "lng": 116.4632,
+      "lat": 24.663,
+      "lon": 121.1,
+      "lng": 121.1,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSN3562 | Höhe: 8.4 km | Speed: 884 km/h",
+      "description": "Callsign: CPA430 | Höhe: 12.5 km | Speed: 863 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA673",
+      "name": "Flug HKE845",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.1579,
-      "lon": 117.4799,
-      "lng": 117.4799,
+      "lat": 24.5783,
+      "lon": 121.1812,
+      "lng": 121.1812,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA673 | Höhe: 11.6 km | Speed: 928 km/h",
+      "description": "Callsign: HKE845 | Höhe: 10.4 km | Speed: 824 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -127,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Fed Speeches & Minutes: Bowman, Modernizing Financial Regulation**",
-    "Content:** Michelle Bowman speaks at the Atlantic Council 2026 CEO & Senior Management Summit in Washington, D.C., discussing initial observations from the eSLR (Enhanced Supervision and Liquidity Requirements) framework. The focus is on modernizing financial regulation to adapt to new technological and market dynamics.",
-    "CISA Cyber Alerts: Armatura LLC Armatura One - View CSAF**",
-    "Summary:** CISA has issued a security alert for Armatura LLC Armatura One, highlighting vulnerabilities that could allow attackers to gain unauthorized access to the database, execute arbitrary code with high privileges, or control the physical access-control system. Affected versions of Armatura One are not fully specified but are under investigation.",
-    "Wall Street Journal (MarketWatch Alt): 401(k) Investment Dilemma**"
+    "GDELT (epochtimes.com)**: The United Arab Emirates has suspended all trade with Iran due to missile threats. (Date: 20260819T093000Z)",
+    "Federal Reserve Press**: The Federal Reserve Board has approved the application by Fleur Capital Corporation.",
+    "Wall Street Journal (MarketWatch Alt)**: A 67-year-old employee at a big-box store, earning $19.50 an hour, questions his retirement prospects, despite receiving Social Security and having a 401(k).",
+    "CISA Cyber Alerts**: CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog:",
+    "CVE-2026-102489**: Zammad GmbH Zammad Session Fixation Vulnerability"
   ],
   "geoscore": {
     "current_score": 72,
@@ -146,13 +124,13 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-10-02T11:39:53.935153+00:00",
+  "timestamp": "2026-10-03T10:53:52.686407+00:00",
   "pipeline_health": {
-    "timestamp": "2026-10-02T11:38:43.256747+00:00",
+    "timestamp": "2026-10-03T10:52:17.223286+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
-    "gdelt_articles": 0,
+    "feeds_successful": 121,
+    "feeds_failed": 103,
+    "gdelt_articles": 35,
     "telegram_posts": 0,
     "bakers_active": [
       "DeepSeek",
@@ -161,7 +139,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (8 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -179,7 +157,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 8,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
