@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nHere is a structured summary of the provided news feeds from **October 4, 2026**.\n\n### 🏦 Central Banking & Finance\n- **Federal Reserve:** The Federal Reserve Board announced its approval of an application by **Fleur Capital Corporation**.\n- **US Consumer Finance:** A Wall Street Journal report highlights a controversial practice where the government can garnish up to **15% of Social Security benefits** to repay student loans. This is particularly concerning as debt among older Americans continues to rise. New proposals are being introduced to stop this.\n- **Markets & Geopolit...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nHere is a structured summary of the provided news feeds from **October 4, 2026**.\n\n### 🏦 Central Banking & Finance\n- **Federal Reserve:** The Federal Reserve Board announced its approval of an application by **Fleur Capital Corporation**.\n- **US Consumer Finance:** A Wall Street Journal report highlights a controversial practice w...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **05.10.2026**, here is a synthesized briefing:\n\n---\n\n## 📅 Daily Intelligence Briefing — October 5, 2026\n\n### 🏦 Central Banking / Finance\n- **Federal Reserve** approves an application by **Fleur Capital Corporation** (details pending full release).\n- **Financial Times** analysis: Internal divisions within the AI industry over regulation mirror broader political tribalism — a trend that may spill into corporate governance.\n\n### 🔐 Cybersecurity\n- **CISA** added **two actively exploited vulnerabilities** to its KEV Catalog:\n  - `CVE-2026-102489` —...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **05.10.2026**, here is a synthesized briefing:\n\n---\n\n## 📅 Daily Intelligence Briefing — October 5, 2026\n\n### 🏦 Central Banking / Finance\n- **Federal Reserve** approves an application by **Fleur Capital Corporation** (details pending full release).\n- **Financial Times** analysis: Internal divisions ...",
   "key_takeaways": [
-    "Federal Reserve:** The Federal Reserve Board announced its approval of an application by **Fleur Capital Corporation**.",
-    "US Consumer Finance:** A Wall Street Journal report highlights a controversial practice where the government can garnish up to **15% of Social Security benefits** to repay student loans. This is particularly concerning as debt among older Americans continues to rise. New proposals are being introduced to stop this.",
-    "Markets & Geopolitics:** The Financial Times reports that Russia is intensifying its air war against Ukraine ahead of winter, while also escalating \"hybrid\" attacks across Europe.",
-    "CISA Alerts:** The Cybersecurity and Infrastructure Security Agency (CISA) has added two new vulnerabilities to its **Known Exploited Vulnerabilities (KEV) Catalog** based on evidence of active exploitation.",
-    "CVE-2026-102489:** A Session Fixation Vulnerability in **Zammad GmbH** software."
+    "Federal Reserve** approves an application by **Fleur Capital Corporation** (details pending full release).",
+    "Financial Times** analysis: Internal divisions within the AI industry over regulation mirror broader political tribalism — a trend that may spill into corporate governance.",
+    "CISA** added **two actively exploited vulnerabilities** to its KEV Catalog:",
+    "`CVE-2026-102489` — Zammad Session Fixation Vulnerability",
+    "`CVE-2026-102490` — Zammad Improper Privilege Management Vulnerability"
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nHere is a structured summary of the provided news feeds from **October 4, 2026**.\n\n### 🏦 Central Banking & Finance\n- **Federal Reserve:** The Federal Reserve Board announced its approval of an application by **Fleur Capital Corporation**.\n- **US Consumer Finance:** A Wall Street Journal report highlights a controversial practice where the government can garnish up to **15% of Social Security benefits** to repay student loans. This is particularly concerning as debt among older Americans continues to rise. New proposals are being introduced to stop this.\n- **Markets & Geopolitics:** The Financial Times reports that Russia is intensifying its air war against Ukraine ahead of winter, while also escalating \"hybrid\" attacks across Europe.\n\n### 🛡️ Cybersecurity & Infrastructure\n- **CISA Alerts:** The Cybersecurity and Infrastructure Security Agency (CISA) has added two new vulnerabilities to its **Known Exploited Vulnerabilities (KEV) Catalog** based on evidence of active exploitation.\n    - **CVE-2026-102489:** A Session Fixation Vulnerability in **Zammad GmbH** software.\n    - **CVE-2026-102490:** An Improper Privilege Management Vulnerability in **Zammad GmbH** software.\n\n### 🌍 Geopolitics & International Affairs\n- **Space Race:** The New York Times reports a new superpower race to put **nuclear reactors on the Moon**. The US aims for a reactor by **2030**, while a Russian-Chinese alliance is targeting **2036**. Some leading scientists are warning of the great danger this poses.\n- **Ukraine & Europe:**\n    - **Kyiv Under Attack:** The BBC reports that a bridge in Kyiv was hit during a Russian drone attack. Footage shows a drone striking the **Pivnichyi (Northern) Bridge**, creating a large fireball.\n    - **German Support:** German Chancellor **Merz** made a surprise visit to Kyiv to show support for Ukraine, arriving as the strikes occurred.\n- **Latvia Elections:** According to NZZ, pro-Ukrainian forces won the Latvian elections by a wide margin. The party of Prime Minister **Andris Kulbergs** secured a clear victory and is expected to lead the government again.\n\n### 🇺🇸 US Politics & Media\n- **Trump Rally:** Fox News reports that President **Donald Trump** spoke at a rally in **Dayton, Ohio**. He claimed that polls \"don't account for one thing\" and pledged to defeat \"communists once and for all,\" as Republicans face a tough path in the House.\n\n### 🌪️ Extreme Weather\n- **Atlantic Outlook:** The NOAA National Hurricane Center is monitoring a broad area of low pressure that could form in a few days over the **Southwestern Gulf of America** (Gulf of Mexico).\n\nMACRO:\n### Key Updates from October 4, 2026\n\n#### **Zentralbank: Federal Reserve Press**\n- **Approval for Fleur Capital Corporation**: The Federal Reserve Board has approved an application by Fleur Capital Corporation, signaling a significant move in the financial sector.\n\n#### **Cyber / Infrastruktur: CISA Cyber Alerts**\n- **New Vulnerabilities Added to KEV Catalog**: CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog:\n  - **CVE-2026-102489**: Zammad GmbH Zammad Session Fixation Vulnerability\n  - **CVE-2026-102490**: Zammad GmbH Zammad Improper Privilege Management Vulnerability\n- **Active Exploitation**: These vulnerabilities are known to be actively exploited, and organizations are advised to take immediate action to mitigate the risks.\n\n#### **US/Finanzen: Wall Street Journal (MarketWatch Alt)**\n- **Student Loan Repayment from Social Security Benefits**: The government is considering proposals to stop taking 15% of Social Security benefits to repay student loans. Rising debt among older Americans is a growing concern.\n\n#### **US/Presse: New York Times World**\n- **Nuclear Reactors on the Moon**: The United States aims to place a nuclear reactor on the moon by 2030, while a Russian-Chinese alliance is working on a similar project for 2036. Some scientists warn of significant risks.\n\n#### **CH/Presse: NZZ International**\n- **Election Results in Latvia**: Proukrainian forces have won the Latvian elections with a clear majority. Prime Minister Andris Kulbergs' party is expected to lead the government again.\n\n#### **US/Politik: Fox News Latest**\n- **Trump at Rally in Ohio**: Former President Donald Trump addressed a rally in Dayton, Ohio, expressing confidence in overcoming challenges and defeating \"communists.\" He criticized the accuracy of polls.\n\n#### **UK/Medien: BBC World News**\n- **Russian Drone Attack on Kyiv Bridge**: A drone attack hit the Pivnichyi Bridge in Kyiv, causing a large fireball. German Chancellor Christian Merz made a surprise visit to show support for Ukraine.\n\n#### **UK/Finanzen: Financial Times**\n- **Germany's Support for Ukraine**: Chancellor Merz's visit to Ukraine comes as Russia expands its air war and escalates hybrid attacks on Europe. The visit underscores Germany's commitment to supporting Ukraine.\n\n#### **Wetter/Extreme: NOAA National Hurricane Center**\n- **Tropical Weather Outlook**: A broad area of low pressure is expected to form over the southwestern Gulf of America in the coming days. The region is being monitored for potential storm development.\n\n#### **Medizin: CDC Health Updates**\n- **Annual Report on Cancer Trends**: The latest report shows a decline in cancer mortality rates, driven by progress against lung cancer. This highlights ongoing advancements in cancer treatment and prevention.\n\n#### **Investigativ Net: OCCRP (Organized Crime & Corruption)**\n- **Leaked Video in Bolivia**: Two videos featuring Uruguayan drug lord Sebastián Marset, alleging high-level state protection, have led to mass arrests across the Bolivian justice system. The videos have triggered significant investigations and reforms.\n\n### Summary\n- **Financial and Political Developments**: Fleur Capital Corporation's approval by the Federal Reserve and Trump's rally in Ohio highlight ongoing financial and political dynamics in the U.S.\n- **Cybersecurity Alerts**: CISA's addition of new vulnerabilities to its catalog underscores the importance of immediate action to secure critical infrastructure.\n- **Geopolitical Tensions**: The race to place nuclear reactors on the moon and the ongoing conflict in Ukraine reflect increasing geopolitical tensions.\n- **Elections and International Support**: The clear victory of pro-Ukrainian forces in Latvia and Germany's support for Ukraine demonstrate strong international solidarity.\n- **Environmental and Health Trends**: The potential for storm development in the Gulf of America and the declining cancer mortality rates highlight both environmental and health trends.\n- **Organized Crime**: The mass arrests in Bolivia following leaked videos indicate significant efforts to combat high-level corruption.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **05.10.2026**, here is a synthesized briefing:\n\n---\n\n## 📅 Daily Intelligence Briefing — October 5, 2026\n\n### 🏦 Central Banking / Finance\n- **Federal Reserve** approves an application by **Fleur Capital Corporation** (details pending full release).\n- **Financial Times** analysis: Internal divisions within the AI industry over regulation mirror broader political tribalism — a trend that may spill into corporate governance.\n\n### 🔐 Cybersecurity\n- **CISA** added **two actively exploited vulnerabilities** to its KEV Catalog:\n  - `CVE-2026-102489` — Zammad Session Fixation Vulnerability\n  - `CVE-2026-102490` — Zammad Improper Privilege Management Vulnerability\n- **Action:** Organizations running Zammad should prioritize patching; both are confirmed under active exploitation.\n\n### 🌍 Geopolitics & Politics\n- **Spain:** PM **Pedro Sánchez** calls an **early general election for 29 November** following housing crisis protests and recent legislative defeats. He faces mounting pressure from a migration crisis and corruption scandals involving his inner circle (NZZ, BBC).\n- **France:** **400+ schools remain closed** amid nationwide student protests; 24 schools have been burned or looted since unrest began a week ago (NZZ).\n\n### 🌪️ Weather / Extremes\n- **NOAA NHC:** Monitoring a system in the **Southwestern Gulf** — Tropical Weather Outlook issued at 800 AM EDT, Oct 5. Further advisories expected.\n\n### 🏁 US Sports / Culture\n- **NASCAR:** Tony Stewart calls the Cup Series \"neutered\" in a viral rant; Jennifer Jo Cobb ordered to pay **$850,000** in a civil case (Fox News).\n\n### 📰 Press Highlights\n- **WSJ/MarketWatch:** Personal finance/health piece on an elderly fall and subsequent pleural effusion — a cautionary tale on home safety for seniors.\n\n---\n\n### 🔎 Key Themes to Watch\n1. **European political instability** — Spain's snap election + French school unrest signal a turbulent autumn in the EU.\n2. **Active cyber exploitation** — Zammad vulnerabilities are being weaponized now; immediate patching recommended.\n3. **Gulf weather system** — potential tropical development worth monitoring for US Gulf Coast stakeholders.\n\nWould you like a deeper dive into any single item (e.g., the Zammad CVEs, the Spanish election dynamics, or the NOAA system)?\n\nMACRO:\nHier ist eine KI-generierte Zusammenfassung der aktuellen Feeds:\n\n- **Zentralbank**: Die Federal Reserve hat die Antragstellung der Fleur Capital Corporation genehmigt.\n- **Cyber / Infrastruktur**: CISA hat zwei neue Schwachstellen zu Zammad GmbH im Known Exploited Vulnerabilities (KEV) Katalog hinzugefügt: CVE-2026-102489 und CVE-2026-102490, die aktive Ausnutzungen belegen.\n- **US/Politik**: Tony Stewart hat NASCAR in einem viralen Vortrag als \"neutered\" bezeichnet, während Jennifer Jo Cobb nach einem zivilrechtlichen Gerichtsverfahren 850.000 USD schuldet.\n- **US/Presse**: Spaniens Premierminister Pedro Sánchez ruft vorzeitig zu Wahlen auf den 29. November auf, nachdem die Regierung vor der Hauskrise ins Wanken geraten ist.\n- **US/Finanzen**: Der Artikel beschreibt die Schmerzen, die eine 80-jährige Frau nach einem Sturz die Treppe hinunter erlitten hat, einschließlich einer Pleurare每融（Flüssigkeitsansammlung zwischen den Lungen und den Rippen, die das Atmen erschwerte）.\n\n**Korrektur**: Letzter Satz auf Deutsch: Der Artikel beschreibt die Schmerzen, die eine 80-jährige Frau nach einem Sturz die Treppe hinunter erlitten hat, einschließlich einer Pleurarefusion (Flüssigkeitsansammlung zwischen den Lungen und den Rippen, die das Atmen erschwerte).\n\n- **CH/Presse**: In Frankreich bleiben mehr als 400 Schulen geschlossen, nach landesweiten Schülerprotesten. Seit Beginn der Unruhen wurden 24 Schulen niedergebrannt oder geplündert.\n- **UK/Medien**: Spanien wird nach Protesten gegen die Wohnungspreise am 29. November zu Wahlen gehen.\n- **UK/Finanzen**: Der Artikel diskutiert die mögliche Fragmentierung in der AI-Regulierung, ähnlich der politischen Tribalismen.\n- **Wetter/Extreme**: Das National Hurricane Center gibt ein Tropisches Wetter-Outlook für den Südwestlichen Golf von Amerika bekannt, wo ein Tiefdruckgebiet disorganisierte Regenschauer verursacht.\n- **Investigativ Net**: ICIJ führt eine Live-Panel-Diskussion über die China Capital Investigation, einschließlich Insights von Reportern und Experten zu chinesischen Kreditvergaben.\n- **Medizin**: Der jährliche Bericht des CDC zu Krebsmortalität zeigt, dass Fortschritte bei der Lungenkrebsbekämpfung den Todesfall-Rate gesenkt haben.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,91 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug TVF12ZW",
+      "name": "Flug PGT77LQ",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.0856,
-      "lon": 28.7109,
-      "lng": 28.7109,
+      "lat": 40.9048,
+      "lon": 28.1848,
+      "lng": 28.1848,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TVF12ZW | Höhe: 0.8 km | Speed: 289 km/h",
+      "description": "Callsign: PGT77LQ | Höhe: 4.7 km | Speed: 686 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT73G",
+      "name": "Flug PGT71HQ",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.011,
-      "lon": 28.2073,
-      "lng": 28.2073,
+      "lat": 40.8748,
+      "lon": 29.2754,
+      "lng": 29.2754,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT73G | Höhe: 5.3 km | Speed: 639 km/h",
+      "description": "Callsign: PGT71HQ | Höhe: 0.2 km | Speed: 233 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AIC2029",
+      "name": "Flug AIC162",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 26.7616,
-      "lon": 50.2591,
-      "lng": 50.2591,
+      "lat": 34.6452,
+      "lon": 36.951,
+      "lng": 36.951,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC2029 | Höhe: 11.6 km | Speed: 858 km/h",
+      "description": "Callsign: AIC162 | Höhe: 11.9 km | Speed: 868 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug IAW102",
+      "name": "Flug WZZ2YN",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.2581,
-      "lon": 37.4315,
-      "lng": 37.4315,
+      "lat": 35.0804,
+      "lon": 32.0994,
+      "lng": 32.0994,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: IAW102 | Höhe: 10.7 km | Speed: 999 km/h",
+      "description": "Callsign: WZZ2YN | Höhe: 8.5 km | Speed: 752 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CSN5722",
+      "name": "Flug BAF86",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 32.0001,
+      "lon": 34.8,
+      "lng": 34.8,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: BAF86 | Höhe: 1.0 km | Speed: 346 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug RRR9915",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 33.0042,
+      "lon": 32.9796,
+      "lng": 32.9796,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: RRR9915 | Höhe: 8.1 km | Speed: 779 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug CSN3210",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.1734,
-      "lon": 119.6357,
-      "lng": 119.6357,
+      "lat": 23.6484,
+      "lon": 116.7062,
+      "lng": 116.7062,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSN5722 | Höhe: 7.5 km | Speed: 828 km/h",
+      "description": "Callsign: CSN3210 | Höhe: 8.4 km | Speed: 736 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA673",
+      "name": "Flug UAE334",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.4097,
-      "lon": 118.5329,
-      "lng": 118.5329,
+      "lat": 15.841,
+      "lon": 119.8448,
+      "lng": 119.8448,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA673 | Höhe: 11.6 km | Speed: 872 km/h",
+      "description": "Callsign: UAE334 | Höhe: 8.7 km | Speed: 842 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,11 +127,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Federal Reserve:** The Federal Reserve Board announced its approval of an application by **Fleur Capital Corporation**.",
-    "US Consumer Finance:** A Wall Street Journal report highlights a controversial practice where the government can garnish up to **15% of Social Security benefits** to repay student loans. This is particularly concerning as debt among older Americans continues to rise. New proposals are being introduced to stop this.",
-    "Markets & Geopolitics:** The Financial Times reports that Russia is intensifying its air war against Ukraine ahead of winter, while also escalating \"hybrid\" attacks across Europe.",
-    "CISA Alerts:** The Cybersecurity and Infrastructure Security Agency (CISA) has added two new vulnerabilities to its **Known Exploited Vulnerabilities (KEV) Catalog** based on evidence of active exploitation.",
-    "CVE-2026-102489:** A Session Fixation Vulnerability in **Zammad GmbH** software."
+    "Federal Reserve** approves an application by **Fleur Capital Corporation** (details pending full release).",
+    "Financial Times** analysis: Internal divisions within the AI industry over regulation mirror broader political tribalism — a trend that may spill into corporate governance.",
+    "CISA** added **two actively exploited vulnerabilities** to its KEV Catalog:",
+    "`CVE-2026-102489` — Zammad Session Fixation Vulnerability",
+    "`CVE-2026-102490` — Zammad Improper Privilege Management Vulnerability"
   ],
   "geoscore": {
     "current_score": 72,
@@ -124,12 +146,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-10-04T11:35:51.942655+00:00",
+  "timestamp": "2026-10-05T13:09:38.224828+00:00",
   "pipeline_health": {
-    "timestamp": "2026-10-04T11:34:56.184930+00:00",
+    "timestamp": "2026-10-05T13:08:44.858415+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -139,7 +161,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (8 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -157,7 +179,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 6,
+    "hotspots_now": 8,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
