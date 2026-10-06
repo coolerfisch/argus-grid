@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **05.10.2026**, here is a synthesized briefing:\n\n---\n\n## 📅 Daily Intelligence Briefing — October 5, 2026\n\n### 🏦 Central Banking / Finance\n- **Federal Reserve** approves an application by **Fleur Capital Corporation** (details pending full release).\n- **Financial Times** analysis: Internal divisions within the AI industry over regulation mirror broader political tribalism — a trend that may spill into corporate governance.\n\n### 🔐 Cybersecurity\n- **CISA** added **two actively exploited vulnerabilities** to its KEV Catalog:\n  - `CVE-2026-102489` —...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **05.10.2026**, here is a synthesized briefing:\n\n---\n\n## 📅 Daily Intelligence Briefing — October 5, 2026\n\n### 🏦 Central Banking / Finance\n- **Federal Reserve** approves an application by **Fleur Capital Corporation** (details pending full release).\n- **Financial Times** analysis: Internal divisions ...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured summary of the feeds for **Tuesday, 6 October 2026**:\n\n---\n\n## 🏦 Central Banks & Markets\n- **Federal Reserve** approves an application by **Isabella Bank Corporation**.\n- **Global bond sell-off** is drawing attention — FT's Alphaville is hosting a live Q&A (Thu 8 Oct, 1pm) on what's driving it.\n- **Google** makes a fresh bet on **nuclear power** as the AI energy crunch intensifies; **Constellation's stock rises sharply** on a deal equivalent to the output of a new nuclear reactor.\n\n## 🔐 Cyber / Infrastructure\n- **CISA** adds one known exploited vulnerabili...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured summary of the feeds for **Tuesday, 6 October 2026**:\n\n---\n\n## 🏦 Central Banks & Markets\n- **Federal Reserve** approves an application by **Isabella Bank Corporation**.\n- **Global bond sell-off** is drawing attention — FT's Alphaville is hosting a live Q&A (Thu 8 Oct, 1pm) on what's driving it.\n- **Google** mak...",
   "key_takeaways": [
-    "Federal Reserve** approves an application by **Fleur Capital Corporation** (details pending full release).",
-    "Financial Times** analysis: Internal divisions within the AI industry over regulation mirror broader political tribalism — a trend that may spill into corporate governance.",
-    "CISA** added **two actively exploited vulnerabilities** to its KEV Catalog:",
-    "`CVE-2026-102489` — Zammad Session Fixation Vulnerability",
-    "`CVE-2026-102490` — Zammad Improper Privilege Management Vulnerability"
+    "Federal Reserve** approves an application by **Isabella Bank Corporation**.",
+    "Global bond sell-off** is drawing attention — FT's Alphaville is hosting a live Q&A (Thu 8 Oct, 1pm) on what's driving it.",
+    "Google** makes a fresh bet on **nuclear power** as the AI energy crunch intensifies; **Constellation's stock rises sharply** on a deal equivalent to the output of a new nuclear reactor.",
+    "CISA** adds one known exploited vulnerability to its KEV Catalog:",
+    "CVE-2026-88779** — Citrix NetScaler improper restriction of operations within the bounds of a memory buffer (active exploitation confirmed)."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **05.10.2026**, here is a synthesized briefing:\n\n---\n\n## 📅 Daily Intelligence Briefing — October 5, 2026\n\n### 🏦 Central Banking / Finance\n- **Federal Reserve** approves an application by **Fleur Capital Corporation** (details pending full release).\n- **Financial Times** analysis: Internal divisions within the AI industry over regulation mirror broader political tribalism — a trend that may spill into corporate governance.\n\n### 🔐 Cybersecurity\n- **CISA** added **two actively exploited vulnerabilities** to its KEV Catalog:\n  - `CVE-2026-102489` — Zammad Session Fixation Vulnerability\n  - `CVE-2026-102490` — Zammad Improper Privilege Management Vulnerability\n- **Action:** Organizations running Zammad should prioritize patching; both are confirmed under active exploitation.\n\n### 🌍 Geopolitics & Politics\n- **Spain:** PM **Pedro Sánchez** calls an **early general election for 29 November** following housing crisis protests and recent legislative defeats. He faces mounting pressure from a migration crisis and corruption scandals involving his inner circle (NZZ, BBC).\n- **France:** **400+ schools remain closed** amid nationwide student protests; 24 schools have been burned or looted since unrest began a week ago (NZZ).\n\n### 🌪️ Weather / Extremes\n- **NOAA NHC:** Monitoring a system in the **Southwestern Gulf** — Tropical Weather Outlook issued at 800 AM EDT, Oct 5. Further advisories expected.\n\n### 🏁 US Sports / Culture\n- **NASCAR:** Tony Stewart calls the Cup Series \"neutered\" in a viral rant; Jennifer Jo Cobb ordered to pay **$850,000** in a civil case (Fox News).\n\n### 📰 Press Highlights\n- **WSJ/MarketWatch:** Personal finance/health piece on an elderly fall and subsequent pleural effusion — a cautionary tale on home safety for seniors.\n\n---\n\n### 🔎 Key Themes to Watch\n1. **European political instability** — Spain's snap election + French school unrest signal a turbulent autumn in the EU.\n2. **Active cyber exploitation** — Zammad vulnerabilities are being weaponized now; immediate patching recommended.\n3. **Gulf weather system** — potential tropical development worth monitoring for US Gulf Coast stakeholders.\n\nWould you like a deeper dive into any single item (e.g., the Zammad CVEs, the Spanish election dynamics, or the NOAA system)?\n\nMACRO:\nHier ist eine KI-generierte Zusammenfassung der aktuellen Feeds:\n\n- **Zentralbank**: Die Federal Reserve hat die Antragstellung der Fleur Capital Corporation genehmigt.\n- **Cyber / Infrastruktur**: CISA hat zwei neue Schwachstellen zu Zammad GmbH im Known Exploited Vulnerabilities (KEV) Katalog hinzugefügt: CVE-2026-102489 und CVE-2026-102490, die aktive Ausnutzungen belegen.\n- **US/Politik**: Tony Stewart hat NASCAR in einem viralen Vortrag als \"neutered\" bezeichnet, während Jennifer Jo Cobb nach einem zivilrechtlichen Gerichtsverfahren 850.000 USD schuldet.\n- **US/Presse**: Spaniens Premierminister Pedro Sánchez ruft vorzeitig zu Wahlen auf den 29. November auf, nachdem die Regierung vor der Hauskrise ins Wanken geraten ist.\n- **US/Finanzen**: Der Artikel beschreibt die Schmerzen, die eine 80-jährige Frau nach einem Sturz die Treppe hinunter erlitten hat, einschließlich einer Pleurare每融（Flüssigkeitsansammlung zwischen den Lungen und den Rippen, die das Atmen erschwerte）.\n\n**Korrektur**: Letzter Satz auf Deutsch: Der Artikel beschreibt die Schmerzen, die eine 80-jährige Frau nach einem Sturz die Treppe hinunter erlitten hat, einschließlich einer Pleurarefusion (Flüssigkeitsansammlung zwischen den Lungen und den Rippen, die das Atmen erschwerte).\n\n- **CH/Presse**: In Frankreich bleiben mehr als 400 Schulen geschlossen, nach landesweiten Schülerprotesten. Seit Beginn der Unruhen wurden 24 Schulen niedergebrannt oder geplündert.\n- **UK/Medien**: Spanien wird nach Protesten gegen die Wohnungspreise am 29. November zu Wahlen gehen.\n- **UK/Finanzen**: Der Artikel diskutiert die mögliche Fragmentierung in der AI-Regulierung, ähnlich der politischen Tribalismen.\n- **Wetter/Extreme**: Das National Hurricane Center gibt ein Tropisches Wetter-Outlook für den Südwestlichen Golf von Amerika bekannt, wo ein Tiefdruckgebiet disorganisierte Regenschauer verursacht.\n- **Investigativ Net**: ICIJ führt eine Live-Panel-Diskussion über die China Capital Investigation, einschließlich Insights von Reportern und Experten zu chinesischen Kreditvergaben.\n- **Medizin**: Der jährliche Bericht des CDC zu Krebsmortalität zeigt, dass Fortschritte bei der Lungenkrebsbekämpfung den Todesfall-Rate gesenkt haben.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured summary of the feeds for **Tuesday, 6 October 2026**:\n\n---\n\n## 🏦 Central Banks & Markets\n- **Federal Reserve** approves an application by **Isabella Bank Corporation**.\n- **Global bond sell-off** is drawing attention — FT's Alphaville is hosting a live Q&A (Thu 8 Oct, 1pm) on what's driving it.\n- **Google** makes a fresh bet on **nuclear power** as the AI energy crunch intensifies; **Constellation's stock rises sharply** on a deal equivalent to the output of a new nuclear reactor.\n\n## 🔐 Cyber / Infrastructure\n- **CISA** adds one known exploited vulnerability to its KEV Catalog:\n  - **CVE-2026-88779** — Citrix NetScaler improper restriction of operations within the bounds of a memory buffer (active exploitation confirmed).\n\n## 🌍 Geopolitics & Security\n- **Germany**: Former spy chief **August Hanning arrested** for espionage and treason — accused of obtaining classified information for a foreign power. *(BBC)*\n- **Kenya**: Records its **first Ebola case** — diagnosed in a man arriving from the DRC; containment measures underway. *(NYT)*\n\n## 🇫🇷 France\n- **New student protests** escalating; unions have called a **nationwide action day at high schools and universities for Tuesday**. NZZ explores whether unrest will widen.\n\n## 🇺🇸 US Politics & Society\n- **Washington state** officials refuse to budge on **trans athlete policy** after a girl files a **SCOTUS appeal** over an alleged assault; WIAA and the superintendent say transgender athletes may continue competing by gender identity while the application pends. *(Fox News)*\n\n## 🌀 Weather / Extremes\n- **NOAA NHC Atlantic Outlook**: System **AL92** in the southwestern Gulf of America — showers and thunderstorms showing signs of organization (advisory truncated).\n\n---\n\n**Themes to watch today:**\n1. **Energy & AI** — nuclear power emerging as the bottleneck solution for data-center demand.\n2. **Bond markets** — a broad sell-off prompting investor questions.\n3. **Cyber** — another actively exploited edge-device vulnerability (Citrix NetScaler).\n4. **European instability** — French student unrest coinciding with a German espionage scandal.\n\nWant me to dig deeper into any single item?\n\nMACRO:\n### Zusammenfassung der Nachrichten vom 06.10.2026\n\n#### **Zentralbank**\n- **Federal Reserve Board**: Die Federal Reserve Board hat die Antragstellung von Isabella Bank Corporation genehmigt.\n\n#### **Cyber / Infrastruktur**\n- **CISA Cyber Alerts**: CISA hat eine neue bekannte Schwachstelle (CVE-2026-88779) in das Known Exploited Vulnerabilities (KEV) Catalog aufgenommen. Diese Schwachstelle betrifft Citrix NetScaler und ist durch aktive Ausbeutungen belegt.\n\n#### **US/Finanzen**\n- **Wall Street Journal (MarketWatch)**: Google setzt auf Kernenergie, um die steigenden Energiebedürfnisse von KI-Technologien zu decken. Constellation Energy Group profitiert von diesem Deal, da die Bedingungen den Ausbau einer neuen Kernreaktoranlage entsprechen.\n\n#### **US/Presse**\n- **New York Times World**: Kenia hat erstmals einen Ebola-Fall registriert. Der betreffende Mann reiste aus der Demokratischen Republik Kongo ein, und die Behörden ergreifen Maßnahmen, um eine Verbreitung des Virus zu verhindern.\n\n#### **CH/Presse**\n- **NZZ International**: In Frankreich eskaliert die Situation vor allem in Schulen und Universitäten. Gewerkschaften haben zu einem landesweiten Aktionstag am Dienstag aufgerufen. Die Proteste könnten weiter um sich greifen.\n\n#### **US/Politik**\n- **Fox News Latest**: Offizielle in Washington weigern sich, die Regelungen für transidente Athleten anzupassen, nachdem ein Mädchen einen Antrag an das Supreme Court zu einem vorgeblichen Angriff eingereicht hat.\n\n#### **UK/Medien**\n- **BBC World News**: Ehemaliger Chef des Bundesnachrichtendienstes (BND) August Hanning wurde wegen Spionage und Verrat festgenommen. Er wird Beschuldigungen des Erhalts von geheimen Informationen für eine ausländische Macht gegenübergestellt.\n\n#### **UK/Finanzen**\n- **Financial Times**: In einem Live Q&A am 8. Oktober um 13:00 Uhr werden Redakteur Robin Wigglesworth und Senior-Marktexperte Ian Smith Leserfragen zum globalen Ansturm auf Anleihen beantworten.\n\n#### **Wetter/Extreme**\n- **NOAA National Hurricane Center**: Im Südwestlichen Golf von Mexiko zeigen sich Anzeichen für organisierende Regen und Gewitterstürme. Die Wetterlage wird weiterhin überwacht.\n\n#### **Investigativ Net**\n- **ICIJ (Panama/Pandora Papers)**: Neue Dokumente zeigen, wie die Verkaufspraktiken eines Einzelhandelsunternehmens zur Verbreitung von Waffen auf US-Straßen beigetragen haben. Die Veröffentlichung der Dokumente ist Teil einer rechtlichen Abmachung mit einer in Wisconsin ansässigen Firma, der die Fahrlässigkeit vorgeworfen wird.\n\n#### **Medizin**\n- **CDC Health Updates**: Der jährliche Bericht zeigt, dass der Kampf gegen Lungenkrebs die Todesrate durch Krebs in den USA gesenkt hat. Weitere Fortschritte werden aufgezeigt.\n\nDiese Zusammenfassung bietet einen Überblick über die wichtigsten Ereignisse und Entwicklungen vom 06.10.2026.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,91 +27,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT77LQ",
+      "name": "Flug PGT437",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.9048,
-      "lon": 28.1848,
-      "lng": 28.1848,
+      "lat": 43.9571,
+      "lon": 31.2861,
+      "lng": 31.2861,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT77LQ | Höhe: 4.7 km | Speed: 686 km/h",
+      "description": "Callsign: PGT437 | Höhe: 10.1 km | Speed: 53 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT71HQ",
+      "name": "Flug PGT539T",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8748,
-      "lon": 29.2754,
-      "lng": 29.2754,
+      "lat": 42.7478,
+      "lon": 26.291,
+      "lng": 26.291,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT71HQ | Höhe: 0.2 km | Speed: 233 km/h",
+      "description": "Callsign: PGT539T | Höhe: 10.4 km | Speed: 819 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AIC162",
+      "name": "Flug AXB398",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.6452,
-      "lon": 36.951,
-      "lng": 36.951,
+      "lat": 22.7729,
+      "lon": 50.2596,
+      "lng": 50.2596,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC162 | Höhe: 11.9 km | Speed: 868 km/h",
+      "description": "Callsign: AXB398 | Höhe: 10.7 km | Speed: 851 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ2YN",
+      "name": "Flug AIC2243",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.0804,
-      "lon": 32.0994,
-      "lng": 32.0994,
+      "lat": 22.7508,
+      "lon": 49.85,
+      "lng": 49.85,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ2YN | Höhe: 8.5 km | Speed: 752 km/h",
+      "description": "Callsign: AIC2243 | Höhe: 11.0 km | Speed: 849 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug BAF86",
+      "name": "Flug RRR4202",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.0001,
-      "lon": 34.8,
-      "lng": 34.8,
+      "lat": 24.5556,
+      "lon": 51.5319,
+      "lng": 51.5319,
       "type": "flight",
       "intensity": "ROT",
-      "description": "Callsign: BAF86 | Höhe: 1.0 km | Speed: 346 km/h",
+      "description": "Callsign: RRR4202 | Höhe: 5.5 km | Speed: 667 km/h",
       "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
     },
     {
-      "name": "Flug RRR9915",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 33.0042,
-      "lon": 32.9796,
-      "lng": 32.9796,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR9915 | Höhe: 8.1 km | Speed: 779 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug CSN3210",
+      "name": "Flug N831KK",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.6484,
-      "lon": 116.7062,
-      "lng": 116.7062,
+      "lat": 25.4742,
+      "lon": 121.8982,
+      "lng": 121.8982,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSN3210 | Höhe: 8.4 km | Speed: 736 km/h",
+      "description": "Callsign: N831KK | Höhe: 13.1 km | Speed: 866 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UAE334",
+      "name": "Flug THA635",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 15.841,
-      "lon": 119.8448,
-      "lng": 119.8448,
+      "lat": 20.7767,
+      "lon": 116.3253,
+      "lng": 116.3253,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAE334 | Höhe: 8.7 km | Speed: 842 km/h",
+      "description": "Callsign: THA635 | Höhe: 11.6 km | Speed: 835 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -127,11 +116,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Federal Reserve** approves an application by **Fleur Capital Corporation** (details pending full release).",
-    "Financial Times** analysis: Internal divisions within the AI industry over regulation mirror broader political tribalism — a trend that may spill into corporate governance.",
-    "CISA** added **two actively exploited vulnerabilities** to its KEV Catalog:",
-    "`CVE-2026-102489` — Zammad Session Fixation Vulnerability",
-    "`CVE-2026-102490` — Zammad Improper Privilege Management Vulnerability"
+    "Federal Reserve** approves an application by **Isabella Bank Corporation**.",
+    "Global bond sell-off** is drawing attention — FT's Alphaville is hosting a live Q&A (Thu 8 Oct, 1pm) on what's driving it.",
+    "Google** makes a fresh bet on **nuclear power** as the AI energy crunch intensifies; **Constellation's stock rises sharply** on a deal equivalent to the output of a new nuclear reactor.",
+    "CISA** adds one known exploited vulnerability to its KEV Catalog:",
+    "CVE-2026-88779** — Citrix NetScaler improper restriction of operations within the bounds of a memory buffer (active exploitation confirmed)."
   ],
   "geoscore": {
     "current_score": 72,
@@ -146,12 +135,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-10-05T13:09:38.224828+00:00",
+  "timestamp": "2026-10-06T12:30:59.865602+00:00",
   "pipeline_health": {
-    "timestamp": "2026-10-05T13:08:44.858415+00:00",
+    "timestamp": "2026-10-06T12:29:51.600628+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 118,
+    "feeds_failed": 106,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -161,7 +150,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (8 Signale)",
+    "opensky_status": "SUCCESS (7 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -179,7 +168,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 8,
+    "hotspots_now": 7,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
