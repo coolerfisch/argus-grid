@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nThe content you've shared appears to be a simulated or speculative news feed dated **07.10.2026** — a future date (assuming we're not in that year). A few observations:\n\n**Items that stand out as unusual or likely fictional:**\n\n- **August Hanning in U-Haft (NZZ):** Hanning is a real former BND president (2001–2005). An arrest for espionage would be a major story — but this doesn't appear in real news sources.\n- **Elon Musk / Intel \"Terafab\" (WSJ):** No such chip plant by that name is known.\n- **France halting stun grenades (BBC):** Plausible-sounding but not a documented even...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nThe content you've shared appears to be a simulated or speculative news feed dated **07.10.2026** — a future date (assuming we're not in that year). A few observations:\n\n**Items that stand out as unusual or likely fictional:**\n\n- **August Hanning in U-Haft (NZZ):** Hanning is a real former BND president (2001–2005). An arrest for ...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured summary of the feeds dated **08.10.2026**:\n\n---\n\n## 🏦 Central Banks\n**Fed Speeches & Minutes**\n- **Waller** delivered a speech titled *\"The Signaling Value of the Summary of Economic Projections\"* at the **Istanbul Economic Forum**, hosted by the Central Bank of the Republic of Türkiye.\n\n---\n\n## 🛡️ Cyber / Infrastructure\n**CISA Cyber Alerts — Hitachi Energy REB500**\n- Open-source software vulnerabilities affect certain **REB500** product versions.\n- Exploitation could enable **Denial of Service (DoS)** attacks.\n- Hitachi Energy advises users to follow the...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured summary of the feeds dated **08.10.2026**:\n\n---\n\n## 🏦 Central Banks\n**Fed Speeches & Minutes**\n- **Waller** delivered a speech titled *\"The Signaling Value of the Summary of Economic Projections\"* at the **Istanbul Economic Forum**, hosted by the Central Bank of the Republic of Türkiye.\n\n---\n\n## 🛡️ Cyber / Infr...",
   "key_takeaways": [
-    "August Hanning in U-Haft (NZZ):** Hanning is a real former BND president (2001–2005). An arrest for espionage would be a major story — but this doesn't appear in real news sources.",
-    "Elon Musk / Intel \"Terafab\" (WSJ):** No such chip plant by that name is known.",
-    "France halting stun grenades (BBC):** Plausible-sounding but not a documented event.",
-    "Fed approval of \"Isabella Bank Corporation\":** No such bank is known from Fed press releases.",
-    "CISA/Hitachi Energy REB500:** This is *very* close to real CVEs (Hitachi Energy REB500 has had real advisories), but the specific advisory text seems synthesized."
+    "Waller** delivered a speech titled *\"The Signaling Value of the Summary of Economic Projections\"* at the **Istanbul Economic Forum**, hosted by the Central Bank of the Republic of Türkiye.",
+    "Open-source software vulnerabilities affect certain **REB500** product versions.",
+    "Exploitation could enable **Denial of Service (DoS)** attacks.",
+    "Hitachi Energy advises users to follow the **Recommended Immediate Actions** in the advisory.",
+    "MLW star **Donovan Dijak** hopes to reunite with former tag partner **Baron Corbin** (who left for WWE) after a **317-day MLW tag team title reign** spanning Mexico, Australia, and beyond."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nThe content you've shared appears to be a simulated or speculative news feed dated **07.10.2026** — a future date (assuming we're not in that year). A few observations:\n\n**Items that stand out as unusual or likely fictional:**\n\n- **August Hanning in U-Haft (NZZ):** Hanning is a real former BND president (2001–2005). An arrest for espionage would be a major story — but this doesn't appear in real news sources.\n- **Elon Musk / Intel \"Terafab\" (WSJ):** No such chip plant by that name is known.\n- **France halting stun grenades (BBC):** Plausible-sounding but not a documented event.\n- **Fed approval of \"Isabella Bank Corporation\":** No such bank is known from Fed press releases.\n- **CISA/Hitachi Energy REB500:** This is *very* close to real CVEs (Hitachi Energy REB500 has had real advisories), but the specific advisory text seems synthesized.\n\n**What's real-looking (plausible templates):**\n- NOAA Tropical Weather Outlook format is accurate, but \"Tropical Storm Isaias\" in 2026 isn't verifiable yet.\n- ICIJ reference to Panama/Pan... (likely Panama Papers-style) matches their real investigative beats.\n- The Oct. 7 hostage story (Berman twins) — the names don't match publicly reported hostages I'm aware of.\n\n**Bottom line:** This looks like a **fictional/near-future news simulation** — possibly for a scenario exercise, a writing project, or a test of how AI handles mixed real/fake feeds.\n\nIs there something specific you'd like me to do with this — fact-check individual items, translate, analyze patterns, or use it as raw material for something?\n\nMACRO:\n### Daily Intelligence Summary (07.10.2026)\n\n#### Zentralbank\n- **Federal Reserve Press**: The Federal Reserve Board has approved the application by Isabella Bank Corporation. This move suggests regulatory support for the bank's expansion or restructuring plans.\n\n#### Cyber / Infrastruktur\n- **CISA Cyber Alerts**: Hitachi Energy has identified open-source software vulnerabilities affecting the REB500 product. These vulnerabilities could be exploited to carry out Denial of Service (DoS) attacks. Immediate actions are recommended to mitigate these risks.\n\n#### US/Finanzen\n- **Wall Street Journal (MarketWatch Alt)**: Elon Musk and Intel’s CEO have reassured investors about the company's involvement in the Terafab chip plant, leading to a boost in Intel’s stock price. This indicates continued confidence in the tech giant’s future projects.\n\n#### US/Politik\n- **Fox News Latest**: Navy reservist Jack Pearadin discovered a rare yellow diamond during a gem hunting trip in an icy Arkansas state park. The discovery highlights the ongoing allure and potential of amateur gem hunting.\n\n#### US/Presse\n- **New York Times World**: Twin brothers Gali and Ziv Berman, who were abducted during the Oct. 7, 2023, attacks in Israel, have been freed but are still adjusting to life after their ordeal. Their story underscores the long-term psychological and social impacts of such traumatic events.\n\n#### CH/Presse\n- **NZZ International**: Former BND (Bundesnachrichtendienst) chief August Hanning has been placed in pre-trial detention on suspicion of espionage. This high-profile arrest raises questions about the security and integrity of German intelligence services.\n\n#### UK/Medien\n- **BBC World News**: France has halted the use of stun grenades after a boy's hand was severely injured during student protests. The decision follows complaints of excessive police force, particularly against teenagers, indicating a shift in protest management policies.\n\n#### UK/Finanzen\n- **Financial Times**: The French central bank chief, Emmanuel Moulin, has stated that ECB intervention is not needed to address the bond market turmoil. He also criticized far-left groups for making \"Trump-style\" threats against him, highlighting the political tensions surrounding economic policies.\n\n#### Wetter/Extreme\n- **NOAA National Hurricane Center**: The National Hurricane Center is monitoring Tropical Storm Isaias, which has recently been upgraded. The storm is currently located in the North Atlantic and is a potential threat to coastal areas, emphasizing the need for continued vigilance and preparedness.\n\n#### Investigativ Net\n- **ICIJ (Panama/Pandora Papers)**: New documents reveal how a retail chain's sales practices may have contributed to the proliferation of guns on U.S. streets. The records were released as part of a legal settlement with a Wisconsin-based company accused of negligence.\n\n#### Medizin\n- **CDC Health Updates**: The latest Annual Report to the Nation highlights significant progress in reducing cancer mortality rates, particularly for lung cancer. This positive trend reflects advancements in cancer prevention and treatment.\n\n#### Cyber-Espionage\n- **ICIJ (Cyber-Espionage)**: The provided source seems incomplete, but it likely pertains to recent developments in cyber-espionage or related security breaches. Further details are needed for a comprehensive update.\n\nThis summary provides a snapshot of key events and developments across various sectors, highlighting areas of economic, political, and security interest.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured summary of the feeds dated **08.10.2026**:\n\n---\n\n## 🏦 Central Banks\n**Fed Speeches & Minutes**\n- **Waller** delivered a speech titled *\"The Signaling Value of the Summary of Economic Projections\"* at the **Istanbul Economic Forum**, hosted by the Central Bank of the Republic of Türkiye.\n\n---\n\n## 🛡️ Cyber / Infrastructure\n**CISA Cyber Alerts — Hitachi Energy REB500**\n- Open-source software vulnerabilities affect certain **REB500** product versions.\n- Exploitation could enable **Denial of Service (DoS)** attacks.\n- Hitachi Energy advises users to follow the **Recommended Immediate Actions** in the advisory.\n\n---\n\n## 🇺🇸 US / Politics\n**Fox News**\n- MLW star **Donovan Dijak** hopes to reunite with former tag partner **Baron Corbin** (who left for WWE) after a **317-day MLW tag team title reign** spanning Mexico, Australia, and beyond.\n\n---\n\n## 💊 US / Finance & Health\n**Wall Street Journal (MarketWatch)**\n- **GLP-1s** may offer unexpected relief from **back and knee pain**, but doctors urge caution.\n- Rapid weight loss can affect **bone quality**, particularly in older adults.\n\n---\n\n## 🇩🇪 Switzerland / Press\n**NZZ International**\n- In Berlin, **Linke, Grüne, and SPD** have agreed to hold **exploratory talks** toward forming a **red-green-red government**, 2.5 weeks after city elections.\n- They also agreed on a joint approach to handling **antisemitic incidents**.\n\n---\n\n## 🇺🇸 US / Press\n**New York Times World**\n- A top aide to Ambassador **Mike Huckabee** allegedly **suppressed and altered reports** critical of Israel, skewing information to favor the **Netanyahu government**, per multiple officials and documents.\n\n---\n\n## 🇬🇧 UK / Finance\n**Financial Times**\n- **Cyber war is changing in the AI era** — the old Russian *maskirovka* doctrine no longer applies when **non-human agents** create uncertainty for both attackers and defenders.\n\n---\n\n## 🇬🇧 UK / Media\n**BBC World News**\n- A **Russian strike on buses** in a frontline Ukrainian city killed **33 people**, per officials.\n- Ukraine accused Russia of **deliberately targeting civilians**; deadly attacks on Ukraine are surging.\n\n---\n\n## 🌪️ Weather / Extreme\n**NOAA National Hurricane Center**\n- **Hurricane Isaias** is active in the Atlantic; NHC is issuing advisories.\n- *(Feed truncated — full outlook cut off mid-sentence.)*\n\n---\n\n**Note:** The final feed (NOAA) is incomplete. If you'd like, I can help you format this as a briefing document, translate sections, or flag items by urgency/topic.\n\nMACRO:\n**Summary of Key News Feeds for 08.10.2026**\n\n### [Zentralbank] Fed Speeches & Minutes: \n- **Speech by Christopher Waller at the Istanbul Economic Forum:**\n  - Waller discussed the signaling value of the Summary of Economic Projections (SEP). The SEP is a tool used by the Federal Reserve to communicate their economic forecasts and policy expectations.\n\n### [Cyber / Infrastruktur] CISA Cyber Alerts:\n- **Hitachi Energy REB500 Vulnerabilities:**\n  - Hitachi Energy has identified open-source software vulnerabilities affecting the REB500 product. These vulnerabilities can be exploited for Denial of Service (DoS) attacks. Recommended immediate actions are provided in the alert.\n\n### [US/Politik] Fox News:\n- **MLW Star Donovan Dijak:**\n  - Donovan Dijak expressed his hope to reunite with his former partner Baron Corbin, with whom he had a 317-day MLW tag team title reign across various international locations.\n\n### [US/Finanzen] Wall Street Journal:\n- **GLP-1s and Their Effects on Back and Knee Pain:**\n  - GLP-1s, a class of drugs often used for weight loss and diabetes, may offer relief from back and knee pain. However, doctors caution that rapid weight loss can affect bone quality, especially in older adults.\n\n### [CH/Presse] NZZ International:\n- **Coalition Talks in Berlin:**\n  - Left, Green, and SPD parties in Berlin have agreed to engage in coalition talks to form a new government. They have also outlined a common approach to dealing with antisemitic incidents.\n\n### [US/Presse] New York Times:\n- **U.S. Diplomat’s Actions in Favor of Israel:**\n  - A top aide to Ambassador Mike Huckabee is accused of altering and suppressing critical reports to portray the Netanyahu government in a more favorable light, based on documents and statements from multiple officials.\n\n### [UK/Finanzen] Financial Times:\n- **AI and Cyber Warfare:**\n  - The era of AI is changing the dynamics of cyber warfare. The traditional Russian maskirovka (camouflage and deception) doctrine is becoming less effective as non-human agents create new layers of uncertainty for both attackers and defenders.\n\n### [UK/Medien] BBC World News:\n- **Russian Attack on Buses in Ukraine:**\n  - Russian forces struck a bus in a frontline Ukrainian city, killing 33 civilians. Ukraine has accused Russia of intentionally targeting civilians in a densely populated area.\n\n### [Wetter/Extreme] NOAA National Hurricane Center:\n- **Atlantic Tropical Weather Outlook:**\n  - The National Hurricane Center is tracking Hurricane Isaias, which is currently located over the southwestern Gulf of Mexico. Advisory updates are being issued regularly.\n\n### [Investigativ Net] ICIJ (Panama/Pandora Papers):\n- **Hungarian Billionaire’s Funding of Fidesz:**\n  - Lőrinc Mészáros, Hungary's richest man, has directed millions of dollars from his companies, which have benefited from government contracts, into an online platform that serves as a mouthpiece for the Fidesz party.\n\n### [Medizin] CDC Health Updates:\n- **Annual Report on Cancer Mortality:**\n  - The latest Annual Report to the Nation highlights significant progress in reducing cancer mortality, particularly driven by decreases in lung cancer deaths.\n\nThese summaries provide a snapshot of the key news and developments across various sectors on 08.10.2026.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT74RA",
+      "name": "Flug PGT1917",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8666,
-      "lon": 29.2532,
-      "lng": 29.2532,
+      "lat": 41.0139,
+      "lon": 29.8882,
+      "lng": 29.8882,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT74RA | Höhe: 0.3 km | Speed: 257 km/h",
+      "description": "Callsign: PGT1917 | Höhe: 2.3 km | Speed: 468 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT893P",
+      "name": "Flug PGT389G",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8754,
-      "lon": 29.2771,
-      "lng": 29.2771,
+      "lat": 42.2193,
+      "lon": 27.2396,
+      "lng": 27.2396,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT893P | Höhe: 0.2 km | Speed: 252 km/h",
+      "description": "Callsign: PGT389G | Höhe: 11.0 km | Speed: 818 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JAV400",
+      "name": "Flug AXB942",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.0885,
-      "lon": 35.8384,
-      "lng": 35.8384,
+      "lat": 22.8583,
+      "lon": 49.7837,
+      "lng": 49.7837,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JAV400 | Höhe: 6.0 km | Speed: 696 km/h",
+      "description": "Callsign: AXB942 | Höhe: 11.9 km | Speed: 862 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug ELY373",
+      "name": "Flug WUK9497",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.5679,
-      "lon": 33.1623,
-      "lng": 33.1623,
+      "lat": 33.5128,
+      "lon": 33.1242,
+      "lng": 33.1242,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ELY373 | Höhe: 8.3 km | Speed: 831 km/h",
+      "description": "Callsign: WUK9497 | Höhe: 10.1 km | Speed: 806 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug UPS72",
+      "region": "Taiwan-Straße / Ostasien",
+      "lat": 21.1632,
+      "lon": 117.1885,
+      "lng": 117.1885,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: UPS72 | Höhe: 10.4 km | Speed: 884 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug THA677",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.7345,
-      "lon": 119.9623,
-      "lng": 119.9623,
+      "lat": 21.9372,
+      "lon": 120.4322,
+      "lng": 120.4322,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA677 | Höhe: 10.4 km | Speed: 911 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug AIC2362",
-      "region": "Taiwan-Straße / Ostasien",
-      "lat": 19.0262,
-      "lon": 118.3445,
-      "lng": 118.3445,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: AIC2362 | Höhe: 8.8 km | Speed: 876 km/h",
+      "description": "Callsign: THA677 | Höhe: 11.6 km | Speed: 881 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "August Hanning in U-Haft (NZZ):** Hanning is a real former BND president (2001–2005). An arrest for espionage would be a major story — but this doesn't appear in real news sources.",
-    "Elon Musk / Intel \"Terafab\" (WSJ):** No such chip plant by that name is known.",
-    "France halting stun grenades (BBC):** Plausible-sounding but not a documented event.",
-    "Fed approval of \"Isabella Bank Corporation\":** No such bank is known from Fed press releases.",
-    "CISA/Hitachi Energy REB500:** This is *very* close to real CVEs (Hitachi Energy REB500 has had real advisories), but the specific advisory text seems synthesized."
+    "Waller** delivered a speech titled *\"The Signaling Value of the Summary of Economic Projections\"* at the **Istanbul Economic Forum**, hosted by the Central Bank of the Republic of Türkiye.",
+    "Open-source software vulnerabilities affect certain **REB500** product versions.",
+    "Exploitation could enable **Denial of Service (DoS)** attacks.",
+    "Hitachi Energy advises users to follow the **Recommended Immediate Actions** in the advisory.",
+    "MLW star **Donovan Dijak** hopes to reunite with former tag partner **Baron Corbin** (who left for WWE) after a **317-day MLW tag team title reign** spanning Mexico, Australia, and beyond."
   ],
   "geoscore": {
     "current_score": 72,
@@ -124,12 +124,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-10-07T12:24:06.010270+00:00",
+  "timestamp": "2026-10-08T12:34:28.435519+00:00",
   "pipeline_health": {
-    "timestamp": "2026-10-07T12:22:52.202746+00:00",
+    "timestamp": "2026-10-08T12:32:16.572326+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 119,
+    "feeds_failed": 105,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
