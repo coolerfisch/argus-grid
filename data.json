@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds you've provided, here is a structured summary and analysis of the key developments as of October 14, 2026.\n\n### Geopolitical & Security\n\n**Middle East Escalation: UAE Halts Trade with Iran**\n- **Source:** GDELT (via Epoch Times)\n- **Event:** The United Arab Emirates has suspended all trade with Iran following a missile threat. This is a significant escalation in regional tensions, likely disrupting a major trade corridor. The UAE has historically been a key re-export hub for Iran, so this move could have substantial economic and geopolitical ramifications....",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds you've provided, here is a structured summary and analysis of the key developments as of October 14, 2026.\n\n### Geopolitical & Security\n\n**Middle East Escalation: UAE Halts Trade with Iran**\n- **Source:** GDELT (via Epoch Times)\n- **Event:** The United Arab Emirates has suspended all trade with Iran following a ...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**Lagebild – 15.10.2026**\n\n---\n\n**Nahost / Golfregion**\n\n- **VAE stoppen Handel mit Iran:** Die Vereinigten Arabischen Emirate haben sämtlichen Handel mit Iran ausgesetzt. Als Grund werden unmittelbare Raketenbedrohungen genannt. (GDELT/epochtimes)\n- **Saudi-Arabien unter Huthi-Druck:** NZZ berichtet von einer Woche im Inneren des Königreichs – die Huthi-Angriffe werden als größte Bewährungsprobe für Kronprinz Mohammed bin Salman seit Beginn seiner Modernisierungspolitik beschrieben. Die wirtschaftliche und sicherheitspolitische Fassade beginne zu bröckeln.\n\n**Ukraine / Russl...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**Lagebild – 15.10.2026**\n\n---\n\n**Nahost / Golfregion**\n\n- **VAE stoppen Handel mit Iran:** Die Vereinigten Arabischen Emirate haben sämtlichen Handel mit Iran ausgesetzt. Als Grund werden unmittelbare Raketenbedrohungen genannt. (GDELT/epochtimes)\n- **Saudi-Arabien unter Huthi-Druck:** NZZ berichtet von einer Woche im Inneren des...",
   "key_takeaways": [
-    "Source:** GDELT (via Epoch Times)",
-    "Event:** The United Arab Emirates has suspended all trade with Iran following a missile threat. This is a significant escalation in regional tensions, likely disrupting a major trade corridor. The UAE has historically been a key re-export hub for Iran, so this move could have substantial economic and geopolitical ramifications.",
-    "Source:** NZZ International",
-    "Analysis:** The article explores why the Houthis are so difficult to defeat, describing them as a mix of \"mafia and an eternal warrior state.\" Despite leading a perpetual war and their impoverished, heavily sanctioned country, they have managed to humiliate Saudi Arabia. This analysis underscores the complexity of the conflict and the limitations of conventional military power against a deeply entrenched, irregular force.",
-    "Source:** BBC World News, New York Times World"
+    "VAE stoppen Handel mit Iran:** Die Vereinigten Arabischen Emirate haben sämtlichen Handel mit Iran ausgesetzt. Als Grund werden unmittelbare Raketenbedrohungen genannt. (GDELT/epochtimes)",
+    "Saudi-Arabien unter Huthi-Druck:** NZZ berichtet von einer Woche im Inneren des Königreichs – die Huthi-Angriffe werden als größte Bewährungsprobe für Kronprinz Mohammed bin Salman seit Beginn seiner Modernisierungspolitik beschrieben. Die wirtschaftliche und sicherheitspolitische Fassade beginne zu bröckeln.",
+    "Selenskyj nimmt Angriffe auf russische Raffinerien wieder auf:** Im FT-Interview kündigt er an, die zuvor auf US-Druck ausgesetzten Angriffe fortzusetzen. Gleichzeitig äußert er scharfe Kritik am Rückzug der US-Geheimdienstzusammenarbeit und der Drosselung von Starlink.",
+    "Musk / Starlink:** Musk erklärte, die US-Regierung könnte hinter den reduzierten Drohnengeschwindigkeiten stecken. Ukraine bestätigt Verbesserungen, aber anhaltende Limitierungen, die Kampfeinsätze beeinträchtigen. (BBC, FT)",
+    "Fed:** Veröffentlichung der Protokolle der Diskontsatz-Sitzungen vom 17. August, 9. und 16. September 2026."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds you've provided, here is a structured summary and analysis of the key developments as of October 14, 2026.\n\n### Geopolitical & Security\n\n**Middle East Escalation: UAE Halts Trade with Iran**\n- **Source:** GDELT (via Epoch Times)\n- **Event:** The United Arab Emirates has suspended all trade with Iran following a missile threat. This is a significant escalation in regional tensions, likely disrupting a major trade corridor. The UAE has historically been a key re-export hub for Iran, so this move could have substantial economic and geopolitical ramifications.\n\n**Yemen Conflict: The Houthi Enigma**\n- **Source:** NZZ International\n- **Analysis:** The article explores why the Houthis are so difficult to defeat, describing them as a mix of \"mafia and an eternal warrior state.\" Despite leading a perpetual war and their impoverished, heavily sanctioned country, they have managed to humiliate Saudi Arabia. This analysis underscores the complexity of the conflict and the limitations of conventional military power against a deeply entrenched, irregular force.\n\n**Ukraine-Russia War: Energy and Communications Targeted**\n- **Source:** BBC World News, New York Times World\n- **Developments:**\n    - **Infrastructure:** Russian strikes have left 600,000 people without power in Ukraine, targeting critical energy infrastructure.\n    - **Battlefield Impact:** Starlink speed restrictions imposed by Elon Musk are reportedly disrupting Ukrainian battlefield missions on the front line. This highlights the critical dependence on commercial satellite communications in modern warfare and the potential for private actors to influence outcomes.\n    - **Human Cost:** The NYT features a personal story of a father, Yevhen Ovcharov, whose wife and daughter were killed by a glide bomb, illustrating the devastating human toll of the conflict.\n\n### Cybersecurity & Infrastructure\n\n**Vulnerability in Swann Communications Cameras**\n- **Source:** CISA Cyber Alerts\n- **Details:** Swann Communications SWIFI-SE2KIC cameras (firmware <=2.0.22) have multiple vulnerabilities (CVE-2026-107605, -107606, -107607). Successful exploitation could allow an attacker to **view video information without authentication**. This is a severe privacy and security risk for users of these devices.\n\n### Finance & Economics\n\n**BlackRock's Staggering Scale**\n- **Source:** Wall Street Journal (MarketWatch Alt)\n- **Key Figure:** BlackRock's assets under management have grown 15% to nearly **$15.5 trillion**, which is equivalent to half the size of the entire U.S. economy. This underscores the immense concentration of financial power in a single fund-management entity.\n\n**UK Pensions & Inheritance Tax**\n- **Source:** Financial Times\n- **Topic:** A discussion on inheritance tax rules changing next year, focusing on the dilemma of balancing tax efficiency with fairness when leaving pensions to heirs.\n\n**Central Bank Policy Signals**\n- **Source:** Fed Speeches & Minutes\n- **Event:** A speech by Fed Governor Waller on \"The Signaling Value of the Summary of Economic Projections\" at the Istanbul Economic Forum. This indicates market focus on the Fed's forward guidance and communication strategy.\n\n### Domestic Politics & Social Issues (US)\n\n**Washington School Sports Protest**\n- **Source:** Fox News\n- **Event:** A girls' cross-country team in Washington walked off the course in protest of competing against a male athlete who had switched from the boys' team. The parents have spoken out about the incident, highlighting ongoing national debates over transgender participation in women's sports.\n\n### Weather & Environment\n\n**Atlantic Tropical Weather Outlook**\n- **Source:** NOAA National Hurricane Center\n- **Update:** The 2:00 AM EDT outlook for the North Atlantic, Caribbean Sea, and Gulf of Mexico. No specific storm details were provided in the truncated feed, but the NHC is actively monitoring the basin.\n\n---\n\n**Summary of Key Themes:**\n1.  **Rising Geopolitical Tensions:** The UAE-Iran trade halt and the ongoing Ukraine conflict show a world of heightened state-level friction.\n2.  **Asymmetric Conflicts:** The Houthi example demonstrates the difficulty of defeating non-state actors with unconventional strategies.\n3.  **Critical Infrastructure Vulnerability:** Cyber vulnerabilities (Swann cameras) and physical attacks (Ukraine's power grid) highlight the fragility of modern infrastructure.\n4.  **Concentration of Corporate Power:** BlackRock's size relative to the U.S. economy is a striking data point.\n5.  **Ongoing Social & Political Debates:** The U.S. school sports protest is a flashpoint in the culture war over gender identity.\n\nMACRO:\n### Summary of Key Information from Feed Sources\n\n#### **Geopolitical and Economic Analysis**\n\n1. **Gulf Tensions Escalate:**\n   - **UAE Suspends Trade with Iran:** The United Arab Emirates has halted all trade with Iran due to increasing missile threats. This move underscores the intensifying regional tensions and the UAE's cautious approach to security concerns. (Source: GDELT, epochtimes.com, 20260819T093000Z)\n\n2. **Federal Reserve Insights:**\n   - **Fed Speech on Economic Projections:** Christopher Waller, a member of the Federal Reserve, discussed the signaling value of the Summary of Economic Projections at the Istanbul Economic Forum. This speech likely provides insights into the Fed's economic outlook and policy direction. (Source: Fed Speeches & Minutes)\n\n3. **Financial Market Dynamics:**\n   - **BlackRock Asset Growth:** BlackRock, the world's largest asset manager, reported a 15% growth in assets under management, reaching nearly $15.5 trillion. This significant growth highlights the resilience and appeal of the company in the global financial market. (Source: Wall Street Journal, MarketWatch Alt)\n   - **Inheritance Tax Changes:** The Financial Times discusses upcoming changes to inheritance tax rules in the UK, emphasizing the need to balance tax efficiency with fairness when deciding who to leave pensions to. (Source: Financial Times)\n\n#### **Cybersecurity and Technology**\n\n1. **Swann Communications Vulnerabilities:**\n   - **Security Flaws in SWIFI-SE2KIC:** CISA has issued a cyber alert regarding vulnerabilities in Swann Communications' SWIFI-SE2KIC firmware (versions <=2.0.22). Successful exploitation could allow unauthorized access to video information without authentication. (Source: CISA Cyber Alerts)\n\n#### **International Conflict and Humanitarian Issues**\n\n1. **Ukraine-Russia Conflict:**\n   - **Russian Strikes on Ukraine:** Russian airstrikes have left 600,000 people without power in Ukraine, further escalating the humanitarian crisis. Additionally, restrictions on Elon Musk's Starlink service are impacting Ukraine's military operations on the front line. (Source: BBC World News)\n   - **Personal Impact:** Yevhen Ovcharov, whose wife and younger daughter were killed by a glide bomb, is on a mission to raise awareness and prevent similar tragedies. (Source: New York Times World)\n\n2. **Yemen Conflict:**\n   - **Houthi Resilience:** The Houthi rebels in northern Yemen continue to pose a significant challenge despite their country's impoverished state and harsh sanctions. They have managed to humiliate powerful Saudi Arabia, highlighting their resilience and strategic capabilities. (Source: NZZ International)\n\n#### **Social and Political Issues**\n\n1. **Gender and Sports:**\n   - **Protest Against Male Athlete:** Holly Burns and her teammates from a Washington cross-country team walked off a race in protest against a male athlete who had switched from the boys' team. This incident underscores ongoing debates about gender identity and fairness in sports. (Source: Fox News Latest)\n\n#### **Environmental and Weather Updates**\n\n1. **Atlantic Tropical Weather:**\n   - **No Expected Cyclone Formation:** The National Hurricane Center's outlook indicates no tropical cyclone formation is expected in the North Atlantic, Caribbean Sea, or Gulf of Mexico over the next seven days. (Source: NOAA National Hurricane Center)\n\n#### **Investigative Journalism and Media**\n\n1. **ICIJ and Inkyfada:**\n   - **Dismissal of Case Against ICIJ Partner:** A Tunisian court dismissed a case to dissolve the publisher of ICIJ partner Inkyfada. Despite this legal victory, the organization and its parent company, Al Khatt, continue to face challenges with frozen funds. (Source: ICIJ)\n\n#### **Health and Medical Advancements**\n\n1. **Cancer Mortality Reduction:**\n   - **Progress Against Lung Cancer:** The CDC's Annual Report to the Nation highlights significant progress in reducing cancer mortality, driven by advancements in the treatment of lung cancer. (Source: CDC Health Updates)\n\n### Conclusion\n\nThe diverse range of news and updates from various sources underscores the complex and interconnected nature of global events. From geopolitical tensions in the Gulf and ongoing conflict in Ukraine to financial market dynamics and cybersecurity threats, the world continues to grapple with a multitude of challenges and opportunities. Governments, organizations, and individuals must remain vigilant and adaptable to navigate these evolving landscapes effectively.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**Lagebild – 15.10.2026**\n\n---\n\n**Nahost / Golfregion**\n\n- **VAE stoppen Handel mit Iran:** Die Vereinigten Arabischen Emirate haben sämtlichen Handel mit Iran ausgesetzt. Als Grund werden unmittelbare Raketenbedrohungen genannt. (GDELT/epochtimes)\n- **Saudi-Arabien unter Huthi-Druck:** NZZ berichtet von einer Woche im Inneren des Königreichs – die Huthi-Angriffe werden als größte Bewährungsprobe für Kronprinz Mohammed bin Salman seit Beginn seiner Modernisierungspolitik beschrieben. Die wirtschaftliche und sicherheitspolitische Fassade beginne zu bröckeln.\n\n**Ukraine / Russland**\n\n- **Selenskyj nimmt Angriffe auf russische Raffinerien wieder auf:** Im FT-Interview kündigt er an, die zuvor auf US-Druck ausgesetzten Angriffe fortzusetzen. Gleichzeitig äußert er scharfe Kritik am Rückzug der US-Geheimdienstzusammenarbeit und der Drosselung von Starlink.\n- **Musk / Starlink:** Musk erklärte, die US-Regierung könnte hinter den reduzierten Drohnengeschwindigkeiten stecken. Ukraine bestätigt Verbesserungen, aber anhaltende Limitierungen, die Kampfeinsätze beeinträchtigen. (BBC, FT)\n\n**USA / Finanzen & Politik**\n\n- **Fed:** Veröffentlichung der Protokolle der Diskontsatz-Sitzungen vom 17. August, 9. und 16. September 2026.\n- **WSJ/MarketWatch:** Sozialpolitische Debatte über Mietverhältnisse im Alter nach Verlust des Eigenheims in der Finanzkrise.\n- **Washington State:** Schulaufsichtsbehörde kündigt keine Konsequenzen für Mädchen an, die aus Protest gegen eine transgender Athletin das Cross-Country-Rennen verließen. (Fox News)\n\n**Cyber / Infrastruktur**\n\n- **CISA KEV-Katalog:** Vier neue, aktiv ausgenutzte Schwachstellen ergänzt:\n  - CVE-2026-0322 – Palo Alto Networks PAN-OS Code Injection\n  - CVE-2026-76519 – Cisco Secure Email Gateway Relative Path Traversal\n  - (zwei weitere, Feed abgeschnitten)\n\n**Wetter / Extremereignisse**\n\n- NOAA Atlantic Tropical Weather Outlook veröffentlicht (15.10.2026, 05:13 UTC) – Detailinhalt im Feed nicht übermittelt.\n\n---\n\n**Einordnung / Beobachtung:**\n\nDie Meldungen verdichten sich zu einem Bild **multipler, gleichzeitiger Belastungsachsen**:\n\n1. **Golfregion:** Der Handelstopp der VAE gegen Iran ist ein eskalatorischer Schritt – wirtschaftliche Entkopplung als Vorstufe militärischer Auseinandersetzung.\n2. **Ukraine:** Selenskyj stellt sich offen gegen Trump – das ist innen- wie außenpolitisch bemerkenswert und signalisiert, dass Kiew die US-Unterstützung nicht mehr als verlässlich einstuft.\n3. **Cyber:** Die KEV-Ergänzungen betreffen erneut kritische Netzwerk- und E-Mail-Infrastruktur – Palo Alto und Cisco sind Breitbandziele.\n4. **Saudi-Arabien:** Die Huthi-Bedrohung wird zunehmend als innenpolitische Legitimationskrise für MbS gerahmt.\n\nFalls du zu einem dieser Stränge eine Vertiefung, Zeitleiste oder Quellenvergleich brauchst – sag Bescheid.\n\nMACRO:\n### Key Insights and Developments as of 15.10.2026\n\n1. **Geopolitical Tensions:**\n   - **UAE and Iran:** The United Arab Emirates (UAE) has suspended all trade with Iran due to missile threats, as reported by the Epoch Times. This move highlights the increasing tension in the region and the UAE's strategic decision to prioritize security over economic interests.\n   - **Ukraine and Russia:** President Volodymyr Zelensky of Ukraine announced that the country will resume strikes on Russian refineries, defying U.S. demands to pause such actions. This decision comes following Zelensky's interview with the Financial Times, where he expressed frustration with the withdrawal of U.S. intelligence sharing and the weakening of Starlink satellite internet service, as reported by the New York Times and the Financial Times.\n\n2. **Economic and Financial News:**\n   - **Federal Reserve Discount Rate Meetings:** The Federal Reserve released minutes from its discount rate meetings on August 17, September 9, and September 16, 2026. These minutes provide insights into the central bank's monetary policy decisions and economic outlook.\n   - **U.S. Real Estate and Economy:** An article in MarketWatch Alt discusses the long-term effects of the Great Recession on homeownership, featuring a personal account of someone who lost their home and now rents in their 50s, earning $110,000 a year. The piece questions societal perceptions of financial success and failure.\n\n3. **Cybersecurity and Infrastructure:**\n   - **CISA Cyber Alerts:** The Cybersecurity and Infrastructure Security Agency (CISA) has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog. These include the Palo Alto Networks PAN-OS Code Injection Vulnerability (CVE-2026-0322) and the Cisco Secure Email Gateway Relative Path Traversal Vulnerability (CVE-2026-76519). These updates emphasize the ongoing threat landscape and the importance of cybersecurity measures.\n\n4. **Social and Political Issues:**\n   - **Transgender Rights and School Sports:** In Washington state, the Camas School District superintendent, John Anzalone, stated that girls who protested a transgender runner's participation in cross country will face no repercussions. This decision highlights the ongoing debate over transgender rights and inclusion in school sports, as reported by Fox News.\n   - **Saudi Arabia and Houthi Attacks:** The Neue Zürcher Zeitung (NZZ) International published an article detailing the challenges faced by Saudi Arabia, particularly the capital Riyadh, amid Houthi attacks. The piece discusses Crown Prince Mohammed bin Salman's efforts to transform Saudi Arabia into a regional power and the skepticism surrounding his promises.\n\n5. **Technology and International Relations:**\n   - **Elon Musk and Starlink:** Elon Musk suggested that the U.S. government might be behind the slowdown of Starlink internet speeds in Ukraine, which Ukraine claims have improved but are still disrupting battlefield operations. This allegation adds a new dimension to the ongoing conflict and the role of technology in international relations, as reported by the BBC World News.\n\n6. **Investigative Reporting:**\n   - **Pandora Papers:** The International Consortium of Investigative Journalists (ICIJ) published a new investigation revealing how Deloitte Cyprus helped Russian oligarch Roman Abramovich hide a $10 billion fortune through the falsification of financial records. This exposé highlights the global nature of financial fraud and the complexities of international taxation.\n\n7. **Weather and Natural Disasters:**\n   - **Atlantic Tropical Weather Outlook:** The National Hurricane Center (NHC) released its tropical weather outlook, indicating no expected tropical cyclone formation in the North Atlantic, Caribbean Sea, and Gulf of Mexico over the next seven days. This outlook is crucial for coastal communities and maritime operations.\n\nThese developments underscore the interconnectedness of global events and the multifaceted challenges faced by nations, organizations, and individuals.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug WMT4470",
+      "name": "Flug PGT906",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 44.5749,
-      "lon": 26.3398,
-      "lng": 26.3398,
+      "lat": 42.2873,
+      "lon": 26.0525,
+      "lng": 26.0525,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WMT4470 | Höhe: 1.7 km | Speed: 506 km/h",
+      "description": "Callsign: PGT906 | Höhe: 10.7 km | Speed: 888 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug PGT65UA",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 45.147,
-      "lon": 25.1694,
-      "lng": 25.1694,
+      "lat": 43.7456,
+      "lon": 25.7896,
+      "lng": 25.7896,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT65UA | Höhe: 11.0 km | Speed: 767 km/h",
+      "description": "Callsign: PGT65UA | Höhe: 10.4 km | Speed: 756 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AEE907",
+      "name": "Flug 4XDAN",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.5112,
-      "lon": 32.7714,
-      "lng": 32.7714,
+      "lat": 31.7171,
+      "lon": 35.9993,
+      "lng": 35.9993,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AEE907 | Höhe: 7.2 km | Speed: 623 km/h",
+      "description": "Callsign: 4XDAN | Höhe: 3.2 km | Speed: 0 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ30DY",
+      "name": "Flug WZZ81DH",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.9349,
-      "lon": 34.0719,
-      "lng": 34.0719,
+      "lat": 31.7171,
+      "lon": 35.9993,
+      "lng": 35.9993,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ30DY | Höhe: 1.8 km | Speed: 418 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug UAL3937",
-      "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.9489,
-      "lon": 121.7595,
-      "lng": 121.7595,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: UAL3937 | Höhe: 11.3 km | Speed: 943 km/h",
+      "description": "Callsign: WZZ81DH | Höhe: 7.9 km | Speed: 0 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug DKH1365",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 26.2985,
-      "lon": 120.7996,
-      "lng": 120.7996,
+      "lat": 25.4167,
+      "lon": 120.2271,
+      "lng": 120.2271,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: DKH1365 | Höhe: 11.0 km | Speed: 810 km/h",
+      "description": "Callsign: DKH1365 | Höhe: 9.8 km | Speed: 797 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug UAL869",
+      "region": "Taiwan-Straße / Ostasien",
+      "lat": 25.3243,
+      "lon": 121.7081,
+      "lng": 121.7081,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: UAL869 | Höhe: 10.4 km | Speed: 869 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Source:** GDELT (via Epoch Times)",
-    "Event:** The United Arab Emirates has suspended all trade with Iran following a missile threat. This is a significant escalation in regional tensions, likely disrupting a major trade corridor. The UAE has historically been a key re-export hub for Iran, so this move could have substantial economic and geopolitical ramifications.",
-    "Source:** NZZ International",
-    "Analysis:** The article explores why the Houthis are so difficult to defeat, describing them as a mix of \"mafia and an eternal warrior state.\" Despite leading a perpetual war and their impoverished, heavily sanctioned country, they have managed to humiliate Saudi Arabia. This analysis underscores the complexity of the conflict and the limitations of conventional military power against a deeply entrenched, irregular force.",
-    "Source:** BBC World News, New York Times World"
+    "VAE stoppen Handel mit Iran:** Die Vereinigten Arabischen Emirate haben sämtlichen Handel mit Iran ausgesetzt. Als Grund werden unmittelbare Raketenbedrohungen genannt. (GDELT/epochtimes)",
+    "Saudi-Arabien unter Huthi-Druck:** NZZ berichtet von einer Woche im Inneren des Königreichs – die Huthi-Angriffe werden als größte Bewährungsprobe für Kronprinz Mohammed bin Salman seit Beginn seiner Modernisierungspolitik beschrieben. Die wirtschaftliche und sicherheitspolitische Fassade beginne zu bröckeln.",
+    "Selenskyj nimmt Angriffe auf russische Raffinerien wieder auf:** Im FT-Interview kündigt er an, die zuvor auf US-Druck ausgesetzten Angriffe fortzusetzen. Gleichzeitig äußert er scharfe Kritik am Rückzug der US-Geheimdienstzusammenarbeit und der Drosselung von Starlink.",
+    "Musk / Starlink:** Musk erklärte, die US-Regierung könnte hinter den reduzierten Drohnengeschwindigkeiten stecken. Ukraine bestätigt Verbesserungen, aber anhaltende Limitierungen, die Kampfeinsätze beeinträchtigen. (BBC, FT)",
+    "Fed:** Veröffentlichung der Protokolle der Diskontsatz-Sitzungen vom 17. August, 9. und 16. September 2026."
   ],
   "geoscore": {
     "current_score": 72,
@@ -124,12 +124,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-10-14T10:56:10.748098+00:00",
+  "timestamp": "2026-10-15T10:38:12.652451+00:00",
   "pipeline_health": {
-    "timestamp": "2026-10-14T10:55:09.458153+00:00",
+    "timestamp": "2026-10-15T10:36:56.752296+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 35,
     "telegram_posts": 0,
     "bakers_active": [
