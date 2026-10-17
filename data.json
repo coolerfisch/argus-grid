@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nDas ist eine merkwürdige, zusammenhanglose Sammlung von Schlagzeilen, offenbar ein Test für Nachrichten-Aggregation. Hier eine Einordnung, was an diesem „Feed\" auffällt:\n\n**Datierung / Plausibilität**\n- Der Feed ist auf den **16.10.2026** datiert – also Zukunft aus heutiger Sicht. Einige Einträge sind erkennbar fiktiv oder spekulativ zusammengesetzt.\n- **CVE-2026-107777** mit CVSS „v3 6.\" ist unvollständig und wirkt konstruiert.\n- Die NOAA-Meldung ist formal korrekt aufgebaut (Standardformat des National Hurricane Center), aber inhaltlich nicht überprüfbar.\n\n**Inhaltliche Beo...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nDas ist eine merkwürdige, zusammenhanglose Sammlung von Schlagzeilen, offenbar ein Test für Nachrichten-Aggregation. Hier eine Einordnung, was an diesem „Feed\" auffällt:\n\n**Datierung / Plausibilität**\n- Der Feed ist auf den **16.10.2026** datiert – also Zukunft aus heutiger Sicht. Einige Einträge sind erkennbar fiktiv oder spekula...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nAuf Basis der vorliegenden Feed-Signale vom 17.10.2026 ergibt sich folgendes Lagebild:\n\n## 1. Geopolitik / Naher Osten\n**GDELT/OSINT (epochtimes.com):** Die Meldung, dass die **Vereinigten Arabischen Emirate (VAE) aufgrund einer wahrgenommenen Raketenbedrohung allen Handel mit dem Iran aussetzen**, ist der geopolitisch brisanteste Einzelposten. Sie deutet auf eine akute Eskalation in der Golfregion hin – vermutlich im Kontext israelisch-iranischer Spannungen. Die zeitliche Einordnung (Quelle trägt Zeitstempel 2026-08-19, Feed-Zugriff 17.10.2026) sollte bei der Bewertung der A...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nAuf Basis der vorliegenden Feed-Signale vom 17.10.2026 ergibt sich folgendes Lagebild:\n\n## 1. Geopolitik / Naher Osten\n**GDELT/OSINT (epochtimes.com):** Die Meldung, dass die **Vereinigten Arabischen Emirate (VAE) aufgrund einer wahrgenommenen Raketenbedrohung allen Handel mit dem Iran aussetzen**, ist der geopolitisch brisanteste...",
   "key_takeaways": [
-    "Der Feed ist auf den **16.10.2026** datiert – also Zukunft aus heutiger Sicht. Einige Einträge sind erkennbar fiktiv oder spekulativ zusammengesetzt.",
-    "CVE-2026-107777** mit CVSS „v3 6.\" ist unvollständig und wirkt konstruiert.",
-    "Die NOAA-Meldung ist formal korrekt aufgebaut (Standardformat des National Hurricane Center), aber inhaltlich nicht überprüfbar.",
-    "Fed/Bowman-Rede**: „Supervisory Modernization After Silicon Valley Bank\" – plausibles Thema für 2026.",
-    "Midterms-Analyse (NZZ)**: Bezieht sich auf die US-Zwischenwahlen 2026 – konsistent mit dem Datum."
+    "einen wachsenden Konflikt zwischen **Exekutive und Legislative** in der Russlandpolitik,",
+    "eine **transaktionale Energiepolitik** mit innenpolitischem Sprengstoff (Dieselpreise),",
+    "eine Verschlechterung des Verhältnisses zu **Selenskyj** (BBC: „row with Zelensky intensifies\").",
+    "Fox News:** Jerry Seinfeld kontert anti-israelische Störer in Chicago – Signal für die anhaltende kulturelle Polarisierung in den USA.",
+    "NYT:** Der Bürgermeister Bally Bagayoko als Gesicht der **Jugendproteste in Frankreich** – innenpolitische Unruhe in einem Kernland der EU."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nDas ist eine merkwürdige, zusammenhanglose Sammlung von Schlagzeilen, offenbar ein Test für Nachrichten-Aggregation. Hier eine Einordnung, was an diesem „Feed\" auffällt:\n\n**Datierung / Plausibilität**\n- Der Feed ist auf den **16.10.2026** datiert – also Zukunft aus heutiger Sicht. Einige Einträge sind erkennbar fiktiv oder spekulativ zusammengesetzt.\n- **CVE-2026-107777** mit CVSS „v3 6.\" ist unvollständig und wirkt konstruiert.\n- Die NOAA-Meldung ist formal korrekt aufgebaut (Standardformat des National Hurricane Center), aber inhaltlich nicht überprüfbar.\n\n**Inhaltliche Beobachtungen**\n- **Fed/Bowman-Rede**: „Supervisory Modernization After Silicon Valley Bank\" – plausibles Thema für 2026.\n- **Midterms-Analyse (NZZ)**: Bezieht sich auf die US-Zwischenwahlen 2026 – konsistent mit dem Datum.\n- **Schulschuss in Bend, Oregon**: Solche Meldungen sind leider realistisch, aber diese spezifische ist nicht verifizierbar.\n- **Seinfeld / Chicago Theatre**: Klingt nach einer typischen Culture-War-Schlagzeile.\n- **FT zu Treasuries**: „AI jitters halt bond rout\" – wirtschaftlich plausibles Narrativ.\n\n**Auffälligkeiten**\n- Der ICIJ-Eintrag bricht mitten im Wort ab („Panama/P\").\n- Die Mischung aus seriösen Formaten (NHC, CISA, FT) und boulevardesken (Fox, MarketWatch-Kolumnen) ist für einen Rohfeed typisch, aber die Quellen wirken teils bewusst provokativ gewählt.\n\n**Fazit**\nDas Ganze liest sich wie ein **fiktiver oder synthetischer Nachrichten-Feed** (evtl. für Benchmarking, LLM-Tests oder eine Simulation), nicht wie ein realer Auszug vom 16.10.2026. Möchtest du, dass ich zu einem bestimmten Eintrag inhaltlich tiefer einsteige – z. B. die CISA-Schwachstelle, die Fed-Rede oder die Midterm-Dynamik?\n\nMACRO:\n### Summary of Key News Items for October 16, 2026\n\n#### **Zentralbank:**\n- **Fed Speeches & Minutes:**\n  - **Micelle Bowman:** Delivered a speech on \"Supervisory Modernization After Silicon Valley Bank\" at the Bangkok Economic Festival. The speech focuses on the need to modernize regulatory and supervisory frameworks to prevent future banking crises.\n\n#### **Cyber / Infrastruktur:**\n- **CISA Cyber Alerts:**\n  - **Thermo Fisher Torrent Suite Software Vulnerability:** A critical vulnerability (CVE-2026-107777) in versions of Thermo Fisher Torrent Suite Software <=5.18 allows attackers to read arbitrary files on the Torrent Server, posing a significant security risk.\n\n#### **US/Finanzen:**\n- **Wall Street Journal (MarketWatch Alt):**\n  - **Family Business Inheritance Dilemma:** A 64-year-old business owner is considering leaving 70% of his business to one son, who works in the family firm, while the younger son does not. Concerns about the younger son's marriage stability influence the decision.\n\n#### **US/Presse:**\n- **New York Times World:**\n  - **Arab Kingmaker in Israeli Politics:** Mansour Abbas, a prominent Arab Israeli politician, is once again playing a pivotal role in the Israeli election. He is teaming up with a Jewish ex-police commander in a bid to unseat Benjamin Netanyahu.\n\n#### **US/Politik:**\n- **Fox News Latest:**\n  - **Jerry Seinfeld vs. Anti-Israel Protesters:** A viral video shows comedian Jerry Seinfeld dancing and mocking anti-Israel hecklers during a performance in Chicago, as security escorted the protesters from the venue.\n\n#### **UK/Medien:**\n- **BBC World News:**\n  - **Deadly School Shooting in Oregon:** Three children (ages 5, 8, and 11) and a teacher were killed in a school shooting at Silver Rail Elementary School in Bend, Oregon. A bystander shot and killed the suspect.\n\n#### **CH/Presse:**\n- **NZZ International:**\n  - **US Midterm Elections Analysis:** Recent polls suggest that Democrats could regain control of the House of Representatives and possibly the Senate, potentially making it challenging for Donald Trump in the upcoming elections.\n\n#### **UK/Finanzen:**\n- **Financial Times:**\n  - **Treasuries Performance:** US Treasuries are experiencing their best week since February, as concerns over AI and other market uncertainties drive investors to seek safety in government debt.\n\n#### **Wetter/Extreme:**\n- **NOAA National Hurricane Center:**\n  - **Atlantic Tropical Weather Outlook:** No tropical cyclone formation is expected in the North Atlantic, Caribbean Sea, or Gulf of Mexico over the next seven days.\n\n#### **Investigativ Net:**\n- **ICIJ (Panama/Pandora Papers):**\n  - **Panama Removed from EU Tax Haven List:** A decade after the Panama Papers exposed the country as a corporate haven, Panama has implemented new regulations and checks to address its reputation issues and has been removed from the EU's tax haven blacklist.\n\n#### **Cyber-Espionage:**\n- **Citizen Lab (Spyware & Surveillance):**\n  - **US Spyware Company Paragon Solutions:** Senior researcher John Scott-Railton discusses the lack of oversight at Paragon Solutions, a US-based spyware company, in an interview with WIRED.\n\nThese summaries provide a snapshot of the major news items from various sectors and regions as of October 16, 2026.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nAuf Basis der vorliegenden Feed-Signale vom 17.10.2026 ergibt sich folgendes Lagebild:\n\n## 1. Geopolitik / Naher Osten\n**GDELT/OSINT (epochtimes.com):** Die Meldung, dass die **Vereinigten Arabischen Emirate (VAE) aufgrund einer wahrgenommenen Raketenbedrohung allen Handel mit dem Iran aussetzen**, ist der geopolitisch brisanteste Einzelposten. Sie deutet auf eine akute Eskalation in der Golfregion hin – vermutlich im Kontext israelisch-iranischer Spannungen. Die zeitliche Einordnung (Quelle trägt Zeitstempel 2026-08-19, Feed-Zugriff 17.10.2026) sollte bei der Bewertung der Aktualität berücksichtigt werden; eine Handelsaussetzung der VAE gegenüber Iran wäre ein signifikanter Bruch bisheriger Deeskalationsbemühungen.\n\n## 2. USA – Russland / Ukraine\n**BBC & Financial Times:** Trump **setzt mehrere vom Kongress beschlossene Russland-Sanktionen aus** und verweist auf „nationale Sicherheit\". Die FT präzisiert: Im Gegenzug für ein Abkommen zur **Diesel-Lieferung** erhält Putin Aufschub bei angedrohten Energiemaßnahmen. Das deutet auf:\n- einen wachsenden Konflikt zwischen **Exekutive und Legislative** in der Russlandpolitik,\n- eine **transaktionale Energiepolitik** mit innenpolitischem Sprengstoff (Dieselpreise),\n- eine Verschlechterung des Verhältnisses zu **Selenskyj** (BBC: „row with Zelensky intensifies\").\n\n## 3. US-Innenpolitik / Midterms\n**NZZ:** Die Analyse zur Frage, ob Trump zur **„lame duck\"** wird, verweist auf Umfragen, wonach die Demokraten das **Repräsentantenhaus und möglicherweise den Senat** zurückgewinnen könnten. Zusammen mit den Russland-Sanktionen und der Energiethematik ergibt sich ein Bild zunehmender politischer Verwundbarkeit vor den Zwischenwahlen.\n\n## 4. Märkte\n**WSJ/MarketWatch:** **Tech-Selloff** – Software- und Halbleiterwerte fallen gemeinsam („Nowhere to hide\"), getrieben von **KI- und Zinsängsten**. Ein synchroner Abverkauf beider Sektoren ist bemerkenswert, da sie 2026 bisher selten im Gleichschritt handelten. Kombiniert mit den geopolitischen Risiken (Golf, Russland) und der US-Politik ist mit erhöhter Volatilität zu rechnen.\n\n## 5. Cyber / Infrastruktur\n**CISA/NIST/NSA SISC:** Veröffentlichung von **„Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation\"**. Bemerkenswert: Die Einbindung eines **„Super Intelligence Security Center\" (NSA SISC)** markiert einen institutionellen Schritt Richtung Governance von KI-Sicherheitsvorfällen – ein Thema, das mit dem Tech-Selloff und den KI-Ängsten der Märkte korrespondiert.\n\n## 6. Gesellschaft / Kultur\n- **Fox News:** Jerry Seinfeld kontert anti-israelische Störer in Chicago – Signal für die anhaltende kulturelle Polarisierung in den USA.\n- **NYT:** Der Bürgermeister Bally Bagayoko als Gesicht der **Jugendproteste in Frankreich** – innenpolitische Unruhe in einem Kernland der EU.\n\n## 7. Wetter / Extreme\n**NOAA:** Der Feed zu atlantischen Hurrikanen ist **abgeschnitten** („Atlantic Tr…\"). Hier liegt eine **Datenlücke** vor; Aussagen zu tropischen Systemen sind auf dieser Basis nicht möglich. Eine Nachverfolgung wird empfohlen.\n\n---\n\n### Querschnittsbewertung\n| Themenfeld | Signalstärke | Tendenz |\n|---|---|---|\n| Golf / Iran (VAE-Handelsstopp) | Hoch | Eskalation |\n| US-Russland-Sanktionen | Hoch | Transaktional / institutioneller Konflikt |\n| US-Midterms | Mittel-Hoch | Opposition im Aufwind |\n| Tech-Märkte | Hoch | Risk-off |\n| KI-Sicherheitsgovernance | Mittel | Institutionalisierung |\n| Datenlage NOAA | – | Lücke |\n\n**Kernaussage:** Das Lagebild wird von einer **Gleichzeitigkeit geopolitischer Eskalation (Golf), außenpolitischer Alleingänge Washingtons (Russland/Diesel) und marktseitiger KI-/Zinsängste** dominiert – eine Kombination, die traditionell erhöhte Volatilität an Märkten und in der Bündnispolitik begünstigt. Die NOAA-Datenlücke sollte vor weitergehenden Schlüssen geschlossen werden.\n\nMACRO:\n**Sachstandsübersicht zum 17.10.2026:**\n\n1. **Geopolitik:**\n   - **Iran-UAE-Beziehungen:** Die Vereinigten Arabischen Emirate (UAE) haben sämtliche Handelsbeziehungen zu Iran wegen der Bedrohung durch Raketenangriffe eingestellt (Quelle: epochtimes.com).\n\n2. **Finanzen und Wirtschaft:**\n   - **USA:** Die Federal Reserve hat Maßnahmen gegen Gardner Bancshares, Inc. und Small Business Bank beendet (Quelle: Federal Reserve Press).\n   - **Wall Street:** Die Aktienkurse im Tech-Sektor, insbesondere Software- und Chipfirmen, sind am Freitag eingebrochen, da die Marktteilnehmer Bedenken über KI und Zinsen hegen (Quelle: MarketWatch Alt).\n   - **Trump und die US-Wahl:** Aktuelle Umfragen deuten darauf hin, dass die Demokraten bei den Midterms das Repräsentantenhaus und möglicherweise auch den Senat zurückerhalten könnten, was Trump in eine schwächere Position bringen würde (Quelle: NZZ International).\n\n3. **Politik:**\n   - **USA:** Jerry Seinfeld hat anti-israelische Agitator bei einem Auftritt in Chicago verhöhnt, wodurch die Protestaktion scheiterte (Quelle: Fox News Latest).\n   - **Russland-Sanktionen:** US-Präsident Trump hat mehrere Russland-spezifische Sanktionen aufgehoben, was die Beziehungen zu Zelensky weiter verspannt (Quelle: BBC World News).\n   - **Frankreich:** Bally Bagayoko, Bürgermeister eines Arbeitervororts von Paris, ist zu einem wichtigen Symbol der jugendlichen Protestbewegung geworden, was ihm sowohl Applaus als auch Kritik einbringt (Quelle: New York Times World).\n\n4. **Cyber- und Infrastruktur-Sicherheit:**\n   - **USA:** Die NIST, NSA SISC und CISA haben gemeinsam eine Anleitung zur Vorbereitung und Reaktion auf Vorfälle im Bereich der Super-Intelligenz-Training und -Evaluation veröffentlicht (Quelle: CISA Cyber Alerts).\n\n5. **Wetter und Natur:**\n   - **USA:** Das National Hurricane Center gibt keinen Anlass zu der Annahme, dass sich in den nächsten sieben Tagen tropische Wirbelstürme im Atlantik, im Karibischen Meer oder im Golf von Mexiko bilden werden (Quelle: NOAA National Hurricane Center).\n\n6. **Investigative Berichterstattung:**\n   - **Panama:** Zehn Jahre nach den Panama Papers wurde Panama von der EU-Außenlisten für Steuerhavens remove (Quelle: ICIJ).\n\n**Zusammenfassung:**\nDas internationale Spannungsfeld zwischen den USA und Russland sowie die Veränderungen in den USA-Interessen in Bezug auf Sanktionen sind bemerkenswert. Zudem zeigt die politische Landschaft in den USA, Frankreich und den UAE eine hohe Dynamik, die die globalen Beziehungen und Märkte beeinflusst. Die Wetterbedingungen im Atlantik bleiben stabil, während die Cyber-Sicherheit und financielle Märkte besondere Aufmerksamkeit erfordern.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "ADS-B Signal 4BC8C6",
+      "name": "Flug PGT37KN",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.2278,
-      "lon": 29.5417,
-      "lng": 29.5417,
+      "lat": 40.8002,
+      "lon": 29.0766,
+      "lng": 29.0766,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: Unbekannt | Höhe: 3.6 km | Speed: 529 km/h",
+      "description": "Callsign: PGT37KN | Höhe: 1.2 km | Speed: 380 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT63QR",
+      "name": "Flug PGT166F",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.9548,
-      "lon": 26.4705,
-      "lng": 26.4705,
+      "lat": 40.741,
+      "lon": 29.022,
+      "lng": 29.022,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT63QR | Höhe: 10.4 km | Speed: 843 km/h",
+      "description": "Callsign: PGT166F | Höhe: 1.8 km | Speed: 403 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ96",
+      "name": "Flug 4XDAN",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.7036,
-      "lon": 32.3661,
-      "lng": 32.3661,
+      "lat": 31.3451,
+      "lon": 35.4112,
+      "lng": 35.4112,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ96 | Höhe: 8.1 km | Speed: 712 km/h",
+      "description": "Callsign: 4XDAN | Höhe: 2.3 km | Speed: 218 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AEE907",
+      "name": "Flug JAV281",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.7528,
-      "lon": 33.1959,
-      "lng": 33.1959,
+      "lat": 34.6707,
+      "lon": 37.2509,
+      "lng": 37.2509,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AEE907 | Höhe: 3.7 km | Speed: 609 km/h",
+      "description": "Callsign: JAV281 | Höhe: 9.5 km | Speed: 774 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug GAF108",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 32.3248,
-      "lon": 33.7385,
-      "lng": 33.7385,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: GAF108 | Höhe: 9.1 km | Speed: 644 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug CES510",
+      "name": "Flug DKH1291",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.2814,
-      "lon": 120.1144,
-      "lng": 120.1144,
+      "lat": 24.6078,
+      "lon": 119.2132,
+      "lng": 119.2132,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CES510 | Höhe: 10.1 km | Speed: 882 km/h",
+      "description": "Callsign: DKH1291 | Höhe: 9.5 km | Speed: 806 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CRK605",
+      "name": "Flug CPA879",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.3265,
-      "lon": 117.1217,
-      "lng": 117.1217,
+      "lat": 25.166,
+      "lon": 121.5086,
+      "lng": 121.5086,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CRK605 | Höhe: 10.9 km | Speed: 774 km/h",
+      "description": "Callsign: CPA879 | Höhe: 11.6 km | Speed: 879 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Der Feed ist auf den **16.10.2026** datiert – also Zukunft aus heutiger Sicht. Einige Einträge sind erkennbar fiktiv oder spekulativ zusammengesetzt.",
-    "CVE-2026-107777** mit CVSS „v3 6.\" ist unvollständig und wirkt konstruiert.",
-    "Die NOAA-Meldung ist formal korrekt aufgebaut (Standardformat des National Hurricane Center), aber inhaltlich nicht überprüfbar.",
-    "Fed/Bowman-Rede**: „Supervisory Modernization After Silicon Valley Bank\" – plausibles Thema für 2026.",
-    "Midterms-Analyse (NZZ)**: Bezieht sich auf die US-Zwischenwahlen 2026 – konsistent mit dem Datum."
+    "einen wachsenden Konflikt zwischen **Exekutive und Legislative** in der Russlandpolitik,",
+    "eine **transaktionale Energiepolitik** mit innenpolitischem Sprengstoff (Dieselpreise),",
+    "eine Verschlechterung des Verhältnisses zu **Selenskyj** (BBC: „row with Zelensky intensifies\").",
+    "Fox News:** Jerry Seinfeld kontert anti-israelische Störer in Chicago – Signal für die anhaltende kulturelle Polarisierung in den USA.",
+    "NYT:** Der Bürgermeister Bally Bagayoko als Gesicht der **Jugendproteste in Frankreich** – innenpolitische Unruhe in einem Kernland der EU."
   ],
   "geoscore": {
     "current_score": 72,
@@ -135,13 +124,13 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-10-16T10:24:22.851367+00:00",
+  "timestamp": "2026-10-17T09:57:16.492065+00:00",
   "pipeline_health": {
-    "timestamp": "2026-10-16T10:23:28.978937+00:00",
+    "timestamp": "2026-10-17T09:55:56.382829+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
-    "gdelt_articles": 0,
+    "feeds_successful": 119,
+    "feeds_failed": 105,
+    "gdelt_articles": 35,
     "telegram_posts": 0,
     "bakers_active": [
       "DeepSeek",
@@ -150,7 +139,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -168,7 +157,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 7,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
