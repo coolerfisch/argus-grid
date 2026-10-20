@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **19.10.2026**, here is a structured briefing:\n\n---\n\n## 📊 Market & Finance\n\n**Tech Stocks Under Pressure — Crucial Week Ahead**\n- Tech stocks stumbled, and Wall Street faces a pivotal week of corporate earnings that could determine whether the rally continues or investors are losing faith in the companies that drove it. (WSJ/MarketWatch)\n\n**KKR Accused by EU Over €22bn Telecoms Deal**\n- The European Commission accuses KKR of providing false or misleading information during its clearance bid for the FiberCop deal. KKR disputes the allegations. (...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **19.10.2026**, here is a structured briefing:\n\n---\n\n## 📊 Market & Finance\n\n**Tech Stocks Under Pressure — Crucial Week Ahead**\n- Tech stocks stumbled, and Wall Street faces a pivotal week of corporate earnings that could determine whether the rally continues or investors are losing faith in the com...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBasierend auf den bereitgestellten Feeds vom 20.10.2026 hier eine strukturierte Übersicht der wichtigsten Meldungen:\n\n## Zentralbank / Geldpolitik\n- **Federal Reserve:** Beendigung von Enforcement Actions gegen Gardner Bancshares, Inc. und Small Business Bank.\n\n## Cyber / Infrastruktur\n- **CISA/NIST/NSA SISC:** Gemeinsame Veröffentlichung von „Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation\" – ein Hinweis darauf, dass KI-Sicherheit (insbesondere Superintelligenz) zunehmend als kritische Infrastruktur behandelt wird.\n\n## US-Polit...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBasierend auf den bereitgestellten Feeds vom 20.10.2026 hier eine strukturierte Übersicht der wichtigsten Meldungen:\n\n## Zentralbank / Geldpolitik\n- **Federal Reserve:** Beendigung von Enforcement Actions gegen Gardner Bancshares, Inc. und Small Business Bank.\n\n## Cyber / Infrastruktur\n- **CISA/NIST/NSA SISC:** Gemeinsame Veröffen...",
   "key_takeaways": [
-    "Tech stocks stumbled, and Wall Street faces a pivotal week of corporate earnings that could determine whether the rally continues or investors are losing faith in the companies that drove it. (WSJ/MarketWatch)",
-    "The European Commission accuses KKR of providing false or misleading information during its clearance bid for the FiberCop deal. KKR disputes the allegations. (FT)",
-    "The NYT investigates how a trillion-dollar industry launders illegal gold, blurring the line between \"dirty\" and \"clean\" gold — with Wall Street and governments profiting from criminal and exploitative supply chains.",
-    "Fed Governor Bowman spoke at the Bangkok Economic Festival (Reinventing Bretton Woods Committee) on supervisory modernization in the wake of Silicon Valley Bank's collapse.",
-    "Trump is heading to an unexpected battleground state as the GOP fights to hold the Senate. (Fox News)"
+    "Federal Reserve:** Beendigung von Enforcement Actions gegen Gardner Bancshares, Inc. und Small Business Bank.",
+    "CISA/NIST/NSA SISC:** Gemeinsame Veröffentlichung von „Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation\" – ein Hinweis darauf, dass KI-Sicherheit (insbesondere Superintelligenz) zunehmend als kritische Infrastruktur behandelt wird.",
+    "Trump-Administration:** Vorstellung eines 25-Mio.-USD-Whistleblower-Programms für Betrugshinweise (bis zu 30.000 USD pro zur Verurteilung führendem Tipp) – präsentiert von Trump und Vance.",
+    "Wall Street Journal:** Kleinere Aktien stehen laut Value Line Median Appreciation Potential vor schwächeren Perspektiven als der S&P 500 – bärische Prognose für die nächsten vier Jahre.",
+    "Frankreich (NYT):** Proteste in Frankreich als Symptom einer europaweiten Verschiebung weg von zentristischer Politik – junge Menschen und Arbeiter wenden sich populistischen Versprechen zu."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **19.10.2026**, here is a structured briefing:\n\n---\n\n## 📊 Market & Finance\n\n**Tech Stocks Under Pressure — Crucial Week Ahead**\n- Tech stocks stumbled, and Wall Street faces a pivotal week of corporate earnings that could determine whether the rally continues or investors are losing faith in the companies that drove it. (WSJ/MarketWatch)\n\n**KKR Accused by EU Over €22bn Telecoms Deal**\n- The European Commission accuses KKR of providing false or misleading information during its clearance bid for the FiberCop deal. KKR disputes the allegations. (FT)\n\n**Gold Laundering Exposé**\n- The NYT investigates how a trillion-dollar industry launders illegal gold, blurring the line between \"dirty\" and \"clean\" gold — with Wall Street and governments profiting from criminal and exploitative supply chains.\n\n---\n\n## 🏛️ Central Banking & Policy\n\n**Fed Speech: Bowman on Supervisory Modernization**\n- Fed Governor Bowman spoke at the Bangkok Economic Festival (Reinventing Bretton Woods Committee) on supervisory modernization in the wake of Silicon Valley Bank's collapse.\n\n**US Politics: Trump in Unlikely Battleground**\n- Trump is heading to an unexpected battleground state as the GOP fights to hold the Senate. (Fox News)\n\n---\n\n## 🔐 Cyber & Infrastructure\n\n**NIST/NSA/CISA Guidance on Super Intelligence Incident Readiness**\n- The three agencies jointly published *Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation* — a notable signal that AI/superintelligence security is being formalized at the federal level.\n\n---\n\n## 🌍 Geopolitics & Society\n\n**Anti-Putin Sabotage Inside Russia**\n- BBC reports on the shadowy world of sabotage operations within Russia, with two men describing work supporting Ukrainian intelligence during the war.\n\n**German Memory Culture Under Scrutiny**\n- NZZ interview with historian Aline Sierp: Germany's decades-long model status for confronting its past is shifting. She examines why some societies acknowledge their own perpetration and others don't — and why Europe's political climate worries her.\n\n---\n\n## 🌪️ Weather & Extremes\n\n**Atlantic Tropical Weather Outlook**\n- NHC Miami issued a Tropical Weather Outlook (2:00 AM EDT, Mon Oct 19, 2026) for the North Atlantic, Caribbean Sea, and Gulf of Mexico. *(Detailed content truncated in feed.)*\n\n---\n\n### 🔎 Cross-Cutting Themes\n1. **AI governance is maturing** — the NIST/NSA/CISA superintelligence incident-response guidance marks a shift from abstract AI safety talk to operational security frameworks.\n2. **Financial integrity under pressure** — gold laundering and the KKR/EU dispute both point to transparency gaps in global finance.\n3. **Tech earnings as a macro bellwether** — the market's direction hinges on whether megacap tech can justify its valuation.\n4. **Historical memory & political fragility** — the NZZ interview connects remembrance culture to current European political anxiety.\n\nWould you like a deeper dive into any single item?\n\nMACRO:\n### Key Points from Today's Feeds (19.10.2026)\n\n#### Zentralbank: Fed Speeches & Minutes\n- **Title**: Supervisory Modernization After Silicon Valley Bank\n- **Speaker**: Michelle Bowman\n- **Location**: Bangkok Economic Festival, Reinventing Bretton Woods Committee, Bangkok, Thailand\n- **Content**: Bowman discusses the need for modernizing supervisory practices in light of the Silicon Valley Bank failure, emphasizing the importance of adaptability and proactive measures to prevent future crises.\n\n#### Cyber / Infrastruktur: CISA Cyber Alerts\n- **Title**: Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation\n- **Authors**: National Institute of Standards and Technology (NIST), National Security Agency’s Super Intelligence Security Center (NSA SISC), Cybersecurity and Infrastructure Security Agency (CISA)\n- **Content**: Provides guidelines and best practices for incident readiness and response in the context of super intelligence training and evaluation, focusing on enhancing security and resilience.\n\n#### US/Finanzen: Wall Street Journal (MarketWatch Alt)\n- **Title**: Tech stocks stumbled. Now comes a crucial week for Wall Street.\n- **Content**: Discusses the recent decline in tech stocks and the importance of upcoming corporate earnings reports in determining the future trajectory of the stock market.\n\n#### US/Politik: Fox News Latest\n- **Title**: Trump heads to unlikely battleground as GOP fights to hold Senate and more top headlines\n- **Content**: Reports on former President Trump's campaign trip to a competitive Senate race, highlighting the Republican Party's efforts to maintain control of the Senate.\n\n#### US/Presse: New York Times World\n- **Title**: How a Trillion-Dollar Industry Launders Illegal Gold\n- **Content**: Investigates the global gold trade, revealing how Wall Street and governments profit from gold sourced from illegal and unethical operations, including those involving criminal and child labor.\n\n#### UK/Medien: BBC World News\n- **Title**: Inside the shadowy world of anti-Putin sabotage from within Russia\n- **Content**: Features interviews with two individuals who claim to be involved in sabotage activities against the Russian government, supported by Ukrainian intelligence.\n\n#### CH/Presse: NZZ International\n- **Title**: INTERVIEW - «Jahrelang wurde die deutsche Erinnerungskultur als Vorbild gesehen. Das hat sich geändert»\n- **Content**: Historian Aline Sierp discusses the evolution of Germany's culture of remembrance and the challenges in acknowledging past wrongs, particularly in the context of changing political landscapes in Europe.\n\n#### UK/Finanzen: Financial Times\n- **Title**: KKR accused by EU of misleading regulators over €22bn telecoms deal\n- **Content**: Reports on allegations that private equity firm KKR provided false or misleading information to EU regulators regarding its €22 billion FiberCop telecoms deal, which KKR disputes.\n\n#### Wetter/Extreme: NOAA National Hurricane Center\n- **Title**: Atlantic Tropical Weather Outlook\n- **Content**: Provides an update on tropical weather conditions in the North Atlantic, including the presence of a storm-force non-tropical low pressure area along a frontal boundary off the East Coast of the United States.\n\n#### Investigativ Net: ICIJ (Panama/Pandora Papers)\n- **Title**: Panama removed from EU’s tax haven ‘blacklist’ a decade after the Panama Papers\n- **Content**: Examines the changes in Panama's regulatory environment and the steps taken to address its reputation as a corporate haven following the Panama Papers investigation.\n\n#### Medizin: CDC Health Updates\n- **Title**: Annual Report to the Nation: Progress\n- **Content**: Summarizes recent health trends and progress in public health initiatives, highlighting areas of improvement and ongoing challenges.\n\n### Summary\nToday's feeds cover a wide range of topics, from financial markets and political campaigns to cybersecurity and environmental concerns. Key highlights include discussions on modernizing financial supervision, the tech sector's performance, and the ethical implications of the global gold trade. Additionally, there are updates on geopolitical tensions, regulatory issues in private equity, and the ongoing impact of past financial scandals.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBasierend auf den bereitgestellten Feeds vom 20.10.2026 hier eine strukturierte Übersicht der wichtigsten Meldungen:\n\n## Zentralbank / Geldpolitik\n- **Federal Reserve:** Beendigung von Enforcement Actions gegen Gardner Bancshares, Inc. und Small Business Bank.\n\n## Cyber / Infrastruktur\n- **CISA/NIST/NSA SISC:** Gemeinsame Veröffentlichung von „Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation\" – ein Hinweis darauf, dass KI-Sicherheit (insbesondere Superintelligenz) zunehmend als kritische Infrastruktur behandelt wird.\n\n## US-Politik & Finanzen\n- **Trump-Administration:** Vorstellung eines 25-Mio.-USD-Whistleblower-Programms für Betrugshinweise (bis zu 30.000 USD pro zur Verurteilung führendem Tipp) – präsentiert von Trump und Vance.\n- **Wall Street Journal:** Kleinere Aktien stehen laut Value Line Median Appreciation Potential vor schwächeren Perspektiven als der S&P 500 – bärische Prognose für die nächsten vier Jahre.\n\n## Europa / Politik & Unruhen\n- **Frankreich (NYT):** Proteste in Frankreich als Symptom einer europaweiten Verschiebung weg von zentristischer Politik – junge Menschen und Arbeiter wenden sich populistischen Versprechen zu.\n- **Frankreich (BBC):** Verdächtiger nach Brand des historischen Rathauses in Limoges festgenommen; Uhrwerksspitze des Turms eingestürzt.\n- **Italien (NZZ):** Meloni entsendet nach Krawallen 500 Soldaten nach Mailand, um weitere Ausschreitungen zu verhindern.\n\n## UK / Medien & Finanzen\n- **Financial Times:** Analyse zu „Putins amerikanischen Freunden\" – „realistische\" NATO-Kritiker, die Moskauer Talking Points zur Ukraine wiedergeben.\n\n## Wetter / Extreme\n- **NOAA NHC:** Atlantik-Ausblick – ein sturmstarkes nichttropisches Tiefdruckgebiet (AL93) vor der US-Ostküste bleibt bestehen.\n\n---\n\n**Querschnittsthemen:** Die Feeds zeichnen ein Bild von **innenpolitischer Polarisierung und Unruhen in Europa** (Frankreich, Italien), **verschärften Betrugsbekämpfungsmaßnahmen in den USA**, **wachsender Bedeutung von KI-Sicherheitsstandards** sowie **gemischten Finanzmarktaussichten** (schwächere Small Caps, politische Unsicherheit in Europa). Auffällig ist zudem die thematische Klammer „Populismus/Radikalisierung\" sowohl in den NYT- als auch FT-Meldungen.\n\nMACRO:\n### Key News Summary (20.10.2026)\n\n#### **Economic and Financial News:**\n- **Federal Reserve Announces Termination of Enforcement Actions:** The Federal Reserve Board has ended enforcement actions against Gardner Bancshares, Inc., and Small Business Bank, signaling improved compliance and regulatory standards.\n- **Bearish Outlook for Smaller Stocks:** The Value Line Median Appreciation Potential suggests that smaller stocks may face challenging prospects over the next four years, potentially underperforming the S&P 500.\n\n#### **Political and Social News:**\n- **Europe's Shift from Centrist Politics:** France's recent protests highlight a growing trend of young people and workers moving away from centrist parties and toward populist movements that promise radical change.\n- **Trump's Whistleblower Program:** President Donald Trump, along with Vice President JD Vance, has announced a $25 million whistleblower program, offering up to $30,000 for tips leading to convictions of fraudsters.\n\n#### **International News:**\n- **Italian Military Deployment:** In response to violent protests and looting in Milan, Italian Prime Minister Giorgia Meloni has dispatched 500 soldiers to the city to prevent further unrest.\n- **Arson at Limoges City Hall:** A suspect has been arrested following the arson of the historic town hall in Limoges, France, which resulted in the collapse of the clock tower's spire.\n- **Kazakh President's Grandnephew:** Following an investigative report by Radio Azattyq and OCCRP, which detailed the significant state backing received by educational ventures founded by President Tokayev's grandnephew, the grandnephew has donated the Kazakh National University of Sports to the state.\n\n#### **Cybersecurity and Technology:**\n- **Incident Readiness and Response:** The National Institute of Standards and Technology (NIST), National Security Agency’s Super Intelligence Security Center (NSA SISC), and Cybersecurity and Infrastructure Security Agency (CISA) have jointly published key practices for incident readiness and response in super intelligence training and evaluation.\n- **Threats from the Lawful Access Act:** The Citizen Lab has raised concerns about the potential threats posed by the Lawful Access Act to privacy and security, particularly in the realm of cyber-espionage and surveillance.\n\n#### **Environmental News:**\n- **Atlantic Tropical Weather Outlook:** The National Hurricane Center reports a storm-force non-tropical low-pressure area off the East Coast of the United States, which remains attached to an occluded front.\n\n#### **Financial and Economic Critiques:**\n- **Criticism of NATO's Stance on Ukraine:** A segment of American critics, labeled as 'realists,' are echoing Moscow's talking points on the Ukraine conflict, potentially influencing public opinion and policy.\n\n### Analysis:\n- **Political Instability in Europe:** The shift away from centrist politics and the rise of populist movements, as seen in France, may continue to cause political instability and societal tensions across Europe.\n- **Economic Disparity:** The contrasting financial outlook for smaller stocks and the S&P 500 suggests a widening economic gap, which could have broader implications for market dynamics and investor behavior.\n- **Cybersecurity Concerns:** The joint publication by NIST, NSA SISC, and CISA highlights the increasing importance of cybersecurity preparedness, especially in advanced intelligence and training environments.\n- **Geopolitical Tensions:** The criticism of NATO's stance on Ukraine by American 'realists' and the ongoing conflict in the region could further strain transatlantic relations and impact global security policies.\n\n### Conclusion:\nThe day's news highlights significant developments in politics, economics, and cybersecurity, with a particular focus on the shifting political landscape in Europe, potential economic challenges, and the ongoing importance of cybersecurity measures.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT1213",
+      "name": "Flug PGT353Z",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8751,
-      "lon": 29.2429,
-      "lng": 29.2429,
+      "lat": 43.1474,
+      "lon": 27.3762,
+      "lng": 27.3762,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT1213 | Höhe: 0.7 km | Speed: 373 km/h",
+      "description": "Callsign: PGT353Z | Höhe: 9.8 km | Speed: 720 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT76LZ",
+      "name": "Flug PGT63QR",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.9303,
-      "lon": 28.0621,
-      "lng": 28.0621,
+      "lat": 41.8961,
+      "lon": 28.0453,
+      "lng": 28.0453,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT76LZ | Höhe: 9.9 km | Speed: 792 km/h",
+      "description": "Callsign: PGT63QR | Höhe: 11.1 km | Speed: 804 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AEE904",
+      "name": "Flug DUKE58",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 43.8596,
+      "lon": 27.6338,
+      "lng": 27.6338,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: DUKE58 | Höhe: 8.2 km | Speed: 541 km/h",
+      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
+    },
+    {
+      "name": "Flug 4XCNZ",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.981,
-      "lon": 33.5295,
-      "lng": 33.5295,
+      "lat": 32.2002,
+      "lon": 34.403,
+      "lng": 34.403,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AEE904 | Höhe: 1.4 km | Speed: 477 km/h",
+      "description": "Callsign: 4XCNZ | Höhe: 4.0 km | Speed: 571 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ11PP",
+      "name": "Flug SKV444",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.9831,
-      "lon": 33.732,
-      "lng": 33.732,
+      "lat": 29.676,
+      "lon": 32.3497,
+      "lng": 32.3497,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ11PP | Höhe: 0.5 km | Speed: 400 km/h",
+      "description": "Callsign: SKV444 | Höhe: 13.1 km | Speed: 721 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA635",
+      "name": "Flug TGW128",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.5336,
-      "lon": 120.3592,
-      "lng": 120.3592,
+      "lat": 23.6334,
+      "lon": 116.5775,
+      "lng": 116.5775,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA635 | Höhe: 7.1 km | Speed: 821 km/h",
+      "description": "Callsign: TGW128 | Höhe: 0.5 km | Speed: 300 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UPS72",
+      "name": "Flug CDC8054",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.7619,
-      "lon": 122.0444,
-      "lng": 122.0444,
+      "lat": 24.5728,
+      "lon": 118.4188,
+      "lng": 118.4188,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UPS72 | Höhe: 12.2 km | Speed: 949 km/h",
+      "description": "Callsign: CDC8054 | Höhe: 9.0 km | Speed: 870 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,11 +116,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Tech stocks stumbled, and Wall Street faces a pivotal week of corporate earnings that could determine whether the rally continues or investors are losing faith in the companies that drove it. (WSJ/MarketWatch)",
-    "The European Commission accuses KKR of providing false or misleading information during its clearance bid for the FiberCop deal. KKR disputes the allegations. (FT)",
-    "The NYT investigates how a trillion-dollar industry launders illegal gold, blurring the line between \"dirty\" and \"clean\" gold — with Wall Street and governments profiting from criminal and exploitative supply chains.",
-    "Fed Governor Bowman spoke at the Bangkok Economic Festival (Reinventing Bretton Woods Committee) on supervisory modernization in the wake of Silicon Valley Bank's collapse.",
-    "Trump is heading to an unexpected battleground state as the GOP fights to hold the Senate. (Fox News)"
+    "Federal Reserve:** Beendigung von Enforcement Actions gegen Gardner Bancshares, Inc. und Small Business Bank.",
+    "CISA/NIST/NSA SISC:** Gemeinsame Veröffentlichung von „Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation\" – ein Hinweis darauf, dass KI-Sicherheit (insbesondere Superintelligenz) zunehmend als kritische Infrastruktur behandelt wird.",
+    "Trump-Administration:** Vorstellung eines 25-Mio.-USD-Whistleblower-Programms für Betrugshinweise (bis zu 30.000 USD pro zur Verurteilung führendem Tipp) – präsentiert von Trump und Vance.",
+    "Wall Street Journal:** Kleinere Aktien stehen laut Value Line Median Appreciation Potential vor schwächeren Perspektiven als der S&P 500 – bärische Prognose für die nächsten vier Jahre.",
+    "Frankreich (NYT):** Proteste in Frankreich als Symptom einer europaweiten Verschiebung weg von zentristischer Politik – junge Menschen und Arbeiter wenden sich populistischen Versprechen zu."
   ],
   "geoscore": {
     "current_score": 72,
@@ -124,12 +135,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-10-19T11:42:06.739164+00:00",
+  "timestamp": "2026-10-20T10:44:18.798246+00:00",
   "pipeline_health": {
-    "timestamp": "2026-10-19T11:40:52.852326+00:00",
+    "timestamp": "2026-10-20T10:43:06.594979+00:00",
     "feeds_total": 224,
-    "feeds_successful": 121,
-    "feeds_failed": 103,
+    "feeds_successful": 119,
+    "feeds_failed": 105,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -139,7 +150,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (7 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -157,7 +168,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 6,
+    "hotspots_now": 7,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
