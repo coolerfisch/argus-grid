@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided feeds for **22 October 2026**, here is a structured situational assessment. Because this set mixes genuinely plausible future-dated items with what appear to be synthetic or speculative entries, I'll flag confidence levels.\n\n---\n\n## 1. Macro & Markets — Risk-Off Tone\n\n**Global stocks tumbled as oil rose ~3% and the Eurozone bond sell-off deepened** (FT). This is the clearest cross-asset signal in the feed: a classic stagflation-adjacent shock combination — higher energy costs *and* rising sovereign yields simultaneously.\n\n- **Meta** fell in early trading...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided feeds for **22 October 2026**, here is a structured situational assessment. Because this set mixes genuinely plausible future-dated items with what appear to be synthetic or speculative entries, I'll flag confidence levels.\n\n---\n\n## 1. Macro & Markets — Risk-Off Tone\n\n**Global stocks tumbled as oil rose ~3% a...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**Lagebild: 23.10.2026**\n\n**Sicherheit & Technologie**\n- **CISA-Warnung (Siemens):** Die .NET-Client-Bibliothek für die SIMATIC-S7-Webserver-API weist mehrere Schwachstellen auf. Angreifer könnten sensible Informationen erbeuten oder beliebige Dateien außerhalb des vorgesehenen Download-Verzeichnisses schreiben. Siemens hat eine neue Version bereitgestellt – Update dringend empfohlen.\n\n**Finanzmärkte & Wirtschaft**\n- **WSJ/MarketWatch:** Der US-Aktienmarkt spaltet sich zunehmend in zwei Lager; der KI-Trade gerät unter Druck. Der CNN-\"Fear & Greed\"-Index signalisiert Angst, un...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**Lagebild: 23.10.2026**\n\n**Sicherheit & Technologie**\n- **CISA-Warnung (Siemens):** Die .NET-Client-Bibliothek für die SIMATIC-S7-Webserver-API weist mehrere Schwachstellen auf. Angreifer könnten sensible Informationen erbeuten oder beliebige Dateien außerhalb des vorgesehenen Download-Verzeichnisses schreiben. Siemens hat eine n...",
   "key_takeaways": [
-    "Meta** fell in early trading *despite* a strong core advertising quarter, with investor attention shifting to the **\"Muse\" personal assistant** as the forward-looking bet (WSJ/MarketWatch). The read-across: even good earnings aren't being rewarded in a sector-wide selloff — sentiment is fragile.",
-    "NZZ** reports Americans struggling to afford hamburgers, with the President under pressure to drive down beef prices **ahead of the midterms** — and Wyoming ranchers facing existential pressure. This is a politically potent cost-of-living story that ties directly into the oil/inflation picture above.",
-    "Unauthenticated remote code execution**",
-    "Affects **all PHP installations serving web requests**",
-    "Russia/US (NYT):** Putin is \"nearing a prize\" — restoring ties with Washington **while conceding nothing on Ukraine**, by decoupling the war from business/diplomacy. The framing suggests a diplomatic thaw favorable to Moscow. This is a significant strategic development if accurate."
+    "CISA-Warnung (Siemens):** Die .NET-Client-Bibliothek für die SIMATIC-S7-Webserver-API weist mehrere Schwachstellen auf. Angreifer könnten sensible Informationen erbeuten oder beliebige Dateien außerhalb des vorgesehenen Download-Verzeichnisses schreiben. Siemens hat eine neue Version bereitgestellt – Update dringend empfohlen.",
+    "WSJ/MarketWatch:** Der US-Aktienmarkt spaltet sich zunehmend in zwei Lager; der KI-Trade gerät unter Druck. Der CNN-\"Fear & Greed\"-Index signalisiert Angst, und die Rendite der 10-jährigen US-Staatsanleihe verzeichnete den größten Tagesrückgang seit dem Zusammenbruch der Silicon Valley Bank.",
+    "FT:** Citi erhält lang erwartete Genehmigung für ein Wertpapiergeschäft in China – rechtzeitig vor dem erwarteten Treffen zwischen Trump und Xi im nächsten Monat.",
+    "NZZ:** Datenanalyse zu den US-Midterms – Umfragen deuten darauf hin, dass die Demokraten das Repräsentantenhaus und möglicherweise auch den Senat zurückgewinnen könnten; für Trump würde es ungemütlich.",
+    "NYT:** \"Bukeleisierung\" Lateinamerikas – El Salvadors harter Sicherheitskurs findet Nachahmer und verändert die Region."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided feeds for **22 October 2026**, here is a structured situational assessment. Because this set mixes genuinely plausible future-dated items with what appear to be synthetic or speculative entries, I'll flag confidence levels.\n\n---\n\n## 1. Macro & Markets — Risk-Off Tone\n\n**Global stocks tumbled as oil rose ~3% and the Eurozone bond sell-off deepened** (FT). This is the clearest cross-asset signal in the feed: a classic stagflation-adjacent shock combination — higher energy costs *and* rising sovereign yields simultaneously.\n\n- **Meta** fell in early trading *despite* a strong core advertising quarter, with investor attention shifting to the **\"Muse\" personal assistant** as the forward-looking bet (WSJ/MarketWatch). The read-across: even good earnings aren't being rewarded in a sector-wide selloff — sentiment is fragile.\n- **NZZ** reports Americans struggling to afford hamburgers, with the President under pressure to drive down beef prices **ahead of the midterms** — and Wyoming ranchers facing existential pressure. This is a politically potent cost-of-living story that ties directly into the oil/inflation picture above.\n\n**Assessment:** The dominant narrative today is *inflation anxiety + political pressure on prices before midterms*. Energy is the transmission channel.\n\n---\n\n## 2. Cyber — Urgent: PHP RCE (\"php2shell\")\n\n**CISA issued an urgent patch directive** for two critical PHP vulnerabilities, **CVE-2026-109618 and CVE-2026-109619**, collectively \"**php2shell**\":\n\n- **Unauthenticated remote code execution**\n- Affects **all PHP installations serving web requests**\n\nThis is the highest-urgency actionable item in the feed. Unauthenticated RCE in a ubiquitous web stack is a wormable-class risk. **Immediate action:** inventory PHP-facing services, patch, and consider WAF virtual patching in the interim.\n\n---\n\n## 3. Geopolitics\n\n- **Russia/US (NYT):** Putin is \"nearing a prize\" — restoring ties with Washington **while conceding nothing on Ukraine**, by decoupling the war from business/diplomacy. The framing suggests a diplomatic thaw favorable to Moscow. This is a significant strategic development if accurate.\n- **Israel (BBC):** Arab parties could hold the **balance of power** in the Israeli election, with strong get-out-the-vote pushes against the right-wing coalition.\n- **US domestic (Fox):** Kansas Senate debate — Marshall vs. Hamilton — clashes over Trump, transgender athletes, and AI. Standard midterm horserace color; note the **AI** angle entering retail politics.\n\n---\n\n## 4. Central Banking\n\n- **Fed (Bowman):** Speech on **\"Supervisory Modernization After Silicon Valley Bank\"** at the Bangkok Economic Festival (Reinventing Bretton Woods Committee). Theme: post-SVB supervisory reform — worth watching for signals on capital/liquidity rules and the Fed's supervision philosophy.\n\n---\n\n## 5. Extreme Weather\n\n- **NOAA/NHC:** Advisories active on **Subtropical Storm Josephine** in the Atlantic — \"a few hundred m[iles]...\" (feed truncated). Monitor for track/strength updates; subtropical systems can transition and affect shipping/energy infrastructure.\n\n---\n\n## 6. Investigative (truncated)\n\n- **ICIJ:** Entry cut off at \"New US law req...\" — likely relating to beneficial-ownership or shell-company transparency legislation stemming from the Panama/Pandora Papers. **Cannot assess; feed incomplete.**\n\n---\n\n## Priority Actions\n\n| Priority | Item |\n|---|---|\n| 🔴 **Immediate** | Patch **php2shell** (CVE-2026-109618/109619) — unauthenticated RCE |\n| 🟠 **Monitor** | Oil + Eurozone yields; Meta/\"Muse\" narrative; Tropical Storm Josephine track |\n| 🟡 **Watch** | Putin–US détente trajectory; Bowman's supervisory-reform remarks; midterm cost-of-living politics |\n\n---\n\n**Caveat on reliability:** Several items (the specific CVE numbers, \"Muse,\" the 2026 election framing) cannot be independently verified from this feed alone. The **php2shell** alert is the one item where acting conservatively costs little — verify the CVE IDs against CISA's official catalog before patching at scale. Want me to draft a patching runbook or a deeper dive on any single thread?\n\nMACRO:\n### Key Updates from October 22, 2026\n\n#### **Zentralbank:**\n- **Fed Speeches & Minutes:**\n  - **Bowman on Supervisory Modernization:** Michelle Bowman, a Federal Reserve governor, discussed the need for modernizing supervisory practices in the wake of the Silicon Valley Bank collapse at the Bangkok Economic Festival. Her speech emphasizes the importance of adapting regulatory frameworks to the rapidly changing financial landscape.\n\n#### **Cyber / Infrastruktur:**\n- **CISA Cyber Alerts:**\n  - **Critical PHP Vulnerabilities:** The Cybersecurity and Infrastructure Security Agency (CISA) has issued a critical alert regarding vulnerabilities in PHP, specifically CVE-2026-109618 and CVE-2026-109619, known as “php2shell.” These vulnerabilities allow for unauthenticated remote code execution and affect all PHP installations serving web requests. Immediate patching is strongly recommended.\n\n#### **US/Finanzen:**\n- **Wall Street Journal (MarketWatch Alt):**\n  - **Meta’s Stock Falls Despite Strong Results:** Meta’s stock experienced a decline in early trading, despite positive earnings from its core advertising business. Investors are now focusing on the company’s new ventures, such as the Muse personal assistant.\n\n#### **US/Presse:**\n- **New York Times World:**\n  - **Putin’s Diplomatic Success:** Despite ongoing conflicts, Russia is making progress in restoring diplomatic ties with the United States. The article notes that Russia is separating its business and diplomatic efforts from the war in Ukraine, a strategy that seems to be paying off.\n\n#### **US/Politik:**\n- **Fox News Latest:**\n  - **Kansas Senate Debate Highlights:** The debate between Republican Sen. Roger Marshall and Democrat Adam Hamilton featured key discussions on Trump’s influence, the impact of transgender athletes in sports, and the role of artificial intelligence. The debate was marked by intense exchanges on these topics.\n\n#### **CH/Presse:**\n- **NZZ International:**\n  - **Economic Strain on American Consumers:** The article discusses the rising cost of living in the United States, with a focus on the increased price of beef. The situation is particularly challenging for cattle ranchers in Wyoming, where rising costs are threatening their livelihoods.\n\n#### **UK/Medien:**\n- **BBC World News:**\n  - **Israeli Election Dynamics:** The role of Arab parties in the upcoming Israeli election is highlighted. There is a growing movement to increase voter turnout among Arab Israelis, who may hold the balance of power in the election. The goal is to challenge the current right-wing governing coalition.\n\n#### **UK/Finanzen:**\n- **Financial Times:**\n  - **Global Market Turmoil:** Global stocks are experiencing significant drops, driven by rising oil prices and a deepening sell-off in Eurozone bonds. Crude oil prices jumped by 3%, adding to market volatility.\n\n#### **Wetter/Extreme:**\n- **NOAA National Hurricane Center:**\n  - **Tropical Weather Outlook:** The National Hurricane Center is monitoring Subtropical Storm Josephine, which is located a few hundred miles offshore. The storm is being closely watched for potential impacts on the North Atlantic, Caribbean Sea, and the Gulf of Mexico.\n\n#### **Investigative Net:**\n- **ICIJ (Panama/Pandora Papers):**\n  - **New Law on Dating Apps:** A new U.S. law requires dating apps to warn users if someone they have been communicating with has been banned for fraud. This comes amid growing concerns over romance scams, which have resulted in record financial losses.\n\n#### **Medizin:**\n- **CDC Health Updates:**\n  - **Cancer Trends Report:** The latest Annual Report to the Nation highlights significant progress in reducing cancer mortality rates, particularly in lung cancer. The report provides insights into the latest trends in cancer incidence and mortality in the United States.\n\n#### **Cyber-Espionage:**\n- **Citizen Lab (Spyware & Surveillance):**\n  - **Citizen Lab Director Criticizes Trump Administration:** The director of the Citizen Lab criticized the Trump administration for its stance on digital privacy and surveillance. The specific details of the criticism and the broader implications are not fully detailed but suggest ongoing concerns about government surveillance practices.\n\nThese updates provide a comprehensive overview of the key events and developments across various sectors and regions on October 22, 2026.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**Lagebild: 23.10.2026**\n\n**Sicherheit & Technologie**\n- **CISA-Warnung (Siemens):** Die .NET-Client-Bibliothek für die SIMATIC-S7-Webserver-API weist mehrere Schwachstellen auf. Angreifer könnten sensible Informationen erbeuten oder beliebige Dateien außerhalb des vorgesehenen Download-Verzeichnisses schreiben. Siemens hat eine neue Version bereitgestellt – Update dringend empfohlen.\n\n**Finanzmärkte & Wirtschaft**\n- **WSJ/MarketWatch:** Der US-Aktienmarkt spaltet sich zunehmend in zwei Lager; der KI-Trade gerät unter Druck. Der CNN-\"Fear & Greed\"-Index signalisiert Angst, und die Rendite der 10-jährigen US-Staatsanleihe verzeichnete den größten Tagesrückgang seit dem Zusammenbruch der Silicon Valley Bank.\n- **FT:** Citi erhält lang erwartete Genehmigung für ein Wertpapiergeschäft in China – rechtzeitig vor dem erwarteten Treffen zwischen Trump und Xi im nächsten Monat.\n\n**Politik & Internationales**\n- **NZZ:** Datenanalyse zu den US-Midterms – Umfragen deuten darauf hin, dass die Demokraten das Repräsentantenhaus und möglicherweise auch den Senat zurückgewinnen könnten; für Trump würde es ungemütlich.\n- **NYT:** \"Bukeleisierung\" Lateinamerikas – El Salvadors harter Sicherheitskurs findet Nachahmer und verändert die Region.\n- **BBC:** Die Ukraine meldet weiterhin Einschränkungen bei Starlink, obwohl Trump erklärt hat, die Limitierungen seien aufgehoben.\n\n**Justiz & Gesellschaft (US)**\n- **Fox News:** Ein ehemaliger NYPD-Detektiv (Victor Romero) soll bei einem Road-Rage-Vorfall auf der George-Washington-Brücke einen tödlichen Schuss aus dem SUV seines Hedgefonds-Arbeitgebers abgegeben haben und anschließend geflohen sein.\n\n**Zentralbank**\n- **Fed:** Beendigung von Enforcement-Maßnahmen gegen Gardner Bancshares, Inc. und Small Business Bank.\n\n**Wetter**\n- **NOAA/NHC:** Tropischer Ausblick für Atlantik/Karibik/Golf von Mexiko (Stand 23.10.2026, 02:00 EDT) – keine akuten Warnungen im vorliegenden Auszug erkennbar.\n\n**Einordnung:** Die Meldungen zeigen eine Gemengelage aus tech- und finanzmarktspezifischen Risiken (Siemens-Schwachstelle, KI-Korrektur, Anleiherenditen) sowie geopolitischen und innenpolitischen Spannungen (US-Midterms, China-Genehmigung für Citi, Ukraine/Starlink).\n\nMACRO:\n### Summary of Key News Items (23.10.2026)\n\n#### **Zentralbank: Federal Reserve Press**\n- **Termination of Enforcement Actions**: The Federal Reserve Board has announced the termination of enforcement actions with Gardner Bancshares, Inc., and Small Business Bank.\n\n#### **Cyber / Infrastruktur: CISA Cyber Alerts**\n- **Vulnerabilities in SIMATIC S7 Webserver API**: The .NET Client Library for SIMATIC S7 Webserver API contains multiple vulnerabilities that could allow attackers to obtain sensitive information or write arbitrary files outside the intended download directory. Siemens has released a new version to address these issues.\n\n#### **US/Finanzen: Wall Street Journal (MarketWatch Alt)**\n- **Stock Market Fracturing**: The U.S. stock market is dividing into two camps, causing significant volatility. The artificial-intelligence trade is struggling, and market fear indicators are high. The yield on the 10-year Treasury note saw its largest daily drop since the collapse of Silicon Valley Bank.\n\n#### **US/Presse: New York Times World**\n- **Bukeleization in Latin America**: El Salvador's President Nayib Bukele's stringent security measures are gaining popularity and being adopted by other Latin American leaders, reshaping the region's political landscape.\n\n#### **US/Politik: Fox News Latest**\n- **Fatal Road Rage Shooting**: Victor Romero, a former NYPD detective, is accused of fatally shooting someone during a road rage incident on the George Washington Bridge. He was allegedly driving an SUV belonging to his employer, a hedge fund.\n\n#### **UK/Medien: BBC World News**\n- **Starlink Restrictions in Ukraine**: Despite claims by former President Trump that restrictions on Starlink in Ukraine have been lifted, issues remain with the network used by the Ukrainian military.\n\n#### **CH/Presse: NZZ International**\n- **US Midterm Elections**: Current polls suggest that Democrats could win back control of the House and possibly the Senate in the upcoming midterm elections. This could make Donald Trump's position more difficult.\n\n#### **UK/Finanzen: Financial Times**\n- **Citi's Approval in China**: Citigroup has received long-awaited approval to establish a securities business in China. This development comes ahead of an expected meeting between Donald Trump and Xi Jinping.\n\n#### **Wetter/Extreme: NOAA National Hurricane Center**\n- **Atlantic Tropical Weather Outlook**: A trough of low pressure several hundred miles east of Bermuda is producing large areas of showers and thunderstorms. Conditions are not currently favorable for tropical cyclone formation in the next five days.\n\n#### **Medizin: CDC Health Updates**\n- **Cancer Mortality Trends**: The latest Annual Report to the Nation shows that progress against lung cancer is driving down overall cancer mortality rates in the U.S.\n\n#### **Investigativ Net: ICIJ (Panama/Pandora Papers)**\n- **Convicted Bolsonaro Spy Chief in Florida**: A convicted former spy chief of Brazilian President Jair Bolsonaro is currently residing in Florida. Brazil is seeking answers from the U.S. regarding his presence.\n\n### Key Takeaways\n- **Financial Markets**: The U.S. stock market is experiencing significant volatility, with the AI sector under pressure and Treasury yields dropping sharply.\n- **Politics**: The influence of El Salvador's security policies is spreading across Latin America, and the U.S. midterms could see a shift in political control.\n- **International Relations**: Citigroup's entry into China's securities market and the potential meeting between Trump and Xi highlight ongoing economic and diplomatic engagements.\n- **Security and Cyber**: New vulnerabilities in industrial control systems and ongoing investigations into political figures underscore the importance of cybersecurity and transparency.\n- **Health**: Continued progress in reducing cancer mortality rates, particularly in lung cancer, is a positive trend in public health.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug TVF94PD",
+      "name": "Flug PGT5AA",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.5764,
-      "lon": 29.6835,
-      "lng": 29.6835,
+      "lat": 40.9567,
+      "lon": 25.7003,
+      "lng": 25.7003,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TVF94PD | Höhe: 11.0 km | Speed: 813 km/h",
+      "description": "Callsign: PGT5AA | Höhe: 11.0 km | Speed: 706 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT65UA",
+      "name": "Flug PGT25MB",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.8154,
-      "lon": 28.0919,
-      "lng": 28.0919,
+      "lat": 41.9463,
+      "lon": 28.1935,
+      "lng": 28.1935,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT65UA | Höhe: 9.3 km | Speed: 825 km/h",
+      "description": "Callsign: PGT25MB | Höhe: 9.5 km | Speed: 810 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ81DH",
+      "name": "Flug WMT29JS",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.3417,
-      "lon": 34.4544,
-      "lng": 34.4544,
+      "lat": 33.1346,
+      "lon": 33.0683,
+      "lng": 33.0683,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ81DH | Höhe: 5.1 km | Speed: 672 km/h",
+      "description": "Callsign: WMT29JS | Höhe: 9.3 km | Speed: 880 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XCDE",
+      "name": "Flug CGF1907",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.8491,
-      "lon": 35.1257,
-      "lng": 35.1257,
+      "lat": 32.813,
+      "lon": 32.6843,
+      "lng": 32.6843,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XCDE | Höhe: 0.6 km | Speed: 156 km/h",
+      "description": "Callsign: CGF1907 | Höhe: 11.1 km | Speed: 826 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug RRR4280",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 34.3286,
-      "lon": 32.6117,
-      "lng": 32.6117,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR4280 | Höhe: 3.1 km | Speed: 543 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug CXA883",
+      "name": "Flug CPA918",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 27.5552,
-      "lon": 121.3732,
-      "lng": 121.3732,
+      "lat": 16.9269,
+      "lon": 120.1401,
+      "lng": 120.1401,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CXA883 | Höhe: 9.2 km | Speed: 879 km/h",
+      "description": "Callsign: CPA918 | Höhe: 10.4 km | Speed: 912 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CXA8326",
+      "name": "Flug HKE272",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.9772,
-      "lon": 115.3339,
-      "lng": 115.3339,
+      "lat": 23.0664,
+      "lon": 116.7291,
+      "lng": 116.7291,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CXA8326 | Höhe: 7.5 km | Speed: 831 km/h",
+      "description": "Callsign: HKE272 | Höhe: 10.1 km | Speed: 827 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Meta** fell in early trading *despite* a strong core advertising quarter, with investor attention shifting to the **\"Muse\" personal assistant** as the forward-looking bet (WSJ/MarketWatch). The read-across: even good earnings aren't being rewarded in a sector-wide selloff — sentiment is fragile.",
-    "NZZ** reports Americans struggling to afford hamburgers, with the President under pressure to drive down beef prices **ahead of the midterms** — and Wyoming ranchers facing existential pressure. This is a politically potent cost-of-living story that ties directly into the oil/inflation picture above.",
-    "Unauthenticated remote code execution**",
-    "Affects **all PHP installations serving web requests**",
-    "Russia/US (NYT):** Putin is \"nearing a prize\" — restoring ties with Washington **while conceding nothing on Ukraine**, by decoupling the war from business/diplomacy. The framing suggests a diplomatic thaw favorable to Moscow. This is a significant strategic development if accurate."
+    "CISA-Warnung (Siemens):** Die .NET-Client-Bibliothek für die SIMATIC-S7-Webserver-API weist mehrere Schwachstellen auf. Angreifer könnten sensible Informationen erbeuten oder beliebige Dateien außerhalb des vorgesehenen Download-Verzeichnisses schreiben. Siemens hat eine neue Version bereitgestellt – Update dringend empfohlen.",
+    "WSJ/MarketWatch:** Der US-Aktienmarkt spaltet sich zunehmend in zwei Lager; der KI-Trade gerät unter Druck. Der CNN-\"Fear & Greed\"-Index signalisiert Angst, und die Rendite der 10-jährigen US-Staatsanleihe verzeichnete den größten Tagesrückgang seit dem Zusammenbruch der Silicon Valley Bank.",
+    "FT:** Citi erhält lang erwartete Genehmigung für ein Wertpapiergeschäft in China – rechtzeitig vor dem erwarteten Treffen zwischen Trump und Xi im nächsten Monat.",
+    "NZZ:** Datenanalyse zu den US-Midterms – Umfragen deuten darauf hin, dass die Demokraten das Repräsentantenhaus und möglicherweise auch den Senat zurückgewinnen könnten; für Trump würde es ungemütlich.",
+    "NYT:** \"Bukeleisierung\" Lateinamerikas – El Salvadors harter Sicherheitskurs findet Nachahmer und verändert die Region."
   ],
   "geoscore": {
     "current_score": 72,
@@ -135,12 +124,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-10-22T10:55:38.284754+00:00",
+  "timestamp": "2026-10-23T10:46:54.334094+00:00",
   "pipeline_health": {
-    "timestamp": "2026-10-22T10:54:28.516017+00:00",
+    "timestamp": "2026-10-23T10:46:02.696819+00:00",
     "feeds_total": 224,
-    "feeds_successful": 119,
-    "feeds_failed": 105,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -150,7 +139,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -168,7 +157,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 7,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
