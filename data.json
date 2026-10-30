@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured briefing based on the feeds provided for **29 October 2026**:\n\n---\n\n## 🏦 Central Banking & Markets\n- **Federal Reserve** issued an FOMC statement (details not specified in feed). Markets will be watching for rate guidance implications.\n- **DoorDash to acquire Instacart for $17bn** (FT) — a major consolidation in the US food delivery market, signaling intensifying competition and scale-seeking among delivery platforms.\n\n## 🔐 Cybersecurity & Infrastructure\n- **CISA added two actively exploited vulnerabilities to its KEV Catalog:**\n  - **CVE-2026-41709** — Br...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured briefing based on the feeds provided for **29 October 2026**:\n\n---\n\n## 🏦 Central Banking & Markets\n- **Federal Reserve** issued an FOMC statement (details not specified in feed). Markets will be watching for rate guidance implications.\n- **DoorDash to acquire Instacart for $17bn** (FT) — a major consolidation i...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nMeine Analyse der Feeds vom 30.10.2026:\n\n**1. Marktlage (Tech-Rout)**\nDer dominierende finanzielle Faden ist ein „global tech rout\" (FT) bzw. ein „rough month in the technology sector\" (WSJ). Amazon-Ergebnisse enttäuschen, Intel-Aktien brechen ein, Ängste um KI-Investitionsausgaben. Gleichzeitig deutet MarketWatch an, dass „Wall Street's October winners may surprise you\" – also Sektorrotation weg von Tech. Das passt zu Bowmans Rede zur „Supervisory Modernization After SVB\" – Regulierungsanpassungen nach Bankenstress.\n\n**2. Cyber-Sicherheitslage**\nCISA meldet OS-Command-Inject...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nMeine Analyse der Feeds vom 30.10.2026:\n\n**1. Marktlage (Tech-Rout)**\nDer dominierende finanzielle Faden ist ein „global tech rout\" (FT) bzw. ein „rough month in the technology sector\" (WSJ). Amazon-Ergebnisse enttäuschen, Intel-Aktien brechen ein, Ängste um KI-Investitionsausgaben. Gleichzeitig deutet MarketWatch an, dass „Wall S...",
   "key_takeaways": [
-    "Federal Reserve** issued an FOMC statement (details not specified in feed). Markets will be watching for rate guidance implications.",
-    "DoorDash to acquire Instacart for $17bn** (FT) — a major consolidation in the US food delivery market, signaling intensifying competition and scale-seeking among delivery platforms.",
-    "CISA added two actively exploited vulnerabilities to its KEV Catalog:**",
-    "CVE-2026-41709** — Broadcom VMware ESX insufficient logging vulnerability.",
-    "CVE-2026-46300** — Linux Kernel missing initialization of a variable vulnerability."
+    "NZZ: „Doppelgängerkandidat\" in Alaska – zwei Senatskandidaten gleichen Namens, laut NYT-Recherche ein demokratisches Manöver; könnte Republikanern nützen.",
+    "Fox News: Vance fordert Untersuchung zu angeblichem „Dem ballot scheme\".",
+    "Israel: arabische Stadt Taibe feiert Wahlergebnis, Skepsis über tatsächliche Veränderung.",
+    "Ukraine: Evakuierungskorridor aus dem russisch besetzten Oleschky geöffnet; mehrere Hundert bleiben trotz fehlender Versorgung.",
+    "Ein roter Faden ist **Vertrauensverlust in Institutionen** (Wahlmanipulation, Aufsichtsversagen, KI-Hype vs. Ernüchterung)."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nHere's a structured briefing based on the feeds provided for **29 October 2026**:\n\n---\n\n## 🏦 Central Banking & Markets\n- **Federal Reserve** issued an FOMC statement (details not specified in feed). Markets will be watching for rate guidance implications.\n- **DoorDash to acquire Instacart for $17bn** (FT) — a major consolidation in the US food delivery market, signaling intensifying competition and scale-seeking among delivery platforms.\n\n## 🔐 Cybersecurity & Infrastructure\n- **CISA added two actively exploited vulnerabilities to its KEV Catalog:**\n  - **CVE-2026-41709** — Broadcom VMware ESX insufficient logging vulnerability.\n  - **CVE-2026-46300** — Linux Kernel missing initialization of a variable vulnerability.\n  - *Implication:* Federal agencies (and prudent enterprises) should prioritize patching; both are confirmed exploited in the wild.\n\n## 🌍 Geopolitics & International Affairs\n- **Canada–Europe relations** (NZZ): Amid Trump-era pressure (\"mobbing\"), Canada is re-examining its British/French roots — but an EU accession remains off the table. Historical ties are deep; institutional membership is not.\n- **Spain train crash** (BBC): Audio reveals control centre–driver exchanges suggesting a high-speed train was cleared to move while another ahead had stalled — a key thread in the investigation.\n\n## 📰 Media & Society\n- **Fox News** extended its cable news viewership lead over MS NOW and CNN in October 2026 (1.1M average total viewers).\n- **NYT**: Profile of an Estonian self-described \"junkie\" who became famous chronicling synthetic drug addiction — a window into emerging drug markets and public health strain.\n- **WSJ/MarketWatch**: Consumer-focused piece on whether taking travel advice from influencers is wise — reflecting continued anxiety over authenticity in travel planning.\n\n## 🌪️ Weather & Extremes\n- **NOAA/NHC**: No tropical cyclone formation expected in the North Atlantic, Caribbean, or Gulf of America over the next 7 days. Quiet period.\n\n## 🔎 Investigations\n- **ICIJ**: New evidence allegedly links a Singapore palm oil giant to Indonesian deforestation despite denials — operational and commercial ties uncovered by two environmental groups. Expect follow-up scrutiny of supply chains and ESG claims.\n\n---\n\n### ⚠️ Cross-cutting watch items\n1. **Patch now:** Two KEV-listed vulnerabilities (VMware ESX, Linux kernel) with active exploitation.\n2. **M&A ripple effects:** DoorDash–Instacart could reshape delivery pricing, labor, and antitrust scrutiny.\n3. **Infrastructure safety:** Spain rail crash investigation may prompt European rail signaling/safety reviews.\n4. **Supply chain accountability:** ICIJ palm oil findings may pressure ESG ratings and procurement policies.\n\n*Note: The Fed statement content and some feed details were truncated; confirm specifics via primary sources before acting.*\n\nMACRO:\nBased on the feeds provided, here are the key highlights and points from the news:\n\n1. **Federal Reserve FOMC Statement (Zentralbank)**\n   - The Federal Reserve has issued a new FOMC statement, which likely includes updates on monetary policy, interest rates, and economic projections. This is important for financial markets and economic policy.\n\n2. **CISA Adds Two New Vulnerabilities to KEV Catalog (Cyber / Infrastruktur)**\n   - CISA has added CVE-2026-41709 and CVE-2026-46300 to its Known Exploited Vulnerabilities (KEV) Catalog. These vulnerabilities are:\n     - **CVE-2026-41709**: A Broadcom VMWare ESX Insufficient Logging Vulnerability.\n     - **CVE-2026-46300**: A Linux Kernel Missing Initialization of a Variable Vulnerability.\n   - Organizations are advised to patch these vulnerabilities to prevent potential exploitation.\n\n3. **Travel Advice from Influencers (US/Finanzen)**\n   - An article in the Wall Street Journal (MarketWatch) discusses the reliability of travel advice from influencers. It addresses how to determine if an experience is genuine and within one's budget, particularly for travel to Europe.\n\n4. **Fox News Continues Cable News Lead (US/Politik)**\n   - Fox News Channel maintained its position as the most-watched cable news network in October 2026, with an average of 1.1 million total viewers.\n\n5. **Kanada's European Ties (CH/Presse)**\n   - The NZZ International examines why Canada's historical ties to Great Britain and France are strong and why an EU membership is not a viable option for Canada, despite facing bullying from Donald Trump.\n\n6. **Synthetic Drug Addiction in Estonia (US/Presse)**\n   - The New York Times features a story about a self-described \"junkie\" in Estonia who struggled with the rapid influx of synthetic drugs and the severe physical toll they took on his body. His experiences gained significant attention in the country.\n\n7. **Audio Exchanges Before Spain Train Crash (UK/Medien)**\n   - BBC World News reports on audio recordings that reveal communications between control centers and train drivers before a deadly train crash in Spain. The recordings suggest that one high-speed train was given clearance to move despite another train ahead being stalled.\n\n8. **DoorDash Acquires Instacart for $17 Billion (UK/Finanzen)**\n   - Financial Times reports that DoorDash has agreed to acquire Instacart for $17 billion, a move that further consolidates the competitive US food delivery market.\n\n9. **Atlantic Tropical Weather Outlook (Wetter/Extreme)**\n   - The NOAA National Hurricane Center provides an update on tropical weather, stating that no tropical cyclone formation is expected in the North Atlantic, Caribbean Sea, and the Gulf of Mexico over the next seven days.\n\n10. **Singapore Palm Oil Giant Linked to Deforestation (Investigativ Net)**\n    - The ICIJ’s investigation reveals new evidence linking First Resources, a Singapore-based palm oil giant, to Indonesian suppliers accused of deforestation. This contradicts the company's previous denials and highlights ongoing supply chain issues.\n\n11. **Progress Against Lung Cancer (Medizin)**\n    - The CDC Health Updates report on the latest cancer trends in the US, noting a decline in cancer mortality rates, particularly driven by progress against lung cancer.\n\n12. **Targeted Ads Criticized by Politicians (Cyber-Espionage)**\n    - Citizen Lab reports that politicians in the US and EU are expressing concerns over the use of targeted ads, which they believe can be used for surveillance and manipulation.\n\nThese updates cover a range of topics from financial and political news to cybersecurity, environmental issues, and health trends.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nMeine Analyse der Feeds vom 30.10.2026:\n\n**1. Marktlage (Tech-Rout)**\nDer dominierende finanzielle Faden ist ein „global tech rout\" (FT) bzw. ein „rough month in the technology sector\" (WSJ). Amazon-Ergebnisse enttäuschen, Intel-Aktien brechen ein, Ängste um KI-Investitionsausgaben. Gleichzeitig deutet MarketWatch an, dass „Wall Street's October winners may surprise you\" – also Sektorrotation weg von Tech. Das passt zu Bowmans Rede zur „Supervisory Modernization After SVB\" – Regulierungsanpassungen nach Bankenstress.\n\n**2. Cyber-Sicherheitslage**\nCISA meldet OS-Command-Injection und „Dirty Frag\"-Schwachstellen in Hitachi Energy CoreTec (betrifft Vertraulichkeit, Integrität, Verfügbarkeit). Kritische Infrastruktur (Energie) – relevant, aber ohne konkreten Exploit-Hinweis.\n\n**3. Politik / Manipulationsvorwürfe (parallele Muster)**\n- NZZ: „Doppelgängerkandidat\" in Alaska – zwei Senatskandidaten gleichen Namens, laut NYT-Recherche ein demokratisches Manöver; könnte Republikanern nützen.\n- Fox News: Vance fordert Untersuchung zu angeblichem „Dem ballot scheme\".\nBeide Feeds spiegeln dasselbe Narrativ aus unterschiedlichen Perspektiven – ein Wahlmanipulations-Narrativ kurz vor/mit Blick auf US-Wahlen.\n\n**4. International**\n- Israel: arabische Stadt Taibe feiert Wahlergebnis, Skepsis über tatsächliche Veränderung.\n- Ukraine: Evakuierungskorridor aus dem russisch besetzten Oleschky geöffnet; mehrere Hundert bleiben trotz fehlender Versorgung.\n\n**5. Wetter**\nNOAA: Keine tropische Zyklogenese im Atlantik/Karibik/Golf in den nächsten 7 Tagen – ruhige Lage.\n\n**Querschnittsmuster:**\n- Ein roter Faden ist **Vertrauensverlust in Institutionen** (Wahlmanipulation, Aufsichtsversagen, KI-Hype vs. Ernüchterung).\n- **Asymmetrische Informationsqualität**: Fox („alleged\") vs. NYT-Recherche – Vorsicht bei der Einordnung.\n- **Zeitliche Koinzidenz**: Tech-Rout + SVB-Aufsichtsrede + Energie-Cyberwarnung = erhöhte systemische Aufmerksamkeit für Finanz- und Infrastrukturstabilität.\n\nFalls du eine Vertiefung zu einem der Themen (z. B. CoreTec-CVE-Details, Sektorrotation oder das Alaska-Wahlmanöver) willst, sag Bescheid.\n\nMACRO:\n### Summary of Key News and Reports for 30.10.2026\n\n#### **Zentralbank: Fed Speeches & Minutes**\n- **Speaker:** Bowman\n- **Event:** Supervisory Modernization After Silicon Valley Bank\n- **Location:** Bangkok Economic Festival, Reinventing Bretton Woods Committee, Bangkok, Thailand\n- **Content:** Discussion on modernizing supervisory frameworks in the aftermath of the Silicon Valley Bank collapse to enhance financial stability and regulatory oversight.\n\n#### **Cyber / Infrastruktur: CISA Cyber Alerts**\n- **Summary:** Hitachi Energy has identified OS command injection and Dirty Frag vulnerabilities in certain CoreTec product versions. Exploitation of these vulnerabilities could compromise the product's confidentiality, integrity, and availability. Customers are advised to review the CSAF document for detailed information.\n\n#### **US/Finanzen: Wall Street Journal (MarketWatch Alt)**\n- **Summary:** Despite a challenging month for tech stocks, with Amazon and Intel expected to decline, other sectors of the stock market have performed well in October. Wall Street's October winners may surprise investors.\n\n#### **CH/Presse: NZZ International**\n- **Summary:** In Alaska, the Democratic Party has fielded a doppelgänger candidate with the same name as a Republican contender, Dan Sullivan. This manipulative tactic, uncovered by the New York Times, could benefit the Republicans and create controversy in the upcoming election.\n\n#### **US/Presse: New York Times World**\n- **Summary:** An Arab town in Israel, Taibe, is celebrating the electoral success of Arab-led parties. However, many voters in other parts of Israel remain skeptical about the new government's ability to represent their interests.\n\n#### **UK/Medien: BBC World News**\n- **Summary:** An evacuation corridor has opened in the Russian-occupied town of Oleshky, allowing residents to leave. Despite the lack of basic services, several hundred people have chosen to stay in the frontline town.\n\n#### **UK/Finanzen: Financial Times**\n- **Summary:** Global tech stocks continue to decline, with US earnings reports, particularly from Amazon, stoking fears about AI spending. Wall Street is expected to see steep losses at the Friday open.\n\n#### **US/Politik: Fox News Latest**\n- **Summary:** Josh Vance, a Republican, is calling for an investigation into an alleged Democratic ballot scheme. This move could further politicize the ongoing electoral controversies.\n\n#### **Wetter/Extreme: NOAA National Hurricane Center**\n- **Summary:** The Atlantic Tropical Weather Outlook indicates no tropical cyclone formation expected in the next seven days. The outlook covers the North Atlantic, Caribbean Sea, and the Gulf of Mexico.\n\n#### **Investigativ Net: ICIJ (Panama/Pandora Papers)**\n- **Summary:** A mining executive wanted by Brazil for allegedly sheltering Jair Bolsonaro's spy chief has business and property interests in Florida. Bolsonaro's son, Flávio, arrived in Florida claiming to be the legitimate winner of Brazil's presidential election, which he lost.\n\n#### **Medizin: CDC Health Updates**\n- **Summary:** The latest Annual Report to the Nation shows significant progress in reducing cancer mortality rates, driven by advancements in the treatment of lung cancer. The report provides insights into current U.S. cancer trends.\n\n### Key Takeaways\n- **Financial Markets:** Tech stocks are under pressure, with Amazon and Intel expected to see significant declines. However, other sectors have performed well in October.\n- **Politics:** Controversies in the U.S. and Brazil, including ballot schemes and political exiles, are creating new tensions.\n- **Cybersecurity:** Hitachi Energy has identified critical vulnerabilities in its CoreTec products, highlighting the ongoing importance of cybersecurity in critical infrastructure.\n- **Health:** Significant progress in cancer mortality reduction, particularly in lung cancer, offers hope and highlights the success of medical advancements.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT1FW",
+      "name": "Flug TOY15",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.066,
-      "lon": 27.5978,
-      "lng": 27.5978,
+      "lat": 46.0199,
+      "lon": 26.4802,
+      "lng": 26.4802,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT1FW | Höhe: 10.4 km | Speed: 846 km/h",
+      "description": "Callsign: TOY15 | Höhe: 3.8 km | Speed: 545 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT44QP",
+      "name": "Flug PGT4TE",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.5982,
-      "lon": 25.734,
-      "lng": 25.734,
+      "lat": 42.7796,
+      "lon": 25.4433,
+      "lng": 25.4433,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT44QP | Höhe: 11.0 km | Speed: 833 km/h",
+      "description": "Callsign: PGT4TE | Höhe: 11.3 km | Speed: 824 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CES224",
+      "name": "Flug 4XDAN",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.0145,
-      "lon": 32.8627,
-      "lng": 32.8627,
+      "lat": 31.3777,
+      "lon": 35.4217,
+      "lng": 35.4217,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CES224 | Höhe: 11.0 km | Speed: 958 km/h",
+      "description": "Callsign: 4XDAN | Höhe: 2.2 km | Speed: 153 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DCU318",
+      "name": "Flug FYC762",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 27.5141,
-      "lon": 50.1332,
-      "lng": 50.1332,
+      "lat": 27.036,
+      "lon": 50.3494,
+      "lng": 50.3494,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: DCU318 | Höhe: 7.2 km | Speed: 841 km/h",
+      "description": "Callsign: FYC762 | Höhe: 9.8 km | Speed: 790 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug RRR4226",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 32.1174,
-      "lon": 32.5194,
-      "lng": 32.5194,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR4226 | Höhe: 9.4 km | Speed: 797 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug THA673",
+      "name": "Flug THA635",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 20.9256,
-      "lon": 116.6467,
-      "lng": 116.6467,
+      "lat": 22.912,
+      "lon": 118.7829,
+      "lng": 118.7829,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA673 | Höhe: 11.6 km | Speed: 881 km/h",
+      "description": "Callsign: THA635 | Höhe: 10.4 km | Speed: 865 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CRK637",
+      "name": "Flug AMU821",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.3313,
-      "lon": 117.3673,
-      "lng": 117.3673,
+      "lat": 22.8866,
+      "lon": 118.4271,
+      "lng": 118.4271,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CRK637 | Höhe: 11.0 km | Speed: 813 km/h",
+      "description": "Callsign: AMU821 | Höhe: 9.8 km | Speed: 865 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Federal Reserve** issued an FOMC statement (details not specified in feed). Markets will be watching for rate guidance implications.",
-    "DoorDash to acquire Instacart for $17bn** (FT) — a major consolidation in the US food delivery market, signaling intensifying competition and scale-seeking among delivery platforms.",
-    "CISA added two actively exploited vulnerabilities to its KEV Catalog:**",
-    "CVE-2026-41709** — Broadcom VMware ESX insufficient logging vulnerability.",
-    "CVE-2026-46300** — Linux Kernel missing initialization of a variable vulnerability."
+    "NZZ: „Doppelgängerkandidat\" in Alaska – zwei Senatskandidaten gleichen Namens, laut NYT-Recherche ein demokratisches Manöver; könnte Republikanern nützen.",
+    "Fox News: Vance fordert Untersuchung zu angeblichem „Dem ballot scheme\".",
+    "Israel: arabische Stadt Taibe feiert Wahlergebnis, Skepsis über tatsächliche Veränderung.",
+    "Ukraine: Evakuierungskorridor aus dem russisch besetzten Oleschky geöffnet; mehrere Hundert bleiben trotz fehlender Versorgung.",
+    "Ein roter Faden ist **Vertrauensverlust in Institutionen** (Wahlmanipulation, Aufsichtsversagen, KI-Hype vs. Ernüchterung)."
   ],
   "geoscore": {
     "current_score": 72,
@@ -135,12 +124,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-10-29T12:01:19.491478+00:00",
+  "timestamp": "2026-10-30T11:55:53.379621+00:00",
   "pipeline_health": {
-    "timestamp": "2026-10-29T12:00:23.050632+00:00",
+    "timestamp": "2026-10-30T11:54:49.774892+00:00",
     "feeds_total": 224,
-    "feeds_successful": 117,
-    "feeds_failed": 107,
+    "feeds_successful": 116,
+    "feeds_failed": 108,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -150,7 +139,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -168,7 +157,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 7,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
