@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nHere's your briefing for **Monday, 2 November 2026**, organized by topic:\n\n---\n\n## 🏦 Central Banks & Finance\n- **Fed approves Bank of Nova Scotia application** — The Federal Reserve Board announced approval of an application by The Bank of Nova Scotia.\n- **Marvell to acquire Lumentum in $115bn all-stock AI deal** (FT) — The companies say the merger will create a \"leader in AI connectivity,\" deepening Silicon Valley's bet on AI infrastructure.\n- **Personal finance (WSJ/MarketWatch)** — A reader asks whether to repay a late father's $40,000 wedding gift after the stepmother dem...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nHere's your briefing for **Monday, 2 November 2026**, organized by topic:\n\n---\n\n## 🏦 Central Banks & Finance\n- **Fed approves Bank of Nova Scotia application** — The Federal Reserve Board announced approval of an application by The Bank of Nova Scotia.\n- **Marvell to acquire Lumentum in $115bn all-stock AI deal** (FT) — The compan...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der Feed-Lage vom 03.11.2026**\n\nDie Feeds zeigen eine Welt an einem **Kipppunkt**: ein militärischer Konflikt mit globalen wirtschaftlichen Folgen, ein angeschlagener US-Konsument, eine aktive Cyber-Bedrohungslage – und ein politisches Establishment, das mit symbolischer Politik (König Charles, Commonwealth) und Sportablenkung (Draymond Green) um Aufmerksamkeit ringt. Auffällig ist die **Verdichtung auf den 3. November 2026** – den US-Midterm-Wahltag. Mehrere Quellen (BBC, NZZ, WSJ) verknüpfen den Iran-Konflikt direkt mit der Wahl.\n\n**1. Geopolitik / Iran-Konflikt (...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der Feed-Lage vom 03.11.2026**\n\nDie Feeds zeigen eine Welt an einem **Kipppunkt**: ein militärischer Konflikt mit globalen wirtschaftlichen Folgen, ein angeschlagener US-Konsument, eine aktive Cyber-Bedrohungslage – und ein politisches Establishment, das mit symbolischer Politik (König Charles, Commonwealth) und Sportabl...",
   "key_takeaways": [
-    "Fed approves Bank of Nova Scotia application** — The Federal Reserve Board announced approval of an application by The Bank of Nova Scotia.",
-    "Marvell to acquire Lumentum in $115bn all-stock AI deal** (FT) — The companies say the merger will create a \"leader in AI connectivity,\" deepening Silicon Valley's bet on AI infrastructure.",
-    "Personal finance (WSJ/MarketWatch)** — A reader asks whether to repay a late father's $40,000 wedding gift after the stepmother demands it back two months after the funeral.",
-    "CISA adds two Ivanti Connect Secure flaws to KEV catalog** (active exploitation confirmed):",
-    "CVE-2026-111357** — Missing Authentication for Critical Function"
+    "US-Angriffe auf die iranische Insel Qeshm (BBC, CBS als Quelle), als „limited and defensive\" gerahmt – *vor* den Midterms. Das Timing ist politisch hochgradig brisant.",
+    "Die Epoch Times (Vorsicht: parteiisch, hier als GDELT-Signal) meldet, die **Vereinigten Arabischen Emirate hätten allen Handel mit Iran ausgesetzt** – ein massiver regionaler Eskalationsmarker. Wenn ein Golfstaat wie die VAE derart reagiert, deutet das auf reale Bedrohungswahrnehmung (Raketen) hin, nicht nur Rhetorik.",
+    "NZZ rahmt es ökonomisch: Krieg + Trumps Handelskonflikte treiben Benzin-, Flug- und Warenpreise – die Lebenskosten werden zum bestimmenden Midterm-Thema.",
+    "WSJ/MarketWatch: „Spend-pocalypse\"-Warnung – 70 % des US-BIP hängen am Konsum. Zeichen eines klammernden Verbrauchers. Zusammen mit der NZZ-Story („bei den Eltern wohnen, ewig arbeiten\") ergibt sich ein kohärentes Bild: **Kostengetriebene Verunsicherung** trifft auf einen externen Ölpreis-Schock durch den Iran-Konflikt. Das ist der klassische Transmissionsriemen, über den Geopolitik in Wahlverhalten übersetzt wird.",
+    "CISA KEV: zwei **Ivanti Connect Secure**-Lücken (CVE-2026-111357: fehlende Authentifizierung; CVE-2026-118527: vorhersagbare Zufallszahlen) mit *aktiver Ausnutzung*. Ivanti-Produkte sind bei VPN-/Edge-Geräten von Behörden und Unternehmen verbreitet – das ist ein potenziell hochkritischer Angriffsvektor. Fehlende Authentifizierung + schwache Entropie ist eine gefährliche Kombination (Umgehung + Vorhersagbarkeit von Tokens/Schlüsseln)."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nHere's your briefing for **Monday, 2 November 2026**, organized by topic:\n\n---\n\n## 🏦 Central Banks & Finance\n- **Fed approves Bank of Nova Scotia application** — The Federal Reserve Board announced approval of an application by The Bank of Nova Scotia.\n- **Marvell to acquire Lumentum in $115bn all-stock AI deal** (FT) — The companies say the merger will create a \"leader in AI connectivity,\" deepening Silicon Valley's bet on AI infrastructure.\n- **Personal finance (WSJ/MarketWatch)** — A reader asks whether to repay a late father's $40,000 wedding gift after the stepmother demands it back two months after the funeral.\n\n## 🛡️ Cybersecurity & Infrastructure\n- **CISA adds two Ivanti Connect Secure flaws to KEV catalog** (active exploitation confirmed):\n  - **CVE-2026-111357** — Missing Authentication for Critical Function\n  - **CVE-2026-118527** — Generation of Predictable Numbers/Values\n- **Suspected cyber-attack hits shop freezers in seven European countries** (BBC) — Freezer temperatures reportedly rose as high as 50°C in affected stores.\n\n## 🌍 Geopolitics & World\n- **Iran says it would reopen Strait of Hormuz within 2 days as part of a U.S. deal** (NYT) — Officials cite negotiating progress on the vital oil/gas shipping lane, even as they prepare for all-out war.\n- **China/Taiwan (NZZ)** — A Taiwanese comedian who joked about Xi Jinping was struck by a car while riding a scooter; what looked like an accident appears to have been a planned attack.\n\n## 🇺🇸 US Politics & Sports\n- **NASCAR** (Fox News) — Carson Hocevar's four brake checks on Austin Cindric at Martinsville draw outrage; fans want him parked heading into the Homestead finale.\n\n## 🌀 Weather\n- **NOAA/NHC Atlantic Tropical Weather Outlook** — An area of low pressure is likely to form along a weakening frontal boundary in the Western Atlantic (full advisory truncated in the feed).\n\n---\n\n**Quick take:** The dominant through-line today is **AI infrastructure consolidation** (Marvell–Lumentum) paired with **active cyber exploitation** (Ivanti KEV additions, European freezer attack) — a reminder that connectivity expansion and attack-surface expansion are moving in lockstep.\n\nWant me to dig deeper into any item — e.g., the Ivanti CVEs' mitigation guidance or the Marvell deal structure?\n\nMACRO:\nHere's a summary of the key feeds from various sources for 02.11.2026:\n\n### Zentralbank\n- **Federal Reserve**: Approved an application by The Bank of Nova Scotia, indicating a significant development in banking regulation and international finance.\n\n### Cyber / Infrastruktur\n- **CISA Cyber Alerts**: Added two new vulnerabilities (CVE-2026-111357 and CVE-2026-118527) to the Known Exploited Vulnerabilities (KEV) Catalog, highlighting ongoing cybersecurity threats.\n\n### US/Finanzen\n- **Wall Street Journal (MarketWatch Alt)**: A stepmother is demanding repayment of a $40,000 wedding gift from her late husband, raising questions about familial obligations and financial expectations.\n\n### US/Politik\n- **Fox News Latest**: Carson Hocevar's aggressive driving during a NASCAR race at Martinsville has outraged fans and drivers, leading to a heated debate and impacting race ratings.\n\n### US/Presse\n- **New York Times World**: Iran has indicated it might reopen the Strait of Hormuz in two days as part of a deal with the U.S., despite ongoing preparations for potential conflict.\n\n### UK/Medien\n- **BBC World News**: A suspected cyber-attack has raised the temperature in shop freezers across seven European countries, causing significant damage to frozen goods.\n\n### CH/Presse\n- **NZZ International**: A Taiwanese comedian making jokes about Chinese leaders was reportedly targeted in a planned attack, underscoring the risks of political satire in the region.\n\n### UK/Finanzen\n- **Financial Times**: Marvell Technology Group is acquiring Lumentum in a $115 billion deal, aiming to become a leader in AI connectivity and data center components.\n\n### Wetter/Extreme\n- **NOAA National Hurricane Center**: An area of low pressure is expected to form in the western Atlantic, potentially leading to tropical storm formation.\n\n### Investigativ Net\n- **ICIJ (Panama/Pandora Papers)**: Confidential reports allege that pharmaceutical companies are paying significant sums to a Russian distributor with corruption ties, inflating prices for cancer drugs.\n\n### Medizin\n- **CDC Health Updates**: The Annual Report to the Nation highlights significant progress in reducing cancer mortality, primarily driven by advances in lung cancer treatment.\n\nThese feeds cover a broad spectrum of topics, from international relations and cybersecurity to finance, sports, and health, providing a comprehensive overview of the day's events.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der Feed-Lage vom 03.11.2026**\n\nDie Feeds zeigen eine Welt an einem **Kipppunkt**: ein militärischer Konflikt mit globalen wirtschaftlichen Folgen, ein angeschlagener US-Konsument, eine aktive Cyber-Bedrohungslage – und ein politisches Establishment, das mit symbolischer Politik (König Charles, Commonwealth) und Sportablenkung (Draymond Green) um Aufmerksamkeit ringt. Auffällig ist die **Verdichtung auf den 3. November 2026** – den US-Midterm-Wahltag. Mehrere Quellen (BBC, NZZ, WSJ) verknüpfen den Iran-Konflikt direkt mit der Wahl.\n\n**1. Geopolitik / Iran-Konflikt (eskaliert)**\n- US-Angriffe auf die iranische Insel Qeshm (BBC, CBS als Quelle), als „limited and defensive\" gerahmt – *vor* den Midterms. Das Timing ist politisch hochgradig brisant.\n- Die Epoch Times (Vorsicht: parteiisch, hier als GDELT-Signal) meldet, die **Vereinigten Arabischen Emirate hätten allen Handel mit Iran ausgesetzt** – ein massiver regionaler Eskalationsmarker. Wenn ein Golfstaat wie die VAE derart reagiert, deutet das auf reale Bedrohungswahrnehmung (Raketen) hin, nicht nur Rhetorik.\n- NZZ rahmt es ökonomisch: Krieg + Trumps Handelskonflikte treiben Benzin-, Flug- und Warenpreise – die Lebenskosten werden zum bestimmenden Midterm-Thema.\n\n**2. US-Wirtschaft / Konsument**\n- WSJ/MarketWatch: „Spend-pocalypse\"-Warnung – 70 % des US-BIP hängen am Konsum. Zeichen eines klammernden Verbrauchers. Zusammen mit der NZZ-Story („bei den Eltern wohnen, ewig arbeiten\") ergibt sich ein kohärentes Bild: **Kostengetriebene Verunsicherung** trifft auf einen externen Ölpreis-Schock durch den Iran-Konflikt. Das ist der klassische Transmissionsriemen, über den Geopolitik in Wahlverhalten übersetzt wird.\n\n**3. Cyber / Infrastruktur**\n- CISA KEV: zwei **Ivanti Connect Secure**-Lücken (CVE-2026-111357: fehlende Authentifizierung; CVE-2026-118527: vorhersagbare Zufallszahlen) mit *aktiver Ausnutzung*. Ivanti-Produkte sind bei VPN-/Edge-Geräten von Behörden und Unternehmen verbreitet – das ist ein potenziell hochkritischer Angriffsvektor. Fehlende Authentifizierung + schwache Entropie ist eine gefährliche Kombination (Umgehung + Vorhersagbarkeit von Tokens/Schlüsseln).\n\n**4. UK / Symbolpolitik**\n- König Charles' „unflinching\"-Rede zum Sklavenhandel beim Commonwealth-Gipfel in Antigua – bemerkenswert auch wegen „Premierminister Andy Burnham\" (NYT). Das ist ein Hinweis auf eine veränderte britische Innenpolitik in diesem Szenario; die Personalie sollte man als Signal, nicht als Selbstverständlichkeit lesen.\n- FT: Buchrezension (Helen Garner) – kulturelles Rauschen, kein Nachrichtenwert.\n\n**5. Sport / Ablenkung**\n- Fox News: Draymond Green-Eklat (NBA). Reines Unterhaltungs-/Empörungsfeed-Item, aber bezeichnend für die Nachrichtenlage: Sport liefert die emotionale Ventilfunktion am Wahltag.\n\n**6. Wetter**\n- NOAA Atlantic Outlook: nur der Kopf des Bulletins („000ABNT20… 700 AM EST Tue Nov 3\") – **kein Inhalt zu Stürmen** im Feed. Keine belastbare Aussage möglich; der Text bricht nach der Überschrift ab.\n\n**Querschnittsmuster & Einordnung**\n- **Timing-Kohärenz:** Alle geopolitischen/wirtschaftlichen Meldungen zielen auf den 3.11.2026 (Midterms). Das ist entweder ein echtes Ereigniscluster oder ein kuratierter Feed-Ausschnitt – die Dichte ist auffällig.\n- **Quellenhygiene:** Epoch Times und Fox sind parteilich; BBC/CBS, NZZ, WSJ, NYT, FT, Fed, CISA und NOAA sind unterschiedlich belastbar. Die VAE-Handelssuspendierung stammt aus einer einzelnen, tendenziösen Quelle – **vor Verwendung gegenprüfen**.\n- **Verknüpfung, die man im Auge behalten sollte:** Iran-Konflikt → Ölpreis → US-Inflation → Konsumentenstimmung → Midterm-Ergebnis. Genau diese Kette beschreiben NZZ und WSJ aus unterschiedlichen Winkeln.\n\n**Offene Punkte / zu verifizieren**\n1. Bestätigung der VAE-Handelssuspendierung durch eine zweite, neutrale Quelle (Reuters/AP).\n2. Ausmaß und Opferzahlen der Qeshm-Angriffe – bisher nur „limited and defensive\" aus US-Sicht.\n3. Ob die Ivanti-CVEs bereits in freier Wildbahn gegen kritische Infrastruktur genutzt werden (CISA sagt „active exploitation\", Details fehlen).\n4. Der NOAA-Bulletin-Text fehlt – keine Aussage zur atlantischen Aktivität möglich.\n\n**Fazit:** Die Lage ist die eines Landes (USA) im Wahlkampf-Endspurt unter externem Schock: militärische Eskalation am Golf, drohender Ölpreis-Effekt auf einen ohnehin fragilen Konsumenten, dazu eine akute Cyber-Bedrohung gegen Edge-Infrastruktur. Die symbolpolitischen und sportlichen Meldungen wirken daneben wie das übliche Rauschen – aber gerade ihre Platzierung am Wahltag macht sie zum Teil des Bildes: Ablenkung und Symbolik, während die materiellen Themen (Preise, Krieg, Sicherheit) den Ausschlag geben dürften.\n\nMACRO:\n**Datumsübersicht und relevante Ereignisse für den 3. November 2026:**\n\n1. **GDELT (epochtimes.com):**\n   - ** MISSILE THREAT: UAE SUSPENDS ALL TRADE WITH IRAN**\n     - Datum: 19.08.2026\n     - Details: Die Vereinigten Arabischen Emirate (VAE) haben aufgrund der Bedrohung durch Raketen ihren Handel mit Iran vollständig eingestellt.\n\n2. **Federal Reserve Press:**\n   - ** APPROVAL OF APPLICATION BY THE BANK OF NOVA SCOTIA**\n     - Details: Die Federal Reserve Board hat die Bewerbung von The Bank of Nova Scotia für eine bestimmte Genehmigung genehmigt.\n\n3. **CISA Cyber Alerts:**\n   - ** ADDITION OF TWO NEW VULNERABILITIES TO KEV CATALOG**\n     - Details: CISA hat zwei neue Schwachstellen (CVE-2026-111357 und CVE-2026-118527) zu seinem Known Exploited Vulnerabilities (KEV) Katalog hinzugefügt, da diese aktiv ausgenutzt werden.\n\n4. **Wall Street Journal (MarketWatch Alt):**\n   - **3 SIGNS CONSUMERS ARE NEARING A ‘SPEND-POPOLYSE’**\n     - Details: Fast 70% des US-BIP stammen von Verbrauchern. Der Artikel diskutiert Anzeichen, dass verarmte Verbraucher sich einer Ausgaben-Krise nähern, die die Wirtschaft beeinträchtigen könnte.\n\n5. **Fox News:**\n   - **DRAYMOND GREEN'S CONFRONTATION DURING WARRIORS GAME**\n     - Details: Draymond Green der Golden State Warriors hat während einem Spiel einen Gegner zu Boden geworfen und die Trikot eines anderen gegnerischen Spielers gepackt, was zu seiner Herauswürfigung führte. Die Warriors konnten trotzdem das Spiel gewinnen.\n\n6. **BBC World News:**\n   - **US STRIKES QESHM ISLAND AHEAD OF MIDTERM ELECTIONS**\n     - Details: US-Offizielle beschrieben die Angriffe auf die iranische Insel Qeshm als begrenzt und defensiv. Dies geschah kurz vor den Halbzeitwahlen in den USA.\n\n7. **NZZ International:**\n   - **HIGHER COSTS AS A MAJOR TOPIC IN MIDTERM ELECTIONS**\n     - Details: Die Wähler in den USA leiden unter steigenden Lebenskosten, die durch den Krieg in Iran und die Handelskonflikte von Donald Trump ausgelöst wurden. Drei Amerikaner berichten über ihre Erfahrungen.\n\n8. **New York Times World:**\n   - **KING CHARLES TO GIVE ‘UNFLINCHING’ SPEECH ON SLAVE TRADE**\n     - Details: König Charles und Premierminister Andy Burnham werden bei der Commonwealth-Konferenz in Antigua über die Rolle des Vereinigten Königreichs im Sklavenhandel sprechen.\n\n9. **Financial Times:**\n   - ** REVIEW OF 'THE SEASON' BY HELEN GARNER**\n     - Details: Ein Buchreview zu Helen Garners Werk \"The Season,\" das das Leben eines Fußballteams und die damit verbundenen Lebens lowes beschreibt.\n\n10. **NOAA National Hurricane Center:**\n    - **ATLANTIC TROPICAL WEATHER OUTLOOK**\n      - Details: Ein niedriges Druckgebiet bildet sich entlang einer abschwächenden Front etwa ein paar hundert Meilen südlich der Vereinigten Staaten. Es besteht das Potenzial für weitere Tätigkeit in den kommenden Tagen.\n\n11. **OCCRP (Organized Crime & Corruption):**\n    - **INDONESIA ASKS RUSSIA TO STOP RECRUITING ITS CITIZENS FOR UKRAINE WAR**\n      - Details: Indonesien fordert Russland auf, die Rekrutierung seiner Bürger für den Krieg in der Ukraine zu stoppen, da immer mehr Menschen durch fingierte Ziviljobs angelockt werden.\n\n12. **CDC Health:**\n    - ** (Keine spezifischen Details im angegebenen Text)**\n\nDiese Überblick bietet einen Schnellschuss der aktuellen Ereignisse und Entwicklungen auf verschiedenen Gebieten, von Geopolitik bis hin zu Wetterbedingungen und Öffentlichkeitswirkung.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT31AA",
+      "name": "Flug PGT31XN",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.1421,
-      "lon": 25.5051,
-      "lng": 25.5051,
+      "lat": 41.3487,
+      "lon": 27.4447,
+      "lng": 27.4447,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT31AA | Höhe: 10.7 km | Speed: 880 km/h",
+      "description": "Callsign: PGT31XN | Höhe: 8.9 km | Speed: 788 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT53MF",
+      "name": "Flug PGT3BV",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.8361,
-      "lon": 26.6239,
-      "lng": 26.6239,
+      "lat": 41.0885,
+      "lon": 28.015,
+      "lng": 28.015,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT53MF | Höhe: 10.7 km | Speed: 855 km/h",
+      "description": "Callsign: PGT3BV | Höhe: 7.7 km | Speed: 661 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ5534",
+      "name": "Flug DUKE87",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 43.1429,
+      "lon": 25.1881,
+      "lng": 25.1881,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: DUKE87 | Höhe: 4.7 km | Speed: 525 km/h",
+      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
+    },
+    {
+      "name": "Flug AIC57E",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.0425,
-      "lon": 33.0422,
-      "lng": 33.0422,
+      "lat": 27.1914,
+      "lon": 50.1745,
+      "lng": 50.1745,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ5534 | Höhe: 6.0 km | Speed: 672 km/h",
+      "description": "Callsign: AIC57E | Höhe: 11.6 km | Speed: 791 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ428",
+      "name": "Flug ELY354",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.8351,
-      "lon": 32.1591,
-      "lng": 32.1591,
+      "lat": 32.0531,
+      "lon": 34.9229,
+      "lng": 34.9229,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ428 | Höhe: 6.1 km | Speed: 713 km/h",
+      "description": "Callsign: ELY354 | Höhe: 0.3 km | Speed: 285 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug THA636",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.0933,
-      "lon": 120.4088,
-      "lng": 120.4088,
+      "lat": 21.1013,
+      "lon": 117.3556,
+      "lng": 117.3556,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA636 | Höhe: 5.6 km | Speed: 640 km/h",
+      "description": "Callsign: THA636 | Höhe: 10.1 km | Speed: 878 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CSH810",
+      "name": "Flug T7AMY",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 27.8055,
-      "lon": 120.634,
-      "lng": 120.634,
+      "lat": 23.3761,
+      "lon": 120.3593,
+      "lng": 120.3593,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSH810 | Höhe: 10.5 km | Speed: 845 km/h",
+      "description": "Callsign: T7AMY | Höhe: 10.9 km | Speed: 868 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,11 +116,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Fed approves Bank of Nova Scotia application** — The Federal Reserve Board announced approval of an application by The Bank of Nova Scotia.",
-    "Marvell to acquire Lumentum in $115bn all-stock AI deal** (FT) — The companies say the merger will create a \"leader in AI connectivity,\" deepening Silicon Valley's bet on AI infrastructure.",
-    "Personal finance (WSJ/MarketWatch)** — A reader asks whether to repay a late father's $40,000 wedding gift after the stepmother demands it back two months after the funeral.",
-    "CISA adds two Ivanti Connect Secure flaws to KEV catalog** (active exploitation confirmed):",
-    "CVE-2026-111357** — Missing Authentication for Critical Function"
+    "US-Angriffe auf die iranische Insel Qeshm (BBC, CBS als Quelle), als „limited and defensive\" gerahmt – *vor* den Midterms. Das Timing ist politisch hochgradig brisant.",
+    "Die Epoch Times (Vorsicht: parteiisch, hier als GDELT-Signal) meldet, die **Vereinigten Arabischen Emirate hätten allen Handel mit Iran ausgesetzt** – ein massiver regionaler Eskalationsmarker. Wenn ein Golfstaat wie die VAE derart reagiert, deutet das auf reale Bedrohungswahrnehmung (Raketen) hin, nicht nur Rhetorik.",
+    "NZZ rahmt es ökonomisch: Krieg + Trumps Handelskonflikte treiben Benzin-, Flug- und Warenpreise – die Lebenskosten werden zum bestimmenden Midterm-Thema.",
+    "WSJ/MarketWatch: „Spend-pocalypse\"-Warnung – 70 % des US-BIP hängen am Konsum. Zeichen eines klammernden Verbrauchers. Zusammen mit der NZZ-Story („bei den Eltern wohnen, ewig arbeiten\") ergibt sich ein kohärentes Bild: **Kostengetriebene Verunsicherung** trifft auf einen externen Ölpreis-Schock durch den Iran-Konflikt. Das ist der klassische Transmissionsriemen, über den Geopolitik in Wahlverhalten übersetzt wird.",
+    "CISA KEV: zwei **Ivanti Connect Secure**-Lücken (CVE-2026-111357: fehlende Authentifizierung; CVE-2026-118527: vorhersagbare Zufallszahlen) mit *aktiver Ausnutzung*. Ivanti-Produkte sind bei VPN-/Edge-Geräten von Behörden und Unternehmen verbreitet – das ist ein potenziell hochkritischer Angriffsvektor. Fehlende Authentifizierung + schwache Entropie ist eine gefährliche Kombination (Umgehung + Vorhersagbarkeit von Tokens/Schlüsseln)."
   ],
   "geoscore": {
     "current_score": 72,
@@ -124,13 +135,13 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-02T14:21:23.796788+00:00",
+  "timestamp": "2026-11-03T13:24:17.569799+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-02T14:20:20.289621+00:00",
+    "timestamp": "2026-11-03T13:20:17.755192+00:00",
     "feeds_total": 224,
-    "feeds_successful": 118,
-    "feeds_failed": 106,
-    "gdelt_articles": 0,
+    "feeds_successful": 113,
+    "feeds_failed": 111,
+    "gdelt_articles": 35,
     "telegram_posts": 0,
     "bakers_active": [
       "DeepSeek",
@@ -139,7 +150,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (7 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -157,7 +168,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 6,
+    "hotspots_now": 7,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
