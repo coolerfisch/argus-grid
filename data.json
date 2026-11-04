@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der Feed-Lage vom 03.11.2026**\n\nDie Feeds zeigen eine Welt an einem **Kipppunkt**: ein militärischer Konflikt mit globalen wirtschaftlichen Folgen, ein angeschlagener US-Konsument, eine aktive Cyber-Bedrohungslage – und ein politisches Establishment, das mit symbolischer Politik (König Charles, Commonwealth) und Sportablenkung (Draymond Green) um Aufmerksamkeit ringt. Auffällig ist die **Verdichtung auf den 3. November 2026** – den US-Midterm-Wahltag. Mehrere Quellen (BBC, NZZ, WSJ) verknüpfen den Iran-Konflikt direkt mit der Wahl.\n\n**1. Geopolitik / Iran-Konflikt (...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der Feed-Lage vom 03.11.2026**\n\nDie Feeds zeigen eine Welt an einem **Kipppunkt**: ein militärischer Konflikt mit globalen wirtschaftlichen Folgen, ein angeschlagener US-Konsument, eine aktive Cyber-Bedrohungslage – und ein politisches Establishment, das mit symbolischer Politik (König Charles, Commonwealth) und Sportabl...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\n\n\nMACRO:\n### Summary of Key News Items\n\n#### **[Zentralbank] Federal Reserve Press**\n- **Headline:** Federal Reserve Board announces approval of application by The Bank of Nova Scotia\n- **Summary:** The Federal Reserve Board has approved an application by The Bank of Nova Scotia, likely related to banking operations or regulatory compliance.\n\n#### **[Cyber / Infrastruktur] CISA Cyber Alerts**\n- **Headline:** Subnet Solutions PowerSYSTEM Center - View CSAF\n- **Summary:** A security vulnerability in Subnet Solutions PowerSYSTEM Center versions 2020 <=5.29.x (CVE-2026-63017) cou...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\n\n\nMACRO:\n### Summary of Key News Items\n\n#### **[Zentralbank] Federal Reserve Press**\n- **Headline:** Federal Reserve Board announces approval of application by The Bank of Nova Scotia\n- **Summary:** The Federal Reserve Board has approved an application by The Bank of Nova Scotia, likely related to banking operations or regulatory ...",
   "key_takeaways": [
-    "US-Angriffe auf die iranische Insel Qeshm (BBC, CBS als Quelle), als „limited and defensive\" gerahmt – *vor* den Midterms. Das Timing ist politisch hochgradig brisant.",
-    "Die Epoch Times (Vorsicht: parteiisch, hier als GDELT-Signal) meldet, die **Vereinigten Arabischen Emirate hätten allen Handel mit Iran ausgesetzt** – ein massiver regionaler Eskalationsmarker. Wenn ein Golfstaat wie die VAE derart reagiert, deutet das auf reale Bedrohungswahrnehmung (Raketen) hin, nicht nur Rhetorik.",
-    "NZZ rahmt es ökonomisch: Krieg + Trumps Handelskonflikte treiben Benzin-, Flug- und Warenpreise – die Lebenskosten werden zum bestimmenden Midterm-Thema.",
-    "WSJ/MarketWatch: „Spend-pocalypse\"-Warnung – 70 % des US-BIP hängen am Konsum. Zeichen eines klammernden Verbrauchers. Zusammen mit der NZZ-Story („bei den Eltern wohnen, ewig arbeiten\") ergibt sich ein kohärentes Bild: **Kostengetriebene Verunsicherung** trifft auf einen externen Ölpreis-Schock durch den Iran-Konflikt. Das ist der klassische Transmissionsriemen, über den Geopolitik in Wahlverhalten übersetzt wird.",
-    "CISA KEV: zwei **Ivanti Connect Secure**-Lücken (CVE-2026-111357: fehlende Authentifizierung; CVE-2026-118527: vorhersagbare Zufallszahlen) mit *aktiver Ausnutzung*. Ivanti-Produkte sind bei VPN-/Edge-Geräten von Behörden und Unternehmen verbreitet – das ist ein potenziell hochkritischer Angriffsvektor. Fehlende Authentifizierung + schwache Entropie ist eine gefährliche Kombination (Umgehung + Vorhersagbarkeit von Tokens/Schlüsseln)."
+    "Headline:** Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
+    "Summary:** The Federal Reserve Board has approved an application by The Bank of Nova Scotia, likely related to banking operations or regulatory compliance.",
+    "Headline:** Subnet Solutions PowerSYSTEM Center - View CSAF",
+    "Summary:** A security vulnerability in Subnet Solutions PowerSYSTEM Center versions 2020 <=5.29.x (CVE-2026-63017) could allow attackers to execute unauthorized SQL commands and gain unauthorized access to resources.",
+    "Headline:** ADP says businesses add 86,000 jobs in October. Labor market shows small signs of improvement."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n**Analyse der Feed-Lage vom 03.11.2026**\n\nDie Feeds zeigen eine Welt an einem **Kipppunkt**: ein militärischer Konflikt mit globalen wirtschaftlichen Folgen, ein angeschlagener US-Konsument, eine aktive Cyber-Bedrohungslage – und ein politisches Establishment, das mit symbolischer Politik (König Charles, Commonwealth) und Sportablenkung (Draymond Green) um Aufmerksamkeit ringt. Auffällig ist die **Verdichtung auf den 3. November 2026** – den US-Midterm-Wahltag. Mehrere Quellen (BBC, NZZ, WSJ) verknüpfen den Iran-Konflikt direkt mit der Wahl.\n\n**1. Geopolitik / Iran-Konflikt (eskaliert)**\n- US-Angriffe auf die iranische Insel Qeshm (BBC, CBS als Quelle), als „limited and defensive\" gerahmt – *vor* den Midterms. Das Timing ist politisch hochgradig brisant.\n- Die Epoch Times (Vorsicht: parteiisch, hier als GDELT-Signal) meldet, die **Vereinigten Arabischen Emirate hätten allen Handel mit Iran ausgesetzt** – ein massiver regionaler Eskalationsmarker. Wenn ein Golfstaat wie die VAE derart reagiert, deutet das auf reale Bedrohungswahrnehmung (Raketen) hin, nicht nur Rhetorik.\n- NZZ rahmt es ökonomisch: Krieg + Trumps Handelskonflikte treiben Benzin-, Flug- und Warenpreise – die Lebenskosten werden zum bestimmenden Midterm-Thema.\n\n**2. US-Wirtschaft / Konsument**\n- WSJ/MarketWatch: „Spend-pocalypse\"-Warnung – 70 % des US-BIP hängen am Konsum. Zeichen eines klammernden Verbrauchers. Zusammen mit der NZZ-Story („bei den Eltern wohnen, ewig arbeiten\") ergibt sich ein kohärentes Bild: **Kostengetriebene Verunsicherung** trifft auf einen externen Ölpreis-Schock durch den Iran-Konflikt. Das ist der klassische Transmissionsriemen, über den Geopolitik in Wahlverhalten übersetzt wird.\n\n**3. Cyber / Infrastruktur**\n- CISA KEV: zwei **Ivanti Connect Secure**-Lücken (CVE-2026-111357: fehlende Authentifizierung; CVE-2026-118527: vorhersagbare Zufallszahlen) mit *aktiver Ausnutzung*. Ivanti-Produkte sind bei VPN-/Edge-Geräten von Behörden und Unternehmen verbreitet – das ist ein potenziell hochkritischer Angriffsvektor. Fehlende Authentifizierung + schwache Entropie ist eine gefährliche Kombination (Umgehung + Vorhersagbarkeit von Tokens/Schlüsseln).\n\n**4. UK / Symbolpolitik**\n- König Charles' „unflinching\"-Rede zum Sklavenhandel beim Commonwealth-Gipfel in Antigua – bemerkenswert auch wegen „Premierminister Andy Burnham\" (NYT). Das ist ein Hinweis auf eine veränderte britische Innenpolitik in diesem Szenario; die Personalie sollte man als Signal, nicht als Selbstverständlichkeit lesen.\n- FT: Buchrezension (Helen Garner) – kulturelles Rauschen, kein Nachrichtenwert.\n\n**5. Sport / Ablenkung**\n- Fox News: Draymond Green-Eklat (NBA). Reines Unterhaltungs-/Empörungsfeed-Item, aber bezeichnend für die Nachrichtenlage: Sport liefert die emotionale Ventilfunktion am Wahltag.\n\n**6. Wetter**\n- NOAA Atlantic Outlook: nur der Kopf des Bulletins („000ABNT20… 700 AM EST Tue Nov 3\") – **kein Inhalt zu Stürmen** im Feed. Keine belastbare Aussage möglich; der Text bricht nach der Überschrift ab.\n\n**Querschnittsmuster & Einordnung**\n- **Timing-Kohärenz:** Alle geopolitischen/wirtschaftlichen Meldungen zielen auf den 3.11.2026 (Midterms). Das ist entweder ein echtes Ereigniscluster oder ein kuratierter Feed-Ausschnitt – die Dichte ist auffällig.\n- **Quellenhygiene:** Epoch Times und Fox sind parteilich; BBC/CBS, NZZ, WSJ, NYT, FT, Fed, CISA und NOAA sind unterschiedlich belastbar. Die VAE-Handelssuspendierung stammt aus einer einzelnen, tendenziösen Quelle – **vor Verwendung gegenprüfen**.\n- **Verknüpfung, die man im Auge behalten sollte:** Iran-Konflikt → Ölpreis → US-Inflation → Konsumentenstimmung → Midterm-Ergebnis. Genau diese Kette beschreiben NZZ und WSJ aus unterschiedlichen Winkeln.\n\n**Offene Punkte / zu verifizieren**\n1. Bestätigung der VAE-Handelssuspendierung durch eine zweite, neutrale Quelle (Reuters/AP).\n2. Ausmaß und Opferzahlen der Qeshm-Angriffe – bisher nur „limited and defensive\" aus US-Sicht.\n3. Ob die Ivanti-CVEs bereits in freier Wildbahn gegen kritische Infrastruktur genutzt werden (CISA sagt „active exploitation\", Details fehlen).\n4. Der NOAA-Bulletin-Text fehlt – keine Aussage zur atlantischen Aktivität möglich.\n\n**Fazit:** Die Lage ist die eines Landes (USA) im Wahlkampf-Endspurt unter externem Schock: militärische Eskalation am Golf, drohender Ölpreis-Effekt auf einen ohnehin fragilen Konsumenten, dazu eine akute Cyber-Bedrohung gegen Edge-Infrastruktur. Die symbolpolitischen und sportlichen Meldungen wirken daneben wie das übliche Rauschen – aber gerade ihre Platzierung am Wahltag macht sie zum Teil des Bildes: Ablenkung und Symbolik, während die materiellen Themen (Preise, Krieg, Sicherheit) den Ausschlag geben dürften.\n\nMACRO:\n**Datumsübersicht und relevante Ereignisse für den 3. November 2026:**\n\n1. **GDELT (epochtimes.com):**\n   - ** MISSILE THREAT: UAE SUSPENDS ALL TRADE WITH IRAN**\n     - Datum: 19.08.2026\n     - Details: Die Vereinigten Arabischen Emirate (VAE) haben aufgrund der Bedrohung durch Raketen ihren Handel mit Iran vollständig eingestellt.\n\n2. **Federal Reserve Press:**\n   - ** APPROVAL OF APPLICATION BY THE BANK OF NOVA SCOTIA**\n     - Details: Die Federal Reserve Board hat die Bewerbung von The Bank of Nova Scotia für eine bestimmte Genehmigung genehmigt.\n\n3. **CISA Cyber Alerts:**\n   - ** ADDITION OF TWO NEW VULNERABILITIES TO KEV CATALOG**\n     - Details: CISA hat zwei neue Schwachstellen (CVE-2026-111357 und CVE-2026-118527) zu seinem Known Exploited Vulnerabilities (KEV) Katalog hinzugefügt, da diese aktiv ausgenutzt werden.\n\n4. **Wall Street Journal (MarketWatch Alt):**\n   - **3 SIGNS CONSUMERS ARE NEARING A ‘SPEND-POPOLYSE’**\n     - Details: Fast 70% des US-BIP stammen von Verbrauchern. Der Artikel diskutiert Anzeichen, dass verarmte Verbraucher sich einer Ausgaben-Krise nähern, die die Wirtschaft beeinträchtigen könnte.\n\n5. **Fox News:**\n   - **DRAYMOND GREEN'S CONFRONTATION DURING WARRIORS GAME**\n     - Details: Draymond Green der Golden State Warriors hat während einem Spiel einen Gegner zu Boden geworfen und die Trikot eines anderen gegnerischen Spielers gepackt, was zu seiner Herauswürfigung führte. Die Warriors konnten trotzdem das Spiel gewinnen.\n\n6. **BBC World News:**\n   - **US STRIKES QESHM ISLAND AHEAD OF MIDTERM ELECTIONS**\n     - Details: US-Offizielle beschrieben die Angriffe auf die iranische Insel Qeshm als begrenzt und defensiv. Dies geschah kurz vor den Halbzeitwahlen in den USA.\n\n7. **NZZ International:**\n   - **HIGHER COSTS AS A MAJOR TOPIC IN MIDTERM ELECTIONS**\n     - Details: Die Wähler in den USA leiden unter steigenden Lebenskosten, die durch den Krieg in Iran und die Handelskonflikte von Donald Trump ausgelöst wurden. Drei Amerikaner berichten über ihre Erfahrungen.\n\n8. **New York Times World:**\n   - **KING CHARLES TO GIVE ‘UNFLINCHING’ SPEECH ON SLAVE TRADE**\n     - Details: König Charles und Premierminister Andy Burnham werden bei der Commonwealth-Konferenz in Antigua über die Rolle des Vereinigten Königreichs im Sklavenhandel sprechen.\n\n9. **Financial Times:**\n   - ** REVIEW OF 'THE SEASON' BY HELEN GARNER**\n     - Details: Ein Buchreview zu Helen Garners Werk \"The Season,\" das das Leben eines Fußballteams und die damit verbundenen Lebens lowes beschreibt.\n\n10. **NOAA National Hurricane Center:**\n    - **ATLANTIC TROPICAL WEATHER OUTLOOK**\n      - Details: Ein niedriges Druckgebiet bildet sich entlang einer abschwächenden Front etwa ein paar hundert Meilen südlich der Vereinigten Staaten. Es besteht das Potenzial für weitere Tätigkeit in den kommenden Tagen.\n\n11. **OCCRP (Organized Crime & Corruption):**\n    - **INDONESIA ASKS RUSSIA TO STOP RECRUITING ITS CITIZENS FOR UKRAINE WAR**\n      - Details: Indonesien fordert Russland auf, die Rekrutierung seiner Bürger für den Krieg in der Ukraine zu stoppen, da immer mehr Menschen durch fingierte Ziviljobs angelockt werden.\n\n12. **CDC Health:**\n    - ** (Keine spezifischen Details im angegebenen Text)**\n\nDiese Überblick bietet einen Schnellschuss der aktuellen Ereignisse und Entwicklungen auf verschiedenen Gebieten, von Geopolitik bis hin zu Wetterbedingungen und Öffentlichkeitswirkung.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\n\n\nMACRO:\n### Summary of Key News Items\n\n#### **[Zentralbank] Federal Reserve Press**\n- **Headline:** Federal Reserve Board announces approval of application by The Bank of Nova Scotia\n- **Summary:** The Federal Reserve Board has approved an application by The Bank of Nova Scotia, likely related to banking operations or regulatory compliance.\n\n#### **[Cyber / Infrastruktur] CISA Cyber Alerts**\n- **Headline:** Subnet Solutions PowerSYSTEM Center - View CSAF\n- **Summary:** A security vulnerability in Subnet Solutions PowerSYSTEM Center versions 2020 <=5.29.x (CVE-2026-63017) could allow attackers to execute unauthorized SQL commands and gain unauthorized access to resources.\n\n#### **[US/Finanzen] Wall Street Journal (MarketWatch Alt)**\n- **Headline:** ADP says businesses add 86,000 jobs in October. Labor market shows small signs of improvement.\n- **Summary:** The ADP report indicates that businesses added 86,000 jobs in October, showing minor improvements in the labor market, but caution remains among various industries.\n\n#### **[US/Politik] Fox News Latest**\n- **Headline:** Meet the far-left socialists coming to Congress next year\n- **Summary:** House Democrats will welcome several new far-left socialist lawmakers following the recent midterm elections, potentially shifting the political landscape within the party.\n\n#### **[US/Presse] New York Times World**\n- **Headline:** Countries Weigh, and Worry About, What Trump Will Do After Midterm Defeat\n- **Summary:** International commentators are analyzing the potential implications of President Trump's midterm electoral losses, particularly focusing on oil prices, the war on Iran, and the future of the Trump era.\n\n#### **[UK/Medien] BBC World News**\n- **Headline:** Trump takes aim at Republicans but says Democrats did a 'good job'\n- **Summary:** Trump posted on Truth Social that Republicans would have won \"in a landslide\" if his name had been on the ballot, while also acknowledging that Democrats performed well.\n\n#### **[CH/Presse] NZZ International**\n- **Headline:** Nach dem Rücktritt des Verkehrsministers werden in Spanien die Tragödien verrechnet\n- **Summary:** Spanish Prime Minister Pedro Sánchez has lost a close ally with the resignation of Transport Minister Óscar Puente. Sánchez plans to present the failed transport policies as a campaign issue.\n\n#### **[UK/Finanzen] Financial Times**\n- **Headline:** In Rome’s Long Shadow — enduring lessons for how we are governed\n- **Summary:** Jamie Gianoutsos's book explores how ancient Roman political debates about virtue and tyranny continue to influence modern governance, from revolutionary movements to contemporary democracies.\n\n#### **[Wetter/Extreme] NOAA National Hurricane Center**\n- **Headline:** Atlantic Tropical Weather Outlook\n- **Summary:** A broad area of low pressure is forming along a remnant frontal boundary in the Western and Central Atlantic, with potential for further development. The National Hurricane Center is monitoring the situation.\n\n#### **[Investigativ Net] ICIJ (Panama/Pandora Papers)**\n- **Headline:** A reclusive billionaire, a ‘fearless’ dealer and a globe-spanning feud over priceless art\n- **Summary:** The documentary \"The Oligarch and the Art Dealer\" uses information from the Panama Papers to delve into the multi-billion-dollar dispute between Russian billionaire Dmitry Rybolovlev and Swiss art broker Yves Bouvier.\n\n#### **[Medizin] CDC Health Updates**\n- **Headline:** Annual Report to the Nation: Progress Against Lung Cancer Drives Down Cancer Mortality\n- **Summary:** The latest U.S. cancer trends show a decline in cancer mortality, driven by significant progress in reducing lung cancer deaths.\n\n#### **[Cyber-Espionage]**\n- **Note:** The provided feed is incomplete. However, it likely pertains to a cyber-espionage incident or security breach. For a full report, additional details are needed.\n\n### Additional Context\n- **Economic and Political Climate:** The U.S. labor market is showing slight improvements, but political tensions remain high, particularly with the influx of far-left socialists into Congress and the aftermath of the midterm elections.\n- **International Relations:** The international community is closely watching the U.S. political landscape, especially regarding potential shifts in foreign policy.\n- **Cybersecurity Concerns:** The vulnerability in Subnet Solutions PowerSYSTEM Center underscores the ongoing need for robust cybersecurity measures in critical infrastructure.\n\nThis summary provides an overview of the key news items, highlighting economic, political, and security developments.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT31XN",
+      "name": "Flug TVF33CH",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.3487,
-      "lon": 27.4447,
-      "lng": 27.4447,
+      "lat": 42.0297,
+      "lon": 25.737,
+      "lng": 25.737,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT31XN | Höhe: 8.9 km | Speed: 788 km/h",
+      "description": "Callsign: TVF33CH | Höhe: 10.3 km | Speed: 840 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT3BV",
+      "name": "Flug PGT46DU",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.0885,
-      "lon": 28.015,
-      "lng": 28.015,
+      "lat": 41.37,
+      "lon": 27.838,
+      "lng": 27.838,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT3BV | Höhe: 7.7 km | Speed: 661 km/h",
+      "description": "Callsign: PGT46DU | Höhe: 8.5 km | Speed: 783 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DUKE87",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 43.1429,
-      "lon": 25.1881,
-      "lng": 25.1881,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: DUKE87 | Höhe: 4.7 km | Speed: 525 km/h",
-      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
-    },
-    {
-      "name": "Flug AIC57E",
+      "name": "Flug T7AKR20",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 27.1914,
-      "lon": 50.1745,
-      "lng": 50.1745,
+      "lat": 32.0217,
+      "lon": 36.1102,
+      "lng": 36.1102,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC57E | Höhe: 11.6 km | Speed: 791 km/h",
+      "description": "Callsign: T7AKR20 | Höhe: 1.3 km | Speed: 320 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug ELY354",
+      "name": "Flug BCP197",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.0531,
-      "lon": 34.9229,
-      "lng": 34.9229,
+      "lat": 34.6995,
+      "lon": 32.2732,
+      "lng": 32.2732,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ELY354 | Höhe: 0.3 km | Speed: 285 km/h",
+      "description": "Callsign: BCP197 | Höhe: 10.9 km | Speed: 701 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug THA636",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.1013,
-      "lon": 117.3556,
-      "lng": 117.3556,
+      "lat": 21.4284,
+      "lon": 118.6125,
+      "lng": 118.6125,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA636 | Höhe: 10.1 km | Speed: 878 km/h",
+      "description": "Callsign: THA636 | Höhe: 11.3 km | Speed: 838 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug T7AMY",
+      "name": "Flug AMU621",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.3761,
-      "lon": 120.3593,
-      "lng": 120.3593,
+      "lat": 24.5038,
+      "lon": 120.2532,
+      "lng": 120.2532,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: T7AMY | Höhe: 10.9 km | Speed: 868 km/h",
+      "description": "Callsign: AMU621 | Höhe: 7.5 km | Speed: 800 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "US-Angriffe auf die iranische Insel Qeshm (BBC, CBS als Quelle), als „limited and defensive\" gerahmt – *vor* den Midterms. Das Timing ist politisch hochgradig brisant.",
-    "Die Epoch Times (Vorsicht: parteiisch, hier als GDELT-Signal) meldet, die **Vereinigten Arabischen Emirate hätten allen Handel mit Iran ausgesetzt** – ein massiver regionaler Eskalationsmarker. Wenn ein Golfstaat wie die VAE derart reagiert, deutet das auf reale Bedrohungswahrnehmung (Raketen) hin, nicht nur Rhetorik.",
-    "NZZ rahmt es ökonomisch: Krieg + Trumps Handelskonflikte treiben Benzin-, Flug- und Warenpreise – die Lebenskosten werden zum bestimmenden Midterm-Thema.",
-    "WSJ/MarketWatch: „Spend-pocalypse\"-Warnung – 70 % des US-BIP hängen am Konsum. Zeichen eines klammernden Verbrauchers. Zusammen mit der NZZ-Story („bei den Eltern wohnen, ewig arbeiten\") ergibt sich ein kohärentes Bild: **Kostengetriebene Verunsicherung** trifft auf einen externen Ölpreis-Schock durch den Iran-Konflikt. Das ist der klassische Transmissionsriemen, über den Geopolitik in Wahlverhalten übersetzt wird.",
-    "CISA KEV: zwei **Ivanti Connect Secure**-Lücken (CVE-2026-111357: fehlende Authentifizierung; CVE-2026-118527: vorhersagbare Zufallszahlen) mit *aktiver Ausnutzung*. Ivanti-Produkte sind bei VPN-/Edge-Geräten von Behörden und Unternehmen verbreitet – das ist ein potenziell hochkritischer Angriffsvektor. Fehlende Authentifizierung + schwache Entropie ist eine gefährliche Kombination (Umgehung + Vorhersagbarkeit von Tokens/Schlüsseln)."
+    "Headline:** Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
+    "Summary:** The Federal Reserve Board has approved an application by The Bank of Nova Scotia, likely related to banking operations or regulatory compliance.",
+    "Headline:** Subnet Solutions PowerSYSTEM Center - View CSAF",
+    "Summary:** A security vulnerability in Subnet Solutions PowerSYSTEM Center versions 2020 <=5.29.x (CVE-2026-63017) could allow attackers to execute unauthorized SQL commands and gain unauthorized access to resources.",
+    "Headline:** ADP says businesses add 86,000 jobs in October. Labor market shows small signs of improvement."
   ],
   "geoscore": {
     "current_score": 72,
@@ -135,13 +124,13 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-03T13:24:17.569799+00:00",
+  "timestamp": "2026-11-04T13:33:13.507461+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-03T13:20:17.755192+00:00",
+    "timestamp": "2026-11-04T13:31:58.486952+00:00",
     "feeds_total": 224,
-    "feeds_successful": 113,
-    "feeds_failed": 111,
-    "gdelt_articles": 35,
+    "feeds_successful": 117,
+    "feeds_failed": 107,
+    "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
       "DeepSeek",
@@ -150,7 +139,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -168,7 +157,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 7,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
