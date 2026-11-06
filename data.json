@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided feed data, here is a structured overview of the key events and signals for November 5, 2026:\n\n**Middle East & Energy**\n- **UAE-Iran Trade Suspension:** The UAE has reportedly suspended all trade with Iran following missile threats, per a GDELT signal sourced from *The Epoch Times* (dated Aug 19, 2026). This suggests sustained Gulf-Iran tensions over the preceding months.\n- **Israeli Politics:** Netanyahu is alleging election fraud related to Arab voter turnout, though election officials state any foul play could not have affected the result (*NYT World*)...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided feed data, here is a structured overview of the key events and signals for November 5, 2026:\n\n**Middle East & Energy**\n- **UAE-Iran Trade Suspension:** The UAE has reportedly suspended all trade with Iran following missile threats, per a GDELT signal sourced from *The Epoch Times* (dated Aug 19, 2026). This s...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nNach den vorliegenden Feeds (Stand 06.11.2026) hier eine strukturierte Einordnung der wichtigsten Meldungen:\n\n**1. Geldpolitik / Finanzaufsicht (Federal Reserve)**\n- Die Fed beendet ein Enforcement-Verfahren gegen Allegiant United Holdings, Nano Financial Holdings und Nano Banc. Einzelheiten zu den Gründen nennt die Meldung nicht – typischerweise erfolgt eine Beendigung, wenn die beanstandeten Missstände behoben sind.\n\n**2. Cyber / Infrastruktur (CISA)**\n- CISA, das australische ACSC und die NSA haben gemeinsame Leitlinien plus eine Quick-Reference-Liste veröffentlicht, mit d...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nNach den vorliegenden Feeds (Stand 06.11.2026) hier eine strukturierte Einordnung der wichtigsten Meldungen:\n\n**1. Geldpolitik / Finanzaufsicht (Federal Reserve)**\n- Die Fed beendet ein Enforcement-Verfahren gegen Allegiant United Holdings, Nano Financial Holdings und Nano Banc. Einzelheiten zu den Gründen nennt die Meldung nicht ...",
   "key_takeaways": [
-    "UAE-Iran Trade Suspension:** The UAE has reportedly suspended all trade with Iran following missile threats, per a GDELT signal sourced from *The Epoch Times* (dated Aug 19, 2026). This suggests sustained Gulf-Iran tensions over the preceding months.",
-    "Israeli Politics:** Netanyahu is alleging election fraud related to Arab voter turnout, though election officials state any foul play could not have affected the result (*NYT World*). This indicates post-election instability in Israel.",
-    "Archaeology:** A 2,000-year-old ritual bathing complex (mikva'ot) has been discovered near Jerusalem's Temple Mount (*Fox News*).",
-    "Midterm Aftermath:** The *NZZ* reports a Democratic \"election triumph,\" with historic wins in conservative strongholds and the party set to take both chambers of Congress after two years in opposition. Trump is described as a \"ballast\" for Republicans.",
-    "GOP Infighting:** Vice President Vance delivered a scathing critique of the Republican election defeat, blaming the Iran war—marking one of the sharpest breaks with a sitting president in recent memory (*BBC*)."
+    "Die Fed beendet ein Enforcement-Verfahren gegen Allegiant United Holdings, Nano Financial Holdings und Nano Banc. Einzelheiten zu den Gründen nennt die Meldung nicht – typischerweise erfolgt eine Beendigung, wenn die beanstandeten Missstände behoben sind.",
+    "CISA, das australische ACSC und die NSA haben gemeinsame Leitlinien plus eine Quick-Reference-Liste veröffentlicht, mit der Organisationen die PQC-Bereitschaft ihrer Anbieter bewerten können (Post-Quanten-Kryptographie). Praktisch relevant für Beschaffung und Vendor-Risikomanagement.",
+    "NYT:** In der Ukraine herrscht vorsichtiger Optimismus (teils mit Humor) angesichts des Wahlsiegs der Demokraten – dieser könnte den Verlauf der Friedensverhandlungen und des bald fünf Jahre dauernden Krieges beeinflussen.",
+    "Fox News:** James Carville rät den Demokraten, nach dem historischen Midterm-Sieg DEI- und „woke\"-Themen zu meiden – die Bevölkerung habe diese „gehasst\".",
+    "BBC:** Das Weiße Haus dementiert Berichte, wonach Hegseth und Rubio ihre Posten verlassen sollen. Hegseth steht laut US-Medien vor einem möglichen Impeachment-Votum; Rubio wird eine Präsidentschaftsambition nachgesagt."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the provided feed data, here is a structured overview of the key events and signals for November 5, 2026:\n\n**Middle East & Energy**\n- **UAE-Iran Trade Suspension:** The UAE has reportedly suspended all trade with Iran following missile threats, per a GDELT signal sourced from *The Epoch Times* (dated Aug 19, 2026). This suggests sustained Gulf-Iran tensions over the preceding months.\n- **Israeli Politics:** Netanyahu is alleging election fraud related to Arab voter turnout, though election officials state any foul play could not have affected the result (*NYT World*). This indicates post-election instability in Israel.\n- **Archaeology:** A 2,000-year-old ritual bathing complex (mikva'ot) has been discovered near Jerusalem's Temple Mount (*Fox News*).\n\n**US Politics & Economy**\n- **Midterm Aftermath:** The *NZZ* reports a Democratic \"election triumph,\" with historic wins in conservative strongholds and the party set to take both chambers of Congress after two years in opposition. Trump is described as a \"ballast\" for Republicans.\n- **GOP Infighting:** Vice President Vance delivered a scathing critique of the Republican election defeat, blaming the Iran war—marking one of the sharpest breaks with a sitting president in recent memory (*BBC*).\n- **Fed Action:** The Federal Reserve Board approved an application by The Bank of Nova Scotia.\n- **Personal Finance:** A *MarketWatch* column highlights an adviser pushing Roth conversions for an octogenarian couple with $950,000 in traditional IRAs and $110,000 in annual pensions/Social Security.\n\n**Finance & Cyber**\n- **Bank Hack:** French bank Crédit Mutuel Arkéa is seeking to recover funds after a €100mn hack, using techniques echoing the recent Binance crypto exchange breach (*FT*).\n\n**Weather**\n- **Atlantic Outlook:** The NOAA National Hurricane Center is tracking a broad, non-tropical low pressure area a few hundred miles south of Bermuda in the western/central Atlantic.\n\n**Corruption & Justice**\n- **Iraq:** OCCRP reports Iraq has jailed a former oil boss for eight years over corruption-related charges.\n\n**Summary Signal:** The dominant themes are escalating Gulf-Iran tensions affecting trade, a decisive US Democratic midterm victory with internal GOP recrimination over the Iran war, and continued cyber-fraud risks in European banking.\n\nMACRO:\nEs scheint, dass der letzte Eintrag des Citizen Lab abgeschnitten wurde. Hier ist eine Übersicht der wichtigsten Punkte aus den bereitgestellten Feeds:\n\n### geopolitische und internationale Ereignisse:\n- **UAE/Iran**: Die Vereinigten Arabischen Emirate (UAE) haben aus Angst vor einem Raketenangriff von Iran alle Handelsbeziehungen zum Iran eingestellt. (Epoch Times, 20.08.2026)\n- **Israel**: Der israelische Premierminister Netanyahu behauptet, dass arabische Wähler die Wahl manipuliert hätten. Wahlbehörden untersuchen dies, glauben aber nicht, dass dies den Ergebnis signifikant beeinflusst hätte. (New York Times, 05.11.2026)\n- **USA**: Die Demokraten haben bei den Midterms in den USA einen Wahlsieg erzielt, insbesondere in konservativen Regionen. Präsident Trump gilt als Ballast für die Republikanische Partei. (NZZ International, 05.11.2026)\n- **UK/USA**: Vizepräsident Mike Pence kritisiert scharf die Niederlage der Republikaner bei den Wahlen und wirft Iran vor, den Krieg angezettelt zu haben. (BBC World News, 05.11.2026)\n\n### Wirtschaft und Finanzen:\n- **Finanzdienstleistungen**: Die Federal Reserve hat die Anwendung der Bank of Nova Scotia genehmigt. (Federal Reserve Press, 05.11.2026)\n- **Investitionsstrategie**: Ein Bericht im Wall Street Journal diskutiert, warum Berater Senioren dazu anraten, ihre traditionellen IRAs in Roth-IRAs umzuwandeln. (MarketWatch, 05.11.2026)\n- **Kriminalität**: Der ehemalige Öl-Chef in Iraq wurde wegen eines Bestechungsschemas zu acht Jahren Haft verurteilt und muss 36 Millionen Dollar an Bußgeld zahlen. (OCCRP, 05.11.2026)\n- **Cyberangriffe**: Die französische Bank Crédit Mutuel Arkéa versucht, 100 Millionen Euro zurückzugewinnen, die bei einem Cyberangriff gestohlen wurden. (Financial Times, 05.11.2026)\n\n### Wissenschaft und Gesundheit:\n- **Archäologie**: In der Nähe des Tempelbergs in Jerusalem wurde eine 2.000 Jahre alte rituelle Badestätte entdeckt. (Fox News, 05.11.2026)\n- **Medizin**: Der jährliche Bericht des CDC zeigt Fortschritte in der Bekämpfung von Lungenkrebs und eine Abnahme der Krebsmortalität. (CDC Health Updates, 05.11.2026)\n\n### Wetter und Umwelt:\n- **Tropical Weather Outlook**: Das National Hurricane Center gibt einen Wetterbericht für den Atlantik heraus, in dem ein umfängliches, nicht-tropisches Tiefdruckgebiet südlich von Bermuda erwähnt wird. (NOAA National Hurricane Center, 05.11.2026)\n\n### Cyber-Sicherheit:\n- **Citizen Lab**: Die Forscher des Citizen Lab haben Preise für ihre Arbeit zum industrieüblichen Netzwerksicherheit gewonnen, obwohl der genaue Inhalt des Artikels fehlt. (Citizen Lab, 05.11.2026)\n\nDiese Informationen geben einen umfassenden Überblick über die aktuellen Ereignisse in verschiedenen Bereichen.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nNach den vorliegenden Feeds (Stand 06.11.2026) hier eine strukturierte Einordnung der wichtigsten Meldungen:\n\n**1. Geldpolitik / Finanzaufsicht (Federal Reserve)**\n- Die Fed beendet ein Enforcement-Verfahren gegen Allegiant United Holdings, Nano Financial Holdings und Nano Banc. Einzelheiten zu den Gründen nennt die Meldung nicht – typischerweise erfolgt eine Beendigung, wenn die beanstandeten Missstände behoben sind.\n\n**2. Cyber / Infrastruktur (CISA)**\n- CISA, das australische ACSC und die NSA haben gemeinsame Leitlinien plus eine Quick-Reference-Liste veröffentlicht, mit der Organisationen die PQC-Bereitschaft ihrer Anbieter bewerten können (Post-Quanten-Kryptographie). Praktisch relevant für Beschaffung und Vendor-Risikomanagement.\n\n**3. US-Politik nach den Midterms**\n- **NYT:** In der Ukraine herrscht vorsichtiger Optimismus (teils mit Humor) angesichts des Wahlsiegs der Demokraten – dieser könnte den Verlauf der Friedensverhandlungen und des bald fünf Jahre dauernden Krieges beeinflussen.\n- **Fox News:** James Carville rät den Demokraten, nach dem historischen Midterm-Sieg DEI- und „woke\"-Themen zu meiden – die Bevölkerung habe diese „gehasst\".\n- **BBC:** Das Weiße Haus dementiert Berichte, wonach Hegseth und Rubio ihre Posten verlassen sollen. Hegseth steht laut US-Medien vor einem möglichen Impeachment-Votum; Rubio wird eine Präsidentschaftsambition nachgesagt.\n\n**4. Europa / Sicherheit (NZZ)**\n- Seit Tagen häufen sich Bombendrohungen gegen Passagierflüge und Flughäfen in Europa; mehrere Maschinen mussten umgeleitet, weitere untersucht werden. Die Hintergründe sind laut Bericht noch unklar.\n\n**5. Finanzen / Lebensentscheidungen (WSJ/MarketWatch)**\n- Ein 55-Jähriger mit Hirntumor fragt in der Ratgeberkolumne, ob er sich einen Porsche für 210.000 Dollar gönnen soll – bei dem Wunsch, seinen Söhnen ein bedeutendes Erbe zu hinterlassen. Klassische Frage nach Lebensqualität vs. Vermögenserhalt.\n\n**6. Kulturbetrieb (FT)**\n- Buchbesprechungen der Woche: u. a. Öl als Treibstoff von Kriegen, eine Klage über Gaza, Roms Lehren für die Demokratie, Helen Garners „Footy\"-Memoiren, Jonathan Coes neuer Roman, eine Cormac-McCarthy-Biografie, Leben im ehemaligen West-Berlin sowie Umwelt-Titel.\n\n**7. Wetter (NOAA)**\n- Der Atlantic Tropical Weather Outlook vom 06.11. meldet keine akuten Systeme im Atlantik (Meldung endet ohne weitere Details).\n\n**Querschnittsbeobachtung:** Zwei rote Fäden – (a) die innen- und außenpolitischen Folgen des US-Midterm-Ergebnisses (Ukraine, Kabinett, Demokraten-Strategie), (b) Sicherheits- und Technologiethemen (Bombendrohungen in Europa, PQC-Vorsorge). Der Fed-Punkt ist eine routinehafte Aufsichtsmeldung ohne erkennbare Marktrelevanz.\n\nMACRO:\n### 06.11.2026 Highlights\n\n#### **Zentralbank: Federal Reserve Press**\n- **Termination of Enforcement Action**: The Federal Reserve Board has announced the termination of enforcement actions with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc. This indicates that these financial institutions have met the necessary regulatory requirements.\n\n#### **Cyber / Infrastruktur: CISA Cyber Alerts**\n- **Post-Quantum Cryptography (PQC) Guidance**: CISA, the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC), and the National Security Agency (NSA) have released joint guidance and a quick-reference list to help organizations assess vendor readiness for transitioning to post-quantum cryptography. This is crucial for maintaining cybersecurity in the face of quantum computing advancements.\n\n#### **US/Finanzen: Wall Street Journal (MarketWatch Alt)**\n- **Financial Decision Amid Health Crisis**: A 55-year-old man with a brain tumor is considering whether to purchase a $210,000 Porsche. He wants to balance personal enjoyment with leaving a meaningful legacy for his two sons, raising important questions about financial planning and personal values.\n\n#### **US/Presse: New York Times World**\n- **Ukraine’s Response to US Midterms**: There is guarded optimism in Ukraine following the Democratic victory in the US midterms. The outcome could influence peace negotiations and the ongoing war, which has lasted nearly four years. Ukraine hopes for continued strong US support.\n\n#### **US/Politik: Fox News Latest**\n- **James Carville’s Caution to Democrats**: James Carville is advising Democrats to avoid focusing on Diversity, Equity, and Inclusion (DEI) policies after their midterm victories. He warns that the country \"hated it,\" suggesting a need for a more moderate approach to maintain voter support.\n\n#### **CH/Presse: NZZ International**\n- **Bomb Threats in Europe**: Europe has seen a surge in bomb threats against passenger flights and airports. Several aircraft have been redirected, and others have undergone extensive security checks. The incidents are causing significant disruption and raising security concerns.\n\n#### **UK/Medien: BBC World News**\n- **Political Speculation Post-Elections**: Reports suggest there are calls for Pete Hegseth to be replaced, possibly facing an impeachment vote. Meanwhile, Marco Rubio is rumored to be considering a presidential run following Republican election losses.\n\n#### **UK/Finanzen: Financial Times**\n- **Best Books of the Week**: A selection of notable books, including works on oil and war, a lament for Gaza, lessons from ancient Rome, and a biography of Cormac McCarthy. The list also includes a football memoir by Helen Garner, a new novel by Jonathan Coe, and a focus on environmental titles.\n\n#### **Wetter/Extreme: NOAA National Hurricane Center**\n- **Atlantic Tropical Weather Outlook**: A non-tropical low-pressure area is located several hundred miles south of Bermuda. While it is not expected to develop into a tropical storm, it is causing gale-force winds, and the National Hurricane Center is monitoring the situation.\n\n#### **Investigativ Net: ICIJ (Panama/Pandora Papers)**\n- **ICBC and European Wind Market**: Investigative reports reveal how the banking giant ICBC has facilitated Chinese firms in gaining a foothold in Europe’s wind market. Confidential records show that the state bank has provided significant financial support to Chinese competitors, raising concerns about market competition and influence.\n\nThese updates cover a range of important topics from financial regulations to cybersecurity, politics, and environmental concerns, reflecting the diverse and interconnected nature of global events.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,69 +27,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT58YR",
+      "name": "Flug PGT85ME",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.828,
-      "lon": 29.1489,
-      "lng": 29.1489,
+      "lat": 40.6305,
+      "lon": 30.7041,
+      "lng": 30.7041,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT58YR | Höhe: 0.8 km | Speed: 318 km/h",
+      "description": "Callsign: PGT85ME | Höhe: 8.3 km | Speed: 846 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT16TF",
+      "name": "Flug PGT87XP",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8447,
-      "lon": 29.194,
-      "lng": 29.194,
+      "lat": 41.5921,
+      "lon": 28.636,
+      "lng": 28.636,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT16TF | Höhe: 0.6 km | Speed: 235 km/h",
+      "description": "Callsign: PGT87XP | Höhe: 8.8 km | Speed: 836 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XDAN",
+      "name": "Flug DUKE60",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 44.5288,
+      "lon": 28.0455,
+      "lng": 28.0455,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: DUKE60 | Höhe: 5.2 km | Speed: 273 km/h",
+      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
+    },
+    {
+      "name": "Flug 4XCDE",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.3246,
-      "lon": 35.3858,
-      "lng": 35.3858,
+      "lat": 32.8201,
+      "lon": 35.013,
+      "lng": 35.013,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XDAN | Höhe: 2.9 km | Speed: 133 km/h",
+      "description": "Callsign: 4XCDE | Höhe: 0.8 km | Speed: 197 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XBEC",
+      "name": "Flug IAW145",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.1805,
-      "lon": 34.8332,
-      "lng": 34.8332,
+      "lat": 30.5002,
+      "lon": 35.9295,
+      "lng": 35.9295,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XBEC | Höhe: 0.1 km | Speed: 71 km/h",
+      "description": "Callsign: IAW145 | Höhe: 9.9 km | Speed: 758 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA636",
+      "name": "Flug UPS77",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.8166,
-      "lon": 120.1565,
-      "lng": 120.1565,
+      "lat": 25.3028,
+      "lon": 122.2134,
+      "lng": 122.2134,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA636 | Höhe: 10.8 km | Speed: 817 km/h",
+      "description": "Callsign: UPS77 | Höhe: 9.4 km | Speed: 952 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DKH1292",
+      "name": "Flug QDA908",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.8517,
-      "lon": 119.6523,
-      "lng": 119.6523,
+      "lat": 24.1521,
+      "lon": 117.7345,
+      "lng": 117.7345,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: DKH1292 | Höhe: 9.5 km | Speed: 857 km/h",
+      "description": "Callsign: QDA908 | Höhe: 10.7 km | Speed: 888 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -105,11 +116,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "UAE-Iran Trade Suspension:** The UAE has reportedly suspended all trade with Iran following missile threats, per a GDELT signal sourced from *The Epoch Times* (dated Aug 19, 2026). This suggests sustained Gulf-Iran tensions over the preceding months.",
-    "Israeli Politics:** Netanyahu is alleging election fraud related to Arab voter turnout, though election officials state any foul play could not have affected the result (*NYT World*). This indicates post-election instability in Israel.",
-    "Archaeology:** A 2,000-year-old ritual bathing complex (mikva'ot) has been discovered near Jerusalem's Temple Mount (*Fox News*).",
-    "Midterm Aftermath:** The *NZZ* reports a Democratic \"election triumph,\" with historic wins in conservative strongholds and the party set to take both chambers of Congress after two years in opposition. Trump is described as a \"ballast\" for Republicans.",
-    "GOP Infighting:** Vice President Vance delivered a scathing critique of the Republican election defeat, blaming the Iran war—marking one of the sharpest breaks with a sitting president in recent memory (*BBC*)."
+    "Die Fed beendet ein Enforcement-Verfahren gegen Allegiant United Holdings, Nano Financial Holdings und Nano Banc. Einzelheiten zu den Gründen nennt die Meldung nicht – typischerweise erfolgt eine Beendigung, wenn die beanstandeten Missstände behoben sind.",
+    "CISA, das australische ACSC und die NSA haben gemeinsame Leitlinien plus eine Quick-Reference-Liste veröffentlicht, mit der Organisationen die PQC-Bereitschaft ihrer Anbieter bewerten können (Post-Quanten-Kryptographie). Praktisch relevant für Beschaffung und Vendor-Risikomanagement.",
+    "NYT:** In der Ukraine herrscht vorsichtiger Optimismus (teils mit Humor) angesichts des Wahlsiegs der Demokraten – dieser könnte den Verlauf der Friedensverhandlungen und des bald fünf Jahre dauernden Krieges beeinflussen.",
+    "Fox News:** James Carville rät den Demokraten, nach dem historischen Midterm-Sieg DEI- und „woke\"-Themen zu meiden – die Bevölkerung habe diese „gehasst\".",
+    "BBC:** Das Weiße Haus dementiert Berichte, wonach Hegseth und Rubio ihre Posten verlassen sollen. Hegseth steht laut US-Medien vor einem möglichen Impeachment-Votum; Rubio wird eine Präsidentschaftsambition nachgesagt."
   ],
   "geoscore": {
     "current_score": 72,
@@ -124,13 +135,13 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-05T13:47:32.755095+00:00",
+  "timestamp": "2026-11-06T13:30:59.990891+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-05T13:45:57.666602+00:00",
+    "timestamp": "2026-11-06T13:29:55.920410+00:00",
     "feeds_total": 224,
-    "feeds_successful": 115,
-    "feeds_failed": 109,
-    "gdelt_articles": 35,
+    "feeds_successful": 117,
+    "feeds_failed": 107,
+    "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
       "DeepSeek",
@@ -139,7 +150,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (7 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -157,7 +168,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 6,
+    "hotspots_now": 7,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
