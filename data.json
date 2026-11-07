@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nNach den vorliegenden Feeds (Stand 06.11.2026) hier eine strukturierte Einordnung der wichtigsten Meldungen:\n\n**1. Geldpolitik / Finanzaufsicht (Federal Reserve)**\n- Die Fed beendet ein Enforcement-Verfahren gegen Allegiant United Holdings, Nano Financial Holdings und Nano Banc. Einzelheiten zu den Gründen nennt die Meldung nicht – typischerweise erfolgt eine Beendigung, wenn die beanstandeten Missstände behoben sind.\n\n**2. Cyber / Infrastruktur (CISA)**\n- CISA, das australische ACSC und die NSA haben gemeinsame Leitlinien plus eine Quick-Reference-Liste veröffentlicht, mit d...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nNach den vorliegenden Feeds (Stand 06.11.2026) hier eine strukturierte Einordnung der wichtigsten Meldungen:\n\n**1. Geldpolitik / Finanzaufsicht (Federal Reserve)**\n- Die Fed beendet ein Enforcement-Verfahren gegen Allegiant United Holdings, Nano Financial Holdings und Nano Banc. Einzelheiten zu den Gründen nennt die Meldung nicht ...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **November 7, 2026**, here is a synthesized situational report across the key domains:\n\n---\n\n### **1. US Politics & Governance: A Hardline Shift**\n- **Trump Names Stephen Miller Chief of Staff:** Shortly after the midterms, President Trump has appointed **Stephen Miller** — a hardline immigration hawk and loyal partisan — as his new chief of staff, succeeding Susie Wiles. Both **NZZ International** and **BBC World News** frame this as a signal that Trump is preparing for confrontation with Congress, particularly on immigration and executive aut...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **November 7, 2026**, here is a synthesized situational report across the key domains:\n\n---\n\n### **1. US Politics & Governance: A Hardline Shift**\n- **Trump Names Stephen Miller Chief of Staff:** Shortly after the midterms, President Trump has appointed **Stephen Miller** — a hardline immigration ha...",
   "key_takeaways": [
-    "Die Fed beendet ein Enforcement-Verfahren gegen Allegiant United Holdings, Nano Financial Holdings und Nano Banc. Einzelheiten zu den Gründen nennt die Meldung nicht – typischerweise erfolgt eine Beendigung, wenn die beanstandeten Missstände behoben sind.",
-    "CISA, das australische ACSC und die NSA haben gemeinsame Leitlinien plus eine Quick-Reference-Liste veröffentlicht, mit der Organisationen die PQC-Bereitschaft ihrer Anbieter bewerten können (Post-Quanten-Kryptographie). Praktisch relevant für Beschaffung und Vendor-Risikomanagement.",
-    "NYT:** In der Ukraine herrscht vorsichtiger Optimismus (teils mit Humor) angesichts des Wahlsiegs der Demokraten – dieser könnte den Verlauf der Friedensverhandlungen und des bald fünf Jahre dauernden Krieges beeinflussen.",
-    "Fox News:** James Carville rät den Demokraten, nach dem historischen Midterm-Sieg DEI- und „woke\"-Themen zu meiden – die Bevölkerung habe diese „gehasst\".",
-    "BBC:** Das Weiße Haus dementiert Berichte, wonach Hegseth und Rubio ihre Posten verlassen sollen. Hegseth steht laut US-Medien vor einem möglichen Impeachment-Votum; Rubio wird eine Präsidentschaftsambition nachgesagt."
+    "Trump Names Stephen Miller Chief of Staff:** Shortly after the midterms, President Trump has appointed **Stephen Miller** — a hardline immigration hawk and loyal partisan — as his new chief of staff, succeeding Susie Wiles. Both **NZZ International** and **BBC World News** frame this as a signal that Trump is preparing for confrontation with Congress, particularly on immigration and executive authority. The timing (post-midterms) suggests a strategic pivot toward aggressive policy implementation rather than compromise.",
+    "Implication:** Expect intensified legislative battles, possible government shutdown risks, and a more combative White House posture heading into the 2027 legislative session.",
+    "Gadi Eisenkot Poised to Replace Netanyahu:** According to **The New York Times**, former army chief **Gadi Eisenkot** is positioned to attempt forming a new Israeli government, potentially ending Netanyahu's tenure. The NYT describes the obstacles as \"formidable\" — likely coalition fragmentation, security challenges, and Netanyahu's legal/political resilience.",
+    "Implication:** A potential leadership transition in Israel could reshape ceasefire negotiations, judicial reform debates, and regional security coordination.",
+    "CISA KEV Addition — SonicWall SonicOS SSLVPN (CVE-2026-19868):** CISA has added a **single-factor authentication vulnerability** in SonicWall's SSLVPN to its Known Exploited Vulnerabilities catalog, citing **evidence of active exploitation**. This is a frequent attack vector for malicious actors targeting remote access infrastructure."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nNach den vorliegenden Feeds (Stand 06.11.2026) hier eine strukturierte Einordnung der wichtigsten Meldungen:\n\n**1. Geldpolitik / Finanzaufsicht (Federal Reserve)**\n- Die Fed beendet ein Enforcement-Verfahren gegen Allegiant United Holdings, Nano Financial Holdings und Nano Banc. Einzelheiten zu den Gründen nennt die Meldung nicht – typischerweise erfolgt eine Beendigung, wenn die beanstandeten Missstände behoben sind.\n\n**2. Cyber / Infrastruktur (CISA)**\n- CISA, das australische ACSC und die NSA haben gemeinsame Leitlinien plus eine Quick-Reference-Liste veröffentlicht, mit der Organisationen die PQC-Bereitschaft ihrer Anbieter bewerten können (Post-Quanten-Kryptographie). Praktisch relevant für Beschaffung und Vendor-Risikomanagement.\n\n**3. US-Politik nach den Midterms**\n- **NYT:** In der Ukraine herrscht vorsichtiger Optimismus (teils mit Humor) angesichts des Wahlsiegs der Demokraten – dieser könnte den Verlauf der Friedensverhandlungen und des bald fünf Jahre dauernden Krieges beeinflussen.\n- **Fox News:** James Carville rät den Demokraten, nach dem historischen Midterm-Sieg DEI- und „woke\"-Themen zu meiden – die Bevölkerung habe diese „gehasst\".\n- **BBC:** Das Weiße Haus dementiert Berichte, wonach Hegseth und Rubio ihre Posten verlassen sollen. Hegseth steht laut US-Medien vor einem möglichen Impeachment-Votum; Rubio wird eine Präsidentschaftsambition nachgesagt.\n\n**4. Europa / Sicherheit (NZZ)**\n- Seit Tagen häufen sich Bombendrohungen gegen Passagierflüge und Flughäfen in Europa; mehrere Maschinen mussten umgeleitet, weitere untersucht werden. Die Hintergründe sind laut Bericht noch unklar.\n\n**5. Finanzen / Lebensentscheidungen (WSJ/MarketWatch)**\n- Ein 55-Jähriger mit Hirntumor fragt in der Ratgeberkolumne, ob er sich einen Porsche für 210.000 Dollar gönnen soll – bei dem Wunsch, seinen Söhnen ein bedeutendes Erbe zu hinterlassen. Klassische Frage nach Lebensqualität vs. Vermögenserhalt.\n\n**6. Kulturbetrieb (FT)**\n- Buchbesprechungen der Woche: u. a. Öl als Treibstoff von Kriegen, eine Klage über Gaza, Roms Lehren für die Demokratie, Helen Garners „Footy\"-Memoiren, Jonathan Coes neuer Roman, eine Cormac-McCarthy-Biografie, Leben im ehemaligen West-Berlin sowie Umwelt-Titel.\n\n**7. Wetter (NOAA)**\n- Der Atlantic Tropical Weather Outlook vom 06.11. meldet keine akuten Systeme im Atlantik (Meldung endet ohne weitere Details).\n\n**Querschnittsbeobachtung:** Zwei rote Fäden – (a) die innen- und außenpolitischen Folgen des US-Midterm-Ergebnisses (Ukraine, Kabinett, Demokraten-Strategie), (b) Sicherheits- und Technologiethemen (Bombendrohungen in Europa, PQC-Vorsorge). Der Fed-Punkt ist eine routinehafte Aufsichtsmeldung ohne erkennbare Marktrelevanz.\n\nMACRO:\n### 06.11.2026 Highlights\n\n#### **Zentralbank: Federal Reserve Press**\n- **Termination of Enforcement Action**: The Federal Reserve Board has announced the termination of enforcement actions with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc. This indicates that these financial institutions have met the necessary regulatory requirements.\n\n#### **Cyber / Infrastruktur: CISA Cyber Alerts**\n- **Post-Quantum Cryptography (PQC) Guidance**: CISA, the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC), and the National Security Agency (NSA) have released joint guidance and a quick-reference list to help organizations assess vendor readiness for transitioning to post-quantum cryptography. This is crucial for maintaining cybersecurity in the face of quantum computing advancements.\n\n#### **US/Finanzen: Wall Street Journal (MarketWatch Alt)**\n- **Financial Decision Amid Health Crisis**: A 55-year-old man with a brain tumor is considering whether to purchase a $210,000 Porsche. He wants to balance personal enjoyment with leaving a meaningful legacy for his two sons, raising important questions about financial planning and personal values.\n\n#### **US/Presse: New York Times World**\n- **Ukraine’s Response to US Midterms**: There is guarded optimism in Ukraine following the Democratic victory in the US midterms. The outcome could influence peace negotiations and the ongoing war, which has lasted nearly four years. Ukraine hopes for continued strong US support.\n\n#### **US/Politik: Fox News Latest**\n- **James Carville’s Caution to Democrats**: James Carville is advising Democrats to avoid focusing on Diversity, Equity, and Inclusion (DEI) policies after their midterm victories. He warns that the country \"hated it,\" suggesting a need for a more moderate approach to maintain voter support.\n\n#### **CH/Presse: NZZ International**\n- **Bomb Threats in Europe**: Europe has seen a surge in bomb threats against passenger flights and airports. Several aircraft have been redirected, and others have undergone extensive security checks. The incidents are causing significant disruption and raising security concerns.\n\n#### **UK/Medien: BBC World News**\n- **Political Speculation Post-Elections**: Reports suggest there are calls for Pete Hegseth to be replaced, possibly facing an impeachment vote. Meanwhile, Marco Rubio is rumored to be considering a presidential run following Republican election losses.\n\n#### **UK/Finanzen: Financial Times**\n- **Best Books of the Week**: A selection of notable books, including works on oil and war, a lament for Gaza, lessons from ancient Rome, and a biography of Cormac McCarthy. The list also includes a football memoir by Helen Garner, a new novel by Jonathan Coe, and a focus on environmental titles.\n\n#### **Wetter/Extreme: NOAA National Hurricane Center**\n- **Atlantic Tropical Weather Outlook**: A non-tropical low-pressure area is located several hundred miles south of Bermuda. While it is not expected to develop into a tropical storm, it is causing gale-force winds, and the National Hurricane Center is monitoring the situation.\n\n#### **Investigativ Net: ICIJ (Panama/Pandora Papers)**\n- **ICBC and European Wind Market**: Investigative reports reveal how the banking giant ICBC has facilitated Chinese firms in gaining a foothold in Europe’s wind market. Confidential records show that the state bank has provided significant financial support to Chinese competitors, raising concerns about market competition and influence.\n\nThese updates cover a range of important topics from financial regulations to cybersecurity, politics, and environmental concerns, reflecting the diverse and interconnected nature of global events.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **November 7, 2026**, here is a synthesized situational report across the key domains:\n\n---\n\n### **1. US Politics & Governance: A Hardline Shift**\n- **Trump Names Stephen Miller Chief of Staff:** Shortly after the midterms, President Trump has appointed **Stephen Miller** — a hardline immigration hawk and loyal partisan — as his new chief of staff, succeeding Susie Wiles. Both **NZZ International** and **BBC World News** frame this as a signal that Trump is preparing for confrontation with Congress, particularly on immigration and executive authority. The timing (post-midterms) suggests a strategic pivot toward aggressive policy implementation rather than compromise.\n- **Implication:** Expect intensified legislative battles, possible government shutdown risks, and a more combative White House posture heading into the 2027 legislative session.\n\n---\n\n### **2. Middle East: Israel's Political Upheaval**\n- **Gadi Eisenkot Poised to Replace Netanyahu:** According to **The New York Times**, former army chief **Gadi Eisenkot** is positioned to attempt forming a new Israeli government, potentially ending Netanyahu's tenure. The NYT describes the obstacles as \"formidable\" — likely coalition fragmentation, security challenges, and Netanyahu's legal/political resilience.\n- **Implication:** A potential leadership transition in Israel could reshape ceasefire negotiations, judicial reform debates, and regional security coordination.\n\n---\n\n### **3. Cybersecurity: Active Exploitation Alert**\n- **CISA KEV Addition — SonicWall SonicOS SSLVPN (CVE-2026-19868):** CISA has added a **single-factor authentication vulnerability** in SonicWall's SSLVPN to its Known Exploited Vulnerabilities catalog, citing **evidence of active exploitation**. This is a frequent attack vector for malicious actors targeting remote access infrastructure.\n- **Actionable:** Organizations using SonicWall SSLVPN should immediately enforce MFA, patch per vendor guidance, and audit for indicators of compromise. This is a **priority remediation** item under BOD 22-01 for US federal agencies.\n\n---\n\n### **4. Finance & Economy**\n- **US Retirement Crisis Signal (WSJ/MarketWatch):** A 66-year-old reliant on Social Security with only **$500 in savings** asks, \"What hope do I have?\" — a stark illustration of the retirement savings gap affecting millions of Americans. The piece raises systemic questions about wealth inequality and the adequacy of the social safety net.\n- **New Zealand Politics (FT):** The **National Party** is projected to cling to power, with the rightwing bloc winning enough seats to form a government. This suggests policy continuity in Wellington — likely favoring business-friendly, center-right governance.\n- **Fed Communication (Bowman):** A speech on **\"Supervisory Modernization After Silicon Valley Bank\"** at the Bangkok Economic Festival signals ongoing regulatory recalibration in the US banking sector, likely addressing lessons from the 2023 SVB collapse — capital requirements, liquidity risk management, and supervisory agility.\n\n---\n\n### **5. Climate & Weather**\n- **Atlantic Tropical Weather Outlook (NOAA):** A **non-tropical low pressure area (AL94)** is being monitored several hundred miles south-southeast of Bermuda. While currently non-tropical, it bears watching for potential subtropical or tropical development. No immediate coastal threats indicated, but maritime interests in the Western/Central Atlantic should monitor.\n\n---\n\n### **6. Media & Culture**\n- **BYU Football & NIL (Fox News):** NFL legend **Steve Young** credits BYU's success in the NIL era to its honor code and unique culture under coach Kalani Sitake — a counter-narrative to expectations that strict rules would hinder recruiting. Light news, but reflects ongoing debates about NIL, institutional identity, and competitive balance in college sports.\n\n---\n\n### **7. Investigative Journalism**\n- **ICIJ (Panama/Pandora Papers):** A feed snippet references \"How banking g...\" — likely a new ICIJ investigation into global banking practices, possibly involving offshore finance, sanctions evasion, or correspondent banking risks. **Monitor for full release** — ICIJ disclosures often trigger regulatory and legislative responses.\n\n---\n\n### **Cross-Cutting Themes & Watch Items**\n| Domain | Key Risk/Development | Watch Next |\n|--------|----------------------|------------|\n| **US Governance** | Miller as CoS → confrontation with Congress | Budget negotiations, immigration EO surge |\n| **Israel** | Eisenkot coalition attempt | Netanyahu response, Knesset math, US posture |\n| **Cyber** | SonicWall SSLVPN active exploitation | CISA remediation deadlines, sectoral impact |\n| **Finance** | Retirement insecurity + NZ continuity | US Social Security solvency debate, NZ policy |\n| **Climate** | AL94 monitoring | NHC updates, Bermuda/Atlantic shipping |\n| **Investigative** | ICIJ banking probe | Full publication, regulatory fallout |\n\n---\n\n**Bottom Line:** November 7, 2026, presents a landscape of **political hardball** (US, Israel), **active cyber threats** (SonicWall), **economic fragility** (US retirement), and **regulatory evolution** (Fed supervision). The post-midterm US environment is the dominant variable — with Miller's appointment signaling a more aggressive executive branch, likely testing institutional boundaries and international alliances.\n\nMACRO:\n### Zentralbank: Fed Speeches & Minutes\n- **Beitrag:** *Bowman, Supervisory Modernization After Silicon Valley Bank - Speech At the Bangkok Economic Festival, Reinventing Bretton Woods Committee, Bangkok, Thailand*\n- **Zusammenfassung:** Mary C. Bowman, Mitglied des Federal Reserve Board, spricht über die Modernisierung der Aufsicht nach dem Fall der Silicon Valley Bank. Sie betont die Notwendigkeit, regulatorische Rahmenbedingungen an die Veränderungen im Finanzsektor anzupassen, um zukünftige Krisen zu verhindern.\n\n### Cyber / Infrastruktur: CISA Cyber Alerts\n- **Beitrag:** *CISA Adds One Known Exploited Vulnerability to Catalog - CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.*\n- **CVE-2026-19868:** SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability\n- **Zusammenfassung:** CISA hat eine neue Schwachstelle in die KEV-Katalogliste aufgenommen. Die CVE-2026-19868 betrifft eine Sonderwelle im SSLVPN von SonicWall, die die Verwendung von einstufiger Authentifizierung ermöglicht. Diese Schwachstelle wurde aktiv ausgenutzt und kann zu schwerwiegenden Sicherheitsrisiken führen.\n\n### US/Politik: Fox News Latest\n- **Beitrag:** *BYU has thrived in an NIL era that many expected them to falter in, NFL legend Steve Young says*\n- **Zusammenfassung:** Steve Young, ehemaliger NFL-Spieler, lobt die Leistungen der BYU Football-Team im NIL-Zeitalter (Name, Image, and Likeness). Trotz Zweifeln in der Branche hat BYU unter Coach Kalani Sitake erfolgreich seine Honorarkodizes und Kultur bewahrt.\n\n### US/Finanzen: Wall Street Journal (MarketWatch Alt)\n- **Beitrag:** *‘I have no financial safety net’: I’m 66, rely on Social Security and have just $500 in savings. What hope do I have?*\n- **Zusammenfassung:** Ein 66-jähriger Rentner, der nur auf Sozialversicherung und knappe Ersparnisse zurückgreift, äußert seine Sorgen über die finanzielle Zukunft. Er fragt, ob wohlhabendere Amerikaner seine Lage besser verstehen würden, wenn sie mit ihm tauschten.\n\n### CH/Presse: NZZ International\n- **Beitrag:** *Kurz nach den Midterms ernennt Trump einen Hardliner als neuen Stabschef – und stellt weitere Veränderungen in Aussicht*\n- **Zusammenfassung:** Donald Trump ernannt Stephen Miller, einen Hardliner in Einwanderungsfragen, als neuen Stabschef. Die Entscheidung kommt kurz nach den Midterm-Wahlen und könnte auf weiteren gesetzlichen Veränderungen hindeuten.\n\n### US/Presse: New York Times World\n- **Beitrag:** *Why Israel’s Ex-Army Chief’s Next Mission Could Be Mission Impossible*\n- **Zusammenfassung:** Gadi Eisenkot, ehemaliger Chef der israelischen Armee, könnte die Chance erhalten, eine neue Regierung zu bilden und Benjamin Netanyahu als Premierminister zu ersetzen. Allerdings steht er vor erheblichen Hindernissen und politischen Herausforderungen.\n\n### UK/Medien: BBC World News\n- **Beitrag:** *With Stephen Miller pick, Trump readies for a battle*\n- **Zusammenfassung:** Die Ernennung von Stephen Miller, einem loyalen Parteifeuerwerfer, als neuer Stabschef legt den Grundstein für mögliche Konflikte mit dem Kongress. Miller ist bekannt für seine hartlinige Positionen, insbesondere in Einwanderungsfragen.\n\n### UK/Finanzen: Financial Times\n- **Beitrag:** *New Zealand’s National Party set to cling on to power*\n- **Zusammenfassung:** Die rechte Parteiblock projiziert, genug Sitze zu gewinnen, um eine Regierung zu bilden. Dies könnte die politische Landkarte Neuseelands für die kommenden Jahre bestimmen.\n\n### Wetter/Extreme: NOAA National Hurricane Center\n- **Beitrag:** *Atlantic Tropical Weather Outlook*\n- **Zusammenfassung:** Das National Hurricane Center gibt einen Wetterausblick für den Atlantik, den Karibischen Raum und Golf von Mexiko. Es wird ein nicht-tropisches Tiefdruckgebiet südsüdöstlich von Bermuda beobachtet, das weiter beobachtet werden sollte.\n\n### Investigativ Net: ICIJ (Panama/Pandora Papers)\n- **Beitrag:** *How banking giant ICBC helped Chinese firms gain a foothold in Europe’s wind market*\n- **Zusammenfassung:** Vertrauliche Aufzeichnungen enthüllen, wie die staatliche Bank ICBC Millionen von Dollars in die Erweiterung chinesischer Unternehmen auf dem europäischen Windenergiemarkt investiert hat. Dies wird als Wettbewerbsvorzug gegenüber europäischen Unternehmen gewertet.\n\n### Medizin: CDC Health Updates\n- **Beitrag:** *Annual Report to the Nation: Progress Against Lung Cancer Drives Down Cancer Mortality*\n- **Zusammenfassung:** Der jährliche Bericht der CDC zeigt einen Rückgang der Krebssterblichkeit, insbesondere bei Lungenkrebs. Fortschritte in der Früherkennung und Therapie haben zu diesen positiven Entwicklungen beigetragen.\n\n### Schattennetzwerke: C4ADS (Data-Driven Security Analysis)\n- **Beitrag:** *C4ADS (Data-Driven Security Analysis)*\n- **Zusammenfassung:** C4ADS (Center for Advanced Defense Studies) veröffentlicht eine detaillierte Analyse von Schattennetzwerken und deren Auswirkungen auf globale Sicherheit. Die Studie beinhaltet Datengetriebene Erkenntnisse und Empfehlungen für bessere Präventionsstrategien.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +27,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT85ME",
+      "name": "Flug T7ZEUS",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.6305,
-      "lon": 30.7041,
-      "lng": 30.7041,
+      "lat": 40.8243,
+      "lon": 29.5671,
+      "lng": 29.5671,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT85ME | Höhe: 8.3 km | Speed: 846 km/h",
+      "description": "Callsign: T7ZEUS | Höhe: 3.8 km | Speed: 621 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT87XP",
+      "name": "Flug PGT1RQ",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.5921,
-      "lon": 28.636,
-      "lng": 28.636,
+      "lat": 41.3189,
+      "lon": 27.3997,
+      "lng": 27.3997,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT87XP | Höhe: 8.8 km | Speed: 836 km/h",
+      "description": "Callsign: PGT1RQ | Höhe: 8.4 km | Speed: 843 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DUKE60",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 44.5288,
-      "lon": 28.0455,
-      "lng": 28.0455,
+      "name": "Flug WZZ2058",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 34.9454,
+      "lon": 32.982,
+      "lng": 32.982,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: WZZ2058 | Höhe: 3.4 km | Speed: 604 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug WMT7302",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 34.1312,
+      "lon": 32.5476,
+      "lng": 32.5476,
+      "type": "flight",
+      "intensity": "GELB",
+      "description": "Callsign: WMT7302 | Höhe: 10.7 km | Speed: 872 km/h",
+      "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug RRR2300",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 34.5886,
+      "lon": 32.9947,
+      "lng": 32.9947,
       "type": "flight",
       "intensity": "ROT",
-      "description": "Callsign: DUKE60 | Höhe: 5.2 km | Speed: 273 km/h",
-      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
+      "description": "Callsign: RRR2300 | Höhe: 0.0 km | Speed: 176 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
     },
     {
-      "name": "Flug 4XCDE",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 32.8201,
-      "lon": 35.013,
-      "lng": 35.013,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: 4XCDE | Höhe: 0.8 km | Speed: 197 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug IAW145",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 30.5002,
-      "lon": 35.9295,
-      "lng": 35.9295,
-      "type": "flight",
-      "intensity": "GELB",
-      "description": "Callsign: IAW145 | Höhe: 9.9 km | Speed: 758 km/h",
-      "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug UPS77",
+      "name": "Flug THA635",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.3028,
-      "lon": 122.2134,
-      "lng": 122.2134,
+      "lat": 25.0977,
+      "lon": 120.904,
+      "lng": 120.904,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UPS77 | Höhe: 9.4 km | Speed: 952 km/h",
+      "description": "Callsign: THA635 | Höhe: 5.4 km | Speed: 690 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug QDA908",
+      "name": "Flug DKH1365",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.1521,
-      "lon": 117.7345,
-      "lng": 117.7345,
+      "lat": 23.0369,
+      "lon": 116.9361,
+      "lng": 116.9361,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: QDA908 | Höhe: 10.7 km | Speed: 888 km/h",
+      "description": "Callsign: DKH1365 | Höhe: 11.0 km | Speed: 822 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,11 +116,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Die Fed beendet ein Enforcement-Verfahren gegen Allegiant United Holdings, Nano Financial Holdings und Nano Banc. Einzelheiten zu den Gründen nennt die Meldung nicht – typischerweise erfolgt eine Beendigung, wenn die beanstandeten Missstände behoben sind.",
-    "CISA, das australische ACSC und die NSA haben gemeinsame Leitlinien plus eine Quick-Reference-Liste veröffentlicht, mit der Organisationen die PQC-Bereitschaft ihrer Anbieter bewerten können (Post-Quanten-Kryptographie). Praktisch relevant für Beschaffung und Vendor-Risikomanagement.",
-    "NYT:** In der Ukraine herrscht vorsichtiger Optimismus (teils mit Humor) angesichts des Wahlsiegs der Demokraten – dieser könnte den Verlauf der Friedensverhandlungen und des bald fünf Jahre dauernden Krieges beeinflussen.",
-    "Fox News:** James Carville rät den Demokraten, nach dem historischen Midterm-Sieg DEI- und „woke\"-Themen zu meiden – die Bevölkerung habe diese „gehasst\".",
-    "BBC:** Das Weiße Haus dementiert Berichte, wonach Hegseth und Rubio ihre Posten verlassen sollen. Hegseth steht laut US-Medien vor einem möglichen Impeachment-Votum; Rubio wird eine Präsidentschaftsambition nachgesagt."
+    "Trump Names Stephen Miller Chief of Staff:** Shortly after the midterms, President Trump has appointed **Stephen Miller** — a hardline immigration hawk and loyal partisan — as his new chief of staff, succeeding Susie Wiles. Both **NZZ International** and **BBC World News** frame this as a signal that Trump is preparing for confrontation with Congress, particularly on immigration and executive authority. The timing (post-midterms) suggests a strategic pivot toward aggressive policy implementation rather than compromise.",
+    "Implication:** Expect intensified legislative battles, possible government shutdown risks, and a more combative White House posture heading into the 2027 legislative session.",
+    "Gadi Eisenkot Poised to Replace Netanyahu:** According to **The New York Times**, former army chief **Gadi Eisenkot** is positioned to attempt forming a new Israeli government, potentially ending Netanyahu's tenure. The NYT describes the obstacles as \"formidable\" — likely coalition fragmentation, security challenges, and Netanyahu's legal/political resilience.",
+    "Implication:** A potential leadership transition in Israel could reshape ceasefire negotiations, judicial reform debates, and regional security coordination.",
+    "CISA KEV Addition — SonicWall SonicOS SSLVPN (CVE-2026-19868):** CISA has added a **single-factor authentication vulnerability** in SonicWall's SSLVPN to its Known Exploited Vulnerabilities catalog, citing **evidence of active exploitation**. This is a frequent attack vector for malicious actors targeting remote access infrastructure."
   ],
   "geoscore": {
     "current_score": 72,
@@ -135,12 +135,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-06T13:30:59.990891+00:00",
+  "timestamp": "2026-11-07T12:12:20.536638+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-06T13:29:55.920410+00:00",
+    "timestamp": "2026-11-07T12:10:24.549103+00:00",
     "feeds_total": 224,
-    "feeds_successful": 117,
-    "feeds_failed": 107,
+    "feeds_successful": 116,
+    "feeds_failed": 108,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
