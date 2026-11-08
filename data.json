@@ -1,20 +1,20 @@
 {
   "ampel_status": "GELB",
   "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **November 7, 2026**, here is a synthesized situational report across the key domains:\n\n---\n\n### **1. US Politics & Governance: A Hardline Shift**\n- **Trump Names Stephen Miller Chief of Staff:** Shortly after the midterms, President Trump has appointed **Stephen Miller** — a hardline immigration hawk and loyal partisan — as his new chief of staff, succeeding Susie Wiles. Both **NZZ International** and **BBC World News** frame this as a signal that Trump is preparing for confrontation with Congress, particularly on immigration and executive aut...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **November 7, 2026**, here is a synthesized situational report across the key domains:\n\n---\n\n### **1. US Politics & Governance: A Hardline Shift**\n- **Trump Names Stephen Miller Chief of Staff:** Shortly after the midterms, President Trump has appointed **Stephen Miller** — a hardline immigration ha...",
+  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for 08.11.2026, here is a structured overview:\n\n## Central Bank / Regulation\n- **Federal Reserve** terminates enforcement actions against Allegiant United Holdings, Nano Financial Holdings, and Nano Banc.\n\n## Cybersecurity\n- **CISA** adds **CVE-2026-19868** (SonicWall SonicOS SSLVPN single-factor authentication vulnerability) to its Known Exploited Vulnerabilities catalog, citing active exploitation. Single-factor auth weaknesses are a frequent attack vector.\n\n## US Politics / Society\n- **Fox News**: Jewish Student Union presidents gather to prepar...",
+  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for 08.11.2026, here is a structured overview:\n\n## Central Bank / Regulation\n- **Federal Reserve** terminates enforcement actions against Allegiant United Holdings, Nano Financial Holdings, and Nano Banc.\n\n## Cybersecurity\n- **CISA** adds **CVE-2026-19868** (SonicWall SonicOS SSLVPN single-factor authen...",
   "key_takeaways": [
-    "Trump Names Stephen Miller Chief of Staff:** Shortly after the midterms, President Trump has appointed **Stephen Miller** — a hardline immigration hawk and loyal partisan — as his new chief of staff, succeeding Susie Wiles. Both **NZZ International** and **BBC World News** frame this as a signal that Trump is preparing for confrontation with Congress, particularly on immigration and executive authority. The timing (post-midterms) suggests a strategic pivot toward aggressive policy implementation rather than compromise.",
-    "Implication:** Expect intensified legislative battles, possible government shutdown risks, and a more combative White House posture heading into the 2027 legislative session.",
-    "Gadi Eisenkot Poised to Replace Netanyahu:** According to **The New York Times**, former army chief **Gadi Eisenkot** is positioned to attempt forming a new Israeli government, potentially ending Netanyahu's tenure. The NYT describes the obstacles as \"formidable\" — likely coalition fragmentation, security challenges, and Netanyahu's legal/political resilience.",
-    "Implication:** A potential leadership transition in Israel could reshape ceasefire negotiations, judicial reform debates, and regional security coordination.",
-    "CISA KEV Addition — SonicWall SonicOS SSLVPN (CVE-2026-19868):** CISA has added a **single-factor authentication vulnerability** in SonicWall's SSLVPN to its Known Exploited Vulnerabilities catalog, citing **evidence of active exploitation**. This is a frequent attack vector for malicious actors targeting remote access infrastructure."
+    "Federal Reserve** terminates enforcement actions against Allegiant United Holdings, Nano Financial Holdings, and Nano Banc.",
+    "CISA** adds **CVE-2026-19868** (SonicWall SonicOS SSLVPN single-factor authentication vulnerability) to its Known Exploited Vulnerabilities catalog, citing active exploitation. Single-factor auth weaknesses are a frequent attack vector.",
+    "Fox News**: Jewish Student Union presidents gather to prepare for combating antisemitism on college campuses, drawing on history, humor, and courage; speakers include Shai Davidai and Tessa Veksler.",
+    "NYT World**: Delhi attempts \"green\" fireworks for Diwali after India's top court restricts sales to eco-friendly varieties over air quality; activists dismiss it as \"greenwash.\"",
+    "BBC World**: Krakow gun attack — six killed in a random shooting in the main square; three more bodies found at the attacker's home."
   ],
   "overall_geoscore": 72,
   "defcon_level": 3,
   "market_regime": "Unsicher / Fragmentiert",
   "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for **November 7, 2026**, here is a synthesized situational report across the key domains:\n\n---\n\n### **1. US Politics & Governance: A Hardline Shift**\n- **Trump Names Stephen Miller Chief of Staff:** Shortly after the midterms, President Trump has appointed **Stephen Miller** — a hardline immigration hawk and loyal partisan — as his new chief of staff, succeeding Susie Wiles. Both **NZZ International** and **BBC World News** frame this as a signal that Trump is preparing for confrontation with Congress, particularly on immigration and executive authority. The timing (post-midterms) suggests a strategic pivot toward aggressive policy implementation rather than compromise.\n- **Implication:** Expect intensified legislative battles, possible government shutdown risks, and a more combative White House posture heading into the 2027 legislative session.\n\n---\n\n### **2. Middle East: Israel's Political Upheaval**\n- **Gadi Eisenkot Poised to Replace Netanyahu:** According to **The New York Times**, former army chief **Gadi Eisenkot** is positioned to attempt forming a new Israeli government, potentially ending Netanyahu's tenure. The NYT describes the obstacles as \"formidable\" — likely coalition fragmentation, security challenges, and Netanyahu's legal/political resilience.\n- **Implication:** A potential leadership transition in Israel could reshape ceasefire negotiations, judicial reform debates, and regional security coordination.\n\n---\n\n### **3. Cybersecurity: Active Exploitation Alert**\n- **CISA KEV Addition — SonicWall SonicOS SSLVPN (CVE-2026-19868):** CISA has added a **single-factor authentication vulnerability** in SonicWall's SSLVPN to its Known Exploited Vulnerabilities catalog, citing **evidence of active exploitation**. This is a frequent attack vector for malicious actors targeting remote access infrastructure.\n- **Actionable:** Organizations using SonicWall SSLVPN should immediately enforce MFA, patch per vendor guidance, and audit for indicators of compromise. This is a **priority remediation** item under BOD 22-01 for US federal agencies.\n\n---\n\n### **4. Finance & Economy**\n- **US Retirement Crisis Signal (WSJ/MarketWatch):** A 66-year-old reliant on Social Security with only **$500 in savings** asks, \"What hope do I have?\" — a stark illustration of the retirement savings gap affecting millions of Americans. The piece raises systemic questions about wealth inequality and the adequacy of the social safety net.\n- **New Zealand Politics (FT):** The **National Party** is projected to cling to power, with the rightwing bloc winning enough seats to form a government. This suggests policy continuity in Wellington — likely favoring business-friendly, center-right governance.\n- **Fed Communication (Bowman):** A speech on **\"Supervisory Modernization After Silicon Valley Bank\"** at the Bangkok Economic Festival signals ongoing regulatory recalibration in the US banking sector, likely addressing lessons from the 2023 SVB collapse — capital requirements, liquidity risk management, and supervisory agility.\n\n---\n\n### **5. Climate & Weather**\n- **Atlantic Tropical Weather Outlook (NOAA):** A **non-tropical low pressure area (AL94)** is being monitored several hundred miles south-southeast of Bermuda. While currently non-tropical, it bears watching for potential subtropical or tropical development. No immediate coastal threats indicated, but maritime interests in the Western/Central Atlantic should monitor.\n\n---\n\n### **6. Media & Culture**\n- **BYU Football & NIL (Fox News):** NFL legend **Steve Young** credits BYU's success in the NIL era to its honor code and unique culture under coach Kalani Sitake — a counter-narrative to expectations that strict rules would hinder recruiting. Light news, but reflects ongoing debates about NIL, institutional identity, and competitive balance in college sports.\n\n---\n\n### **7. Investigative Journalism**\n- **ICIJ (Panama/Pandora Papers):** A feed snippet references \"How banking g...\" — likely a new ICIJ investigation into global banking practices, possibly involving offshore finance, sanctions evasion, or correspondent banking risks. **Monitor for full release** — ICIJ disclosures often trigger regulatory and legislative responses.\n\n---\n\n### **Cross-Cutting Themes & Watch Items**\n| Domain | Key Risk/Development | Watch Next |\n|--------|----------------------|------------|\n| **US Governance** | Miller as CoS → confrontation with Congress | Budget negotiations, immigration EO surge |\n| **Israel** | Eisenkot coalition attempt | Netanyahu response, Knesset math, US posture |\n| **Cyber** | SonicWall SSLVPN active exploitation | CISA remediation deadlines, sectoral impact |\n| **Finance** | Retirement insecurity + NZ continuity | US Social Security solvency debate, NZ policy |\n| **Climate** | AL94 monitoring | NHC updates, Bermuda/Atlantic shipping |\n| **Investigative** | ICIJ banking probe | Full publication, regulatory fallout |\n\n---\n\n**Bottom Line:** November 7, 2026, presents a landscape of **political hardball** (US, Israel), **active cyber threats** (SonicWall), **economic fragility** (US retirement), and **regulatory evolution** (Fed supervision). The post-midterm US environment is the dominant variable — with Miller's appointment signaling a more aggressive executive branch, likely testing institutional boundaries and international alliances.\n\nMACRO:\n### Zentralbank: Fed Speeches & Minutes\n- **Beitrag:** *Bowman, Supervisory Modernization After Silicon Valley Bank - Speech At the Bangkok Economic Festival, Reinventing Bretton Woods Committee, Bangkok, Thailand*\n- **Zusammenfassung:** Mary C. Bowman, Mitglied des Federal Reserve Board, spricht über die Modernisierung der Aufsicht nach dem Fall der Silicon Valley Bank. Sie betont die Notwendigkeit, regulatorische Rahmenbedingungen an die Veränderungen im Finanzsektor anzupassen, um zukünftige Krisen zu verhindern.\n\n### Cyber / Infrastruktur: CISA Cyber Alerts\n- **Beitrag:** *CISA Adds One Known Exploited Vulnerability to Catalog - CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.*\n- **CVE-2026-19868:** SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability\n- **Zusammenfassung:** CISA hat eine neue Schwachstelle in die KEV-Katalogliste aufgenommen. Die CVE-2026-19868 betrifft eine Sonderwelle im SSLVPN von SonicWall, die die Verwendung von einstufiger Authentifizierung ermöglicht. Diese Schwachstelle wurde aktiv ausgenutzt und kann zu schwerwiegenden Sicherheitsrisiken führen.\n\n### US/Politik: Fox News Latest\n- **Beitrag:** *BYU has thrived in an NIL era that many expected them to falter in, NFL legend Steve Young says*\n- **Zusammenfassung:** Steve Young, ehemaliger NFL-Spieler, lobt die Leistungen der BYU Football-Team im NIL-Zeitalter (Name, Image, and Likeness). Trotz Zweifeln in der Branche hat BYU unter Coach Kalani Sitake erfolgreich seine Honorarkodizes und Kultur bewahrt.\n\n### US/Finanzen: Wall Street Journal (MarketWatch Alt)\n- **Beitrag:** *‘I have no financial safety net’: I’m 66, rely on Social Security and have just $500 in savings. What hope do I have?*\n- **Zusammenfassung:** Ein 66-jähriger Rentner, der nur auf Sozialversicherung und knappe Ersparnisse zurückgreift, äußert seine Sorgen über die finanzielle Zukunft. Er fragt, ob wohlhabendere Amerikaner seine Lage besser verstehen würden, wenn sie mit ihm tauschten.\n\n### CH/Presse: NZZ International\n- **Beitrag:** *Kurz nach den Midterms ernennt Trump einen Hardliner als neuen Stabschef – und stellt weitere Veränderungen in Aussicht*\n- **Zusammenfassung:** Donald Trump ernannt Stephen Miller, einen Hardliner in Einwanderungsfragen, als neuen Stabschef. Die Entscheidung kommt kurz nach den Midterm-Wahlen und könnte auf weiteren gesetzlichen Veränderungen hindeuten.\n\n### US/Presse: New York Times World\n- **Beitrag:** *Why Israel’s Ex-Army Chief’s Next Mission Could Be Mission Impossible*\n- **Zusammenfassung:** Gadi Eisenkot, ehemaliger Chef der israelischen Armee, könnte die Chance erhalten, eine neue Regierung zu bilden und Benjamin Netanyahu als Premierminister zu ersetzen. Allerdings steht er vor erheblichen Hindernissen und politischen Herausforderungen.\n\n### UK/Medien: BBC World News\n- **Beitrag:** *With Stephen Miller pick, Trump readies for a battle*\n- **Zusammenfassung:** Die Ernennung von Stephen Miller, einem loyalen Parteifeuerwerfer, als neuer Stabschef legt den Grundstein für mögliche Konflikte mit dem Kongress. Miller ist bekannt für seine hartlinige Positionen, insbesondere in Einwanderungsfragen.\n\n### UK/Finanzen: Financial Times\n- **Beitrag:** *New Zealand’s National Party set to cling on to power*\n- **Zusammenfassung:** Die rechte Parteiblock projiziert, genug Sitze zu gewinnen, um eine Regierung zu bilden. Dies könnte die politische Landkarte Neuseelands für die kommenden Jahre bestimmen.\n\n### Wetter/Extreme: NOAA National Hurricane Center\n- **Beitrag:** *Atlantic Tropical Weather Outlook*\n- **Zusammenfassung:** Das National Hurricane Center gibt einen Wetterausblick für den Atlantik, den Karibischen Raum und Golf von Mexiko. Es wird ein nicht-tropisches Tiefdruckgebiet südsüdöstlich von Bermuda beobachtet, das weiter beobachtet werden sollte.\n\n### Investigativ Net: ICIJ (Panama/Pandora Papers)\n- **Beitrag:** *How banking giant ICBC helped Chinese firms gain a foothold in Europe’s wind market*\n- **Zusammenfassung:** Vertrauliche Aufzeichnungen enthüllen, wie die staatliche Bank ICBC Millionen von Dollars in die Erweiterung chinesischer Unternehmen auf dem europäischen Windenergiemarkt investiert hat. Dies wird als Wettbewerbsvorzug gegenüber europäischen Unternehmen gewertet.\n\n### Medizin: CDC Health Updates\n- **Beitrag:** *Annual Report to the Nation: Progress Against Lung Cancer Drives Down Cancer Mortality*\n- **Zusammenfassung:** Der jährliche Bericht der CDC zeigt einen Rückgang der Krebssterblichkeit, insbesondere bei Lungenkrebs. Fortschritte in der Früherkennung und Therapie haben zu diesen positiven Entwicklungen beigetragen.\n\n### Schattennetzwerke: C4ADS (Data-Driven Security Analysis)\n- **Beitrag:** *C4ADS (Data-Driven Security Analysis)*\n- **Zusammenfassung:** C4ADS (Center for Advanced Defense Studies) veröffentlicht eine detaillierte Analyse von Schattennetzwerken und deren Auswirkungen auf globale Sicherheit. Die Studie beinhaltet Datengetriebene Erkenntnisse und Empfehlungen für bessere Präventionsstrategien.",
+  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nBased on the feeds provided for 08.11.2026, here is a structured overview:\n\n## Central Bank / Regulation\n- **Federal Reserve** terminates enforcement actions against Allegiant United Holdings, Nano Financial Holdings, and Nano Banc.\n\n## Cybersecurity\n- **CISA** adds **CVE-2026-19868** (SonicWall SonicOS SSLVPN single-factor authentication vulnerability) to its Known Exploited Vulnerabilities catalog, citing active exploitation. Single-factor auth weaknesses are a frequent attack vector.\n\n## US Politics / Society\n- **Fox News**: Jewish Student Union presidents gather to prepare for combating antisemitism on college campuses, drawing on history, humor, and courage; speakers include Shai Davidai and Tessa Veksler.\n\n## International Press\n- **NYT World**: Delhi attempts \"green\" fireworks for Diwali after India's top court restricts sales to eco-friendly varieties over air quality; activists dismiss it as \"greenwash.\"\n- **BBC World**: Krakow gun attack — six killed in a random shooting in the main square; three more bodies found at the attacker's home.\n- **NZZ International**: Israel's President Herzog tasks Netanyahu opponent **Eisenkot** with forming a government; difficult coalition talks expected.\n\n## Financial Markets\n- **WSJ/MarketWatch**: A market signal that previously called the tech selloff is now flashing another warning — stock correlations hit a record low, and mean reversion may spell trouble.\n- **FT**: UK Culture Secretary **Lisa Nandy** questions whether rejoining the EU is \"a choice we have\"; PM **Andy Burnham** wants debate on Britain's long-term relationship with Brussels.\n\n## Weather / Extremes\n- **NOAA NHC**: Atlantic Tropical Weather Outlook issued (700 AM EST Sun Nov 8, 2026) for the North Atlantic, Caribbean Sea, and Gulf of America — text truncated.\n\n---\n*Note: Some items (e.g., the FT reference to \"PM Andy Burnham\" and the Herzog/Eisenkot formation mandate) reflect the feed content as given for this date.*\n\nMACRO:\n### **Zusammenfassung der aktuellen Ereignisse:**\n\n#### **Finanzen:**\n- **USA:** Die Federal Reserve hat eine Durchsetzungsvorgabe gegen Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., und Nano Banc beendet.\n- **Markteinhuscher:** Die Korrelationen zwischen Einzelaktien erreichten kürzlich einen Rekordtief. Eine Rückkehr zum Durchschnitt könnte für den Markt problematisch sein, meldet das *Wall Street Journal*.\n- **UK:** Die britische Kultursekretärin Lisa Nandy stellt die Rückkehr in die EU als mögliche Zukunftsoption in Frage, während Premierminister Andy Burnham eine offene Debatte über die langfristige Beziehung Großbritanniens zu Brüssel will, berichtet die *Financial Times*.\n\n#### **Politik:**\n- **USA:** Jüdische Studentenvereine bereiten sich auf antisemitische Vorfälle an Universitäten vor, indem sie Geschichte, Humor und Mut als Werkzeuge nutzen, wie *Fox News* berichtet.\n- **Israel:** Der israelische Präsident Isaac Herzog hat den Netanyahu-Gegner Amiram Eisenkot mit der Regierungsbildung beauftragt. Eisenkot steht schwierige Koalitionsverhandlungen bevor, meldet die *NZZ International*.\n\n#### **Cyber- und Infrastruktur:**\n- **USA:** CISA hat CVE-2026-19868, eine Schwachstelle im SonicWall SonicOS SSLVPN, zur Liste der bekannten ausgenutzten Schwachstellen hinzugefügt. Die Schwachstelle betrifft ein Single-Factor-Authentifizierungsproblem, das häufig von bösartigen Akteuren ausgenutzt wird, wie *CISA* bekannt gibt.\n\n#### **Medien und Kultur:**\n- **Polen:** Ein zufälliger Schießerei in Krakau hat sechs Menschen getötet. Drei weitere Leichen wurden später im Haus des Angreifers gefunden, berichtet die *BBC World News*.\n- **Indien:** Indiens oberstes Gericht hat für dieses Wochenende die Verwendung umweltfreundlicher Feuerwerke während des Diwali-Festes angeordnet, um die Luftqualität zu verbessern. Umweltaktivisten kritisieren dies jedoch als \"Greenwash\", wie der *New York Times* berichtet.\n\n#### **Internationale Beziehungen:**\n- **Paraguay:** Der ehemalige paraguayische Präsident Santiago Peña wurde wegen politischer Unruhen und einer finanziellen Krise abgesetzt und festgenommen. Er wird unter anderem beschuldigt, einen digitalen Bankenkonkurs zu vertuschen, den er früher geleitet hat, berichtet *OCCRP* (Organized Crime & Corruption Reporting Project).\n\n#### **Wetter und Naturkatastrophen:**\n- **Atlantik:** Das National Hurricane Center (NHC)çi gibt an, dass in den nächsten sieben Tagen keine tropischen Zyklone entstehen sollen. Die aktuelle atlantische Wetterlage ist stabil, wie *NOAA* meldet.\n\nDiese Zusammenfassung bietet einen Überblick über die aktuellen ereignisse in verschiedenen Bereichen und Regionen.",
   "predictive_horizon": {
     "base_case_probability_pct": 55,
     "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
@@ -27,80 +27,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug T7ZEUS",
+      "name": "Flug AIC2026",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8243,
-      "lon": 29.5671,
-      "lng": 29.5671,
+      "lat": 43.3333,
+      "lon": 26.859,
+      "lng": 26.859,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: T7ZEUS | Höhe: 3.8 km | Speed: 621 km/h",
+      "description": "Callsign: AIC2026 | Höhe: 11.9 km | Speed: 953 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT1RQ",
+      "name": "Flug PGT1FW",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.3189,
-      "lon": 27.3997,
-      "lng": 27.3997,
+      "lat": 42.8155,
+      "lon": 25.6353,
+      "lng": 25.6353,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT1RQ | Höhe: 8.4 km | Speed: 843 km/h",
+      "description": "Callsign: PGT1FW | Höhe: 10.4 km | Speed: 770 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ2058",
+      "name": "Flug TVF85AD",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.9454,
-      "lon": 32.982,
-      "lng": 32.982,
+      "lat": 32.3419,
+      "lon": 34.54,
+      "lng": 34.54,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ2058 | Höhe: 3.4 km | Speed: 604 km/h",
+      "description": "Callsign: TVF85AD | Höhe: 2.5 km | Speed: 510 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WMT7302",
+      "name": "Flug WZZ8804",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.1312,
-      "lon": 32.5476,
-      "lng": 32.5476,
+      "lat": 34.7136,
+      "lon": 33.1002,
+      "lng": 33.1002,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WMT7302 | Höhe: 10.7 km | Speed: 872 km/h",
+      "description": "Callsign: WZZ8804 | Höhe: 2.1 km | Speed: 534 km/h",
       "impact": "Strategischer Transponder-Korridor"
-    },
-    {
-      "name": "Flug RRR2300",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 34.5886,
-      "lon": 32.9947,
-      "lng": 32.9947,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR2300 | Höhe: 0.0 km | Speed: 176 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
     },
     {
       "name": "Flug THA635",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.0977,
-      "lon": 120.904,
-      "lng": 120.904,
+      "lat": 22.3909,
+      "lon": 118.2104,
+      "lng": 118.2104,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA635 | Höhe: 5.4 km | Speed: 690 km/h",
+      "description": "Callsign: THA635 | Höhe: 10.4 km | Speed: 855 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DKH1365",
+      "name": "Flug CES506",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.0369,
-      "lon": 116.9361,
-      "lng": 116.9361,
+      "lat": 25.5751,
+      "lon": 120.3582,
+      "lng": 120.3582,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: DKH1365 | Höhe: 11.0 km | Speed: 822 km/h",
+      "description": "Callsign: CES506 | Höhe: 10.1 km | Speed: 889 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -116,11 +105,11 @@
     "links": []
   },
   "simple_key_takeaways": [
-    "Trump Names Stephen Miller Chief of Staff:** Shortly after the midterms, President Trump has appointed **Stephen Miller** — a hardline immigration hawk and loyal partisan — as his new chief of staff, succeeding Susie Wiles. Both **NZZ International** and **BBC World News** frame this as a signal that Trump is preparing for confrontation with Congress, particularly on immigration and executive authority. The timing (post-midterms) suggests a strategic pivot toward aggressive policy implementation rather than compromise.",
-    "Implication:** Expect intensified legislative battles, possible government shutdown risks, and a more combative White House posture heading into the 2027 legislative session.",
-    "Gadi Eisenkot Poised to Replace Netanyahu:** According to **The New York Times**, former army chief **Gadi Eisenkot** is positioned to attempt forming a new Israeli government, potentially ending Netanyahu's tenure. The NYT describes the obstacles as \"formidable\" — likely coalition fragmentation, security challenges, and Netanyahu's legal/political resilience.",
-    "Implication:** A potential leadership transition in Israel could reshape ceasefire negotiations, judicial reform debates, and regional security coordination.",
-    "CISA KEV Addition — SonicWall SonicOS SSLVPN (CVE-2026-19868):** CISA has added a **single-factor authentication vulnerability** in SonicWall's SSLVPN to its Known Exploited Vulnerabilities catalog, citing **evidence of active exploitation**. This is a frequent attack vector for malicious actors targeting remote access infrastructure."
+    "Federal Reserve** terminates enforcement actions against Allegiant United Holdings, Nano Financial Holdings, and Nano Banc.",
+    "CISA** adds **CVE-2026-19868** (SonicWall SonicOS SSLVPN single-factor authentication vulnerability) to its Known Exploited Vulnerabilities catalog, citing active exploitation. Single-factor auth weaknesses are a frequent attack vector.",
+    "Fox News**: Jewish Student Union presidents gather to prepare for combating antisemitism on college campuses, drawing on history, humor, and courage; speakers include Shai Davidai and Tessa Veksler.",
+    "NYT World**: Delhi attempts \"green\" fireworks for Diwali after India's top court restricts sales to eco-friendly varieties over air quality; activists dismiss it as \"greenwash.\"",
+    "BBC World**: Krakow gun attack — six killed in a random shooting in the main square; three more bodies found at the attacker's home."
   ],
   "geoscore": {
     "current_score": 72,
@@ -135,12 +124,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-07T12:12:20.536638+00:00",
+  "timestamp": "2026-11-08T12:32:55.648415+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-07T12:10:24.549103+00:00",
+    "timestamp": "2026-11-08T12:30:55.331549+00:00",
     "feeds_total": 224,
-    "feeds_successful": 116,
-    "feeds_failed": 108,
+    "feeds_successful": 117,
+    "feeds_failed": 107,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [
@@ -150,7 +139,7 @@
     "swarm_debate_status": "PENDING",
     "synthesizer_status": "HTTP_403",
     "haiku_status": "HTTP_401",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "errors": [
       "Synthesizer HTTP 403"
@@ -168,7 +157,7 @@
     "defcon_now": 3,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 7,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
