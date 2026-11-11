@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
-ARGUS GRID v3.0 - Full Spectrum Multi-LLM Intelligence Engine Backend
+ARGUS GRID v3.0 - Intelligence Engine Backend
 Multi-Source Data Ingestion Engine:
 1. RSS & Primary Source Feeds (mit RSSHub Support)
 2. GDELT Project DOC 2.0 Real-Time Event Stream
 3. Telegram Public OSINT Channel Stream (t.me/s/ Scraping)
 4. OpenSky Network Live ADS-B Military Tracking
-5. Multi-LLM Swarm (Groq, DeepSeek, Qwen/Grok, Mistral, Haiku)
-6. Robust Deep Object Normalization & Delta Snapshot Tracking
+5. Multi-LLM Swarm (Groq, DeepSeek, Qwen/Grok, Mistral, Haiku) – standardmäßig deaktiviert (LLM_ENABLED=false)
+6. Regelbasiertes Top 5 aus Feed-Titeln (Häufung über Quellen), ohne KI
+7. Robust Deep Object Normalization & Delta Snapshot Tracking
 """
 
 import os
@@ -61,6 +62,17 @@ QWEN_API_KEY = os.environ.get("QWEN_API_KEY")
 NEMOTRON_API_KEY = os.environ.get("NEMOTRON_API_KEY")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
 
+
+def _env_flag(name: str, default: bool = False) -> bool:
+    raw = os.environ.get(name)
+    if raw is None or not str(raw).strip():
+        return default
+    return str(raw).strip().lower() in {"1", "true", "yes", "on", "ja"}
+
+
+# Standard: keine LLM-Aufrufe. Reaktivierung nur über LLM_ENABLED=true.
+LLM_ENABLED = _env_flag("LLM_ENABLED", default=False)
+
 OPENSKY_USER = os.environ.get("OPENSKY_USER")
 OPENSKY_PASSWORD = os.environ.get("OPENSKY_PASSWORD")
 
@@ -79,8 +91,208 @@ pipeline_health = {
     "haiku_status": "PENDING",
     "opensky_status": "PENDING",
     "graph_merge_status": "PENDING",
+    "llm_enabled": LLM_ENABLED,
+    "llm_status": "AKTIV" if LLM_ENABLED else "DEAKTIVIERT",
     "errors": []
 }
+
+
+def mark_llm_disabled() -> None:
+    """Setzt die LLM-Felder ehrlich auf DEAKTIVIERT, ohne Fehler zu fingieren."""
+    pipeline_health["llm_enabled"] = False
+    pipeline_health["llm_status"] = "DEAKTIVIERT"
+    pipeline_health["bakers_active"] = []
+    pipeline_health["swarm_debate_status"] = "DEAKTIVIERT"
+    pipeline_health["synthesizer_status"] = "DEAKTIVIERT"
+    pipeline_health["haiku_status"] = "DEAKTIVIERT"
+
+
+TITLE_STOPWORDS = {
+    "der", "die", "das", "und", "oder", "ein", "eine", "einer", "einem", "einen",
+    "im", "in", "am", "an", "auf", "aus", "von", "mit", "für", "fur", "des", "dem",
+    "den", "ist", "sind", "war", "wird", "werden", "bei", "nach", "vor", "über",
+    "uber", "unter", "als", "auch", "nur", "noch", "nicht", "kein", "keine", "zum",
+    "zur", "ins", "ums", "the", "a", "an", "and", "or", "of", "to", "for", "on",
+    "at", "by", "from", "with", "as", "is", "are", "was", "were", "be", "been",
+    "its", "it", "this", "that", "these", "those", "new", "after", "over", "into",
+    "vs", "amid", "says", "say", "said", "report", "reports", "update", "live",
+    "breaking", "eilmeldung", "news", "video", "watch", "why", "how", "what",
+    "about", "their", "they", "have", "has", "had", "will", "would", "could",
+    "should", "more", "than", "then", "also", "just",
+}
+
+
+def normalize_title_tokens(title: str) -> list:
+    text = to_str(title).lower()
+    text = re.sub(r"https?://\S+", " ", text)
+    text = re.sub(r"[^a-z0-9äöüßàáâéèêëíìîóòôúùûçñ\- ]+", " ", text)
+    tokens = []
+    for raw in text.split():
+        tok = raw.strip("-")
+        if len(tok) < 4 or tok in TITLE_STOPWORDS:
+            continue
+        tokens.append(tok)
+    return tokens
+
+
+def _jaccard(a: set, b: set) -> float:
+    if not a or not b:
+        return 0.0
+    union = len(a | b)
+    return (len(a & b) / union) if union else 0.0
+
+
+def _canonical_title(titles: list) -> str:
+    if not titles:
+        return ""
+    counts = {}
+    for t in titles:
+        counts[t] = counts.get(t, 0) + 1
+    # Häufigste genaue Überschrift, bei Gleichstand die längere (informativer),
+    # abgeschnittene Telegram-Titel ("...") verlieren den Stichentscheid.
+    def key(item):
+        title, n = item
+        truncated = 1 if title.endswith("...") else 0
+        return (n, -truncated, len(title))
+    return max(counts.items(), key=key)[0]
+
+
+def build_rule_based_top5(articles: list, limit: int = 5) -> list:
+    """Deterministisches Top 5 nach Häufung über unabhängige Quellen, ohne KI."""
+    prepared = []
+    for art in articles or []:
+        title = to_str(art.get("title"))
+        if not title:
+            continue
+        tokens = set(normalize_title_tokens(title))
+        prepared.append({
+            "title": title,
+            "tokens": tokens,
+            "source": to_str(art.get("source"), "unbekannt"),
+            "category": to_str(art.get("category"), "General"),
+            "link": to_str(art.get("link")),
+            "weight": float(art.get("weight") or 1.0),
+        })
+
+    clusters = []
+    for item in prepared:
+        assigned = None
+        if item["tokens"]:
+            for cluster in clusters:
+                score = _jaccard(item["tokens"], cluster["tokens"])
+                overlap = len(item["tokens"] & cluster["tokens"])
+                if score >= 0.40 or overlap >= 3:
+                    assigned = cluster
+                    break
+        if assigned is None:
+            clusters.append({
+                "tokens": set(item["tokens"]),
+                "items": [item],
+            })
+        else:
+            assigned["items"].append(item)
+            assigned["tokens"].update(item["tokens"])
+
+    ranked = []
+    for cluster in clusters:
+        items = cluster["items"]
+        sources = []
+        seen = set()
+        categories = []
+        cat_seen = set()
+        total_weight = 0.0
+        link = ""
+        for it in items:
+            src = it["source"]
+            if src not in seen:
+                seen.add(src)
+                sources.append(src)
+            cat = it["category"]
+            if cat and cat not in cat_seen:
+                cat_seen.add(cat)
+                categories.append(cat)
+            total_weight += it["weight"]
+            if not link and it["link"]:
+                link = it["link"]
+        ranked.append({
+            "title": _canonical_title([it["title"] for it in items]),
+            "source_count": len(sources),
+            "article_count": len(items),
+            "sources": sources,
+            "categories": categories,
+            "link": link,
+            "weight_sum": total_weight,
+            "methode": "regelbasiert, ohne KI",
+        })
+
+    ranked.sort(
+        key=lambda c: (c["source_count"], c["article_count"], c["weight_sum"]),
+        reverse=True,
+    )
+
+    top = []
+    for i, cluster in enumerate(ranked[:limit], start=1):
+        entry = dict(cluster)
+        entry.pop("weight_sum", None)
+        entry["rank"] = i
+        top.append(entry)
+    return top
+
+
+def build_rule_based_briefing(articles: list) -> dict:
+    """Erzeugt den Überblick aus Feed-Titeln, klar als regelbasiert gekennzeichnet."""
+    top5 = build_rule_based_top5(articles, limit=5)
+    takeaways = []
+    for item in top5:
+        srcs = ", ".join(item["sources"][:6])
+        if len(item["sources"]) > 6:
+            srcs += ", …"
+        takeaways.append(
+            f"{item['title']} ({item['source_count']} Quellen: {srcs})"
+        )
+
+    if top5:
+        lines = [
+            f"Regelbasierter Überblick (ohne KI) vom {CURRENT_DATE_STR}.",
+            "Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.",
+        ]
+        for item in top5:
+            lines.append(
+                f"{item['rank']}. {item['title']} – {item['source_count']} Quellen."
+            )
+        summary = " ".join(lines[:2]) + "\n" + "\n".join(lines[2:])
+    else:
+        summary = (
+            f"Regelbasierter Überblick (ohne KI) vom {CURRENT_DATE_STR}: "
+            "keine verwertbaren Feed-Titel in diesem Lauf."
+        )
+
+    return {
+        "ampel_status": "GRAU",
+        "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
+        "daily_executive_summary": summary,
+        "daily_executive_summary_simple": summary,
+        "key_takeaways": takeaways,
+        "simple_key_takeaways": takeaways,
+        "top5": top5,
+        "synthesis_method": "regelbasiert, ohne KI",
+        "market_regime": "keine KI-Bewertung",
+        "top_risk": "keine KI-Bewertung",
+        "game_theory_analysis": (
+            "Keine Spieltheorie-Debatte: LLM deaktiviert. "
+            "Überblick ist regelbasiert, ohne KI."
+        ),
+        "predictive_horizon": {
+            "base_case_probability_pct": None,
+            "base_case_summary": "keine KI-Prognose (LLM deaktiviert).",
+            "leading_indicators_to_watch": [],
+        },
+        "conflict_hotspots": [],
+        "historical_precedents": [],
+        "domestic_policy_matrix": [],
+        "equity_rotation": {"top5_buys": [], "flop5_sells": []},
+        "graph_network": {"nodes": [], "edges": []},
+    }
 
 TELEGRAM_OSINT_CHANNELS = [
     {"name": "UKMTO Alerts", "channel": "ukmto_official", "cat": "Schifffahrt"},
@@ -509,8 +721,14 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights:
         data = {}
 
     # 1. AMPEL & TEXTE ABSICHERN
-    data["ampel_status"] = to_str(data.get("ampel_status"), "GELB").upper()
-    data["ampel_reason_simple"] = to_str(data.get("ampel_reason_simple"), "Erhöhte allgemeine Volatilität im geopolitischen Raum.")
+    default_ampel = "GRAU" if not LLM_ENABLED else "GELB"
+    default_reason = (
+        "regelbasiert, ohne KI – keine LLM-Ampelbewertung."
+        if not LLM_ENABLED else
+        "Erhöhte allgemeine Volatilität im geopolitischen Raum."
+    )
+    data["ampel_status"] = to_str(data.get("ampel_status"), default_ampel).upper()
+    data["ampel_reason_simple"] = to_str(data.get("ampel_reason_simple"), default_reason)
     
     exec_sum = to_str(data.get("daily_executive_summary"), "Für diesen Durchlauf liegt kein vollständiges Briefing vor.")
     data["daily_executive_summary"] = exec_sum
@@ -531,26 +749,35 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights:
     data["simple_key_takeaways"] = clean_takeaways
 
     # 3. GEOSCORE & DEFCON
-    geoscore_val = data.get("overall_geoscore") or data.get("geoscore") or 75
-    if isinstance(geoscore_val, dict):
-        geoscore_num = int(geoscore_val.get("current_score", 75))
+    if not LLM_ENABLED:
+        data["overall_geoscore"] = None
+        data["geoscore"] = {"current_score": None, "status": "nicht bewertet (LLM deaktiviert)"}
+        data["defcon_level"] = None
+        data["defcon"] = None
+        data["defcon_status"] = {"level": None, "label": "nicht bewertet (LLM deaktiviert)"}
+        data["market_regime"] = to_str(data.get("market_regime"), "keine KI-Bewertung")
+        data["top_risk"] = to_str(data.get("top_risk"), "keine KI-Bewertung")
     else:
-        try: geoscore_num = int(geoscore_val)
-        except: geoscore_num = 75
+        geoscore_val = data.get("overall_geoscore") or data.get("geoscore") or 75
+        if isinstance(geoscore_val, dict):
+            geoscore_num = int(geoscore_val.get("current_score", 75))
+        else:
+            try: geoscore_num = int(geoscore_val)
+            except: geoscore_num = 75
 
-    data["overall_geoscore"] = geoscore_num
-    data["geoscore"] = {"current_score": geoscore_num, "status": "Erhöht"}
+        data["overall_geoscore"] = geoscore_num
+        data["geoscore"] = {"current_score": geoscore_num, "status": "Erhöht"}
 
-    defcon_val = data.get("defcon_level") or data.get("defcon") or 3
-    try: defcon_num = int(defcon_val)
-    except: defcon_num = 3
+        defcon_val = data.get("defcon_level") or data.get("defcon") or 3
+        try: defcon_num = int(defcon_val)
+        except: defcon_num = 3
 
-    data["defcon_level"] = defcon_num
-    data["defcon"] = defcon_num
-    data["defcon_status"] = {"level": defcon_num, "label": f"DEFCON {defcon_num}"}
+        data["defcon_level"] = defcon_num
+        data["defcon"] = defcon_num
+        data["defcon_status"] = {"level": defcon_num, "label": f"DEFCON {defcon_num}"}
 
-    data["market_regime"] = to_str(data.get("market_regime"), "Geopolitische Segmentierung")
-    data["top_risk"] = to_str(data.get("top_risk"), "Lieferketten & Chokepoints")
+        data["market_regime"] = to_str(data.get("market_regime"), "Geopolitische Segmentierung")
+        data["top_risk"] = to_str(data.get("top_risk"), "Lieferketten & Chokepoints")
 
     # 4. SCHWARM-DEBATTE
     ds_clean = to_str(debate_summary)
@@ -608,8 +835,18 @@ def harmonize_and_validate_schema(data: dict, debate_summary: str, live_flights:
     # 7. PREDICTIVE HORIZON (Zukunfts-Prognose Matrix)
     ph = data.get("predictive_horizon", [])
     if isinstance(ph, dict):
-        prob = int(ph.get("base_case_probability_pct", 65))
-        summary = to_str(ph.get("base_case_summary"), "Stabile Trendfortsetzung.")
+        raw_prob = ph.get("base_case_probability_pct")
+        if raw_prob is None and not LLM_ENABLED:
+            prob = None
+        else:
+            try:
+                prob = int(raw_prob if raw_prob is not None else 65)
+            except (TypeError, ValueError):
+                prob = 65
+        summary = to_str(
+            ph.get("base_case_summary"),
+            "keine KI-Prognose (LLM deaktiviert)." if not LLM_ENABLED else "Stabile Trendfortsetzung.",
+        )
         inds = ph.get("leading_indicators_to_watch", [])
         clean_inds = [to_str(x) for x in inds if to_str(x)]
         data["predictive_horizon"] = {
@@ -754,7 +991,7 @@ def fetch_all_feeds(sources_list: list) -> list:
 
 
 def baker_groq(payload: str) -> str:
-    if not GROQ_API_KEY: return ""
+    if not LLM_ENABLED or not GROQ_API_KEY: return ""
     try:
         res = requests.post(
             "https://api.groq.com/openai/v1/chat/completions",
@@ -774,7 +1011,7 @@ def baker_groq(payload: str) -> str:
 
 
 def baker_deepseek(payload: str) -> str:
-    if not DEEPSEEK_API_KEY: return ""
+    if not LLM_ENABLED or not DEEPSEEK_API_KEY: return ""
     try:
         res = requests.post(
             "https://api.deepseek.com/chat/completions",
@@ -794,6 +1031,8 @@ def baker_deepseek(payload: str) -> str:
 
 
 def baker_qwen_or_grok(payload: str) -> str:
+    if not LLM_ENABLED:
+        return ""
     api_key = OPENROUTER_API_KEY or XAI_API_KEY or QWEN_API_KEY
     if not api_key: return ""
     endpoint = "https://openrouter.ai/api/v1/chat/completions" if OPENROUTER_API_KEY else "https://api.x.ai/v1/chat/completions"
@@ -814,6 +1053,9 @@ def baker_qwen_or_grok(payload: str) -> str:
 
 
 def run_swarm_debate(draft_groq: str, draft_deepseek: str, draft_macro: str) -> str:
+    if not LLM_ENABLED:
+        pipeline_health["swarm_debate_status"] = "DEAKTIVIERT"
+        return ""
     combined = f"GROQ:\n{draft_groq}\n\nDEEPSEEK:\n{draft_deepseek}\n\nMACRO:\n{draft_macro}".strip()
     api_key = MISTRAL_API_KEY or OPENROUTER_API_KEY or GROQ_API_KEY
     if not api_key or not combined: return combined
@@ -838,6 +1080,9 @@ def run_swarm_debate(draft_groq: str, draft_deepseek: str, draft_macro: str) -> 
 
 
 def call_synthesizer(debate_result: str, raw_payload: str) -> dict:
+    if not LLM_ENABLED:
+        pipeline_health["synthesizer_status"] = "DEAKTIVIERT"
+        return {}
     api_key = MISTRAL_API_KEY or OPENROUTER_API_KEY or GROQ_API_KEY
     if not api_key:
         pipeline_health["synthesizer_status"] = "NO_API_KEY"
@@ -1017,6 +1262,9 @@ def build_fallback_from_debate(debate_summary: str) -> dict:
 
 
 def call_haiku_refine(data_dict: dict) -> dict:
+    if not LLM_ENABLED:
+        pipeline_health["haiku_status"] = "DEAKTIVIERT"
+        return data_dict
     if not ANTHROPIC_API_KEY or not data_dict:
         return data_dict
 
@@ -1064,19 +1312,31 @@ def call_haiku_refine(data_dict: dict) -> dict:
 # ============================================================
 # DELTA SNAPSHOT TRACKING
 # ============================================================
+def _optional_int(value, default=None):
+    """Ganzzahl oder None; erfindet keine Fallback-Scores."""
+    if isinstance(value, dict):
+        value = value.get("current_score", value.get("level"))
+    if value is None or value == "":
+        return default
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
 def build_delta_snapshot(old_data: dict, new_data: dict) -> dict:
     """Vergleicht den letzten Lauf mit dem aktuellen."""
     if not old_data or not isinstance(old_data, dict):
         return {
             "has_previous": False,
             "ampel_prev": None,
-            "ampel_now": new_data.get("ampel_status", "GELB"),
+            "ampel_now": new_data.get("ampel_status", "GRAU" if not LLM_ENABLED else "GELB"),
             "ampel_changed": False,
             "geoscore_prev": None,
-            "geoscore_now": new_data.get("overall_geoscore", 75),
-            "geoscore_delta": 0,
+            "geoscore_now": _optional_int(new_data.get("overall_geoscore")),
+            "geoscore_delta": None,
             "defcon_prev": None,
-            "defcon_now": new_data.get("defcon_level", 3),
+            "defcon_now": _optional_int(new_data.get("defcon_level")),
             "nodes_prev": 0,
             "nodes_now": len((new_data.get("graph_network") or {}).get("nodes") or []),
             "hotspots_now": len(new_data.get("conflict_hotspots") or []),
@@ -1084,42 +1344,38 @@ def build_delta_snapshot(old_data: dict, new_data: dict) -> dict:
         }
 
     prev_ampel = to_str(old_data.get("ampel_status"), "GELB").upper()
-    now_ampel = to_str(new_data.get("ampel_status"), "GELB").upper()
+    now_ampel = to_str(new_data.get("ampel_status"), "GRAU" if not LLM_ENABLED else "GELB").upper()
 
-    try:
-        prev_geo = int(
-            old_data.get("overall_geoscore")
-            or (old_data.get("geoscore") or {}).get("current_score")
-            or 75
-        )
-    except Exception:
-        prev_geo = 75
-    try:
-        now_geo = int(new_data.get("overall_geoscore") or 75)
-    except Exception:
-        now_geo = 75
+    prev_geo = _optional_int(
+        old_data.get("overall_geoscore")
+        if old_data.get("overall_geoscore") is not None
+        else (old_data.get("geoscore") or {}).get("current_score")
+    )
+    now_geo = _optional_int(new_data.get("overall_geoscore"))
 
-    try:
-        prev_def = int(old_data.get("defcon_level") or 3)
-    except Exception:
-        prev_def = 3
-    try:
-        now_def = int(new_data.get("defcon_level") or 3)
-    except Exception:
-        now_def = 3
+    prev_def = _optional_int(old_data.get("defcon_level"))
+    now_def = _optional_int(new_data.get("defcon_level"))
 
     nodes_prev = len((old_data.get("graph_network") or {}).get("nodes") or [])
     nodes_now = len((new_data.get("graph_network") or {}).get("nodes") or [])
     hotspots_now = len(new_data.get("conflict_hotspots") or [])
-    geo_d = now_geo - prev_geo
+
+    if now_geo is not None and prev_geo is not None:
+        geo_d = now_geo - prev_geo
+    else:
+        geo_d = None
 
     parts = []
     if prev_ampel != now_ampel:
         parts.append(f"Ampel {prev_ampel} → {now_ampel}")
-    if geo_d != 0:
+    if geo_d is not None and geo_d != 0:
         parts.append(f"Geoscore {prev_geo} → {now_geo} ({'+' if geo_d > 0 else ''}{geo_d})")
-    if prev_def != now_def:
+    elif now_geo is None and prev_geo is not None:
+        parts.append("Geoscore nicht bewertet (LLM deaktiviert)")
+    if now_def is not None and prev_def is not None and prev_def != now_def:
         parts.append(f"DEFCON {prev_def} → {now_def}")
+    elif now_def is None and prev_def is not None:
+        parts.append("DEFCON nicht bewertet (LLM deaktiviert)")
     if nodes_now != nodes_prev:
         parts.append(f"Graph-Knoten {nodes_prev} → {nodes_now}")
 
@@ -1162,7 +1418,12 @@ def main():
     final_data = {}
     debate_summary = ""
 
-    if articles:
+    if not LLM_ENABLED:
+        mark_llm_disabled()
+        logging.info("LLM_ENABLED=false – Synthese entfällt, regelbasiertes Top 5 aus Feed-Titeln.")
+        selected = select_balanced_articles(articles, max_count=120) if articles else []
+        final_data = build_rule_based_briefing(selected)
+    elif articles:
         try:
             selected = select_balanced_articles(articles, max_count=120)
             raw_payload = "\n".join([
@@ -1203,6 +1464,7 @@ def main():
         logging.info(
             f"Pipeline fertig. Feeds: {pipeline_health['feeds_successful']}/{pipeline_health['feeds_total']} | "
             f"GDELT: {pipeline_health['gdelt_articles']} | TG: {pipeline_health['telegram_posts']} | "
+            f"LLM: {pipeline_health.get('llm_status')} | "
             f"Synthesizer: {pipeline_health.get('synthesizer_status')} | "
             f"Delta: {final_data['delta'].get('summary', '—')} → data.json"
         )

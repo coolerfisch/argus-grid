@@ -971,13 +971,14 @@ async function loadDashboard(){
     const rate=t>0?Math.round(s/t*100):0;
     let c='var(--green)';
     if(rate<40)c='var(--red)';else if(rate<65)c='var(--amber)';
+    const llmLabel = ph.llm_status || (ph.llm_enabled===false ? 'DEAKTIVIERT' : null);
     document.getElementById('health-badge').innerHTML=
       `<span style="color:${c};font-weight:700">●</span> <b>Feeds</b> ${s}/${t}`+
       ` · <b>GDELT</b> ${ph.gdelt_articles||0}`+
       ` · <b>TG</b> ${ph.telegram_posts||0}`+
       ` · <b>ADS-B</b> ${ph.opensky_status||'—'}`+
-      ` · <b>Synth</b> ${ph.synthesizer_status||'—'}`+
-      ` · ${(ph.bakers_active||[]).join(', ')||'—'}`;
+      ` · <b>LLM</b> ${llmLabel||ph.synthesizer_status||'—'}`+
+      ` · ${(ph.bakers_active||[]).join(', ')|| (llmLabel==='DEAKTIVIERT' ? 'regelbasiert, ohne KI' : '—')}`;
   }catch(_){}
 
   // Delta
@@ -999,6 +1000,7 @@ async function loadDashboard(){
   const tit=document.getElementById('ampel-title');
   if(st==='ROT'){tit.textContent='ROT — Höchste Warnstufe';tit.style.color='var(--red)'}
   else if(st==='GRÜN'){tit.textContent='GRÜN — Stabil';tit.style.color='var(--green)'}
+  else if(st==='GRAU'){tit.textContent='GRAU — keine KI-Bewertung';tit.style.color='var(--ink-2)'}
   else{tit.textContent='GELB — Spannungen & Konflikte';tit.style.color='var(--amber)'}
   document.getElementById('ampel-reason').textContent=cleanText(globalData.ampel_reason_simple);
 
@@ -1045,6 +1047,8 @@ async function loadDashboard(){
   const modelsEl = document.getElementById('debate-models');
   if (globalData.pipeline_health?.bakers_active?.length) {
     modelsEl.textContent = globalData.pipeline_health.bakers_active.join(' · ');
+  } else if (globalData.pipeline_health?.llm_status === 'DEAKTIVIERT' || globalData.synthesis_method) {
+    modelsEl.textContent = globalData.synthesis_method || 'regelbasiert, ohne KI';
   }
   if (debate.length > 30) {
     let html = (debate.includes('|') && debate.includes('---'))
@@ -1074,8 +1078,11 @@ async function loadDashboard(){
     document.getElementById('domestic-matrix-container').innerHTML='<div class="empty">Keine Innenpolitik-Daten.</div>';
   }
 
-  document.getElementById('kpi-geoscore').textContent=(globalData.overall_geoscore||globalData.geoscore?.current_score||75)+' / 100';
-  document.getElementById('kpi-defcon').textContent=cleanText(globalData.defcon_status?.label)||`DEFCON ${globalData.defcon_level||3}`;
+  const geoVal=globalData.overall_geoscore ?? globalData.geoscore?.current_score;
+  document.getElementById('kpi-geoscore').textContent=(geoVal===null||geoVal===undefined||geoVal==='')?'nicht bewertet':(geoVal+' / 100');
+  const defLabel=cleanText(globalData.defcon_status?.label);
+  const defVal=globalData.defcon_level ?? globalData.defcon;
+  document.getElementById('kpi-defcon').textContent=defLabel||((defVal===null||defVal===undefined)?'nicht bewertet':`DEFCON ${defVal}`);
   document.getElementById('kpi-regime').textContent=cleanText(globalData.market_regime||'Volatil');
   document.getElementById('kpi-risk').textContent=cleanText(globalData.top_risk||'Lieferketten');
 
