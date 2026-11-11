@@ -1,95 +1,181 @@
 {
-  "ampel_status": "GELB",
-  "ampel_reason_simple": "Lage wird aus Multi-LLM-Kreuzprüfung abgeleitet. Synthesizer lieferte kein vollständiges JSON.",
-  "daily_executive_summary": "GROQ:\n\n\nDEEPSEEK:\nDas ist ein interessanter und dichter Nachrichten-Mix für den 10. November 2026. Ich fasse die wichtigsten Punkte zusammen und ordne sie ein:\n\n**Geldpolitik & Inflation (USA)**\n- **Fed-Governor Waller** bringt eine **50-Basispunkte-Zinserhöhung** für Dezember ins Spiel – ein ungewöhnlich hawkisher Ton. Die Begründung: Die Arbeitsmarktdaten seien „so heiß wie befürchtet“.\n- Gleichzeitig zeigt der **FT-Bericht**, dass die US-Inflation im Oktober nur **weniger stark als erwartet** nachließ (0,4 %). Die Datenlage ist durch den Regierungs-Shutdown des Vorjahres verzerrt.\n- **Einor...",
-  "daily_executive_summary_simple": "GROQ:\n\n\nDEEPSEEK:\nDas ist ein interessanter und dichter Nachrichten-Mix für den 10. November 2026. Ich fasse die wichtigsten Punkte zusammen und ordne sie ein:\n\n**Geldpolitik & Inflation (USA)**\n- **Fed-Governor Waller** bringt eine **50-Basispunkte-Zinserhöhung** für Dezember ins Spiel – ein ungewöhnlich hawkisher Ton. Die Begründung: Die Arbeitsm...",
+  "ampel_status": "GRAU",
+  "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 11.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. US House of Representatives Republicans derail attempt to impeach Defense Secretary Pete Hegseth – 4 Quellen.\n2. British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia – 3 Quellen.\n3. One reason Children’s Place is filing for bankruptcy? Not enough children. – 2 Quellen.\n4. Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 11.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. US House of Representatives Republicans derail attempt to impeach Defense Secretary Pete Hegseth – 4 Quellen.\n2. British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia – 3 Quellen.\n3. One reason Children’s Place is filing for bankruptcy? Not enough children. – 2 Quellen.\n4. Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
   "key_takeaways": [
-    "Fed-Governor Waller** bringt eine **50-Basispunkte-Zinserhöhung** für Dezember ins Spiel – ein ungewöhnlich hawkisher Ton. Die Begründung: Die Arbeitsmarktdaten seien „so heiß wie befürchtet“.",
-    "Gleichzeitig zeigt der **FT-Bericht**, dass die US-Inflation im Oktober nur **weniger stark als erwartet** nachließ (0,4 %). Die Datenlage ist durch den Regierungs-Shutdown des Vorjahres verzerrt.",
-    "Einordnung:** Das ist ein Spannungsfeld. Waller signalisiert Härte, während die Inflationsdaten zwar hartnäckig, aber nicht katastrophal sind. Eine 50-bp-Erhöhung wäre ein starkes Signal – der Markt wird das als Verschiebung der Reaktionsfunktion der Fed lesen.",
-    "CISA** hat vier neue **Known Exploited Vulnerabilities (KEV)** aufgenommen, darunter:",
-    "CVE-2026-102895** – GPUStack, Improper Authentication"
+    "US House of Representatives Republicans derail attempt to impeach Defense Secretary Pete Hegseth (4 Quellen: CBC News World (Kanada), Jerusalem Post, The Intercept, Reuters World (Google Search Feed))",
+    "British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia (3 Quellen: New York Times World, Meduza English (Russland Exil), BBC World News)",
+    "One reason Children’s Place is filing for bankruptcy? Not enough children. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc (1 Quellen: Federal Reserve Press)",
+    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)"
   ],
-  "overall_geoscore": 72,
-  "defcon_level": 3,
-  "market_regime": "Unsicher / Fragmentiert",
-  "top_risk": "Geopolitische Volatilität",
-  "game_theory_analysis": "GROQ:\n\n\nDEEPSEEK:\nDas ist ein interessanter und dichter Nachrichten-Mix für den 10. November 2026. Ich fasse die wichtigsten Punkte zusammen und ordne sie ein:\n\n**Geldpolitik & Inflation (USA)**\n- **Fed-Governor Waller** bringt eine **50-Basispunkte-Zinserhöhung** für Dezember ins Spiel – ein ungewöhnlich hawkisher Ton. Die Begründung: Die Arbeitsmarktdaten seien „so heiß wie befürchtet“.\n- Gleichzeitig zeigt der **FT-Bericht**, dass die US-Inflation im Oktober nur **weniger stark als erwartet** nachließ (0,4 %). Die Datenlage ist durch den Regierungs-Shutdown des Vorjahres verzerrt.\n- **Einordnung:** Das ist ein Spannungsfeld. Waller signalisiert Härte, während die Inflationsdaten zwar hartnäckig, aber nicht katastrophal sind. Eine 50-bp-Erhöhung wäre ein starkes Signal – der Markt wird das als Verschiebung der Reaktionsfunktion der Fed lesen.\n\n**Cyber-Sicherheit**\n- **CISA** hat vier neue **Known Exploited Vulnerabilities (KEV)** aufgenommen, darunter:\n  - **CVE-2026-102895** – GPUStack, Improper Authentication\n  - **CVE-2026-116779** – SignalWire FreeSwitch, Code Injection\n  - (zwei weitere, im Feed abgeschnitten)\n- **Einordnung:** Beide betreffen Infrastruktur-Komponenten (GPU-Orchestrierung, VoIP/Telefonie). Aktive Ausnutzung bedeutet: Patch-Priorität hoch, besonders für Betreiber von KI-Clustern und Telekommunikationsdiensten.\n\n**US-Politik**\n- **Fox News:** GOP-Abgeordneter **Ken Calvert** besiegt **Young Kim** in einem republikanischen Duell in einem **gerrymanderten kalifornischen Distrikt** – Folge von Gavin Newsoms Redistricting.\n- **Einordnung:** Ein innerparteilicher Kampf, der zeigt, wie aggressiv Redistricting die parteiinterne Landschaft umformt. Für die Midterms ein Signal, dass kalifornische Republikaner in neu zugeschnittenen Distrikten gegeneinander antreten müssen.\n\n**Internationale Politik & Sicherheit**\n- **NZZ:** In **Krakau** herrschen nach einem „Blutbad“ Fassungslosigkeit und Schweigen. Ein Trauermarsch, an dem verfeindete Spitzen des polnischen Staates teilnehmen. Spekulationen über den Hintergrund – die Menschen sind ratlos.\n- **Einordnung:** Das klingt nach einem schweren Gewaltvorfall mit politischer Dimension in Polen. Die Tatsache, dass verfeindete StaatsSpitzen gemeinsam teilnehmen, deutet auf einen nationalen Schockmoment hin. Die Hintergründe sind unklar – hier wäre weitere Berichterstattung nötig.\n\n**US-Venezuela**\n- **NYT:** Die USA haben **12 Milliarden Dollar** aus Venezuelas Öl erhalten. Ein US-kontrolliertes Bankkonto zeigt, wie Washington die venezolanischen Einnahmen verwaltet, nachdem es den Präsidenten des Landes „gefangen genommen“ hat.\n- **Einordnung:** Das ist ein geopolitischer Paukenschlag. Die Formulierung „capturing the country’s president“ deutet auf eine extreme Eskalation hin – möglicherweise eine militärische oder verdeckte Operation. Die 12 Mrd. USD wären ein zentraler Hebel der US-Politik gegenüber Venezuela.\n\n**Technologie & Recht**\n- **BBC:** Trump sagt, das **FBI untersucht eine Affäre** von **Nvidia-Chef Jensen Huang** mit einer mutmaßlichen **chinesischen Spionin**. Trump habe Huang am Montag gesprochen und ihn dazu befragt.\n- **Einordnung:** Das ist brisant – Nvidia ist ein Schlüsselunternehmen der KI- und Halbleiterindustrie, und eine Spionageaffäre an der Spitze hätte massive sicherheitspolitische Implikationen. Die Tatsache, dass Trump persönlich interveniert, zeigt die politische Sensibilität.\n\n**Zentralbank/Regulierung**\n- **Federal Reserve Board** genehmigt zwei Anträge von **Mutual Federal Bancorp, MHC** und **MFB Bancorp, Inc.** – eine routinehafte, aber für den Bankensektor relevante Genehmigung.\n\n**Wetter**\n- **NOAA:** Keine tropische Zyklonbildung im Atlantik in den nächsten 7 Tagen erwartet.\n\n**Gesamteindruck:**\nDer Tag ist geprägt von **geldpolitischer Unsicherheit** (Waller vs. Inflationsdaten), **sicherheitspolitischen Brisanzen** (Nvidia-Spionageaffäre, Krakau, Venezuela) und **innenpolitischen Verwerfungen** (Gerrymandering in Kalifornien). Besonders auffällig: Die US-Notenbank diskutiert eine 50-bp-Erhöhung, während gleichzeitig geopolitische und sicherheitspolitische Risiken zunehmen – ein klassisches Umfeld, in dem Märkte nervös reagieren.\n\nMöchtest du zu einem der Themen tiefer einsteigen?\n\nMACRO:\nHier ist eine Zusammenfassung der wichtigsten News-Feeds für den 10. November 2026:\n\n### Finanzen\n- **Federal Reserve**: Die Federal Reserve Board hat zwei Anträge von Mutual Federal Bancorp, MHC und MFB Bancorp, Inc. genehmigt.\n- **Fed’s Waller**: Christopher Waller, ein Vertreter der Federal Reserve, hat eine Halb-Punkt-Zinserhöhung für Dezember in Betracht gezogen, basierend auf den neuesten Arbeitsmarktdaten.\n\n### Cyber / Infrastruktur\n- **CISA**: CISA hat vier neue Vulnerabilities (CVE-2026-102895, CVE-2026-116779, CVE-2026-12315) aufgrund aktiver Ausnutzungen in den Known Exploited Vulnerabilities (KEV) Catalog aufgenommen.\n\n### Politik\n- **GOP vs. GOP**: Republikaner Ken Calvert hat Republikaner Young Kim in einem seltenen Innenparteienstreit in einem gesch.Navigatorierten Wahlkreis in Kalifornien besiegt.\n- **Polen**: In Krakau herrscht Fassungslosigkeit und Schweigen nach einem Blutbad. Miteinander verfeindete Spitzen des polnischen Staates nehmen an einem Trauermarsch teil.\n\n### Internationale Beziehungen\n- **USA und Venezuela**: Ein Bericht zeigt, dass die USA 12 Milliarden Dollar aus Venezuelas Öl erhielten. Diese Einnahmen werden von einem US-geführten Bankkonto verwaltet.\n- **Nvidia und China**: Präsident Trump behauptet, dass das FBI die Affäre von Nvidia-Chef Jensen Huang mit einer angeblichen chinesischen Spionin untersucht.\n\n### Wetter und Naturkatastrophen\n- **National Hurricane Center**: Keine erwartete Tropensturm- oder Hurrikanausbildung im Atlantik, Karibik oder Golf von Mexiko in den nächsten 7 Tagen.\n\n### Investigative Berichterstattung\n- **ICIJ**: Vertrauliche Akten zeigen, wie die state-backed ICBC Bank chinesischen Unternehmen beim Einstieg in den europäischen Windenergiemarkt geholfen hat, was europäische Unternehmen in Bedrängnis bringt.\n\n### Gesundheit\n- **CDC**: Der jährliche Bericht zur Krebsmortalität zeigt Fortschritte bei der Reduzierung von Krebssterben, insbesondere bei Lungenkrebs.\n\n### Wirtschaft und Finanzen\n- **Financial Times**: Die monatliche Inflation in den USA im Oktober war stärker als erwartet (0,4%), was teilweise auf das Ausfallen der Daten vom vergangenen Jahr zurückzuführen ist, als die Regierung geschlossen war.\n\nDiese Zusammenfassung bietet einen Überblick über die wichtigsten Entwicklungen in verschiedenen Bereichen.",
+  "simple_key_takeaways": [
+    "US House of Representatives Republicans derail attempt to impeach Defense Secretary Pete Hegseth (4 Quellen: CBC News World (Kanada), Jerusalem Post, The Intercept, Reuters World (Google Search Feed))",
+    "British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia (3 Quellen: New York Times World, Meduza English (Russland Exil), BBC World News)",
+    "One reason Children’s Place is filing for bankruptcy? Not enough children. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc (1 Quellen: Federal Reserve Press)",
+    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)"
+  ],
+  "top5": [
+    {
+      "title": "US House of Representatives Republicans derail attempt to impeach Defense Secretary Pete Hegseth",
+      "source_count": 4,
+      "article_count": 4,
+      "sources": [
+        "CBC News World (Kanada)",
+        "Jerusalem Post",
+        "The Intercept",
+        "Reuters World (Google Search Feed)"
+      ],
+      "categories": [
+        "CA/Presse",
+        "IL/Presse",
+        "Investigativ",
+        "Agentur"
+      ],
+      "link": "https://www.cbc.ca/news/world/hegseth-impeachment-resolution-reaction-9.7416083?cmp=rss",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 1
+    },
+    {
+      "title": "British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia",
+      "source_count": 3,
+      "article_count": 3,
+      "sources": [
+        "New York Times World",
+        "Meduza English (Russland Exil)",
+        "BBC World News"
+      ],
+      "categories": [
+        "US/Presse",
+        "RU/Exil-Investigativ",
+        "UK/Medien"
+      ],
+      "link": "https://www.nytimes.com/2026/11/10/world/europe/uk-us-army-arrest-espionage-russia.html",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 2
+    },
+    {
+      "title": "One reason Children’s Place is filing for bankruptcy? Not enough children.",
+      "source_count": 2,
+      "article_count": 2,
+      "sources": [
+        "Wall Street Journal (MarketWatch Alt)",
+        "MOVE Index / Bonds (MarketWatch)"
+      ],
+      "categories": [
+        "US/Finanzen",
+        "Bond Stress"
+      ],
+      "link": "https://www.marketwatch.com/story/one-reason-the-childrens-place-is-going-bankrupt-not-enough-children-b275eab0?mod=mw_rss_topstories",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 3
+    },
+    {
+      "title": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
+      "source_count": 1,
+      "article_count": 2,
+      "sources": [
+        "Federal Reserve Press"
+      ],
+      "categories": [
+        "Zentralbank"
+      ],
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 4
+    },
+    {
+      "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+      "source_count": 1,
+      "article_count": 2,
+      "sources": [
+        "CISA Cyber Alerts"
+      ],
+      "categories": [
+        "Cyber / Infrastruktur"
+      ],
+      "link": "https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 5
+    }
+  ],
+  "synthesis_method": "regelbasiert, ohne KI",
+  "market_regime": "keine KI-Bewertung",
+  "top_risk": "keine KI-Bewertung",
+  "game_theory_analysis": "Keine Spieltheorie-Debatte: LLM deaktiviert. Überblick ist regelbasiert, ohne KI.",
   "predictive_horizon": {
-    "base_case_probability_pct": 55,
-    "base_case_summary": "Prognose aus Debatten-Konsens abgeleitet. Details in der Tiefenanalyse.",
-    "leading_indicators_to_watch": [
-      "Weitere Eskalationssignale in den Feeds",
-      "Zentralbank-Kommunikation",
-      "Militärische Bewegungen"
-    ],
+    "base_case_probability_pct": null,
+    "base_case_summary": "keine KI-Prognose (LLM deaktiviert).",
+    "leading_indicators_to_watch": [],
     "horizon_list": []
   },
   "conflict_hotspots": [
     {
-      "name": "Flug TVF33CH",
+      "name": "Flug PGT63WR",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.0935,
-      "lon": 28.7108,
-      "lng": 28.7108,
+      "lat": 40.8907,
+      "lon": 29.9068,
+      "lng": 29.9068,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TVF33CH | Höhe: 0.9 km | Speed: 345 km/h",
+      "description": "Callsign: PGT63WR | Höhe: 2.6 km | Speed: 498 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT22TV",
+      "name": "Flug AIC98Q",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.426,
-      "lon": 27.4606,
-      "lng": 27.4606,
+      "lat": 40.0153,
+      "lon": 37.8026,
+      "lng": 37.8026,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT22TV | Höhe: 10.7 km | Speed: 940 km/h",
+      "description": "Callsign: AIC98Q | Höhe: 11.9 km | Speed: 958 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug S5DIM",
+      "name": "Flug PGT687",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.8702,
-      "lon": 33.4637,
-      "lng": 33.4637,
+      "lat": 33.1566,
+      "lon": 38.3564,
+      "lng": 38.3564,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: S5DIM | Höhe: 0.8 km | Speed: 215 km/h",
+      "description": "Callsign: PGT687 | Höhe: 11.0 km | Speed: 744 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug 4XBCQ",
+      "name": "Flug PGT831",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.1244,
-      "lon": 34.7873,
-      "lng": 34.7873,
+      "lat": 26.7269,
+      "lon": 50.3957,
+      "lng": 50.3957,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XBCQ | Höhe: -0.0 km | Speed: 76 km/h",
+      "description": "Callsign: PGT831 | Höhe: 10.4 km | Speed: 727 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA636",
+      "name": "Flug CSS266",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.8501,
-      "lon": 120.7844,
-      "lng": 120.7844,
+      "lat": 26.6575,
+      "lon": 122.4918,
+      "lng": 122.4918,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA636 | Höhe: 5.5 km | Speed: 668 km/h",
+      "description": "Callsign: CSS266 | Höhe: 8.8 km | Speed: 895 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CSZ8566",
+      "name": "Flug TGW835",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.5028,
-      "lon": 119.2555,
-      "lng": 119.2555,
+      "lat": 21.4476,
+      "lon": 120.4677,
+      "lng": 120.4677,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSZ8566 | Höhe: 6.1 km | Speed: 801 km/h",
+      "description": "Callsign: TGW835 | Höhe: 11.0 km | Speed: 822 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -104,60 +190,52 @@
     "edges": [],
     "links": []
   },
-  "simple_key_takeaways": [
-    "Fed-Governor Waller** bringt eine **50-Basispunkte-Zinserhöhung** für Dezember ins Spiel – ein ungewöhnlich hawkisher Ton. Die Begründung: Die Arbeitsmarktdaten seien „so heiß wie befürchtet“.",
-    "Gleichzeitig zeigt der **FT-Bericht**, dass die US-Inflation im Oktober nur **weniger stark als erwartet** nachließ (0,4 %). Die Datenlage ist durch den Regierungs-Shutdown des Vorjahres verzerrt.",
-    "Einordnung:** Das ist ein Spannungsfeld. Waller signalisiert Härte, während die Inflationsdaten zwar hartnäckig, aber nicht katastrophal sind. Eine 50-bp-Erhöhung wäre ein starkes Signal – der Markt wird das als Verschiebung der Reaktionsfunktion der Fed lesen.",
-    "CISA** hat vier neue **Known Exploited Vulnerabilities (KEV)** aufgenommen, darunter:",
-    "CVE-2026-102895** – GPUStack, Improper Authentication"
-  ],
+  "overall_geoscore": null,
   "geoscore": {
-    "current_score": 72,
-    "status": "Erhöht"
+    "current_score": null,
+    "status": "nicht bewertet (LLM deaktiviert)"
   },
-  "defcon": 3,
+  "defcon_level": null,
+  "defcon": null,
   "defcon_status": {
-    "level": 3,
-    "label": "DEFCON 3"
+    "level": null,
+    "label": "nicht bewertet (LLM deaktiviert)"
   },
   "stock_picks": {
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-10T14:01:16.362791+00:00",
+  "timestamp": "2026-11-11T01:41:27.398514+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-10T14:00:19.035253+00:00",
+    "timestamp": "2026-11-11T01:40:54.602359+00:00",
     "feeds_total": 224,
     "feeds_successful": 116,
     "feeds_failed": 108,
     "gdelt_articles": 0,
     "telegram_posts": 0,
-    "bakers_active": [
-      "DeepSeek",
-      "qwen-2.5-72b-instruct"
-    ],
-    "swarm_debate_status": "PENDING",
-    "synthesizer_status": "HTTP_403",
-    "haiku_status": "HTTP_401",
+    "bakers_active": [],
+    "swarm_debate_status": "DEAKTIVIERT",
+    "synthesizer_status": "DEAKTIVIERT",
+    "haiku_status": "DEAKTIVIERT",
     "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
-    "errors": [
-      "Synthesizer HTTP 403"
-    ]
+    "llm_enabled": false,
+    "llm_status": "DEAKTIVIERT",
+    "errors": []
   },
   "delta": {
     "has_previous": true,
     "ampel_prev": "GELB",
-    "ampel_now": "GELB",
-    "ampel_changed": false,
+    "ampel_now": "GRAU",
+    "ampel_changed": true,
     "geoscore_prev": 72,
-    "geoscore_now": 72,
-    "geoscore_delta": 0,
+    "geoscore_now": null,
+    "geoscore_delta": null,
     "defcon_prev": 3,
-    "defcon_now": 3,
+    "defcon_now": null,
     "nodes_prev": 0,
     "nodes_now": 0,
     "hotspots_now": 6,
-    "summary": "Keine wesentliche Änderung zur Vortageslage."
+    "summary": "Ampel GELB → GRAU · Geoscore nicht bewertet (LLM deaktiviert) · DEFCON nicht bewertet (LLM deaktiviert)"
   }
 }
