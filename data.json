@@ -1,63 +1,25 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 11.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. US House of Representatives Republicans derail attempt to impeach Defense Secretary Pete Hegseth – 4 Quellen.\n2. British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia – 3 Quellen.\n3. One reason Children’s Place is filing for bankruptcy? Not enough children. – 2 Quellen.\n4. Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 11.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. US House of Representatives Republicans derail attempt to impeach Defense Secretary Pete Hegseth – 4 Quellen.\n2. British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia – 3 Quellen.\n3. One reason Children’s Place is filing for bankruptcy? Not enough children. – 2 Quellen.\n4. Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 11.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. ‘We had the worst fight’: I want my husband to retire at 65, but I don’t want to lose his $280,000 salary. Is that unreasonable? – 2 Quellen.\n2. Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc – 1 Quellen.\n3. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Integrationsbericht: Natalie Pawlik spricht über Integration in Deutschland – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 11.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. ‘We had the worst fight’: I want my husband to retire at 65, but I don’t want to lose his $280,000 salary. Is that unreasonable? – 2 Quellen.\n2. Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc – 1 Quellen.\n3. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Integrationsbericht: Natalie Pawlik spricht über Integration in Deutschland – 1 Quellen.",
   "key_takeaways": [
-    "US House of Representatives Republicans derail attempt to impeach Defense Secretary Pete Hegseth (4 Quellen: CBC News World (Kanada), Jerusalem Post, The Intercept, Reuters World (Google Search Feed))",
-    "British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia (3 Quellen: New York Times World, Meduza English (Russland Exil), BBC World News)",
-    "One reason Children’s Place is filing for bankruptcy? Not enough children. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "‘We had the worst fight’: I want my husband to retire at 65, but I don’t want to lose his $280,000 salary. Is that unreasonable? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
     "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc (1 Quellen: Federal Reserve Press)",
-    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)"
+    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)",
+    "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
+    "Integrationsbericht: Natalie Pawlik spricht über Integration in Deutschland (1 Quellen: Der Spiegel)"
   ],
   "simple_key_takeaways": [
-    "US House of Representatives Republicans derail attempt to impeach Defense Secretary Pete Hegseth (4 Quellen: CBC News World (Kanada), Jerusalem Post, The Intercept, Reuters World (Google Search Feed))",
-    "British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia (3 Quellen: New York Times World, Meduza English (Russland Exil), BBC World News)",
-    "One reason Children’s Place is filing for bankruptcy? Not enough children. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "‘We had the worst fight’: I want my husband to retire at 65, but I don’t want to lose his $280,000 salary. Is that unreasonable? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
     "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc (1 Quellen: Federal Reserve Press)",
-    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)"
+    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)",
+    "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
+    "Integrationsbericht: Natalie Pawlik spricht über Integration in Deutschland (1 Quellen: Der Spiegel)"
   ],
   "top5": [
     {
-      "title": "US House of Representatives Republicans derail attempt to impeach Defense Secretary Pete Hegseth",
-      "source_count": 4,
-      "article_count": 4,
-      "sources": [
-        "CBC News World (Kanada)",
-        "Jerusalem Post",
-        "The Intercept",
-        "Reuters World (Google Search Feed)"
-      ],
-      "categories": [
-        "CA/Presse",
-        "IL/Presse",
-        "Investigativ",
-        "Agentur"
-      ],
-      "link": "https://www.cbc.ca/news/world/hegseth-impeachment-resolution-reaction-9.7416083?cmp=rss",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 1
-    },
-    {
-      "title": "British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia",
-      "source_count": 3,
-      "article_count": 3,
-      "sources": [
-        "New York Times World",
-        "Meduza English (Russland Exil)",
-        "BBC World News"
-      ],
-      "categories": [
-        "US/Presse",
-        "RU/Exil-Investigativ",
-        "UK/Medien"
-      ],
-      "link": "https://www.nytimes.com/2026/11/10/world/europe/uk-us-army-arrest-espionage-russia.html",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 2
-    },
-    {
-      "title": "One reason Children’s Place is filing for bankruptcy? Not enough children.",
+      "title": "‘We had the worst fight’: I want my husband to retire at 65, but I don’t want to lose his $280,000 salary. Is that unreasonable?",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -68,9 +30,9 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/one-reason-the-childrens-place-is-going-bankrupt-not-enough-children-b275eab0?mod=mw_rss_topstories",
+      "link": "https://www.marketwatch.com/story/we-had-the-worst-fight-weve-ever-had-i-want-my-husband-to-retire-at-65-but-i-dont-want-to-lose-his-280-000-salary-48511469?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
-      "rank": 3
+      "rank": 1
     },
     {
       "title": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
@@ -84,7 +46,7 @@
       ],
       "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
       "methode": "regelbasiert, ohne KI",
-      "rank": 4
+      "rank": 2
     },
     {
       "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
@@ -97,6 +59,34 @@
         "Cyber / Infrastruktur"
       ],
       "link": "https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 3
+    },
+    {
+      "title": "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent",
+      "source_count": 1,
+      "article_count": 2,
+      "sources": [
+        "Atlanta Fed / NY Fed"
+      ],
+      "categories": [
+        "Makro/Fed"
+      ],
+      "link": "https://www.atlantafed.org/research-and-data/data/gdpnow",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 4
+    },
+    {
+      "title": "Integrationsbericht: Natalie Pawlik spricht über Integration in Deutschland",
+      "source_count": 1,
+      "article_count": 2,
+      "sources": [
+        "Der Spiegel"
+      ],
+      "categories": [
+        "DE/Medien"
+      ],
+      "link": "https://www.spiegel.de/panorama/gesellschaft/integrationsbericht-wie-gut-funktioniert-integration-in-deutschland-a-f9bafde8-bf89-4ad9-968a-fc6dd2d8c36a#ref=rss",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -113,69 +103,91 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT63WR",
+      "name": "Flug PGT16TF",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8907,
-      "lon": 29.9068,
-      "lng": 29.9068,
+      "lat": 42.3056,
+      "lon": 26.0298,
+      "lng": 26.0298,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT63WR | Höhe: 2.6 km | Speed: 498 km/h",
+      "description": "Callsign: PGT16TF | Höhe: 10.1 km | Speed: 957 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AIC98Q",
+      "name": "Flug PGT4058",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.0153,
-      "lon": 37.8026,
-      "lng": 37.8026,
+      "lat": 40.5901,
+      "lon": 29.4488,
+      "lng": 29.4488,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC98Q | Höhe: 11.9 km | Speed: 958 km/h",
+      "description": "Callsign: PGT4058 | Höhe: 4.4 km | Speed: 675 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT687",
+      "name": "ADS-B Signal 739261",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.1566,
-      "lon": 38.3564,
-      "lng": 38.3564,
+      "lat": 32.9134,
+      "lon": 34.6056,
+      "lng": 34.6056,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT687 | Höhe: 11.0 km | Speed: 744 km/h",
+      "description": "Callsign: Unbekannt | Höhe: 0.2 km | Speed: 252 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT831",
+      "name": "Flug ELY354",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 26.7269,
-      "lon": 50.3957,
-      "lng": 50.3957,
+      "lat": 33.2937,
+      "lon": 32.9246,
+      "lng": 32.9246,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT831 | Höhe: 10.4 km | Speed: 727 km/h",
+      "description": "Callsign: ELY354 | Höhe: 9.6 km | Speed: 891 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CSS266",
+      "name": "Flug RRR9958",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 33.4547,
+      "lon": 32.8807,
+      "lng": 32.8807,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: RRR9958 | Höhe: 6.6 km | Speed: 860 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug RRR9915",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 32.1805,
+      "lon": 33.1017,
+      "lng": 33.1017,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: RRR9915 | Höhe: 8.9 km | Speed: 878 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "ADS-B Signal 781B39",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 26.6575,
-      "lon": 122.4918,
-      "lng": 122.4918,
+      "lat": 25.7302,
+      "lon": 119.5392,
+      "lng": 119.5392,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSS266 | Höhe: 8.8 km | Speed: 895 km/h",
+      "description": "Callsign: Unbekannt | Höhe: 1.2 km | Speed: 495 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug TGW835",
+      "name": "Flug QDA924",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 21.4476,
-      "lon": 120.4677,
-      "lng": 120.4677,
+      "lat": 26.6393,
+      "lon": 120.008,
+      "lng": 120.008,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TGW835 | Höhe: 11.0 km | Speed: 822 km/h",
+      "description": "Callsign: QDA924 | Höhe: 10.7 km | Speed: 906 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -205,9 +217,9 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-11T01:41:27.398514+00:00",
+  "timestamp": "2026-11-11T13:18:01.159675+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-11T01:40:54.602359+00:00",
+    "timestamp": "2026-11-11T13:17:28.928497+00:00",
     "feeds_total": 224,
     "feeds_successful": 116,
     "feeds_failed": 108,
@@ -217,7 +229,7 @@
     "swarm_debate_status": "DEAKTIVIERT",
     "synthesizer_status": "DEAKTIVIERT",
     "haiku_status": "DEAKTIVIERT",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (8 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "llm_enabled": false,
     "llm_status": "DEAKTIVIERT",
@@ -225,17 +237,17 @@
   },
   "delta": {
     "has_previous": true,
-    "ampel_prev": "GELB",
+    "ampel_prev": "GRAU",
     "ampel_now": "GRAU",
-    "ampel_changed": true,
-    "geoscore_prev": 72,
+    "ampel_changed": false,
+    "geoscore_prev": null,
     "geoscore_now": null,
     "geoscore_delta": null,
-    "defcon_prev": 3,
+    "defcon_prev": null,
     "defcon_now": null,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 6,
-    "summary": "Ampel GELB → GRAU · Geoscore nicht bewertet (LLM deaktiviert) · DEFCON nicht bewertet (LLM deaktiviert)"
+    "hotspots_now": 8,
+    "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
