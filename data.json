@@ -1,25 +1,83 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 11.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. ‘We had the worst fight’: I want my husband to retire at 65, but I don’t want to lose his $280,000 salary. Is that unreasonable? – 2 Quellen.\n2. Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc – 1 Quellen.\n3. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Integrationsbericht: Natalie Pawlik spricht über Integration in Deutschland – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 11.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. ‘We had the worst fight’: I want my husband to retire at 65, but I don’t want to lose his $280,000 salary. Is that unreasonable? – 2 Quellen.\n2. Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc – 1 Quellen.\n3. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Integrationsbericht: Natalie Pawlik spricht über Integration in Deutschland – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 12.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Qui est Jensen Huang, le puissant patron de Nvidia tombé pour une affaire d’espionnage présumé et d’adultère ? – 6 Quellen.\n2. KI-Chipkonzern: Nvidia-Chef Huang tritt nach Spionageaffäre zurück – 3 Quellen.\n3. Trump threatens to double tariffs on Mexico if it does not halt migrants - Reuters – 2 Quellen.\n4. Opening trading-card packs has become a $2 billion market – 2 Quellen.\n5. Initial reports of a serious incident involving the Iraqi Army in active hostilities against Iraqi Special Forces in the “Green Zone” of Baghdad, with elements of the Iranian-backed Popular Mobilization Forces (PMF) attempting to storm the area near the U.S. Emba - X – 2 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 12.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Qui est Jensen Huang, le puissant patron de Nvidia tombé pour une affaire d’espionnage présumé et d’adultère ? – 6 Quellen.\n2. KI-Chipkonzern: Nvidia-Chef Huang tritt nach Spionageaffäre zurück – 3 Quellen.\n3. Trump threatens to double tariffs on Mexico if it does not halt migrants - Reuters – 2 Quellen.\n4. Opening trading-card packs has become a $2 billion market – 2 Quellen.\n5. Initial reports of a serious incident involving the Iraqi Army in active hostilities against Iraqi Special Forces in the “Green Zone” of Baghdad, with elements of the Iranian-backed Popular Mobilization Forces (PMF) attempting to storm the area near the U.S. Emba - X – 2 Quellen.",
   "key_takeaways": [
-    "‘We had the worst fight’: I want my husband to retire at 65, but I don’t want to lose his $280,000 salary. Is that unreasonable? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc (1 Quellen: Federal Reserve Press)",
-    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Integrationsbericht: Natalie Pawlik spricht über Integration in Deutschland (1 Quellen: Der Spiegel)"
+    "Qui est Jensen Huang, le puissant patron de Nvidia tombé pour une affaire d’espionnage présumé et d’adultère ? (6 Quellen: Reuters World (Google Search Feed), Le Figaro (Frankreich), Australian Financial Review, Al Jazeera, France 24 English, ABC News Australia)",
+    "KI-Chipkonzern: Nvidia-Chef Huang tritt nach Spionageaffäre zurück (3 Quellen: Der Spiegel, Handelsblatt, Die Zeit Online)",
+    "Trump threatens to double tariffs on Mexico if it does not halt migrants - Reuters (2 Quellen: Financial Times, Reuters World (Google Search Feed))",
+    "Opening trading-card packs has become a $2 billion market (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Initial reports of a serious incident involving the Iraqi Army in active hostilities against Iraqi Special Forces in the “Green Zone” of Baghdad, with elements of the Iranian-backed Popular Mobilization Forces (PMF) attempting to storm the area near the U.S. Emba - X (2 Quellen: X / Twitter OSINT Live, The Cradle)"
   ],
   "simple_key_takeaways": [
-    "‘We had the worst fight’: I want my husband to retire at 65, but I don’t want to lose his $280,000 salary. Is that unreasonable? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc (1 Quellen: Federal Reserve Press)",
-    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Integrationsbericht: Natalie Pawlik spricht über Integration in Deutschland (1 Quellen: Der Spiegel)"
+    "Qui est Jensen Huang, le puissant patron de Nvidia tombé pour une affaire d’espionnage présumé et d’adultère ? (6 Quellen: Reuters World (Google Search Feed), Le Figaro (Frankreich), Australian Financial Review, Al Jazeera, France 24 English, ABC News Australia)",
+    "KI-Chipkonzern: Nvidia-Chef Huang tritt nach Spionageaffäre zurück (3 Quellen: Der Spiegel, Handelsblatt, Die Zeit Online)",
+    "Trump threatens to double tariffs on Mexico if it does not halt migrants - Reuters (2 Quellen: Financial Times, Reuters World (Google Search Feed))",
+    "Opening trading-card packs has become a $2 billion market (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Initial reports of a serious incident involving the Iraqi Army in active hostilities against Iraqi Special Forces in the “Green Zone” of Baghdad, with elements of the Iranian-backed Popular Mobilization Forces (PMF) attempting to storm the area near the U.S. Emba - X (2 Quellen: X / Twitter OSINT Live, The Cradle)"
   ],
   "top5": [
     {
-      "title": "‘We had the worst fight’: I want my husband to retire at 65, but I don’t want to lose his $280,000 salary. Is that unreasonable?",
+      "title": "Qui est Jensen Huang, le puissant patron de Nvidia tombé pour une affaire d’espionnage présumé et d’adultère ?",
+      "source_count": 6,
+      "article_count": 7,
+      "sources": [
+        "Reuters World (Google Search Feed)",
+        "Le Figaro (Frankreich)",
+        "Australian Financial Review",
+        "Al Jazeera",
+        "France 24 English",
+        "ABC News Australia"
+      ],
+      "categories": [
+        "Agentur",
+        "FR/Presse",
+        "AU/Finanzen",
+        "BRICS / Arabisch",
+        "FR/Medien",
+        "AU/Medien"
+      ],
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMEFwN0FWdjB6blNtR0RZaTBWZXZDaWVwYkhXREttY2FaYVNNVC1qNEFHYm9Yd1pDODBDN2tvNzhnMTY4cmxWYTg1WVFidzFlNVFEdlZNb3IyZG1nS2FKcHAzUERhQW9EdG9oOER6YmwydXZOd0t1VHRub1BCdFdoR1V4dktlUVUydjZWeU53aVdKMGwtOGFtZmd2T3VhODF3eXhPazVtbV81b0hpUi1vcw?oc=5",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 1
+    },
+    {
+      "title": "KI-Chipkonzern: Nvidia-Chef Huang tritt nach Spionageaffäre zurück",
+      "source_count": 3,
+      "article_count": 3,
+      "sources": [
+        "Der Spiegel",
+        "Handelsblatt",
+        "Die Zeit Online"
+      ],
+      "categories": [
+        "DE/Medien",
+        "DE/Finanzen",
+        "DE/Presse"
+      ],
+      "link": "https://www.spiegel.de/wirtschaft/jensen-huang-nvidia-chef-tritt-nach-spionageaffaere-zurueck-a-776bb012-48a6-4c08-9939-a77fad020e47#ref=rss",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 2
+    },
+    {
+      "title": "Trump threatens to double tariffs on Mexico if it does not halt migrants - Reuters",
+      "source_count": 2,
+      "article_count": 2,
+      "sources": [
+        "Financial Times",
+        "Reuters World (Google Search Feed)"
+      ],
+      "categories": [
+        "UK/Finanzen",
+        "Agentur"
+      ],
+      "link": "https://www.ft.com/content/b4bb6e99-97c8-4392-a227-b7b74853ba26?syn-25a6b1a6=1",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 3
+    },
+    {
+      "title": "Opening trading-card packs has become a $2 billion market",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -30,63 +88,23 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/we-had-the-worst-fight-weve-ever-had-i-want-my-husband-to-retire-at-65-but-i-dont-want-to-lose-his-280-000-salary-48511469?mod=mw_rss_topstories",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 1
-    },
-    {
-      "title": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
-      "source_count": 1,
-      "article_count": 2,
-      "sources": [
-        "Federal Reserve Press"
-      ],
-      "categories": [
-        "Zentralbank"
-      ],
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 2
-    },
-    {
-      "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-      "source_count": 1,
-      "article_count": 2,
-      "sources": [
-        "CISA Cyber Alerts"
-      ],
-      "categories": [
-        "Cyber / Infrastruktur"
-      ],
-      "link": "https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 3
-    },
-    {
-      "title": "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent",
-      "source_count": 1,
-      "article_count": 2,
-      "sources": [
-        "Atlanta Fed / NY Fed"
-      ],
-      "categories": [
-        "Makro/Fed"
-      ],
-      "link": "https://www.atlantafed.org/research-and-data/data/gdpnow",
+      "link": "https://www.marketwatch.com/story/opening-trading-card-packs-has-become-a-2-billion-market-new-apps-are-trying-to-cash-in-b7ba11f5?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
       "rank": 4
     },
     {
-      "title": "Integrationsbericht: Natalie Pawlik spricht über Integration in Deutschland",
-      "source_count": 1,
+      "title": "Initial reports of a serious incident involving the Iraqi Army in active hostilities against Iraqi Special Forces in the “Green Zone” of Baghdad, with elements of the Iranian-backed Popular Mobilization Forces (PMF) attempting to storm the area near the U.S. Emba - X",
+      "source_count": 2,
       "article_count": 2,
       "sources": [
-        "Der Spiegel"
+        "X / Twitter OSINT Live",
+        "The Cradle"
       ],
       "categories": [
-        "DE/Medien"
+        "OSINT / X",
+        "Alternative"
       ],
-      "link": "https://www.spiegel.de/panorama/gesellschaft/integrationsbericht-wie-gut-funktioniert-integration-in-deutschland-a-f9bafde8-bf89-4ad9-968a-fc6dd2d8c36a#ref=rss",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE54V3lHajVnNy1ZT1Z0RmhpMGpFWFRzSUU0a2xnQXRlNm9QMm1PY2pnbFc5a3JSXzNpNHp1Qm1URlJsUXlETWNPcElEWGVMaUhrVnJ6THVzSXRuc0UzYjZuMWZCNA?oc=5",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -103,91 +121,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT16TF",
+      "name": "Flug PGT54UZ",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.3056,
-      "lon": 26.0298,
-      "lng": 26.0298,
+      "lat": 41.3253,
+      "lon": 28.4328,
+      "lng": 28.4328,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT16TF | Höhe: 10.1 km | Speed: 957 km/h",
+      "description": "Callsign: PGT54UZ | Höhe: 8.7 km | Speed: 821 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT4058",
+      "name": "Flug PGT1218",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.5901,
-      "lon": 29.4488,
-      "lng": 29.4488,
+      "lat": 41.3692,
+      "lon": 27.8042,
+      "lng": 27.8042,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT4058 | Höhe: 4.4 km | Speed: 675 km/h",
+      "description": "Callsign: PGT1218 | Höhe: 9.3 km | Speed: 806 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "ADS-B Signal 739261",
+      "name": "Flug AEE52R",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.9134,
-      "lon": 34.6056,
-      "lng": 34.6056,
+      "lat": 34.7233,
+      "lon": 33.2742,
+      "lng": 33.2742,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: Unbekannt | Höhe: 0.2 km | Speed: 252 km/h",
+      "description": "Callsign: AEE52R | Höhe: 3.2 km | Speed: 584 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug ELY354",
+      "name": "Flug AUA79PA",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.2937,
-      "lon": 32.9246,
-      "lng": 32.9246,
+      "lat": 34.9491,
+      "lon": 33.716,
+      "lng": 33.716,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ELY354 | Höhe: 9.6 km | Speed: 891 km/h",
+      "description": "Callsign: AUA79PA | Höhe: 0.4 km | Speed: 290 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug RRR9958",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 33.4547,
-      "lon": 32.8807,
-      "lng": 32.8807,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR9958 | Höhe: 6.6 km | Speed: 860 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug RRR9915",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 32.1805,
-      "lon": 33.1017,
-      "lng": 33.1017,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR9915 | Höhe: 8.9 km | Speed: 878 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "ADS-B Signal 781B39",
+      "name": "Flug CCA179",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.7302,
-      "lon": 119.5392,
-      "lng": 119.5392,
+      "lat": 21.4543,
+      "lon": 115.0741,
+      "lng": 115.0741,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: Unbekannt | Höhe: 1.2 km | Speed: 495 km/h",
+      "description": "Callsign: CCA179 | Höhe: 11.3 km | Speed: 915 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug QDA924",
+      "name": "ADS-B Signal 781D9D",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 26.6393,
-      "lon": 120.008,
-      "lng": 120.008,
+      "lat": 27.4378,
+      "lon": 121.4874,
+      "lng": 121.4874,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: QDA924 | Höhe: 10.7 km | Speed: 906 km/h",
+      "description": "Callsign: Unbekannt | Höhe: 9.8 km | Speed: 753 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -217,19 +213,19 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-11T13:18:01.159675+00:00",
+  "timestamp": "2026-11-12T14:21:43.164055+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-11T13:17:28.928497+00:00",
+    "timestamp": "2026-11-12T14:21:12.933831+00:00",
     "feeds_total": 224,
-    "feeds_successful": 116,
-    "feeds_failed": 108,
+    "feeds_successful": 117,
+    "feeds_failed": 107,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
     "swarm_debate_status": "DEAKTIVIERT",
     "synthesizer_status": "DEAKTIVIERT",
     "haiku_status": "DEAKTIVIERT",
-    "opensky_status": "SUCCESS (8 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "llm_enabled": false,
     "llm_status": "DEAKTIVIERT",
@@ -247,7 +243,7 @@
     "defcon_now": null,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 8,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
