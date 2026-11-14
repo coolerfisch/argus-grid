@@ -1,62 +1,68 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 13.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Microsoft Outlook outage stretches into a second day. What to know. – 7 Quellen.\n2. Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services – 1 Quellen.\n3. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n4. Siemens Desigo, Gridscale – 1 Quellen.\n5. Siemens RUGGEDCOM APE1808 – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 13.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Microsoft Outlook outage stretches into a second day. What to know. – 7 Quellen.\n2. Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services – 1 Quellen.\n3. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n4. Siemens Desigo, Gridscale – 1 Quellen.\n5. Siemens RUGGEDCOM APE1808 – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 14.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. China’s hottest stocks these days have one thing in common: names that sound like sheep – 2 Quellen.\n2. U.S. flights cleared to take off again after ground stop order caused thousands of delays and cancellations – 2 Quellen.\n3. Dreiergipfel in Shenzhen: Peking organisiert ein Treffen zwischen Donald Trump, Xi Jinping und Wladimir Putin – 1 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Jefferson, New Technology, Old Questions: Productivity Puzzles  and the Macroeconomy – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 14.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. China’s hottest stocks these days have one thing in common: names that sound like sheep – 2 Quellen.\n2. U.S. flights cleared to take off again after ground stop order caused thousands of delays and cancellations – 2 Quellen.\n3. Dreiergipfel in Shenzhen: Peking organisiert ein Treffen zwischen Donald Trump, Xi Jinping und Wladimir Putin – 1 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Jefferson, New Technology, Old Questions: Productivity Puzzles  and the Macroeconomy – 1 Quellen.",
   "key_takeaways": [
-    "Microsoft Outlook outage stretches into a second day. What to know. (7 Quellen: Wall Street Journal (MarketWatch Alt), BBC World News, Associated Press (Google Search Feed), MOVE Index / Bonds (MarketWatch), Australian Financial Review, CBC News World (Kanada), …)",
-    "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services (1 Quellen: Federal Reserve Press)",
+    "China’s hottest stocks these days have one thing in common: names that sound like sheep (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "U.S. flights cleared to take off again after ground stop order caused thousands of delays and cancellations (2 Quellen: CBC News World (Kanada), Wall Street Journal (MarketWatch Alt))",
+    "Dreiergipfel in Shenzhen: Peking organisiert ein Treffen zwischen Donald Trump, Xi Jinping und Wladimir Putin (1 Quellen: NZZ International)",
     "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Siemens Desigo, Gridscale (1 Quellen: CISA Cyber Alerts)",
-    "Siemens RUGGEDCOM APE1808 (1 Quellen: CISA Cyber Alerts)"
+    "Jefferson, New Technology, Old Questions: Productivity Puzzles  and the Macroeconomy (1 Quellen: Fed Speeches & Minutes)"
   ],
   "simple_key_takeaways": [
-    "Microsoft Outlook outage stretches into a second day. What to know. (7 Quellen: Wall Street Journal (MarketWatch Alt), BBC World News, Associated Press (Google Search Feed), MOVE Index / Bonds (MarketWatch), Australian Financial Review, CBC News World (Kanada), …)",
-    "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services (1 Quellen: Federal Reserve Press)",
+    "China’s hottest stocks these days have one thing in common: names that sound like sheep (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "U.S. flights cleared to take off again after ground stop order caused thousands of delays and cancellations (2 Quellen: CBC News World (Kanada), Wall Street Journal (MarketWatch Alt))",
+    "Dreiergipfel in Shenzhen: Peking organisiert ein Treffen zwischen Donald Trump, Xi Jinping und Wladimir Putin (1 Quellen: NZZ International)",
     "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Siemens Desigo, Gridscale (1 Quellen: CISA Cyber Alerts)",
-    "Siemens RUGGEDCOM APE1808 (1 Quellen: CISA Cyber Alerts)"
+    "Jefferson, New Technology, Old Questions: Productivity Puzzles  and the Macroeconomy (1 Quellen: Fed Speeches & Minutes)"
   ],
   "top5": [
     {
-      "title": "Microsoft Outlook outage stretches into a second day. What to know.",
-      "source_count": 7,
-      "article_count": 8,
+      "title": "China’s hottest stocks these days have one thing in common: names that sound like sheep",
+      "source_count": 2,
+      "article_count": 2,
       "sources": [
         "Wall Street Journal (MarketWatch Alt)",
-        "BBC World News",
-        "Associated Press (Google Search Feed)",
-        "MOVE Index / Bonds (MarketWatch)",
-        "Australian Financial Review",
-        "CBC News World (Kanada)",
-        "Handelsblatt"
+        "MOVE Index / Bonds (MarketWatch)"
       ],
       "categories": [
         "US/Finanzen",
-        "UK/Medien",
-        "Agentur",
-        "Bond Stress",
-        "AU/Finanzen",
-        "CA/Presse",
-        "DE/Finanzen"
+        "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/microsoft-stock-slumps-on-outage-that-includes-the-copilot-tool-it-has-been-heavily-promoting-4007dc4f?mod=mw_rss_topstories",
+      "link": "https://www.marketwatch.com/story/chinas-hottest-stocks-these-days-have-one-thing-in-common-names-that-sound-like-sheep-6176e521?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
       "rank": 1
     },
     {
-      "title": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
+      "title": "U.S. flights cleared to take off again after ground stop order caused thousands of delays and cancellations",
+      "source_count": 2,
+      "article_count": 2,
+      "sources": [
+        "CBC News World (Kanada)",
+        "Wall Street Journal (MarketWatch Alt)"
+      ],
+      "categories": [
+        "CA/Presse",
+        "US/Finanzen"
+      ],
+      "link": "https://www.cbc.ca/news/world/livestory/faa-grounds-all-flights-united-states-air-traffic-control-live-updates-9.7421404?cmp=rss",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 2
+    },
+    {
+      "title": "Dreiergipfel in Shenzhen: Peking organisiert ein Treffen zwischen Donald Trump, Xi Jinping und Wladimir Putin",
       "source_count": 1,
       "article_count": 2,
       "sources": [
-        "Federal Reserve Press"
+        "NZZ International"
       ],
       "categories": [
-        "Zentralbank"
+        "CH/Presse"
       ],
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
+      "link": "https://www.nzz.ch/international/dreiergipfel-in-shenzhen-peking-organisiert-ein-treffen-zwischen-donald-trump-xi-jinping-und-wladimir-putin-ld.10063910",
       "methode": "regelbasiert, ohne KI",
-      "rank": 2
+      "rank": 3
     },
     {
       "title": "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent",
@@ -70,33 +76,19 @@
       ],
       "link": "https://www.atlantafed.org/research-and-data/data/gdpnow",
       "methode": "regelbasiert, ohne KI",
-      "rank": 3
-    },
-    {
-      "title": "Siemens Desigo, Gridscale",
-      "source_count": 1,
-      "article_count": 1,
-      "sources": [
-        "CISA Cyber Alerts"
-      ],
-      "categories": [
-        "Cyber / Infrastruktur"
-      ],
-      "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-02",
-      "methode": "regelbasiert, ohne KI",
       "rank": 4
     },
     {
-      "title": "Siemens RUGGEDCOM APE1808",
+      "title": "Jefferson, New Technology, Old Questions: Productivity Puzzles  and the Macroeconomy",
       "source_count": 1,
       "article_count": 1,
       "sources": [
-        "CISA Cyber Alerts"
+        "Fed Speeches & Minutes"
       ],
       "categories": [
-        "Cyber / Infrastruktur"
+        "Zentralbank"
       ],
-      "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-05",
+      "link": "https://www.federalreserve.gov/newsevents/speech/jefferson20261113a.htm",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -113,80 +105,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug TVF33CH",
+      "name": "Flug AIC2026",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 42.5181,
-      "lon": 25.4481,
-      "lng": 25.4481,
+      "lat": 43.5754,
+      "lon": 27.0952,
+      "lng": 27.0952,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TVF33CH | Höhe: 10.8 km | Speed: 906 km/h",
+      "description": "Callsign: AIC2026 | Höhe: 11.3 km | Speed: 1003 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT3BV",
+      "name": "Flug PGT31WM",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.6849,
-      "lon": 26.8691,
-      "lng": 26.8691,
+      "lat": 41.3307,
+      "lon": 27.1094,
+      "lng": 27.1094,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT3BV | Höhe: 10.7 km | Speed: 951 km/h",
+      "description": "Callsign: PGT31WM | Höhe: 11.1 km | Speed: 888 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DUKE60",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 44.5099,
-      "lon": 27.8312,
-      "lng": 27.8312,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: DUKE60 | Höhe: 6.9 km | Speed: 258 km/h",
-      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
-    },
-    {
-      "name": "Flug TVF85AD",
+      "name": "Flug WMT7302",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.8298,
-      "lon": 33.9117,
-      "lng": 33.9117,
+      "lat": 32.3048,
+      "lon": 34.5836,
+      "lng": 34.5836,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TVF85AD | Höhe: 5.0 km | Speed: 665 km/h",
+      "description": "Callsign: WMT7302 | Höhe: 2.3 km | Speed: 512 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug 4XCDE",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.797,
-      "lon": 35.0495,
-      "lng": 35.0495,
+      "lat": 32.8882,
+      "lon": 35.1508,
+      "lng": 35.1508,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: 4XCDE | Höhe: 0.0 km | Speed: 109 km/h",
+      "description": "Callsign: 4XCDE | Höhe: 0.8 km | Speed: 161 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug ESR981",
+      "name": "ADS-B Signal 782004",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 20.2528,
-      "lon": 119.0785,
-      "lng": 119.0785,
+      "lat": 25.862,
+      "lon": 119.2433,
+      "lng": 119.2433,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ESR981 | Höhe: 11.0 km | Speed: 782 km/h",
+      "description": "Callsign: Unbekannt | Höhe: 9.2 km | Speed: 658 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug THA636",
+      "name": "ADS-B Signal 75833B",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.3237,
-      "lon": 120.2283,
-      "lng": 120.2283,
+      "lat": 18.8411,
+      "lon": 120.5823,
+      "lng": 120.5823,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA636 | Höhe: 8.8 km | Speed: 792 km/h",
+      "description": "Callsign: Unbekannt | Höhe: 11.3 km | Speed: 884 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -216,9 +197,9 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-13T13:41:56.070143+00:00",
+  "timestamp": "2026-11-14T12:46:27.048915+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-13T13:41:25.498234+00:00",
+    "timestamp": "2026-11-14T12:45:52.869771+00:00",
     "feeds_total": 224,
     "feeds_successful": 118,
     "feeds_failed": 106,
@@ -228,7 +209,7 @@
     "swarm_debate_status": "DEAKTIVIERT",
     "synthesizer_status": "DEAKTIVIERT",
     "haiku_status": "DEAKTIVIERT",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "llm_enabled": false,
     "llm_status": "DEAKTIVIERT",
@@ -246,7 +227,7 @@
     "defcon_now": null,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 7,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
