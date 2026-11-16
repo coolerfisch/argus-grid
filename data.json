@@ -1,25 +1,43 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 15.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. ‘It leaves me with a sour taste’: My elderly mother gave our cousin $800 for a car repair. Should I be worried? – 2 Quellen.\n2. Megaspeed says Alice Huang left the company in August 2025 - Reuters – 2 Quellen.\n3. 💢🇾🇪 NEW: The Ansarallah offensive in Lahij Governorate in southern Yemen has effectively encircled the remaining forces loyal to the Saudi-backed Presidential Leadership Council (PLC) in the Bab al-Mandab area. After several days of back-and-forth fighti - X – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Agencies extend comment period for proposed third-party risk management guidance – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 15.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. ‘It leaves me with a sour taste’: My elderly mother gave our cousin $800 for a car repair. Should I be worried? – 2 Quellen.\n2. Megaspeed says Alice Huang left the company in August 2025 - Reuters – 2 Quellen.\n3. 💢🇾🇪 NEW: The Ansarallah offensive in Lahij Governorate in southern Yemen has effectively encircled the remaining forces loyal to the Saudi-backed Presidential Leadership Council (PLC) in the Bab al-Mandab area. After several days of back-and-forth fighti - X – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Agencies extend comment period for proposed third-party risk management guidance – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 16.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Yemeni army liberates entire western coast as Saudi-backed forces redeploy to &#039;defend&#039; Aden – 3 Quellen.\n2. I’m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary? – 2 Quellen.\n3. Netanyahu secretly met with informant prior to election to launch voter fraud campaign - report – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Agencies extend comment period for proposed third-party risk management guidance – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 16.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Yemeni army liberates entire western coast as Saudi-backed forces redeploy to &#039;defend&#039; Aden – 3 Quellen.\n2. I’m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary? – 2 Quellen.\n3. Netanyahu secretly met with informant prior to election to launch voter fraud campaign - report – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Agencies extend comment period for proposed third-party risk management guidance – 1 Quellen.",
   "key_takeaways": [
-    "‘It leaves me with a sour taste’: My elderly mother gave our cousin $800 for a car repair. Should I be worried? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Megaspeed says Alice Huang left the company in August 2025 - Reuters (2 Quellen: The Japan Times (Japan), Reuters World (Google Search Feed))",
-    "💢🇾🇪 NEW: The Ansarallah offensive in Lahij Governorate in southern Yemen has effectively encircled the remaining forces loyal to the Saudi-backed Presidential Leadership Council (PLC) in the Bab al-Mandab area. After several days of back-and-forth fighti - X (2 Quellen: X / Twitter OSINT Live, SouthFront (Militär OSINT))",
+    "Yemeni army liberates entire western coast as Saudi-backed forces redeploy to &#039;defend&#039; Aden (3 Quellen: BBC World News, Al Jazeera, The Cradle)",
+    "I’m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Netanyahu secretly met with informant prior to election to launch voter fraud campaign - report (2 Quellen: ABC News Australia, Jerusalem Post)",
     "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
     "Agencies extend comment period for proposed third-party risk management guidance (1 Quellen: Federal Reserve Press)"
   ],
   "simple_key_takeaways": [
-    "‘It leaves me with a sour taste’: My elderly mother gave our cousin $800 for a car repair. Should I be worried? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Megaspeed says Alice Huang left the company in August 2025 - Reuters (2 Quellen: The Japan Times (Japan), Reuters World (Google Search Feed))",
-    "💢🇾🇪 NEW: The Ansarallah offensive in Lahij Governorate in southern Yemen has effectively encircled the remaining forces loyal to the Saudi-backed Presidential Leadership Council (PLC) in the Bab al-Mandab area. After several days of back-and-forth fighti - X (2 Quellen: X / Twitter OSINT Live, SouthFront (Militär OSINT))",
+    "Yemeni army liberates entire western coast as Saudi-backed forces redeploy to &#039;defend&#039; Aden (3 Quellen: BBC World News, Al Jazeera, The Cradle)",
+    "I’m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Netanyahu secretly met with informant prior to election to launch voter fraud campaign - report (2 Quellen: ABC News Australia, Jerusalem Post)",
     "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
     "Agencies extend comment period for proposed third-party risk management guidance (1 Quellen: Federal Reserve Press)"
   ],
   "top5": [
     {
-      "title": "‘It leaves me with a sour taste’: My elderly mother gave our cousin $800 for a car repair. Should I be worried?",
+      "title": "Yemeni army liberates entire western coast as Saudi-backed forces redeploy to &#039;defend&#039; Aden",
+      "source_count": 3,
+      "article_count": 3,
+      "sources": [
+        "BBC World News",
+        "Al Jazeera",
+        "The Cradle"
+      ],
+      "categories": [
+        "UK/Medien",
+        "BRICS / Arabisch",
+        "Alternative"
+      ],
+      "link": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo?at_medium=RSS&at_campaign=rss",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 1
+    },
+    {
+      "title": "I’m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary?",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -30,39 +48,23 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/it-leaves-me-with-a-sour-taste-my-elderly-mother-gave-our-cousin-800-for-a-car-repair-should-i-be-worried-88dbd188?mod=mw_rss_topstories",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 1
-    },
-    {
-      "title": "Megaspeed says Alice Huang left the company in August 2025 - Reuters",
-      "source_count": 2,
-      "article_count": 2,
-      "sources": [
-        "The Japan Times (Japan)",
-        "Reuters World (Google Search Feed)"
-      ],
-      "categories": [
-        "JP/Presse",
-        "Agentur"
-      ],
-      "link": "https://www.japantimes.co.jp/news/2026/11/15/world/megaspeed-says-alice-huang-left/",
+      "link": "https://www.marketwatch.com/story/im-in-my-40s-should-i-accept-a-lower-pension-in-exchange-for-naming-my-husband-or-child-as-a-beneficiary-b2352059?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
       "rank": 2
     },
     {
-      "title": "💢🇾🇪 NEW: The Ansarallah offensive in Lahij Governorate in southern Yemen has effectively encircled the remaining forces loyal to the Saudi-backed Presidential Leadership Council (PLC) in the Bab al-Mandab area. After several days of back-and-forth fighti - X",
+      "title": "Netanyahu secretly met with informant prior to election to launch voter fraud campaign - report",
       "source_count": 2,
       "article_count": 2,
       "sources": [
-        "X / Twitter OSINT Live",
-        "SouthFront (Militär OSINT)"
+        "ABC News Australia",
+        "Jerusalem Post"
       ],
       "categories": [
-        "OSINT / X",
-        "Militär Alternativ"
+        "AU/Medien",
+        "IL/Presse"
       ],
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wajNmUnBMNWtXdEZUTVFRN1pKM01CMC02TmgzZ2J2MjlSY0kxMk1kVTc5dVJpSUZfUTQ4ZFJwRTZ2Tmp6UHl2MkxwalllR0phdW9WSVRWMXZRZHpPWEs4TGxzYw?oc=5",
+      "link": "https://www.abc.net.au/news/2026-11-17/benjamin-netanyahu-gadi-eisenkot-call-for-investigation/107392590",
       "methode": "regelbasiert, ohne KI",
       "rank": 3
     },
@@ -107,69 +109,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT925",
+      "name": "Flug AIC2029",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.2141,
-      "lon": 29.2271,
-      "lng": 29.2271,
+      "lat": 40.2177,
+      "lon": 33.176,
+      "lng": 33.176,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT925 | Höhe: 4.7 km | Speed: 625 km/h",
+      "description": "Callsign: AIC2029 | Höhe: 11.6 km | Speed: 729 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT16TF",
+      "name": "Flug PGT42MX",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.3887,
-      "lon": 28.4705,
-      "lng": 28.4705,
+      "lat": 40.8392,
+      "lon": 29.4887,
+      "lng": 29.4887,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT16TF | Höhe: 7.6 km | Speed: 605 km/h",
+      "description": "Callsign: PGT42MX | Höhe: 1.5 km | Speed: 492 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AEE904",
+      "name": "Flug NATO01",
+      "region": "Schwarzes Meer / Osteuropa",
+      "lat": 46.4094,
+      "lon": 25.2006,
+      "lng": 25.2006,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: NATO01 | Höhe: 9.4 km | Speed: 802 km/h",
+      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
+    },
+    {
+      "name": "Flug SWR252B",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.0056,
-      "lon": 33.6873,
-      "lng": 33.6873,
+      "lat": 33.6429,
+      "lon": 32.1343,
+      "lng": 32.1343,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AEE904 | Höhe: 1.5 km | Speed: 453 km/h",
+      "description": "Callsign: SWR252B | Höhe: 11.9 km | Speed: 962 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug T7MNGM",
+      "name": "Flug TVF45QT",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 27.0469,
-      "lon": 50.1051,
-      "lng": 50.1051,
+      "lat": 33.3459,
+      "lon": 32.6827,
+      "lng": 32.6827,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: T7MNGM | Höhe: 13.7 km | Speed: 1022 km/h",
+      "description": "Callsign: TVF45QT | Höhe: 10.5 km | Speed: 953 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug ESR981",
+      "name": "Flug CSN3866",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.9822,
-      "lon": 121.5773,
-      "lng": 121.5773,
+      "lat": 23.312,
+      "lon": 115.6954,
+      "lng": 115.6954,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ESR981 | Höhe: 11.0 km | Speed: 802 km/h",
+      "description": "Callsign: CSN3866 | Höhe: 3.6 km | Speed: 735 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JAL707",
+      "name": "Flug PAL342",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.5003,
-      "lon": 122.1144,
-      "lng": 122.1144,
+      "lat": 20.5991,
+      "lon": 116.4905,
+      "lng": 116.4905,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JAL707 | Höhe: 11.0 km | Speed: 871 km/h",
+      "description": "Callsign: PAL342 | Höhe: 11.6 km | Speed: 806 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -199,19 +212,19 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-15T13:13:52.567464+00:00",
+  "timestamp": "2026-11-16T14:23:10.489336+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-15T13:13:23.462819+00:00",
+    "timestamp": "2026-11-16T14:22:39.464294+00:00",
     "feeds_total": 224,
-    "feeds_successful": 118,
-    "feeds_failed": 106,
+    "feeds_successful": 117,
+    "feeds_failed": 107,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
     "swarm_debate_status": "DEAKTIVIERT",
     "synthesizer_status": "DEAKTIVIERT",
     "haiku_status": "DEAKTIVIERT",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (7 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "llm_enabled": false,
     "llm_status": "DEAKTIVIERT",
@@ -229,7 +242,7 @@
     "defcon_now": null,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 6,
+    "hotspots_now": 7,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
