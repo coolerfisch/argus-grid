@@ -1,43 +1,43 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 16.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Yemeni army liberates entire western coast as Saudi-backed forces redeploy to &#039;defend&#039; Aden – 3 Quellen.\n2. I’m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary? – 2 Quellen.\n3. Netanyahu secretly met with informant prior to election to launch voter fraud campaign - report – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Agencies extend comment period for proposed third-party risk management guidance – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 16.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Yemeni army liberates entire western coast as Saudi-backed forces redeploy to &#039;defend&#039; Aden – 3 Quellen.\n2. I’m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary? – 2 Quellen.\n3. Netanyahu secretly met with informant prior to election to launch voter fraud campaign - report – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Agencies extend comment period for proposed third-party risk management guidance – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 17.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Iran fires drones at U.S. base in Bahrain, denies reports of planned dirty bomb attack in D.C. – 3 Quellen.\n2. Anthropic wants everyday investors to be part of its IPO. Some are not buying it. – 2 Quellen.\n3. \"It's Illegal\": Trump Fires Back As Massive Leak Shows What Deutsche Bank Hid About Epstein, Russia - And Him – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Waller, Considerations at the Intersection of Payments and Tokenized Markets – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 17.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Iran fires drones at U.S. base in Bahrain, denies reports of planned dirty bomb attack in D.C. – 3 Quellen.\n2. Anthropic wants everyday investors to be part of its IPO. Some are not buying it. – 2 Quellen.\n3. \"It's Illegal\": Trump Fires Back As Massive Leak Shows What Deutsche Bank Hid About Epstein, Russia - And Him – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Waller, Considerations at the Intersection of Payments and Tokenized Markets – 1 Quellen.",
   "key_takeaways": [
-    "Yemeni army liberates entire western coast as Saudi-backed forces redeploy to &#039;defend&#039; Aden (3 Quellen: BBC World News, Al Jazeera, The Cradle)",
-    "I’m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Netanyahu secretly met with informant prior to election to launch voter fraud campaign - report (2 Quellen: ABC News Australia, Jerusalem Post)",
+    "Iran fires drones at U.S. base in Bahrain, denies reports of planned dirty bomb attack in D.C. (3 Quellen: Al Jazeera, Antiwar.com, CBC News World (Kanada))",
+    "Anthropic wants everyday investors to be part of its IPO. Some are not buying it. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "\"It's Illegal\": Trump Fires Back As Massive Leak Shows What Deutsche Bank Hid About Epstein, Russia - And Him (2 Quellen: Follow the Money (EU), ZeroHedge)",
     "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Agencies extend comment period for proposed third-party risk management guidance (1 Quellen: Federal Reserve Press)"
+    "Waller, Considerations at the Intersection of Payments and Tokenized Markets (1 Quellen: Fed Speeches & Minutes)"
   ],
   "simple_key_takeaways": [
-    "Yemeni army liberates entire western coast as Saudi-backed forces redeploy to &#039;defend&#039; Aden (3 Quellen: BBC World News, Al Jazeera, The Cradle)",
-    "I’m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Netanyahu secretly met with informant prior to election to launch voter fraud campaign - report (2 Quellen: ABC News Australia, Jerusalem Post)",
+    "Iran fires drones at U.S. base in Bahrain, denies reports of planned dirty bomb attack in D.C. (3 Quellen: Al Jazeera, Antiwar.com, CBC News World (Kanada))",
+    "Anthropic wants everyday investors to be part of its IPO. Some are not buying it. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "\"It's Illegal\": Trump Fires Back As Massive Leak Shows What Deutsche Bank Hid About Epstein, Russia - And Him (2 Quellen: Follow the Money (EU), ZeroHedge)",
     "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Agencies extend comment period for proposed third-party risk management guidance (1 Quellen: Federal Reserve Press)"
+    "Waller, Considerations at the Intersection of Payments and Tokenized Markets (1 Quellen: Fed Speeches & Minutes)"
   ],
   "top5": [
     {
-      "title": "Yemeni army liberates entire western coast as Saudi-backed forces redeploy to &#039;defend&#039; Aden",
+      "title": "Iran fires drones at U.S. base in Bahrain, denies reports of planned dirty bomb attack in D.C.",
       "source_count": 3,
       "article_count": 3,
       "sources": [
-        "BBC World News",
         "Al Jazeera",
-        "The Cradle"
+        "Antiwar.com",
+        "CBC News World (Kanada)"
       ],
       "categories": [
-        "UK/Medien",
         "BRICS / Arabisch",
-        "Alternative"
+        "Friedenspolitik",
+        "CA/Presse"
       ],
-      "link": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.aljazeera.com/video/newsfeed/2026/11/17/trump-warns-iran-over-reported-dirty-bomb-threat-plans-against-washington?traffic_source=rss",
       "methode": "regelbasiert, ohne KI",
       "rank": 1
     },
     {
-      "title": "I’m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary?",
+      "title": "Anthropic wants everyday investors to be part of its IPO. Some are not buying it.",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -48,23 +48,23 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/im-in-my-40s-should-i-accept-a-lower-pension-in-exchange-for-naming-my-husband-or-child-as-a-beneficiary-b2352059?mod=mw_rss_topstories",
+      "link": "https://www.marketwatch.com/story/anthropic-wants-everyday-investors-to-be-part-of-its-ipo-some-are-not-buying-it-43576d2d?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
       "rank": 2
     },
     {
-      "title": "Netanyahu secretly met with informant prior to election to launch voter fraud campaign - report",
+      "title": "\"It's Illegal\": Trump Fires Back As Massive Leak Shows What Deutsche Bank Hid About Epstein, Russia - And Him",
       "source_count": 2,
       "article_count": 2,
       "sources": [
-        "ABC News Australia",
-        "Jerusalem Post"
+        "Follow the Money (EU)",
+        "ZeroHedge"
       ],
       "categories": [
-        "AU/Medien",
-        "IL/Presse"
+        "Investigativ EU",
+        "Alternativ"
       ],
-      "link": "https://www.abc.net.au/news/2026-11-17/benjamin-netanyahu-gadi-eisenkot-call-for-investigation/107392590",
+      "link": "https://www.ftm.eu/articles/deutsche-bank-trump-scrutiny-leak-controversies",
       "methode": "regelbasiert, ohne KI",
       "rank": 3
     },
@@ -83,16 +83,16 @@
       "rank": 4
     },
     {
-      "title": "Agencies extend comment period for proposed third-party risk management guidance",
+      "title": "Waller, Considerations at the Intersection of Payments and Tokenized Markets",
       "source_count": 1,
       "article_count": 1,
       "sources": [
-        "Federal Reserve Press"
+        "Fed Speeches & Minutes"
       ],
       "categories": [
         "Zentralbank"
       ],
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
+      "link": "https://www.federalreserve.gov/newsevents/speech/waller20261117a.htm",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -111,78 +111,78 @@
     {
       "name": "Flug AIC2029",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.2177,
-      "lon": 33.176,
-      "lng": 33.176,
+      "lat": 44.4356,
+      "lon": 25.2926,
+      "lng": 25.2926,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC2029 | Höhe: 11.6 km | Speed: 729 km/h",
+      "description": "Callsign: AIC2029 | Höhe: 12.2 km | Speed: 767 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT42MX",
+      "name": "Flug PGT51BE",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8392,
-      "lon": 29.4887,
-      "lng": 29.4887,
+      "lat": 41.4699,
+      "lon": 29.6393,
+      "lng": 29.6393,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT42MX | Höhe: 1.5 km | Speed: 492 km/h",
+      "description": "Callsign: PGT51BE | Höhe: 4.1 km | Speed: 597 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug NATO01",
+      "name": "Flug DUKE60",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 46.4094,
-      "lon": 25.2006,
-      "lng": 25.2006,
+      "lat": 44.6412,
+      "lon": 27.6898,
+      "lng": 27.6898,
       "type": "flight",
       "intensity": "ROT",
-      "description": "Callsign: NATO01 | Höhe: 9.4 km | Speed: 802 km/h",
+      "description": "Callsign: DUKE60 | Höhe: 8.5 km | Speed: 235 km/h",
       "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
     },
     {
-      "name": "Flug SWR252B",
+      "name": "Flug AEE908",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.6429,
-      "lon": 32.1343,
-      "lng": 32.1343,
+      "lat": 34.9816,
+      "lon": 33.7761,
+      "lng": 33.7761,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: SWR252B | Höhe: 11.9 km | Speed: 962 km/h",
+      "description": "Callsign: AEE908 | Höhe: 0.4 km | Speed: 315 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug TVF45QT",
+      "name": "Flug T7MSAB",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.3459,
-      "lon": 32.6827,
-      "lng": 32.6827,
+      "lat": 25.2355,
+      "lon": 51.5763,
+      "lng": 51.5763,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TVF45QT | Höhe: 10.5 km | Speed: 953 km/h",
+      "description": "Callsign: T7MSAB | Höhe: 0.0 km | Speed: 287 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CSN3866",
+      "name": "Flug DHK009",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.312,
-      "lon": 115.6954,
-      "lng": 115.6954,
+      "lat": 25.1604,
+      "lon": 121.9493,
+      "lng": 121.9493,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSN3866 | Höhe: 3.6 km | Speed: 735 km/h",
+      "description": "Callsign: DHK009 | Höhe: 8.8 km | Speed: 1040 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PAL342",
+      "name": "Flug LAO001",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 20.5991,
-      "lon": 116.4905,
-      "lng": 116.4905,
+      "lat": 17.3814,
+      "lon": 119.64,
+      "lng": 119.64,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PAL342 | Höhe: 11.6 km | Speed: 806 km/h",
+      "description": "Callsign: LAO001 | Höhe: 10.4 km | Speed: 873 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -212,12 +212,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-16T14:23:10.489336+00:00",
+  "timestamp": "2026-11-17T15:15:50.643350+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-16T14:22:39.464294+00:00",
+    "timestamp": "2026-11-17T15:15:19.524431+00:00",
     "feeds_total": 224,
-    "feeds_successful": 117,
-    "feeds_failed": 107,
+    "feeds_successful": 120,
+    "feeds_failed": 104,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
