@@ -1,43 +1,49 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 17.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Iran fires drones at U.S. base in Bahrain, denies reports of planned dirty bomb attack in D.C. – 3 Quellen.\n2. Anthropic wants everyday investors to be part of its IPO. Some are not buying it. – 2 Quellen.\n3. \"It's Illegal\": Trump Fires Back As Massive Leak Shows What Deutsche Bank Hid About Epstein, Russia - And Him – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Waller, Considerations at the Intersection of Payments and Tokenized Markets – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 17.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Iran fires drones at U.S. base in Bahrain, denies reports of planned dirty bomb attack in D.C. – 3 Quellen.\n2. Anthropic wants everyday investors to be part of its IPO. Some are not buying it. – 2 Quellen.\n3. \"It's Illegal\": Trump Fires Back As Massive Leak Shows What Deutsche Bank Hid About Epstein, Russia - And Him – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent – 1 Quellen.\n5. Waller, Considerations at the Intersection of Payments and Tokenized Markets – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 18.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. The U.S.-Chinese-Russian Summit and the Future of Trilateral Nuclear Talks – 6 Quellen.\n2. Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 – 2 Quellen.\n3. Polymarket Sign-Up Bonus Code SBWIRE | Get $25 for NFL, NBA, NCAAF, Politics & More - Victorville Daily Press – 1 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n5. Agencies extend comment period for proposed third-party risk management guidance – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 18.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. The U.S.-Chinese-Russian Summit and the Future of Trilateral Nuclear Talks – 6 Quellen.\n2. Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 – 2 Quellen.\n3. Polymarket Sign-Up Bonus Code SBWIRE | Get $25 for NFL, NBA, NCAAF, Politics & More - Victorville Daily Press – 1 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n5. Agencies extend comment period for proposed third-party risk management guidance – 1 Quellen.",
   "key_takeaways": [
-    "Iran fires drones at U.S. base in Bahrain, denies reports of planned dirty bomb attack in D.C. (3 Quellen: Al Jazeera, Antiwar.com, CBC News World (Kanada))",
-    "Anthropic wants everyday investors to be part of its IPO. Some are not buying it. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "\"It's Illegal\": Trump Fires Back As Massive Leak Shows What Deutsche Bank Hid About Epstein, Russia - And Him (2 Quellen: Follow the Money (EU), ZeroHedge)",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Waller, Considerations at the Intersection of Payments and Tokenized Markets (1 Quellen: Fed Speeches & Minutes)"
+    "The U.S.-Chinese-Russian Summit and the Future of Trilateral Nuclear Talks (6 Quellen: BBC World News, CBC News World (Kanada), Yonhap News (Südkorea), War on the Rocks, Folha de S.Paulo (Brasilien), New York Times World)",
+    "Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Polymarket Sign-Up Bonus Code SBWIRE | Get $25 for NFL, NBA, NCAAF, Politics & More - Victorville Daily Press (1 Quellen: Polymarket Geopolitics & War)",
+    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
+    "Agencies extend comment period for proposed third-party risk management guidance (1 Quellen: Federal Reserve Press)"
   ],
   "simple_key_takeaways": [
-    "Iran fires drones at U.S. base in Bahrain, denies reports of planned dirty bomb attack in D.C. (3 Quellen: Al Jazeera, Antiwar.com, CBC News World (Kanada))",
-    "Anthropic wants everyday investors to be part of its IPO. Some are not buying it. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "\"It's Illegal\": Trump Fires Back As Massive Leak Shows What Deutsche Bank Hid About Epstein, Russia - And Him (2 Quellen: Follow the Money (EU), ZeroHedge)",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Waller, Considerations at the Intersection of Payments and Tokenized Markets (1 Quellen: Fed Speeches & Minutes)"
+    "The U.S.-Chinese-Russian Summit and the Future of Trilateral Nuclear Talks (6 Quellen: BBC World News, CBC News World (Kanada), Yonhap News (Südkorea), War on the Rocks, Folha de S.Paulo (Brasilien), New York Times World)",
+    "Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Polymarket Sign-Up Bonus Code SBWIRE | Get $25 for NFL, NBA, NCAAF, Politics & More - Victorville Daily Press (1 Quellen: Polymarket Geopolitics & War)",
+    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
+    "Agencies extend comment period for proposed third-party risk management guidance (1 Quellen: Federal Reserve Press)"
   ],
   "top5": [
     {
-      "title": "Iran fires drones at U.S. base in Bahrain, denies reports of planned dirty bomb attack in D.C.",
-      "source_count": 3,
-      "article_count": 3,
+      "title": "The U.S.-Chinese-Russian Summit and the Future of Trilateral Nuclear Talks",
+      "source_count": 6,
+      "article_count": 6,
       "sources": [
-        "Al Jazeera",
-        "Antiwar.com",
-        "CBC News World (Kanada)"
+        "BBC World News",
+        "CBC News World (Kanada)",
+        "Yonhap News (Südkorea)",
+        "War on the Rocks",
+        "Folha de S.Paulo (Brasilien)",
+        "New York Times World"
       ],
       "categories": [
-        "BRICS / Arabisch",
-        "Friedenspolitik",
-        "CA/Presse"
+        "UK/Medien",
+        "CA/Presse",
+        "KR/Agentur",
+        "Militäranalyse",
+        "BR/Presse",
+        "US/Presse"
       ],
-      "link": "https://www.aljazeera.com/video/newsfeed/2026/11/17/trump-warns-iran-over-reported-dirty-bomb-threat-plans-against-washington?traffic_source=rss",
+      "link": "https://www.bbc.co.uk/news/articles/ck9d75x5wwwwo?at_medium=RSS&at_campaign=rss",
       "methode": "regelbasiert, ohne KI",
       "rank": 1
     },
     {
-      "title": "Anthropic wants everyday investors to be part of its IPO. Some are not buying it.",
+      "title": "Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -48,28 +54,26 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/anthropic-wants-everyday-investors-to-be-part-of-its-ipo-some-are-not-buying-it-43576d2d?mod=mw_rss_topstories",
+      "link": "https://www.marketwatch.com/story/only-two-magnificent-seven-stocks-have-managed-to-beat-the-s-p-500-since-the-start-of-2025-a3daa0f8?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
       "rank": 2
     },
     {
-      "title": "\"It's Illegal\": Trump Fires Back As Massive Leak Shows What Deutsche Bank Hid About Epstein, Russia - And Him",
-      "source_count": 2,
+      "title": "Polymarket Sign-Up Bonus Code SBWIRE | Get $25 for NFL, NBA, NCAAF, Politics & More - Victorville Daily Press",
+      "source_count": 1,
       "article_count": 2,
       "sources": [
-        "Follow the Money (EU)",
-        "ZeroHedge"
+        "Polymarket Geopolitics & War"
       ],
       "categories": [
-        "Investigativ EU",
-        "Alternativ"
+        "Prediction Markets"
       ],
-      "link": "https://www.ftm.eu/articles/deutsche-bank-trump-scrutiny-leak-controversies",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBzMkxRSnY1XzZwYnN3OXY2YTJTMEVPckFleWd1MGlOMTVDNjdOUldzdzJpdFRaTWxlekUwN1BJTWJkRDROWHRpbjZVemhqMVVxY0JWV3kyV1FEc1FjWHM1WndwNEFzTGZBc0JITUt2VXTSAXBBVV95cUxQOTVWcUsyMVlOQXdsdHBtR3ZPRWR1T1Zrb2FpbllSNmR0NUoydlFWdDJ5RUFSaG5nMXRZYWJwTXV6OEdjV2JlYk41T3UyZ1dDVWhVbmlpVVM5V3NBZWlmNHhXNy1LTWlGRTdRd1gycTZk?oc=5",
       "methode": "regelbasiert, ohne KI",
       "rank": 3
     },
     {
-      "title": "Latest Fourth-Quarter GDP Growth Estimate 3.5 Percent",
+      "title": "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent",
       "source_count": 1,
       "article_count": 2,
       "sources": [
@@ -83,16 +87,16 @@
       "rank": 4
     },
     {
-      "title": "Waller, Considerations at the Intersection of Payments and Tokenized Markets",
+      "title": "Agencies extend comment period for proposed third-party risk management guidance",
       "source_count": 1,
       "article_count": 1,
       "sources": [
-        "Fed Speeches & Minutes"
+        "Federal Reserve Press"
       ],
       "categories": [
         "Zentralbank"
       ],
-      "link": "https://www.federalreserve.gov/newsevents/speech/waller20261117a.htm",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -111,78 +115,67 @@
     {
       "name": "Flug AIC2029",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 44.4356,
-      "lon": 25.2926,
-      "lng": 25.2926,
+      "lat": 40.8309,
+      "lon": 31.9512,
+      "lng": 31.9512,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC2029 | Höhe: 12.2 km | Speed: 767 km/h",
+      "description": "Callsign: AIC2029 | Höhe: 11.0 km | Speed: 781 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT51BE",
+      "name": "Flug PGT88JV",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.4699,
-      "lon": 29.6393,
-      "lng": 29.6393,
+      "lat": 41.7357,
+      "lon": 26.7864,
+      "lng": 26.7864,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT51BE | Höhe: 4.1 km | Speed: 597 km/h",
+      "description": "Callsign: PGT88JV | Höhe: 10.7 km | Speed: 1037 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DUKE60",
-      "region": "Schwarzes Meer / Osteuropa",
-      "lat": 44.6412,
-      "lon": 27.6898,
-      "lng": 27.6898,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: DUKE60 | Höhe: 8.5 km | Speed: 235 km/h",
-      "impact": "Militärische Luftraumüberwachung (Schwarzes Meer / Osteuropa)"
-    },
-    {
-      "name": "Flug AEE908",
+      "name": "Flug TVF60SU",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.9816,
-      "lon": 33.7761,
-      "lng": 33.7761,
+      "lat": 34.3138,
+      "lon": 35.2225,
+      "lng": 35.2225,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AEE908 | Höhe: 0.4 km | Speed: 315 km/h",
+      "description": "Callsign: TVF60SU | Höhe: 2.5 km | Speed: 544 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug T7MSAB",
+      "name": "Flug DLH687",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 25.2355,
-      "lon": 51.5763,
-      "lng": 51.5763,
+      "lat": 32.1089,
+      "lon": 34.2608,
+      "lng": 34.2608,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: T7MSAB | Höhe: 0.0 km | Speed: 287 km/h",
+      "description": "Callsign: DLH687 | Höhe: 4.9 km | Speed: 701 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DHK009",
+      "name": "Flug APG128",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.1604,
-      "lon": 121.9493,
-      "lng": 121.9493,
+      "lat": 17.6214,
+      "lon": 120.6325,
+      "lng": 120.6325,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: DHK009 | Höhe: 8.8 km | Speed: 1040 km/h",
+      "description": "Callsign: APG128 | Höhe: 9.4 km | Speed: 831 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug LAO001",
+      "name": "Flug CSN5972",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 17.3814,
-      "lon": 119.64,
-      "lng": 119.64,
+      "lat": 27.4058,
+      "lon": 120.4186,
+      "lng": 120.4186,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: LAO001 | Höhe: 10.4 km | Speed: 873 km/h",
+      "description": "Callsign: CSN5972 | Höhe: 7.2 km | Speed: 584 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -212,19 +205,19 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-17T15:15:50.643350+00:00",
+  "timestamp": "2026-11-18T14:52:20.740877+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-17T15:15:19.524431+00:00",
+    "timestamp": "2026-11-18T14:51:49.211577+00:00",
     "feeds_total": 224,
-    "feeds_successful": 120,
-    "feeds_failed": 104,
+    "feeds_successful": 117,
+    "feeds_failed": 107,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
     "swarm_debate_status": "DEAKTIVIERT",
     "synthesizer_status": "DEAKTIVIERT",
     "haiku_status": "DEAKTIVIERT",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "llm_enabled": false,
     "llm_status": "DEAKTIVIERT",
@@ -242,7 +235,7 @@
     "defcon_now": null,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 7,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
