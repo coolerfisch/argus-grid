@@ -1,49 +1,43 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 18.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. The U.S.-Chinese-Russian Summit and the Future of Trilateral Nuclear Talks – 6 Quellen.\n2. Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 – 2 Quellen.\n3. Polymarket Sign-Up Bonus Code SBWIRE | Get $25 for NFL, NBA, NCAAF, Politics & More - Victorville Daily Press – 1 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n5. Agencies extend comment period for proposed third-party risk management guidance – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 18.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. The U.S.-Chinese-Russian Summit and the Future of Trilateral Nuclear Talks – 6 Quellen.\n2. Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 – 2 Quellen.\n3. Polymarket Sign-Up Bonus Code SBWIRE | Get $25 for NFL, NBA, NCAAF, Politics & More - Victorville Daily Press – 1 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n5. Agencies extend comment period for proposed third-party risk management guidance – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 19.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Top U.N. court finds Myanmar committed state-sponsored genocide against Muslim Rohingya – 3 Quellen.\n2. Why Micron, Intel and other AI stocks are getting a lift on Thursday – 2 Quellen.\n3. Dozens missing after boat carrying 100 migrants sinks off Senegal's coast – 2 Quellen.\n4. Anthropic to debut on Wall Street with a $1.5 trillion valuation in the biggest IPO of all time - AP News – 2 Quellen.\n5. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 19.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Top U.N. court finds Myanmar committed state-sponsored genocide against Muslim Rohingya – 3 Quellen.\n2. Why Micron, Intel and other AI stocks are getting a lift on Thursday – 2 Quellen.\n3. Dozens missing after boat carrying 100 migrants sinks off Senegal's coast – 2 Quellen.\n4. Anthropic to debut on Wall Street with a $1.5 trillion valuation in the biggest IPO of all time - AP News – 2 Quellen.\n5. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.",
   "key_takeaways": [
-    "The U.S.-Chinese-Russian Summit and the Future of Trilateral Nuclear Talks (6 Quellen: BBC World News, CBC News World (Kanada), Yonhap News (Südkorea), War on the Rocks, Folha de S.Paulo (Brasilien), New York Times World)",
-    "Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Polymarket Sign-Up Bonus Code SBWIRE | Get $25 for NFL, NBA, NCAAF, Politics & More - Victorville Daily Press (1 Quellen: Polymarket Geopolitics & War)",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Agencies extend comment period for proposed third-party risk management guidance (1 Quellen: Federal Reserve Press)"
+    "Top U.N. court finds Myanmar committed state-sponsored genocide against Muslim Rohingya (3 Quellen: New York Times World, ABC News Australia, The Japan Times (Japan))",
+    "Why Micron, Intel and other AI stocks are getting a lift on Thursday (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Dozens missing after boat carrying 100 migrants sinks off Senegal's coast (2 Quellen: BBC World News, CBC News World (Kanada))",
+    "Anthropic to debut on Wall Street with a $1.5 trillion valuation in the biggest IPO of all time - AP News (2 Quellen: Australian Financial Review, Associated Press (Google Search Feed))",
+    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)"
   ],
   "simple_key_takeaways": [
-    "The U.S.-Chinese-Russian Summit and the Future of Trilateral Nuclear Talks (6 Quellen: BBC World News, CBC News World (Kanada), Yonhap News (Südkorea), War on the Rocks, Folha de S.Paulo (Brasilien), New York Times World)",
-    "Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Polymarket Sign-Up Bonus Code SBWIRE | Get $25 for NFL, NBA, NCAAF, Politics & More - Victorville Daily Press (1 Quellen: Polymarket Geopolitics & War)",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Agencies extend comment period for proposed third-party risk management guidance (1 Quellen: Federal Reserve Press)"
+    "Top U.N. court finds Myanmar committed state-sponsored genocide against Muslim Rohingya (3 Quellen: New York Times World, ABC News Australia, The Japan Times (Japan))",
+    "Why Micron, Intel and other AI stocks are getting a lift on Thursday (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Dozens missing after boat carrying 100 migrants sinks off Senegal's coast (2 Quellen: BBC World News, CBC News World (Kanada))",
+    "Anthropic to debut on Wall Street with a $1.5 trillion valuation in the biggest IPO of all time - AP News (2 Quellen: Australian Financial Review, Associated Press (Google Search Feed))",
+    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)"
   ],
   "top5": [
     {
-      "title": "The U.S.-Chinese-Russian Summit and the Future of Trilateral Nuclear Talks",
-      "source_count": 6,
-      "article_count": 6,
+      "title": "Top U.N. court finds Myanmar committed state-sponsored genocide against Muslim Rohingya",
+      "source_count": 3,
+      "article_count": 3,
       "sources": [
-        "BBC World News",
-        "CBC News World (Kanada)",
-        "Yonhap News (Südkorea)",
-        "War on the Rocks",
-        "Folha de S.Paulo (Brasilien)",
-        "New York Times World"
+        "New York Times World",
+        "ABC News Australia",
+        "The Japan Times (Japan)"
       ],
       "categories": [
-        "UK/Medien",
-        "CA/Presse",
-        "KR/Agentur",
-        "Militäranalyse",
-        "BR/Presse",
-        "US/Presse"
+        "US/Presse",
+        "AU/Medien",
+        "JP/Presse"
       ],
-      "link": "https://www.bbc.co.uk/news/articles/ck9d75x5wwwwo?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.nytimes.com/live/2026/11/19/world/myanmar-icj-ruling-genocide",
       "methode": "regelbasiert, ohne KI",
       "rank": 1
     },
     {
-      "title": "Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025",
+      "title": "Why Micron, Intel and other AI stocks are getting a lift on Thursday",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -54,23 +48,41 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/only-two-magnificent-seven-stocks-have-managed-to-beat-the-s-p-500-since-the-start-of-2025-a3daa0f8?mod=mw_rss_topstories",
+      "link": "https://www.marketwatch.com/story/why-micron-intel-and-other-ai-stocks-are-getting-a-lift-on-thursday-cf6f59f8?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
       "rank": 2
     },
     {
-      "title": "Polymarket Sign-Up Bonus Code SBWIRE | Get $25 for NFL, NBA, NCAAF, Politics & More - Victorville Daily Press",
-      "source_count": 1,
+      "title": "Dozens missing after boat carrying 100 migrants sinks off Senegal's coast",
+      "source_count": 2,
       "article_count": 2,
       "sources": [
-        "Polymarket Geopolitics & War"
+        "BBC World News",
+        "CBC News World (Kanada)"
       ],
       "categories": [
-        "Prediction Markets"
+        "UK/Medien",
+        "CA/Presse"
       ],
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBzMkxRSnY1XzZwYnN3OXY2YTJTMEVPckFleWd1MGlOMTVDNjdOUldzdzJpdFRaTWxlekUwN1BJTWJkRDROWHRpbjZVemhqMVVxY0JWV3kyV1FEc1FjWHM1WndwNEFzTGZBc0JITUt2VXTSAXBBVV95cUxQOTVWcUsyMVlOQXdsdHBtR3ZPRWR1T1Zrb2FpbllSNmR0NUoydlFWdDJ5RUFSaG5nMXRZYWJwTXV6OEdjV2JlYk41T3UyZ1dDVWhVbmlpVVM5V3NBZWlmNHhXNy1LTWlGRTdRd1gycTZk?oc=5",
+      "link": "https://www.bbc.co.uk/news/articles/c58j484089ewo?at_medium=RSS&at_campaign=rss",
       "methode": "regelbasiert, ohne KI",
       "rank": 3
+    },
+    {
+      "title": "Anthropic to debut on Wall Street with a $1.5 trillion valuation in the biggest IPO of all time - AP News",
+      "source_count": 2,
+      "article_count": 2,
+      "sources": [
+        "Australian Financial Review",
+        "Associated Press (Google Search Feed)"
+      ],
+      "categories": [
+        "AU/Finanzen",
+        "Agentur"
+      ],
+      "link": "https://www.afr.com/markets/equity-markets/asx-markets-live-wall-street-surges-on-back-of-massive-anthropic-ipo-20261120-p61ft1?ref=rss&utm_medium=rss&utm_source=rss_feed",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 4
     },
     {
       "title": "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent",
@@ -83,20 +95,6 @@
         "Makro/Fed"
       ],
       "link": "https://www.atlantafed.org/research-and-data/data/gdpnow",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 4
-    },
-    {
-      "title": "Agencies extend comment period for proposed third-party risk management guidance",
-      "source_count": 1,
-      "article_count": 1,
-      "sources": [
-        "Federal Reserve Press"
-      ],
-      "categories": [
-        "Zentralbank"
-      ],
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -113,69 +111,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug AIC2029",
+      "name": "Flug PGT1218",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8309,
-      "lon": 31.9512,
-      "lng": 31.9512,
+      "lat": 41.3377,
+      "lon": 29.3835,
+      "lng": 29.3835,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC2029 | Höhe: 11.0 km | Speed: 781 km/h",
+      "description": "Callsign: PGT1218 | Höhe: 6.7 km | Speed: 794 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT88JV",
+      "name": "Flug PGT31AA",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.7357,
-      "lon": 26.7864,
-      "lng": 26.7864,
+      "lat": 41.0488,
+      "lon": 29.704,
+      "lng": 29.704,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT88JV | Höhe: 10.7 km | Speed: 1037 km/h",
+      "description": "Callsign: PGT31AA | Höhe: 1.7 km | Speed: 396 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug TVF60SU",
+      "name": "Flug SWR252B",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.3138,
-      "lon": 35.2225,
-      "lng": 35.2225,
+      "lat": 33.6836,
+      "lon": 32.9423,
+      "lng": 32.9423,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TVF60SU | Höhe: 2.5 km | Speed: 544 km/h",
+      "description": "Callsign: SWR252B | Höhe: 11.1 km | Speed: 965 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug DLH687",
+      "name": "Flug AUA96",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.1089,
-      "lon": 34.2608,
-      "lng": 34.2608,
+      "lat": 32.8859,
+      "lon": 32.7877,
+      "lng": 32.7877,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: DLH687 | Höhe: 4.9 km | Speed: 701 km/h",
+      "description": "Callsign: AUA96 | Höhe: 11.6 km | Speed: 728 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug APG128",
+      "name": "Flug PAL895",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 17.6214,
-      "lon": 120.6325,
-      "lng": 120.6325,
+      "lat": 23.2106,
+      "lon": 121.8298,
+      "lng": 121.8298,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: APG128 | Höhe: 9.4 km | Speed: 831 km/h",
+      "description": "Callsign: PAL895 | Höhe: 10.4 km | Speed: 787 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CSN5972",
+      "name": "Flug PAL594",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 27.4058,
-      "lon": 120.4186,
-      "lng": 120.4186,
+      "lat": 16.5132,
+      "lon": 119.81,
+      "lng": 119.81,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSN5972 | Höhe: 7.2 km | Speed: 584 km/h",
+      "description": "Callsign: PAL594 | Höhe: 10.6 km | Speed: 893 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -205,12 +203,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-18T14:52:20.740877+00:00",
+  "timestamp": "2026-11-19T14:58:23.801143+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-18T14:51:49.211577+00:00",
+    "timestamp": "2026-11-19T14:57:53.972941+00:00",
     "feeds_total": 224,
-    "feeds_successful": 117,
-    "feeds_failed": 107,
+    "feeds_successful": 114,
+    "feeds_failed": 110,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
