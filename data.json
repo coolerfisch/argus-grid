@@ -1,43 +1,25 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 19.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Top U.N. court finds Myanmar committed state-sponsored genocide against Muslim Rohingya – 3 Quellen.\n2. Why Micron, Intel and other AI stocks are getting a lift on Thursday – 2 Quellen.\n3. Dozens missing after boat carrying 100 migrants sinks off Senegal's coast – 2 Quellen.\n4. Anthropic to debut on Wall Street with a $1.5 trillion valuation in the biggest IPO of all time - AP News – 2 Quellen.\n5. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 19.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Top U.N. court finds Myanmar committed state-sponsored genocide against Muslim Rohingya – 3 Quellen.\n2. Why Micron, Intel and other AI stocks are getting a lift on Thursday – 2 Quellen.\n3. Dozens missing after boat carrying 100 migrants sinks off Senegal's coast – 2 Quellen.\n4. Anthropic to debut on Wall Street with a $1.5 trillion valuation in the biggest IPO of all time - AP News – 2 Quellen.\n5. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 20.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Anthropic’s stock slides closer to IPO price and drags down the AI trade – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Federal Reserve Board issues enforcement action with former employee of First Security Bancorp – 1 Quellen.\n4. Elecbrakes EB2, VM1, ELBC2000 – 1 Quellen.\n5. Minutes of the Federal Open Market Committee, October 27-28, 2026 – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 20.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Anthropic’s stock slides closer to IPO price and drags down the AI trade – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Federal Reserve Board issues enforcement action with former employee of First Security Bancorp – 1 Quellen.\n4. Elecbrakes EB2, VM1, ELBC2000 – 1 Quellen.\n5. Minutes of the Federal Open Market Committee, October 27-28, 2026 – 1 Quellen.",
   "key_takeaways": [
-    "Top U.N. court finds Myanmar committed state-sponsored genocide against Muslim Rohingya (3 Quellen: New York Times World, ABC News Australia, The Japan Times (Japan))",
-    "Why Micron, Intel and other AI stocks are getting a lift on Thursday (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Dozens missing after boat carrying 100 migrants sinks off Senegal's coast (2 Quellen: BBC World News, CBC News World (Kanada))",
-    "Anthropic to debut on Wall Street with a $1.5 trillion valuation in the biggest IPO of all time - AP News (2 Quellen: Australian Financial Review, Associated Press (Google Search Feed))",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)"
+    "Anthropic’s stock slides closer to IPO price and drags down the AI trade (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
+    "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp (1 Quellen: Federal Reserve Press)",
+    "Elecbrakes EB2, VM1, ELBC2000 (1 Quellen: CISA Cyber Alerts)",
+    "Minutes of the Federal Open Market Committee, October 27-28, 2026 (1 Quellen: Federal Reserve Press)"
   ],
   "simple_key_takeaways": [
-    "Top U.N. court finds Myanmar committed state-sponsored genocide against Muslim Rohingya (3 Quellen: New York Times World, ABC News Australia, The Japan Times (Japan))",
-    "Why Micron, Intel and other AI stocks are getting a lift on Thursday (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Dozens missing after boat carrying 100 migrants sinks off Senegal's coast (2 Quellen: BBC World News, CBC News World (Kanada))",
-    "Anthropic to debut on Wall Street with a $1.5 trillion valuation in the biggest IPO of all time - AP News (2 Quellen: Australian Financial Review, Associated Press (Google Search Feed))",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)"
+    "Anthropic’s stock slides closer to IPO price and drags down the AI trade (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
+    "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp (1 Quellen: Federal Reserve Press)",
+    "Elecbrakes EB2, VM1, ELBC2000 (1 Quellen: CISA Cyber Alerts)",
+    "Minutes of the Federal Open Market Committee, October 27-28, 2026 (1 Quellen: Federal Reserve Press)"
   ],
   "top5": [
     {
-      "title": "Top U.N. court finds Myanmar committed state-sponsored genocide against Muslim Rohingya",
-      "source_count": 3,
-      "article_count": 3,
-      "sources": [
-        "New York Times World",
-        "ABC News Australia",
-        "The Japan Times (Japan)"
-      ],
-      "categories": [
-        "US/Presse",
-        "AU/Medien",
-        "JP/Presse"
-      ],
-      "link": "https://www.nytimes.com/live/2026/11/19/world/myanmar-icj-ruling-genocide",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 1
-    },
-    {
-      "title": "Why Micron, Intel and other AI stocks are getting a lift on Thursday",
+      "title": "Anthropic’s stock slides closer to IPO price and drags down the AI trade",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -48,41 +30,9 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/why-micron-intel-and-other-ai-stocks-are-getting-a-lift-on-thursday-cf6f59f8?mod=mw_rss_topstories",
+      "link": "https://www.marketwatch.com/story/anthropics-stock-slides-closer-to-ipo-price-and-drags-down-the-ai-trade-cc43a0c4?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
-      "rank": 2
-    },
-    {
-      "title": "Dozens missing after boat carrying 100 migrants sinks off Senegal's coast",
-      "source_count": 2,
-      "article_count": 2,
-      "sources": [
-        "BBC World News",
-        "CBC News World (Kanada)"
-      ],
-      "categories": [
-        "UK/Medien",
-        "CA/Presse"
-      ],
-      "link": "https://www.bbc.co.uk/news/articles/c58j484089ewo?at_medium=RSS&at_campaign=rss",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 3
-    },
-    {
-      "title": "Anthropic to debut on Wall Street with a $1.5 trillion valuation in the biggest IPO of all time - AP News",
-      "source_count": 2,
-      "article_count": 2,
-      "sources": [
-        "Australian Financial Review",
-        "Associated Press (Google Search Feed)"
-      ],
-      "categories": [
-        "AU/Finanzen",
-        "Agentur"
-      ],
-      "link": "https://www.afr.com/markets/equity-markets/asx-markets-live-wall-street-surges-on-back-of-massive-anthropic-ipo-20261120-p61ft1?ref=rss&utm_medium=rss&utm_source=rss_feed",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 4
+      "rank": 1
     },
     {
       "title": "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent",
@@ -95,6 +45,48 @@
         "Makro/Fed"
       ],
       "link": "https://www.atlantafed.org/research-and-data/data/gdpnow",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 2
+    },
+    {
+      "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+      "source_count": 1,
+      "article_count": 1,
+      "sources": [
+        "Federal Reserve Press"
+      ],
+      "categories": [
+        "Zentralbank"
+      ],
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 3
+    },
+    {
+      "title": "Elecbrakes EB2, VM1, ELBC2000",
+      "source_count": 1,
+      "article_count": 1,
+      "sources": [
+        "CISA Cyber Alerts"
+      ],
+      "categories": [
+        "Cyber / Infrastruktur"
+      ],
+      "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-02",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 4
+    },
+    {
+      "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
+      "source_count": 1,
+      "article_count": 1,
+      "sources": [
+        "Federal Reserve Press"
+      ],
+      "categories": [
+        "Zentralbank"
+      ],
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -111,69 +103,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT1218",
+      "name": "Flug PGT4KZ",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.3377,
-      "lon": 29.3835,
-      "lng": 29.3835,
+      "lat": 40.7647,
+      "lon": 28.8678,
+      "lng": 28.8678,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT1218 | Höhe: 6.7 km | Speed: 794 km/h",
+      "description": "Callsign: PGT4KZ | Höhe: 2.4 km | Speed: 462 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT31AA",
+      "name": "Flug PGT53MF",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.0488,
-      "lon": 29.704,
-      "lng": 29.704,
+      "lat": 41.7074,
+      "lon": 26.8327,
+      "lng": 26.8327,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT31AA | Höhe: 1.7 km | Speed: 396 km/h",
+      "description": "Callsign: PGT53MF | Höhe: 10.7 km | Speed: 904 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug SWR252B",
+      "name": "Flug AIC27J",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.6836,
-      "lon": 32.9423,
-      "lng": 32.9423,
+      "lat": 34.8828,
+      "lon": 36.2475,
+      "lng": 36.2475,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: SWR252B | Höhe: 11.1 km | Speed: 965 km/h",
+      "description": "Callsign: AIC27J | Höhe: 11.6 km | Speed: 794 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AUA96",
+      "name": "Flug JAV271",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.8859,
-      "lon": 32.7877,
-      "lng": 32.7877,
+      "lat": 34.776,
+      "lon": 34.2015,
+      "lng": 34.2015,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AUA96 | Höhe: 11.6 km | Speed: 728 km/h",
+      "description": "Callsign: JAV271 | Höhe: 9.7 km | Speed: 783 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PAL895",
+      "name": "Flug THA636",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.2106,
-      "lon": 121.8298,
-      "lng": 121.8298,
+      "lat": 24.9014,
+      "lon": 121.0097,
+      "lng": 121.0097,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PAL895 | Höhe: 10.4 km | Speed: 787 km/h",
+      "description": "Callsign: THA636 | Höhe: 1.0 km | Speed: 305 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PAL594",
+      "name": "Flug CSN5930",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 16.5132,
-      "lon": 119.81,
-      "lng": 119.81,
+      "lat": 25.4288,
+      "lon": 118.2608,
+      "lng": 118.2608,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PAL594 | Höhe: 10.6 km | Speed: 893 km/h",
+      "description": "Callsign: CSN5930 | Höhe: 7.2 km | Speed: 617 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -203,12 +195,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-19T14:58:23.801143+00:00",
+  "timestamp": "2026-11-20T14:40:41.377203+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-19T14:57:53.972941+00:00",
+    "timestamp": "2026-11-20T14:40:06.201008+00:00",
     "feeds_total": 224,
-    "feeds_successful": 114,
-    "feeds_failed": 110,
+    "feeds_successful": 115,
+    "feeds_failed": 109,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
