@@ -1,25 +1,25 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 20.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Anthropic’s stock slides closer to IPO price and drags down the AI trade – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Federal Reserve Board issues enforcement action with former employee of First Security Bancorp – 1 Quellen.\n4. Elecbrakes EB2, VM1, ELBC2000 – 1 Quellen.\n5. Minutes of the Federal Open Market Committee, October 27-28, 2026 – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 20.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Anthropic’s stock slides closer to IPO price and drags down the AI trade – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Federal Reserve Board issues enforcement action with former employee of First Security Bancorp – 1 Quellen.\n4. Elecbrakes EB2, VM1, ELBC2000 – 1 Quellen.\n5. Minutes of the Federal Open Market Committee, October 27-28, 2026 – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 21.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Nvidia’s nonstop drama is keeping buyers away from a historically cheap stock – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement – 1 Quellen.\n4. Federal Reserve announces College Fed Challenge winners – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 21.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Nvidia’s nonstop drama is keeping buyers away from a historically cheap stock – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement – 1 Quellen.\n4. Federal Reserve announces College Fed Challenge winners – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
   "key_takeaways": [
-    "Anthropic’s stock slides closer to IPO price and drags down the AI trade (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Nvidia’s nonstop drama is keeping buyers away from a historically cheap stock (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
     "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp (1 Quellen: Federal Reserve Press)",
-    "Elecbrakes EB2, VM1, ELBC2000 (1 Quellen: CISA Cyber Alerts)",
-    "Minutes of the Federal Open Market Committee, October 27-28, 2026 (1 Quellen: Federal Reserve Press)"
+    "Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement (1 Quellen: EU-Kommission Press)",
+    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)",
+    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)"
   ],
   "simple_key_takeaways": [
-    "Anthropic’s stock slides closer to IPO price and drags down the AI trade (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Nvidia’s nonstop drama is keeping buyers away from a historically cheap stock (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
     "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp (1 Quellen: Federal Reserve Press)",
-    "Elecbrakes EB2, VM1, ELBC2000 (1 Quellen: CISA Cyber Alerts)",
-    "Minutes of the Federal Open Market Committee, October 27-28, 2026 (1 Quellen: Federal Reserve Press)"
+    "Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement (1 Quellen: EU-Kommission Press)",
+    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)",
+    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)"
   ],
   "top5": [
     {
-      "title": "Anthropic’s stock slides closer to IPO price and drags down the AI trade",
+      "title": "Nvidia’s nonstop drama is keeping buyers away from a historically cheap stock",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -30,7 +30,7 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/anthropics-stock-slides-closer-to-ipo-price-and-drags-down-the-ai-trade-cc43a0c4?mod=mw_rss_topstories",
+      "link": "https://www.marketwatch.com/story/nvidias-nonstop-drama-is-keeping-buyers-away-from-a-historically-cheap-stock-604022da?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
       "rank": 1
     },
@@ -49,7 +49,21 @@
       "rank": 2
     },
     {
-      "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+      "title": "Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement",
+      "source_count": 1,
+      "article_count": 2,
+      "sources": [
+        "EU-Kommission Press"
+      ],
+      "categories": [
+        "Regierung/EU"
+      ],
+      "link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2557",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 3
+    },
+    {
+      "title": "Federal Reserve announces College Fed Challenge winners",
       "source_count": 1,
       "article_count": 1,
       "sources": [
@@ -58,12 +72,12 @@
       "categories": [
         "Zentralbank"
       ],
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
       "methode": "regelbasiert, ohne KI",
-      "rank": 3
+      "rank": 4
     },
     {
-      "title": "Elecbrakes EB2, VM1, ELBC2000",
+      "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
       "source_count": 1,
       "article_count": 1,
       "sources": [
@@ -72,21 +86,7 @@
       "categories": [
         "Cyber / Infrastruktur"
       ],
-      "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-02",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 4
-    },
-    {
-      "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
-      "source_count": 1,
-      "article_count": 1,
-      "sources": [
-        "Federal Reserve Press"
-      ],
-      "categories": [
-        "Zentralbank"
-      ],
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
+      "link": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -103,69 +103,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT4KZ",
+      "name": "Flug PGT3GM",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.7647,
-      "lon": 28.8678,
-      "lng": 28.8678,
+      "lat": 41.4838,
+      "lon": 27.175,
+      "lng": 27.175,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT4KZ | Höhe: 2.4 km | Speed: 462 km/h",
+      "description": "Callsign: PGT3GM | Höhe: 9.4 km | Speed: 936 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT53MF",
+      "name": "Flug WZZ83JY",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.7074,
-      "lon": 26.8327,
-      "lng": 26.8327,
+      "lat": 45.2574,
+      "lon": 25.7899,
+      "lng": 25.7899,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT53MF | Höhe: 10.7 km | Speed: 904 km/h",
+      "description": "Callsign: WZZ83JY | Höhe: 11.0 km | Speed: 762 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AIC27J",
+      "name": "Flug CMB535",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.8828,
-      "lon": 36.2475,
-      "lng": 36.2475,
+      "lat": 23.154,
+      "lon": 50.1816,
+      "lng": 50.1816,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AIC27J | Höhe: 11.6 km | Speed: 794 km/h",
+      "description": "Callsign: CMB535 | Höhe: 8.8 km | Speed: 887 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JAV271",
+      "name": "Flug IGO1323",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.776,
-      "lon": 34.2015,
-      "lng": 34.2015,
+      "lat": 25.1814,
+      "lon": 51.6594,
+      "lng": 51.6594,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JAV271 | Höhe: 9.7 km | Speed: 783 km/h",
+      "description": "Callsign: IGO1323 | Höhe: 0.4 km | Speed: 272 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug THA636",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.9014,
-      "lon": 121.0097,
-      "lng": 121.0097,
+      "lat": 24.7499,
+      "lon": 120.6861,
+      "lng": 120.6861,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA636 | Höhe: 1.0 km | Speed: 305 km/h",
+      "description": "Callsign: THA636 | Höhe: 4.5 km | Speed: 585 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CSN5930",
+      "name": "Flug ANA833",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.4288,
-      "lon": 118.2608,
-      "lng": 118.2608,
+      "lat": 25.1141,
+      "lon": 122.2871,
+      "lng": 122.2871,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSN5930 | Höhe: 7.2 km | Speed: 617 km/h",
+      "description": "Callsign: ANA833 | Höhe: 12.2 km | Speed: 832 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -195,12 +195,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-20T14:40:41.377203+00:00",
+  "timestamp": "2026-11-21T13:57:18.195570+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-20T14:40:06.201008+00:00",
+    "timestamp": "2026-11-21T13:56:46.276282+00:00",
     "feeds_total": 224,
-    "feeds_successful": 115,
-    "feeds_failed": 109,
+    "feeds_successful": 117,
+    "feeds_failed": 107,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
