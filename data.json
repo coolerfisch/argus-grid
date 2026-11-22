@@ -1,17 +1,17 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 21.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Nvidia’s nonstop drama is keeping buyers away from a historically cheap stock – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement – 1 Quellen.\n4. Federal Reserve announces College Fed Challenge winners – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 21.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Nvidia’s nonstop drama is keeping buyers away from a historically cheap stock – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement – 1 Quellen.\n4. Federal Reserve announces College Fed Challenge winners – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 22.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Can stocks bounce back after a brutal week? This timing model says history is on the market’s side. – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement – 1 Quellen.\n4. Federal Reserve announces College Fed Challenge winners – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 22.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Can stocks bounce back after a brutal week? This timing model says history is on the market’s side. – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement – 1 Quellen.\n4. Federal Reserve announces College Fed Challenge winners – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
   "key_takeaways": [
-    "Nvidia’s nonstop drama is keeping buyers away from a historically cheap stock (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Can stocks bounce back after a brutal week? This timing model says history is on the market’s side. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
     "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
     "Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement (1 Quellen: EU-Kommission Press)",
     "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)",
     "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)"
   ],
   "simple_key_takeaways": [
-    "Nvidia’s nonstop drama is keeping buyers away from a historically cheap stock (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Can stocks bounce back after a brutal week? This timing model says history is on the market’s side. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
     "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
     "Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement (1 Quellen: EU-Kommission Press)",
     "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)",
@@ -19,7 +19,7 @@
   ],
   "top5": [
     {
-      "title": "Nvidia’s nonstop drama is keeping buyers away from a historically cheap stock",
+      "title": "Can stocks bounce back after a brutal week? This timing model says history is on the market’s side.",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -30,7 +30,7 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/nvidias-nonstop-drama-is-keeping-buyers-away-from-a-historically-cheap-stock-604022da?mod=mw_rss_topstories",
+      "link": "https://www.marketwatch.com/story/can-stocks-bounce-back-after-a-brutal-week-this-timing-model-says-history-is-on-the-markets-side-beff1753?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
       "rank": 1
     },
@@ -103,69 +103,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT3GM",
+      "name": "Flug PGT43PP",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.4838,
-      "lon": 27.175,
-      "lng": 27.175,
+      "lat": 40.8059,
+      "lon": 30.1193,
+      "lng": 30.1193,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT3GM | Höhe: 9.4 km | Speed: 936 km/h",
+      "description": "Callsign: PGT43PP | Höhe: 3.0 km | Speed: 543 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ83JY",
+      "name": "Flug PGT5DQ",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 45.2574,
-      "lon": 25.7899,
-      "lng": 25.7899,
+      "lat": 41.8965,
+      "lon": 27.8123,
+      "lng": 27.8123,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ83JY | Höhe: 11.0 km | Speed: 762 km/h",
+      "description": "Callsign: PGT5DQ | Höhe: 10.4 km | Speed: 688 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CMB535",
+      "name": "Flug VAJ95A",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 23.154,
-      "lon": 50.1816,
-      "lng": 50.1816,
+      "lat": 31.4036,
+      "lon": 36.7818,
+      "lng": 36.7818,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CMB535 | Höhe: 8.8 km | Speed: 887 km/h",
+      "description": "Callsign: VAJ95A | Höhe: 8.4 km | Speed: 933 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug IGO1323",
+      "name": "Flug AUA79PA",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 25.1814,
-      "lon": 51.6594,
-      "lng": 51.6594,
+      "lat": 35.2764,
+      "lon": 32.4968,
+      "lng": 32.4968,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: IGO1323 | Höhe: 0.4 km | Speed: 272 km/h",
+      "description": "Callsign: AUA79PA | Höhe: 6.1 km | Speed: 885 km/h",
       "impact": "Strategischer Transponder-Korridor"
+    },
+    {
+      "name": "Flug GAFMED1",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 34.9792,
+      "lon": 32.9858,
+      "lng": 32.9858,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: GAFMED1 | Höhe: 4.9 km | Speed: 706 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
     },
     {
       "name": "Flug THA636",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.7499,
-      "lon": 120.6861,
-      "lng": 120.6861,
+      "lat": 23.5287,
+      "lon": 120.2529,
+      "lng": 120.2529,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA636 | Höhe: 4.5 km | Speed: 585 km/h",
+      "description": "Callsign: THA636 | Höhe: 8.8 km | Speed: 727 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug ANA833",
+      "name": "Flug GTI8523",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.1141,
-      "lon": 122.2871,
-      "lng": 122.2871,
+      "lat": 24.9894,
+      "lon": 120.6786,
+      "lng": 120.6786,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ANA833 | Höhe: 12.2 km | Speed: 832 km/h",
+      "description": "Callsign: GTI8523 | Höhe: 2.0 km | Speed: 454 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -195,19 +206,19 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-21T13:57:18.195570+00:00",
+  "timestamp": "2026-11-22T13:50:28.843086+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-21T13:56:46.276282+00:00",
+    "timestamp": "2026-11-22T13:49:55.652773+00:00",
     "feeds_total": 224,
-    "feeds_successful": 117,
-    "feeds_failed": 107,
+    "feeds_successful": 116,
+    "feeds_failed": 108,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
     "swarm_debate_status": "DEAKTIVIERT",
     "synthesizer_status": "DEAKTIVIERT",
     "haiku_status": "DEAKTIVIERT",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (7 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "llm_enabled": false,
     "llm_status": "DEAKTIVIERT",
@@ -225,7 +236,7 @@
     "defcon_now": null,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 6,
+    "hotspots_now": 7,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
