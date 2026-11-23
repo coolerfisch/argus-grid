@@ -1,38 +1,84 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 22.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Can stocks bounce back after a brutal week? This timing model says history is on the market’s side. – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement – 1 Quellen.\n4. Federal Reserve announces College Fed Challenge winners – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 22.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Can stocks bounce back after a brutal week? This timing model says history is on the market’s side. – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement – 1 Quellen.\n4. Federal Reserve announces College Fed Challenge winners – 1 Quellen.\n5. CISA Adds Four Known Exploited Vulnerabilities to Catalog – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 23.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. EN DIRECT, Jensen Huang réintégré chez Nvidia : démocrates et républicains critiquent cette décision – 8 Quellen.\n2. The return of Jensen Huang has saved the U.S. stock market — for now. Why the rebound may not last. – 3 Quellen.\n3. Zelenskyy confirms Ukraine was behind attack on Russian warship off Libya – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n5. Federal Reserve announces College Fed Challenge winners – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 23.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. EN DIRECT, Jensen Huang réintégré chez Nvidia : démocrates et républicains critiquent cette décision – 8 Quellen.\n2. The return of Jensen Huang has saved the U.S. stock market — for now. Why the rebound may not last. – 3 Quellen.\n3. Zelenskyy confirms Ukraine was behind attack on Russian warship off Libya – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n5. Federal Reserve announces College Fed Challenge winners – 1 Quellen.",
   "key_takeaways": [
-    "Can stocks bounce back after a brutal week? This timing model says history is on the market’s side. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "EN DIRECT, Jensen Huang réintégré chez Nvidia : démocrates et républicains critiquent cette décision (8 Quellen: BBC World News, Reuters World (Google Search Feed), Le Monde (Frankreich), ABC News Australia, Australian Financial Review, MercoPress (Südamerika), …)",
+    "The return of Jensen Huang has saved the U.S. stock market — for now. Why the rebound may not last. (3 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch), Financial Times)",
+    "Zelenskyy confirms Ukraine was behind attack on Russian warship off Libya (2 Quellen: BBC World News, CBC News World (Kanada))",
     "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement (1 Quellen: EU-Kommission Press)",
-    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)",
-    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)"
+    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)"
   ],
   "simple_key_takeaways": [
-    "Can stocks bounce back after a brutal week? This timing model says history is on the market’s side. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "EN DIRECT, Jensen Huang réintégré chez Nvidia : démocrates et républicains critiquent cette décision (8 Quellen: BBC World News, Reuters World (Google Search Feed), Le Monde (Frankreich), ABC News Australia, Australian Financial Review, MercoPress (Südamerika), …)",
+    "The return of Jensen Huang has saved the U.S. stock market — for now. Why the rebound may not last. (3 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch), Financial Times)",
+    "Zelenskyy confirms Ukraine was behind attack on Russian warship off Libya (2 Quellen: BBC World News, CBC News World (Kanada))",
     "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement (1 Quellen: EU-Kommission Press)",
-    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)",
-    "CISA Adds Four Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)"
+    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)"
   ],
   "top5": [
     {
-      "title": "Can stocks bounce back after a brutal week? This timing model says history is on the market’s side.",
-      "source_count": 2,
-      "article_count": 2,
+      "title": "EN DIRECT, Jensen Huang réintégré chez Nvidia : démocrates et républicains critiquent cette décision",
+      "source_count": 8,
+      "article_count": 9,
+      "sources": [
+        "BBC World News",
+        "Reuters World (Google Search Feed)",
+        "Le Monde (Frankreich)",
+        "ABC News Australia",
+        "Australian Financial Review",
+        "MercoPress (Südamerika)",
+        "Der Spiegel",
+        "France 24 English"
+      ],
+      "categories": [
+        "UK/Medien",
+        "Agentur",
+        "FR/Presse",
+        "AU/Medien",
+        "AU/Finanzen",
+        "LATAM/Agentur",
+        "DE/Medien",
+        "FR/Medien"
+      ],
+      "link": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 1
+    },
+    {
+      "title": "The return of Jensen Huang has saved the U.S. stock market — for now. Why the rebound may not last.",
+      "source_count": 3,
+      "article_count": 3,
       "sources": [
         "Wall Street Journal (MarketWatch Alt)",
-        "MOVE Index / Bonds (MarketWatch)"
+        "MOVE Index / Bonds (MarketWatch)",
+        "Financial Times"
       ],
       "categories": [
         "US/Finanzen",
-        "Bond Stress"
+        "Bond Stress",
+        "UK/Finanzen"
       ],
-      "link": "https://www.marketwatch.com/story/can-stocks-bounce-back-after-a-brutal-week-this-timing-model-says-history-is-on-the-markets-side-beff1753?mod=mw_rss_topstories",
+      "link": "https://www.marketwatch.com/story/the-return-of-jensen-huang-has-saved-the-u-s-stock-market-for-now-why-the-rebound-may-not-last-f72656ce?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
-      "rank": 1
+      "rank": 2
+    },
+    {
+      "title": "Zelenskyy confirms Ukraine was behind attack on Russian warship off Libya",
+      "source_count": 2,
+      "article_count": 2,
+      "sources": [
+        "BBC World News",
+        "CBC News World (Kanada)"
+      ],
+      "categories": [
+        "UK/Medien",
+        "CA/Presse"
+      ],
+      "link": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 3
     },
     {
       "title": "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent",
@@ -46,21 +92,7 @@
       ],
       "link": "https://www.atlantafed.org/research-and-data/data/gdpnow",
       "methode": "regelbasiert, ohne KI",
-      "rank": 2
-    },
-    {
-      "title": "Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement",
-      "source_count": 1,
-      "article_count": 2,
-      "sources": [
-        "EU-Kommission Press"
-      ],
-      "categories": [
-        "Regierung/EU"
-      ],
-      "link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2557",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 3
+      "rank": 4
     },
     {
       "title": "Federal Reserve announces College Fed Challenge winners",
@@ -73,20 +105,6 @@
         "Zentralbank"
       ],
       "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 4
-    },
-    {
-      "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-      "source_count": 1,
-      "article_count": 1,
-      "sources": [
-        "CISA Cyber Alerts"
-      ],
-      "categories": [
-        "Cyber / Infrastruktur"
-      ],
-      "link": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -103,80 +121,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT43PP",
+      "name": "Flug PGT4381",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8059,
-      "lon": 30.1193,
-      "lng": 30.1193,
+      "lat": 41.088,
+      "lon": 30.0856,
+      "lng": 30.0856,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT43PP | Höhe: 3.0 km | Speed: 543 km/h",
+      "description": "Callsign: PGT4381 | Höhe: 3.8 km | Speed: 579 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT5DQ",
+      "name": "Flug PGT55CM",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.8965,
-      "lon": 27.8123,
-      "lng": 27.8123,
+      "lat": 40.7478,
+      "lon": 30.1594,
+      "lng": 30.1594,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT5DQ | Höhe: 10.4 km | Speed: 688 km/h",
+      "description": "Callsign: PGT55CM | Höhe: 4.4 km | Speed: 574 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug VAJ95A",
+      "name": "Flug IAW164",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.4036,
-      "lon": 36.7818,
-      "lng": 36.7818,
+      "lat": 31.7171,
+      "lon": 35.9994,
+      "lng": 35.9994,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: VAJ95A | Höhe: 8.4 km | Speed: 933 km/h",
+      "description": "Callsign: IAW164 | Höhe: 9.9 km | Speed: 0 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug AUA79PA",
+      "name": "Flug ELY5109",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.2764,
-      "lon": 32.4968,
-      "lng": 32.4968,
+      "lat": 33.8079,
+      "lon": 34.0855,
+      "lng": 34.0855,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: AUA79PA | Höhe: 6.1 km | Speed: 885 km/h",
+      "description": "Callsign: ELY5109 | Höhe: 11.6 km | Speed: 841 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug GAFMED1",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 34.9792,
-      "lon": 32.9858,
-      "lng": 32.9858,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: GAFMED1 | Höhe: 4.9 km | Speed: 706 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug THA636",
+      "name": "Flug UPS126",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.5287,
-      "lon": 120.2529,
-      "lng": 120.2529,
+      "lat": 15.2061,
+      "lon": 120.6399,
+      "lng": 120.6399,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: THA636 | Höhe: 8.8 km | Speed: 727 km/h",
+      "description": "Callsign: UPS126 | Höhe: 2.5 km | Speed: 471 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug GTI8523",
+      "name": "Flug JJP81",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 24.9894,
-      "lon": 120.6786,
-      "lng": 120.6786,
+      "lat": 15.2924,
+      "lon": 122.0341,
+      "lng": 122.0341,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: GTI8523 | Höhe: 2.0 km | Speed: 454 km/h",
+      "description": "Callsign: JJP81 | Höhe: 8.9 km | Speed: 826 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -206,19 +213,19 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-22T13:50:28.843086+00:00",
+  "timestamp": "2026-11-23T16:57:17.527717+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-22T13:49:55.652773+00:00",
+    "timestamp": "2026-11-23T16:56:46.873057+00:00",
     "feeds_total": 224,
-    "feeds_successful": 116,
-    "feeds_failed": 108,
+    "feeds_successful": 118,
+    "feeds_failed": 106,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
     "swarm_debate_status": "DEAKTIVIERT",
     "synthesizer_status": "DEAKTIVIERT",
     "haiku_status": "DEAKTIVIERT",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "llm_enabled": false,
     "llm_status": "DEAKTIVIERT",
@@ -236,7 +243,7 @@
     "defcon_now": null,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 7,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
