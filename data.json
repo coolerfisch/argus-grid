@@ -1,110 +1,112 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 23.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. EN DIRECT, Jensen Huang réintégré chez Nvidia : démocrates et républicains critiquent cette décision – 8 Quellen.\n2. The return of Jensen Huang has saved the U.S. stock market — for now. Why the rebound may not last. – 3 Quellen.\n3. Zelenskyy confirms Ukraine was behind attack on Russian warship off Libya – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n5. Federal Reserve announces College Fed Challenge winners – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 23.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. EN DIRECT, Jensen Huang réintégré chez Nvidia : démocrates et républicains critiquent cette décision – 8 Quellen.\n2. The return of Jensen Huang has saved the U.S. stock market — for now. Why the rebound may not last. – 3 Quellen.\n3. Zelenskyy confirms Ukraine was behind attack on Russian warship off Libya – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n5. Federal Reserve announces College Fed Challenge winners – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 24.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. US stocks surge and recover half of last week’s plunge after Jensen Huang returns as Nvidia’s CEO - AP News – 7 Quellen.\n2. Vanessa Emde: Berliner Linke schließt umstrittene Politikerin aus Fraktion aus – 3 Quellen.\n3. Americans don’t like Trump’s tariffs. He’s doubling down anyway — as soon as this week. – 2 Quellen.\n4. Nicolas Sarkozy, Carla Bruni et Mimi Marchand renvoyés devant le tribunal dans l’affaire de la fausse rétractation de l’homme d’affaires Ziad Takieddine – 2 Quellen.\n5. 2 men arrested after break-in at country residence of Prince William, Princess of Wales – 2 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 24.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. US stocks surge and recover half of last week’s plunge after Jensen Huang returns as Nvidia’s CEO - AP News – 7 Quellen.\n2. Vanessa Emde: Berliner Linke schließt umstrittene Politikerin aus Fraktion aus – 3 Quellen.\n3. Americans don’t like Trump’s tariffs. He’s doubling down anyway — as soon as this week. – 2 Quellen.\n4. Nicolas Sarkozy, Carla Bruni et Mimi Marchand renvoyés devant le tribunal dans l’affaire de la fausse rétractation de l’homme d’affaires Ziad Takieddine – 2 Quellen.\n5. 2 men arrested after break-in at country residence of Prince William, Princess of Wales – 2 Quellen.",
   "key_takeaways": [
-    "EN DIRECT, Jensen Huang réintégré chez Nvidia : démocrates et républicains critiquent cette décision (8 Quellen: BBC World News, Reuters World (Google Search Feed), Le Monde (Frankreich), ABC News Australia, Australian Financial Review, MercoPress (Südamerika), …)",
-    "The return of Jensen Huang has saved the U.S. stock market — for now. Why the rebound may not last. (3 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch), Financial Times)",
-    "Zelenskyy confirms Ukraine was behind attack on Russian warship off Libya (2 Quellen: BBC World News, CBC News World (Kanada))",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)"
+    "US stocks surge and recover half of last week’s plunge after Jensen Huang returns as Nvidia’s CEO - AP News (7 Quellen: BBC World News, CBC News World (Kanada), Australian Financial Review, New York Times World, Associated Press (Google Search Feed), Der Spiegel, …)",
+    "Vanessa Emde: Berliner Linke schließt umstrittene Politikerin aus Fraktion aus (3 Quellen: Der Spiegel, Apollo News, Die Zeit Online)",
+    "Americans don’t like Trump’s tariffs. He’s doubling down anyway — as soon as this week. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Nicolas Sarkozy, Carla Bruni et Mimi Marchand renvoyés devant le tribunal dans l’affaire de la fausse rétractation de l’homme d’affaires Ziad Takieddine (2 Quellen: France 24 English, Le Monde (Frankreich))",
+    "2 men arrested after break-in at country residence of Prince William, Princess of Wales (2 Quellen: CBC News World (Kanada), ABC News Australia)"
   ],
   "simple_key_takeaways": [
-    "EN DIRECT, Jensen Huang réintégré chez Nvidia : démocrates et républicains critiquent cette décision (8 Quellen: BBC World News, Reuters World (Google Search Feed), Le Monde (Frankreich), ABC News Australia, Australian Financial Review, MercoPress (Südamerika), …)",
-    "The return of Jensen Huang has saved the U.S. stock market — for now. Why the rebound may not last. (3 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch), Financial Times)",
-    "Zelenskyy confirms Ukraine was behind attack on Russian warship off Libya (2 Quellen: BBC World News, CBC News World (Kanada))",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)"
+    "US stocks surge and recover half of last week’s plunge after Jensen Huang returns as Nvidia’s CEO - AP News (7 Quellen: BBC World News, CBC News World (Kanada), Australian Financial Review, New York Times World, Associated Press (Google Search Feed), Der Spiegel, …)",
+    "Vanessa Emde: Berliner Linke schließt umstrittene Politikerin aus Fraktion aus (3 Quellen: Der Spiegel, Apollo News, Die Zeit Online)",
+    "Americans don’t like Trump’s tariffs. He’s doubling down anyway — as soon as this week. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Nicolas Sarkozy, Carla Bruni et Mimi Marchand renvoyés devant le tribunal dans l’affaire de la fausse rétractation de l’homme d’affaires Ziad Takieddine (2 Quellen: France 24 English, Le Monde (Frankreich))",
+    "2 men arrested after break-in at country residence of Prince William, Princess of Wales (2 Quellen: CBC News World (Kanada), ABC News Australia)"
   ],
   "top5": [
     {
-      "title": "EN DIRECT, Jensen Huang réintégré chez Nvidia : démocrates et républicains critiquent cette décision",
-      "source_count": 8,
-      "article_count": 9,
+      "title": "US stocks surge and recover half of last week’s plunge after Jensen Huang returns as Nvidia’s CEO - AP News",
+      "source_count": 7,
+      "article_count": 8,
       "sources": [
         "BBC World News",
-        "Reuters World (Google Search Feed)",
-        "Le Monde (Frankreich)",
-        "ABC News Australia",
+        "CBC News World (Kanada)",
         "Australian Financial Review",
-        "MercoPress (Südamerika)",
+        "New York Times World",
+        "Associated Press (Google Search Feed)",
         "Der Spiegel",
-        "France 24 English"
+        "Handelsblatt"
       ],
       "categories": [
         "UK/Medien",
-        "Agentur",
-        "FR/Presse",
-        "AU/Medien",
+        "CA/Presse",
         "AU/Finanzen",
-        "LATAM/Agentur",
+        "US/Presse",
+        "Agentur",
         "DE/Medien",
-        "FR/Medien"
+        "DE/Finanzen"
       ],
       "link": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
       "methode": "regelbasiert, ohne KI",
       "rank": 1
     },
     {
-      "title": "The return of Jensen Huang has saved the U.S. stock market — for now. Why the rebound may not last.",
+      "title": "Vanessa Emde: Berliner Linke schließt umstrittene Politikerin aus Fraktion aus",
       "source_count": 3,
       "article_count": 3,
       "sources": [
-        "Wall Street Journal (MarketWatch Alt)",
-        "MOVE Index / Bonds (MarketWatch)",
-        "Financial Times"
+        "Der Spiegel",
+        "Apollo News",
+        "Die Zeit Online"
       ],
       "categories": [
-        "US/Finanzen",
-        "Bond Stress",
-        "UK/Finanzen"
+        "DE/Medien",
+        "Debatte DE",
+        "DE/Presse"
       ],
-      "link": "https://www.marketwatch.com/story/the-return-of-jensen-huang-has-saved-the-u-s-stock-market-for-now-why-the-rebound-may-not-last-f72656ce?mod=mw_rss_topstories",
+      "link": "https://www.spiegel.de/politik/deutschland/vanessa-emde-berliner-linke-schliesst-umstrittene-politikerin-aus-fraktion-aus-a-d376bd08-93e1-46d3-86ec-a3f81025d59f#ref=rss",
       "methode": "regelbasiert, ohne KI",
       "rank": 2
     },
     {
-      "title": "Zelenskyy confirms Ukraine was behind attack on Russian warship off Libya",
+      "title": "Americans don’t like Trump’s tariffs. He’s doubling down anyway — as soon as this week.",
       "source_count": 2,
       "article_count": 2,
       "sources": [
-        "BBC World News",
-        "CBC News World (Kanada)"
+        "Wall Street Journal (MarketWatch Alt)",
+        "MOVE Index / Bonds (MarketWatch)"
       ],
       "categories": [
-        "UK/Medien",
-        "CA/Presse"
+        "US/Finanzen",
+        "Bond Stress"
       ],
-      "link": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.marketwatch.com/story/americans-dont-like-trumps-tariffs-hes-doubling-down-anyway-as-soon-as-this-week-74c8bed5?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
       "rank": 3
     },
     {
-      "title": "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent",
-      "source_count": 1,
+      "title": "Nicolas Sarkozy, Carla Bruni et Mimi Marchand renvoyés devant le tribunal dans l’affaire de la fausse rétractation de l’homme d’affaires Ziad Takieddine",
+      "source_count": 2,
       "article_count": 2,
       "sources": [
-        "Atlanta Fed / NY Fed"
+        "France 24 English",
+        "Le Monde (Frankreich)"
       ],
       "categories": [
-        "Makro/Fed"
+        "FR/Medien",
+        "FR/Presse"
       ],
-      "link": "https://www.atlantafed.org/research-and-data/data/gdpnow",
+      "link": "https://www.france24.com/en/france/20261124-france-ex-president-nicolas-sarkozy-wife-carla-stand-trial-over-alleged-witness-tampering",
       "methode": "regelbasiert, ohne KI",
       "rank": 4
     },
     {
-      "title": "Federal Reserve announces College Fed Challenge winners",
-      "source_count": 1,
-      "article_count": 1,
+      "title": "2 men arrested after break-in at country residence of Prince William, Princess of Wales",
+      "source_count": 2,
+      "article_count": 2,
       "sources": [
-        "Federal Reserve Press"
+        "CBC News World (Kanada)",
+        "ABC News Australia"
       ],
       "categories": [
-        "Zentralbank"
+        "CA/Presse",
+        "AU/Medien"
       ],
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
+      "link": "https://www.cbc.ca/news/world/breakin-royals-william-kate-country-home-sandringham-9.7433700?cmp=rss",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -121,69 +123,80 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT4381",
+      "name": "Flug PGT45SZ",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.088,
-      "lon": 30.0856,
-      "lng": 30.0856,
+      "lat": 40.7876,
+      "lon": 28.0937,
+      "lng": 28.0937,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT4381 | Höhe: 3.8 km | Speed: 579 km/h",
+      "description": "Callsign: PGT45SZ | Höhe: 9.7 km | Speed: 621 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
       "name": "Flug PGT55CM",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.7478,
-      "lon": 30.1594,
-      "lng": 30.1594,
+      "lat": 40.8518,
+      "lon": 29.2133,
+      "lng": 29.2133,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT55CM | Höhe: 4.4 km | Speed: 574 km/h",
+      "description": "Callsign: PGT55CM | Höhe: 0.5 km | Speed: 306 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug IAW164",
+      "name": "Flug CGF1906",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.7171,
-      "lon": 35.9994,
-      "lng": 35.9994,
+      "lat": 32.1057,
+      "lon": 34.6904,
+      "lng": 34.6904,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: IAW164 | Höhe: 9.9 km | Speed: 0 km/h",
+      "description": "Callsign: CGF1906 | Höhe: 1.0 km | Speed: 391 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug ELY5109",
+      "name": "Flug LOT2YE",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.8079,
-      "lon": 34.0855,
-      "lng": 34.0855,
+      "lat": 33.1493,
+      "lon": 33.4132,
+      "lng": 33.4132,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: ELY5109 | Höhe: 11.6 km | Speed: 841 km/h",
+      "description": "Callsign: LOT2YE | Höhe: 7.0 km | Speed: 904 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UPS126",
+      "name": "Flug RRR9915",
+      "region": "Naher Osten / Rotes Meer",
+      "lat": 31.2341,
+      "lon": 33.227,
+      "lng": 33.227,
+      "type": "flight",
+      "intensity": "ROT",
+      "description": "Callsign: RRR9915 | Höhe: 12.2 km | Speed: 815 km/h",
+      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
+    },
+    {
+      "name": "Flug UAE330",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 15.2061,
-      "lon": 120.6399,
-      "lng": 120.6399,
+      "lat": 15.7812,
+      "lon": 120.2258,
+      "lng": 120.2258,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UPS126 | Höhe: 2.5 km | Speed: 471 km/h",
+      "description": "Callsign: UAE330 | Höhe: 7.6 km | Speed: 685 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug JJP81",
+      "name": "Flug CES5023",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 15.2924,
-      "lon": 122.0341,
-      "lng": 122.0341,
+      "lat": 15.4134,
+      "lon": 120.4331,
+      "lng": 120.4331,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: JJP81 | Höhe: 8.9 km | Speed: 826 km/h",
+      "description": "Callsign: CES5023 | Höhe: 10.1 km | Speed: 861 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -213,19 +226,19 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-23T16:57:17.527717+00:00",
+  "timestamp": "2026-11-24T16:46:27.645675+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-23T16:56:46.873057+00:00",
+    "timestamp": "2026-11-24T16:45:55.306695+00:00",
     "feeds_total": 224,
-    "feeds_successful": 118,
-    "feeds_failed": 106,
+    "feeds_successful": 117,
+    "feeds_failed": 107,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
     "swarm_debate_status": "DEAKTIVIERT",
     "synthesizer_status": "DEAKTIVIERT",
     "haiku_status": "DEAKTIVIERT",
-    "opensky_status": "SUCCESS (6 Signale)",
+    "opensky_status": "SUCCESS (7 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "llm_enabled": false,
     "llm_status": "DEAKTIVIERT",
@@ -243,7 +256,7 @@
     "defcon_now": null,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 6,
+    "hotspots_now": 7,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
