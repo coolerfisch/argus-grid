@@ -1,69 +1,25 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 24.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. US stocks surge and recover half of last week’s plunge after Jensen Huang returns as Nvidia’s CEO - AP News – 7 Quellen.\n2. Vanessa Emde: Berliner Linke schließt umstrittene Politikerin aus Fraktion aus – 3 Quellen.\n3. Americans don’t like Trump’s tariffs. He’s doubling down anyway — as soon as this week. – 2 Quellen.\n4. Nicolas Sarkozy, Carla Bruni et Mimi Marchand renvoyés devant le tribunal dans l’affaire de la fausse rétractation de l’homme d’affaires Ziad Takieddine – 2 Quellen.\n5. 2 men arrested after break-in at country residence of Prince William, Princess of Wales – 2 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 24.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. US stocks surge and recover half of last week’s plunge after Jensen Huang returns as Nvidia’s CEO - AP News – 7 Quellen.\n2. Vanessa Emde: Berliner Linke schließt umstrittene Politikerin aus Fraktion aus – 3 Quellen.\n3. Americans don’t like Trump’s tariffs. He’s doubling down anyway — as soon as this week. – 2 Quellen.\n4. Nicolas Sarkozy, Carla Bruni et Mimi Marchand renvoyés devant le tribunal dans l’affaire de la fausse rétractation de l’homme d’affaires Ziad Takieddine – 2 Quellen.\n5. 2 men arrested after break-in at country residence of Prince William, Princess of Wales – 2 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 25.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame? – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Minutes of the Board's discount rate meetings on October 19 and October 28, 2026 – 1 Quellen.\n4. CISA Adds Three Known Exploited Vulnerabilities to Catalog – 1 Quellen.\n5. Federal Reserve announces College Fed Challenge winners – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 25.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame? – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Minutes of the Board's discount rate meetings on October 19 and October 28, 2026 – 1 Quellen.\n4. CISA Adds Three Known Exploited Vulnerabilities to Catalog – 1 Quellen.\n5. Federal Reserve announces College Fed Challenge winners – 1 Quellen.",
   "key_takeaways": [
-    "US stocks surge and recover half of last week’s plunge after Jensen Huang returns as Nvidia’s CEO - AP News (7 Quellen: BBC World News, CBC News World (Kanada), Australian Financial Review, New York Times World, Associated Press (Google Search Feed), Der Spiegel, …)",
-    "Vanessa Emde: Berliner Linke schließt umstrittene Politikerin aus Fraktion aus (3 Quellen: Der Spiegel, Apollo News, Die Zeit Online)",
-    "Americans don’t like Trump’s tariffs. He’s doubling down anyway — as soon as this week. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Nicolas Sarkozy, Carla Bruni et Mimi Marchand renvoyés devant le tribunal dans l’affaire de la fausse rétractation de l’homme d’affaires Ziad Takieddine (2 Quellen: France 24 English, Le Monde (Frankreich))",
-    "2 men arrested after break-in at country residence of Prince William, Princess of Wales (2 Quellen: CBC News World (Kanada), ABC News Australia)"
+    "A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
+    "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026 (1 Quellen: Federal Reserve Press)",
+    "CISA Adds Three Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)",
+    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)"
   ],
   "simple_key_takeaways": [
-    "US stocks surge and recover half of last week’s plunge after Jensen Huang returns as Nvidia’s CEO - AP News (7 Quellen: BBC World News, CBC News World (Kanada), Australian Financial Review, New York Times World, Associated Press (Google Search Feed), Der Spiegel, …)",
-    "Vanessa Emde: Berliner Linke schließt umstrittene Politikerin aus Fraktion aus (3 Quellen: Der Spiegel, Apollo News, Die Zeit Online)",
-    "Americans don’t like Trump’s tariffs. He’s doubling down anyway — as soon as this week. (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Nicolas Sarkozy, Carla Bruni et Mimi Marchand renvoyés devant le tribunal dans l’affaire de la fausse rétractation de l’homme d’affaires Ziad Takieddine (2 Quellen: France 24 English, Le Monde (Frankreich))",
-    "2 men arrested after break-in at country residence of Prince William, Princess of Wales (2 Quellen: CBC News World (Kanada), ABC News Australia)"
+    "A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
+    "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026 (1 Quellen: Federal Reserve Press)",
+    "CISA Adds Three Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)",
+    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)"
   ],
   "top5": [
     {
-      "title": "US stocks surge and recover half of last week’s plunge after Jensen Huang returns as Nvidia’s CEO - AP News",
-      "source_count": 7,
-      "article_count": 8,
-      "sources": [
-        "BBC World News",
-        "CBC News World (Kanada)",
-        "Australian Financial Review",
-        "New York Times World",
-        "Associated Press (Google Search Feed)",
-        "Der Spiegel",
-        "Handelsblatt"
-      ],
-      "categories": [
-        "UK/Medien",
-        "CA/Presse",
-        "AU/Finanzen",
-        "US/Presse",
-        "Agentur",
-        "DE/Medien",
-        "DE/Finanzen"
-      ],
-      "link": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 1
-    },
-    {
-      "title": "Vanessa Emde: Berliner Linke schließt umstrittene Politikerin aus Fraktion aus",
-      "source_count": 3,
-      "article_count": 3,
-      "sources": [
-        "Der Spiegel",
-        "Apollo News",
-        "Die Zeit Online"
-      ],
-      "categories": [
-        "DE/Medien",
-        "Debatte DE",
-        "DE/Presse"
-      ],
-      "link": "https://www.spiegel.de/politik/deutschland/vanessa-emde-berliner-linke-schliesst-umstrittene-politikerin-aus-fraktion-aus-a-d376bd08-93e1-46d3-86ec-a3f81025d59f#ref=rss",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 2
-    },
-    {
-      "title": "Americans don’t like Trump’s tariffs. He’s doubling down anyway — as soon as this week.",
+      "title": "A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame?",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -74,39 +30,63 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/americans-dont-like-trumps-tariffs-hes-doubling-down-anyway-as-soon-as-this-week-74c8bed5?mod=mw_rss_topstories",
+      "link": "https://www.marketwatch.com/story/a-66-year-old-nurse-faces-retirement-with-just-500-saved-whos-to-blame-4249a0fd?mod=mw_rss_topstories",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 1
+    },
+    {
+      "title": "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent",
+      "source_count": 1,
+      "article_count": 2,
+      "sources": [
+        "Atlanta Fed / NY Fed"
+      ],
+      "categories": [
+        "Makro/Fed"
+      ],
+      "link": "https://www.atlantafed.org/research-and-data/data/gdpnow",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 2
+    },
+    {
+      "title": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
+      "source_count": 1,
+      "article_count": 1,
+      "sources": [
+        "Federal Reserve Press"
+      ],
+      "categories": [
+        "Zentralbank"
+      ],
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm",
       "methode": "regelbasiert, ohne KI",
       "rank": 3
     },
     {
-      "title": "Nicolas Sarkozy, Carla Bruni et Mimi Marchand renvoyés devant le tribunal dans l’affaire de la fausse rétractation de l’homme d’affaires Ziad Takieddine",
-      "source_count": 2,
-      "article_count": 2,
+      "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+      "source_count": 1,
+      "article_count": 1,
       "sources": [
-        "France 24 English",
-        "Le Monde (Frankreich)"
+        "CISA Cyber Alerts"
       ],
       "categories": [
-        "FR/Medien",
-        "FR/Presse"
+        "Cyber / Infrastruktur"
       ],
-      "link": "https://www.france24.com/en/france/20261124-france-ex-president-nicolas-sarkozy-wife-carla-stand-trial-over-alleged-witness-tampering",
+      "link": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog",
       "methode": "regelbasiert, ohne KI",
       "rank": 4
     },
     {
-      "title": "2 men arrested after break-in at country residence of Prince William, Princess of Wales",
-      "source_count": 2,
-      "article_count": 2,
+      "title": "Federal Reserve announces College Fed Challenge winners",
+      "source_count": 1,
+      "article_count": 1,
       "sources": [
-        "CBC News World (Kanada)",
-        "ABC News Australia"
+        "Federal Reserve Press"
       ],
       "categories": [
-        "CA/Presse",
-        "AU/Medien"
+        "Zentralbank"
       ],
-      "link": "https://www.cbc.ca/news/world/breakin-royals-william-kate-country-home-sandringham-9.7433700?cmp=rss",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -123,80 +103,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT45SZ",
+      "name": "Flug PGT54XF",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.7876,
-      "lon": 28.0937,
-      "lng": 28.0937,
+      "lat": 41.4464,
+      "lon": 29.6746,
+      "lng": 29.6746,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT45SZ | Höhe: 9.7 km | Speed: 621 km/h",
+      "description": "Callsign: PGT54XF | Höhe: 4.7 km | Speed: 650 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT55CM",
+      "name": "Flug PGT4431",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.8518,
-      "lon": 29.2133,
-      "lng": 29.2133,
+      "lat": 40.9033,
+      "lon": 29.6037,
+      "lng": 29.6037,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT55CM | Höhe: 0.5 km | Speed: 306 km/h",
+      "description": "Callsign: PGT4431 | Höhe: 1.1 km | Speed: 481 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CGF1906",
+      "name": "Flug T7OKS",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.1057,
-      "lon": 34.6904,
-      "lng": 34.6904,
+      "lat": 27.979,
+      "lon": 49.4868,
+      "lng": 49.4868,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CGF1906 | Höhe: 1.0 km | Speed: 391 km/h",
+      "description": "Callsign: T7OKS | Höhe: 13.1 km | Speed: 837 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug LOT2YE",
+      "name": "Flug WZZ652R",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 33.1493,
-      "lon": 33.4132,
-      "lng": 33.4132,
+      "lat": 35.144,
+      "lon": 32.6732,
+      "lng": 32.6732,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: LOT2YE | Höhe: 7.0 km | Speed: 904 km/h",
+      "description": "Callsign: WZZ652R | Höhe: 7.7 km | Speed: 712 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug RRR9915",
-      "region": "Naher Osten / Rotes Meer",
-      "lat": 31.2341,
-      "lon": 33.227,
-      "lng": 33.227,
-      "type": "flight",
-      "intensity": "ROT",
-      "description": "Callsign: RRR9915 | Höhe: 12.2 km | Speed: 815 km/h",
-      "impact": "Militärische Luftraumüberwachung (Naher Osten / Rotes Meer)"
-    },
-    {
-      "name": "Flug UAE330",
+      "name": "Flug CDG2168",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 15.7812,
-      "lon": 120.2258,
-      "lng": 120.2258,
+      "lat": 25.1966,
+      "lon": 118.396,
+      "lng": 118.396,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAE330 | Höhe: 7.6 km | Speed: 685 km/h",
+      "description": "Callsign: CDG2168 | Höhe: 4.2 km | Speed: 575 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CES5023",
+      "name": "Flug CPA501",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 15.4134,
-      "lon": 120.4331,
-      "lng": 120.4331,
+      "lat": 23.6122,
+      "lon": 119.4102,
+      "lng": 119.4102,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CES5023 | Höhe: 10.1 km | Speed: 861 km/h",
+      "description": "Callsign: CPA501 | Höhe: 12.2 km | Speed: 695 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -226,19 +195,19 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-24T16:46:27.645675+00:00",
+  "timestamp": "2026-11-25T16:33:12.655397+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-24T16:45:55.306695+00:00",
+    "timestamp": "2026-11-25T16:32:39.328033+00:00",
     "feeds_total": 224,
-    "feeds_successful": 117,
-    "feeds_failed": 107,
+    "feeds_successful": 116,
+    "feeds_failed": 108,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
     "swarm_debate_status": "DEAKTIVIERT",
     "synthesizer_status": "DEAKTIVIERT",
     "haiku_status": "DEAKTIVIERT",
-    "opensky_status": "SUCCESS (7 Signale)",
+    "opensky_status": "SUCCESS (6 Signale)",
     "graph_merge_status": "SUCCESS (0 Nodes)",
     "llm_enabled": false,
     "llm_status": "DEAKTIVIERT",
@@ -256,7 +225,7 @@
     "defcon_now": null,
     "nodes_prev": 0,
     "nodes_now": 0,
-    "hotspots_now": 7,
+    "hotspots_now": 6,
     "summary": "Keine wesentliche Änderung zur Vortageslage."
   }
 }
