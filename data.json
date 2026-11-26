@@ -1,25 +1,41 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 25.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame? – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Minutes of the Board's discount rate meetings on October 19 and October 28, 2026 – 1 Quellen.\n4. CISA Adds Three Known Exploited Vulnerabilities to Catalog – 1 Quellen.\n5. Federal Reserve announces College Fed Challenge winners – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 25.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame? – 2 Quellen.\n2. Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent – 1 Quellen.\n3. Minutes of the Board's discount rate meetings on October 19 and October 28, 2026 – 1 Quellen.\n4. CISA Adds Three Known Exploited Vulnerabilities to Catalog – 1 Quellen.\n5. Federal Reserve announces College Fed Challenge winners – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 26.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people - AP News – 2 Quellen.\n2. I’m in my 70s and buying a new BMW X1. Should I put my only son on the title? – 2 Quellen.\n3. Trump vil at Putin skal stanse all militær aggresjon i Europa – 2 Quellen.\n4. Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions – 1 Quellen.\n5. Watch: BBC confronts German man suspected of supplying migrant gangs with small boats – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 26.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people - AP News – 2 Quellen.\n2. I’m in my 70s and buying a new BMW X1. Should I put my only son on the title? – 2 Quellen.\n3. Trump vil at Putin skal stanse all militær aggresjon i Europa – 2 Quellen.\n4. Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions – 1 Quellen.\n5. Watch: BBC confronts German man suspected of supplying migrant gangs with small boats – 1 Quellen.",
   "key_takeaways": [
-    "A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026 (1 Quellen: Federal Reserve Press)",
-    "CISA Adds Three Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)",
-    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)"
+    "Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people - AP News (2 Quellen: Fox News Latest, Associated Press (Google Search Feed))",
+    "I’m in my 70s and buying a new BMW X1. Should I put my only son on the title? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Trump vil at Putin skal stanse all militær aggresjon i Europa (2 Quellen: NRK Nyheter (Norwegen), Folha de S.Paulo (Brasilien))",
+    "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions (1 Quellen: Federal Reserve Press)",
+    "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats (1 Quellen: BBC World News)"
   ],
   "simple_key_takeaways": [
-    "A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026 (1 Quellen: Federal Reserve Press)",
-    "CISA Adds Three Known Exploited Vulnerabilities to Catalog (1 Quellen: CISA Cyber Alerts)",
-    "Federal Reserve announces College Fed Challenge winners (1 Quellen: Federal Reserve Press)"
+    "Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people - AP News (2 Quellen: Fox News Latest, Associated Press (Google Search Feed))",
+    "I’m in my 70s and buying a new BMW X1. Should I put my only son on the title? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Trump vil at Putin skal stanse all militær aggresjon i Europa (2 Quellen: NRK Nyheter (Norwegen), Folha de S.Paulo (Brasilien))",
+    "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions (1 Quellen: Federal Reserve Press)",
+    "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats (1 Quellen: BBC World News)"
   ],
   "top5": [
     {
-      "title": "A 66-year-old nurse is facing down retirement with just $500 saved. Who’s to blame?",
+      "title": "Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people - AP News",
+      "source_count": 2,
+      "article_count": 2,
+      "sources": [
+        "Fox News Latest",
+        "Associated Press (Google Search Feed)"
+      ],
+      "categories": [
+        "US/Politik",
+        "Agentur"
+      ],
+      "link": "https://www.foxnews.com/world/egypt-detains-driver-suspected-causing-cairo-fuel-tanker-crash-inferno-left-31-dead",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 1
+    },
+    {
+      "title": "I’m in my 70s and buying a new BMW X1. Should I put my only son on the title?",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -30,63 +46,51 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/a-66-year-old-nurse-faces-retirement-with-just-500-saved-whos-to-blame-4249a0fd?mod=mw_rss_topstories",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 1
-    },
-    {
-      "title": "Latest Fourth-Quarter GDP Growth Estimate 3.2 Percent",
-      "source_count": 1,
-      "article_count": 2,
-      "sources": [
-        "Atlanta Fed / NY Fed"
-      ],
-      "categories": [
-        "Makro/Fed"
-      ],
-      "link": "https://www.atlantafed.org/research-and-data/data/gdpnow",
+      "link": "https://www.marketwatch.com/story/im-in-my-70s-and-buying-a-new-bmw-x1-should-i-put-my-only-son-on-the-title-25731040?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
       "rank": 2
     },
     {
-      "title": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
-      "source_count": 1,
-      "article_count": 1,
+      "title": "Trump vil at Putin skal stanse all militær aggresjon i Europa",
+      "source_count": 2,
+      "article_count": 2,
       "sources": [
-        "Federal Reserve Press"
+        "NRK Nyheter (Norwegen)",
+        "Folha de S.Paulo (Brasilien)"
       ],
       "categories": [
-        "Zentralbank"
+        "NO/Medien",
+        "BR/Presse"
       ],
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm",
+      "link": "https://www.nrk.no/nyheter/trump-vil-at-putin-skal-stanse-all-militaer-aggresjon-i-europa-1.18089313",
       "methode": "regelbasiert, ohne KI",
       "rank": 3
     },
     {
-      "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+      "title": "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions",
       "source_count": 1,
-      "article_count": 1,
-      "sources": [
-        "CISA Cyber Alerts"
-      ],
-      "categories": [
-        "Cyber / Infrastruktur"
-      ],
-      "link": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 4
-    },
-    {
-      "title": "Federal Reserve announces College Fed Challenge winners",
-      "source_count": 1,
-      "article_count": 1,
+      "article_count": 2,
       "sources": [
         "Federal Reserve Press"
       ],
       "categories": [
         "Zentralbank"
       ],
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125b.htm",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 4
+    },
+    {
+      "title": "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats",
+      "source_count": 1,
+      "article_count": 2,
+      "sources": [
+        "BBC World News"
+      ],
+      "categories": [
+        "UK/Medien"
+      ],
+      "link": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -103,69 +107,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT54XF",
+      "name": "Flug PGT8LV",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.4464,
-      "lon": 29.6746,
-      "lng": 29.6746,
+      "lat": 41.3839,
+      "lon": 28.02,
+      "lng": 28.02,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT54XF | Höhe: 4.7 km | Speed: 650 km/h",
+      "description": "Callsign: PGT8LV | Höhe: 10.5 km | Speed: 933 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT4431",
+      "name": "Flug PGT75BF",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.9033,
-      "lon": 29.6037,
-      "lng": 29.6037,
+      "lat": 40.7709,
+      "lon": 28.6655,
+      "lng": 28.6655,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT4431 | Höhe: 1.1 km | Speed: 481 km/h",
+      "description": "Callsign: PGT75BF | Höhe: 4.2 km | Speed: 601 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug T7OKS",
+      "name": "Flug TVF525R",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 27.979,
-      "lon": 49.4868,
-      "lng": 49.4868,
+      "lat": 31.9975,
+      "lon": 34.7223,
+      "lng": 34.7223,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: T7OKS | Höhe: 13.1 km | Speed: 837 km/h",
+      "description": "Callsign: TVF525R | Höhe: 1.5 km | Speed: 499 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ652R",
+      "name": "ADS-B Signal 739261",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 35.144,
-      "lon": 32.6732,
-      "lng": 32.6732,
+      "lat": 32.9044,
+      "lon": 34.6245,
+      "lng": 34.6245,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ652R | Höhe: 7.7 km | Speed: 712 km/h",
+      "description": "Callsign: Unbekannt | Höhe: 0.3 km | Speed: 272 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CDG2168",
+      "name": "Flug UAE367",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.1966,
-      "lon": 118.396,
-      "lng": 118.396,
+      "lat": 22.5804,
+      "lon": 118.5978,
+      "lng": 118.5978,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CDG2168 | Höhe: 4.2 km | Speed: 575 km/h",
+      "description": "Callsign: UAE367 | Höhe: 9.1 km | Speed: 815 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CPA501",
+      "name": "Flug CES5023",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 23.6122,
-      "lon": 119.4102,
-      "lng": 119.4102,
+      "lat": 18.5963,
+      "lon": 118.2805,
+      "lng": 118.2805,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CPA501 | Höhe: 12.2 km | Speed: 695 km/h",
+      "description": "Callsign: CES5023 | Höhe: 11.3 km | Speed: 869 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -195,12 +199,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-25T16:33:12.655397+00:00",
+  "timestamp": "2026-11-26T16:06:01.769075+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-25T16:32:39.328033+00:00",
+    "timestamp": "2026-11-26T16:05:35.740804+00:00",
     "feeds_total": 224,
-    "feeds_successful": 116,
-    "feeds_failed": 108,
+    "feeds_successful": 114,
+    "feeds_failed": 110,
     "gdelt_articles": 0,
     "telegram_posts": 0,
     "bakers_active": [],
