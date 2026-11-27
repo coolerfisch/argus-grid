@@ -1,41 +1,25 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 26.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people - AP News – 2 Quellen.\n2. I’m in my 70s and buying a new BMW X1. Should I put my only son on the title? – 2 Quellen.\n3. Trump vil at Putin skal stanse all militær aggresjon i Europa – 2 Quellen.\n4. Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions – 1 Quellen.\n5. Watch: BBC confronts German man suspected of supplying migrant gangs with small boats – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 26.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people - AP News – 2 Quellen.\n2. I’m in my 70s and buying a new BMW X1. Should I put my only son on the title? – 2 Quellen.\n3. Trump vil at Putin skal stanse all militær aggresjon i Europa – 2 Quellen.\n4. Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions – 1 Quellen.\n5. Watch: BBC confronts German man suspected of supplying migrant gangs with small boats – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 27.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate? – 2 Quellen.\n2. ‘No reports, no strikes’: Russia’s pro-war bloggers slam proposed prison sentences for sharing photos and videos of Ukrainian attacks – 2 Quellen.\n3. Rentenreform: Arbeitsminister Schweitzer legt neuen Gesetzentwurf vor – Union spricht von „Foulspiel“ – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 2.9 Percent – 1 Quellen.\n5. 躲過聯合國禁運 青年運動用中國零件造武器 – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 27.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate? – 2 Quellen.\n2. ‘No reports, no strikes’: Russia’s pro-war bloggers slam proposed prison sentences for sharing photos and videos of Ukrainian attacks – 2 Quellen.\n3. Rentenreform: Arbeitsminister Schweitzer legt neuen Gesetzentwurf vor – Union spricht von „Foulspiel“ – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 2.9 Percent – 1 Quellen.\n5. 躲過聯合國禁運 青年運動用中國零件造武器 – 1 Quellen.",
   "key_takeaways": [
-    "Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people - AP News (2 Quellen: Fox News Latest, Associated Press (Google Search Feed))",
-    "I’m in my 70s and buying a new BMW X1. Should I put my only son on the title? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Trump vil at Putin skal stanse all militær aggresjon i Europa (2 Quellen: NRK Nyheter (Norwegen), Folha de S.Paulo (Brasilien))",
-    "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions (1 Quellen: Federal Reserve Press)",
-    "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats (1 Quellen: BBC World News)"
+    "I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "‘No reports, no strikes’: Russia’s pro-war bloggers slam proposed prison sentences for sharing photos and videos of Ukrainian attacks (2 Quellen: Meduza English (Russland Exil), Financial Times)",
+    "Rentenreform: Arbeitsminister Schweitzer legt neuen Gesetzentwurf vor – Union spricht von „Foulspiel“ (2 Quellen: Handelsblatt, Der Spiegel)",
+    "Latest Fourth-Quarter GDP Growth Estimate 2.9 Percent (1 Quellen: Atlanta Fed / NY Fed)",
+    "躲過聯合國禁運 青年運動用中國零件造武器 (1 Quellen: GDELT (ec.ltn.com.tw))"
   ],
   "simple_key_takeaways": [
-    "Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people - AP News (2 Quellen: Fox News Latest, Associated Press (Google Search Feed))",
-    "I’m in my 70s and buying a new BMW X1. Should I put my only son on the title? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "Trump vil at Putin skal stanse all militær aggresjon i Europa (2 Quellen: NRK Nyheter (Norwegen), Folha de S.Paulo (Brasilien))",
-    "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions (1 Quellen: Federal Reserve Press)",
-    "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats (1 Quellen: BBC World News)"
+    "I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "‘No reports, no strikes’: Russia’s pro-war bloggers slam proposed prison sentences for sharing photos and videos of Ukrainian attacks (2 Quellen: Meduza English (Russland Exil), Financial Times)",
+    "Rentenreform: Arbeitsminister Schweitzer legt neuen Gesetzentwurf vor – Union spricht von „Foulspiel“ (2 Quellen: Handelsblatt, Der Spiegel)",
+    "Latest Fourth-Quarter GDP Growth Estimate 2.9 Percent (1 Quellen: Atlanta Fed / NY Fed)",
+    "躲過聯合國禁運 青年運動用中國零件造武器 (1 Quellen: GDELT (ec.ltn.com.tw))"
   ],
   "top5": [
     {
-      "title": "Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people - AP News",
-      "source_count": 2,
-      "article_count": 2,
-      "sources": [
-        "Fox News Latest",
-        "Associated Press (Google Search Feed)"
-      ],
-      "categories": [
-        "US/Politik",
-        "Agentur"
-      ],
-      "link": "https://www.foxnews.com/world/egypt-detains-driver-suspected-causing-cairo-fuel-tanker-crash-inferno-left-31-dead",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 1
-    },
-    {
-      "title": "I’m in my 70s and buying a new BMW X1. Should I put my only son on the title?",
+      "title": "I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate?",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -46,51 +30,67 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/im-in-my-70s-and-buying-a-new-bmw-x1-should-i-put-my-only-son-on-the-title-25731040?mod=mw_rss_topstories",
+      "link": "https://www.marketwatch.com/story/ive-been-married-for-58-years-its-our-money-not-his-and-hers-why-dont-others-feel-the-same-c5745889?mod=mw_rss_topstories",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 1
+    },
+    {
+      "title": "‘No reports, no strikes’: Russia’s pro-war bloggers slam proposed prison sentences for sharing photos and videos of Ukrainian attacks",
+      "source_count": 2,
+      "article_count": 2,
+      "sources": [
+        "Meduza English (Russland Exil)",
+        "Financial Times"
+      ],
+      "categories": [
+        "RU/Exil-Investigativ",
+        "UK/Finanzen"
+      ],
+      "link": "https://meduza.io/en/feature/2026/11/27/no-reports-no-strikes-russia-s-pro-war-bloggers-slam-proposed-prison-sentences-for-sharing-photos-and-videos-of-ukrainian-attacks",
       "methode": "regelbasiert, ohne KI",
       "rank": 2
     },
     {
-      "title": "Trump vil at Putin skal stanse all militær aggresjon i Europa",
+      "title": "Rentenreform: Arbeitsminister Schweitzer legt neuen Gesetzentwurf vor – Union spricht von „Foulspiel“",
       "source_count": 2,
       "article_count": 2,
       "sources": [
-        "NRK Nyheter (Norwegen)",
-        "Folha de S.Paulo (Brasilien)"
+        "Handelsblatt",
+        "Der Spiegel"
       ],
       "categories": [
-        "NO/Medien",
-        "BR/Presse"
+        "DE/Finanzen",
+        "DE/Medien"
       ],
-      "link": "https://www.nrk.no/nyheter/trump-vil-at-putin-skal-stanse-all-militaer-aggresjon-i-europa-1.18089313",
+      "link": "https://www.handelsblatt.com/politik/deutschland/rentenreform-schweitzer-legt-neuen-gesetzentwurf-vor-union-laeuft-sturm/100273340.html",
       "methode": "regelbasiert, ohne KI",
       "rank": 3
     },
     {
-      "title": "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions",
+      "title": "Latest Fourth-Quarter GDP Growth Estimate 2.9 Percent",
       "source_count": 1,
       "article_count": 2,
       "sources": [
-        "Federal Reserve Press"
+        "Atlanta Fed / NY Fed"
       ],
       "categories": [
-        "Zentralbank"
+        "Makro/Fed"
       ],
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125b.htm",
+      "link": "https://www.atlantafed.org/research-and-data/data/gdpnow",
       "methode": "regelbasiert, ohne KI",
       "rank": 4
     },
     {
-      "title": "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats",
+      "title": "躲過聯合國禁運 青年運動用中國零件造武器",
       "source_count": 1,
-      "article_count": 2,
+      "article_count": 1,
       "sources": [
-        "BBC World News"
+        "GDELT (ec.ltn.com.tw)"
       ],
       "categories": [
-        "UK/Medien"
+        "GDELT/OSINT"
       ],
-      "link": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss",
+      "link": "https://ec.ltn.com.tw/article/breakingnews/5584627",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -107,69 +107,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT8LV",
+      "name": "Flug PGT9YH",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.3839,
-      "lon": 28.02,
-      "lng": 28.02,
+      "lat": 41.5446,
+      "lon": 27.1048,
+      "lng": 27.1048,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT8LV | Höhe: 10.5 km | Speed: 933 km/h",
+      "description": "Callsign: PGT9YH | Höhe: 10.7 km | Speed: 853 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT75BF",
+      "name": "Flug PGT7MH",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 40.7709,
-      "lon": 28.6655,
-      "lng": 28.6655,
+      "lat": 41.7987,
+      "lon": 26.6869,
+      "lng": 26.6869,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT75BF | Höhe: 4.2 km | Speed: 601 km/h",
+      "description": "Callsign: PGT7MH | Höhe: 10.7 km | Speed: 872 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug TVF525R",
+      "name": "Flug WZZ63",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 31.9975,
-      "lon": 34.7223,
-      "lng": 34.7223,
+      "lat": 34.3904,
+      "lon": 32.4142,
+      "lng": 32.4142,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: TVF525R | Höhe: 1.5 km | Speed: 499 km/h",
+      "description": "Callsign: WZZ63 | Höhe: 10.1 km | Speed: 872 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "ADS-B Signal 739261",
+      "name": "Flug IAW146",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 32.9044,
-      "lon": 34.6245,
-      "lng": 34.6245,
+      "lat": 29.4819,
+      "lon": 34.5475,
+      "lng": 34.5475,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: Unbekannt | Höhe: 0.3 km | Speed: 272 km/h",
+      "description": "Callsign: IAW146 | Höhe: 11.3 km | Speed: 954 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UAE367",
+      "name": "Flug UAL852",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 22.5804,
-      "lon": 118.5978,
-      "lng": 118.5978,
+      "lat": 25.6784,
+      "lon": 122.9828,
+      "lng": 122.9828,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAE367 | Höhe: 9.1 km | Speed: 815 km/h",
+      "description": "Callsign: UAL852 | Höhe: 7.2 km | Speed: 972 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CES5023",
+      "name": "Flug CSZ9528",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 18.5963,
-      "lon": 118.2805,
-      "lng": 118.2805,
+      "lat": 27.5213,
+      "lon": 119.4438,
+      "lng": 119.4438,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CES5023 | Höhe: 11.3 km | Speed: 869 km/h",
+      "description": "Callsign: CSZ9528 | Höhe: 10.4 km | Speed: 726 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -199,13 +199,13 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-26T16:06:01.769075+00:00",
+  "timestamp": "2026-11-27T15:54:14.131968+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-26T16:05:35.740804+00:00",
+    "timestamp": "2026-11-27T15:53:41.415379+00:00",
     "feeds_total": 224,
-    "feeds_successful": 114,
-    "feeds_failed": 110,
-    "gdelt_articles": 0,
+    "feeds_successful": 112,
+    "feeds_failed": 112,
+    "gdelt_articles": 35,
     "telegram_posts": 0,
     "bakers_active": [],
     "swarm_debate_status": "DEAKTIVIERT",
