@@ -1,25 +1,41 @@
 {
   "ampel_status": "GRAU",
   "ampel_reason_simple": "regelbasiert, ohne KI – keine LLM-Ampelbewertung.",
-  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 27.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate? – 2 Quellen.\n2. ‘No reports, no strikes’: Russia’s pro-war bloggers slam proposed prison sentences for sharing photos and videos of Ukrainian attacks – 2 Quellen.\n3. Rentenreform: Arbeitsminister Schweitzer legt neuen Gesetzentwurf vor – Union spricht von „Foulspiel“ – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 2.9 Percent – 1 Quellen.\n5. 躲過聯合國禁運 青年運動用中國零件造武器 – 1 Quellen.",
-  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 27.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate? – 2 Quellen.\n2. ‘No reports, no strikes’: Russia’s pro-war bloggers slam proposed prison sentences for sharing photos and videos of Ukrainian attacks – 2 Quellen.\n3. Rentenreform: Arbeitsminister Schweitzer legt neuen Gesetzentwurf vor – Union spricht von „Foulspiel“ – 2 Quellen.\n4. Latest Fourth-Quarter GDP Growth Estimate 2.9 Percent – 1 Quellen.\n5. 躲過聯合國禁運 青年運動用中國零件造武器 – 1 Quellen.",
+  "daily_executive_summary": "Regelbasierter Überblick (ohne KI) vom 28.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Argentina's bid to stop Falklands oil drilling rejected – 2 Quellen.\n2. What’s the most tax-efficient way to donate to charity? – 2 Quellen.\n3. Candidate criticized by China concedes Taipei mayoral race in Taiwan’s local elections - AP News – 2 Quellen.\n4. Gaza strike kills two Doctors Without Borders staff Israel links to Hamas – 2 Quellen.\n5. Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions – 1 Quellen.",
+  "daily_executive_summary_simple": "Regelbasierter Überblick (ohne KI) vom 28.11.2026. Auswahl: die fünf Meldungen mit der höchsten Häufung über unabhängige Quellen.\n1. Argentina's bid to stop Falklands oil drilling rejected – 2 Quellen.\n2. What’s the most tax-efficient way to donate to charity? – 2 Quellen.\n3. Candidate criticized by China concedes Taipei mayoral race in Taiwan’s local elections - AP News – 2 Quellen.\n4. Gaza strike kills two Doctors Without Borders staff Israel links to Hamas – 2 Quellen.\n5. Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions – 1 Quellen.",
   "key_takeaways": [
-    "I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "‘No reports, no strikes’: Russia’s pro-war bloggers slam proposed prison sentences for sharing photos and videos of Ukrainian attacks (2 Quellen: Meduza English (Russland Exil), Financial Times)",
-    "Rentenreform: Arbeitsminister Schweitzer legt neuen Gesetzentwurf vor – Union spricht von „Foulspiel“ (2 Quellen: Handelsblatt, Der Spiegel)",
-    "Latest Fourth-Quarter GDP Growth Estimate 2.9 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "躲過聯合國禁運 青年運動用中國零件造武器 (1 Quellen: GDELT (ec.ltn.com.tw))"
+    "Argentina's bid to stop Falklands oil drilling rejected (2 Quellen: BBC World News, Financial Times)",
+    "What’s the most tax-efficient way to donate to charity? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Candidate criticized by China concedes Taipei mayoral race in Taiwan’s local elections - AP News (2 Quellen: ABC News Australia, Associated Press (Google Search Feed))",
+    "Gaza strike kills two Doctors Without Borders staff Israel links to Hamas (2 Quellen: BBC World News, France 24 English)",
+    "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions (1 Quellen: Federal Reserve Press)"
   ],
   "simple_key_takeaways": [
-    "I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
-    "‘No reports, no strikes’: Russia’s pro-war bloggers slam proposed prison sentences for sharing photos and videos of Ukrainian attacks (2 Quellen: Meduza English (Russland Exil), Financial Times)",
-    "Rentenreform: Arbeitsminister Schweitzer legt neuen Gesetzentwurf vor – Union spricht von „Foulspiel“ (2 Quellen: Handelsblatt, Der Spiegel)",
-    "Latest Fourth-Quarter GDP Growth Estimate 2.9 Percent (1 Quellen: Atlanta Fed / NY Fed)",
-    "躲過聯合國禁運 青年運動用中國零件造武器 (1 Quellen: GDELT (ec.ltn.com.tw))"
+    "Argentina's bid to stop Falklands oil drilling rejected (2 Quellen: BBC World News, Financial Times)",
+    "What’s the most tax-efficient way to donate to charity? (2 Quellen: Wall Street Journal (MarketWatch Alt), MOVE Index / Bonds (MarketWatch))",
+    "Candidate criticized by China concedes Taipei mayoral race in Taiwan’s local elections - AP News (2 Quellen: ABC News Australia, Associated Press (Google Search Feed))",
+    "Gaza strike kills two Doctors Without Borders staff Israel links to Hamas (2 Quellen: BBC World News, France 24 English)",
+    "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions (1 Quellen: Federal Reserve Press)"
   ],
   "top5": [
     {
-      "title": "I’ve been married for 58 years. It’s ‘our’ money, not ‘his’ and ‘hers.’ Why do so many couples keep their finances separate?",
+      "title": "Argentina's bid to stop Falklands oil drilling rejected",
+      "source_count": 2,
+      "article_count": 2,
+      "sources": [
+        "BBC World News",
+        "Financial Times"
+      ],
+      "categories": [
+        "UK/Medien",
+        "UK/Finanzen"
+      ],
+      "link": "https://www.bbc.co.uk/news/articles/c84gnq3qq9rno?at_medium=RSS&at_campaign=rss",
+      "methode": "regelbasiert, ohne KI",
+      "rank": 1
+    },
+    {
+      "title": "What’s the most tax-efficient way to donate to charity?",
       "source_count": 2,
       "article_count": 2,
       "sources": [
@@ -30,67 +46,53 @@
         "US/Finanzen",
         "Bond Stress"
       ],
-      "link": "https://www.marketwatch.com/story/ive-been-married-for-58-years-its-our-money-not-his-and-hers-why-dont-others-feel-the-same-c5745889?mod=mw_rss_topstories",
-      "methode": "regelbasiert, ohne KI",
-      "rank": 1
-    },
-    {
-      "title": "‘No reports, no strikes’: Russia’s pro-war bloggers slam proposed prison sentences for sharing photos and videos of Ukrainian attacks",
-      "source_count": 2,
-      "article_count": 2,
-      "sources": [
-        "Meduza English (Russland Exil)",
-        "Financial Times"
-      ],
-      "categories": [
-        "RU/Exil-Investigativ",
-        "UK/Finanzen"
-      ],
-      "link": "https://meduza.io/en/feature/2026/11/27/no-reports-no-strikes-russia-s-pro-war-bloggers-slam-proposed-prison-sentences-for-sharing-photos-and-videos-of-ukrainian-attacks",
+      "link": "https://www.marketwatch.com/story/whats-the-most-tax-efficient-way-to-donate-to-charity-3f5864bb?mod=mw_rss_topstories",
       "methode": "regelbasiert, ohne KI",
       "rank": 2
     },
     {
-      "title": "Rentenreform: Arbeitsminister Schweitzer legt neuen Gesetzentwurf vor – Union spricht von „Foulspiel“",
+      "title": "Candidate criticized by China concedes Taipei mayoral race in Taiwan’s local elections - AP News",
       "source_count": 2,
       "article_count": 2,
       "sources": [
-        "Handelsblatt",
-        "Der Spiegel"
+        "ABC News Australia",
+        "Associated Press (Google Search Feed)"
       ],
       "categories": [
-        "DE/Finanzen",
-        "DE/Medien"
+        "AU/Medien",
+        "Agentur"
       ],
-      "link": "https://www.handelsblatt.com/politik/deutschland/rentenreform-schweitzer-legt-neuen-gesetzentwurf-vor-union-laeuft-sturm/100273340.html",
+      "link": "https://www.abc.net.au/news/2026-11-29/taiwan-election-results-chiang-wan-an/107438794",
       "methode": "regelbasiert, ohne KI",
       "rank": 3
     },
     {
-      "title": "Latest Fourth-Quarter GDP Growth Estimate 2.9 Percent",
-      "source_count": 1,
+      "title": "Gaza strike kills two Doctors Without Borders staff Israel links to Hamas",
+      "source_count": 2,
       "article_count": 2,
       "sources": [
-        "Atlanta Fed / NY Fed"
+        "BBC World News",
+        "France 24 English"
       ],
       "categories": [
-        "Makro/Fed"
+        "UK/Medien",
+        "FR/Medien"
       ],
-      "link": "https://www.atlantafed.org/research-and-data/data/gdpnow",
+      "link": "https://www.bbc.co.uk/news/articles/cm5y10yydln3o?at_medium=RSS&at_campaign=rss",
       "methode": "regelbasiert, ohne KI",
       "rank": 4
     },
     {
-      "title": "躲過聯合國禁運 青年運動用中國零件造武器",
+      "title": "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions",
       "source_count": 1,
-      "article_count": 1,
+      "article_count": 2,
       "sources": [
-        "GDELT (ec.ltn.com.tw)"
+        "Federal Reserve Press"
       ],
       "categories": [
-        "GDELT/OSINT"
+        "Zentralbank"
       ],
-      "link": "https://ec.ltn.com.tw/article/breakingnews/5584627",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125b.htm",
       "methode": "regelbasiert, ohne KI",
       "rank": 5
     }
@@ -107,69 +109,69 @@
   },
   "conflict_hotspots": [
     {
-      "name": "Flug PGT9YH",
+      "name": "Flug PGT75BF",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.5446,
-      "lon": 27.1048,
-      "lng": 27.1048,
+      "lat": 42.7902,
+      "lon": 26.6606,
+      "lng": 26.6606,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT9YH | Höhe: 10.7 km | Speed: 853 km/h",
+      "description": "Callsign: PGT75BF | Höhe: 10.4 km | Speed: 777 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug PGT7MH",
+      "name": "Flug PGT7FQ",
       "region": "Schwarzes Meer / Osteuropa",
-      "lat": 41.7987,
-      "lon": 26.6869,
-      "lng": 26.6869,
+      "lat": 42.0649,
+      "lon": 27.2226,
+      "lng": 27.2226,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: PGT7MH | Höhe: 10.7 km | Speed: 872 km/h",
+      "description": "Callsign: PGT7FQ | Höhe: 10.4 km | Speed: 799 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug WZZ63",
+      "name": "Flug T7AMA",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 34.3904,
-      "lon": 32.4142,
-      "lng": 32.4142,
+      "lat": 23.6539,
+      "lon": 49.4663,
+      "lng": 49.4663,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: WZZ63 | Höhe: 10.1 km | Speed: 872 km/h",
+      "description": "Callsign: T7AMA | Höhe: 8.6 km | Speed: 942 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug IAW146",
+      "name": "Flug AIC27J",
       "region": "Naher Osten / Rotes Meer",
-      "lat": 29.4819,
-      "lon": 34.5475,
-      "lng": 34.5475,
+      "lat": 35.8291,
+      "lon": 34.2179,
+      "lng": 34.2179,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: IAW146 | Höhe: 11.3 km | Speed: 954 km/h",
+      "description": "Callsign: AIC27J | Höhe: 11.0 km | Speed: 782 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug UAL852",
+      "name": "Flug CXA8333",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 25.6784,
-      "lon": 122.9828,
-      "lng": 122.9828,
+      "lat": 25.6053,
+      "lon": 118.3618,
+      "lng": 118.3618,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: UAL852 | Höhe: 7.2 km | Speed: 972 km/h",
+      "description": "Callsign: CXA8333 | Höhe: 6.6 km | Speed: 673 km/h",
       "impact": "Strategischer Transponder-Korridor"
     },
     {
-      "name": "Flug CSZ9528",
+      "name": "Flug CSN8646",
       "region": "Taiwan-Straße / Ostasien",
-      "lat": 27.5213,
-      "lon": 119.4438,
-      "lng": 119.4438,
+      "lat": 25.2232,
+      "lon": 118.1357,
+      "lng": 118.1357,
       "type": "flight",
       "intensity": "GELB",
-      "description": "Callsign: CSZ9528 | Höhe: 10.4 km | Speed: 726 km/h",
+      "description": "Callsign: CSN8646 | Höhe: 10.4 km | Speed: 707 km/h",
       "impact": "Strategischer Transponder-Korridor"
     }
   ],
@@ -199,12 +201,12 @@
     "top_5_buys": [],
     "flop_5_sells": []
   },
-  "timestamp": "2026-11-27T15:54:14.131968+00:00",
+  "timestamp": "2026-11-28T14:49:17.325326+00:00",
   "pipeline_health": {
-    "timestamp": "2026-11-27T15:53:41.415379+00:00",
+    "timestamp": "2026-11-28T14:48:42.626578+00:00",
     "feeds_total": 224,
-    "feeds_successful": 112,
-    "feeds_failed": 112,
+    "feeds_successful": 117,
+    "feeds_failed": 107,
     "gdelt_articles": 35,
     "telegram_posts": 0,
     "bakers_active": [],
